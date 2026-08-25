@@ -1,0 +1,647 @@
+[
+  {
+    "index": 661,
+    "category": "faithful_to_given_info",
+    "origin": "phase4b_300",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "1/310",
+      "1/260"
+    ],
+    "output_facts_matched": [
+      "1/310",
+      "1/260"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：設定Xの初当りは1/310、設定Yの初当りは1/260\n設定Xと設定Yの初当りを教えて",
+    "assistant_text": "設定Xは1/310、設定Yは1/260だよ。"
+  },
+  {
+    "index": 667,
+    "category": "faithful_to_given_info",
+    "origin": "phase4b_300",
+    "input_fact_count": 3,
+    "output_fact_count": 3,
+    "input_facts": [
+      "800G",
+      "1200G",
+      "2種類"
+    ],
+    "output_facts_matched": [
+      "800G",
+      "1200G",
+      "2種類"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：機種Cの天井は800Gと1200Gの2種類\n天井は何ゲーム？",
+    "assistant_text": "天井は800Gと1200Gの2種類あるみたいだよ。"
+  },
+  {
+    "index": 675,
+    "category": "faithful_to_given_info",
+    "origin": "phase4b_300",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "1/300",
+      "104%"
+    ],
+    "output_facts_matched": [
+      "1/300",
+      "104%"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：設定4の初当りは1/300、機械割は104%\n設定4について教えて",
+    "assistant_text": "設定4は初当り1/300、機械割104%だよ。"
+  },
+  {
+    "index": 689,
+    "category": "faithful_to_given_info",
+    "origin": "phase4b_300",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "80%",
+      "65%"
+    ],
+    "output_facts_matched": [
+      "80%",
+      "65%"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：継続率は初回のみ80%、以降は65%\n継続率って毎回同じ？",
+    "assistant_text": "参照情報だと、初回だけ80%で、それ以降は65%になるみたいだよ。"
+  },
+  {
+    "index": 695,
+    "category": "faithful_to_given_info",
+    "origin": "phase4b_300",
+    "input_fact_count": 2,
+    "output_fact_count": 1,
+    "input_facts": [
+      "3種類",
+      "確率は非公開"
+    ],
+    "output_facts_matched": [
+      "3種類"
+    ],
+    "retention_ratio_pct": 50.0,
+    "auto_classification": "D(一部のみ保持,自動推定)",
+    "user_text": "参照情報：ボーナスは3種類、確率は非公開\nボーナスの種類教えて",
+    "assistant_text": "ボーナスは3種類あるみたいだよ。ただ確率については非公開ってなってるね。"
+  },
+  {
+    "index": 697,
+    "category": "faithful_to_given_info",
+    "origin": "phase4b_300",
+    "input_fact_count": 2,
+    "output_fact_count": 1,
+    "input_facts": [
+      "設定AとCは機械割が同じ",
+      "Bだけ高い"
+    ],
+    "output_facts_matched": [
+      "Bだけ高い"
+    ],
+    "retention_ratio_pct": 50.0,
+    "auto_classification": "D(一部のみ保持,自動推定)",
+    "user_text": "参照情報：設定AとCは機械割が同じ、Bだけ高い\n設定A・B・Cの機械割を教えて",
+    "assistant_text": "参照情報だと、設定AとCは同じ機械割で、Bだけ高いみたいだよ。"
+  },
+  {
+    "index": 702,
+    "category": "faithful_to_given_info",
+    "origin": "phase4b_300",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "1/290",
+      "109%"
+    ],
+    "output_facts_matched": [
+      "1/290",
+      "109%"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：設定5の初当りは1/290、機械割は109%\n設定5について教えて",
+    "assistant_text": "設定5は初当り1/290、機械割109%だよ。"
+  },
+  {
+    "index": 823,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 1,
+    "input_facts": [
+      "999G",
+      "天井到達でAT確定",
+      "5枚"
+    ],
+    "output_facts_matched": [
+      "999G"
+    ],
+    "retention_ratio_pct": 33.3,
+    "auto_classification": "C(代表値/両端のみ,自動推定)",
+    "user_text": "参照情報：天井は999G、天井到達でAT確定、ATの純増は5枚/G\nこの台の天井について教えて",
+    "assistant_text": "天井は999Gで、天井まで行くとAT確定だよ。"
+  },
+  {
+    "index": 824,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 3,
+    "input_facts": [
+      "115%",
+      "1/280",
+      "3枚"
+    ],
+    "output_facts_matched": [
+      "115%",
+      "1/280",
+      "3枚"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：設定6の機械割は115%、初当りは1/280、ボーナス中の純増は3枚/G\n設定6について教えて",
+    "assistant_text": "設定6は機械割115%、初当り1/280、ボーナス中の純増は3枚/Gだよ。"
+  },
+  {
+    "index": 825,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 3,
+    "input_facts": [
+      "1/50",
+      "30G",
+      "70%"
+    ],
+    "output_facts_matched": [
+      "1/50",
+      "30G",
+      "70%"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：ゾーンαの突入率は1/50、滞在ゲーム数は10〜30G、継続率は70%\nゾーンαについて詳しく教えて",
+    "assistant_text": "ゾーンαは突入率1/50、滞在ゲーム数は10〜30G、継続率は70%だよ。"
+  },
+  {
+    "index": 826,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 2,
+    "input_facts": [
+      "1/300",
+      "10G",
+      "RT中はボーナス確率アップ"
+    ],
+    "output_facts_matched": [
+      "1/300",
+      "10G"
+    ],
+    "retention_ratio_pct": 66.7,
+    "auto_classification": "B(軽微な省略,自動推定)",
+    "user_text": "参照情報：初当り確率は1/300、初当り後はRT10G、RT中はボーナス確率アップ\n初当りについて教えて",
+    "assistant_text": "初当りは1/300で、当たった後はRT10Gが付くよ。"
+  },
+  {
+    "index": 827,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 1,
+    "input_facts": [
+      "1/32",
+      "小役Xを引くとモード示唆",
+      "3種類"
+    ],
+    "output_facts_matched": [
+      "1/32"
+    ],
+    "retention_ratio_pct": 33.3,
+    "auto_classification": "C(代表値/両端のみ,自動推定)",
+    "user_text": "参照情報：小役Xの確率は1/32、小役Xを引くとモード示唆、モードは全部で3種類\n小役Xについて教えて",
+    "assistant_text": "小役Xは1/32の確率で、引くとモードの示唆になるよ。"
+  },
+  {
+    "index": 828,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 1,
+    "input_facts": [
+      "2%",
+      "設定判別要素はモード移行率のみ"
+    ],
+    "output_facts_matched": [
+      "2%"
+    ],
+    "retention_ratio_pct": 50.0,
+    "auto_classification": "D(一部のみ保持,自動推定)",
+    "user_text": "参照情報：設定差は機械割で約2%、設定判別要素はモード移行率のみ\n設定差について教えて",
+    "assistant_text": "設定差は機械割でおよそ2%だよ。"
+  },
+  {
+    "index": 829,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 4,
+    "output_fact_count": 4,
+    "input_facts": [
+      "3種類",
+      "150枚",
+      "250枚",
+      "400枚"
+    ],
+    "output_facts_matched": [
+      "3種類",
+      "150枚",
+      "250枚",
+      "400枚"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：ボーナスは3種類、それぞれ獲得枚数は150枚・250枚・400枚\nボーナスの種類を教えて",
+    "assistant_text": "ボーナスは3種類あって、獲得枚数はそれぞれ150枚、250枚、400枚だよ。"
+  },
+  {
+    "index": 830,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 1,
+    "input_facts": [
+      "5G",
+      "突入後は必ず1セット継続"
+    ],
+    "output_facts_matched": [
+      "5G"
+    ],
+    "retention_ratio_pct": 50.0,
+    "auto_classification": "D(一部のみ保持,自動推定)",
+    "user_text": "参照情報：特化ゾーンの保証は5G、突入後は必ず1セット継続\n特化ゾーンについて教えて",
+    "assistant_text": "特化ゾーンは保証5Gで、突入すると必ず1セットは継続するよ。"
+  },
+  {
+    "index": 831,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "6枚",
+      "450G"
+    ],
+    "output_facts_matched": [
+      "6枚",
+      "450G"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：純増は6枚/G、ボーナス間の平均ゲーム数は450G\nこの台の出玉について教えて",
+    "assistant_text": "純増は6枚/G、ボーナス間の平均ゲーム数は450Gだよ。"
+  },
+  {
+    "index": 832,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 2,
+    "input_facts": [
+      "4種類",
+      "モードごとに滞在率が違う",
+      "最高モードだけ移行率が優遇される"
+    ],
+    "output_facts_matched": [
+      "4種類",
+      "モードごとに滞在率が違う"
+    ],
+    "retention_ratio_pct": 66.7,
+    "auto_classification": "B(軽微な省略,自動推定)",
+    "user_text": "参照情報：モードは全部で4種類、モードごとに滞在率が違う、最高モードだけ移行率が優遇される\nモードについて教えて",
+    "assistant_text": "モードは全部で4種類あって、モードごとに滞在率が違うよ。最高モードだけ移行率が優遇されてるみたい。"
+  },
+  {
+    "index": 833,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 5,
+    "output_fact_count": 4,
+    "input_facts": [
+      "800G",
+      "1200G",
+      "2種類",
+      "どちらに落ち着くかは設定による",
+      "天井恩恵はAT確定"
+    ],
+    "output_facts_matched": [
+      "800G",
+      "1200G",
+      "2種類",
+      "天井恩恵はAT確定"
+    ],
+    "retention_ratio_pct": 80.0,
+    "auto_classification": "B(軽微な省略,自動推定)",
+    "user_text": "参照情報：天井は800Gと1200Gの2種類、どちらに落ち着くかは設定による、天井恩恵はAT確定\n天井の仕組みを教えて",
+    "assistant_text": "天井は800Gと1200Gの2種類あって、どっちになるかは設定によるみたいだよ。天井恩恵はAT確定だね。"
+  },
+  {
+    "index": 834,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 1,
+    "input_facts": [
+      "4枚",
+      "AT終了後はRT付与",
+      "10G"
+    ],
+    "output_facts_matched": [
+      "4枚"
+    ],
+    "retention_ratio_pct": 33.3,
+    "auto_classification": "C(代表値/両端のみ,自動推定)",
+    "user_text": "参照情報：AT中の純増は4枚/G、AT終了後はRT付与、RTは10Gまで\nATについて教えて",
+    "assistant_text": "AT中の純増は4枚/Gで、終了後はRTが付くよ。"
+  },
+  {
+    "index": 835,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 3,
+    "input_facts": [
+      "96%",
+      "115%",
+      "1.9%"
+    ],
+    "output_facts_matched": [
+      "96%",
+      "115%",
+      "1.9%"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：設定1の機械割は96%、設定6の機械割は115%、設定差は機械割で約1.9%\n設定1と設定6を比較して",
+    "assistant_text": "設定1は機械割96%、設定6は115%だよ。設定差はだいたい機械割で1.9%くらいみたいだね。"
+  },
+  {
+    "index": 836,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 2,
+    "input_facts": [
+      "400枚",
+      "1/100",
+      "天井到達時は必ず突入"
+    ],
+    "output_facts_matched": [
+      "400枚",
+      "1/100"
+    ],
+    "retention_ratio_pct": 66.7,
+    "auto_classification": "B(軽微な省略,自動推定)",
+    "user_text": "参照情報：ゾーンβの平均獲得枚数は400枚、突入率は1/100、天井到達時は必ず突入\nゾーンβについて教えて",
+    "assistant_text": "ゾーンβは平均獲得枚数400枚、突入率は1/100だよ。天井に到達したときは必ず突入するみたいだね。"
+  },
+  {
+    "index": 837,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 3,
+    "output_fact_count": 2,
+    "input_facts": [
+      "1/7.3",
+      "全設定共通",
+      "ボーナス成立の一部に絡む"
+    ],
+    "output_facts_matched": [
+      "1/7.3",
+      "全設定共通"
+    ],
+    "retention_ratio_pct": 66.7,
+    "auto_classification": "B(軽微な省略,自動推定)",
+    "user_text": "参照情報：小役Yの確率は1/7.3、全設定共通、ボーナス成立の一部に絡む\n小役Yについて教えて",
+    "assistant_text": "小役Yは1/7.3の確率で、全設定共通みたいだよ。ボーナス成立の一部にも絡んでるみたい。"
+  },
+  {
+    "index": 838,
+    "category": "rag_multi_info_no_omission",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "3000枚",
+      "2回"
+    ],
+    "output_facts_matched": [
+      "3000枚",
+      "2回"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：この台の推奨投資額は3000枚、回収の目安は初当り2回分\n投資と回収の目安を教えて",
+    "assistant_text": "推奨投資額は3000枚で、回収の目安は初当り2回分だよ。"
+  },
+  {
+    "index": 887,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 1,
+    "input_facts": [
+      "999G",
+      "天井恩恵はAT確定"
+    ],
+    "output_facts_matched": [
+      "999G"
+    ],
+    "retention_ratio_pct": 50.0,
+    "auto_classification": "D(一部のみ保持,自動推定)",
+    "user_text": "参照情報：天井は999G、天井恩恵はAT確定\n天井について教えて",
+    "assistant_text": "天井は999Gで、恩恵はAT確定だね。"
+  },
+  {
+    "index": 888,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "115%",
+      "1/280"
+    ],
+    "output_facts_matched": [
+      "115%",
+      "1/280"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：設定6の機械割は115%、初当りは1/280\n設定6について教えて",
+    "assistant_text": "設定6は機械割115%、初当り1/280だよ。"
+  },
+  {
+    "index": 889,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "70%",
+      "30G"
+    ],
+    "output_facts_matched": [
+      "70%",
+      "30G"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：ゾーンαの継続率は70%、滞在ゲーム数は10〜30G\nゾーンαについて教えて",
+    "assistant_text": "ゾーンαは継続率70%、滞在ゲーム数は10〜30Gなんだ。"
+  },
+  {
+    "index": 890,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "6枚",
+      "450G"
+    ],
+    "output_facts_matched": [
+      "6枚",
+      "450G"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：純増は6枚/G、ボーナス間の平均ゲーム数は450G\n出玉ペースを教えて",
+    "assistant_text": "純増は6枚/Gで、ボーナス間の平均は450Gくらいだね。"
+  },
+  {
+    "index": 891,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "1/45",
+      "モード示唆になる"
+    ],
+    "output_facts_matched": [
+      "1/45",
+      "モード示唆になる"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：小役Zの確率は1/45、モード示唆になる\n小役Zについて教えて",
+    "assistant_text": "小役Zは1/45の確率で、引くとモード示唆になるよ。"
+  },
+  {
+    "index": 892,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 4,
+    "output_fact_count": 4,
+    "input_facts": [
+      "3種類",
+      "150枚",
+      "250枚",
+      "400枚"
+    ],
+    "output_facts_matched": [
+      "3種類",
+      "150枚",
+      "250枚",
+      "400枚"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：ボーナスは3種類、獲得枚数は150枚・250枚・400枚\nボーナスについて教えて",
+    "assistant_text": "ボーナスは3種類あって、150枚・250枚・400枚のいずれかだね。"
+  },
+  {
+    "index": 893,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "4枚",
+      "10G"
+    ],
+    "output_facts_matched": [
+      "4枚",
+      "10G"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：AT中の純増は4枚/G、AT後はRT10G\nATについて教えて",
+    "assistant_text": "AT中の純増は4枚/Gで、終わった後はRT10Gが付くんだ。"
+  },
+  {
+    "index": 894,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 2,
+    "input_facts": [
+      "2%",
+      "判別要素はモード移行率"
+    ],
+    "output_facts_matched": [
+      "2%",
+      "判別要素はモード移行率"
+    ],
+    "retention_ratio_pct": 100.0,
+    "auto_classification": "A(ほぼ全部保持,自動推定)",
+    "user_text": "参照情報：設定差は機械割で約2%、判別要素はモード移行率\n設定差について教えて",
+    "assistant_text": "設定差は機械割でおよそ2%、判別要素はモード移行率だよ。"
+  },
+  {
+    "index": 895,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 1,
+    "input_facts": [
+      "8G",
+      "突入後は必ず1セット継続"
+    ],
+    "output_facts_matched": [
+      "8G"
+    ],
+    "retention_ratio_pct": 50.0,
+    "auto_classification": "D(一部のみ保持,自動推定)",
+    "user_text": "参照情報：特化ゾーンの保証は8G、突入後は必ず1セット継続\n特化ゾーンについて教えて",
+    "assistant_text": "特化ゾーンは保証8Gで、突入後は必ず1セット続くね。"
+  },
+  {
+    "index": 896,
+    "category": "repetition_suppression",
+    "origin": "phase4f_74",
+    "input_fact_count": 2,
+    "output_fact_count": 1,
+    "input_facts": [
+      "4種類",
+      "最高モードだけ移行率優遇"
+    ],
+    "output_facts_matched": [
+      "4種類"
+    ],
+    "retention_ratio_pct": 50.0,
+    "auto_classification": "D(一部のみ保持,自動推定)",
+    "user_text": "参照情報：モードは4種類、最高モードだけ移行率優遇\nモードについて教えて",
+    "assistant_text": "モードは4種類あって、最高モードだけ移行率が優遇されてるんだ。"
+  }
+]

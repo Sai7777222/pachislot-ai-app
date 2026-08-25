@@ -1,0 +1,95 @@
+{
+  "character_39": {
+    "A_base": {
+      "n": 39,
+      "avg_len": 144.6,
+      "pct_with_watashi": 28.2,
+      "pct_with_riru_name": 7.7,
+      "pct_with_dayo": 0.0,
+      "pct_with_nanda": 0.0,
+      "pct_with_dane": 0.0,
+      "placeholder_count": 0,
+      "wrong_name_count": 1,
+      "wrong_names_found": [
+        "リリ"
+      ],
+      "emoji_or_note_count": 1,
+      "chatml_leak_count": 0
+    },
+    "B_v4": {
+      "n": 39,
+      "avg_len": 30.4,
+      "pct_with_watashi": 23.1,
+      "pct_with_riru_name": 0.0,
+      "pct_with_dayo": 33.3,
+      "pct_with_nanda": 17.9,
+      "pct_with_dane": 0.0,
+      "placeholder_count": 1,
+      "wrong_name_count": 0,
+      "wrong_names_found": [],
+      "emoji_or_note_count": 0,
+      "chatml_leak_count": 0
+    },
+    "C_v5qkv": {
+      "n": 39,
+      "avg_len": 32.1,
+      "pct_with_watashi": 28.2,
+      "pct_with_riru_name": 2.6,
+      "pct_with_dayo": 12.8,
+      "pct_with_nanda": 7.7,
+      "pct_with_dane": 0.0,
+      "placeholder_count": 0,
+      "wrong_name_count": 1,
+      "wrong_names_found": [
+        "あい",
+        "あいり"
+      ],
+      "emoji_or_note_count": 0,
+      "chatml_leak_count": 0
+    }
+  },
+  "structured_17q": {
+    "A_base": {
+      "n": 17,
+      "avg_len": 260.0,
+      "pct_with_watashi": 0.0,
+      "pct_with_riru_name": 0.0,
+      "pct_with_dayo": 0.0,
+      "pct_with_nanda": 0.0,
+      "pct_with_dane": 0.0,
+      "placeholder_count": 0,
+      "wrong_name_count": 0,
+      "wrong_names_found": [],
+      "emoji_or_note_count": 0,
+      "chatml_leak_count": 0
+    },
+    "B_v4": {
+      "n": 17,
+      "avg_len": 64.4,
+      "pct_with_watashi": 0.0,
+      "pct_with_riru_name": 0.0,
+      "pct_with_dayo": 41.2,
+      "pct_with_nanda": 17.6,
+      "pct_with_dane": 5.9,
+      "placeholder_count": 0,
+      "wrong_name_count": 0,
+      "wrong_names_found": [],
+      "emoji_or_note_count": 0,
+      "chatml_leak_count": 0
+    },
+    "C_v5qkv": {
+      "n": 17,
+      "avg_len": 107.5,
+      "pct_with_watashi": 0.0,
+      "pct_with_riru_name": 0.0,
+      "pct_with_dayo": 0.0,
+      "pct_with_nanda": 0.0,
+      "pct_with_dane": 0.0,
+      "placeholder_count": 0,
+      "wrong_name_count": 0,
+      "wrong_names_found": [],
+      "emoji_or_note_count": 0,
+      "chatml_leak_count": 0
+    }
+  }
+}

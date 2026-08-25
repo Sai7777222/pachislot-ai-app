@@ -1,0 +1,225 @@
+{
+  "A_base": {
+    "per_seed": {
+      "42": {
+        "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選が行われます。具体的な確率は以下の通りです：\n\n- 510G：15.2%\n- 1000G：20.3%\n- 1480G：64.5%\n\n天井到達時には、ループストック抽選が行われ、約33.2%の確率でZ-ZONEが付与されます。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "has_any_percentage": true,
+        "has_any_gamecount": true
+      },
+      "43": {
+        "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選で決定します。各天井ゲーム数の出現確率は以下の通りです：\n\n- 510G：15.2%\n- 1000G：20.3%\n- 1480G：64.5%\n\n天井に到達すると、ループストック抽選が行われ、その結果によってはZ-ZONEが付与されることもあります。具体的なループストックの振り分けは以下のようになっています：\n\n- ループストック=0.01：16.7%\n- ループストック=0.25：16.7%\n- ループストック=0.5：16.7%\n- ループストック=0.8：16.7%\n- ループストック=1%+Z-ZONE：33.2%\n\nこれらの情報が天井についての詳細となります。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "has_any_percentage": true,
+        "has_any_gamecount": true
+      },
+      "44": {
+        "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選で決定します。各天井ゲーム数の出現確率は以下の通りです：\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井に到達すると、ループストック抽選が行われ、その中で約33%の確率でZ-ZONEが付与されます。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "has_any_percentage": true,
+        "has_any_gamecount": true
+      },
+      "45": {
+        "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選で決定します。各天井ゲーム数の確率は以下の通りです：\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井に到達すると、ループストック抽選が行われ、その結果としてループストックが設定されます。ループストックの振り分けは以下のような確率で行われます：\n\n- ループストック=0.01: 16.7%\n- ループストock=0.25: 16.7%\n- ループストック=0.5: 16.7%\n- ループストック=0.8: 16.7%\n- ループストック=1%+Z-ZONE: 33.2%\n\nつまり、約33%の確率でZ-ZONEが付与されることになります。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "has_any_percentage": true,
+        "has_any_gamecount": true
+      },
+      "46": {
+        "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選で決定します。各天井ゲーム数の出現確率は以下の通りです：\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井に到達すると、ループストック抽選が行われます。この抽選では、ループストックが0.01、0.25、0.5、0.8のいずれかに設定されるか、またはZ-ZONEが付与される可能性があります。Z-ZONEが付与される確率は33.2%で、これは他のループストックよりも高い確率となっています。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "has_any_percentage": true,
+        "has_any_gamecount": true
+      }
+    },
+    "avg_recall_pct": 100.0,
+    "min_recall_pct": 100.0,
+    "max_recall_pct": 100.0,
+    "seeds_with_any_percentage": "5/5",
+    "seeds_with_any_gamecount": "5/5"
+  },
+  "B_v2": {
+    "per_seed": {
+      "42": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      },
+      "43": {
+        "text": "天井ゲーム数は3種類あって、510G、1000G、1480Gのどれかになるよ。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G"
+        ],
+        "recall_pct": 50.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": true
+      },
+      "44": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      },
+      "45": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      },
+      "46": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      }
+    },
+    "avg_recall_pct": 10.0,
+    "min_recall_pct": 0.0,
+    "max_recall_pct": 50.0,
+    "seeds_with_any_percentage": "0/5",
+    "seeds_with_any_gamecount": "1/5"
+  },
+  "C_v4": {
+    "per_seed": {
+      "42": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      },
+      "43": {
+        "text": "天井ゲーム数は3種類あって、510G、1000G、1480Gのどれかになるよ。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G"
+        ],
+        "recall_pct": 50.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": true
+      },
+      "44": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      },
+      "45": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      },
+      "46": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      }
+    },
+    "avg_recall_pct": 10.0,
+    "min_recall_pct": 0.0,
+    "max_recall_pct": 50.0,
+    "seeds_with_any_percentage": "0/5",
+    "seeds_with_any_gamecount": "1/5"
+  },
+  "D_v3": {
+    "per_seed": {
+      "42": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      },
+      "43": {
+        "text": "天井ゲーム数は3種類あって、510G、1000G、1480Gのどれかになるよ。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G"
+        ],
+        "recall_pct": 50.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": true
+      },
+      "44": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      },
+      "45": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      },
+      "46": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "has_any_percentage": false,
+        "has_any_gamecount": false
+      }
+    },
+    "avg_recall_pct": 10.0,
+    "min_recall_pct": 0.0,
+    "max_recall_pct": 50.0,
+    "seeds_with_any_percentage": "0/5",
+    "seeds_with_any_gamecount": "1/5"
+  }
+}

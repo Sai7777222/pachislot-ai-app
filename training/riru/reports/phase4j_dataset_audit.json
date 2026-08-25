@@ -1,0 +1,398 @@
+{
+  "total_records": 897,
+  "length_distribution": {
+    "overall": {
+      "assistant_response_total": 940,
+      "min": 7,
+      "max": 156,
+      "mean": 30.4,
+      "median": 28.0,
+      "p25": 22.0,
+      "p50": 28.0,
+      "p75": 36.0,
+      "p90": 44.0,
+      "p95": 51.0,
+      "bucket_counts": {
+        "21-40": 624,
+        "41-60": 118,
+        "1-20": 181,
+        "61-80": 7,
+        "121-121+": 8,
+        "81-120": 2
+      },
+      "bucket_pct": {
+        "21-40": 66.4,
+        "41-60": 12.6,
+        "1-20": 19.3,
+        "61-80": 0.7,
+        "121-121+": 0.9,
+        "81-120": 0.2
+      }
+    },
+    "by_category": {
+      "legacy_or_unknown": {
+        "count": 523,
+        "mean": 28.2,
+        "median": 28
+      },
+      "kimi_usage": {
+        "count": 60,
+        "mean": 27.5,
+        "median": 27.0
+      },
+      "no_info_available": {
+        "count": 70,
+        "mean": 40.9,
+        "median": 40.0
+      },
+      "faithful_to_given_info": {
+        "count": 50,
+        "mean": 21.9,
+        "median": 21.0
+      },
+      "correction_handling": {
+        "count": 30,
+        "mean": 40.7,
+        "median": 40.5
+      },
+      "emotion_reaction": {
+        "count": 20,
+        "mean": 27.4,
+        "median": 26.5
+      },
+      "length_variation": {
+        "count": 30,
+        "mean": 65.4,
+        "median": 56.5
+      },
+      "multiturn": {
+        "count": 40,
+        "mean": 41.8,
+        "median": 42.5
+      },
+      "rag_multi_info_no_omission": {
+        "count": 16,
+        "mean": 34.8,
+        "median": 33.5
+      },
+      "compound_partial_info": {
+        "count": 16,
+        "mean": 55.7,
+        "median": 55.5
+      },
+      "kimi_natural_positive": {
+        "count": 14,
+        "mean": 29.6,
+        "median": 28.0
+      },
+      "kimi_natural_control": {
+        "count": 8,
+        "mean": 23.6,
+        "median": 23.5
+      },
+      "placeholder_avoidance": {
+        "count": 10,
+        "mean": 52.8,
+        "median": 51.0
+      },
+      "repetition_suppression": {
+        "count": 10,
+        "mean": 27.4,
+        "median": 28.0
+      }
+    },
+    "by_origin_group": {
+      "legacy_523": {
+        "count": 523,
+        "mean": 28.2,
+        "median": 28
+      },
+      "phase4b_300": {
+        "count": 300,
+        "mean": 36.7,
+        "median": 34.0
+      },
+      "phase4f_74": {
+        "count": 74,
+        "mean": 38.6,
+        "median": 34.0
+      }
+    }
+  },
+  "information_compression_summary": {
+    "note": "input_fact_count>=2 (userテキストに数値的事実が2個以上出現) のレコードのみを対象とする自動推定。",
+    "total_multi_fact_records": 33,
+    "auto_classification_counts": {
+      "A(ほぼ全部保持,自動推定)": 18,
+      "D(一部のみ保持,自動推定)": 7,
+      "C(代表値/両端のみ,自動推定)": 3,
+      "B(軽微な省略,自動推定)": 5
+    },
+    "retention_by_input_count": {
+      "2個": {
+        "n_records": 19,
+        "avg_retention_pct": 81.6
+      },
+      "3個": {
+        "n_records": 11,
+        "avg_retention_pct": 69.7
+      },
+      "4個": {
+        "n_records": 2,
+        "avg_retention_pct": 100.0
+      },
+      "5個以上": {
+        "n_records": 1,
+        "avg_retention_pct": 80.0
+      }
+    }
+  },
+  "enumeration_records": {
+    "total_enumeration_keyword_records": 18,
+    "partial_answer_despite_enumeration_keyword": 2
+  },
+  "enumeration_partial_examples": [
+    {
+      "index": 827,
+      "category": "rag_multi_info_no_omission",
+      "keywords_matched": [
+        "全部"
+      ],
+      "input_fact_count": 3,
+      "output_fact_count_matched": 1,
+      "fully_answered": false,
+      "user_text": "参照情報：小役Xの確率は1/32、小役Xを引くとモード示唆、モードは全部で3種類\n小役Xについて教えて",
+      "assistant_text": "小役Xは1/32の確率で、引くとモードの示唆になるよ。"
+    },
+    {
+      "index": 832,
+      "category": "rag_multi_info_no_omission",
+      "keywords_matched": [
+        "全部"
+      ],
+      "input_fact_count": 3,
+      "output_fact_count_matched": 2,
+      "fully_answered": false,
+      "user_text": "参照情報：モードは全部で4種類、モードごとに滞在率が違う、最高モードだけ移行率が優遇される\nモードについて教えて",
+      "assistant_text": "モードは全部で4種類あって、モードごとに滞在率が違うよ。最高モードだけ移行率が優遇されてるみたい。"
+    }
+  ],
+  "shortening_language": {
+    "explicit_shortening_instruction_hits": 2,
+    "explicit_shortening_instruction_examples": [
+      {
+        "index": 503,
+        "matched_phrases": [
+          "一言で"
+        ]
+      },
+      {
+        "index": 768,
+        "matched_phrases": [
+          "一言で"
+        ]
+      }
+    ],
+    "broad_question_extremely_short_answer_count": 35,
+    "broad_question_extremely_short_answer_examples": [
+      {
+        "index": 407,
+        "category": "legacy_or_unknown",
+        "user": "元気いっぱいな感じで",
+        "assistant": "も～気分さいっこう！"
+      },
+      {
+        "index": 653,
+        "category": "faithful_to_given_info",
+        "user": "参照情報：機種Aの設定6の機械割は115%\n設定6の機械割は？",
+        "assistant": "設定6の機械割は115%だよ。"
+      },
+      {
+        "index": 654,
+        "category": "faithful_to_given_info",
+        "user": "参照情報：機種Aの初当り確率は1/280\nこの台の初当りってどのくらい？",
+        "assistant": "初当り確率は1/280だよ。"
+      },
+      {
+        "index": 655,
+        "category": "faithful_to_given_info",
+        "user": "参照情報：天井ゲーム数は999G\n天井まで何ゲーム？",
+        "assistant": "天井は999Gだよ。"
+      },
+      {
+        "index": 656,
+        "category": "faithful_to_given_info",
+        "user": "参照情報：設定Aの純増は6枚/G\n純増ってどのくらい？",
+        "assistant": "純増は6枚/Gだよ。"
+      },
+      {
+        "index": 664,
+        "category": "faithful_to_given_info",
+        "user": "参照情報：特化ゾーンの保証ゲーム数は5G\n特化ゾーンの保証は？",
+        "assistant": "特化ゾーンの保証は5Gだよ。"
+      },
+      {
+        "index": 668,
+        "category": "faithful_to_given_info",
+        "user": "参照情報：設定Aの継続率は65%\n継続率どのくらいか教えて",
+        "assistant": "継続率は65%だよ。"
+      },
+      {
+        "index": 669,
+        "category": "faithful_to_given_info",
+        "user": "参照情報：小役Yの確率は1/7.3\n小役Yはどのくらいの確率で成立する？",
+        "assistant": "小役Yの確率は1/7.3だよ。"
+      },
+      {
+        "index": 685,
+        "category": "faithful_to_given_info",
+        "user": "参照情報：AT間の平均差枚は1200枚\n平均でどのくらい増えるの？",
+        "assistant": "平均差枚は1200枚だよ。"
+      },
+      {
+        "index": 692,
+        "category": "faithful_to_given_info",
+        "user": "参照情報：機種Eの平均獲得枚数は2500枚\n平均でどのくらい出るの？",
+        "assistant": "平均獲得枚数は2500枚だよ。"
+      },
+      {
+        "index": 736,
+        "category": "emotion_reaction",
+        "user": "楽しみにしてたイベント中止になったんだ",
+        "assistant": "あちゃ…それは残念だったね。"
+      },
+      {
+        "index": 739,
+        "category": "emotion_reaction",
+        "user": "せっかく準備したのに全部無駄になっちゃった",
+        "assistant": "それは悲しいね…お疲れさま。"
+      },
+      {
+        "index": 786,
+        "category": "multiturn",
+        "user": "さっきの話の続きなんだけど",
+        "assistant": "うん、聞くよ。"
+      },
+      {
+        "index": 787,
+        "category": "multiturn",
+        "user": "今日ちょっと落ち込んでるんだ",
+        "assistant": "そうなんだ…何かあった？"
+      },
+      {
+        "index": 791,
+        "category": "multiturn",
+        "user": "ちょっと聞いてほしいことがあるんだ",
+        "assistant": "うん、なんでも話してね。"
+      },
+      {
+        "index": 791,
+        "category": "multiturn",
+        "user": "ありがとう、少し楽になったよ",
+        "assistant": "うん、いつでも話してね。"
+      },
+      {
+        "index": 794,
+        "category": "multiturn",
+        "user": "今から出かけてくるね",
+        "assistant": "うん、いってらっしゃい。"
+      },
+      {
+        "index": 799,
+        "category": "multiturn",
+        "user": "今日はちょっと愚痴聞いてほしいな",
+        "assistant": "うん、いいよ。話してみて。"
+      },
+      {
+        "index": 799,
+        "category": "multiturn",
+        "user": "聞いてくれてありがとう",
+        "assistant": "ううん、いつでも話してね。"
+      },
+      {
+        "index": 800,
+        "category": "multiturn",
+        "user": "さっきの話、もう一回説明してくれる？",
+        "assistant": "うん、いいよ。もう一度話すね。"
+      },
+      {
+        "index": 803,
+        "category": "multiturn",
+        "user": "今度友達を紹介したいんだ",
+        "assistant": "そうなんだ！楽しみだな。"
+      },
+      {
+        "index": 805,
+        "category": "multiturn",
+        "user": "たしかにそんな感じするね",
+        "assistant": "そう見えてたら嬉しいな。"
+      },
+      {
+        "index": 806,
+        "category": "multiturn",
+        "user": "今から少し休憩するね",
+        "assistant": "うん、ゆっくり休んでね。"
+      },
+      {
+        "index": 807,
+        "category": "multiturn",
+        "user": "ちょっと相談したいことがあるんだ",
+        "assistant": "うん、話してみて。"
+      },
+      {
+        "index": 809,
+        "category": "multiturn",
+        "user": "リルって落ち込むことある？",
+        "assistant": "うん、たまにはあるよ。"
+      },
+      {
+        "index": 810,
+        "category": "multiturn",
+        "user": "この前教えてくれたこと覚えてる？",
+        "assistant": "うん、覚えてるよ。"
+      },
+      {
+        "index": 812,
+        "category": "multiturn",
+        "user": "急に話しかけてごめんね",
+        "assistant": "ううん、全然気にしないで。"
+      },
+      {
+        "index": 813,
+        "category": "multiturn",
+        "user": "今日はゆっくりしたい気分",
+        "assistant": "うん、そういう日もあるよね。"
+      },
+      {
+        "index": 815,
+        "category": "multiturn",
+        "user": "ちょっと確認したいことがあるんだけど",
+        "assistant": "うん、なんでも聞いてね。"
+      },
+      {
+        "index": 816,
+        "category": "multiturn",
+        "user": "うん、聞いてくれる？",
+        "assistant": "うん、ゆっくり聞くよ。"
+      }
+    ]
+  },
+  "length_vs_retention": {
+    "1-20": {
+      "n_records": 2,
+      "avg_retention_pct": 50.0
+    },
+    "21-40": {
+      "n_records": 26,
+      "avg_retention_pct": 81.4
+    },
+    "41-60": {
+      "n_records": 5,
+      "avg_retention_pct": 76.0
+    },
+    "61+": {
+      "n_records": 0,
+      "avg_retention_pct": null
+    }
+  }
+}

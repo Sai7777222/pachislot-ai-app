@@ -1,0 +1,32 @@
+{
+  "1fact": {
+    "n_records": 72,
+    "mean_retention": 70.8,
+    "min_retention": 0.0,
+    "max_retention": 100.0
+  },
+  "2facts": {
+    "n_records": 17,
+    "mean_retention": 76.5,
+    "min_retention": 0.0,
+    "max_retention": 100.0
+  },
+  "3-4facts": {
+    "n_records": 8,
+    "mean_retention": 91.7,
+    "min_retention": 66.7,
+    "max_retention": 100.0
+  },
+  "5-7facts": {
+    "n_records": 8,
+    "mean_retention": 97.5,
+    "min_retention": 80.0,
+    "max_retention": 100.0
+  },
+  "8+facts": {
+    "n_records": 0,
+    "mean_retention": null,
+    "min_retention": null,
+    "max_retention": null
+  }
+}

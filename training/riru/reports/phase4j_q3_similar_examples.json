@@ -1,0 +1,31 @@
+{
+  "note": "897件中、Q3 (『同一テーマに複数数値、structured情報と解説の重複、質問文自体は短い』という構造) に類似した教師データを自動スコアリングでランキングし、上位20件について目視で情報保持の実態を再確認したもの。自動判定のretention_ratioは一部paraphraseにより過小評価されているため、'manual_assessment'で人間判断による実質評価を別途付与している。",
+  "ranked_examples": [
+    {"rank": 1, "index": 833, "category": "H(rag_multi_info_no_omission)", "auto_retention_pct": 80.0, "manual_assessment": "良い教師例(実質100%保持)", "v4_fix_candidate": false},
+    {"rank": 2, "index": 829, "category": "H", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false},
+    {"rank": 3, "index": 892, "category": "R(repetition_suppression)", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false},
+    {"rank": 4, "index": 667, "category": "C(faithful_to_given_info)", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false},
+    {"rank": 5, "index": 823, "category": "H (=H-0)", "auto_retention_pct": 33.3, "manual_assessment": "悪い教師例(ATの純増を省略、疑問あり)", "v4_fix_candidate": true},
+    {"rank": 6, "index": 824, "category": "H", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false},
+    {"rank": 7, "index": 825, "category": "H", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false},
+    {"rank": 8, "index": 826, "category": "H (=H-3)", "auto_retention_pct": 66.7, "manual_assessment": "悪い教師例(RT中ボーナス確率アップを省略、疑問あり)", "v4_fix_candidate": true},
+    {"rank": 9, "index": 827, "category": "H (=H-4)", "auto_retention_pct": 33.3, "manual_assessment": "妥当な省略(モード種類数は別トピック)", "v4_fix_candidate": false},
+    {"rank": 10, "index": 832, "category": "H (=H-9)", "auto_retention_pct": 66.7, "manual_assessment": "良い教師例(実質100%保持、paraphraseのみ)", "v4_fix_candidate": false},
+    {"rank": 11, "index": 834, "category": "H (=H-11)", "auto_retention_pct": 33.3, "manual_assessment": "悪い教師例(RTは10Gまでを省略、疑問あり)", "v4_fix_candidate": true},
+    {"rank": 12, "index": 835, "category": "H", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false},
+    {"rank": 13, "index": 836, "category": "H", "auto_retention_pct": 66.7, "manual_assessment": "良い教師例(実質100%保持、paraphraseのみ)", "v4_fix_candidate": false},
+    {"rank": 14, "index": 837, "category": "H", "auto_retention_pct": 66.7, "manual_assessment": "良い教師例(実質100%保持、paraphraseのみ)", "v4_fix_candidate": false},
+    {"rank": 15, "index": 661, "category": "C", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false},
+    {"rank": 16, "index": 675, "category": "C", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false},
+    {"rank": 17, "index": 689, "category": "C", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false},
+    {"rank": 18, "index": 695, "category": "C", "auto_retention_pct": 50.0, "manual_assessment": "良い教師例(実質100%保持、paraphraseのみ)", "v4_fix_candidate": false},
+    {"rank": 19, "index": 697, "category": "C", "auto_retention_pct": 50.0, "manual_assessment": "良い教師例(実質100%保持、paraphraseのみ)", "v4_fix_candidate": false},
+    {"rank": 20, "index": 702, "category": "C", "auto_retention_pct": 100.0, "manual_assessment": "良い教師例", "v4_fix_candidate": false}
+  ],
+  "summary": {
+    "good_examples": 17,
+    "genuinely_questionable_examples": 3,
+    "questionable_indices": [823, 826, 834],
+    "key_finding": "上位20件中、目視再確認の結果『実質的に悪い教師例』と言えるのは3件(いずれもHカテゴリのH-0/H-3/H-11)のみ。自動判定でretention<100%と出た件の大半は、paraphrase(表現の言い換え)による自動判定の過小評価であり、実際には情報は保持されていた。897件全体としては、Q3類似構造の教師データの大部分(85%以上)は『必要な情報を保持する』良い教師例であり、Q3型省略を教えた主犯として897件全体を疑うのは過大評価。ただし、H-0/H-3/H-11の3件が共有する『直前に言及した二次的エンティティの派生数値を削る』というパターンは、Q3の実際の構造(天井という見出し配下にゲーム数振り分けとループストック振り分けの両方がある)と類似しており、量は少ないが質的に疑わしい。"
+  }
+}

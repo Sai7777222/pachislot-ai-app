@@ -1,0 +1,83 @@
+{
+  "candidate": "o8",
+  "adapter_config_target_modules": [
+    "k_proj",
+    "q_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "adapter_config_rank_pattern": {
+    "o_proj": 8
+  },
+  "adapter_config_alpha_pattern": {
+    "o_proj": 8
+  },
+  "total_tensors": 384,
+  "module_info": {
+    "q_proj": {
+      "tensor_count": 96,
+      "lora_A_shapes": [
+        [
+          16,
+          5120
+        ]
+      ],
+      "lora_B_shapes": [
+        [
+          5120,
+          16
+        ]
+      ]
+    },
+    "k_proj": {
+      "tensor_count": 96,
+      "lora_A_shapes": [
+        [
+          16,
+          5120
+        ]
+      ],
+      "lora_B_shapes": [
+        [
+          1024,
+          16
+        ]
+      ]
+    },
+    "v_proj": {
+      "tensor_count": 96,
+      "lora_A_shapes": [
+        [
+          16,
+          5120
+        ]
+      ],
+      "lora_B_shapes": [
+        [
+          1024,
+          16
+        ]
+      ]
+    },
+    "o_proj": {
+      "tensor_count": 96,
+      "lora_A_shapes": [
+        [
+          8,
+          5120
+        ]
+      ],
+      "lora_B_shapes": [
+        [
+          5120,
+          8
+        ]
+      ]
+    }
+  },
+  "o_proj_rank_actual": 8,
+  "o_proj_rank_expected": 8,
+  "o_proj_rank_matches": true,
+  "qkv_rank_16_confirmed": true,
+  "verification_passed": true
+}

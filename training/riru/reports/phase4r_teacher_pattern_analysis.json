@@ -1,0 +1,191 @@
+{
+  "n_total_answers": 914,
+  "compression_phrase_frequency": {
+    "は3種類あって": {
+      "count": 2,
+      "pct": 0.2
+    },
+    "は3種類あり": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "抽選で決定する": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "抽選で決まる": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "主に": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "代表的には": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "など": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "詳しくは": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "基本的には": {
+      "count": 1,
+      "pct": 0.1
+    },
+    "だよ。": {
+      "count": 100,
+      "pct": 10.9
+    },
+    "なんだ。": {
+      "count": 17,
+      "pct": 1.9
+    },
+    "だね。": {
+      "count": 9,
+      "pct": 1.0
+    }
+  },
+  "structural_short_pattern_count": 0,
+  "structural_short_pattern_pct": 0.0,
+  "structural_short_pattern_examples": [],
+  "q3_nearest_teacher_examples_top20": [
+    {
+      "similarity": 0.196,
+      "answer": "ボーナスは3種類あって、獲得枚数はそれぞれ150枚、250枚、400枚だよ。",
+      "category": "rag_multi_info_no_omission",
+      "source": "phase4f_generated"
+    },
+    {
+      "similarity": 0.159,
+      "answer": "ボーナスは3種類あって、150枚・250枚・400枚のいずれかだね。",
+      "category": "repetition_suppression",
+      "source": "phase4f_generated"
+    },
+    {
+      "similarity": 0.152,
+      "answer": "特化ゾーンは3種類あるみたいだよ。",
+      "category": "faithful_to_given_info",
+      "source": "phase4b_generated"
+    },
+    {
+      "similarity": 0.135,
+      "answer": "ゾーンαの滞在ゲーム数は10〜50Gだよ。",
+      "category": "faithful_to_given_info",
+      "source": "phase4b_generated"
+    },
+    {
+      "similarity": 0.13,
+      "answer": "天井は600G・900G・1300Gの3種類で、それぞれ20%・30%・50%だよ。到達するとAT確定に加えて追加抽選もあって、成功率は35%なんだ。抽選に成功すると特化ゾーンへの突入が確定するよ。",
+      "category": "complex_rag_structure_omission_prevention",
+      "source": "phase4k_generated"
+    },
+    {
+      "similarity": 0.127,
+      "answer": "モードは全部で5種類あるよ。モードβの滞在率は35%、モードγは15%なんだ。移行は毎ゲーム抽選されて、最高モードだけ移行率が優遇されるよ。",
+      "category": "complex_rag_structure_omission_prevention",
+      "source": "phase4k_generated"
+    },
+    {
+      "similarity": 0.12,
+      "answer": "ボーナスは3種類あるみたいだよ。ただ確率については非公開ってなってるね。",
+      "category": "faithful_to_given_info",
+      "source": "phase4b_generated"
+    },
+    {
+      "similarity": 0.114,
+      "answer": "純増は6枚/G、ボーナス間の平均ゲーム数は450Gだよ。",
+      "category": "rag_multi_info_no_omission",
+      "source": "phase4f_generated"
+    },
+    {
+      "similarity": 0.111,
+      "answer": "天井は800Gと1200Gの2種類あって、どっちになるかは設定によるみたいだよ。天井恩恵はAT確定だね。",
+      "category": "rag_multi_info_no_omission",
+      "source": "phase4f_generated"
+    },
+    {
+      "similarity": 0.111,
+      "answer": "モードは4種類あって、最高モードだけ移行率が優遇されてるんだ。",
+      "category": "repetition_suppression",
+      "source": "phase4f_generated"
+    },
+    {
+      "similarity": 0.102,
+      "answer": "天井に到達すると、AT-Aが確定するよ。AT-A中の純増は6枚/Gなんだ。",
+      "category": "derived_entity_retention",
+      "source": "phase4k_generated"
+    },
+    {
+      "similarity": 0.102,
+      "answer": "モードは全部で4種類あって、モードごとに滞在率が違うよ。最高モードだけ移行率が優遇されてるみたい。",
+      "category": "rag_multi_info_no_omission",
+      "source": "phase4f_generated"
+    },
+    {
+      "similarity": 0.1,
+      "answer": "キミとお話しするのすごく楽しいなって思ってるよ。",
+      "category": "kimi_usage",
+      "source": "phase4b_generated"
+    },
+    {
+      "similarity": 0.1,
+      "answer": "天井は800Gと1200Gの2種類あるみたいだよ。",
+      "category": "faithful_to_given_info",
+      "source": "phase4b_generated"
+    },
+    {
+      "similarity": 0.095,
+      "answer": "ボーナスは3種類あるよ。ただ、それぞれの発生確率については登録情報に無いから、そこは分からないんだ。",
+      "category": "compound_partial_info",
+      "source": "phase4f_generated"
+    },
+    {
+      "similarity": 0.094,
+      "answer": "ゾーンαは突入率1/50、滞在ゲーム数は10〜30G、継続率は70%だよ。",
+      "category": "rag_multi_info_no_omission",
+      "source": "phase4f_generated"
+    },
+    {
+      "similarity": 0.091,
+      "answer": "好きな音楽聴いて、ちょっとだけ外に出たりするよ。太陽の光って元気くれるんだ〜！",
+      "category": null,
+      "source": null
+    },
+    {
+      "similarity": 0.087,
+      "answer": "ゾーンαは継続率70%、滞在ゲーム数は10〜30Gなんだ。",
+      "category": "repetition_suppression",
+      "source": "phase4f_generated"
+    },
+    {
+      "similarity": 0.087,
+      "answer": "ゾーンX中は追加抽選があるよ。成功するとゾーンYへ移行するんだ。",
+      "category": "derived_entity_retention",
+      "source": "phase4k_generated"
+    },
+    {
+      "similarity": 0.083,
+      "answer": "モードは全部で4種類あるみたいだよ。",
+      "category": "faithful_to_given_info",
+      "source": "phase4b_generated"
+    }
+  ],
+  "persona_vs_rag_length_comparison": {
+    "persona_like_non_fact_categories": {
+      "n": 805,
+      "mean_length": 31.1,
+      "pct_of_total": 88.1
+    },
+    "rag_like_fact_categories": {
+      "n": 109,
+      "mean_length": 34.9,
+      "pct_of_total": 11.9
+    },
+    "note": "category名ベースの粗い分類(fact-bearingカテゴリ以外は全てpersona_likeとして扱う)。実際にはpersona_like側にも一部説明的な回答が含まれうるため参考値。"
+  }
+}

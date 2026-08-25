@@ -1,0 +1,1163 @@
+[
+  {
+    "id": "T1-0",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種A（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [天井/ゲーム数振り分け] 600G: 20%\n- [天井/ゲーム数振り分け] 900G: 30%\n- [天井/ゲーム数振り分け] 1300G: 50%\n- [天井/到達時処理] 共通: AT確定\n- [天井/追加抽選] 実施有無: 追加抽選\n- [天井/追加抽選成功率] 共通: 35%\n- [ゾーンX/突入率] 設定共通: 1/50\n- [小役A/確率] 設定共通: 1/30\n\n【関連する解説文章】\n\n◆ 天井解説（出典カテゴリ: at_mechanism）\n天井ゲーム数は3種類あり、抽選で決定する。到達するとAT確定に加え、追加抽選が行われる。\n\n◆ 追加抽選詳細解説（出典カテゴリ: at_mechanism）\n追加抽選に成功すると、特化ゾーンへの突入が確定する。\n\n◆ ゾーンX解説（出典カテゴリ: zone_explanation）\nゾーンXは前兆を経て突入する高確ゾーン。\n\n◆ 小役A解説（出典カテゴリ: game_mechanism）\n小役Aが成立すると、まれに演出が発生する。\n\n◆ 前兆解説（出典カテゴリ: effect_lore）\n前兆には弱パターンと強パターンがある。\n\n◆ 設定判別解説（出典カテゴリ: setting_lore）\n設定判別はモード移行率を主な手がかりとする。\n\n天井について教えて",
+    "assistant_full": "天井は600G・900G・1300Gの3種類で、それぞれ20%・30%・50%だよ。到達するとAT確定に加えて追加抽選もあって、成功率は35%なんだ。抽選に成功すると特化ゾーンへの突入が確定するよ。",
+    "structured_data": [
+      {
+        "label": "天井/ゲーム数振り分け",
+        "item": "600G",
+        "value": "20%",
+        "relevant": true
+      },
+      {
+        "label": "天井/ゲーム数振り分け",
+        "item": "900G",
+        "value": "30%",
+        "relevant": true
+      },
+      {
+        "label": "天井/ゲーム数振り分け",
+        "item": "1300G",
+        "value": "50%",
+        "relevant": true
+      },
+      {
+        "label": "天井/到達時処理",
+        "item": "共通",
+        "value": "AT確定",
+        "relevant": true
+      },
+      {
+        "label": "天井/追加抽選",
+        "item": "実施有無",
+        "value": "追加抽選",
+        "relevant": true
+      },
+      {
+        "label": "天井/追加抽選成功率",
+        "item": "共通",
+        "value": "35%",
+        "relevant": true
+      },
+      {
+        "label": "ゾーンX/突入率",
+        "item": "設定共通",
+        "value": "1/50",
+        "relevant": false
+      },
+      {
+        "label": "小役A/確率",
+        "item": "設定共通",
+        "value": "1/30",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "天井解説",
+        "category": "at_mechanism",
+        "body": "天井ゲーム数は3種類あり、抽選で決定する。到達するとAT確定に加え、追加抽選が行われる。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "追加抽選詳細解説",
+        "category": "at_mechanism",
+        "body": "追加抽選に成功すると、特化ゾーンへの突入が確定する。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "ゾーンX解説",
+        "category": "zone_explanation",
+        "body": "ゾーンXは前兆を経て突入する高確ゾーン。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "小役A解説",
+        "category": "game_mechanism",
+        "body": "小役Aが成立すると、まれに演出が発生する。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "前兆解説",
+        "category": "effect_lore",
+        "body": "前兆には弱パターンと強パターンがある。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "設定判別解説",
+        "category": "setting_lore",
+        "body": "設定判別はモード移行率を主な手がかりとする。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "20%",
+      "30%",
+      "50%",
+      "AT確定",
+      "追加抽選",
+      "35%",
+      "特化ゾーンへの突入が確定する"
+    ],
+    "irrelevant_info_list": [
+      "1/50",
+      "1/30"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 0,
+      "question": "天井について教えて",
+      "structured_rows_total": 8,
+      "structured_rows_relevant": 6,
+      "structured_rows_irrelevant": 2,
+      "prose_sections_total": 6,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 4,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 7,
+      "irrelevant_fact_count": 2,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 99,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-1",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種A（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [ボーナス/設定1確率] 設定1: 1/480\n- [ボーナス/設定3確率] 設定3: 1/400\n- [ボーナス/設定6確率] 設定6: 1/320\n- [ボーナス/獲得枚数] 共通: 250枚\n- [ゾーンY/継続率] 初回: 60%\n- [モードα/滞在率] 共通: 40%\n\n【関連する解説文章】\n\n◆ ボーナス解説（出典カテゴリ: at_mechanism）\nボーナスは設定が上がるほど当選しやすくなる。獲得枚数は一律250枚。\n\n◆ ボーナス成立後の解説（出典カテゴリ: at_mechanism）\nボーナス成立後は必ずモードαへ移行する。\n\n◆ ゾーンY解説（出典カテゴリ: zone_explanation）\nゾーンYは特殊な演出を伴う高確ゾーン。\n\n◆ モードα解説（出典カテゴリ: game_mechanism）\nモードαは滞在率40%の中間モード。\n\n◆ 前兆解説（出典カテゴリ: effect_lore）\n前兆には弱パターンと強パターンがある。\n\nボーナス確率について教えて",
+    "assistant_full": "ボーナス確率は設定1が1/480、設定3が1/400、設定6が1/320だよ。獲得枚数は一律250枚で、成立後は必ずモードαへ移行するんだ。",
+    "structured_data": [
+      {
+        "label": "ボーナス/設定1確率",
+        "item": "設定1",
+        "value": "1/480",
+        "relevant": true
+      },
+      {
+        "label": "ボーナス/設定3確率",
+        "item": "設定3",
+        "value": "1/400",
+        "relevant": true
+      },
+      {
+        "label": "ボーナス/設定6確率",
+        "item": "設定6",
+        "value": "1/320",
+        "relevant": true
+      },
+      {
+        "label": "ボーナス/獲得枚数",
+        "item": "共通",
+        "value": "250枚",
+        "relevant": true
+      },
+      {
+        "label": "ゾーンY/継続率",
+        "item": "初回",
+        "value": "60%",
+        "relevant": false
+      },
+      {
+        "label": "モードα/滞在率",
+        "item": "共通",
+        "value": "40%",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "ボーナス解説",
+        "category": "at_mechanism",
+        "body": "ボーナスは設定が上がるほど当選しやすくなる。獲得枚数は一律250枚。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "ボーナス成立後の解説",
+        "category": "at_mechanism",
+        "body": "ボーナス成立後は必ずモードαへ移行する。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "ゾーンY解説",
+        "category": "zone_explanation",
+        "body": "ゾーンYは特殊な演出を伴う高確ゾーン。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "モードα解説",
+        "category": "game_mechanism",
+        "body": "モードαは滞在率40%の中間モード。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "前兆解説",
+        "category": "effect_lore",
+        "body": "前兆には弱パターンと強パターンがある。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "1/480",
+      "1/400",
+      "1/320",
+      "250枚",
+      "成立後は必ずモードαへ移行する"
+    ],
+    "irrelevant_info_list": [
+      "60%",
+      "40%"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 1,
+      "question": "ボーナス確率について教えて",
+      "structured_rows_total": 6,
+      "structured_rows_relevant": 4,
+      "structured_rows_irrelevant": 2,
+      "prose_sections_total": 5,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 3,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 5,
+      "irrelevant_fact_count": 2,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 70,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-2",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種B（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [ゾーンY/突入率] 設定共通: 1/42\n- [ゾーンY/滞在ゲーム数] 平均: 22G\n- [ゾーンY/継続率] 初回: 68%\n- [ゾーンY/平均獲得枚数] 1回あたり: 340枚\n- [小役B/確率] 設定共通: 1/6.5\n- [設定判別/判別要素] 主要: モード移行率\n\n【関連する解説文章】\n\n◆ ゾーンY解説（出典カテゴリ: zone_explanation）\nゾーンYは突入率1/42の高確ゾーンで、平均22G滞在する。\n\n◆ ゾーンY継続時解説（出典カテゴリ: zone_explanation）\n継続に成功すると獲得枚数はさらに上乗せされる。\n\n◆ 小役B解説（出典カテゴリ: game_mechanism）\n小役Bは全設定共通の確率で成立する。\n\n◆ 設定判別解説（出典カテゴリ: setting_lore）\n設定判別はモード移行率を主な手がかりとする。\n\n◆ 前兆解説（出典カテゴリ: effect_lore）\n前兆には弱パターンと強パターンがある。\n\nゾーンYについて教えて",
+    "assistant_full": "ゾーンYは突入率1/42で、平均22G滞在するよ。初回継続率は68%で、平均獲得枚数は340枚なんだ。継続に成功すると、さらに枚数が上乗せされるよ。",
+    "structured_data": [
+      {
+        "label": "ゾーンY/突入率",
+        "item": "設定共通",
+        "value": "1/42",
+        "relevant": true
+      },
+      {
+        "label": "ゾーンY/滞在ゲーム数",
+        "item": "平均",
+        "value": "22G",
+        "relevant": true
+      },
+      {
+        "label": "ゾーンY/継続率",
+        "item": "初回",
+        "value": "68%",
+        "relevant": true
+      },
+      {
+        "label": "ゾーンY/平均獲得枚数",
+        "item": "1回あたり",
+        "value": "340枚",
+        "relevant": true
+      },
+      {
+        "label": "小役B/確率",
+        "item": "設定共通",
+        "value": "1/6.5",
+        "relevant": false
+      },
+      {
+        "label": "設定判別/判別要素",
+        "item": "主要",
+        "value": "モード移行率",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "ゾーンY解説",
+        "category": "zone_explanation",
+        "body": "ゾーンYは突入率1/42の高確ゾーンで、平均22G滞在する。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "ゾーンY継続時解説",
+        "category": "zone_explanation",
+        "body": "継続に成功すると獲得枚数はさらに上乗せされる。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "小役B解説",
+        "category": "game_mechanism",
+        "body": "小役Bは全設定共通の確率で成立する。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "設定判別解説",
+        "category": "setting_lore",
+        "body": "設定判別はモード移行率を主な手がかりとする。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "前兆解説",
+        "category": "effect_lore",
+        "body": "前兆には弱パターンと強パターンがある。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "1/42",
+      "22G",
+      "68%",
+      "340枚",
+      "さらに枚数が上乗せされる"
+    ],
+    "irrelevant_info_list": [
+      "1/6.5",
+      "モード移行率"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 2,
+      "question": "ゾーンYについて教えて",
+      "structured_rows_total": 6,
+      "structured_rows_relevant": 4,
+      "structured_rows_irrelevant": 2,
+      "prose_sections_total": 5,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 3,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 5,
+      "irrelevant_fact_count": 2,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 74,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-3",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種A（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [モード/種類数] 全体: 5種類\n- [モードβ/滞在率] 共通: 35%\n- [モードγ/滞在率] 共通: 15%\n- [モード/最高モード優遇] 移行率: 優遇\n- [ボーナス/獲得枚数] 共通: 250枚\n- [ゾーンY/継続率] 初回: 68%\n\n【関連する解説文章】\n\n◆ モード解説（出典カテゴリ: game_mechanism）\nモードは全部で5種類あり、モードごとに滞在率が異なる。\n\n◆ モード移行条件解説（出典カテゴリ: game_mechanism）\nモード移行は毎ゲーム抽選され、最高モードだけ移行率が優遇される。\n\n◆ ボーナス解説（出典カテゴリ: at_mechanism）\nボーナスの獲得枚数は一律250枚。\n\n◆ ゾーンY解説（出典カテゴリ: zone_explanation）\nゾーンYは高確ゾーンの一つ。\n\n◆ 設定判別解説（出典カテゴリ: setting_lore）\n設定判別はモード移行率を主な手がかりとする。\n\nモードについて教えて",
+    "assistant_full": "モードは全部で5種類あるよ。モードβの滞在率は35%、モードγは15%なんだ。移行は毎ゲーム抽選されて、最高モードだけ移行率が優遇されるよ。",
+    "structured_data": [
+      {
+        "label": "モード/種類数",
+        "item": "全体",
+        "value": "5種類",
+        "relevant": true
+      },
+      {
+        "label": "モードβ/滞在率",
+        "item": "共通",
+        "value": "35%",
+        "relevant": true
+      },
+      {
+        "label": "モードγ/滞在率",
+        "item": "共通",
+        "value": "15%",
+        "relevant": true
+      },
+      {
+        "label": "モード/最高モード優遇",
+        "item": "移行率",
+        "value": "優遇",
+        "relevant": true
+      },
+      {
+        "label": "ボーナス/獲得枚数",
+        "item": "共通",
+        "value": "250枚",
+        "relevant": false
+      },
+      {
+        "label": "ゾーンY/継続率",
+        "item": "初回",
+        "value": "68%",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "モード解説",
+        "category": "game_mechanism",
+        "body": "モードは全部で5種類あり、モードごとに滞在率が異なる。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "モード移行条件解説",
+        "category": "game_mechanism",
+        "body": "モード移行は毎ゲーム抽選され、最高モードだけ移行率が優遇される。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "ボーナス解説",
+        "category": "at_mechanism",
+        "body": "ボーナスの獲得枚数は一律250枚。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "ゾーンY解説",
+        "category": "zone_explanation",
+        "body": "ゾーンYは高確ゾーンの一つ。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "設定判別解説",
+        "category": "setting_lore",
+        "body": "設定判別はモード移行率を主な手がかりとする。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "5種類",
+      "35%",
+      "15%",
+      "優遇",
+      "毎ゲーム抽選され"
+    ],
+    "irrelevant_info_list": [
+      "250枚",
+      "68%"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 3,
+      "question": "モードについて教えて",
+      "structured_rows_total": 6,
+      "structured_rows_relevant": 4,
+      "structured_rows_irrelevant": 2,
+      "prose_sections_total": 5,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 3,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 5,
+      "irrelevant_fact_count": 2,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 70,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-4",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種C（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [設定1/機械割] 設定1: 97.0%\n- [設定6/機械割] 設定6: 114.0%\n- [設定1/初当り確率] 設定1: 1/500\n- [設定6/初当り確率] 設定6: 1/280\n- [設定判別/判別要素] 主要: モード移行率\n- [ゾーンY/継続率] 初回: 68%\n\n【関連する解説文章】\n\n◆ 設定差解説（出典カテゴリ: setting_lore）\n設定6は設定1より機械割・初当り確率ともに優遇されている。\n\n◆ 設定差詳細解説（出典カテゴリ: setting_lore）\n純増にも差があり、設定6は設定1よりATが伸びやすい。\n\n◆ 設定判別解説（出典カテゴリ: setting_lore）\n設定判別はモード移行率を主な手がかりとする。\n\n◆ ゾーンY解説（出典カテゴリ: zone_explanation）\nゾーンYは高確ゾーンの一つ。\n\n◆ 前兆解説（出典カテゴリ: effect_lore）\n前兆には弱パターンと強パターンがある。\n\n設定1と設定6を比較して",
+    "assistant_full": "設定1は機械割97.0%、初当り1/500だよ。設定6は機械割114.0%、初当り1/280で、設定6の方が優遇されてるんだ。純増にも差があって、設定6の方がATが伸びやすいよ。",
+    "structured_data": [
+      {
+        "label": "設定1/機械割",
+        "item": "設定1",
+        "value": "97.0%",
+        "relevant": true
+      },
+      {
+        "label": "設定6/機械割",
+        "item": "設定6",
+        "value": "114.0%",
+        "relevant": true
+      },
+      {
+        "label": "設定1/初当り確率",
+        "item": "設定1",
+        "value": "1/500",
+        "relevant": true
+      },
+      {
+        "label": "設定6/初当り確率",
+        "item": "設定6",
+        "value": "1/280",
+        "relevant": true
+      },
+      {
+        "label": "設定判別/判別要素",
+        "item": "主要",
+        "value": "モード移行率",
+        "relevant": false
+      },
+      {
+        "label": "ゾーンY/継続率",
+        "item": "初回",
+        "value": "68%",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "設定差解説",
+        "category": "setting_lore",
+        "body": "設定6は設定1より機械割・初当り確率ともに優遇されている。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "設定差詳細解説",
+        "category": "setting_lore",
+        "body": "純増にも差があり、設定6は設定1よりATが伸びやすい。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "設定判別解説",
+        "category": "setting_lore",
+        "body": "設定判別はモード移行率を主な手がかりとする。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "ゾーンY解説",
+        "category": "zone_explanation",
+        "body": "ゾーンYは高確ゾーンの一つ。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "前兆解説",
+        "category": "effect_lore",
+        "body": "前兆には弱パターンと強パターンがある。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "97.0%",
+      "114.0%",
+      "1/500",
+      "1/280",
+      "ATが伸びやすい"
+    ],
+    "irrelevant_info_list": [
+      "モード移行率",
+      "68%"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 4,
+      "question": "設定1と設定6を比較して",
+      "structured_rows_total": 6,
+      "structured_rows_relevant": 4,
+      "structured_rows_irrelevant": 2,
+      "prose_sections_total": 5,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 3,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 5,
+      "irrelevant_fact_count": 2,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 89,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-5",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種B（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [特化ゾーン/保証ゲーム数] 共通: 7G\n- [特化ゾーン/突入後の継続] 最低保証: 1セットの継続\n- [特化ゾーン/平均獲得枚数] 1セットあたり: 280枚\n- [前兆/パターン数] 全体: 2種類\n- [小役B/確率] 設定共通: 1/6.5\n\n【関連する解説文章】\n\n◆ 特化ゾーン解説（出典カテゴリ: zone_explanation）\n特化ゾーンは保証7Gで、突入すると最低1セットの継続が確定する。\n\n◆ 特化ゾーン獲得枚数解説（出典カテゴリ: zone_explanation）\n1セットあたりの平均獲得枚数は280枚とされる。\n\n◆ 前兆解説（出典カテゴリ: effect_lore）\n前兆には弱パターンと強パターンがある。\n\n◆ 小役B解説（出典カテゴリ: game_mechanism）\n小役Bは全設定共通の確率で成立する。\n\n特化ゾーンについて教えて",
+    "assistant_full": "特化ゾーンは保証7Gで、突入すると最低1セットの継続が確定するよ。1セットあたりの平均獲得枚数は280枚なんだ。",
+    "structured_data": [
+      {
+        "label": "特化ゾーン/保証ゲーム数",
+        "item": "共通",
+        "value": "7G",
+        "relevant": true
+      },
+      {
+        "label": "特化ゾーン/突入後の継続",
+        "item": "最低保証",
+        "value": "1セットの継続",
+        "relevant": true
+      },
+      {
+        "label": "特化ゾーン/平均獲得枚数",
+        "item": "1セットあたり",
+        "value": "280枚",
+        "relevant": true
+      },
+      {
+        "label": "前兆/パターン数",
+        "item": "全体",
+        "value": "2種類",
+        "relevant": false
+      },
+      {
+        "label": "小役B/確率",
+        "item": "設定共通",
+        "value": "1/6.5",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "特化ゾーン解説",
+        "category": "zone_explanation",
+        "body": "特化ゾーンは保証7Gで、突入すると最低1セットの継続が確定する。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "特化ゾーン獲得枚数解説",
+        "category": "zone_explanation",
+        "body": "1セットあたりの平均獲得枚数は280枚とされる。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "前兆解説",
+        "category": "effect_lore",
+        "body": "前兆には弱パターンと強パターンがある。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "小役B解説",
+        "category": "game_mechanism",
+        "body": "小役Bは全設定共通の確率で成立する。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "7G",
+      "1セットの継続",
+      "280枚"
+    ],
+    "irrelevant_info_list": [
+      "2種類",
+      "1/6.5"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 5,
+      "question": "特化ゾーンについて教えて",
+      "structured_rows_total": 5,
+      "structured_rows_relevant": 3,
+      "structured_rows_irrelevant": 2,
+      "prose_sections_total": 4,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 2,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 3,
+      "irrelevant_fact_count": 2,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 56,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-6",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種A（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [前兆/弱パターン] 意味: 通常前兆\n- [前兆/強パターン] 意味: 濃厚になる\n- [ゾーンY/継続率] 初回: 68%\n- [設定判別/判別要素] 主要: モード移行率\n\n【関連する解説文章】\n\n◆ 前兆解説（出典カテゴリ: effect_lore）\n前兆には弱パターンと強パターンの2種類がある。\n\n◆ 強パターン詳細解説（出典カテゴリ: effect_lore）\n強パターンが出現すると、ゾーンXへの突入が濃厚になる。\n\n◆ ゾーンY解説（出典カテゴリ: zone_explanation）\nゾーンYは高確ゾーンの一つ。\n\n◆ 設定判別解説（出典カテゴリ: setting_lore）\n設定判別はモード移行率を主な手がかりとする。\n\n前兆について教えて",
+    "assistant_full": "前兆には弱パターンと強パターンの2種類があるよ。弱パターンは通常前兆で、強パターンが出るとゾーンXへの突入が濃厚になるんだ。",
+    "structured_data": [
+      {
+        "label": "前兆/弱パターン",
+        "item": "意味",
+        "value": "通常前兆",
+        "relevant": true
+      },
+      {
+        "label": "前兆/強パターン",
+        "item": "意味",
+        "value": "濃厚になる",
+        "relevant": true
+      },
+      {
+        "label": "ゾーンY/継続率",
+        "item": "初回",
+        "value": "68%",
+        "relevant": false
+      },
+      {
+        "label": "設定判別/判別要素",
+        "item": "主要",
+        "value": "モード移行率",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "前兆解説",
+        "category": "effect_lore",
+        "body": "前兆には弱パターンと強パターンの2種類がある。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "強パターン詳細解説",
+        "category": "effect_lore",
+        "body": "強パターンが出現すると、ゾーンXへの突入が濃厚になる。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "ゾーンY解説",
+        "category": "zone_explanation",
+        "body": "ゾーンYは高確ゾーンの一つ。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "設定判別解説",
+        "category": "setting_lore",
+        "body": "設定判別はモード移行率を主な手がかりとする。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "通常前兆",
+      "濃厚になる"
+    ],
+    "irrelevant_info_list": [
+      "68%",
+      "モード移行率"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 6,
+      "question": "前兆について教えて",
+      "structured_rows_total": 4,
+      "structured_rows_relevant": 2,
+      "structured_rows_irrelevant": 2,
+      "prose_sections_total": 4,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 2,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 2,
+      "irrelevant_fact_count": 2,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 62,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-7",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種C（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [小役B/確率] 設定共通: 1/6.5\n- [小役B/モード示唆] 成立時: 示唆になる\n- [ボーナス/獲得枚数] 共通: 250枚\n\n【関連する解説文章】\n\n◆ 小役B解説（出典カテゴリ: game_mechanism）\n小役Bは全設定共通の確率で成立する。\n\n◆ 小役B成立時解説（出典カテゴリ: game_mechanism）\n成立時にモードβ以上への示唆となることがある。\n\n◆ ボーナス解説（出典カテゴリ: at_mechanism）\nボーナスの獲得枚数は一律250枚。\n\n小役Bについて教えて",
+    "assistant_full": "小役Bは1/6.5の確率で、全設定共通なんだ。成立するとモードβ以上への示唆になることがあるよ。",
+    "structured_data": [
+      {
+        "label": "小役B/確率",
+        "item": "設定共通",
+        "value": "1/6.5",
+        "relevant": true
+      },
+      {
+        "label": "小役B/モード示唆",
+        "item": "成立時",
+        "value": "示唆になる",
+        "relevant": true
+      },
+      {
+        "label": "ボーナス/獲得枚数",
+        "item": "共通",
+        "value": "250枚",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "小役B解説",
+        "category": "game_mechanism",
+        "body": "小役Bは全設定共通の確率で成立する。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "小役B成立時解説",
+        "category": "game_mechanism",
+        "body": "成立時にモードβ以上への示唆となることがある。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "ボーナス解説",
+        "category": "at_mechanism",
+        "body": "ボーナスの獲得枚数は一律250枚。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "1/6.5",
+      "示唆になる",
+      "モードβ以上への示唆"
+    ],
+    "irrelevant_info_list": [
+      "250枚"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 7,
+      "question": "小役Bについて教えて",
+      "structured_rows_total": 3,
+      "structured_rows_relevant": 2,
+      "structured_rows_irrelevant": 1,
+      "prose_sections_total": 3,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 1,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 3,
+      "irrelevant_fact_count": 1,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 48,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-8",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種A（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [投資/推奨投資額] 目安: 2200枚\n- [投資/回収目安] 目安: ボーナス2回分\n- [投資/勝率目安] 全体: 42%\n- [設定判別/判別要素] 主要: モード移行率\n\n【関連する解説文章】\n\n◆ 投資目安解説（出典カテゴリ: at_mechanism）\n推奨投資額は2200枚、回収の目安はボーナス2回分とされている。\n\n◆ 勝率目安解説（出典カテゴリ: at_mechanism）\n全体の勝率目安は42%とされる。\n\n◆ 設定判別解説（出典カテゴリ: setting_lore）\n設定判別はモード移行率を主な手がかりとする。\n\n投資と回収の目安を教えて",
+    "assistant_full": "推奨投資額は2200枚で、回収の目安はボーナス2回分だよ。全体の勝率目安は42%なんだ。",
+    "structured_data": [
+      {
+        "label": "投資/推奨投資額",
+        "item": "目安",
+        "value": "2200枚",
+        "relevant": true
+      },
+      {
+        "label": "投資/回収目安",
+        "item": "目安",
+        "value": "ボーナス2回分",
+        "relevant": true
+      },
+      {
+        "label": "投資/勝率目安",
+        "item": "全体",
+        "value": "42%",
+        "relevant": true
+      },
+      {
+        "label": "設定判別/判別要素",
+        "item": "主要",
+        "value": "モード移行率",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "投資目安解説",
+        "category": "at_mechanism",
+        "body": "推奨投資額は2200枚、回収の目安はボーナス2回分とされている。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "勝率目安解説",
+        "category": "at_mechanism",
+        "body": "全体の勝率目安は42%とされる。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "設定判別解説",
+        "category": "setting_lore",
+        "body": "設定判別はモード移行率を主な手がかりとする。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "2200枚",
+      "ボーナス2回分",
+      "42%"
+    ],
+    "irrelevant_info_list": [
+      "モード移行率"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 8,
+      "question": "投資と回収の目安を教えて",
+      "structured_rows_total": 4,
+      "structured_rows_relevant": 3,
+      "structured_rows_irrelevant": 1,
+      "prose_sections_total": 3,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 1,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 3,
+      "irrelevant_fact_count": 1,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 44,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-9",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種D（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [出目示唆/0テンパイ] 該当時: 濃厚になる\n- [出目示唆/偶数テンパイ] 該当時: 弱めの示唆\n- [ゾーンZ/滞在ゲーム数] 平均: 18G\n- [小役C/確率] 設定共通: 1/7.8\n\n【関連する解説文章】\n\n◆ 出目示唆解説（出典カテゴリ: zone_explanation）\n0テンパイが出るとゾーンZが濃厚になる。偶数テンパイは弱めの示唆にとどまる。\n\n◆ 出目示唆補足解説（出典カテゴリ: zone_explanation）\nいずれの示唆も次ゲーム以降の演出で確認できる。\n\n◆ ゾーンZ解説（出典カテゴリ: zone_explanation）\nゾーンZは天井到達時のみ突入する特殊ゾーン。\n\n◆ 小役C解説（出典カテゴリ: game_mechanism）\n小役Cは全設定共通の確率で成立する。\n\n出目示唆について教えて",
+    "assistant_full": "0テンパイが出るとゾーンZが濃厚になるよ。偶数テンパイは弱めの示唆にとどまるんだ。どちらも次ゲーム以降の演出で確認できるよ。",
+    "structured_data": [
+      {
+        "label": "出目示唆/0テンパイ",
+        "item": "該当時",
+        "value": "濃厚になる",
+        "relevant": true
+      },
+      {
+        "label": "出目示唆/偶数テンパイ",
+        "item": "該当時",
+        "value": "弱めの示唆",
+        "relevant": true
+      },
+      {
+        "label": "ゾーンZ/滞在ゲーム数",
+        "item": "平均",
+        "value": "18G",
+        "relevant": false
+      },
+      {
+        "label": "小役C/確率",
+        "item": "設定共通",
+        "value": "1/7.8",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "出目示唆解説",
+        "category": "zone_explanation",
+        "body": "0テンパイが出るとゾーンZが濃厚になる。偶数テンパイは弱めの示唆にとどまる。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "出目示唆補足解説",
+        "category": "zone_explanation",
+        "body": "いずれの示唆も次ゲーム以降の演出で確認できる。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "ゾーンZ解説",
+        "category": "zone_explanation",
+        "body": "ゾーンZは天井到達時のみ突入する特殊ゾーン。",
+        "relevant": false,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "小役C解説",
+        "category": "game_mechanism",
+        "body": "小役Cは全設定共通の確率で成立する。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "濃厚になる",
+      "弱めの示唆",
+      "次ゲーム以降の演出で確認できる"
+    ],
+    "irrelevant_info_list": [
+      "18G",
+      "1/7.8"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 9,
+      "question": "出目示唆について教えて",
+      "structured_rows_total": 4,
+      "structured_rows_relevant": 2,
+      "structured_rows_irrelevant": 2,
+      "prose_sections_total": 4,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 2,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 3,
+      "irrelevant_fact_count": 2,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 62,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T1-10",
+    "category": "complex_rag_structure_omission_prevention",
+    "user_full": "【対象機種】\n機種D（パチスロ） 設定判別・天井・ゾーン・解析・打ち方・ヤメ時\nこのセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。\n\n【構造化データ（数値・確率・設定差・天井・示唆など）】\nこのセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。\n\n- [ゾーンZ/平均獲得枚数] 1回あたり: 310枚\n- [ゾーンZ/継続条件] 共通: 特定の小役が成立\n- [ゾーンZ/次ゾーンへの移行率] 継続時: 25%\n- [小役C/確率] 設定共通: 1/7.8\n\n【関連する解説文章】\n\n◆ ゾーンZ解説（出典カテゴリ: zone_explanation）\nゾーンZは平均310枚を獲得できる特殊ゾーン。\n\n◆ ゾーンZ継続解説（出典カテゴリ: zone_explanation）\n特定の小役が成立すると継続し、継続時は25%でさらに次のゾーンへ移行する。\n\n◆ 小役C解説（出典カテゴリ: game_mechanism）\n小役Cは全設定共通の確率で成立する。\n\nゾーンZについて教えて",
+    "assistant_full": "ゾーンZは平均310枚を獲得できるゾーンだよ。特定の小役が成立すると継続して、継続時は25%でさらに次のゾーンへ移行するんだ。",
+    "structured_data": [
+      {
+        "label": "ゾーンZ/平均獲得枚数",
+        "item": "1回あたり",
+        "value": "310枚",
+        "relevant": true
+      },
+      {
+        "label": "ゾーンZ/継続条件",
+        "item": "共通",
+        "value": "特定の小役が成立",
+        "relevant": true
+      },
+      {
+        "label": "ゾーンZ/次ゾーンへの移行率",
+        "item": "継続時",
+        "value": "25%",
+        "relevant": true
+      },
+      {
+        "label": "小役C/確率",
+        "item": "設定共通",
+        "value": "1/7.8",
+        "relevant": false
+      }
+    ],
+    "prose_sections": [
+      {
+        "title": "ゾーンZ解説",
+        "category": "zone_explanation",
+        "body": "ゾーンZは平均310枚を獲得できる特殊ゾーン。",
+        "relevant": true,
+        "is_compressed_summary": true
+      },
+      {
+        "title": "ゾーンZ継続解説",
+        "category": "zone_explanation",
+        "body": "特定の小役が成立すると継続し、継続時は25%でさらに次のゾーンへ移行する。",
+        "relevant": true,
+        "is_compressed_summary": false
+      },
+      {
+        "title": "小役C解説",
+        "category": "game_mechanism",
+        "body": "小役Cは全設定共通の確率で成立する。",
+        "relevant": false,
+        "is_compressed_summary": false
+      }
+    ],
+    "relevant_info_list": [
+      "310枚",
+      "特定の小役が成立",
+      "25%"
+    ],
+    "irrelevant_info_list": [
+      "1/7.8"
+    ],
+    "why_included": "質問対象と同一の情報ブロック(構造化データの当該見出し、または直接関連する解説文)に属する事実のため。",
+    "why_excluded": "質問対象と異なるトピック(別のゾーン/小役/設定判別等)に属する情報のため、質問に無関係と判断し除外。",
+    "structural_check": {
+      "index": 10,
+      "question": "ゾーンZについて教えて",
+      "structured_rows_total": 4,
+      "structured_rows_relevant": 3,
+      "structured_rows_irrelevant": 1,
+      "prose_sections_total": 3,
+      "prose_sections_relevant": 2,
+      "prose_sections_irrelevant": 1,
+      "has_compressed_summary_section": true,
+      "relevant_fact_count": 3,
+      "irrelevant_fact_count": 1,
+      "missing_relevant_structured_values": [],
+      "leaked_irrelevant_structured_values": [],
+      "missing_extra_prose_facts": [],
+      "assistant_length": 63,
+      "relevant_retention_ok": true,
+      "no_irrelevant_leak": true
+    }
+  },
+  {
+    "id": "T2-0",
+    "category": "derived_entity_retention",
+    "user_full": "参照情報：特化ゾーン中は追加抽選あり、抽選成功で上乗せ200枚\n特化ゾーンについて教えて",
+    "assistant_full": "特化ゾーン中は追加抽選があるよ。成功すると200枚が上乗せされるんだ。",
+    "why_included": "質問対象から1〜2階層以内の直接の派生エンティティに関する情報のため保持。",
+    "why_excluded": "該当なし(このカテゴリは無関係情報を含まないシンプルな参照情報形式のため)。"
+  },
+  {
+    "id": "T2-1",
+    "category": "derived_entity_retention",
+    "user_full": "参照情報：AT終了後はモードβへ移行、モードβの滞在率は35%\nATについて教えて",
+    "assistant_full": "ATが終了すると、モードβへ移行するよ。モードβの滞在率は35%なんだ。",
+    "why_included": "質問対象から1〜2階層以内の直接の派生エンティティに関する情報のため保持。",
+    "why_excluded": "該当なし(このカテゴリは無関係情報を含まないシンプルな参照情報形式のため)。"
+  },
+  {
+    "id": "T2-2",
+    "category": "derived_entity_retention",
+    "user_full": "参照情報：天井到達の恩恵はAT-A確定、AT-A中の純増は6枚/G\n天井の恩恵を教えて",
+    "assistant_full": "天井に到達すると、AT-Aが確定するよ。AT-A中の純増は6枚/Gなんだ。",
+    "why_included": "質問対象から1〜2階層以内の直接の派生エンティティに関する情報のため保持。",
+    "why_excluded": "該当なし(このカテゴリは無関係情報を含まないシンプルな参照情報形式のため)。"
+  },
+  {
+    "id": "T2-3",
+    "category": "derived_entity_retention",
+    "user_full": "参照情報：ボーナス成立後は状態Aへ移行、状態A中の純増は3枚/G\nボーナスについて教えて",
+    "assistant_full": "ボーナスが成立すると、状態Aへ移行するよ。状態A中の純増は3枚/Gなんだ。",
+    "why_included": "質問対象から1〜2階層以内の直接の派生エンティティに関する情報のため保持。",
+    "why_excluded": "該当なし(このカテゴリは無関係情報を含まないシンプルな参照情報形式のため)。"
+  },
+  {
+    "id": "T2-4",
+    "category": "derived_entity_retention",
+    "user_full": "参照情報：ゾーンX中は追加抽選あり、抽選成功でゾーンYへ移行\nゾーンXについて教えて",
+    "assistant_full": "ゾーンX中は追加抽選があるよ。成功するとゾーンYへ移行するんだ。",
+    "why_included": "質問対象から1〜2階層以内の直接の派生エンティティに関する情報のため保持。",
+    "why_excluded": "該当なし(このカテゴリは無関係情報を含まないシンプルな参照情報形式のため)。"
+  },
+  {
+    "id": "T2-5",
+    "category": "derived_entity_retention",
+    "user_full": "参照情報：初当り時にモード示唆あり、示唆の的中率は70%\n初当りの示唆について教えて",
+    "assistant_full": "初当り時にはモード示唆があるよ。示唆の的中率は70%なんだ。",
+    "why_included": "質問対象から1〜2階層以内の直接の派生エンティティに関する情報のため保持。",
+    "why_excluded": "該当なし(このカテゴリは無関係情報を含まないシンプルな参照情報形式のため)。"
+  }
+]

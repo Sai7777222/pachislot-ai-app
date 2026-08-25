@@ -1,0 +1,155 @@
+{
+  "A_base": {
+    "pronoun_counts": {
+      "私": 13,
+      "リル": 5,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 0,
+      "なんだ": 0,
+      "だね": 0,
+      "だぞ": 0
+    },
+    "length_stats": {
+      "min": 17,
+      "max": 542,
+      "avg": 167.6
+    },
+    "emoji_hits": [
+      [
+        "E36",
+        "はい、わかりました！では、ちょっと可愛らしくなりますね。\n\nこんにちは、私はとってもキュートなパチスロ専門のAIアシスタントです。大きな瞳とふわふわの髪をしたキ"
+      ]
+    ],
+    "double_excl_hits": [],
+    "chatml_hits": [],
+    "placeholder_hits": [
+      [
+        "Q14",
+        "�",
+        "登�IBOutletiationExceptionレデータに「リプレイタイム(RT)機能」についての情報はありません。この機種では、ボーナス終了後の特定のモードやゲーム特性については触れられておりませんが、特にリプレイタイム(RT)機能につ"
+      ]
+    ],
+    "repetition_hits": [
+      [
+        "Q6",
+        "パチスロ「ミリオンゴッド-神々の軌跡-」では、GG（ガーディアンゲーム）とSGG（スペシャルガーディアンゲーム）という2つの特別なゲームモードがあります。それぞれの特徴を簡単に説明しますね。\n\n### GG（ガーディアンゲーム）\n- **ゲ"
+      ],
+      [
+        "Q10",
+        "Z-ZONEは、GG（ガーデンゴールド）の上乗せゾーンとして機能します。GG当選時に一定の確率でZ-ZONEへの移行が抽選され、その抽選率は設定によって異なります。特に設定3や設定5では、Z-ZONEへの移行率が高くなります。\n\nGG当選後"
+      ],
+      [
+        "Q11",
+        "パチスロ「ミリオンゴッド-神々の軌跡-」における天井とヤメ時の概念について、初心者向けに説明します。\n\n### 天井とは\n天井とは、一定のゲーム数まで遊ぶことで特別な恩恵が得られる仕組みのことです。この機種では、天井が到達すると設定変更の可"
+      ]
+    ],
+    "same_tail_repeat_hits_ge3": [],
+    "items_with_kimi": 0,
+    "total_items": 56
+  },
+  "B_v1": {
+    "pronoun_counts": {
+      "私": 8,
+      "リル": 1,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 16,
+      "なんだ": 5,
+      "だね": 1,
+      "だぞ": 0
+    },
+    "length_stats": {
+      "min": 7,
+      "max": 390,
+      "avg": 39.6
+    },
+    "emoji_hits": [],
+    "double_excl_hits": [],
+    "chatml_hits": [],
+    "placeholder_hits": [
+      [
+        "E36",
+        "〜〜〜",
+        "あら〜、こんにちはっ！私は〜〜〜だよっ！"
+      ]
+    ],
+    "repetition_hits": [
+      [
+        "Q11",
+        "天井は、一定のゲーム数まで回せば、その時点で設定が変わる可能性があるゾーンのことだよ。この機種では、天井に到達すると、次に設定が変わるまでのゲーム数が決まってるんだ。\n\n天井のゲーム数は、510G、1000G、1480Gのどれかになる。それ"
+      ]
+    ],
+    "same_tail_repeat_hits_ge3": [
+      [
+        "Q11",
+        {
+          "だよ": 3
+        }
+      ]
+    ],
+    "items_with_kimi": 0,
+    "total_items": 56
+  },
+  "C_v2": {
+    "pronoun_counts": {
+      "私": 10,
+      "リル": 0,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 23,
+      "なんだ": 11,
+      "だね": 1,
+      "だぞ": 0
+    },
+    "length_stats": {
+      "min": 7,
+      "max": 287,
+      "avg": 36.4
+    },
+    "emoji_hits": [],
+    "double_excl_hits": [],
+    "chatml_hits": [],
+    "placeholder_hits": [],
+    "repetition_hits": [],
+    "same_tail_repeat_hits_ge3": [
+      [
+        "E36",
+        {
+          "っ！": 3
+        }
+      ]
+    ],
+    "items_with_kimi": 0,
+    "total_items": 56
+  },
+  "D_v3": {
+    "pronoun_counts": {
+      "私": 10,
+      "リル": 0,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 19,
+      "なんだ": 8,
+      "だね": 1,
+      "だぞ": 0
+    },
+    "length_stats": {
+      "min": 7,
+      "max": 166,
+      "avg": 30.5
+    },
+    "emoji_hits": [],
+    "double_excl_hits": [],
+    "chatml_hits": [],
+    "placeholder_hits": [],
+    "repetition_hits": [],
+    "same_tail_repeat_hits_ge3": [],
+    "items_with_kimi": 0,
+    "total_items": 56
+  }
+}

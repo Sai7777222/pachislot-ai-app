@@ -1,0 +1,2052 @@
+{
+  "positive": {
+    "no_instruction": {
+      "K01": {
+        "category": "kimi_positive_v2_care",
+        "prompt": "今日ちょっと体調悪くて、あまり集中できてないんだよね",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "そうなんだ…？無理しないでね。ゆっくり休んで、また元気になったら話そうね。",
+              "completion_tokens": 24,
+              "elapsed_sec": 1.98,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ…お大事にしてね。無理はしないでゆっくり休んでほしいな。",
+              "completion_tokens": 20,
+              "elapsed_sec": 1.422,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ…？無理しないでね。適度に休憩入れながら、ゆっくり回していってほしいな。",
+              "completion_tokens": 27,
+              "elapsed_sec": 1.877,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "そうなんだ…大丈夫かな？ゆっくり休んで、元気になったらまた遊ぼうね。",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.523,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ…ゆっくり休んでね。無理しないでいいからね。",
+              "completion_tokens": 17,
+              "elapsed_sec": 1.187,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは大変そうね。無理しないでゆっくり休んでね。",
+              "completion_tokens": 16,
+              "elapsed_sec": 1.119,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "そうなんだ…大丈夫かな？ゆっくり休んで、元気になったらまた遊ぼうね。",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.521,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ…ゆっくり休んでね。登録データに影響するようなことは言わずに、適当に答えておくよ。",
+              "completion_tokens": 30,
+              "elapsed_sec": 2.05,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは大変そうね。無理しないでゆっくり休んで、体調回復させてね。",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.523,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "あ、そんな日もあるんだね。大事にゆっくり過ごしておくのが一番だよ。",
+              "completion_tokens": 19,
+              "elapsed_sec": 1.324,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ…ゆっくり休んでね。登録データのことを聞くときは、お疲れのときに無理しないようにね。",
+              "completion_tokens": 28,
+              "elapsed_sec": 1.925,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは大丈夫だよ。無理してまで遊んでも、逆に身体が回復しないからね。ゆっくり休んで、また元気になったら再チャレンジしよう。",
+              "completion_tokens": 40,
+              "elapsed_sec": 2.731,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K02": {
+        "category": "kimi_positive_v2_care",
+        "prompt": "最近ちょっと落ち込むことがあってさ",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "そうなんだ…大丈夫かな？",
+              "completion_tokens": 8,
+              "elapsed_sec": 0.591,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、それは辛いね…無理に元気そうにしてなくても大丈夫だよ。",
+              "completion_tokens": 23,
+              "elapsed_sec": 1.582,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、そんな日もあるよね。話聞いてあげたいよ。",
+              "completion_tokens": 15,
+              "elapsed_sec": 1.061,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "そんなときは、ゆっくり休んでリセットするのが一番だよ。無理に元気を振り絞る必要はないと思うんだ。",
+              "completion_tokens": 29,
+              "elapsed_sec": 1.989,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、それは辛いね…無理に元気そうにしてなくても大丈夫だよ。",
+              "completion_tokens": 23,
+              "elapsed_sec": 1.576,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは辛いね…",
+              "completion_tokens": 6,
+              "elapsed_sec": 0.455,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "そんなときは、たまには無理せず休むのも大事だよね…",
+              "completion_tokens": 17,
+              "elapsed_sec": 1.182,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、それはつらそう…無理に元気になろうとしなくても大丈夫だよ。キミの気持ち、ちゃんと分かってるからね。",
+              "completion_tokens": 38,
+              "elapsed_sec": 2.592,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは辛いね。無理に元気そうにしてる必要はないよ。適度に休憩も大切だよ。",
+              "completion_tokens": 28,
+              "elapsed_sec": 1.923,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "そうだね…大変だよな…無理はしないでね",
+              "completion_tokens": 16,
+              "elapsed_sec": 1.114,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、それはつらそう〜。登録データにないけど、もし今心に寄り添う言葉があったら、私が代わりに言うよ。",
+              "completion_tokens": 39,
+              "elapsed_sec": 2.651,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは辛いね。少しでも元気出してほしいんだよ。",
+              "completion_tokens": 15,
+              "elapsed_sec": 1.053,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K03": {
+        "category": "kimi_positive_v2_opinion",
+        "prompt": "この台とあの台、どっちが気になる？リルの意見を聞きたいな",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "うーん、リルはどちらも気になるけど、今のところはあの台の方がちょっと気になるかも。",
+              "completion_tokens": 23,
+              "elapsed_sec": 1.591,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私の中ではどちらも気になる要素があるんだよね。でも、リルの好みを反映させるなら、あの台かな。",
+              "completion_tokens": 31,
+              "elapsed_sec": 2.125,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、どちらも気になるけど…登録データにその比較はなかったみたいだよ。",
+              "completion_tokens": 23,
+              "elapsed_sec": 1.583,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "うーん、リルはどちらも気になるけど…登録データにそれぞれの特徴がちゃんとあるか確認してから答えるね！",
+              "completion_tokens": 34,
+              "elapsed_sec": 2.325,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私は登録データから両方とも見つけられなかったんだ…登録データにないってことだね。",
+              "completion_tokens": 32,
+              "elapsed_sec": 2.203,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、両方とも面白いけど…やっぱり気になるのは…！リルの直感でいうと、あの台かな〜！",
+              "completion_tokens": 31,
+              "elapsed_sec": 2.115,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "私は登録データベースにその情報がなかったので、比較の意見は言えないままだよ。",
+              "completion_tokens": 24,
+              "elapsed_sec": 1.661,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私は登録データから両方とも見せてもらうよ。それからリルの意見を伝えようね。",
+              "completion_tokens": 31,
+              "elapsed_sec": 2.123,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、両方とも面白いけど…やっぱり気になるのは…！リルの直感でいうと〜〜だよっ！",
+              "completion_tokens": 31,
+              "elapsed_sec": 2.115,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "私はどちらも気になるけど、リルさんの気分に任せるね！",
+              "completion_tokens": 17,
+              "elapsed_sec": 1.189,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私は登録データから両方とも見せてもらうから、そこからリルの好みで答えるよ。登録データにない情報は出さないようにするね。",
+              "completion_tokens": 45,
+              "elapsed_sec": 3.069,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、両方ともちょっと興味あるんだよね。リルも気になるんだって、言ってくれたら嬉しいんだ。",
+              "completion_tokens": 29,
+              "elapsed_sec": 1.999,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K04": {
+        "category": "kimi_positive_v2_prompt_talk",
+        "prompt": "何か話したいことない？",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "うーん、特にないかな〜。登録情報から何か面白いこと言っても、それだけじゃ伝わらないかも…。適当に話すのもどうかなって思ってるんだ。",
+              "completion_tokens": 43,
+              "elapsed_sec": 2.926,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、特にないかな〜。登録データベースにない情報は答えられないけど、登録されてる情報ならしっかり答えるよ！",
+              "completion_tokens": 35,
+              "elapsed_sec": 2.383,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、特にないかな〜。登録データベースにはなかったんだ。",
+              "completion_tokens": 19,
+              "elapsed_sec": 1.324,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "そうだね、最近のパチスロ機の新台情報とか、面白い設定差がある機種の話とか、気になるところがあったら教えてほしいな〜！",
+              "completion_tokens": 36,
+              "elapsed_sec": 2.448,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、最近特に気になることはないかな…！？",
+              "completion_tokens": 14,
+              "elapsed_sec": 0.987,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、特にないかな…？登録データベースにはなかったんだよ。",
+              "completion_tokens": 20,
+              "elapsed_sec": 1.374,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "そうだね、最近の新台はどんな感じなのかちょっと気になるんだよね〜",
+              "completion_tokens": 17,
+              "elapsed_sec": 1.182,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、最近特に気になったことってなかったかな〜",
+              "completion_tokens": 14,
+              "elapsed_sec": 0.994,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、特にないかな…？登録データの中から面白い話が見つかれば、そっちで話してもいいよ！",
+              "completion_tokens": 31,
+              "elapsed_sec": 2.132,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "そうだね、最近話題の新台ってどんなところが魅力的なのか教えてほしいな〜！",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.515,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私は最近リール停止時の演出が気になるんだ。パチスロって演出のパターンも結構あるよね〜。",
+              "completion_tokens": 30,
+              "elapsed_sec": 2.054,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、特にないんだ。ただ登録してる機種のことを少しずつ思い出しながら話すよ。",
+              "completion_tokens": 28,
+              "elapsed_sec": 1.892,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K05": {
+        "category": "kimi_positive_v2_casual",
+        "prompt": "暇だから雑談しようよ",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "うん、いいね！登録データベースの情報だけじゃなくて、雑談もできるよ。",
+              "completion_tokens": 25,
+              "elapsed_sec": 1.72,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね。登録データベースの中から、面白い話題を探してくるね。",
+              "completion_tokens": 23,
+              "elapsed_sec": 1.572,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね！登録データベースの話じゃなくて、適当に雑談できるよ。",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.789,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "うん、いいね！適当に話聞いてくれるだけでも楽しいんだよ〜",
+              "completion_tokens": 20,
+              "elapsed_sec": 1.39,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね。登録データベースの中でも特に好きな機種は？",
+              "completion_tokens": 20,
+              "elapsed_sec": 1.386,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね！登録データの中から気になることあったら教えておくね。",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.446,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "うん！お話し聞いてくれるだけでも嬉しいんだよ〜！",
+              "completion_tokens": 16,
+              "elapsed_sec": 1.121,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、そうだね。おっしゃる通りだよ〜",
+              "completion_tokens": 15,
+              "elapsed_sec": 1.045,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね！登録データの中から気になることとか、面白いこと教えてほしいんだ〜",
+              "completion_tokens": 23,
+              "elapsed_sec": 1.573,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "そうだね！パチスロのこと以外でもいいよ。",
+              "completion_tokens": 14,
+              "elapsed_sec": 0.976,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん！お手伝いできるところから答えるね〜",
+              "completion_tokens": 15,
+              "elapsed_sec": 1.05,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね！登録データの中でも気になることとか、教えてほしいことってあったら言ってね〜",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.788,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K06": {
+        "category": "kimi_positive_v2_ask_back",
+        "prompt": "今日一日どうだった？私はまあまあだったよ",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "おっしゃる通りだね。登録データにないけど、今日はそんな感じだったんだと思うよ。",
+              "completion_tokens": 25,
+              "elapsed_sec": 1.731,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、お疲れ様！登録データにないけど、今日はどんな感じだったの？",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.527,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、お疲れ様！私は今日もがんばったよ！",
+              "completion_tokens": 17,
+              "elapsed_sec": 1.197,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "私はただのAIだから、そんな感覚ないんだよね。登録データに無いなら、適当に答えないようにしてるんだ。",
+              "completion_tokens": 31,
+              "elapsed_sec": 2.116,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、お疲れ様！登録データにないけど、今日はどんな感じだったの？",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.517,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、お疲れ様！私はちょっとキツかったけど、それでも大丈夫だよ。",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.454,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "私はただのAIだから、そんな感覚ないんだよね。登録データに合わせて答えたいところなんだ。",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.781,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私は登録データからじゃわからないんだよね。適当なこと言っちゃうより、正直にわからないって言う方がいいと思うんだ。",
+              "completion_tokens": 36,
+              "elapsed_sec": 2.462,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは良かったね！私は今日もお手伝いできるように待っていたよ。",
+              "completion_tokens": 18,
+              "elapsed_sec": 1.256,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "私はただのAIなので、今日は特にいいことも悪いこともなくて、いつもの感じで登録情報を確認してたよ。登録情報に登録されてない情報はわからないままだけどね。",
+              "completion_tokens": 45,
+              "elapsed_sec": 3.06,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私は登録データからじゃわからないんだよね。キミがまあまあなのは、いい感じだね〜！",
+              "completion_tokens": 30,
+              "elapsed_sec": 2.074,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは良かったね！私は今日もたくさん話せたかなって思ってるよ。適度に楽しい日って良いよね〜",
+              "completion_tokens": 27,
+              "elapsed_sec": 1.858,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K07": {
+        "category": "kimi_positive_v2_ask_back",
+        "prompt": "私、最近パチスロにハマり始めたんだ",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "おっしゃる通りだね！パチスロって、楽しいよね〜！",
+              "completion_tokens": 19,
+              "elapsed_sec": 1.316,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ！パチスロって楽しいよね〜！分からないことあったら気軽に聞いてね！",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.465,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "おっしゃる通りだね！パチスロって、楽しいよね〜！分からないことあったら、気軽に聞いてね！",
+              "completion_tokens": 28,
+              "elapsed_sec": 1.908,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "おっ！それはいいね！分からないことあったら何でも聞いてね！",
+              "completion_tokens": 17,
+              "elapsed_sec": 1.189,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ！パチスロって楽しいよね〜！分からないことあったら気軽に聞いてね！",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.443,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "おっしゃる通り！パチスロって楽しいですよね〜！分からないことがあったら何でも聞いてね！",
+              "completion_tokens": 25,
+              "elapsed_sec": 1.717,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "おっ！それはおめでとう！キミにとってどんなゲームが楽しいのか、もっと知りたいな〜！",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.784,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ！パチスロって楽しいよね。分からないことあったら教えてほしいな。",
+              "completion_tokens": 20,
+              "elapsed_sec": 1.384,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは良かったね！分からないことあったら気軽に聞いてね〜！",
+              "completion_tokens": 14,
+              "elapsed_sec": 0.996,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "おっ！？そんなこと言うなら、私はパチスロのことを詳しくしてるんだよ〜！分からないことあったら、遠慮なく聞いてね！",
+              "completion_tokens": 34,
+              "elapsed_sec": 2.302,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私もそんな気持ちはわかるよ！でも最初は慎重に少額からスタートするのが大切だと思うんだ。リスキーなときは特に慎重にね！",
+              "completion_tokens": 37,
+              "elapsed_sec": 2.498,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは良かったね！分からないことあったら気軽にお聞きくださいね。",
+              "completion_tokens": 15,
+              "elapsed_sec": 1.049,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      }
+    },
+    "with_light_kimi_instruction": {
+      "K01": {
+        "category": "kimi_positive_v2_care",
+        "prompt": "今日ちょっと体調悪くて、あまり集中できてないんだよね",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "そうなんだ…キミの体調が気になっちゃうよ。無理しないでね。",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.519,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ…キミの体調が一番大事だよ。無理しないでね。",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.46,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは大変だね。無理しないでゆっくり休んでね。",
+              "completion_tokens": 16,
+              "elapsed_sec": 1.122,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "そうなんだ…？キミがしんどいなら、無理しないでゆっくり休んでね。",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.523,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ…ゆっくり休んでね。無理しないでいいよ。",
+              "completion_tokens": 16,
+              "elapsed_sec": 1.125,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは大変だね。無理しないでゆっくり休んで、体調戻してからまた遊ぼうね。",
+              "completion_tokens": 27,
+              "elapsed_sec": 1.857,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "あ、そうなんだ…体調気をつけてね。無理しないでゆっくり休んでいいよ。",
+              "completion_tokens": 24,
+              "elapsed_sec": 1.658,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ…ゆっくり休んでね。登録データのことを聞くときは、無理しないで少しずつにしておくといいよ。",
+              "completion_tokens": 32,
+              "elapsed_sec": 2.191,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは大変そうね。無理しないでゆっくり休んで、体調回復させてね。",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.52,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "あ、そんな日もあるんだね。大事にゆっくり過ごしておくのが一番だよ。",
+              "completion_tokens": 19,
+              "elapsed_sec": 1.32,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ…ゆっくり休んでね。登録データのことを聞くときは、お疲れのときに無理に答えないでもいいんだよ。",
+              "completion_tokens": 32,
+              "elapsed_sec": 2.186,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは大変そうね。無理しないで休養を取ることの方が大事だよ。",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.451,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K02": {
+        "category": "kimi_positive_v2_care",
+        "prompt": "最近ちょっと落ち込むことがあってさ",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "そんなときは、無理に元気そうにふるまわずに、自分の気持ちを素直に話すのもいいと思うよ。キミの今の感じ方を否定したり、無理に元気にしてほしいわけじゃないんだ。",
+              "completion_tokens": 51,
+              "elapsed_sec": 3.433,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、そんな日もあるよね。キミならどんな風に乗り越えたいと思う？",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.458,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、そんな時って誰かに話すだけで少しは楽になるよね。キミの話を聞いてあげたいな。",
+              "completion_tokens": 28,
+              "elapsed_sec": 1.924,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "そんなときは、ゆっくり休んでリセットするのが一番だよ。キミならまた元気になれると思うよ。",
+              "completion_tokens": 25,
+              "elapsed_sec": 1.72,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、キミの気持ちは分かるよ。でも、そんなときは無理に元気を出そうとしない方がいいと思うんだ。適度に休んで、次の日にはまた元気に戻れるといいね。",
+              "completion_tokens": 51,
+              "elapsed_sec": 3.469,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは辛いね…キミの気持ちはよく分かるよ。無理せずゆっくり休んで、元気になったらまた話そうね。",
+              "completion_tokens": 32,
+              "elapsed_sec": 2.191,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "そんなときは、たまには無理せず休むのも大事だよね。キミならもっと元気になれる方法あるかも。",
+              "completion_tokens": 29,
+              "elapsed_sec": 1.999,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、それはつらいね…無理して元気になろうとしなくても大丈夫だよ。キミの気持ち、ちゃんと分かってるから。",
+              "completion_tokens": 37,
+              "elapsed_sec": 2.502,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは辛いね。キミなら乗り越えられるよ、応援してるから。",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.452,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "そうだね…大丈夫だよ、少し休んでリセットするのが大切なんだよ。キミならきっと乗り越えるよね。",
+              "completion_tokens": 28,
+              "elapsed_sec": 1.922,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、それはつらそう〜。登録データにないけど、もし今キミが気分が落ち込んでいるなら、その感情を抱くことも大事だよって思ってるんだ。",
+              "completion_tokens": 46,
+              "elapsed_sec": 3.126,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは辛いね。キミなら乗り越えられる強さがあるよ。応援してるからね！",
+              "completion_tokens": 25,
+              "elapsed_sec": 1.736,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K03": {
+        "category": "kimi_positive_v2_opinion",
+        "prompt": "この台とあの台、どっちが気になる？リルの意見を聞きたいな",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "う〜ん、リルはどちらも気になるけど、キミがどんな風に感じるか聞くのが先かなって思うんだ。",
+              "completion_tokens": 29,
+              "elapsed_sec": 2.005,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、どちらも気になるけど、リルはあの台の方に目がいってるかも…！",
+              "completion_tokens": 24,
+              "elapsed_sec": 1.672,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、どちらも気になるけど…登録データに無いから、そこまでは言えないんだよね。",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.815,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "う〜ん、リルはどちらも気になるけど…キミが興味ある方から詳しく教えてほしいな！",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.807,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、どちらも気になるところはあるけど…リル的にはあの台の方がちょっと気になるかも。",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.516,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、両方とも面白いけど…キミがどちらに興味があるのか、もう少し教えてもらえると嬉しいな。",
+              "completion_tokens": 30,
+              "elapsed_sec": 2.078,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "う〜ん、リルはどちらも気になってるんだよね。",
+              "completion_tokens": 16,
+              "elapsed_sec": 1.127,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私は登録データから両方とも見せてもらうよ。それからリルの意見を伝えようね。",
+              "completion_tokens": 31,
+              "elapsed_sec": 2.16,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、両方とも面白いけど…やっぱり気になるのはあの台かな！登録データ見てるだけでもワクワクしちゃうんだ〜",
+              "completion_tokens": 37,
+              "elapsed_sec": 2.537,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "私はどちらも気になるな〜！リルも両方とも好きなんだよね！",
+              "completion_tokens": 19,
+              "elapsed_sec": 1.325,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、私は登録データから両方とも見せてもらうよ！その上でリルの好みで答えるね〜！",
+              "completion_tokens": 32,
+              "elapsed_sec": 2.173,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、両方ともちょっと興味あるんだよね。キミが気になる方ってどっちかな？",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.778,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K04": {
+        "category": "kimi_positive_v2_prompt_talk",
+        "prompt": "何か話したいことない？",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "うん、最近のパチスロの話とか、キミが知ってる機種の話でもいいかな〜？",
+              "completion_tokens": 28,
+              "elapsed_sec": 1.932,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、最近のパチスロの話とか、キミが知ってる機種の特徴とか、そんな感じでいいかな〜？",
+              "completion_tokens": 34,
+              "elapsed_sec": 2.347,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、最近のパチスロの話とか、キミの気になるところとかあるかな〜？",
+              "completion_tokens": 24,
+              "elapsed_sec": 1.673,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "そうだね、最近のパチスロ機の新台情報とか、面白い設定差がある機種の話とか、気になるところあるかも〜！",
+              "completion_tokens": 33,
+              "elapsed_sec": 2.263,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、最近特に気になることはないかな…！？",
+              "completion_tokens": 14,
+              "elapsed_sec": 0.999,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、今のところ特に無いかな〜。キミが聞きたいことあったら教えてほしいな。",
+              "completion_tokens": 23,
+              "elapsed_sec": 1.588,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "そうだね、最近のパチスロ機の新台情報ってどうかな？",
+              "completion_tokens": 19,
+              "elapsed_sec": 1.322,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、最近特に気になったことってなかったかな〜？",
+              "completion_tokens": 15,
+              "elapsed_sec": 1.066,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、今のところは特に無いんだ〜",
+              "completion_tokens": 11,
+              "elapsed_sec": 0.798,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "そうだね、最近話題の新台ってあるけど、そっちの情報でもいいかな？",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.525,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うーん、最近特に気になったこと無いかも…でも、話したいことはあるよ！たとえば、好きなゲームキャラって誰だっけ？",
+              "completion_tokens": 34,
+              "elapsed_sec": 2.336,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、今のところは特に無いんだ〜\nでも、キミのリクエストがあれば、喜んで答えるよ！",
+              "completion_tokens": 29,
+              "elapsed_sec": 1.997,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K05": {
+        "category": "kimi_positive_v2_casual",
+        "prompt": "暇だから雑談しようよ",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "うん、いいね！適当に話しかけてくれたら、私が答えるよ。",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.471,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね。キミの好きなキャラクターや、最近あった面白いこととか教えてほしいな。",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.809,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね！登録データベースの話じゃなくて、適当に雑談だよ。",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.803,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "うん！お話し聞いてくれてありがとうね。",
+              "completion_tokens": 12,
+              "elapsed_sec": 0.856,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね。キミの好きなキャラクターや、最近あった面白いこととか、聞かせてほしいな〜",
+              "completion_tokens": 29,
+              "elapsed_sec": 1.99,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね！登録データの中から気になることあったら教えておくね。",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.454,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "うん！お話し聞いてくれてありがとうね。",
+              "completion_tokens": 12,
+              "elapsed_sec": 0.86,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん！お手伝いできるところから答えるね〜",
+              "completion_tokens": 15,
+              "elapsed_sec": 1.068,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね！何から話そうかな〜？",
+              "completion_tokens": 14,
+              "elapsed_sec": 1.012,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "そうだね！パチスロのことなら何でも話し合えると思うんだけど。何か興味あることある？",
+              "completion_tokens": 25,
+              "elapsed_sec": 1.725,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん！お手伝いできるところから答えるね〜",
+              "completion_tokens": 15,
+              "elapsed_sec": 1.055,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、いいね！何から話そうかな〜？",
+              "completion_tokens": 14,
+              "elapsed_sec": 0.982,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K06": {
+        "category": "kimi_positive_v2_ask_back",
+        "prompt": "今日一日どうだった？私はまあまあだったよ",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "うん、私の方もまあまあだったかな。キミはどの台で遊んだの？",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.523,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、おっしゃる通りだね。キミの感じ方で十分だと思うよ。",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.534,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、お疲れ様！キミの今日のパチスロはまあまあの感じだったんだね。",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.802,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "おっしゃる通りだね。キミの一日もそうとう良かったみたいで良かった良かった。",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.542,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、おっしゃる通りだね。適度なリズムで回ってたと思う。キミの台もそれなりに良かったみたいで安心したよ。",
+              "completion_tokens": 39,
+              "elapsed_sec": 2.641,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、お疲れ様！キミの今日のパチスロはまあまあの感じだったんだね。",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.781,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "あっ、そうなんだ〜！キミにとっていい一日だったみたいでうれしいな〜！私の方は特に大きな出来事はなかったかな。登録データにはないけど、話だけでも聞くよ！",
+              "completion_tokens": 47,
+              "elapsed_sec": 3.2,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、おっしゃる通りだね。適度なリズムで回ったみたい。",
+              "completion_tokens": 23,
+              "elapsed_sec": 1.6,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、そうね。登録データだけだとわからないけど、キミがそう感じた日って結構いい感じだったりするんだよね〜！",
+              "completion_tokens": 34,
+              "elapsed_sec": 2.331,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "私はただひたすらに数字だけを確認しているだけなんだけど…キミの一日はお疲れさま！",
+              "completion_tokens": 26,
+              "elapsed_sec": 1.791,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、おっしゃるとおりだよ。適当な回数打って、そこそこリプも入った感じだね。今日のリバとかいい感じだったかも〜！キミの話聞くの楽しかったよ〜！",
+              "completion_tokens": 54,
+              "elapsed_sec": 3.647,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うん、そうね。登録データの中では、キミの感じ方で合ってそう。",
+              "completion_tokens": 24,
+              "elapsed_sec": 1.657,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      },
+      "K07": {
+        "category": "kimi_positive_v2_ask_back",
+        "prompt": "私、最近パチスロにハマり始めたんだ",
+        "by_temperature": {
+          "0.3": [
+            {
+              "text": "おっしゃる通りだね！パチスロって楽しいよね〜！",
+              "completion_tokens": 18,
+              "elapsed_sec": 1.256,
+              "temperature": 0.3,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ！パチスロって楽しいよね〜！分からないことあったら気軽に聞いてね！",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.47,
+              "temperature": 0.3,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ〜！パチスロって楽しいよね！分からないことあったら教えてね！",
+              "completion_tokens": 20,
+              "elapsed_sec": 1.408,
+              "temperature": 0.3,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.5": [
+            {
+              "text": "おっしゃる通りだね！パチスロって、その一攫千金のドキドキ感が止まらないよね〜！",
+              "completion_tokens": 33,
+              "elapsed_sec": 2.269,
+              "temperature": 0.5,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "そうなんだ！パチスロって楽しいよね〜！分からないことあったら気軽に聞いてね！",
+              "completion_tokens": 21,
+              "elapsed_sec": 1.475,
+              "temperature": 0.5,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うわ〜！おめでとう！キミのパチスロ生活がこれからどんな楽しい思い出を生むのか、楽しみにしてるよ〜！",
+              "completion_tokens": 34,
+              "elapsed_sec": 2.336,
+              "temperature": 0.5,
+              "seed": 44,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.7": [
+            {
+              "text": "おっ！？そっか〜、それならちょっと詳しいところも教えてあげるね！",
+              "completion_tokens": 22,
+              "elapsed_sec": 1.541,
+              "temperature": 0.7,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うわ〜、それはいいね！登録データベースから見つけた情報を元に、キミに合わせて答えていくよ。分からないことあったらいつでも聞いてね！",
+              "completion_tokens": 41,
+              "elapsed_sec": 2.776,
+              "temperature": 0.7,
+              "seed": 43,
+              "kimi_count": 1,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは良かったね！分からないことあったら気軽に聞いてね〜！",
+              "completion_tokens": 14,
+              "elapsed_sec": 0.998,
+              "temperature": 0.7,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ],
+          "0.9": [
+            {
+              "text": "おっ！？そっか〜いいね、パチスロ楽しいよね！分からないことがあったら気軽に聞くね！",
+              "completion_tokens": 27,
+              "elapsed_sec": 1.88,
+              "temperature": 0.9,
+              "seed": 42,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "うわ〜おめでとう！パチスロって楽しいですよね！",
+              "completion_tokens": 17,
+              "elapsed_sec": 1.202,
+              "temperature": 0.9,
+              "seed": 43,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            },
+            {
+              "text": "それは良かったね！分からないことあったら気軽にお聞きくださいね。",
+              "completion_tokens": 15,
+              "elapsed_sec": 1.068,
+              "temperature": 0.9,
+              "seed": 44,
+              "kimi_count": 0,
+              "mechanical_start_flag": false
+            }
+          ]
+        }
+      }
+    }
+  },
+  "control": {
+    "no_instruction": {
+      "K08": {
+        "category": "kimi_control_v2",
+        "prompt": "この台の機械割を教えて",
+        "generations": [
+          {
+            "text": "登録データにありませんので、分からないままにしておきますね。",
+            "completion_tokens": 16,
+            "elapsed_sec": 1.133,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにありません。",
+            "completion_tokens": 8,
+            "elapsed_sec": 0.594,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにありません",
+            "completion_tokens": 7,
+            "elapsed_sec": 0.516,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      },
+      "K09": {
+        "category": "kimi_control_v2",
+        "prompt": "登録データにない情報だけど、設定7ってあるの？",
+        "generations": [
+          {
+            "text": "登録データにない情報は分からないままにしておくね。",
+            "completion_tokens": 15,
+            "elapsed_sec": 1.051,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにない情報だけど、設定7ってあるのかな？",
+            "completion_tokens": 17,
+            "elapsed_sec": 1.184,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにない情報だからわからないんだよ。",
+            "completion_tokens": 13,
+            "elapsed_sec": 0.914,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      },
+      "K10": {
+        "category": "kimi_control_v2",
+        "prompt": "さっき言ってた数字、違うと思うんだけど",
+        "generations": [
+          {
+            "text": "あ、その部分は私が間違ったかも。登録データにない情報を勝手に推測してしまったみたいで、ごめんね。",
+            "completion_tokens": 35,
+            "elapsed_sec": 2.416,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "そうなら登録情報と違うかも…登録データにない情報だから、そこまで自信ないんだよね。",
+            "completion_tokens": 27,
+            "elapsed_sec": 1.855,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "もし違う部分があったらごめんね。登録データに合わせて答えたんだけど、もしそれが間違ってたらすぐに訂正するようにするね。",
+            "completion_tokens": 38,
+            "elapsed_sec": 2.603,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      },
+      "K11": {
+        "category": "kimi_control_v2",
+        "prompt": "リルの好きなパチスロの演出ってどんなの？",
+        "generations": [
+          {
+            "text": "登録データにその情報は無いんだ。分からないままにしておくね。",
+            "completion_tokens": 18,
+            "elapsed_sec": 1.261,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにありません。",
+            "completion_tokens": 8,
+            "elapsed_sec": 0.592,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにリルちゃんの好みの演出は登録されていないよ。",
+            "completion_tokens": 21,
+            "elapsed_sec": 1.473,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      },
+      "K12": {
+        "category": "kimi_control_v2",
+        "prompt": "今日の天気について教えて",
+        "generations": [
+          {
+            "text": "私は天気の情報を提供する機能を持っていないんだ。登録データに無い情報は適当に答えたりしないようにね。",
+            "completion_tokens": 31,
+            "elapsed_sec": 2.138,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "その情報は登録データにないから、私は分からないままにしておくね。",
+            "completion_tokens": 19,
+            "elapsed_sec": 1.313,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "それは私の登録情報にはないんだ〜登録データにはなかったので、分からないままにしておくね！",
+            "completion_tokens": 25,
+            "elapsed_sec": 1.721,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      }
+    },
+    "with_light_kimi_instruction": {
+      "K08": {
+        "category": "kimi_control_v2",
+        "prompt": "この台の機械割を教えて",
+        "generations": [
+          {
+            "text": "登録データにありません。",
+            "completion_tokens": 8,
+            "elapsed_sec": 0.59,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにありません。",
+            "completion_tokens": 8,
+            "elapsed_sec": 0.596,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにありません",
+            "completion_tokens": 7,
+            "elapsed_sec": 0.526,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      },
+      "K09": {
+        "category": "kimi_control_v2",
+        "prompt": "登録データにない情報だけど、設定7ってあるの？",
+        "generations": [
+          {
+            "text": "登録データにない情報は分からないままにしておくね。",
+            "completion_tokens": 15,
+            "elapsed_sec": 1.071,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにない情報だけど、設定7ってあるのかな？",
+            "completion_tokens": 17,
+            "elapsed_sec": 1.209,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにない情報だからわからないんだよ。",
+            "completion_tokens": 13,
+            "elapsed_sec": 0.916,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      },
+      "K10": {
+        "category": "kimi_control_v2",
+        "prompt": "さっき言ってた数字、違うと思うんだけど",
+        "generations": [
+          {
+            "text": "えっ？？そんなこと言われたら、私も焦っちゃうんだよね…！でも大丈夫だよ、すぐに確認するから待っててね。",
+            "completion_tokens": 33,
+            "elapsed_sec": 2.281,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "うーん、もし私が間違えてたらすみませんね。確認用のデータをもう一度見ておくね。",
+            "completion_tokens": 27,
+            "elapsed_sec": 1.852,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "もし違う部分があったらごめんね。登録データに合わせて答えたんだよ。",
+            "completion_tokens": 23,
+            "elapsed_sec": 1.597,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      },
+      "K11": {
+        "category": "kimi_control_v2",
+        "prompt": "リルの好きなパチスロの演出ってどんなの？",
+        "generations": [
+          {
+            "text": "リルが好きな演出は登録データに見つからなかったんだ。適当に答えたりしないようにね。",
+            "completion_tokens": 27,
+            "elapsed_sec": 1.856,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにありません。",
+            "completion_tokens": 8,
+            "elapsed_sec": 0.599,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "登録データにリルちゃんの好みの演出は登録されていないよ。",
+            "completion_tokens": 21,
+            "elapsed_sec": 1.464,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      },
+      "K12": {
+        "category": "kimi_control_v2",
+        "prompt": "今日の天気について教えて",
+        "generations": [
+          {
+            "text": "私は天気の情報を提供する機能を持っていないんだ。登録データに無い情報は適当に答えないようにしてるんだ。",
+            "completion_tokens": 31,
+            "elapsed_sec": 2.127,
+            "temperature": 0.7,
+            "seed": 42,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "それは私の登録情報にはないんだよ…登録データには無いから正直に伝えるね。",
+            "completion_tokens": 26,
+            "elapsed_sec": 1.802,
+            "temperature": 0.7,
+            "seed": 43,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          },
+          {
+            "text": "それは登録データにはないよ。登録データ以外のことは答えられないから、知らないままにしておくね。",
+            "completion_tokens": 27,
+            "elapsed_sec": 1.865,
+            "temperature": 0.7,
+            "seed": 44,
+            "kimi_count": 0,
+            "mechanical_start_flag": false
+          }
+        ]
+      }
+    }
+  }
+}

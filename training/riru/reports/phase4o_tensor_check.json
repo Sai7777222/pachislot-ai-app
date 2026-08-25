@@ -1,0 +1,24 @@
+{
+  "adapter_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\lora-riru-qwen-v5-qkv\\adapter_model.safetensors",
+  "total_tensors": 288,
+  "module_tensor_counts": {
+    "q_proj": 96,
+    "k_proj": 96,
+    "v_proj": 96,
+    "o_proj": 0
+  },
+  "o_proj_tensor_count_is_zero": true,
+  "q_k_v_all_present": true,
+  "sample_tensor_names": [
+    "base_model.model.model.layers.0.self_attn.k_proj.lora_A.weight",
+    "base_model.model.model.layers.0.self_attn.k_proj.lora_B.weight",
+    "base_model.model.model.layers.0.self_attn.q_proj.lora_A.weight",
+    "base_model.model.model.layers.0.self_attn.q_proj.lora_B.weight",
+    "base_model.model.model.layers.0.self_attn.v_proj.lora_A.weight",
+    "base_model.model.model.layers.0.self_attn.v_proj.lora_B.weight",
+    "base_model.model.model.layers.1.self_attn.k_proj.lora_A.weight",
+    "base_model.model.model.layers.1.self_attn.k_proj.lora_B.weight",
+    "base_model.model.model.layers.1.self_attn.q_proj.lora_A.weight",
+    "base_model.model.model.layers.1.self_attn.q_proj.lora_B.weight"
+  ]
+}

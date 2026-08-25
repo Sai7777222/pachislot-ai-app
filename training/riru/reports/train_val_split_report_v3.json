@@ -1,0 +1,18 @@
+{
+  "v2_candidate_count_unchanged": 897,
+  "phase4h_new_count": 17,
+  "v3_combined_total": 914,
+  "seed": 42,
+  "val_ratio_target": 0.1,
+  "train_records": 823,
+  "val_records": 91,
+  "actual_val_ratio": 0.0996,
+  "leakage_check": {
+    "train_unique_user_keys": 676,
+    "val_unique_user_keys": 81,
+    "overlapping_user_keys": 0,
+    "overlap_examples": []
+  },
+  "train_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\processed\\riru_train_v3.jsonl",
+  "val_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\processed\\riru_val_v3.jsonl"
+}

@@ -1,0 +1,64 @@
+{
+  "v4_total_records": 914,
+  "v2_base_records_unchanged_count": 894,
+  "v2_base_records_fixed_count": 3,
+  "type1_new_count": 11,
+  "type2_new_count": 6,
+  "new_total_count": 17,
+  "schema_validation_errors": [],
+  "validation_new_records": {
+    "decorative_symbol_hits": 0,
+    "kaomoji_hits": 0,
+    "repeated_exclamation_hits": 0,
+    "chatml_token_hits": 0,
+    "placeholder_hits": [],
+    "real_machine_fact_hits": [],
+    "suspicious_hallucination_phrase_hits": []
+  },
+  "validation_fixed_records": {
+    "decorative_symbol_hits": 0,
+    "kaomoji_hits": 0,
+    "repeated_exclamation_hits": 0,
+    "chatml_token_hits": 0,
+    "placeholder_hits": [],
+    "real_machine_fact_hits": [],
+    "suspicious_hallucination_phrase_hits": []
+  },
+  "same_tail_repetition_new_records": 0,
+  "same_tail_repetition_fixed_records": 0,
+  "same_fact_repetition_within_response": 0,
+  "duplicates": {
+    "user_exact_dupe_groups": 0,
+    "assistant_exact_dupe_groups": 0,
+    "high_similarity_within_new_ge_0.9": 0,
+    "high_similarity_new_vs_existing897_ge_0.9": 0
+  },
+  "unnatural_length_hits_gt_160chars": 0,
+  "length_stats_new_records": {
+    "min": 30,
+    "max": 99,
+    "mean": 55.5,
+    "median": 56.0,
+    "p90": 80.0
+  },
+  "word_stats_new_records": {
+    "pronoun_counts": {
+      "私": 0,
+      "リル": 0,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 5,
+      "なんだ": 10,
+      "だね": 0,
+      "だぞ": 0
+    }
+  },
+  "type1_relevance_check_summary": {
+    "records_with_full_relevant_retention": "11/11",
+    "records_with_no_irrelevant_leak": "11/11",
+    "total_missing_relevant_facts": 0,
+    "total_leaked_irrelevant_facts": 0
+  },
+  "human_review_flags_short_answer_many_facts": []
+}

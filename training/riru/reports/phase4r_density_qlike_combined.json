@@ -1,0 +1,71 @@
+{
+  "fact_density_analysis": {
+    "1fact": {
+      "n_records": 72,
+      "mean_retention": 70.8,
+      "min_retention": 0.0,
+      "max_retention": 100.0
+    },
+    "2facts": {
+      "n_records": 17,
+      "mean_retention": 76.5,
+      "min_retention": 0.0,
+      "max_retention": 100.0
+    },
+    "3-4facts": {
+      "n_records": 8,
+      "mean_retention": 91.7,
+      "min_retention": 66.7,
+      "max_retention": 100.0
+    },
+    "5-7facts": {
+      "n_records": 8,
+      "mean_retention": 97.5,
+      "min_retention": 80.0,
+      "max_retention": 100.0
+    },
+    "8+facts": {
+      "n_records": 0,
+      "mean_retention": null,
+      "min_retention": null,
+      "max_retention": null
+    }
+  },
+  "q3_like_analysis": {
+    "n_records": 6,
+    "mean_overall_retention": 96.7,
+    "mean_percentage_retention": 100.0,
+    "mean_mapping_retention": 100.0,
+    "mean_answer_length": 73.2,
+    "ids": [
+      "train#237",
+      "train#489",
+      "train#636",
+      "train#669",
+      "train#683",
+      "train#763"
+    ]
+  },
+  "correlations": {
+    "answer_length_vs_retention_pearson_r": 0.213,
+    "compression_ratio_vs_retention_pearson_r": 0.068,
+    "n": 105
+  },
+  "legacy_vs_phase4k": {
+    "existing_897_with_facts": {
+      "n": 88,
+      "mean_overall": 77.1,
+      "mean_pct": 100.0,
+      "mean_mapping": null,
+      "mean_answer_length": 31.0
+    },
+    "phase4k_17_with_facts": {
+      "n": 17,
+      "mean_overall": 66.5,
+      "mean_pct": 100.0,
+      "mean_mapping": 100.0,
+      "mean_answer_length": 55.5
+    }
+  },
+  "t1_records_found": 11
+}

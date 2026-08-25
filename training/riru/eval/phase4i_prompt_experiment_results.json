@@ -1,0 +1,698 @@
+{
+  "reproducibility_check": {
+    "seed_42": {
+      "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+      "completion_tokens": 18,
+      "elapsed_sec": 1.764,
+      "seed": 42,
+      "temperature": 0.3
+    },
+    "seed_43": {
+      "text": "天井ゲーム数は3種類あって、510G、1000G、1480Gのどれかになるよ。",
+      "completion_tokens": 33,
+      "elapsed_sec": 2.484,
+      "seed": 43,
+      "temperature": 0.3
+    },
+    "seed_44": {
+      "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+      "completion_tokens": 18,
+      "elapsed_sec": 1.462,
+      "seed": 44,
+      "temperature": 0.3
+    }
+  },
+  "prompt_sweep": {
+    "Q3": {
+      "question": "天井は？",
+      "conditions": {
+        "A_current__base": {
+          "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選が行われます。具体的な確率は以下の通りです：\n\n- 510G：15.2%\n- 1000G：20.3%\n- 1480G：64.5%\n\n天井到達時には、ループストック抽選が行われ、約33.2%の確率でZ-ZONEが付与されます。",
+          "completion_tokens": 131,
+          "elapsed_sec": 5.917,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+          "completion_tokens": 18,
+          "elapsed_sec": 1.458,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選が行われます。具体的な確率は以下の通りです：\n\n- 510G：15.2%\n- 1000G：20.3%\n- 1480G：64.5%\n\n天井到達時には、ループストック抽選が行われ、約33.2%の確率でZ-ZONEが付与されます。",
+          "completion_tokens": 131,
+          "elapsed_sec": 5.976,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+          "completion_tokens": 18,
+          "elapsed_sec": 1.465,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選が行われます。具体的な確率は以下の通りです：\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\nこれらの天井ゲーム数は設定変更時に確定します。天井に到達すると、ループストック抽選が行われ、その際には約33%の確率でZ-ZONEが付与されます。",
+          "completion_tokens": 149,
+          "elapsed_sec": 6.8,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+          "completion_tokens": 18,
+          "elapsed_sec": 1.48,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gで決まります。各天井ゲーム数の出現確率は以下の通りです：\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井に到達すると、ループストック抽選が行われ、約33%の確率でZ-ZONEが付与されます。",
+          "completion_tokens": 120,
+          "elapsed_sec": 5.572,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+          "completion_tokens": 18,
+          "elapsed_sec": 1.502,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P01": {
+      "question": "天井について教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "天井ゲーム数は3種類あり、それぞれ450G、750G、1300Gのゲーム数で確定します。各ゲーム数の出現確率は以下の通りです。\n\n- 450G: 18%\n- 750G: 27%\n- 1300G: 55%\n\nこの中で最も高い確率で選ばれるのは1300Gで、最も低い確率で選ばれるのは450Gとなります。天井に到達すると、ボーナスやARTなどの特別な演出やゲームが終了し、通常時のゲームに戻ります。天井ゲーム数の設定によって、長期的なゲームの継続性が左右されます。",
+          "completion_tokens": 164,
+          "elapsed_sec": 7.394,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだよ。",
+          "completion_tokens": 34,
+          "elapsed_sec": 2.415,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "天井ゲーム数は3種類あり、それぞれ450G、750G、1300Gのゲーム数で確定します。各ゲーム数の出現確率は以下の通りです。\n\n- 450G: 18%\n- 750G: 27%\n- 1300G: 55%\n\nこのように、1300G確定の確率が最も高く、450G確定の確率が最も低いです。天井到達後は通常時の状態に戻りますので、天井までのゲーム数は覚えておくと良いでしょう。",
+          "completion_tokens": 136,
+          "elapsed_sec": 6.115,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだよ。",
+          "completion_tokens": 34,
+          "elapsed_sec": 2.429,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "天井ゲーム数は3種類あり、それぞれ450G、750G、1300Gのゲーム数で確定します。各ゲーム数の出現確率は以下の通りです。\n\n- 450G: 18%\n- 750G: 27%\n- 1300G: 55%\n\nこのように、天井ゲーム数は主に1300Gで確定する可能性が高いです。天井に到達すると、高確率や高設定の状態が終了し、通常時の状態に戻ることが一般的です。",
+          "completion_tokens": 132,
+          "elapsed_sec": 5.93,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだよ。",
+          "completion_tokens": 34,
+          "elapsed_sec": 2.425,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "天井ゲーム数は3種類あり、それぞれ450G、750G、1300Gのいずれかで確定します。各ゲーム数の出現確率は以下の通りです。\n\n- 450G: 18%\n- 750G: 27%\n- 1300G: 55%\n\nこのように、天井ゲーム数はランダムに決定されますが、1300Gが最も高い確率で抽選されます。天井到達後は高確率ゾーンである「ゾーンη」へ移行し、設定に関わらず突入率は1/55となります。",
+          "completion_tokens": 147,
+          "elapsed_sec": 6.561,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだよ。",
+          "completion_tokens": 34,
+          "elapsed_sec": 2.43,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P02": {
+      "question": "ボーナス確率について教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "機種Cでは、設定が上がるとボーナスの当選確率が高くなります。具体的なボーナス確率は以下の通りです：\n\n- **設定1**: 1/450\n- **設定2**: 1/410\n- **設定3**: 1/370\n- **設定4**: 1/320\n- **設定5**: 1/280\n\n設定が高くなるにつれて、ボーナスの当選確率も上がります。例えば、設定1では1/450の確率でボーナスが当選しますが、設定5では1/280の確率でボーナスが当選します。つまり、設定が高くなるほど、より早くボーナスが当選する可能性が高くなります。",
+          "completion_tokens": 184,
+          "elapsed_sec": 8.209,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "ボーナス確率は設定が上がると優遇されるよ。例えば設定1だと1/450だけど、設定5になると1/280になるんだ。",
+          "completion_tokens": 39,
+          "elapsed_sec": 2.772,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "機種Cのボーナス確率は設定によって異なります。設定が高くなるほど、ボーナスの当選確率も上がります。具体的な確率は以下の通りです。\n\n- **設定1** : 1/450\n- **設定2** : 1/410\n- **設定3** : 1/370\n- **設定4** : 1/320\n- **設定5** : 1/280\n\n設定が上がると、より頻繁にボードラ（ボーナス）が当たるようになります。例えば、設定1では1/450の確率でボーナスが当たるのに対し、設定5では1/280の確率でボーナスが当たるようになるため、設定5の状態では設定1よりも約1.6倍の頻度でボーナスが当たる可能性があります。",
+          "completion_tokens": 216,
+          "elapsed_sec": 9.492,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "ボーナス確率は設定が上がると優遇されるよ。例えば設定1だと1/450だけど、設定5になると1/280になるんだ。",
+          "completion_tokens": 39,
+          "elapsed_sec": 2.739,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "機種Cのボードンス確率は設定によって異なります。設定が高くなるにつれて、ボーナスの当選確率も上がります。具体的な確率は以下の通りです：\n\n- **設定1**：1/450\n- **設定2**：1/410\n- **設定3**：1/370\n- **設定4**：1/320\n- **設定5**：1/280\n\n設定が高くなるほど、ボーナスの当選確率が向上します。例えば、設定1では1/450の確率でボーナスが当選しますが、設定5では1/280の確率でボーナスが当選します。設定が上がると、より多くのボーナスチャンスがあるため、期待値も上がります。",
+          "completion_tokens": 195,
+          "elapsed_sec": 8.59,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "ボーナス確率は設定が上がると優遇されるよ。例えば設定1だと1/450だけど、設定5になると1/280になるんだ。",
+          "completion_tokens": 39,
+          "elapsed_sec": 2.738,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "ボーナス確率は設定によって異なります。設定が高くなるにつれて、ボーナスの当選確率も上がります。\n\n具体的な確率は以下の通りです：\n\n- 設定1：1/450\n- 設定2：1/410\n- 設定3：1/370\n- 設定4：1/320\n- 設定5：1/280\n\n設定が高くなるほど、ボーナスの当選確率が向上します。",
+          "completion_tokens": 127,
+          "elapsed_sec": 5.693,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "ボーナス確率は設定が上がると優遇されていくよ。設定1だと1/450で、設定5になると1/280になるんだ。",
+          "completion_tokens": 39,
+          "elapsed_sec": 2.778,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P03": {
+      "question": "ゾーンιについて教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "ゾーンιは、特定の条件を満たすことで突入します。その突入率は設定共通で1/38となっています。つまり、どの設定であっても、ゾーンιに突入する確率は1/38となります。\n\n突入すると、平均で18G間継続します。初回の継続率は72%であり、継続するかどうかはこの確率によって決まります。また、ゾーンιに突入した場合の平均獲得枚数は1回あたり320枚とされています。\n\nこれらの特徴から、ゾーンιは高設定ではより多くの回数継続し、より多くの枚数を獲得できる可能性があります。ただし、具体的な設定による影響については、モード移行率などの他の要素も考慮する必要があります。",
+          "completion_tokens": 180,
+          "elapsed_sec": 7.911,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+          "completion_tokens": 43,
+          "elapsed_sec": 3.009,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "ゾーンιは、特定の条件を満たすことで突入します。その突入率は設定共通で1/38となっています。つまり、1回のゲームにつき約38回に1回の頻度でゾーンιに突入する可能性があります。\n\n突入すると、平均して18G（ゲーム数）滞在します。また、初回の継続率は72%であり、これが成立するとさらにゾーンιが継続する可能性があります。\n\nゾーンιに突入した場合、1回あたりの平均獲得枚数は320枚となります。これは、ゾーンιに突入することで期待できる収益性を示しています。",
+          "completion_tokens": 153,
+          "elapsed_sec": 6.811,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+          "completion_tokens": 43,
+          "elapsed_sec": 3.004,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "ゾーンιは、特定の条件を満たすことで突入します。その突入率は設定共通で1/38であり、一旦突入すると平均18G間継続します。\n\nゾーンιが突入した際の初回継続率は72%で、1回あたりの平均獲得枚数は320枚となります。これらの特徴により、ゾーンιは高確率で継続し、多くの枚数を獲得できる可能性があります。",
+          "completion_tokens": 112,
+          "elapsed_sec": 5.017,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+          "completion_tokens": 43,
+          "elapsed_sec": 3.027,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "ゾーンιは、パチスロ機Cにおいて特徴的なゾーンの一つです。以下にその詳細を説明します。\n\n- **突入率**: ゾーンιの突入率は設定共通で1/38です。つまり、1ゲームごとに約38ゲームに1回の頻度でゾーンιに突入します。\n- **滞在ゲーム数**: 平均して18G間ゾーンιが継続します。\n- **継続率**: 初回の継続率は72%で、ゾーンιに入った後、さらにゾーンιを継続する確率が72%となります。\n- **平均獲得枚数**: 1回のゾーンι滞在中に獲得できる枚数の平均は320枚です。\n\nこれらの特性により、ゾーンιは高確率かつ高配当のゾーンとして機能します。",
+          "completion_tokens": 204,
+          "elapsed_sec": 9.022,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+          "completion_tokens": 43,
+          "elapsed_sec": 3.007,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P04": {
+      "question": "最低設定と最高設定の機械割の差を教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "最低設定である設定1と最高設定である設定6の機械割の差は、16.7%です。",
+          "completion_tokens": 27,
+          "elapsed_sec": 1.316,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "設定1と設定6の機械割の差は16.7%だよ。",
+          "completion_tokens": 21,
+          "elapsed_sec": 1.525,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "最低設定である設定1と最高設定である設定6の機械割の差は、16.7%です。",
+          "completion_tokens": 27,
+          "elapsed_sec": 1.344,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "設定1と設定6の機械割の差は16.7%だよ。",
+          "completion_tokens": 21,
+          "elapsed_sec": 1.549,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "最低設定である設定1の機械割は96.8%で、最高設定である設定6の機械割は113.5%です。したがって、両者の差は16.7%となります。",
+          "completion_tokens": 52,
+          "elapsed_sec": 2.446,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "設定1と設定6の機械割の差は16.7%だよ。",
+          "completion_tokens": 21,
+          "elapsed_sec": 1.545,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "最低設定である設定1と最高設定である設定6の機械割の差は、16.7%です。",
+          "completion_tokens": 27,
+          "elapsed_sec": 1.35,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "設定1と設定6の機械割の差は16.7%だよ。",
+          "completion_tokens": 21,
+          "elapsed_sec": 1.557,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P05": {
+      "question": "ATの恩恵について教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "AT（アトムタイム）終了後の恩恵についてご説明します。\n\nこの機種では、AT終了後に10Gのリプレイタイマー（RT）が付与され、さらにモードが継続します。つまり、ATが終了しても一定の有利な状態が続きやすくなる仕組みになっています。\n\n具体的には、ATが終了すると、10G間はリプレイタイマーが付与されます。この間は通常時よりも期待値の高い状態が続きます。また、モードが継続するため、次回のAT突入までの期待値も高まります。\n\nこれらの恩恵により、AT終了後も引き続き好成績を維持しやすい設計となっています。",
+          "completion_tokens": 167,
+          "elapsed_sec": 7.377,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "ATが終了すると、10GのRTが付くよ。また、モードも継続するんだ。",
+          "completion_tokens": 28,
+          "elapsed_sec": 1.987,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "ATが終了した際の恩恵について説明します。\n\nATが終了すると、10Gのリプレイタイマー（RT）が付与され、さらにモードが継続します。これにより、AT終了後も一定の有利な状態が続きやすくなる仕組みとなっています。",
+          "completion_tokens": 71,
+          "elapsed_sec": 3.26,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "ATが終了すると、10GのRTが付くよ。また、モードも継続するんだ。",
+          "completion_tokens": 28,
+          "elapsed_sec": 2.017,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "ATが終了した際の恩恵について説明します。\n\nATが終了すると、10GのRT（リプレイタイム）が付与されます。また、モード自体が継続するという特徴があります。つまり、AT終了後も一定の有利な状態が続きやすくなる仕組みとなっています。",
+          "completion_tokens": 77,
+          "elapsed_sec": 3.517,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "ATが終了すると、10GのRTが付与され、モードも継続するんだよ。",
+          "completion_tokens": 27,
+          "elapsed_sec": 1.941,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "AT終了後の恩恵について説明します。\n\nATが終了した後、10Gのリプレイタイマー（RT）が付与されます。また、モードも継続します。これはプレイヤーにとって有利な恩恵であり、AT終了後も引き続き高確率の状態が維持されやすくなるため、期待値が向上します。",
+          "completion_tokens": 87,
+          "elapsed_sec": 3.969,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "AT終了後は10GのRTが付くよ。また、モードも継続するんだ。",
+          "completion_tokens": 27,
+          "elapsed_sec": 1.946,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P06": {
+      "question": "初当りについて教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "初当りの確率は設定共通で1/260となります。当選すると、モード示唆とRT（ラウンドティルト）10Gという恩恵が得られます。モード示唆とは、次に期待できるモードや状態を示唆する仕組みであり、プレイヤーにとって有利な状況への移行を予測する手がかりとなります。また、RT10Gは10G間の高確率ゲームが付与され、この期間中は通常よりも高い確率で勝ちやすくなる特典です。",
+          "completion_tokens": 131,
+          "elapsed_sec": 5.858,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるよ。",
+          "completion_tokens": 32,
+          "elapsed_sec": 2.253,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "初当りの確率は設定共通で1/260となります。当選すると、モード示唆とRT（ラウンド特化ゲーム）10Gという恩恵が得られます。このRTでは10G間の有利な状態でゲームが行われます。",
+          "completion_tokens": 66,
+          "elapsed_sec": 3.025,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるよ。",
+          "completion_tokens": 32,
+          "elapsed_sec": 2.303,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "初当りの確率は設定共通で1/260です。当選すると、モード示唆とRT（ラウンドティルト）10Gという恩恵が得られます。RT10G中は通常時の10G分だけ高確率でゲームが続きます。また、初当り後には現在の状況を示唆する情報も得られるため、次回の期待値を判断するのに役立ちます。",
+          "completion_tokens": 105,
+          "elapsed_sec": 4.719,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与される。",
+          "completion_tokens": 31,
+          "elapsed_sec": 2.225,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "初当りの確率は設定共通で1/260です。当選すると、モード示唆とRT10Gが付与されます。",
+          "completion_tokens": 37,
+          "elapsed_sec": 1.789,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるよ。",
+          "completion_tokens": 32,
+          "elapsed_sec": 2.283,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P07": {
+      "question": "モードについて教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "モードは5種類あり、それぞれが異なる滞在率を持っています。さらに、最高モードへの移行率は優遇されており、他のモードよりも長く滞在しやすくなっています。この仕組みはプレイヤーにとって重要な要素であり、現在どのモードにいるかを把握することで、期待値の高い状態であるかどうかを見極める手がかりとなります。",
+          "completion_tokens": 87,
+          "elapsed_sec": 3.934,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "モードは全部で5種類あるよ。それぞれのモードごとに滞在率が違うんだ。そして、最高モードだけは移行率が優遇されてるみたいだよ。",
+          "completion_tokens": 44,
+          "elapsed_sec": 3.04,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "モードについては、機種Cでは5種類のモードが存在します。各モードごとに滞在率が異なり、どのモードにいるかによって期待値も変動します。また、最高モードへの移行率が優遇されており、その他のモードからの移行よりも比較的容易に最高モードに到達できるようになっています。モードの詳細な滞在率やそれぞれの特徴については、登録データに具体的な情報が含まれていませんので、詳しくはメーカーの公式情報やマニュアル等をご確認いただくことをお勧めします。",
+          "completion_tokens": 131,
+          "elapsed_sec": 5.83,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "モードは全部で5種類あって、それぞれの滞在率が違うんだ。そして、最高モードだけ移行率が優遇されてるよ。",
+          "completion_tokens": 36,
+          "elapsed_sec": 2.526,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "機種Cでは、5つの異なるモードが存在します。各モードごとに滞在率が異なります。また、これらのモードの中で最高モードへの移行率が優遇されています。つまり、現在どのモードにいるかによって、次にどのモードへ移行する可能性が高いかが変化します。特に最高モードへの移行が他のモードよりも有利になるようになっています。",
+          "completion_tokens": 91,
+          "elapsed_sec": 4.14,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "モードは全部で5種類あって、それぞれの滞在率が違うんだ。そして、最高モードだけ移行率が優遇されてるよ。",
+          "completion_tokens": 36,
+          "elapsed_sec": 2.541,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "機種Cでは、5つの異なるモードが存在します。各モードごとに滞在率が異なり、最高モードへの移行率が優遇されています。つまり、現在どのモードにいるかによって、次にどのモードへ移行する可能性が高いかが決まります。特に、最高モードへの移行は他のモードよりも優遇されており、より多くのチャンスで最高モードに到達できるようになっています。",
+          "completion_tokens": 100,
+          "elapsed_sec": 4.506,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "モードは全部で5種類あるよ。それぞれのモードごとに滞在率が違うんだ。そして、最高モードだけは移行率が優遇されてるんだ。",
+          "completion_tokens": 42,
+          "elapsed_sec": 2.942,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P08": {
+      "question": "天井に到達したときの恩恵について教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "天井に到達すると、以下の恩恵が受けられます：\n\n1. AT（特別ゲーム）が確定的に発動します。\n2. 「ゾーンκ」への突入が確定します。\n3. 平均して300枚の上乗せが行われます。\n\nこれらにより、天井到達時には大きなボーナスが期待できるようになっています。",
+          "completion_tokens": 82,
+          "elapsed_sec": 3.695,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "天井に到達すると、ATが確定するだけでなく、ゾーンκへの突入も確定します。また、平均300枚が上乗せされますよ。",
+          "completion_tokens": 38,
+          "elapsed_sec": 2.665,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "天井に到達すると、ATが確定的に発動し、さらにゾーンκへの突入も確定します。また、平均して300枚の上乗せが行われます。",
+          "completion_tokens": 44,
+          "elapsed_sec": 2.071,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "天井に到達すると、ATが確定するだけでなく、ゾーンκへの突入も確定します。また、平均300枚が上乗せされますよ。",
+          "completion_tokens": 38,
+          "elapsed_sec": 2.655,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "天井に到達すると、以下の恩恵が受けられます：\n\n1. AT（特別ゲーム）が確定的に発動します。\n2. ゾーンκへの突入が確定します。\n3. 平均300枚の上乗せが行われます。\n\nこれらにより、天井到達時には大きなボーナスが期待できるようになっています。",
+          "completion_tokens": 80,
+          "elapsed_sec": 3.673,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "天井に到達すると、ATが確定してゾーンκにも突入します。また、平均で300枚の上乗せも受けられるよ。",
+          "completion_tokens": 37,
+          "elapsed_sec": 2.603,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "天井に到達すると、ATが確定的に発動し、さらにゾーンκに突入します。また、平均300枚の上乗せも行われます。",
+          "completion_tokens": 41,
+          "elapsed_sec": 1.947,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "天井に到達すると、ATが確定するだけでなく、ゾーンκへの突入も確定します。また、平均300枚の上乗せも受けられますよ。",
+          "completion_tokens": 40,
+          "elapsed_sec": 2.813,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P09": {
+      "question": "小役Wについて教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "小役Wは、このパチスロ機において1/29の確率で成立します。小役Wが成立すると、モード示唆が行われます。これは、プレイヤーに対して現在の状況や期待できる状態についてのヒントを与える役割を果たします。",
+          "completion_tokens": 67,
+          "elapsed_sec": 3.046,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+          "completion_tokens": 25,
+          "elapsed_sec": 1.775,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "小役Wは、このパチスロ機において1/29の確率で成立します。小役Wが成立すると、モード示唆が行われます。これは、プレイヤーに対して現在の状況や期待できる状態についてのヒントを与える役割を果たします。",
+          "completion_tokens": 67,
+          "elapsed_sec": 3.065,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+          "completion_tokens": 25,
+          "elapsed_sec": 1.804,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "小役Wは1/29の確率で成立します。そして、この小役Wが成立するとモード示唆が行われます。これはゲーム中の重要な示唆となるため、小役Wの成立には注意を払うことが重要です。",
+          "completion_tokens": 56,
+          "elapsed_sec": 2.57,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+          "completion_tokens": 25,
+          "elapsed_sec": 1.804,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "小役Wは1/29の確率で成立します。そして、この小役が成立するとモード示唆が行われます。これはゲーム中の状況をプレイヤーに示唆する役割を持っています。",
+          "completion_tokens": 50,
+          "elapsed_sec": 2.35,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+          "completion_tokens": 25,
+          "elapsed_sec": 1.825,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    },
+    "P10": {
+      "question": "投資と勝率の目安について教えて",
+      "conditions": {
+        "A_current__base": {
+          "text": "投資と勝率の目安について、以下のように解説できます。\n\n- 推奨投資額は2000枚です。\n- 回収の目安は初当り2回分となります。\n- 全体の勝率の目安は45%とされています。\n\nこれらの目安を参考にしながら、適切な投資戦略を立てることをお勧めします。",
+          "completion_tokens": 90,
+          "elapsed_sec": 4.027,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "A_current__v2": {
+          "text": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+          "completion_tokens": 40,
+          "elapsed_sec": 2.77,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__base": {
+          "text": "投資と勝率の目安について、以下のように解説できます。\n\n- 推奨投資額は2000枚です。\n- 回収の目安は初当り2回分となります。\n- 全体の勝率の目安は45%とされています。\n\nこれらの目安を参考に、適切な投資戦略を立てることが重要です。勝率が45%であることを踏まえると、勝敗が拮抗している状況であり、設定判別やゾーンの理解を深めて、より有利な状況を作り出すことが求められます。",
+          "completion_tokens": 133,
+          "elapsed_sec": 5.951,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "B_omission_instruction__v2": {
+          "text": "投資目安は2000枚、勝率の目安は全体で45%となっています。",
+          "completion_tokens": 24,
+          "elapsed_sec": 1.752,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__base": {
+          "text": "機種Dの投資と勝率の目安についてお伝えします。\n\n- 推奨投資額は2000枚です。\n- 回収の目安は初当り2回分となります。\n- 全体の勝率の目安は45%となっています。\n\nこれらの目安を参考に、適切な投資戦略を立てていただければと思います。",
+          "completion_tokens": 86,
+          "elapsed_sec": 3.907,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "C_prioritize_completeness__v2": {
+          "text": "投資目安は2000枚、勝率の目安は全体で45%となっています。",
+          "completion_tokens": 24,
+          "elapsed_sec": 1.743,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__base": {
+          "text": "機種Dの投資と勝率の目安についてお伝えします。\n\n- 推奨投資額は2000枚です。\n- 回収の目安は初当り2回分となります。\n- 勝率の目安は全体で45%とされています。\n\nこれらの目安を参考にしながら、適切な投資戦略を立てていただければと思います。",
+          "completion_tokens": 88,
+          "elapsed_sec": 3.988,
+          "seed": 42,
+          "temperature": 0.3
+        },
+        "D_structured_steps__v2": {
+          "text": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+          "completion_tokens": 40,
+          "elapsed_sec": 2.825,
+          "seed": 42,
+          "temperature": 0.3
+        }
+      }
+    }
+  }
+}

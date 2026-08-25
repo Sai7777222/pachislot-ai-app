@@ -1,0 +1,353 @@
+{
+  "v4": {
+    "0.0": {
+      "n_lora_layers_matched": 192,
+      "q3_greedy_recall_pct": 100.0,
+      "q3_greedy_key_facts_found": [
+        "510G",
+        "1000G",
+        "1480G",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "q3_sampled_avg_recall_pct": 100.0,
+      "q3_sampled_seeds_with_any_pct": "5/5",
+      "q3_sampled_seeds_with_any_gamecount": "5/5",
+      "q3_sampled_seeds_with_all3_gamecounts": "5/5",
+      "q3_sampled_length_min_max": [
+        165,
+        348
+      ],
+      "q3_top_logit_token_1": "「",
+      "q3_top_logit_prob_1": 0.809897,
+      "e36_placeholder_present": false,
+      "avg_persona_response_length": 146.7,
+      "persona_lengths_by_id": {
+        "E01": 155,
+        "E02": 170,
+        "E07": 87,
+        "E08": 258,
+        "E14": 56,
+        "E17": 137,
+        "E23": 83,
+        "E24": 216,
+        "E27": 206,
+        "E30": 275,
+        "E35": 63,
+        "E36": 164,
+        "E37": 42,
+        "E39": 142
+      }
+    },
+    "0.1": {
+      "n_lora_layers_matched": 192,
+      "q3_greedy_recall_pct": 100.0,
+      "q3_greedy_key_facts_found": [
+        "510G",
+        "1000G",
+        "1480G",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "q3_sampled_avg_recall_pct": 100.0,
+      "q3_sampled_seeds_with_any_pct": "5/5",
+      "q3_sampled_seeds_with_any_gamecount": "5/5",
+      "q3_sampled_seeds_with_all3_gamecounts": "5/5",
+      "q3_sampled_length_min_max": [
+        163,
+        178
+      ],
+      "q3_top_logit_token_1": "「",
+      "q3_top_logit_prob_1": 0.568123,
+      "e36_placeholder_present": false,
+      "avg_persona_response_length": 126.5,
+      "persona_lengths_by_id": {
+        "E01": 163,
+        "E02": 106,
+        "E07": 86,
+        "E08": 259,
+        "E14": 40,
+        "E17": 101,
+        "E23": 85,
+        "E24": 216,
+        "E27": 83,
+        "E30": 212,
+        "E35": 64,
+        "E36": 180,
+        "E37": 62,
+        "E39": 114
+      }
+    },
+    "0.25": {
+      "n_lora_layers_matched": 192,
+      "q3_greedy_recall_pct": 100.0,
+      "q3_greedy_key_facts_found": [
+        "510G",
+        "1000G",
+        "1480G",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "q3_sampled_avg_recall_pct": 100.0,
+      "q3_sampled_seeds_with_any_pct": "5/5",
+      "q3_sampled_seeds_with_any_gamecount": "5/5",
+      "q3_sampled_seeds_with_all3_gamecounts": "5/5",
+      "q3_sampled_length_min_max": [
+        85,
+        148
+      ],
+      "q3_top_logit_token_1": "天",
+      "q3_top_logit_prob_1": 0.684521,
+      "e36_placeholder_present": false,
+      "avg_persona_response_length": 89.8,
+      "persona_lengths_by_id": {
+        "E01": 89,
+        "E02": 87,
+        "E07": 74,
+        "E08": 186,
+        "E14": 38,
+        "E17": 102,
+        "E23": 42,
+        "E24": 67,
+        "E27": 83,
+        "E30": 197,
+        "E35": 64,
+        "E36": 102,
+        "E37": 32,
+        "E39": 94
+      }
+    },
+    "0.5": {
+      "n_lora_layers_matched": 192,
+      "q3_greedy_recall_pct": 100.0,
+      "q3_greedy_key_facts_found": [
+        "510G",
+        "1000G",
+        "1480G",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "q3_sampled_avg_recall_pct": 80.0,
+      "q3_sampled_seeds_with_any_pct": "3/5",
+      "q3_sampled_seeds_with_any_gamecount": "5/5",
+      "q3_sampled_seeds_with_all3_gamecounts": "5/5",
+      "q3_sampled_length_min_max": [
+        43,
+        87
+      ],
+      "q3_top_logit_token_1": "天",
+      "q3_top_logit_prob_1": 0.876032,
+      "e36_placeholder_present": false,
+      "avg_persona_response_length": 57.6,
+      "persona_lengths_by_id": {
+        "E01": 60,
+        "E02": 98,
+        "E07": 31,
+        "E08": 137,
+        "E14": 16,
+        "E17": 85,
+        "E23": 39,
+        "E24": 21,
+        "E27": 53,
+        "E30": 79,
+        "E35": 27,
+        "E36": 90,
+        "E37": 31,
+        "E39": 39
+      }
+    },
+    "0.75": {
+      "n_lora_layers_matched": 192,
+      "q3_greedy_recall_pct": 50.0,
+      "q3_greedy_key_facts_found": [
+        "510G",
+        "1000G",
+        "1480G"
+      ],
+      "q3_sampled_avg_recall_pct": 70.0,
+      "q3_sampled_seeds_with_any_pct": "2/5",
+      "q3_sampled_seeds_with_any_gamecount": "5/5",
+      "q3_sampled_seeds_with_all3_gamecounts": "5/5",
+      "q3_sampled_length_min_max": [
+        39,
+        83
+      ],
+      "q3_top_logit_token_1": "天",
+      "q3_top_logit_prob_1": 0.937708,
+      "e36_placeholder_present": false,
+      "avg_persona_response_length": 41.4,
+      "persona_lengths_by_id": {
+        "E01": 41,
+        "E02": 91,
+        "E07": 18,
+        "E08": 107,
+        "E14": 13,
+        "E17": 50,
+        "E23": 22,
+        "E24": 21,
+        "E27": 61,
+        "E30": 49,
+        "E35": 22,
+        "E36": 53,
+        "E37": 9,
+        "E39": 22
+      }
+    },
+    "1.0": {
+      "n_lora_layers_matched": 192,
+      "q3_greedy_recall_pct": 50.0,
+      "q3_greedy_key_facts_found": [
+        "510G",
+        "1000G",
+        "1480G"
+      ],
+      "q3_sampled_avg_recall_pct": 10.0,
+      "q3_sampled_seeds_with_any_pct": "0/5",
+      "q3_sampled_seeds_with_any_gamecount": "1/5",
+      "q3_sampled_seeds_with_all3_gamecounts": "1/5",
+      "q3_sampled_length_min_max": [
+        23,
+        39
+      ],
+      "q3_top_logit_token_1": "天",
+      "q3_top_logit_prob_1": 0.931828,
+      "e36_placeholder_present": true,
+      "avg_persona_response_length": 30.4,
+      "persona_lengths_by_id": {
+        "E01": 17,
+        "E02": 57,
+        "E07": 37,
+        "E08": 35,
+        "E14": 17,
+        "E17": 82,
+        "E23": 20,
+        "E24": 20,
+        "E27": 39,
+        "E30": 26,
+        "E35": 26,
+        "E36": 29,
+        "E37": 9,
+        "E39": 11
+      }
+    }
+  },
+  "v2": {
+    "0.0": {
+      "n_lora_layers_matched": 192,
+      "q3_greedy_recall_pct": 100.0,
+      "q3_greedy_key_facts_found": [
+        "510G",
+        "1000G",
+        "1480G",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "q3_sampled_avg_recall_pct": 100.0,
+      "q3_sampled_seeds_with_any_pct": "5/5",
+      "q3_sampled_seeds_with_any_gamecount": "5/5",
+      "q3_sampled_seeds_with_all3_gamecounts": "5/5",
+      "q3_sampled_length_min_max": [
+        165,
+        348
+      ],
+      "q3_top_logit_token_1": "「",
+      "q3_top_logit_prob_1": 0.809897,
+      "e36_placeholder_present": false,
+      "avg_persona_response_length": 146.7,
+      "persona_lengths_by_id": {
+        "E01": 155,
+        "E02": 170,
+        "E07": 87,
+        "E08": 258,
+        "E14": 56,
+        "E17": 137,
+        "E23": 83,
+        "E24": 216,
+        "E27": 206,
+        "E30": 275,
+        "E35": 63,
+        "E36": 164,
+        "E37": 42,
+        "E39": 142
+      }
+    },
+    "0.5": {
+      "n_lora_layers_matched": 192,
+      "q3_greedy_recall_pct": 100.0,
+      "q3_greedy_key_facts_found": [
+        "510G",
+        "1000G",
+        "1480G",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "q3_sampled_avg_recall_pct": 80.0,
+      "q3_sampled_seeds_with_any_pct": "3/5",
+      "q3_sampled_seeds_with_any_gamecount": "5/5",
+      "q3_sampled_seeds_with_all3_gamecounts": "5/5",
+      "q3_sampled_length_min_max": [
+        43,
+        89
+      ],
+      "q3_top_logit_token_1": "天",
+      "q3_top_logit_prob_1": 0.868713,
+      "e36_placeholder_present": false,
+      "avg_persona_response_length": 78.8,
+      "persona_lengths_by_id": {
+        "E01": 27,
+        "E02": 84,
+        "E07": 31,
+        "E08": 470,
+        "E14": 12,
+        "E17": 42,
+        "E23": 39,
+        "E24": 21,
+        "E27": 83,
+        "E30": 73,
+        "E35": 27,
+        "E36": 97,
+        "E37": 31,
+        "E39": 66
+      }
+    },
+    "1.0": {
+      "n_lora_layers_matched": 192,
+      "q3_greedy_recall_pct": 0.0,
+      "q3_greedy_key_facts_found": [],
+      "q3_sampled_avg_recall_pct": 10.0,
+      "q3_sampled_seeds_with_any_pct": "0/5",
+      "q3_sampled_seeds_with_any_gamecount": "1/5",
+      "q3_sampled_seeds_with_all3_gamecounts": "1/5",
+      "q3_sampled_length_min_max": [
+        23,
+        39
+      ],
+      "q3_top_logit_token_1": "天",
+      "q3_top_logit_prob_1": 0.939485,
+      "e36_placeholder_present": true,
+      "avg_persona_response_length": 32.0,
+      "persona_lengths_by_id": {
+        "E01": 21,
+        "E02": 61,
+        "E07": 8,
+        "E08": 76,
+        "E14": 14,
+        "E17": 35,
+        "E23": 22,
+        "E24": 16,
+        "E27": 39,
+        "E30": 26,
+        "E35": 26,
+        "E36": 84,
+        "E37": 9,
+        "E39": 11
+      }
+    }
+  }
+}

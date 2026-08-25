@@ -1,0 +1,73 @@
+{
+  "_comment": "Phase 4Q: o_proj低rank対照実験 candidate_o8。q/k/v_projはv4と完全同一 (r=16/alpha=16)。o_projのみrank_pattern/alpha_patternでr=8/alpha=8に縮小する。データ・train/val split・その他ハイパーパラメータはv4と完全に同一。v4/v5-qkv等既存adapterからの継続学習ではなく、ベースQwen2.5-14B-Instructから新規学習する。Phase4Pの推論時o_projスケール調整では情報保持とRAG厳格性を両立できなかったため、学習時にo_projの学習容量そのものを段階的に縮小した場合の挙動を診断する対照実験。",
+
+  "base_model": {
+    "hf_repo_id": "Qwen/Qwen2.5-14B-Instruct",
+    "local_path": "D:/AI/models/llm-hf/Qwen2.5-14B-Instruct",
+    "note": "GGUFは推論専用。学習にはHF形式を使用する。v1/v2/v3/v4/v5-qkvと同一のベースモデルを使用し、他adapterのマージ等は一切行わない。"
+  },
+
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true
+  },
+
+  "lora": {
+    "r": 16,
+    "lora_alpha": 16,
+    "lora_alpha_alt_candidate": 32,
+    "lora_dropout": 0.08,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+    "rank_pattern": {"o_proj": 8},
+    "alpha_pattern": {"o_proj": 8},
+    "mlp_modules_note": "gate_proj/up_proj/down_proj はv1/v2/v3/v4/v5-qkv同様に追加しない。Phase4Qの唯一の意図的差分: o_projのみr=8/alpha=8 (q/k/vはr=16/alpha=16のまま)。",
+    "bias": "none",
+    "task_type": "CAUSAL_LM"
+  },
+
+  "training": {
+    "num_train_epochs": 3,
+    "learning_rate": 1e-4,
+    "optim": "paged_adamw_8bit",
+    "max_seq_length": 2048,
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "fp16": false,
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "seed": 42,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "_resolved_micro_batch_size": 2,
+    "_resolved_grad_accum": 8,
+    "per_device_eval_batch_size": 2,
+    "eval_strategy": "steps",
+    "eval_steps": 20,
+    "save_strategy": "steps",
+    "save_steps": 20,
+    "save_total_limit": 3,
+    "logging_steps": 5,
+    "load_best_model_at_end": true,
+    "metric_for_best_model": "eval_loss"
+  },
+
+  "loss": {
+    "mode": "assistant_only",
+    "description": "system/userトークンはlabel=-100でマスクし、assistantターンのみlossに寄与させる。tokenizer.apply_chat_template()の増分差分でassistant区間を特定する。v1/v2/v3/v4/v5-qkvと同一実装 (train_qlora.py 側は無変更、rank_pattern/alpha_patternの読み取り対応のみPhase4Qで追加)。"
+  },
+
+  "data": {
+    "train_path": "training/riru/processed/riru_train_v4.jsonl",
+    "val_path": "training/riru/processed/riru_val_v4.jsonl",
+    "format": "messages (role/content) + metadata。system promptは学習データ本文に含めない。v4と完全に同一のtrain/valファイルを読み取り専用で再利用し、新しいcandidate/splitは作成しない。"
+  },
+
+  "output": {
+    "adapter_dir": "training/riru/lora-riru-qwen-o8",
+    "checkpoint_dir": "training/riru/lora-riru-qwen-o8/checkpoints",
+    "log_dir": "training/riru/lora-riru-qwen-o8/logs"
+  }
+}

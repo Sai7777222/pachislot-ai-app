@@ -1,0 +1,104 @@
+{
+  "candidate": "o4",
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "train_count": 823,
+  "val_count": 91,
+  "train_sha256_match": true,
+  "val_sha256_match": true,
+  "candidate_sha256_match": true,
+  "system_prompt_md5_match": true,
+  "adapter_sha256_check": {
+    "v1": {
+      "expected": "9037adaa1f85299a803294fa4a88c32fc1de82c499c9cb320e2c6d3d55d2a6c1",
+      "actual": "9037adaa1f85299a803294fa4a88c32fc1de82c499c9cb320e2c6d3d55d2a6c1",
+      "match": true
+    },
+    "v2": {
+      "expected": "ecbfef5ff208fbff08c56553f53d6f83a925e346bb30a867a9a389bd16b7be8d",
+      "actual": "ecbfef5ff208fbff08c56553f53d6f83a925e346bb30a867a9a389bd16b7be8d",
+      "match": true
+    },
+    "v3": {
+      "expected": "7d348705de552bc4c2a33a4546845dc09809385664b042193731e26337c055aa",
+      "actual": "7d348705de552bc4c2a33a4546845dc09809385664b042193731e26337c055aa",
+      "match": true
+    },
+    "v4": {
+      "expected": "b5f1646cf823e4b382cdac91ab973e9859cf60aebce665ba8cc7e2240d6b5bec",
+      "actual": "b5f1646cf823e4b382cdac91ab973e9859cf60aebce665ba8cc7e2240d6b5bec",
+      "match": true
+    },
+    "v5-qkv": {
+      "expected": "358b0610d55496252324d92c006d409d31ee4d22032e9d8b5d856bc7f4d97774",
+      "actual": "358b0610d55496252324d92c006d409d31ee4d22032e9d8b5d856bc7f4d97774",
+      "match": true
+    }
+  },
+  "config_diffs": [
+    {
+      "path": "._comment",
+      "v4": "Phase 4L: リル人格QLoRA v4。v2/v3で正常に学習できた設定をそのまま踏襲し、data/outputのみv4専用パスに変更している。v1/v2/v3 adapterからの継続学習ではなく、ベースQwen2.5-14B-Instructからv4データ914件で新規学習する。目的: Q3型『重要情報省略』問題の改善 (Phase4K: 既存H-0/H-3/H-11の3件修正＋本番RAG形式の複雑構造を再現した新規17件)。「キミ」用system prompt変更はこのフェーズでは行わない。",
+      "candidate": "Phase 4Q: o_proj低rank対照実験 candidate_o4。q/k/v_projはv4と完全同一 (r=16/alpha=16)。o_projのみrank_pattern/alpha_patternでr=4/alpha=4に縮小する。データ・train/val split・その他ハイパーパラメータはv4/o8と完全に同一。v4/v5-qkv/o8等既存adapterからの継続学習ではなく、ベースQwen2.5-14B-Instructから新規学習する。"
+    },
+    {
+      "path": ".base_model.note",
+      "v4": "GGUF (D:/AI/models/llm/qwen2.5-14b-instruct-q4_k_m-*.gguf) は推論専用。学習にはHF形式を使用する。v1/v2/v3と同一のベースモデルを使用し、v1/v2/v3 adapterのマージ等は一切行わない。",
+      "candidate": "GGUFは推論専用。学習にはHF形式を使用する。v1/v2/v3/v4/v5-qkv/o8と同一のベースモデルを使用し、他adapterのマージ等は一切行わない。"
+    },
+    {
+      "path": ".data.format",
+      "v4": "messages (role/content) + metadata。system promptは学習データ本文に含めない。",
+      "candidate": "messages (role/content) + metadata。system promptは学習データ本文に含めない。v4と完全に同一のtrain/valファイルを読み取り専用で再利用し、新しいcandidate/splitは作成しない。"
+    },
+    {
+      "path": ".lora.alpha_pattern",
+      "v4": null,
+      "candidate": {
+        "o_proj": 4
+      }
+    },
+    {
+      "path": ".lora.mlp_modules_note",
+      "v4": "gate_proj/up_proj/down_proj はv1/v2/v3同様に追加しない",
+      "candidate": "gate_proj/up_proj/down_proj はv1/v2/v3/v4/v5-qkv/o8同様に追加しない。Phase4Qの唯一の意図的差分: o_projのみr=4/alpha=4 (q/k/vはr=16/alpha=16のまま)。"
+    },
+    {
+      "path": ".lora.rank_pattern",
+      "v4": null,
+      "candidate": {
+        "o_proj": 4
+      }
+    },
+    {
+      "path": ".loss.description",
+      "v4": "system/userトークンはlabel=-100でマスクし、assistantターンのみlossに寄与させる。tokenizer.apply_chat_template()の増分差分でassistant区間を特定する。v1/v2/v3と同一実装 (train_qlora.py 側は無変更)。",
+      "candidate": "system/userトークンはlabel=-100でマスクし、assistantターンのみlossに寄与させる。tokenizer.apply_chat_template()の増分差分でassistant区間を特定する。v1/v2/v3/v4/v5-qkv/o8と同一実装 (train_qlora.py 側は無変更)。"
+    },
+    {
+      "path": ".output.adapter_dir",
+      "v4": "training/riru/lora-riru-qwen-v4",
+      "candidate": "training/riru/lora-riru-qwen-o4"
+    },
+    {
+      "path": ".output.checkpoint_dir",
+      "v4": "training/riru/lora-riru-qwen-v4/checkpoints",
+      "candidate": "training/riru/lora-riru-qwen-o4/checkpoints"
+    },
+    {
+      "path": ".output.log_dir",
+      "v4": "training/riru/lora-riru-qwen-v4/logs",
+      "candidate": "training/riru/lora-riru-qwen-o4/logs"
+    }
+  ],
+  "unexpected_config_diffs": [],
+  "rank_pattern": {
+    "o_proj": 4
+  },
+  "alpha_pattern": {
+    "o_proj": 4
+  },
+  "o_rank_alpha_as_expected": true,
+  "qkv_r_16_alpha_16": true,
+  "overall_status": "READY"
+}

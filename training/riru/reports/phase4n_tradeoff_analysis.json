@@ -1,0 +1,60 @@
+{
+  "scale_mechanism": {
+    "safe_method_confirmed": true,
+    "mechanism": "peft==0.20.0 LoraLayer.scaling[adapter_name] (plain float dict, read in Linear.forward as `result + lora_B(lora_A(x)) * scaling`) temporarily multiplied in-memory via a contextmanager (scaled_lora) and restored in a finally block. No adapter file is ever written.",
+    "num_hidden_layers_actual": 48,
+    "layer_groups": {"front": "0-15", "mid": "16-31", "back": "32-47"}
+  },
+  "scale_sweep_v4": {
+    "0.00": {"greedy_recall_pct": 100.0, "sampled_avg_recall_pct": 100.0, "pct_seeds": "5/5", "gamecount_seeds_all3": "5/5", "e36_placeholder_bug": false, "avg_persona_len_chars": 146.7},
+    "0.10": {"greedy_recall_pct": 100.0, "sampled_avg_recall_pct": 100.0, "pct_seeds": "5/5", "gamecount_seeds_all3": "5/5", "e36_placeholder_bug": false, "avg_persona_len_chars": 126.5},
+    "0.25": {"greedy_recall_pct": 100.0, "sampled_avg_recall_pct": 100.0, "pct_seeds": "5/5", "gamecount_seeds_all3": "5/5", "e36_placeholder_bug": false, "avg_persona_len_chars": 89.8, "note": "E01 shows an unrelated identity hallucination ('モンキーターン' character claim) at this scale only"},
+    "0.50": {"greedy_recall_pct": 100.0, "sampled_avg_recall_pct": 80.0, "pct_seeds": "3/5", "gamecount_seeds_all3": "5/5", "e36_placeholder_bug": false, "avg_persona_len_chars": 57.6, "note": "E36 hallucinates wrong self-name 'あいりちゃん'"},
+    "0.75": {"greedy_recall_pct": 50.0, "sampled_avg_recall_pct": 70.0, "pct_seeds": "2/5", "gamecount_seeds_all3": "5/5", "e36_placeholder_bug": false, "avg_persona_len_chars": 41.4, "note": "E36 hallucinates wrong self-name 'あいこ'"},
+    "1.00_production_v4": {"greedy_recall_pct": 50.0, "sampled_avg_recall_pct": 10.0, "pct_seeds": "0/5", "gamecount_seeds_all3": "1/5", "e36_placeholder_bug": true, "avg_persona_len_chars": 30.4}
+  },
+  "scale_sweep_v2_reduced": {
+    "0.00": {"greedy_recall_pct": 100.0, "sampled_avg_recall_pct": 100.0},
+    "0.50": {"greedy_recall_pct": 100.0, "sampled_avg_recall_pct": 80.0},
+    "1.00_production_v2": {"greedy_recall_pct": 0.0, "sampled_avg_recall_pct": 10.0}
+  },
+  "v2_vs_v4_scale_sensitivity": "Nearly identical shape (100%→80%→~10% at scale 0/0.5/1.0 for both adapters); the cliff location does not meaningfully differ between v2 and v4, indicating the phenomenon is a general property of this LoRA training setup (target_modules/rank/data distribution shared across v2/v3/v4), not something newly introduced by v4's Phase4K data changes.",
+  "module_ablation_v4": {
+    "note_on_bug": "The 'full_v4' row inside phase4n_module_results.json was miscomputed (module_types=None was treated as 'apply to all layers' -> effectively scale=0.0 = base). The correct full_v4/scale=1.0 baseline below is taken from scale_sweep_v4.1.00_production_v4.",
+    "full_v4_scale1.0_baseline": {"greedy_recall_pct": 50.0, "sampled_seed42_recall_pct": 0.0},
+    "q_off": {"greedy_recall_pct": 50.0, "sampled_seed42_recall_pct": 50.0, "e36_name_hallucination": "リリ"},
+    "k_off": {"greedy_recall_pct": 0.0, "sampled_seed42_recall_pct": 0.0, "e36_note": "placeholder bug persists"},
+    "v_off": {"greedy_recall_pct": 50.0, "sampled_seed42_recall_pct": 50.0, "e36_name_hallucination": "リサ"},
+    "o_off": {"greedy_recall_pct": 100.0, "sampled_seed42_recall_pct": 100.0, "e36_note": "no wrong name, cute tone retained"},
+    "qk_off": {"greedy_recall_pct": 50.0, "sampled_seed42_recall_pct": 50.0, "e36_name_hallucination": "リリ"},
+    "vo_off": {"greedy_recall_pct": 100.0, "sampled_seed42_recall_pct": 100.0, "e36_note": "no wrong name, cute/embellished tone"},
+    "conclusion": "Disabling o_proj's LoRA contribution alone (q/k/v left at full strength) fully restores Q3 recall to base level (100%/100%) while avoiding the wrong-name hallucinations seen when q_proj or v_proj is disabled instead. o_proj is the single strongest module-level driver of the omission behavior found in this study."
+  },
+  "layer_ablation_v4": {
+    "all_on_baseline": {"greedy_recall_pct": 50.0, "sampled_seed42_recall_pct": 0.0},
+    "front_off": {"greedy_recall_pct": 0.0, "sampled_seed42_recall_pct": 100.0, "e36_name_hallucination": null},
+    "mid_off": {"greedy_recall_pct": 100.0, "sampled_seed42_recall_pct": 100.0, "e36_name_hallucination": "リコ"},
+    "back_off": {"greedy_recall_pct": 50.0, "sampled_seed42_recall_pct": 100.0, "e36_name_hallucination": "あいり"},
+    "front_only_on": {"greedy_recall_pct": 100.0, "sampled_seed42_recall_pct": 100.0, "e36_name_hallucination": null},
+    "mid_only_on": {"greedy_recall_pct": 50.0, "sampled_seed42_recall_pct": 100.0, "e36_name_hallucination": "ゆめぴょん"},
+    "back_only_on": {"greedy_recall_pct": 100.0, "sampled_seed42_recall_pct": 100.0, "e36_name_hallucination": null},
+    "conclusion": "Almost any single-third ablation (whether removed or kept-alone) restores sampled recall to ~100%, indicating the omission behavior is a fragile, distributed effect that requires the full cumulative magnitude across all 48 layers acting together (all_on) to reliably reproduce -- it is not localized to one specific front/mid/back third. Name hallucination correlates loosely with mid/back involvement and is absent whenever a front-related condition is used."
+  },
+  "promising_candidates_deepdive": {
+    "candidates_tested": ["full_v4 (scale=1.0, reference)", "scale_0.25", "o_off"],
+    "P01_holdout": {"full_v4": 50.0, "scale_0.25": 100.0, "o_off": 100.0},
+    "P02_holdout": {"full_v4": 40.0, "scale_0.25": 100.0, "o_off": 100.0},
+    "generalization_conclusion": "Both candidates' recall improvement generalizes beyond Q3 to Phase4I's independent held-out items (P01/P02), not a Q3-specific artifact.",
+    "Q9_derived_computation_hallucination": {"full_v4": "not present", "scale_0.25": "not present", "o_off": "not present"},
+    "Q11_known_causal_fabrication_loop_stock": {"full_v4": "present (unchanged known issue)", "scale_0.25": "absent", "o_off": "absent"},
+    "Q11_NEW_finding": "Both scale_0.25 and o_off REPLACE the known ループストック causal-fabrication with a NEW forbidden-category hallucination: unsolicited ヤメ時 (when-to-stop) advice, explicitly forbidden per Phase4K's data rules and previously flagged in Phase4L as a known-bad phrase pattern. Neither candidate is a clean fix on Q11 -- each trades one hallucination type for another.",
+    "important_caveat": "This means 'reduce LoRA magnitude toward Base' does not cleanly separate persona-compression from unwanted behavior; it also partially un-suppresses Base's own tendency toward speculative advice-giving that training was specifically trying to control. The persona/recall/RAG-discipline trade-off is three-dimensional, not a simple two-axis persona-vs-recall dial."
+  },
+  "capability_sacrificed_for_persona": {
+    "q3_recall_full_v4_vs_base": "100% (scale=0.0/base) -> 10% avg sampled at production v4 (scale=1.0): a ~90 percentage-point sacrifice in RAG-enumeration recall attributable to the persona LoRA's cumulative magnitude.",
+    "held_out_recall_full_v4_vs_base": "P01: 100%->50%, P02: 100%->40%, consistent with Q3's magnitude of degradation.",
+    "logits_shift_reference_from_phase4m": "base-vs-adapter mean logit diff ~2.1-2.2 (large), inter-adapter (v2/v3/v4) diff ~0.09-0.15 (~15x smaller) -- consistent with this phase's finding that the omission behavior is governed primarily by shared LoRA-application magnitude/design rather than adapter-specific training differences."
+  },
+  "final_categorical_judgment": "B_primary_with_C_caveat",
+  "final_judgment_explanation": "Hypothesis D (data/objective-level cause, unfixable by application-time changes) is ruled out: Q3/P01/P02 all fully recover at low scale or with o_proj ablated. The clearest, most actionable, most strongly-supported single finding is module-level (Hypothesis C in the phase's lettering / labelled B here): o_proj's LoRA contribution is disproportionately responsible for the omission behavior, and disabling it alone (keeping q/k/v at full strength) is the most surgical intervention tested, fully restoring recall without introducing wrong-name persona hallucinations. This supports reconsidering target_modules (e.g., a lower LoRA rank/scale specifically on o_proj, or excluding it) for v5's design. However, the Q11 deep-dive shows that no scale/module choice tested is a clean win end-to-end: recovering RAG recall also re-admits Base's own tendency toward unsolicited advice-giving (a different forbidden-category hallucination). This is measured evidence that persona-compression and RAG-discipline are entangled with overall LoRA magnitude in ways not fully separable by inference-time scale/module tuning alone (a partial vote for Hypothesis E / architecture-reconsideration), so any v5 change should be validated end-to-end (recall AND hallucination AND persona) rather than optimizing recall alone."
+}

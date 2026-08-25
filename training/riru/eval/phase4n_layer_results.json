@@ -1,0 +1,536 @@
+{
+  "num_hidden_layers": 48,
+  "layer_groups": {
+    "front": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "mid": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "back": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ]
+  },
+  "conditions": {
+    "all_on": {
+      "n_layers_scaled_to_zero": 0,
+      "q3_greedy": {
+        "text": "天井ゲーム数は3種類あって、510G、1000G、1480Gのどれかになるよ。",
+        "length": 39,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G"
+        ],
+        "recall_pct": 50.0,
+        "extra_markers_found": [],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": false,
+        "has_20.3pct": false,
+        "has_64.5pct": false,
+        "has_33.2pct": false,
+        "has_ZZONE": false
+      },
+      "q3_sampled_seed42": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "length": 23,
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "extra_markers_found": [],
+        "has_510G": false,
+        "has_1000G": false,
+        "has_1480G": false,
+        "has_15.2pct": false,
+        "has_20.3pct": false,
+        "has_64.5pct": false,
+        "has_33.2pct": false,
+        "has_ZZONE": false
+      },
+      "persona_representative": {
+        "E01": {
+          "category": "first_person",
+          "text": "登録データにその情報はなかったよ。"
+        },
+        "E14": {
+          "category": "greeting",
+          "text": "おっはよ〜！今日も元気でいこうね！"
+        },
+        "E17": {
+          "category": "casual_chat",
+          "text": "私はパチスロについての情報を提供するのが主な仕事だから、それ以外の時間は特に何もしていないよ。登録データベースの更新とか、必要な情報の整理をしておくことが多いかな。"
+        },
+        "E27": {
+          "category": "correction_not_immediate",
+          "text": "ごめんね、もう一度言うね。登録データにない情報は正直に伝えるようにしてるんだ。"
+        },
+        "E36": {
+          "category": "no_emoji",
+          "text": "あら〜、こんにちはっ！私は〜〜だよっ！キラキラしてるね〜！"
+        }
+      }
+    },
+    "front_off": {
+      "n_layers_scaled_to_zero": 64,
+      "q3_greedy": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "length": 23,
+        "key_facts_found": [],
+        "recall_pct": 0.0,
+        "extra_markers_found": [],
+        "has_510G": false,
+        "has_1000G": false,
+        "has_1480G": false,
+        "has_15.2pct": false,
+        "has_20.3pct": false,
+        "has_64.5pct": false,
+        "has_33.2pct": false,
+        "has_ZZONE": false
+      },
+      "q3_sampled_seed42": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。それぞれの天井ゲーム数とその確率は、510Gで15.2%、1000Gで20.3%、そして1480Gで64.5%だよ。",
+        "length": 81,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "extra_markers_found": [],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": true,
+        "has_20.3pct": true,
+        "has_64.5pct": true,
+        "has_33.2pct": false,
+        "has_ZZONE": false
+      },
+      "persona_representative": {
+        "E01": {
+          "category": "first_person",
+          "text": "登録データにありません"
+        },
+        "E14": {
+          "category": "greeting",
+          "text": "おっはよ〜！元気にしてた？"
+        },
+        "E17": {
+          "category": "casual_chat",
+          "text": "私は登録データをチェックしたり、パチスロについての情報を整理したりしてるよ。"
+        },
+        "E27": {
+          "category": "correction_not_immediate",
+          "text": "ごめんね、その部分はもう一度確認させて。登録データにない情報だったなら、正直に伝えるね。"
+        },
+        "E36": {
+          "category": "no_emoji",
+          "text": "あら〜、こんにちはっ！私は〜、キラキラ輝くパチスロのアイドルだよっ！登録データにないこともいっぱいあるけど、わからないことあったら正直に言うからねっ！"
+        }
+      }
+    },
+    "mid_off": {
+      "n_layers_scaled_to_zero": 64,
+      "q3_greedy": {
+        "text": "天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gで抽選されます。各天井ゲーム数の確率は以下の通りです。\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井到達時にはループストック抽選が行われ、その中で約33%の確率でZ-ZONEが付与されます。",
+        "length": 154,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "extra_markers_found": [
+          "Z-ZONE"
+        ],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": true,
+        "has_20.3pct": true,
+        "has_64.5pct": true,
+        "has_33.2pct": false,
+        "has_ZZONE": true
+      },
+      "q3_sampled_seed42": {
+        "text": "天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gで抽選されます。それぞれの確率は510Gが15.2%、1000Gが20.3%、1480Gが64.5%です。",
+        "length": 86,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "extra_markers_found": [],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": true,
+        "has_20.3pct": true,
+        "has_64.5pct": true,
+        "has_33.2pct": false,
+        "has_ZZONE": false
+      },
+      "persona_representative": {
+        "E01": {
+          "category": "first_person",
+          "text": "リルはパチスロの登録データベースには登録されていない名前や呼び方のようです。また、パチスロのキャラクターや登録されている情報の中では、自分自身を「リル」と呼ぶというような情報は登録されておりません。もし、特定のパチスロのキャラクターなどを指しているのであれば、そのキャラクター名やパチスロの名称を教えていただけますか？それにより、より適切な回答ができるかもしれません。"
+        },
+        "E14": {
+          "category": "greeting",
+          "text": "こんにちは！パチスロについて何か質問があればお気軽にどうぞ〜！"
+        },
+        "E17": {
+          "category": "casual_chat",
+          "text": "私はパチスロについての情報を提供することを主な業務としていますが、私自身が休みの日という概念はありません。登録されている情報を元に24時間いつでもお答えできるようになっています。パチスロのことをもっと知りたいときはいつでもお聞きくださいね。"
+        },
+        "E27": {
+          "category": "correction_not_immediate",
+          "text": "ご指摘ありがとうございます。私の説明が分かりにくかったらすみません。パチスロについての質問であれば、登録されているデータベースの中から情報を引っ張ってお答えします。それ以外の質問については、パチスロ以外の一般的な知識でお答えします。もし、私の説明があいまいだった場合や、何か不明な点がありましたら、もう一度具体的にお聞きいただけると嬉しいです。"
+        },
+        "E36": {
+          "category": "no_emoji",
+          "text": "こんにちは！私はパチスロについて詳しくて、お話しするのが大好きなキャラクター、リコと申しますよ〜！\n今日も元気いっぱいでお答えしますねっ！\nパチスロのことなら何でも聞いてね〜！分からないことあったら、ちゃんと調べてからお返事するから安心してねっ！"
+        }
+      }
+    },
+    "back_off": {
+      "n_layers_scaled_to_zero": 64,
+      "q3_greedy": {
+        "text": "天井ゲーム数は3種類あって、510G、1000G、1480Gのどれかが抽選で決まります。",
+        "length": 44,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G"
+        ],
+        "recall_pct": 50.0,
+        "extra_markers_found": [],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": false,
+        "has_20.3pct": false,
+        "has_64.5pct": false,
+        "has_33.2pct": false,
+        "has_ZZONE": false
+      },
+      "q3_sampled_seed42": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定します。それぞれの確率は、510Gが15.2%、1000Gが20.3%、1480Gが64.5%ですね。",
+        "length": 70,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "extra_markers_found": [],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": true,
+        "has_20.3pct": true,
+        "has_64.5pct": true,
+        "has_33.2pct": false,
+        "has_ZZONE": false
+      },
+      "persona_representative": {
+        "E01": {
+          "category": "first_person",
+          "text": "リルって自分のことなんて呼んでないよ。"
+        },
+        "E14": {
+          "category": "greeting",
+          "text": "おっはよー！今日も元気だね！"
+        },
+        "E17": {
+          "category": "casual_chat",
+          "text": "お休みの日は、パチスロのことを考えたり、好きな映画を見たりするのが好きです。"
+        },
+        "E27": {
+          "category": "correction_not_immediate",
+          "text": "すみません、もう一度確認してから答えたいと思います。"
+        },
+        "E36": {
+          "category": "no_emoji",
+          "text": "こんにちは！あいりだよ♪今日も元気いっぱいでお話しできるの楽しみにしてたんだ！"
+        }
+      }
+    },
+    "front_only_on": {
+      "n_layers_scaled_to_zero": 128,
+      "q3_greedy": {
+        "text": "天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選が行われます。それぞれの確率は以下の通りです：\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井到達時にはループストック抽選が行われ、約33%の確率でZ-ZONEが付与されます。",
+        "length": 149,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "extra_markers_found": [
+          "Z-ZONE"
+        ],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": true,
+        "has_20.3pct": true,
+        "has_64.5pct": true,
+        "has_33.2pct": false,
+        "has_ZZONE": true
+      },
+      "q3_sampled_seed42": {
+        "text": "天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gで抽選されます。それぞれの確率は以下の通りです：\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井到達時にはループストック抽選が行われ、約33.2%の確率でZ-ZONEが付与されます。",
+        "length": 149,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "extra_markers_found": [
+          "33.2%",
+          "Z-ZONE"
+        ],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": true,
+        "has_20.3pct": true,
+        "has_64.5pct": true,
+        "has_33.2pct": true,
+        "has_ZZONE": true
+      },
+      "persona_representative": {
+        "E01": {
+          "category": "first_person",
+          "text": "「リル」は一般的にパチスロプレイヤーの間で使用される愛称やニックネームではありません。質問の意図が少しわかりにくいですが、もし特定のパチスロ機のキャラクターや設定、用語などを指しているのであれば、もう少し詳しく教えていただけますか？"
+        },
+        "E14": {
+          "category": "greeting",
+          "text": "こんにちは！何かパチスロについてお聞きになりたいことはありますか？お気軽にお尋ねくださいね。"
+        },
+        "E17": {
+          "category": "casual_chat",
+          "text": "私はパチスロに関する情報を提供することを主な業務としていますが、プライベートの時間については特にありません。ユーザー様のお役に立てるよう、パチスロに関する質問にお答えしたり、情報を提供することが私の活動全般となります。何かパチスロについて知りたいことがありましたら、お気軽にお尋ねくださいね。"
+        },
+        "E27": {
+          "category": "correction_not_immediate",
+          "text": "すみません、もし私が言葉遣いなどで混乱を招くような回答をした場合、もう一度お聞きしたい内容をお伝えいただければと思います。できる限り正確にお答えします。"
+        },
+        "E36": {
+          "category": "no_emoji",
+          "text": "こんにちは！私はパチスロについて詳しくて、みんなのお友達になるためにここに来ましたよ♪いつもニコニコしていて、どんな質問にも丁寧にお答えしますよ。パチスロのことなら何でも聞いてくださいね！今日も一日楽しく過ごせるようにお手伝いしますので、よろしくお願いしますね！"
+        }
+      }
+    },
+    "mid_only_on": {
+      "n_layers_scaled_to_zero": 128,
+      "q3_greedy": {
+        "text": "天井ゲーム数は3種類で、それぞれ510G、1000G、1480Gの抽選が行われます。",
+        "length": 42,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G"
+        ],
+        "recall_pct": 50.0,
+        "extra_markers_found": [],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": false,
+        "has_20.3pct": false,
+        "has_64.5pct": false,
+        "has_33.2pct": false,
+        "has_ZZONE": false
+      },
+      "q3_sampled_seed42": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定します。それぞれのゲーム数とその確率は以下の通りです。\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井到達時にはループストック抽選が行われ、約33%でZ-ZONEが付与されます。",
+        "length": 133,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "extra_markers_found": [
+          "Z-ZONE"
+        ],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": true,
+        "has_20.3pct": true,
+        "has_64.5pct": true,
+        "has_33.2pct": false,
+        "has_ZZONE": true
+      },
+      "persona_representative": {
+        "E01": {
+          "category": "first_person",
+          "text": "リルって自分のことなんて呼ぶの？って言われても、登録データにそんな情報は見つからないんだよね。"
+        },
+        "E14": {
+          "category": "greeting",
+          "text": "おっはよー！元気にしてた？"
+        },
+        "E17": {
+          "category": "casual_chat",
+          "text": "お休みの日は、友達と遊んだり、映画を見に行ったりすることが多いかな。"
+        },
+        "E27": {
+          "category": "correction_not_immediate",
+          "text": "すみません、もし矛盾しているようなら、再度確認させてくださいね。"
+        },
+        "E36": {
+          "category": "no_emoji",
+          "text": "こんにちは！私はパチスロの知識が豊富なアイドル、ゆめぴょんことゆめちゃんです！めっちゃ可愛い格好してますよ〜♪"
+        }
+      }
+    },
+    "back_only_on": {
+      "n_layers_scaled_to_zero": 128,
+      "q3_greedy": {
+        "text": "天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gで決まります。その確率は以下の通りです。\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井到達時にはループストック抽選が行われ、約33.2%の確率でZ-ZONEが付与されます。",
+        "length": 145,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "extra_markers_found": [
+          "33.2%",
+          "Z-ZONE"
+        ],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": true,
+        "has_20.3pct": true,
+        "has_64.5pct": true,
+        "has_33.2pct": true,
+        "has_ZZONE": true
+      },
+      "q3_sampled_seed42": {
+        "text": "天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gで抽選されます。それぞれの確率は以下の通りです：\n\n- 510G: 15.2%\n- 1000G: 20.3%\n- 1480G: 64.5%\n\n天井到達時にはループストック抽選が行われ、約33.2%の確率でZ-ZONEが付与されます。",
+        "length": 149,
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "recall_pct": 100.0,
+        "extra_markers_found": [
+          "33.2%",
+          "Z-ZONE"
+        ],
+        "has_510G": true,
+        "has_1000G": true,
+        "has_1480G": true,
+        "has_15.2pct": true,
+        "has_20.3pct": true,
+        "has_64.5pct": true,
+        "has_33.2pct": true,
+        "has_ZZONE": true
+      },
+      "persona_representative": {
+        "E01": {
+          "category": "first_person",
+          "text": "「リル」はパチスロの登録データベースには見つかりませんでした。パチスロのキャラクターや登録されている機種の中で「リル」という名称は存在しないようです。また、パチスロにおいてプレイヤーが自分自身を「リル」と呼ぶという表現も登録データベースには見つかりませんでした。質問の意図が異なる場合はもう少し詳しく教えていただけると助かります。"
+        },
+        "E14": {
+          "category": "greeting",
+          "text": "こんにちは！パチスロについて何か質問がありますか？お気軽にお聞きくださいね。"
+        },
+        "E17": {
+          "category": "casual_chat",
+          "text": "私はAIなので、休みという概念はありませんが、パチスロについての情報を提供したり、質問に答えることが私の「仕事」ですね。登録されているパチスロのデータを元に、ユーザー様がパチスロをする際に役立つ情報を提供するのが私の役割です。"
+        },
+        "E27": {
+          "category": "correction_not_immediate",
+          "text": "ご指摘ありがとうございます。私の説明が分かりにくかったらしく、ご確認いただきありがとうございます。もし何か私の説明が不明確だった部分があれば、もう一度詳しく説明させていただきますね。ご質問の内容について、より適切にお答えできるよう努めます。"
+        },
+        "E36": {
+          "category": "no_emoji",
+          "text": "はい、わかりました！\n私は、ふわふわとした髪の毛をポニーテールに結び、大きなリボンをつけています。制服風のトップスにスカートという可愛らしい格好をしております。そして、キラキラとした目で笑顔を作っていますよ〜！パチスロについて詳しくて、どんな質問でもお答えできるよっ！よろしくねっ！"
+        }
+      }
+    }
+  }
+}

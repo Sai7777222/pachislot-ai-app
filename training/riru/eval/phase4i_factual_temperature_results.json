@@ -1,0 +1,458 @@
+{
+  "Q1": {
+    "question": "設定6の機械割は？",
+    "by_temperature": {
+      "0.3": [
+        {
+          "seed": 42,
+          "text": "設定6の機械割は114.6%だよ。",
+          "expected_values": [
+            "114.6%"
+          ],
+          "values_found": [
+            "114.6%"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "設定6の機械割は114.6%だよ。",
+          "expected_values": [
+            "114.6%"
+          ],
+          "values_found": [
+            "114.6%"
+          ],
+          "coverage_pct": 100.0
+        }
+      ],
+      "0.5": [
+        {
+          "seed": 42,
+          "text": "設定6の機械割は114.6%だよ。",
+          "expected_values": [
+            "114.6%"
+          ],
+          "values_found": [
+            "114.6%"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "設定6の機械割は114.6%だよ。",
+          "expected_values": [
+            "114.6%"
+          ],
+          "values_found": [
+            "114.6%"
+          ],
+          "coverage_pct": 100.0
+        }
+      ],
+      "0.7": [
+        {
+          "seed": 42,
+          "text": "設定6の機械割は114.6%だよ。",
+          "expected_values": [
+            "114.6%"
+          ],
+          "values_found": [
+            "114.6%"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "設定6の機械割は114.6%だよ。",
+          "expected_values": [
+            "114.6%"
+          ],
+          "values_found": [
+            "114.6%"
+          ],
+          "coverage_pct": 100.0
+        }
+      ],
+      "0.9": [
+        {
+          "seed": 42,
+          "text": "設定6の機械割は114.6%だよ",
+          "expected_values": [
+            "114.6%"
+          ],
+          "values_found": [
+            "114.6%"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "設定6の機械割は、登録データによると114.6%なんだよ。",
+          "expected_values": [
+            "114.6%"
+          ],
+          "values_found": [
+            "114.6%"
+          ],
+          "coverage_pct": 100.0
+        }
+      ]
+    }
+  },
+  "Q2": {
+    "question": "設定6の初当りは？",
+    "by_temperature": {
+      "0.3": [
+        {
+          "seed": 42,
+          "text": "設定6の初当り確率は1/295だよ。",
+          "expected_values": [
+            "1/295"
+          ],
+          "values_found": [
+            "1/295"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "設定6の初当り確率は1/295だよ。",
+          "expected_values": [
+            "1/295"
+          ],
+          "values_found": [
+            "1/295"
+          ],
+          "coverage_pct": 100.0
+        }
+      ],
+      "0.5": [
+        {
+          "seed": 42,
+          "text": "設定6の初当り確率は1/295だよ。",
+          "expected_values": [
+            "1/295"
+          ],
+          "values_found": [
+            "1/295"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "設定6の初当り確率は1/295だよ。",
+          "expected_values": [
+            "1/295"
+          ],
+          "values_found": [
+            "1/295"
+          ],
+          "coverage_pct": 100.0
+        }
+      ],
+      "0.7": [
+        {
+          "seed": 42,
+          "text": "設定6の初当り確率は1/295となっています。",
+          "expected_values": [
+            "1/295"
+          ],
+          "values_found": [
+            "1/295"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "設定6の初当り確率は、1/295となっているよ。",
+          "expected_values": [
+            "1/295"
+          ],
+          "values_found": [
+            "1/295"
+          ],
+          "coverage_pct": 100.0
+        }
+      ],
+      "0.9": [
+        {
+          "seed": 42,
+          "text": "設定6の初当りは、1/295だよ。",
+          "expected_values": [
+            "1/295"
+          ],
+          "values_found": [
+            "1/295"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "設定6の初当り確率は、1/295となっているよ。",
+          "expected_values": [
+            "1/295"
+          ],
+          "values_found": [
+            "1/295"
+          ],
+          "coverage_pct": 100.0
+        }
+      ]
+    }
+  },
+  "Q4": {
+    "question": "ガイアベルの確率は？",
+    "by_temperature": {
+      "0.3": [
+        {
+          "seed": 42,
+          "text": "ガイアベルの確率は1/37.6だよ。",
+          "expected_values": [
+            "1/37.6"
+          ],
+          "values_found": [
+            "1/37.6"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "ガイアベルの確率は1/37.6だよ。",
+          "expected_values": [
+            "1/37.6"
+          ],
+          "values_found": [
+            "1/37.6"
+          ],
+          "coverage_pct": 100.0
+        }
+      ],
+      "0.5": [
+        {
+          "seed": 42,
+          "text": "ガイアベルの確率は1/37.6だよ。",
+          "expected_values": [
+            "1/37.6"
+          ],
+          "values_found": [
+            "1/37.6"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "ガイアベルの確率は1/37.6だよ。",
+          "expected_values": [
+            "1/37.6"
+          ],
+          "values_found": [
+            "1/37.6"
+          ],
+          "coverage_pct": 100.0
+        }
+      ],
+      "0.7": [
+        {
+          "seed": 42,
+          "text": "小役確率のガイアベルは1/37.6だよ。",
+          "expected_values": [
+            "1/37.6"
+          ],
+          "values_found": [
+            "1/37.6"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "ガイアベルの確率は、1/37.6だよ。",
+          "expected_values": [
+            "1/37.6"
+          ],
+          "values_found": [
+            "1/37.6"
+          ],
+          "coverage_pct": 100.0
+        }
+      ],
+      "0.9": [
+        {
+          "seed": 42,
+          "text": "小役確率のガイアベルは1/37.6となります。",
+          "expected_values": [
+            "1/37.6"
+          ],
+          "values_found": [
+            "1/37.6"
+          ],
+          "coverage_pct": 100.0
+        },
+        {
+          "seed": 43,
+          "text": "ガイアベルの確率は、1/37.6です。",
+          "expected_values": [
+            "1/37.6"
+          ],
+          "values_found": [
+            "1/37.6"
+          ],
+          "coverage_pct": 100.0
+        }
+      ]
+    }
+  },
+  "Q3": {
+    "question": "天井は？",
+    "by_temperature": {
+      "0.3": [
+        {
+          "seed": 42,
+          "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+          "expected_values": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "values_found": [],
+          "coverage_pct": 0.0
+        },
+        {
+          "seed": 43,
+          "text": "天井ゲーム数は3種類あって、510G、1000G、1480Gのどれかになるよ。",
+          "expected_values": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "values_found": [
+            "510G",
+            "1000G",
+            "1480G"
+          ],
+          "coverage_pct": 50.0
+        }
+      ],
+      "0.5": [
+        {
+          "seed": 42,
+          "text": "天井ゲーム数は3種類あるよ。510G、1000G、1480Gのどれかが確定するんだ。",
+          "expected_values": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "values_found": [
+            "510G",
+            "1000G",
+            "1480G"
+          ],
+          "coverage_pct": 50.0
+        },
+        {
+          "seed": 43,
+          "text": "天井ゲーム数は3種類で、それぞれ510G、1000G、1480Gになるよ。",
+          "expected_values": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "values_found": [
+            "510G",
+            "1000G",
+            "1480G"
+          ],
+          "coverage_pct": 50.0
+        }
+      ],
+      "0.7": [
+        {
+          "seed": 42,
+          "text": "天井ゲーム数は3種類あるよ。それぞれ510G、1000G、1480Gに決まるんだ。",
+          "expected_values": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "values_found": [
+            "510G",
+            "1000G",
+            "1480G"
+          ],
+          "coverage_pct": 50.0
+        },
+        {
+          "seed": 43,
+          "text": "天井ゲーム数は3種類で、510G、1000G、1480Gのいずれかになるよ。",
+          "expected_values": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "values_found": [
+            "510G",
+            "1000G",
+            "1480G"
+          ],
+          "coverage_pct": 50.0
+        }
+      ],
+      "0.9": [
+        {
+          "seed": 42,
+          "text": "天井ゲーム数は3種類あるよ。登録されているのは510G、1000G、1480Gの3パターンだね。",
+          "expected_values": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "values_found": [
+            "510G",
+            "1000G",
+            "1480G"
+          ],
+          "coverage_pct": 50.0
+        },
+        {
+          "seed": 43,
+          "text": "天井ゲーム数は3種類で、510G、1000G、1480Gのいずれかになるよ。",
+          "expected_values": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "values_found": [
+            "510G",
+            "1000G",
+            "1480G"
+          ],
+          "coverage_pct": 50.0
+        }
+      ]
+    }
+  }
+}

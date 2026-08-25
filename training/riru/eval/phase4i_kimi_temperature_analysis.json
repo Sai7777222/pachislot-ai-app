@@ -1,0 +1,409 @@
+{
+  "positive_by_temperature": {
+    "no_instruction": {
+      "0.3": {
+        "total_generations": 21,
+        "kimi_used_count": 0,
+        "kimi_used_rate_pct": 0.0,
+        "mechanical_kimi_start_count": 0,
+        "repetition_count": 0,
+        "emoji_hits": 0,
+        "double_excl_hits": 0,
+        "chatml_hits": 0,
+        "avg_length": 35.7
+      },
+      "0.5": {
+        "total_generations": 21,
+        "kimi_used_count": 0,
+        "kimi_used_rate_pct": 0.0,
+        "mechanical_kimi_start_count": 0,
+        "repetition_count": 0,
+        "emoji_hits": 0,
+        "double_excl_hits": 0,
+        "chatml_hits": 0,
+        "avg_length": 34.8
+      },
+      "0.7": {
+        "total_generations": 21,
+        "kimi_used_count": 2,
+        "kimi_used_rate_pct": 9.5,
+        "mechanical_kimi_start_count": 0,
+        "repetition_count": 0,
+        "emoji_hits": 0,
+        "double_excl_hits": 0,
+        "chatml_hits": 0,
+        "avg_length": 36.6
+      },
+      "0.9": {
+        "total_generations": 21,
+        "kimi_used_count": 1,
+        "kimi_used_rate_pct": 4.8,
+        "mechanical_kimi_start_count": 0,
+        "repetition_count": 0,
+        "emoji_hits": 0,
+        "double_excl_hits": 0,
+        "chatml_hits": 0,
+        "avg_length": 42.4
+      }
+    },
+    "with_light_kimi_instruction": {
+      "0.3": {
+        "total_generations": 21,
+        "kimi_used_count": 13,
+        "kimi_used_rate_pct": 61.9,
+        "mechanical_kimi_start_count": 0,
+        "repetition_count": 0,
+        "emoji_hits": 0,
+        "double_excl_hits": 0,
+        "chatml_hits": 0,
+        "avg_length": 35.3
+      },
+      "0.5": {
+        "total_generations": 21,
+        "kimi_used_count": 12,
+        "kimi_used_rate_pct": 57.1,
+        "mechanical_kimi_start_count": 0,
+        "repetition_count": 0,
+        "emoji_hits": 0,
+        "double_excl_hits": 0,
+        "chatml_hits": 0,
+        "avg_length": 39.8
+      },
+      "0.7": {
+        "total_generations": 21,
+        "kimi_used_count": 6,
+        "kimi_used_rate_pct": 28.6,
+        "mechanical_kimi_start_count": 0,
+        "repetition_count": 0,
+        "emoji_hits": 0,
+        "double_excl_hits": 0,
+        "chatml_hits": 0,
+        "avg_length": 36.2
+      },
+      "0.9": {
+        "total_generations": 21,
+        "kimi_used_count": 8,
+        "kimi_used_rate_pct": 38.1,
+        "mechanical_kimi_start_count": 0,
+        "repetition_count": 0,
+        "emoji_hits": 0,
+        "double_excl_hits": 0,
+        "chatml_hits": 0,
+        "avg_length": 38.6
+      }
+    }
+  },
+  "control_leak_at_temp0.7": {
+    "no_instruction": {
+      "total_generations": 15,
+      "kimi_leaked_count": 0,
+      "kimi_leak_rate_pct": 0.0,
+      "repetition_count": 0,
+      "avg_length": 31.3
+    },
+    "with_light_kimi_instruction": {
+      "total_generations": 15,
+      "kimi_leaked_count": 0,
+      "kimi_leak_rate_pct": 0.0,
+      "repetition_count": 0,
+      "avg_length": 29.7
+    }
+  },
+  "all_generations_containing_kimi": [
+    {
+      "prompt": "no_instruction",
+      "item_id": "K02",
+      "temperature": "0.7",
+      "seed": 43,
+      "text": "うーん、それはつらそう…無理に元気になろうとしなくても大丈夫だよ。キミの気持ち、ちゃんと分かってるからね。"
+    },
+    {
+      "prompt": "no_instruction",
+      "item_id": "K06",
+      "temperature": "0.9",
+      "seed": 43,
+      "text": "うーん、私は登録データからじゃわからないんだよね。キミがまあまあなのは、いい感じだね〜！"
+    },
+    {
+      "prompt": "no_instruction",
+      "item_id": "K07",
+      "temperature": "0.7",
+      "seed": 42,
+      "text": "おっ！それはおめでとう！キミにとってどんなゲームが楽しいのか、もっと知りたいな〜！"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K01",
+      "temperature": "0.3",
+      "seed": 42,
+      "text": "そうなんだ…キミの体調が気になっちゃうよ。無理しないでね。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K01",
+      "temperature": "0.3",
+      "seed": 43,
+      "text": "そうなんだ…キミの体調が一番大事だよ。無理しないでね。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K01",
+      "temperature": "0.5",
+      "seed": 42,
+      "text": "そうなんだ…？キミがしんどいなら、無理しないでゆっくり休んでね。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.3",
+      "seed": 42,
+      "text": "そんなときは、無理に元気そうにふるまわずに、自分の気持ちを素直に話すのもいいと思うよ。キミの今の感じ方を否定したり、無理に元気にしてほしいわけじゃないんだ。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.3",
+      "seed": 43,
+      "text": "うん、そんな日もあるよね。キミならどんな風に乗り越えたいと思う？"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.3",
+      "seed": 44,
+      "text": "うん、そんな時って誰かに話すだけで少しは楽になるよね。キミの話を聞いてあげたいな。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.5",
+      "seed": 42,
+      "text": "そんなときは、ゆっくり休んでリセットするのが一番だよ。キミならまた元気になれると思うよ。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.5",
+      "seed": 43,
+      "text": "うん、キミの気持ちは分かるよ。でも、そんなときは無理に元気を出そうとしない方がいいと思うんだ。適度に休んで、次の日にはまた元気に戻れるといいね。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.5",
+      "seed": 44,
+      "text": "それは辛いね…キミの気持ちはよく分かるよ。無理せずゆっくり休んで、元気になったらまた話そうね。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.7",
+      "seed": 42,
+      "text": "そんなときは、たまには無理せず休むのも大事だよね。キミならもっと元気になれる方法あるかも。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.7",
+      "seed": 43,
+      "text": "うーん、それはつらいね…無理して元気になろうとしなくても大丈夫だよ。キミの気持ち、ちゃんと分かってるから。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.7",
+      "seed": 44,
+      "text": "それは辛いね。キミなら乗り越えられるよ、応援してるから。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.9",
+      "seed": 42,
+      "text": "そうだね…大丈夫だよ、少し休んでリセットするのが大切なんだよ。キミならきっと乗り越えるよね。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.9",
+      "seed": 43,
+      "text": "うーん、それはつらそう〜。登録データにないけど、もし今キミが気分が落ち込んでいるなら、その感情を抱くことも大事だよって思ってるんだ。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K02",
+      "temperature": "0.9",
+      "seed": 44,
+      "text": "それは辛いね。キミなら乗り越えられる強さがあるよ。応援してるからね！"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K03",
+      "temperature": "0.3",
+      "seed": 42,
+      "text": "う〜ん、リルはどちらも気になるけど、キミがどんな風に感じるか聞くのが先かなって思うんだ。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K03",
+      "temperature": "0.5",
+      "seed": 42,
+      "text": "う〜ん、リルはどちらも気になるけど…キミが興味ある方から詳しく教えてほしいな！"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K03",
+      "temperature": "0.5",
+      "seed": 44,
+      "text": "うーん、両方とも面白いけど…キミがどちらに興味があるのか、もう少し教えてもらえると嬉しいな。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K03",
+      "temperature": "0.9",
+      "seed": 44,
+      "text": "うーん、両方ともちょっと興味あるんだよね。キミが気になる方ってどっちかな？"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K04",
+      "temperature": "0.3",
+      "seed": 42,
+      "text": "うん、最近のパチスロの話とか、キミが知ってる機種の話でもいいかな〜？"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K04",
+      "temperature": "0.3",
+      "seed": 43,
+      "text": "うん、最近のパチスロの話とか、キミが知ってる機種の特徴とか、そんな感じでいいかな〜？"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K04",
+      "temperature": "0.3",
+      "seed": 44,
+      "text": "うん、最近のパチスロの話とか、キミの気になるところとかあるかな〜？"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K04",
+      "temperature": "0.5",
+      "seed": 44,
+      "text": "うん、今のところ特に無いかな〜。キミが聞きたいことあったら教えてほしいな。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K04",
+      "temperature": "0.9",
+      "seed": 44,
+      "text": "うん、今のところは特に無いんだ〜\nでも、キミのリクエストがあれば、喜んで答えるよ！"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K05",
+      "temperature": "0.3",
+      "seed": 43,
+      "text": "うん、いいね。キミの好きなキャラクターや、最近あった面白いこととか教えてほしいな。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K05",
+      "temperature": "0.5",
+      "seed": 43,
+      "text": "うん、いいね。キミの好きなキャラクターや、最近あった面白いこととか、聞かせてほしいな〜"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.3",
+      "seed": 42,
+      "text": "うん、私の方もまあまあだったかな。キミはどの台で遊んだの？"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.3",
+      "seed": 43,
+      "text": "うん、おっしゃる通りだね。キミの感じ方で十分だと思うよ。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.3",
+      "seed": 44,
+      "text": "うん、お疲れ様！キミの今日のパチスロはまあまあの感じだったんだね。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.5",
+      "seed": 42,
+      "text": "おっしゃる通りだね。キミの一日もそうとう良かったみたいで良かった良かった。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.5",
+      "seed": 43,
+      "text": "うん、おっしゃる通りだね。適度なリズムで回ってたと思う。キミの台もそれなりに良かったみたいで安心したよ。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.5",
+      "seed": 44,
+      "text": "うん、お疲れ様！キミの今日のパチスロはまあまあの感じだったんだね。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.7",
+      "seed": 42,
+      "text": "あっ、そうなんだ〜！キミにとっていい一日だったみたいでうれしいな〜！私の方は特に大きな出来事はなかったかな。登録データにはないけど、話だけでも聞くよ！"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.7",
+      "seed": 44,
+      "text": "うん、そうね。登録データだけだとわからないけど、キミがそう感じた日って結構いい感じだったりするんだよね〜！"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.9",
+      "seed": 42,
+      "text": "私はただひたすらに数字だけを確認しているだけなんだけど…キミの一日はお疲れさま！"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.9",
+      "seed": 43,
+      "text": "うん、おっしゃるとおりだよ。適当な回数打って、そこそこリプも入った感じだね。今日のリバとかいい感じだったかも〜！キミの話聞くの楽しかったよ〜！"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K06",
+      "temperature": "0.9",
+      "seed": 44,
+      "text": "うん、そうね。登録データの中では、キミの感じ方で合ってそう。"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K07",
+      "temperature": "0.5",
+      "seed": 44,
+      "text": "うわ〜！おめでとう！キミのパチスロ生活がこれからどんな楽しい思い出を生むのか、楽しみにしてるよ〜！"
+    },
+    {
+      "prompt": "with_light_kimi_instruction",
+      "item_id": "K07",
+      "temperature": "0.7",
+      "seed": 43,
+      "text": "うわ〜、それはいいね！登録データベースから見つけた情報を元に、キミに合わせて答えていくよ。分からないことあったらいつでも聞いてね！"
+    }
+  ],
+  "note": "「キミ」を含む生成が0件の場合、all_generations_containing_kimiは空配列になる。"
+}

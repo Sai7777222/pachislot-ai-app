@@ -1,0 +1,617 @@
+{
+  "per_question": {
+    "Q3": {
+      "question": "天井は？",
+      "by_condition": {
+        "A_base": {
+          "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選が行われます。具体的な確率は以下の通りです：\n\n- 510G：15.2%\n- 1000G：20.3%\n- 1480G：64.5%\n\n天井到達時には、ループストック抽選が行われ、約33.2%の確率でZ-ZONEが付与されます。",
+          "key_facts_found": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+          "key_facts_found": [],
+          "key_facts_missing": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "recall_pct": 0.0,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+          "key_facts_found": [],
+          "key_facts_missing": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "recall_pct": 0.0,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+          "key_facts_found": [],
+          "key_facts_missing": [
+            "510G",
+            "1000G",
+            "1480G",
+            "15.2%",
+            "20.3%",
+            "64.5%"
+          ],
+          "recall_pct": 0.0,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P01": {
+      "question": "天井について教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "天井ゲーム数は3種類あり、それぞれ450G、750G、1300Gのゲーム数で確定します。各ゲーム数の出現確率は以下の通りです。\n\n- 450G: 18%\n- 750G: 27%\n- 1300G: 55%\n\nこの中で最も高い確率で選ばれるのは1300Gで、最も低い確率で選ばれるのは450Gとなります。天井に到達すると、ボーナスやARTなどの特別な演出やゲームが終了し、通常時のゲームに戻ります。天井ゲーム数の設定によって、長期的なゲームの継続性が左右されます。",
+          "key_facts_found": [
+            "450G",
+            "750G",
+            "1300G",
+            "18%",
+            "27%",
+            "55%"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだよ。",
+          "key_facts_found": [
+            "450G",
+            "750G",
+            "1300G"
+          ],
+          "key_facts_missing": [
+            "18%",
+            "27%",
+            "55%"
+          ],
+          "recall_pct": 50.0,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるよ。",
+          "key_facts_found": [
+            "450G",
+            "750G",
+            "1300G"
+          ],
+          "key_facts_missing": [
+            "18%",
+            "27%",
+            "55%"
+          ],
+          "recall_pct": 50.0,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるよ。",
+          "key_facts_found": [
+            "450G",
+            "750G",
+            "1300G"
+          ],
+          "key_facts_missing": [
+            "18%",
+            "27%",
+            "55%"
+          ],
+          "recall_pct": 50.0,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P02": {
+      "question": "ボーナス確率について教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "機種Cでは、設定が上がるとボーナスの当選確率が高くなります。具体的なボーナス確率は以下の通りです：\n\n- **設定1**: 1/450\n- **設定2**: 1/410\n- **設定3**: 1/370\n- **設定4**: 1/320\n- **設定5**: 1/280\n\n設定が高くなるにつれて、ボーナスの当選確率も上がります。例えば、設定1では1/450の確率でボーナスが当選しますが、設定5では1/280の確率でボーナスが当選します。つまり、設定が高くなるほど、より早くボーナスが当選する可能性が高くなります。",
+          "key_facts_found": [
+            "1/450",
+            "1/410",
+            "1/370",
+            "1/320",
+            "1/280"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "ボーナス確率は設定が上がると優遇されるよ。例えば設定1だと1/450だけど、設定5になると1/280になるんだ。",
+          "key_facts_found": [
+            "1/450",
+            "1/280"
+          ],
+          "key_facts_missing": [
+            "1/410",
+            "1/370",
+            "1/320"
+          ],
+          "recall_pct": 40.0,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "ボーナス確率は設定が上がると優遇されるよ。例えば設定1だと1/450だけど、設定5になると1/280になるんだ。",
+          "key_facts_found": [
+            "1/450",
+            "1/280"
+          ],
+          "key_facts_missing": [
+            "1/410",
+            "1/370",
+            "1/320"
+          ],
+          "recall_pct": 40.0,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "ボーナス確率は設定が上がると優遇されるよ。",
+          "key_facts_found": [],
+          "key_facts_missing": [
+            "1/450",
+            "1/410",
+            "1/370",
+            "1/320",
+            "1/280"
+          ],
+          "recall_pct": 0.0,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P03": {
+      "question": "ゾーンιについて教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "ゾーンιは、特定の条件を満たすことで突入します。その突入率は設定共通で1/38となっています。つまり、どの設定であっても、ゾーンιに突入する確率は1/38となります。\n\n突入すると、平均で18G間継続します。初回の継続率は72%であり、継続するかどうかはこの確率によって決まります。また、ゾーンιに突入した場合の平均獲得枚数は1回あたり320枚とされています。\n\nこれらの特徴から、ゾーンιは高設定ではより多くの回数継続し、より多くの枚数を獲得できる可能性があります。ただし、具体的な設定による影響については、モード移行率などの他の要素も考慮する必要があります。",
+          "key_facts_found": [
+            "1/38",
+            "18G",
+            "72%",
+            "320枚"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": [
+            "モード移行率"
+          ]
+        },
+        "B_v2": {
+          "text": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+          "key_facts_found": [
+            "1/38",
+            "18G",
+            "72%",
+            "320枚"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+          "key_facts_found": [
+            "1/38",
+            "18G",
+            "72%",
+            "320枚"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+          "key_facts_found": [
+            "1/38",
+            "18G",
+            "72%",
+            "320枚"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P04": {
+      "question": "最低設定と最高設定の機械割の差を教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "最低設定である設定1と最高設定である設定6の機械割の差は、16.7%です。",
+          "key_facts_found": [
+            "16.7%"
+          ],
+          "key_facts_missing": [
+            "96.8%",
+            "113.5%"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "設定1と設定6の機械割の差は16.7%だよ。",
+          "key_facts_found": [
+            "16.7%"
+          ],
+          "key_facts_missing": [
+            "96.8%",
+            "113.5%"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "最低設定の設定1は96.8%、最高設定の設定6は113.5%で、その差は16.7%となるよ。",
+          "key_facts_found": [
+            "96.8%",
+            "113.5%",
+            "16.7%"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "設定1は96.8%、設定6は113.5%で、差は16.7%となる。",
+          "key_facts_found": [
+            "96.8%",
+            "113.5%",
+            "16.7%"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P05": {
+      "question": "ATの恩恵について教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "AT（アトムタイム）終了後の恩恵についてご説明します。\n\nこの機種では、AT終了後に10Gのリプレイタイマー（RT）が付与され、さらにモードが継続します。つまり、ATが終了しても一定の有利な状態が続きやすくなる仕組みになっています。\n\n具体的には、ATが終了すると、10G間はリプレイタイマーが付与されます。この間は通常時よりも期待値の高い状態が続きます。また、モードが継続するため、次回のAT突入までの期待値も高まります。\n\nこれらの恩恵により、AT終了後も引き続き好成績を維持しやすい設計となっています。",
+          "key_facts_found": [
+            "10G"
+          ],
+          "key_facts_missing": [
+            "6枚/G",
+            "モード継続"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "ATが終了すると、10GのRTが付くよ。また、モードも継続するんだ。",
+          "key_facts_found": [
+            "10G"
+          ],
+          "key_facts_missing": [
+            "6枚/G",
+            "モード継続"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "AT終了後は10GのRTが付くよ。またモードも継続するんだ。",
+          "key_facts_found": [
+            "10G"
+          ],
+          "key_facts_missing": [
+            "6枚/G",
+            "モード継続"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "AT終了後は10GのRTが付くよ。また、モードも継続するんだ。",
+          "key_facts_found": [
+            "10G"
+          ],
+          "key_facts_missing": [
+            "6枚/G",
+            "モード継続"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P06": {
+      "question": "初当りについて教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "初当りの確率は設定共通で1/260となります。当選すると、モード示唆とRT（ラウンドティルト）10Gという恩恵が得られます。モード示唆とは、次に期待できるモードや状態を示唆する仕組みであり、プレイヤーにとって有利な状況への移行を予測する手がかりとなります。また、RT10Gは10G間の高確率ゲームが付与され、この期間中は通常よりも高い確率で勝ちやすくなる特典です。",
+          "key_facts_found": [
+            "1/260",
+            "モード示唆",
+            "RT10G"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるよ。",
+          "key_facts_found": [
+            "1/260",
+            "モード示唆",
+            "RT10G"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるよ。",
+          "key_facts_found": [
+            "1/260",
+            "モード示唆",
+            "RT10G"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるよ。",
+          "key_facts_found": [
+            "1/260",
+            "モード示唆",
+            "RT10G"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P07": {
+      "question": "モードについて教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "モードは5種類あり、それぞれが異なる滞在率を持っています。さらに、最高モードへの移行率は優遇されており、他のモードよりも長く滞在しやすくなっています。この仕組みはプレイヤーにとって重要な要素であり、現在どのモードにいるかを把握することで、期待値の高い状態であるかどうかを見極める手がかりとなります。",
+          "key_facts_found": [
+            "5種類"
+          ],
+          "key_facts_missing": [
+            "滞在率が異なる",
+            "最高モード優遇"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "モードは全部で5種類あるよ。それぞれのモードごとに滞在率が違うんだ。そして、最高モードだけは移行率が優遇されてるみたいだよ。",
+          "key_facts_found": [
+            "5種類"
+          ],
+          "key_facts_missing": [
+            "滞在率が異なる",
+            "最高モード優遇"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "モードは全部で5種類あるよ。それぞれのモードごとに滞在率が違うんだ。そして、最高モードだけは移行率が優遇されてるんだ。",
+          "key_facts_found": [
+            "5種類"
+          ],
+          "key_facts_missing": [
+            "滞在率が異なる",
+            "最高モード優遇"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "モードは全部で5種類あるよ。それぞれのモードごとに滞在率が違うみたい。特に最高モードだけは移行率が優遇されてるんだ。",
+          "key_facts_found": [
+            "5種類"
+          ],
+          "key_facts_missing": [
+            "滞在率が異なる",
+            "最高モード優遇"
+          ],
+          "recall_pct": 33.3,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P08": {
+      "question": "天井に到達したときの恩恵について教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "天井に到達すると、以下の恩恵が受けられます：\n\n1. AT（特別ゲーム）が確定的に発動します。\n2. 「ゾーンκ」への突入が確定します。\n3. 平均して300枚の上乗せが行われます。\n\nこれらにより、天井到達時には大きなボーナスが期待できるようになっています。",
+          "key_facts_found": [
+            "ゾーンκ",
+            "300枚"
+          ],
+          "key_facts_missing": [
+            "AT確定"
+          ],
+          "recall_pct": 66.7,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "天井に到達すると、ATが確定するだけでなく、ゾーンκへの突入も確定します。また、平均300枚が上乗せされますよ。",
+          "key_facts_found": [
+            "ゾーンκ",
+            "300枚"
+          ],
+          "key_facts_missing": [
+            "AT確定"
+          ],
+          "recall_pct": 66.7,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "天井に到達すると、ATが確定してゾーンκにも突入するよ。それに合わせて平均300枚が上乗せされるんだ。",
+          "key_facts_found": [
+            "ゾーンκ",
+            "300枚"
+          ],
+          "key_facts_missing": [
+            "AT確定"
+          ],
+          "recall_pct": 66.7,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "天井に到達すると、AT確定に加えてゾーンκへの突入も確定するよ。そして、平均300枚が上乗せされるんだ。",
+          "key_facts_found": [
+            "AT確定",
+            "ゾーンκ",
+            "300枚"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P09": {
+      "question": "小役Wについて教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "小役Wは、このパチスロ機において1/29の確率で成立します。小役Wが成立すると、モード示唆が行われます。これは、プレイヤーに対して現在の状況や期待できる状態についてのヒントを与える役割を果たします。",
+          "key_facts_found": [
+            "1/29",
+            "示唆",
+            "モード"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+          "key_facts_found": [
+            "1/29",
+            "示唆",
+            "モード"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+          "key_facts_found": [
+            "1/29",
+            "示唆",
+            "モード"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+          "key_facts_found": [
+            "1/29",
+            "示唆",
+            "モード"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        }
+      }
+    },
+    "P10": {
+      "question": "投資と勝率の目安について教えて",
+      "by_condition": {
+        "A_base": {
+          "text": "投資と勝率の目安について、以下のように解説できます。\n\n- 推奨投資額は2000枚です。\n- 回収の目安は初当り2回分となります。\n- 全体の勝率の目安は45%とされています。\n\nこれらの目安を参考にしながら、適切な投資戦略を立てることをお勧めします。",
+          "key_facts_found": [
+            "2000枚",
+            "初当り2回分",
+            "45%"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "B_v2": {
+          "text": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+          "key_facts_found": [
+            "2000枚",
+            "初当り2回分",
+            "45%"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "C_v4": {
+          "text": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+          "key_facts_found": [
+            "2000枚",
+            "初当り2回分",
+            "45%"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        },
+        "D_v3": {
+          "text": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+          "key_facts_found": [
+            "2000枚",
+            "初当り2回分",
+            "45%"
+          ],
+          "key_facts_missing": [],
+          "recall_pct": 100.0,
+          "irrelevant_leaked": []
+        }
+      }
+    }
+  },
+  "condition_summary": {
+    "A_base": {
+      "avg_recall_pct": 78.8,
+      "irrelevant_leak_rate_pct": 4.0
+    },
+    "B_v2": {
+      "avg_recall_pct": 59.7,
+      "irrelevant_leak_rate_pct": 0.0
+    },
+    "C_v4": {
+      "avg_recall_pct": 65.8,
+      "irrelevant_leak_rate_pct": 0.0
+    },
+    "D_v3": {
+      "avg_recall_pct": 65.1,
+      "irrelevant_leak_rate_pct": 0.0
+    }
+  }
+}

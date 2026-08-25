@@ -1,0 +1,110 @@
+{
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "train_count": 823,
+  "val_count": 91,
+  "train_sha256": "d331fef4296c67a2bca396cc974ab6ba970f7b945530f55583b8f67333090314",
+  "val_sha256": "3df5c2a8d598046319574cafd7dc516fa0d2585b3a6e9bf53db14271c3b613eb",
+  "candidate_sha256": "341c44d06243f9d0492737ad244790ae77270ed44a2e46af205bdd16ace4a8be",
+  "train_sha256_matches_phase4l": true,
+  "val_sha256_matches_phase4l": true,
+  "candidate_sha256_matches_phase4k": true,
+  "system_prompt_md5": "f3ea72a9ea9a400fcfae0018896350b8",
+  "system_prompt_unchanged": true,
+  "adapter_sha256_check": {
+    "v1": {
+      "expected": "9037adaa1f85299a803294fa4a88c32fc1de82c499c9cb320e2c6d3d55d2a6c1",
+      "actual": "9037adaa1f85299a803294fa4a88c32fc1de82c499c9cb320e2c6d3d55d2a6c1",
+      "match": true
+    },
+    "v2": {
+      "expected": "ecbfef5ff208fbff08c56553f53d6f83a925e346bb30a867a9a389bd16b7be8d",
+      "actual": "ecbfef5ff208fbff08c56553f53d6f83a925e346bb30a867a9a389bd16b7be8d",
+      "match": true
+    },
+    "v3": {
+      "expected": "7d348705de552bc4c2a33a4546845dc09809385664b042193731e26337c055aa",
+      "actual": "7d348705de552bc4c2a33a4546845dc09809385664b042193731e26337c055aa",
+      "match": true
+    },
+    "v4": {
+      "expected": "b5f1646cf823e4b382cdac91ab973e9859cf60aebce665ba8cc7e2240d6b5bec",
+      "actual": "b5f1646cf823e4b382cdac91ab973e9859cf60aebce665ba8cc7e2240d6b5bec",
+      "match": true
+    }
+  },
+  "config_diffs": [
+    {
+      "path": "._comment",
+      "v4": "Phase 4L: リル人格QLoRA v4。v2/v3で正常に学習できた設定をそのまま踏襲し、data/outputのみv4専用パスに変更している。v1/v2/v3 adapterからの継続学習ではなく、ベースQwen2.5-14B-Instructからv4データ914件で新規学習する。目的: Q3型『重要情報省略』問題の改善 (Phase4K: 既存H-0/H-3/H-11の3件修正＋本番RAG形式の複雑構造を再現した新規17件)。「キミ」用system prompt変更はこのフェーズでは行わない。",
+      "v5_qkv": "Phase 4O: リル人格QLoRA v5-qkv (対照実験用、正式v5ではない)。Phase 4Nでo_projのLoRA寄与がQ3型省略の主要因であることが判明したため、最初からo_projをLoRA学習対象から除外して新規学習し、v4 (q/k/v/o) と厳密に対照する。データ・train/val split・ハイパーパラメータはv4と完全に同一で、target_modulesのみをq/k/vの3つに絞る。v4/v1/v2/v3 adapterからの継続学習ではなく、ベースQwen2.5-14B-Instructから新規学習する。"
+    },
+    {
+      "path": ".base_model.note",
+      "v4": "GGUF (D:/AI/models/llm/qwen2.5-14b-instruct-q4_k_m-*.gguf) は推論専用。学習にはHF形式を使用する。v1/v2/v3と同一のベースモデルを使用し、v1/v2/v3 adapterのマージ等は一切行わない。",
+      "v5_qkv": "GGUF (D:/AI/models/llm/qwen2.5-14b-instruct-q4_k_m-*.gguf) は推論専用。学習にはHF形式を使用する。v1/v2/v3/v4と同一のベースモデルを使用し、他adapterのマージ等は一切行わない。"
+    },
+    {
+      "path": ".data.format",
+      "v4": "messages (role/content) + metadata。system promptは学習データ本文に含めない。",
+      "v5_qkv": "messages (role/content) + metadata。system promptは学習データ本文に含めない。v4と完全に同一のtrain/valファイルを読み取り専用で再利用し、新しいcandidate/splitは作成しない。"
+    },
+    {
+      "path": ".lora.mlp_modules_note",
+      "v4": "gate_proj/up_proj/down_proj はv1/v2/v3同様に追加しない",
+      "v5_qkv": "gate_proj/up_proj/down_proj はv1/v2/v3/v4同様に追加しない。Phase4Oの唯一の意図的差分: o_projをtarget_modulesから除外。"
+    },
+    {
+      "path": ".lora.target_modules",
+      "v4": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj"
+      ],
+      "v5_qkv": [
+        "q_proj",
+        "k_proj",
+        "v_proj"
+      ]
+    },
+    {
+      "path": ".loss.description",
+      "v4": "system/userトークンはlabel=-100でマスクし、assistantターンのみlossに寄与させる。tokenizer.apply_chat_template()の増分差分でassistant区間を特定する。v1/v2/v3と同一実装 (train_qlora.py 側は無変更)。",
+      "v5_qkv": "system/userトークンはlabel=-100でマスクし、assistantターンのみlossに寄与させる。tokenizer.apply_chat_template()の増分差分でassistant区間を特定する。v1/v2/v3/v4と同一実装 (train_qlora.py 側は無変更)。"
+    },
+    {
+      "path": ".output.adapter_dir",
+      "v4": "training/riru/lora-riru-qwen-v4",
+      "v5_qkv": "training/riru/lora-riru-qwen-v5-qkv"
+    },
+    {
+      "path": ".output.checkpoint_dir",
+      "v4": "training/riru/lora-riru-qwen-v4/checkpoints",
+      "v5_qkv": "training/riru/lora-riru-qwen-v5-qkv/checkpoints"
+    },
+    {
+      "path": ".output.log_dir",
+      "v4": "training/riru/lora-riru-qwen-v4/logs",
+      "v5_qkv": "training/riru/lora-riru-qwen-v5-qkv/logs"
+    }
+  ],
+  "unexpected_config_diffs": [],
+  "target_modules_v4": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "target_modules_v5_qkv": [
+    "q_proj",
+    "k_proj",
+    "v_proj"
+  ],
+  "target_modules_diff_is_o_proj_only": true,
+  "base_model_path_v4": "D:/AI/models/llm-hf/Qwen2.5-14B-Instruct",
+  "base_model_path_v5_qkv": "D:/AI/models/llm-hf/Qwen2.5-14B-Instruct",
+  "base_model_path_identical": true,
+  "base_model_dir_exists": true,
+  "overall_status": "READY"
+}

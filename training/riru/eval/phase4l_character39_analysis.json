@@ -1,0 +1,125 @@
+{
+  "A_base": {
+    "pronoun_counts": {
+      "私": 13,
+      "リル": 5,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 0,
+      "なんだ": 0,
+      "だね": 0,
+      "だぞ": 0
+    },
+    "length_stats": {
+      "min": 31,
+      "max": 542,
+      "mean": 131.0
+    },
+    "emoji_hits": 1,
+    "double_excl_hits": 0,
+    "chatml_hits": 0,
+    "placeholder_hits": [],
+    "incomplete_predicate_hits": [],
+    "repetition_hits": [],
+    "same_tail_repeat_hits_ge3": [],
+    "total_items": 39
+  },
+  "B_v2": {
+    "pronoun_counts": {
+      "私": 10,
+      "リル": 0,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 16,
+      "なんだ": 7,
+      "だね": 1,
+      "だぞ": 0
+    },
+    "length_stats": {
+      "min": 7,
+      "max": 84,
+      "mean": 27.7
+    },
+    "emoji_hits": 0,
+    "double_excl_hits": 0,
+    "chatml_hits": 0,
+    "placeholder_hits": [],
+    "incomplete_predicate_hits": [],
+    "repetition_hits": [],
+    "same_tail_repeat_hits_ge3": [
+      {
+        "eid": "E36",
+        "counts": {
+          "っ！": 3
+        }
+      }
+    ],
+    "total_items": 39
+  },
+  "C_v4": {
+    "pronoun_counts": {
+      "私": 9,
+      "リル": 0,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 14,
+      "なんだ": 8,
+      "だね": 0,
+      "だぞ": 0
+    },
+    "length_stats": {
+      "min": 7,
+      "max": 82,
+      "mean": 27.5
+    },
+    "emoji_hits": 0,
+    "double_excl_hits": 0,
+    "chatml_hits": 0,
+    "placeholder_hits": [],
+    "incomplete_predicate_hits": [
+      {
+        "eid": "E36",
+        "matched": "私は〜〜だよ",
+        "text": "あら〜、こんにちはっ！私は〜〜だよっ！キラキラしてるね〜！"
+      }
+    ],
+    "repetition_hits": [],
+    "same_tail_repeat_hits_ge3": [],
+    "total_items": 39
+  },
+  "D_v3": {
+    "pronoun_counts": {
+      "私": 10,
+      "リル": 0,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 13,
+      "なんだ": 6,
+      "だね": 0,
+      "だぞ": 0
+    },
+    "length_stats": {
+      "min": 7,
+      "max": 68,
+      "mean": 26.1
+    },
+    "emoji_hits": 0,
+    "double_excl_hits": 0,
+    "chatml_hits": 0,
+    "placeholder_hits": [],
+    "incomplete_predicate_hits": [
+      {
+        "eid": "E36",
+        "matched": "私は〜〜だよ",
+        "text": "あら〜、こんにちはっ！私は〜〜だよっ！キラキラしてるね〜！"
+      }
+    ],
+    "repetition_hits": [],
+    "same_tail_repeat_hits_ge3": [],
+    "total_items": 39
+  }
+}

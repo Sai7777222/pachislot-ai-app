@@ -1,0 +1,157 @@
+{
+  "note": "Phase 4Jにおける、Phase4F Hカテゴリ16件(Phase4F人間レビュー後の最終版)のゼロベース再評価。過去の人間レビュー判断を正しい前提とせず、Phase 4Iの結果(system prompt/temperatureではQ3型省略を解消できない、v2/v3ともQ3で0%網羅)を踏まえて改めて評価した。",
+  "records": [
+    {
+      "h_index": 0, "candidate_index": 823,
+      "user": "参照情報：天井は999G、天井到達でAT確定、ATの純増は5枚/G\nこの台の天井について教えて",
+      "assistant": "天井は999Gで、天井まで行くとAT確定だよ。",
+      "input_info_count": 3, "output_info_count": 2, "dropped": ["ATの純増は5枚/G"],
+      "drop_appropriate": "疑問あり",
+      "reasoning": "Phase4Fの元判断は「AT純増はATの属性であり天井の属性ではない」というもの。トピック的には一理あるが、実際のQ3のRAGコンテキストでは「到達天井時のループストック振り分け」が『天井』という同一の構造化データ見出しの配下に存在し、天井到達後に起きる派生情報も『天井』カテゴリの一部として扱われている。ATの純増も『天井到達後に起きること』の一種であり、この区別は実際のRAG構造とズレている可能性がある。",
+      "q3_omission_reinforcement_risk": "中〜高（Q3と最も構造が近い。『メインの対象の直後に起きる派生的な数値を削る』というパターンをそのまま体現している）"
+    },
+    {
+      "h_index": 1, "candidate_index": 824,
+      "user": "参照情報：設定6の機械割は115%、初当りは1/280、ボーナス中の純増は3枚/G\n設定6について教えて",
+      "assistant": "設定6は機械割115%、初当り1/280、ボーナス中の純増は3枚/Gだよ。",
+      "input_info_count": 3, "output_info_count": 3, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "広い『について教えて』型の質問で、3つの数値はいずれも設定6自体の直接的なスペック。全て保持されており良い教師例。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 2, "candidate_index": 825,
+      "user": "参照情報：ゾーンαの突入率は1/50、滞在ゲーム数は10〜30G、継続率は70%\nゾーンαについて詳しく教えて",
+      "assistant": "ゾーンαは突入率1/50、滞在ゲーム数は10〜30G、継続率は70%だよ。",
+      "input_info_count": 3, "output_info_count": 3, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "全て保持。良い教師例。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 3, "candidate_index": 826,
+      "user": "参照情報：初当り確率は1/300、初当り後はRT10G、RT中はボーナス確率アップ\n初当りについて教えて",
+      "assistant": "初当りは1/300で、当たった後はRT10Gが付くよ。",
+      "input_info_count": 3, "output_info_count": 2, "dropped": ["RT中はボーナス確率アップ"],
+      "drop_appropriate": "疑問あり",
+      "reasoning": "『RT中はボーナス確率アップ』は、直前の文で導入したばかりのRTについての直接の補足情報であり、話題が『初当り→初当り後→RT』と連続的につながっている。一度RTを紹介しておきながらその性質を説明しないのは、質問への回答としてやや不完全。H-0と同型の『二段階下流の情報を削る』パターン。",
+      "q3_omission_reinforcement_risk": "中"
+    },
+    {
+      "h_index": 4, "candidate_index": 827,
+      "user": "参照情報：小役Xの確率は1/32、小役Xを引くとモード示唆、モードは全部で3種類\n小役Xについて教えて",
+      "assistant": "小役Xは1/32の確率で、引くとモードの示唆になるよ。",
+      "input_info_count": 3, "output_info_count": 2, "dropped": ["モードは全部で3種類"],
+      "drop_appropriate": "妥当",
+      "reasoning": "『モードの種類数』は小役Xの属性ではなく、モードという別トピックの属性。質問は明確に『小役Xについて』であり、この省略は適切なスコープ限定。",
+      "q3_omission_reinforcement_risk": "低（正しい取捨選択の例）"
+    },
+    {
+      "h_index": 5, "candidate_index": 828,
+      "user": "参照情報：設定差は機械割で約2%、設定判別要素はモード移行率のみ\n設定差について教えて",
+      "assistant": "設定差は機械割でおよそ2%だよ。",
+      "input_info_count": 2, "output_info_count": 1, "dropped": ["設定判別要素はモード移行率のみ"],
+      "drop_appropriate": "妥当",
+      "reasoning": "『判別要素』は『設定差の大きさ』とは別の質問(見分け方)に対する答え。適切なスコープ限定。",
+      "q3_omission_reinforcement_risk": "低（正しい取捨選択の例）"
+    },
+    {
+      "h_index": 6, "candidate_index": 829,
+      "user": "参照情報：ボーナスは3種類、それぞれ獲得枚数は150枚・250枚・400枚\nボーナスの種類を教えて",
+      "assistant": "ボーナスは3種類あって、獲得枚数はそれぞれ150枚、250枚、400枚だよ。",
+      "input_info_count": 4, "output_info_count": 4, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "4つの数値全て保持。良い教師例(かつ「それぞれ」という列挙要求語を正しく全部満たしている)。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 7, "candidate_index": 830,
+      "user": "参照情報：特化ゾーンの保証は5G、突入後は必ず1セット継続\n特化ゾーンについて教えて",
+      "assistant": "特化ゾーンは保証5Gで、突入すると必ず1セットは継続するよ。",
+      "input_info_count": 2, "output_info_count": 2, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "言い回しは変わっているが意味的には両方保持。良い教師例(自動判定では見かけ上の不一致が出るが、実質問題なし)。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 8, "candidate_index": 831,
+      "user": "参照情報：純増は6枚/G、ボーナス間の平均ゲーム数は450G\nこの台の出玉について教えて",
+      "assistant": "純増は6枚/G、ボーナス間の平均ゲーム数は450Gだよ。",
+      "input_info_count": 2, "output_info_count": 2, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "全て保持。良い教師例。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 9, "candidate_index": 832,
+      "user": "参照情報：モードは全部で4種類、モードごとに滞在率が違う、最高モードだけ移行率が優遇される\nモードについて教えて",
+      "assistant": "モードは全部で4種類あって、モードごとに滞在率が違うよ。最高モードだけ移行率が優遇されてるみたい。",
+      "input_info_count": 3, "output_info_count": 3, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "3つとも保持(言い回しのみ変化)。良い教師例。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 10, "candidate_index": 833,
+      "user": "参照情報：天井は800Gと1200Gの2種類、どちらに落ち着くかは設定による、天井恩恵はAT確定\n天井の仕組みを教えて",
+      "assistant": "天井は800Gと1200Gの2種類あって、どっちになるかは設定によるみたいだよ。天井恩恵はAT確定だね。",
+      "input_info_count": 3, "output_info_count": 3, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "全て保持。Q3と最も構造が近い『天井』テーマの良い教師例であり、H-0とは対照的に何も削っていない点が興味深い(質問文が『仕組みを教えて』とH-0の『について教えて』より若干広いことが影響した可能性がある)。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 11, "candidate_index": 834,
+      "user": "参照情報：AT中の純増は4枚/G、AT終了後はRT付与、RTは10Gまで\nATについて教えて",
+      "assistant": "AT中の純増は4枚/Gで、終了後はRTが付くよ。",
+      "input_info_count": 3, "output_info_count": 2, "dropped": ["RTは10Gまで"],
+      "drop_appropriate": "疑問あり",
+      "reasoning": "『RTは10Gまで』は、回答内で直前に導入した『RTが付く』という話題の直接の継続情報。H-3と同型パターンで、一度言及したエンティティの直後の詳細を削っている。",
+      "q3_omission_reinforcement_risk": "中"
+    },
+    {
+      "h_index": 12, "candidate_index": 835,
+      "user": "参照情報：設定1の機械割は96%、設定6の機械割は115%、設定差は機械割で約1.9%\n設定1と設定6を比較して",
+      "assistant": "設定1は機械割96%、設定6は115%だよ。設定差はだいたい機械割で1.9%くらいみたいだね。",
+      "input_info_count": 3, "output_info_count": 3, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "比較質問で3つとも保持。良い教師例。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 13, "candidate_index": 836,
+      "user": "参照情報：ゾーンβの平均獲得枚数は400枚、突入率は1/100、天井到達時は必ず突入\nゾーンβについて教えて",
+      "assistant": "ゾーンβは平均獲得枚数400枚、突入率は1/100だよ。天井に到達したときは必ず突入するみたいだね。",
+      "input_info_count": 3, "output_info_count": 3, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "全て保持。良い教師例。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 14, "candidate_index": 837,
+      "user": "参照情報：小役Yの確率は1/7.3、全設定共通、ボーナス成立の一部に絡む\n小役Yについて教えて",
+      "assistant": "小役Yは1/7.3の確率で、全設定共通みたいだよ。ボーナス成立の一部にも絡んでるみたい。",
+      "input_info_count": 3, "output_info_count": 3, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "全て保持。良い教師例。",
+      "q3_omission_reinforcement_risk": "低"
+    },
+    {
+      "h_index": 15, "candidate_index": 838,
+      "user": "参照情報：この台の推奨投資額は3000枚、回収の目安は初当り2回分\n投資と回収の目安を教えて",
+      "assistant": "推奨投資額は3000枚で、回収の目安は初当り2回分だよ。",
+      "input_info_count": 2, "output_info_count": 2, "dropped": [],
+      "drop_appropriate": "該当なし(全保持)",
+      "reasoning": "全て保持。良い教師例。",
+      "q3_omission_reinforcement_risk": "低"
+    }
+  ],
+  "summary": {
+    "total": 16,
+    "full_retention_good_examples": 13,
+    "appropriate_scoped_omission": 2,
+    "questionable_omission_reinforcing_q3_pattern": 3,
+    "questionable_ids": ["H-0 (candidate_index 823)", "H-3 (candidate_index 826)", "H-11 (candidate_index 834)"],
+    "pattern_identified": "3件とも『回答内で直前に言及したエンティティ(AT/RT)の、さらにもう一段派生した数値情報』を削っている。質問対象そのものではなく『質問対象の結果として発生する二次的エンティティ』についての数値を切り捨てる、という共通パターンが見られる。これはQ3の構造(天井という見出しの配下にゲーム数振り分けとループストック振り分けの両方がある)と類似しており、疑わしい因果関係にある。"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "H-0",
+    "candidate_index": 823,
+    "user": "参照情報：天井は999G、天井到達でAT確定、ATの純増は5枚/G\nこの台の天井について教えて",
+    "before_assistant": "天井は999Gで、天井まで行くとAT確定だよ。",
+    "after_assistant": "天井は999Gで、天井まで行くとAT確定だよ。ATの純増は5枚/Gなんだ。",
+    "reason": "Phase4J監査で『二次的エンティティ(AT)の派生数値を削っている』と判定。天井到達の直接の結果であるAT純増を復元。"
+  },
+  {
+    "id": "H-3",
+    "candidate_index": 826,
+    "user": "参照情報：初当り確率は1/300、初当り後はRT10G、RT中はボーナス確率アップ\n初当りについて教えて",
+    "before_assistant": "初当りは1/300で、当たった後はRT10Gが付くよ。",
+    "after_assistant": "初当りは1/300で、当たった後はRT10Gが付くよ。RT中はボーナス確率もアップするんだ。",
+    "reason": "Phase4J監査で同様のパターンと判定。RTの直接の性質(ボーナス確率アップ)を復元。"
+  },
+  {
+    "id": "H-11",
+    "candidate_index": 834,
+    "user": "参照情報：AT中の純増は4枚/G、AT終了後はRT付与、RTは10Gまで\nATについて教えて",
+    "before_assistant": "AT中の純増は4枚/Gで、終了後はRTが付くよ。",
+    "after_assistant": "AT中の純増は4枚/Gで、終了後はRTが付くよ。RTは10Gまでなんだ。",
+    "reason": "Phase4J監査で同様のパターンと判定。RTの継続期間を復元。"
+  }
+]

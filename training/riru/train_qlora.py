@@ -419,11 +419,16 @@ def build_model_and_tokenizer(config: dict):
     model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=True)
 
     lora_cfg = config["lora"]
+    # Phase 4Q: module別に異なるrank/alphaを指定する場合のみ使用 (例: o_projだけ低rank)。
+    # config側にキーが存在しない場合は従来通りNone (=全module共通のr/lora_alpha) となり、
+    # v1〜v4/v5-qkvの挙動は完全に不変。
     peft_config = LoraConfig(
         r=lora_cfg["r"],
         lora_alpha=lora_cfg["lora_alpha"],
         lora_dropout=lora_cfg["lora_dropout"],
         target_modules=lora_cfg["target_modules"],
+        rank_pattern=lora_cfg.get("rank_pattern") or {},
+        alpha_pattern=lora_cfg.get("alpha_pattern") or {},
         bias=lora_cfg["bias"],
         task_type=lora_cfg["task_type"],
     )

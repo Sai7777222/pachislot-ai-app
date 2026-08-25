@@ -1,0 +1,43 @@
+{
+  "pool_quality": {
+    "n_pool": 113,
+    "issues": {
+      "missing_relevant_facts": [],
+      "leaked_irrelevant_facts": [],
+      "forbidden_phrase": [],
+      "real_machine_name": [],
+      "emoji": [],
+      "placeholder": [],
+      "chatml": [],
+      "empty_content": [],
+      "exact_duplicate_answer": [],
+      "exact_duplicate_user": []
+    },
+    "n_total_issue_entries": 0,
+    "high_similarity_pairs_ge_0.85": [],
+    "n_pairs_ge_0.9": 0,
+    "n_pairs_ge_0.85_lt_0.9": 0,
+    "dropped_for_similarity_ids": [
+      "S1-12",
+      "S3-14",
+      "S3-15",
+      "S3-6",
+      "S5-13",
+      "S5-14",
+      "S6-10",
+      "S6-12",
+      "S6-4",
+      "S8-10",
+      "S8-11",
+      "S8-12",
+      "S8-13",
+      "S8-14",
+      "S8-15"
+    ],
+    "raw_pool_size": 128
+  },
+  "vs_existing": {
+    "new_vs_existing_high_similarity": [],
+    "n_pairs": 0
+  }
+}

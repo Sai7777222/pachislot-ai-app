@@ -1,0 +1,40 @@
+{
+  "source": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\processed\\riru_lora_v4_candidate.jsonl",
+  "seed": 42,
+  "val_ratio_target": 0.1,
+  "total_records": 914,
+  "train_records": 823,
+  "val_records": 91,
+  "actual_val_ratio": 0.0996,
+  "leakage_check": {
+    "train_unique_user_keys": 676,
+    "val_unique_user_keys": 81,
+    "overlapping_user_keys": 0,
+    "overlap_examples": []
+  },
+  "phase4k_placement": {
+    "type1_type2_in_train": [
+      "T1-0",
+      "T1-1",
+      "T1-10",
+      "T1-2",
+      "T1-3",
+      "T1-4",
+      "T1-6",
+      "T1-7",
+      "T1-8",
+      "T1-9",
+      "T2-0",
+      "T2-1",
+      "T2-2",
+      "T2-3",
+      "T2-4",
+      "T2-5"
+    ],
+    "type1_type2_in_val": [
+      "T1-5"
+    ]
+  },
+  "train_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\processed\\riru_train_v4.jsonl",
+  "val_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\processed\\riru_val_v4.jsonl"
+}

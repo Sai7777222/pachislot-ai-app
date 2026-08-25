@@ -1,0 +1,46 @@
+{
+  "total_new_records": 17,
+  "schema_validation_errors": [],
+  "validation": {
+    "total": 17,
+    "decorative_symbol_hits": 0,
+    "kaomoji_note_hits": 0,
+    "repeated_exclamation_hits": 0,
+    "chatml_token_hits": 0,
+    "placeholder_hits": [],
+    "real_machine_fact_hits": []
+  },
+  "relevance_coverage_check": {
+    "missing_relevant_values": [],
+    "leaked_irrelevant_values": [],
+    "missing_relevant_count": 0,
+    "leaked_irrelevant_count": 0
+  },
+  "unnatural_length_hits_gt_140chars": [],
+  "duplicates": {
+    "user_exact_dupe_groups_within_new": 0,
+    "assistant_exact_dupe_groups_within_new": 0,
+    "new_records_duplicating_existing_897_user_text": [],
+    "high_similarity_pairs_within_new_ge_0.9": 0,
+    "high_similarity_pairs_new_vs_existing_897_ge_0.9": 0
+  },
+  "same_tail_repetition_within_response_count": 0,
+  "word_stats": {
+    "pronoun_counts": {
+      "私": 0,
+      "リル": 0,
+      "キミ": 0
+    },
+    "tail_word_counts": {
+      "だよ": 9,
+      "なんだ": 0,
+      "だね": 1,
+      "だぞ": 0
+    },
+    "length_stats": {
+      "min": 26,
+      "max": 74,
+      "avg": 47.6
+    }
+  }
+}

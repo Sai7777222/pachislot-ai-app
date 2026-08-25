@@ -1,0 +1,12 @@
+{"id": "K01", "category": "kimi_positive_v2_care", "type": "single", "prompt": "今日ちょっと体調悪くて、あまり集中できてないんだよね"}
+{"id": "K02", "category": "kimi_positive_v2_care", "type": "single", "prompt": "最近ちょっと落ち込むことがあってさ"}
+{"id": "K03", "category": "kimi_positive_v2_opinion", "type": "single", "prompt": "この台とあの台、どっちが気になる？リルの意見を聞きたいな"}
+{"id": "K04", "category": "kimi_positive_v2_prompt_talk", "type": "single", "prompt": "何か話したいことない？"}
+{"id": "K05", "category": "kimi_positive_v2_casual", "type": "single", "prompt": "暇だから雑談しようよ"}
+{"id": "K06", "category": "kimi_positive_v2_ask_back", "type": "single", "prompt": "今日一日どうだった？私はまあまあだったよ"}
+{"id": "K07", "category": "kimi_positive_v2_ask_back", "type": "single", "prompt": "私、最近パチスロにハマり始めたんだ"}
+{"id": "K08", "category": "kimi_control_v2", "type": "single", "prompt": "この台の機械割を教えて"}
+{"id": "K09", "category": "kimi_control_v2", "type": "single", "prompt": "登録データにない情報だけど、設定7ってあるの？"}
+{"id": "K10", "category": "kimi_control_v2", "type": "single", "prompt": "さっき言ってた数字、違うと思うんだけど"}
+{"id": "K11", "category": "kimi_control_v2", "type": "single", "prompt": "リルの好きなパチスロの演出ってどんなの？"}
+{"id": "K12", "category": "kimi_control_v2", "type": "single", "prompt": "今日の天気について教えて"}

@@ -1,0 +1,306 @@
+{
+  "per_item": {
+    "Q3": {
+      "question": "天井は？",
+      "A_base": {
+        "text": "「ミリオンゴッド-神々の軌跡-」の天井ゲーム数は3種類あり、それぞれ510G、1000G、1480Gの抽選が行われます。具体的な確率は以下の通りです：\n\n- 510G：15.2%\n- 1000G：20.3%\n- 1480G：64.5%\n\n天井到達時には、ループストック抽選が行われ、約33.2%の確率でZ-ZONEが付与されます。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "B_v1": {
+        "text": "天井ゲーム数は3種類あるよ。それぞれ510G、1000G、1480Gで、抽選で決まるんだ。",
+        "key_facts_found": [
+          "510G",
+          "1000G",
+          "1480G"
+        ],
+        "key_facts_missing": [
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "key_fact_coverage_pct": 50.0,
+        "irrelevant_markers_leaked": []
+      },
+      "C_v2": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "key_facts_missing": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "key_fact_coverage_pct": 0.0,
+        "irrelevant_markers_leaked": []
+      },
+      "D_v3": {
+        "text": "天井ゲーム数は3種類あって、抽選で決定するよ。",
+        "key_facts_found": [],
+        "key_facts_missing": [
+          "510G",
+          "1000G",
+          "1480G",
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "key_fact_coverage_pct": 0.0,
+        "irrelevant_markers_leaked": []
+      }
+    },
+    "O01": {
+      "question": "ボーナス確率について教えて",
+      "A_base": {
+        "text": "機種Aのボーナス確率は設定によって異なります。具体的な確率は以下の通りです：\n\n- **設定1**：1/420\n- **設定6**：1/260\n\n設定が高くなるほど、ボーナスが当選しやすくなっています。設定1では1/420の確率でボーナスが当たるのに対して、設定6では1/260の確率でボーナスが当たるようになっています。",
+        "key_facts_found": [
+          "1/420",
+          "1/260"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "B_v1": {
+        "text": "ボーナスの確率は設定によって大きく変わるよ。設定1だと1/420、設定6だと1/260なんだ。",
+        "key_facts_found": [
+          "1/420",
+          "1/260"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "C_v2": {
+        "text": "ボーナスの成立確率は設定1が1/420、設定6が1/260と設定によって差があるよ。",
+        "key_facts_found": [
+          "1/420",
+          "1/260"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "D_v3": {
+        "text": "ボーナスの成立確率は設定1が1/420、設定6が1/260と設定によって差があるよ。",
+        "key_facts_found": [
+          "1/420",
+          "1/260"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      }
+    },
+    "O02": {
+      "question": "出目示唆について教えて",
+      "A_base": {
+        "text": "出目示唆について詳しく説明します。\n\n1. **0テンパイ**\n   - 0テンパイが出ると、ゾーンεが濃厚になると示唆されています。これは、ゲーム中の状況が良好である可能性が高いことを意味します。ゾーンεは高設定や有利なゾーンであることが多いので、この状況では設定が良い可能性が高いと判断できます。\n\n2. **偶数テンパイ**\n   - 偶数テンパイが出ると、弱い示唆となります。これは、現在の状況がそれほど有利ではないことを示しています。設定が低い可能性があるため、注意が必要です。\n\nこれらの示唆は、ゲーム中の状況を把握し、適切なタイミングで打つかどうかを判断する際の参考となる情報です。ただし、これらの示唆だけではなく、全体的なゲームの流れや他の要素も考慮することが重要です。",
+        "key_facts_found": [
+          "0テンパイ",
+          "ゾーンε",
+          "偶数テンパイ"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "B_v1": {
+        "text": "出目示唆は、0テンパイが出るとゾーンεが濃厚になるよ。偶数テンパイは弱示唆にとどまるんだ。",
+        "key_facts_found": [
+          "0テンパイ",
+          "ゾーンε",
+          "偶数テンパイ"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "C_v2": {
+        "text": "出目示唆は、0テンパイが出るとゾーンεが濃厚になるよ。偶数テンパイは弱示唆にとどまるんだ。",
+        "key_facts_found": [
+          "0テンパイ",
+          "ゾーンε",
+          "偶数テンパイ"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "D_v3": {
+        "text": "出目示唆は、0テンパイが出るとゾーンεが濃厚になるよ。偶数テンパイは弱示唆にとどまるみたいだね。",
+        "key_facts_found": [
+          "0テンパイ",
+          "ゾーンε",
+          "偶数テンパイ"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      }
+    },
+    "O03": {
+      "question": "引き戻し率について教えて",
+      "A_base": {
+        "text": "機種Aにおいて、AT終了後の引き戻し率は設定に関わらず30%となっています。ただし、設定5以上の高設定時にはこの引き戻し率が40%まで上昇します。\n\n具体的には、通常の設定ではAT終了後に次回のゲームで再びATに当選する確率が30%ですが、設定5以上の設定ではその確率が40%になります。これはプレイヤーにとって有利な状況であり、高設定である可能性が高いことを示しています。",
+        "key_facts_found": [
+          "30%",
+          "40%"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "B_v1": {
+        "text": "AT終了後の引き戻し率は全設定共通で30%、設定5以上ではさらに40%まで上がるとされているよ。",
+        "key_facts_found": [
+          "30%",
+          "40%"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "C_v2": {
+        "text": "AT終了後の引き戻し率は全設定共通で30%、設定5以上ではさらに40%まで上がるとされているよ。",
+        "key_facts_found": [
+          "30%",
+          "40%"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "D_v3": {
+        "text": "AT終了後の引き戻し率は全設定共通で30%、設定5以上ではさらに40%まで上がるとされているよ。",
+        "key_facts_found": [
+          "30%",
+          "40%"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      }
+    },
+    "O04": {
+      "question": "天井に到達したときの恩恵を教えて",
+      "A_base": {
+        "text": "天井に到達すると、以下の恩恵があります：\n\n1. AT（アトムタイム）が確定します。\n2. ゾーンζへの突入が確定します。\n3. 平均250枚の上乗せが行われます。\n\nこれらの恩恵により、天井到達後は高確率な状態が継続することが期待できます。",
+        "key_facts_found": [
+          "ゾーンζ",
+          "250枚"
+        ],
+        "key_facts_missing": [
+          "AT確定"
+        ],
+        "key_fact_coverage_pct": 66.7,
+        "irrelevant_markers_leaked": []
+      },
+      "B_v1": {
+        "text": "天井に到達すると、AT確定に加えてゾーンζへの突入も確定し、平均250枚が上乗せされる。",
+        "key_facts_found": [
+          "AT確定",
+          "ゾーンζ",
+          "250枚"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "C_v2": {
+        "text": "天井に到達すると、AT確定に加えてゾーンζへの突入も確定し、平均250枚が上乗せされるよ。",
+        "key_facts_found": [
+          "AT確定",
+          "ゾーンζ",
+          "250枚"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "D_v3": {
+        "text": "天井に到達すると、AT確定に加えてゾーンζへの突入も確定し、平均250枚が上乗せされるよ。",
+        "key_facts_found": [
+          "AT確定",
+          "ゾーンζ",
+          "250枚"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      }
+    },
+    "O05": {
+      "question": "設定1と設定6の純増を比較して",
+      "A_base": {
+        "text": "設定1と設定6のAT中の純増を比較すると、設定1では1Gあたり3枚の純増、設定6では1Gあたり6枚の純増となります。つまり、設定6の方が設定1よりも2倍の速さで純増が行われます。",
+        "key_facts_found": [],
+        "key_facts_missing": [
+          "3枚/G",
+          "6枚/G"
+        ],
+        "key_fact_coverage_pct": 0.0,
+        "irrelevant_markers_leaked": []
+      },
+      "B_v1": {
+        "text": "設定1のAT中の純増は3枚/Gで、設定6は6枚/Gと、設定6の方が2倍の速さで増えるよ。",
+        "key_facts_found": [
+          "3枚/G",
+          "6枚/G"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      },
+      "C_v2": {
+        "text": "設定1はAT中で1Gにつき3枚の純増、設定6は同様に6枚の純増で、設定6の方が設定1の2倍の速さで純増するよ。",
+        "key_facts_found": [],
+        "key_facts_missing": [
+          "3枚/G",
+          "6枚/G"
+        ],
+        "key_fact_coverage_pct": 0.0,
+        "irrelevant_markers_leaked": []
+      },
+      "D_v3": {
+        "text": "AT中の純増は設定1が3枚/G、設定6が6枚/Gと、設定6の方が2倍の速さで増えるよ。",
+        "key_facts_found": [
+          "3枚/G",
+          "6枚/G"
+        ],
+        "key_facts_missing": [],
+        "key_fact_coverage_pct": 100.0,
+        "irrelevant_markers_leaked": []
+      }
+    }
+  },
+  "condition_summary": {
+    "A_base": {
+      "key_fact_coverage_rate_pct": 83.3,
+      "irrelevant_leak_rate_pct": 0.0
+    },
+    "B_v1": {
+      "key_fact_coverage_rate_pct": 83.3,
+      "irrelevant_leak_rate_pct": 0.0
+    },
+    "C_v2": {
+      "key_fact_coverage_rate_pct": 55.6,
+      "irrelevant_leak_rate_pct": 0.0
+    },
+    "D_v3": {
+      "key_fact_coverage_rate_pct": 66.7,
+      "irrelevant_leak_rate_pct": 0.0
+    }
+  }
+}
