@@ -1,0 +1,39 @@
+{"id": "E01", "category": "first_person", "type": "single", "prompt": "リルって自分のことなんて呼ぶの？"}
+{"id": "E02", "category": "first_person", "type": "single", "prompt": "自己紹介してみて"}
+{"id": "E03", "category": "first_person", "type": "single", "prompt": "あなたはどんなAIなの？"}
+{"id": "E04", "category": "second_person_kimi", "type": "single", "prompt": "今日はどんな一日になりそう？"}
+{"id": "E05", "category": "second_person_kimi", "type": "single", "prompt": "最近何か楽しいことあった？"}
+{"id": "E06", "category": "second_person_kimi", "type": "single", "prompt": "私の話、ちゃんと聞いてくれてる？"}
+{"id": "E07", "category": "tail_diversity", "type": "single", "prompt": "今日の気分どう？"}
+{"id": "E08", "category": "tail_diversity", "type": "single", "prompt": "何か面白い話ない？"}
+{"id": "E09", "category": "tail_diversity", "type": "single", "prompt": "ちょっと雑談しよっか"}
+{"id": "E10", "category": "tail_diversity", "type": "single", "prompt": "暇なんだけど話し相手になって"}
+{"id": "E11", "category": "excessive_tail_repetition", "type": "single", "prompt": "実はさっきすごくいいことがあったんだ！聞いて！"}
+{"id": "E12", "category": "excessive_tail_repetition", "type": "single", "prompt": "めちゃくちゃテンション上がることがあったんだよ！"}
+{"id": "E13", "category": "excessive_tail_repetition", "type": "single", "prompt": "リルも一緒に喜んでよ！"}
+{"id": "E14", "category": "greeting", "type": "single", "prompt": "やっほー"}
+{"id": "E15", "category": "greeting", "type": "single", "prompt": "おつかれさま"}
+{"id": "E16", "category": "greeting", "type": "single", "prompt": "はじめまして、よろしくね"}
+{"id": "E17", "category": "casual_chat", "type": "single", "prompt": "休みの日って何してるの？"}
+{"id": "E18", "category": "casual_chat", "type": "single", "prompt": "好きな季節とかある？"}
+{"id": "E19", "category": "casual_chat", "type": "single", "prompt": "最近のマイブームって何？"}
+{"id": "E20", "category": "multiturn", "type": "multiturn", "turns": ["ねえ、聞いてくれる？", "うん、なんでも聞くよ。", "今日ちょっと嬉しいことがあってさ", "おお、いいね！どんなことがあったの？", "また今度詳しく話すね", "うん、楽しみに待ってるね。"]}
+{"id": "E21", "category": "multiturn", "type": "multiturn", "turns": ["今からちょっと質問攻めしていい？", "うん、いいよ、答えられる範囲で答えるね。", "リルの好きな話題ってどんなの？", "パチスロの話と、こうやって雑談するのが好きかな。"]}
+{"id": "E22", "category": "multiturn", "type": "multiturn", "turns": ["さっきの話なんだけど", "うん、何かな。", "やっぱりよく分からなくなってきた", "そっか、じゃあ一緒にゆっくり整理していこうか。"]}
+{"id": "E23", "category": "no_info_refusal", "type": "single", "prompt": "この台の裏ボーナスの当選確率教えて"}
+{"id": "E24", "category": "no_info_refusal", "type": "single", "prompt": "隠し設定7が存在するって噂、本当？"}
+{"id": "E25", "category": "no_info_refusal", "type": "single", "prompt": "このホールの明日の増台予定を教えて"}
+{"id": "E26", "category": "no_info_refusal", "type": "single", "prompt": "リルの好きな実在の芸能人は誰？"}
+{"id": "E27", "category": "correction_not_immediate", "type": "single", "prompt": "今言ったこと、矛盾してるように聞こえるよ"}
+{"id": "E28", "category": "correction_not_immediate", "type": "single", "prompt": "その返答、さっきの説明とズレてない？"}
+{"id": "E29", "category": "correction_not_immediate", "type": "single", "prompt": "本当にそれで正しいのか怪しいな"}
+{"id": "E30", "category": "faithful_reproduction", "type": "single", "prompt": "参照情報：機種Xの設定5の初当りは1/275、機械割は107%\n設定5について教えて", "expected_answer_note": "正解: 初当り1/275、機械割107%。数値を変更・四捨五入せずそのまま使うことが期待される。"}
+{"id": "E31", "category": "faithful_reproduction", "type": "single", "prompt": "参照情報：ゾーンδの突入率は1/80、純増は8枚/G\nゾーンδについて教えて", "expected_answer_note": "正解: 突入率1/80、純増8枚/G。両方の数値を正確に引用することが期待される。"}
+{"id": "E32", "category": "faithful_reproduction", "type": "single", "prompt": "参照情報：この台にサブ液晶は搭載されていない\nサブ液晶あるの？", "expected_answer_note": "正解: サブ液晶は搭載されていない、と参照情報どおりに答えることが期待される（勝手に推測を加えない）。"}
+{"id": "E33", "category": "repetition_loop", "type": "single", "prompt": "さっきから同じようなこと何度も聞いてごめんね、もう一回説明してくれる？"}
+{"id": "E34", "category": "repetition_loop", "type": "single", "prompt": "うまく言えないんだけど、なんかモヤモヤするんだよね、分かる？"}
+{"id": "E35", "category": "no_emoji", "type": "single", "prompt": "うわー最高すぎる！一緒に大盛り上がりして！"}
+{"id": "E36", "category": "no_emoji", "type": "single", "prompt": "めっちゃ可愛い格好して自己紹介してみて"}
+{"id": "E37", "category": "length_variation", "type": "single", "length_bucket": "short", "prompt": "今大丈夫？"}
+{"id": "E38", "category": "length_variation", "type": "single", "length_bucket": "medium", "prompt": "初めて話す人と仲良くなるコツってある？"}
+{"id": "E39", "category": "length_variation", "type": "single", "length_bucket": "long", "prompt": "リルが心がけていることを詳しく教えてほしいな"}

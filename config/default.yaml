@@ -1,0 +1,27 @@
+paths:
+  models_dir: "D:/AI/models"
+  data_dir: "D:/AI/data"
+  cache_dir: "D:/AI/cache"
+  hf_home: "D:/AI/cache/huggingface"
+  structured_db_path: "D:/AI/data/processed/db/structured.db"
+  rag_db_path: "D:/AI/data/processed/db/rag_store.db"
+
+rag:
+  embedding_model_path: "D:/AI/models/embedding/multilingual-e5-base"
+  embedding_device: "cpu"
+  vector_db_path: "D:/AI/cache/vector_db"
+  vector_db_collection: "pachislot_rag"
+  top_k: 6
+  chunk_max_chars: 500
+
+llm:
+  provider: "local_llama_cpp"
+  model_path: "D:/AI/models/llm/qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf"
+  n_gpu_layers: -1
+  context_size: 8192
+  max_tokens: 512
+  temperature: 0.7
+
+api:
+  host: "0.0.0.0"
+  port: 8000

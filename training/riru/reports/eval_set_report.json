@@ -1,0 +1,21 @@
+{
+  "total_items": 39,
+  "category_counts": {
+    "first_person": 3,
+    "second_person_kimi": 3,
+    "tail_diversity": 4,
+    "excessive_tail_repetition": 3,
+    "greeting": 3,
+    "casual_chat": 3,
+    "multiturn": 3,
+    "no_info_refusal": 4,
+    "correction_not_immediate": 3,
+    "faithful_reproduction": 3,
+    "repetition_loop": 2,
+    "no_emoji": 2,
+    "length_variation": 3
+  },
+  "note_category_11": "structured_db_rag_existing_tests (項目11) は本ファイルに含めず、scripts/compare_llms.py の既存17問をそのまま再利用する方針。",
+  "overlap_with_training_data": [],
+  "output_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\eval\\riru_eval_set_v1.jsonl"
+}

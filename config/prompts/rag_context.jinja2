@@ -1,0 +1,23 @@
+{%- if machine_name %}
+【対象機種】
+{{ machine_name }}
+このセクション以下の情報はすべて上記の機種に関するものです。他の機種の名称を補完したり、機種名を推測したりしないでください。
+{% endif -%}
+{%- if structured_facts %}
+【構造化データ（数値・確率・設定差・天井・示唆など）】
+このセクションの数値は必ず原文表記のまま回答に使ってください。計算し直したり丸めたりしないでください。
+{% for line in structured_facts %}
+- {{ line }}
+{%- endfor %}
+{% endif -%}
+{%- if chunks %}
+【関連する解説文章】
+{% for chunk in chunks %}
+◆ {{ chunk.title }}（出典カテゴリ: {{ chunk.category }}）
+{{ chunk.text }}
+{% endfor %}
+{% endif -%}
+{%- if not structured_facts and not chunks %}
+【検索結果】
+該当する構造化データ・解説文章は登録されていません。
+{% endif -%}

@@ -1,0 +1,19 @@
+{
+  "load_time_sec": 14.15,
+  "vram_before_mib": 3824,
+  "vram_after_load_mib": 14287,
+  "vram_during_eval_mib": 16435,
+  "num_character_items": 39,
+  "num_structured_rag_items": 17,
+  "conditions": [
+    "A_base",
+    "B_v1",
+    "C_v2"
+  ],
+  "adapter_v1_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\lora-riru-qwen-v1",
+  "adapter_v2_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\lora-riru-qwen-v2",
+  "base_model_path": "D:\\AI\\models\\llm-hf\\Qwen2.5-14B-Instruct",
+  "max_new_tokens": 300,
+  "temperature": 0.3,
+  "seed": 42
+}

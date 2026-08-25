@@ -1,0 +1,17 @@
+{
+  "source": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\processed\\riru_qwen_messages_v2_candidate.jsonl",
+  "seed": 42,
+  "val_ratio_target": 0.1,
+  "total_records": 823,
+  "train_records": 741,
+  "val_records": 82,
+  "actual_val_ratio": 0.0996,
+  "leakage_check": {
+    "train_unique_user_keys": 591,
+    "val_unique_user_keys": 75,
+    "overlapping_user_keys": 0,
+    "overlap_examples": []
+  },
+  "train_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\processed\\riru_train_v1.jsonl",
+  "val_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\processed\\riru_val_v1.jsonl"
+}

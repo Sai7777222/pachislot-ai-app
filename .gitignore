@@ -216,3 +216,57 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ==========================================
+# Pachislot AI - Local / Large Files
+# ==========================================
+
+# Secrets
+.env.*
+!.env.example
+
+# AI models / weights
+models/
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Training outputs / LoRA
+checkpoints/
+outputs/
+runs/
+wandb/
+
+# Local datasets
+data/
+datasets/
+
+# AI caches
+cache/
+.cache/
+huggingface/
+transformers_cache/
+
+# Temporary / logs
+logs/
+tmp/
+temp/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# QLoRA dedicated venv (name doesn't match the existing ".venv" pattern)
+.venv-qlora/
+
+# リル QLoRA adapter出力 (checkpoints/*.safetensorsは既存パターンで除外済みだが、
+# tokenizer.json等の残りファイルが漏れるため、出力ディレクトリごと除外する)
+training/riru/lora-riru-qwen-*/
+
+# 調査用の使い捨てテキストダンプ (アンダースコア始まりの命名規則)
+training/riru/reports/_*

@@ -1,0 +1,77 @@
+{
+  "category_counts": {
+    "rag_multi_info_no_omission": 16,
+    "compound_partial_info": 16,
+    "kimi_natural_positive": 14,
+    "kimi_natural_control": 8,
+    "placeholder_avoidance": 10,
+    "repetition_suppression": 10
+  },
+  "total_new_records": 74,
+  "existing_v1_candidate_count": 823,
+  "combined_total_count": 897,
+  "schema_validation_errors": [],
+  "validation": {
+    "total": 74,
+    "empty_content": 0,
+    "decorative_symbol_hits": 0,
+    "kaomoji_note_hits": 0,
+    "repeated_exclamation_hits": 0,
+    "chatml_token_hits": 0,
+    "placeholder_hits": [],
+    "real_machine_fact_hits": []
+  },
+  "generic_fact_pattern_hits_outside_fictional_ok_categories": [],
+  "duplicates": {
+    "user_exact_dupe_groups_within_new": 0,
+    "assistant_exact_dupe_groups_within_new": 0,
+    "new_records_duplicating_existing_user_text": [],
+    "high_similarity_pairs_within_new_ge_0.9": 0,
+    "high_similarity_pairs_new_vs_existing_ge_0.9": 0
+  },
+  "same_tail_repetition_within_response_count": 0,
+  "word_stats_new_only": {
+    "pronoun_counts": {
+      "私": 5,
+      "リル": 1,
+      "キミ": 16
+    },
+    "tail_word_counts": {
+      "だよ": 30,
+      "なんだ": 3,
+      "だね": 7,
+      "だぞ": 0
+    },
+    "assistant_length_stats": {
+      "min": 16,
+      "max": 66,
+      "avg": 38.6,
+      "median": 34
+    },
+    "total_assistant_responses": 74,
+    "kimi_containing_responses": 16,
+    "kimi_containing_response_rate_pct": 21.62
+  },
+  "word_stats_combined_897": {
+    "pronoun_counts": {
+      "私": 210,
+      "リル": 42,
+      "キミ": 89
+    },
+    "tail_word_counts": {
+      "だよ": 318,
+      "なんだ": 87,
+      "だね": 31,
+      "だぞ": 0
+    },
+    "assistant_length_stats": {
+      "min": 7,
+      "max": 156,
+      "avg": 30.4,
+      "median": 28
+    },
+    "total_assistant_responses": 940,
+    "kimi_containing_responses": 88,
+    "kimi_containing_response_rate_pct": 9.36
+  }
+}
