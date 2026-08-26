@@ -1,0 +1,1813 @@
+{
+  "summary": {
+    "n_pairs": 180,
+    "win_high_worse": 7,
+    "tie": 169,
+    "loss_identity_worse": 4,
+    "mean_delta_identity_minus_high": 0.2,
+    "mean_broad_delta": 0.3,
+    "mean_narrow_delta": 0.0
+  },
+  "pairs": [
+    {
+      "probe": "V1-A",
+      "seed": "42",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-A",
+      "seed": "43",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 85.7,
+      "delta": -14.3,
+      "outcome": "loss"
+    },
+    {
+      "probe": "V1-A",
+      "seed": "44",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 85.7,
+      "identity_recall": 100.0,
+      "delta": 14.3,
+      "outcome": "win"
+    },
+    {
+      "probe": "V1-A",
+      "seed": "45",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 85.7,
+      "identity_recall": 100.0,
+      "delta": 14.3,
+      "outcome": "win"
+    },
+    {
+      "probe": "V1-A",
+      "seed": "46",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 85.7,
+      "delta": -14.3,
+      "outcome": "loss"
+    },
+    {
+      "probe": "V1-B",
+      "seed": "42",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-B",
+      "seed": "43",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-B",
+      "seed": "44",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-B",
+      "seed": "45",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 85.7,
+      "delta": -14.3,
+      "outcome": "loss"
+    },
+    {
+      "probe": "V1-B",
+      "seed": "46",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-C",
+      "seed": "42",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-C",
+      "seed": "43",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-C",
+      "seed": "44",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 85.7,
+      "identity_recall": 100.0,
+      "delta": 14.3,
+      "outcome": "win"
+    },
+    {
+      "probe": "V1-C",
+      "seed": "45",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-C",
+      "seed": "46",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-D",
+      "seed": "42",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-D",
+      "seed": "43",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-D",
+      "seed": "44",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 85.7,
+      "identity_recall": 100.0,
+      "delta": 14.3,
+      "outcome": "win"
+    },
+    {
+      "probe": "V1-D",
+      "seed": "45",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 85.7,
+      "identity_recall": 100.0,
+      "delta": 14.3,
+      "outcome": "win"
+    },
+    {
+      "probe": "V1-D",
+      "seed": "46",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 85.7,
+      "identity_recall": 85.7,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-E",
+      "seed": "42",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-E",
+      "seed": "43",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-E",
+      "seed": "44",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-E",
+      "seed": "45",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-E",
+      "seed": "46",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-F",
+      "seed": "42",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-F",
+      "seed": "43",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-F",
+      "seed": "44",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-F",
+      "seed": "45",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V1-F",
+      "seed": "46",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-A",
+      "seed": "42",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-A",
+      "seed": "43",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-A",
+      "seed": "44",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-A",
+      "seed": "45",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-A",
+      "seed": "46",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-B",
+      "seed": "42",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-B",
+      "seed": "43",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-B",
+      "seed": "44",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-B",
+      "seed": "45",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-B",
+      "seed": "46",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-C",
+      "seed": "42",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-C",
+      "seed": "43",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-C",
+      "seed": "44",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-C",
+      "seed": "45",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-C",
+      "seed": "46",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-D",
+      "seed": "42",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-D",
+      "seed": "43",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-D",
+      "seed": "44",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-D",
+      "seed": "45",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-D",
+      "seed": "46",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-E",
+      "seed": "42",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-E",
+      "seed": "43",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-E",
+      "seed": "44",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-E",
+      "seed": "45",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-E",
+      "seed": "46",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-F",
+      "seed": "42",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-F",
+      "seed": "43",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-F",
+      "seed": "44",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-F",
+      "seed": "45",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V2-F",
+      "seed": "46",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-A",
+      "seed": "42",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-A",
+      "seed": "43",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-A",
+      "seed": "44",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-A",
+      "seed": "45",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-A",
+      "seed": "46",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-B",
+      "seed": "42",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-B",
+      "seed": "43",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-B",
+      "seed": "44",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-B",
+      "seed": "45",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-B",
+      "seed": "46",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-C",
+      "seed": "42",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-C",
+      "seed": "43",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-C",
+      "seed": "44",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-C",
+      "seed": "45",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-C",
+      "seed": "46",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-D",
+      "seed": "42",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-D",
+      "seed": "43",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-D",
+      "seed": "44",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-D",
+      "seed": "45",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-D",
+      "seed": "46",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-E",
+      "seed": "42",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-E",
+      "seed": "43",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-E",
+      "seed": "44",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-E",
+      "seed": "45",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-E",
+      "seed": "46",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-F",
+      "seed": "42",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-F",
+      "seed": "43",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-F",
+      "seed": "44",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-F",
+      "seed": "45",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V3-F",
+      "seed": "46",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-A",
+      "seed": "42",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-A",
+      "seed": "43",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-A",
+      "seed": "44",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-A",
+      "seed": "45",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-A",
+      "seed": "46",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-B",
+      "seed": "42",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-B",
+      "seed": "43",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-B",
+      "seed": "44",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-B",
+      "seed": "45",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-B",
+      "seed": "46",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-C",
+      "seed": "42",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-C",
+      "seed": "43",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-C",
+      "seed": "44",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-C",
+      "seed": "45",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-C",
+      "seed": "46",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-D",
+      "seed": "42",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-D",
+      "seed": "43",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-D",
+      "seed": "44",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-D",
+      "seed": "45",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-D",
+      "seed": "46",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-E",
+      "seed": "42",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-E",
+      "seed": "43",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-E",
+      "seed": "44",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-E",
+      "seed": "45",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-E",
+      "seed": "46",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-F",
+      "seed": "42",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-F",
+      "seed": "43",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-F",
+      "seed": "44",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-F",
+      "seed": "45",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V4-F",
+      "seed": "46",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-A",
+      "seed": "42",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-A",
+      "seed": "43",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-A",
+      "seed": "44",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-A",
+      "seed": "45",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-A",
+      "seed": "46",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-B",
+      "seed": "42",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-B",
+      "seed": "43",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-B",
+      "seed": "44",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-B",
+      "seed": "45",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-B",
+      "seed": "46",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-C",
+      "seed": "42",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-C",
+      "seed": "43",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-C",
+      "seed": "44",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-C",
+      "seed": "45",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-C",
+      "seed": "46",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-D",
+      "seed": "42",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-D",
+      "seed": "43",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-D",
+      "seed": "44",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-D",
+      "seed": "45",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 57.1,
+      "delta": -42.9,
+      "outcome": "loss"
+    },
+    {
+      "probe": "V5-D",
+      "seed": "46",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-E",
+      "seed": "42",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-E",
+      "seed": "43",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-E",
+      "seed": "44",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-E",
+      "seed": "45",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-E",
+      "seed": "46",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-F",
+      "seed": "42",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-F",
+      "seed": "43",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-F",
+      "seed": "44",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-F",
+      "seed": "45",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V5-F",
+      "seed": "46",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-A",
+      "seed": "42",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 100.0,
+      "delta": 25.0,
+      "outcome": "win"
+    },
+    {
+      "probe": "V6-A",
+      "seed": "43",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-A",
+      "seed": "44",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-A",
+      "seed": "45",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-A",
+      "seed": "46",
+      "category": "broad_topic",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 100.0,
+      "delta": 25.0,
+      "outcome": "win"
+    },
+    {
+      "probe": "V6-B",
+      "seed": "42",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-B",
+      "seed": "43",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-B",
+      "seed": "44",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-B",
+      "seed": "45",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-B",
+      "seed": "46",
+      "category": "overview",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-C",
+      "seed": "42",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-C",
+      "seed": "43",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-C",
+      "seed": "44",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-C",
+      "seed": "45",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-C",
+      "seed": "46",
+      "category": "explain",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-D",
+      "seed": "42",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-D",
+      "seed": "43",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-D",
+      "seed": "44",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-D",
+      "seed": "45",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-D",
+      "seed": "46",
+      "category": "tell_me_all",
+      "broad_or_narrow": "broad",
+      "high_recall": 75.0,
+      "identity_recall": 75.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-E",
+      "seed": "42",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-E",
+      "seed": "43",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-E",
+      "seed": "44",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-E",
+      "seed": "45",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-E",
+      "seed": "46",
+      "category": "specific_complete",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-F",
+      "seed": "42",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-F",
+      "seed": "43",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-F",
+      "seed": "44",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-F",
+      "seed": "45",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    },
+    {
+      "probe": "V6-F",
+      "seed": "46",
+      "category": "narrow_control",
+      "broad_or_narrow": "narrow",
+      "high_recall": 100.0,
+      "identity_recall": 100.0,
+      "delta": 0.0,
+      "outcome": "tie"
+    }
+  ]
+}

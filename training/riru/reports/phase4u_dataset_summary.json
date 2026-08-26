@@ -1,0 +1,12 @@
+{
+  "existing_count": 1027,
+  "identity_new_count": 35,
+  "no_intrusion_new_count": 8,
+  "new_total": 43,
+  "combined_total": 1070,
+  "complex_teacher_count_unchanged": 113,
+  "complex_ratio_pct": 10.56,
+  "train_count": 964,
+  "val_count": 106,
+  "train_val_overlap": 0
+}

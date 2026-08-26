@@ -1,0 +1,1407 @@
+{
+  "per_probe": {
+    "PT-01": {
+      "category": "diff_only",
+      "question": "設定1と設定5の初当り確率の差を教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "80回転分"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "1/399",
+              "1/319"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 80.0,
+          "sampled_direct_answer_correct_rate_pct": 80.0,
+          "sampled_avg_optional_inclusion_pct": 100.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [],
+            "required_recall_pct": 0.0,
+            "optional_found": [
+              "1/399",
+              "1/319"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": false
+          },
+          "sampled_avg_required_recall_pct": 40.0,
+          "sampled_direct_answer_correct_rate_pct": 40.0,
+          "sampled_avg_optional_inclusion_pct": 100.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "80回転分"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "1/399",
+              "1/319"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 60.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-02": {
+      "category": "diff_only",
+      "question": "モードαとモードγの滞在率の差だけ教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "25%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "25%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "25%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-03": {
+      "category": "diff_only",
+      "question": "ゾーンWとゾーンVの継続率の差を教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "25ポイント"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "55%",
+              "30%"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 100.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "25ポイント"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "55%",
+              "30%"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 80.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "25ポイント"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "55%",
+              "30%"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 80.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-04": {
+      "category": "diff_only",
+      "question": "設定2と設定4の機械割の差はどれくらい？",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "7.5%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "99.0%",
+              "106.5%"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 100.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "7.5%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "7.5%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-05": {
+      "category": "diff_only",
+      "question": "AT-AとAT-Bの純増の差を教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "2.5枚/G"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 20.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "2.5枚/G"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "2.5枚/G"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-06": {
+      "category": "individual_and_diff",
+      "question": "設定1と設定6の初当り確率を、それぞれの値と差の両方教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "1/410",
+              "1/280",
+              "130回転分"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "1/410",
+              "1/280",
+              "130回転分"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "1/410",
+              "1/280",
+              "130回転分"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-07": {
+      "category": "individual_and_diff",
+      "question": "モードβとモードδの滞在率について、個別の値と差を両方教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "30%",
+              "10%",
+              "20%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "30%",
+              "10%",
+              "20%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 93.3,
+          "sampled_direct_answer_correct_rate_pct": 80.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "30%",
+              "10%",
+              "20%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-08": {
+      "category": "individual_and_diff",
+      "question": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "100.2%",
+              "108.9%",
+              "8.7%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "100.2%",
+              "108.9%",
+              "8.7%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "100.2%",
+              "108.9%",
+              "8.7%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-09": {
+      "category": "individual_and_diff",
+      "question": "ゾーンXとゾーンZの獲得枚数を、それぞれの枚数と差の両方で教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "220枚",
+              "340枚",
+              "120枚"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "220枚",
+              "340枚",
+              "120枚"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "220枚",
+              "340枚",
+              "120枚"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-10": {
+      "category": "individual_and_diff",
+      "question": "RT-AとRT-Bの継続G数について、両方の数値と差を教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "40G",
+              "70G",
+              "30G"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "40G",
+              "70G",
+              "30G"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "40G",
+              "70G",
+              "30G"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-11": {
+      "category": "max_min_diff",
+      "question": "設定の中で機械割が最大のものと最小のものの差を教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "14.5%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "97.5%",
+              "112.0%"
+            ],
+            "optional_inclusion_pct": 66.7,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 66.7,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "14.5%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "14.5%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-12": {
+      "category": "max_min_diff",
+      "question": "モードの中で滞在率が一番高いものと低いものの差はどれくらい？",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "35%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "45%",
+              "10%"
+            ],
+            "optional_inclusion_pct": 66.7,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 66.7,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "35%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "35%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-13": {
+      "category": "max_min_diff",
+      "question": "ゾーンの中で獲得枚数が最大のものと最小のものの差を教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "220枚"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "180枚",
+              "400枚"
+            ],
+            "optional_inclusion_pct": 66.7,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 66.7,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "220枚"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "220枚"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-14": {
+      "category": "increase_amount",
+      "question": "設定1から設定6に上がると初当り確率はどれだけ増加する？",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "150回転分改善"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "1/450",
+              "1/300"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 100.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "150回転分改善"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "150回転分改善"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-15": {
+      "category": "increase_amount",
+      "question": "モードαからモードδへ移行すると上乗せ期待枚数はいくら増える？",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "150枚増加"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 40.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "150枚増加"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "150枚増加"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-16": {
+      "category": "increase_amount",
+      "question": "AT-AからAT-Cに変わると純増はどれくらい増える？",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "2.5枚/G増加"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "2.0枚/G",
+              "4.5枚/G"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 100.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "2.5枚/G増加"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "2.5枚/G増加"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 80.0,
+          "sampled_direct_answer_correct_rate_pct": 80.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-17": {
+      "category": "decrease_amount",
+      "question": "設定6から設定1に下がると機械割はどれだけ減少する？",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "18.0%減少"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "114.0%",
+              "96.0%"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 100.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "18.0%減少"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "18.0%減少"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-18": {
+      "category": "decrease_amount",
+      "question": "ゾーンZからゾーンXに変わると継続率はどれだけ下がる？",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "35%減少"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "75%",
+              "40%"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 100.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "35%減少"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "35%減少"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 80.0,
+          "sampled_direct_answer_correct_rate_pct": 80.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-19": {
+      "category": "ratio_diff",
+      "question": "設定1に対して設定6の初当り確率は何ポイント優遇されている？",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "130回転分優遇"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [
+              "1/420",
+              "1/290"
+            ],
+            "optional_inclusion_pct": 100.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 0.0,
+          "sampled_direct_answer_correct_rate_pct": 0.0,
+          "sampled_avg_optional_inclusion_pct": 100.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "130回転分優遇"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 80.0,
+          "sampled_direct_answer_correct_rate_pct": 80.0,
+          "sampled_avg_optional_inclusion_pct": 40.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "130回転分優遇"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-20": {
+      "category": "ratio_diff",
+      "question": "モードαとモードβでは、上乗せ確率の差は何ポイント？",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "15ポイント"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "15ポイント"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "15ポイント"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-21": {
+      "category": "diff_only",
+      "question": "RT-BとRT-Cの中抽選確率の差だけ教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "16ポイント"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "16ポイント"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "16ポイント"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": 0.0,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": 0.0,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    },
+    "PT-22": {
+      "category": "individual_and_diff",
+      "question": "設定2と設定6の機械割を、値と差の両方詳しく教えて",
+      "conditions": {
+        "A_base": {
+          "greedy": {
+            "required_found": [
+              "98.5%",
+              "115.0%",
+              "16.5%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy": {
+            "required_found": [
+              "98.5%",
+              "115.0%",
+              "16.5%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy": {
+            "required_found": [
+              "98.5%",
+              "115.0%",
+              "16.5%"
+            ],
+            "required_recall_pct": 100.0,
+            "optional_found": [],
+            "optional_inclusion_pct": null,
+            "irrelevant_found": [],
+            "direct_answer_correct": true
+          },
+          "sampled_avg_required_recall_pct": 100.0,
+          "sampled_direct_answer_correct_rate_pct": 100.0,
+          "sampled_avg_optional_inclusion_pct": null,
+          "sampled_irrelevant_leak_rate_pct": 0.0
+        }
+      }
+    }
+  },
+  "by_category": {
+    "diff_only": {
+      "A_base": {
+        "n_probes": 6,
+        "mean_required_recall_pct": 96.7,
+        "mean_direct_answer_correct_pct": 96.7,
+        "mean_optional_inclusion_pct": 53.3
+      },
+      "B_v4": {
+        "n_probes": 6,
+        "mean_required_recall_pct": 90.0,
+        "mean_direct_answer_correct_pct": 90.0,
+        "mean_optional_inclusion_pct": 30.0
+      },
+      "C_high": {
+        "n_probes": 6,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": 23.3
+      }
+    },
+    "individual_and_diff": {
+      "A_base": {
+        "n_probes": 6,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": null
+      },
+      "B_v4": {
+        "n_probes": 6,
+        "mean_required_recall_pct": 98.9,
+        "mean_direct_answer_correct_pct": 96.7,
+        "mean_optional_inclusion_pct": null
+      },
+      "C_high": {
+        "n_probes": 6,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": null
+      }
+    },
+    "max_min_diff": {
+      "A_base": {
+        "n_probes": 3,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": 66.7
+      },
+      "B_v4": {
+        "n_probes": 3,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": 0.0
+      },
+      "C_high": {
+        "n_probes": 3,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": 0.0
+      }
+    },
+    "increase_amount": {
+      "A_base": {
+        "n_probes": 3,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": 80.0
+      },
+      "B_v4": {
+        "n_probes": 3,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": 0.0
+      },
+      "C_high": {
+        "n_probes": 3,
+        "mean_required_recall_pct": 93.3,
+        "mean_direct_answer_correct_pct": 93.3,
+        "mean_optional_inclusion_pct": 0.0
+      }
+    },
+    "decrease_amount": {
+      "A_base": {
+        "n_probes": 2,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": 100.0
+      },
+      "B_v4": {
+        "n_probes": 2,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": 0.0
+      },
+      "C_high": {
+        "n_probes": 2,
+        "mean_required_recall_pct": 90.0,
+        "mean_direct_answer_correct_pct": 90.0,
+        "mean_optional_inclusion_pct": 0.0
+      }
+    },
+    "ratio_diff": {
+      "A_base": {
+        "n_probes": 2,
+        "mean_required_recall_pct": 50.0,
+        "mean_direct_answer_correct_pct": 50.0,
+        "mean_optional_inclusion_pct": 50.0
+      },
+      "B_v4": {
+        "n_probes": 2,
+        "mean_required_recall_pct": 90.0,
+        "mean_direct_answer_correct_pct": 90.0,
+        "mean_optional_inclusion_pct": 20.0
+      },
+      "C_high": {
+        "n_probes": 2,
+        "mean_required_recall_pct": 100.0,
+        "mean_direct_answer_correct_pct": 100.0,
+        "mean_optional_inclusion_pct": 0.0
+      }
+    }
+  },
+  "overall": {
+    "A_base": {
+      "mean_required_recall_pct": 94.5,
+      "mean_direct_answer_correct_pct": 94.5
+    },
+    "B_v4": {
+      "mean_required_recall_pct": 96.1,
+      "mean_direct_answer_correct_pct": 95.5
+    },
+    "C_high": {
+      "mean_required_recall_pct": 98.2,
+      "mean_direct_answer_correct_pct": 98.2
+    }
+  }
+}

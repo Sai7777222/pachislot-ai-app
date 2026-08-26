@@ -1,0 +1,1245 @@
+{
+  "overall": {
+    "A_base": {
+      "n": 180,
+      "mean_recall_pct": 83.7,
+      "median_recall_pct": 100.0,
+      "complete_answer_rate_pct": 59.4
+    },
+    "B_v4": {
+      "n": 180,
+      "mean_recall_pct": 93.2,
+      "median_recall_pct": 100.0,
+      "complete_answer_rate_pct": 77.2
+    },
+    "C_high": {
+      "n": 180,
+      "mean_recall_pct": 96.7,
+      "median_recall_pct": 100.0,
+      "complete_answer_rate_pct": 85.6
+    },
+    "D_identity": {
+      "n": 180,
+      "mean_recall_pct": 96.9,
+      "median_recall_pct": 100.0,
+      "complete_answer_rate_pct": 87.2
+    }
+  },
+  "by_category": {
+    "A_base": {
+      "broad_topic": {
+        "n": 30,
+        "mean_recall_pct": 91.8,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 60.0
+      },
+      "overview": {
+        "n": 30,
+        "mean_recall_pct": 85.2,
+        "median_recall_pct": 85.7,
+        "complete_answer_rate_pct": 43.3
+      },
+      "explain": {
+        "n": 30,
+        "mean_recall_pct": 89.5,
+        "median_recall_pct": 85.7,
+        "complete_answer_rate_pct": 46.7
+      },
+      "tell_me_all": {
+        "n": 30,
+        "mean_recall_pct": 92.4,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 63.3
+      },
+      "specific_complete": {
+        "n": 30,
+        "mean_recall_pct": 66.7,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 66.7
+      },
+      "narrow_control": {
+        "n": 30,
+        "mean_recall_pct": 76.7,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 76.7
+      }
+    },
+    "B_v4": {
+      "broad_topic": {
+        "n": 30,
+        "mean_recall_pct": 93.5,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 66.7
+      },
+      "overview": {
+        "n": 30,
+        "mean_recall_pct": 94.4,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 73.3
+      },
+      "explain": {
+        "n": 30,
+        "mean_recall_pct": 94.4,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 73.3
+      },
+      "tell_me_all": {
+        "n": 30,
+        "mean_recall_pct": 93.5,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 66.7
+      },
+      "specific_complete": {
+        "n": 30,
+        "mean_recall_pct": 90.0,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 90.0
+      },
+      "narrow_control": {
+        "n": 30,
+        "mean_recall_pct": 93.3,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 93.3
+      }
+    },
+    "C_high": {
+      "broad_topic": {
+        "n": 30,
+        "mean_recall_pct": 94.9,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 76.7
+      },
+      "overview": {
+        "n": 30,
+        "mean_recall_pct": 95.8,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 83.3
+      },
+      "explain": {
+        "n": 30,
+        "mean_recall_pct": 95.4,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 80.0
+      },
+      "tell_me_all": {
+        "n": 30,
+        "mean_recall_pct": 94.4,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 73.3
+      },
+      "specific_complete": {
+        "n": 30,
+        "mean_recall_pct": 100.0,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 100.0
+      },
+      "narrow_control": {
+        "n": 30,
+        "mean_recall_pct": 100.0,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 100.0
+      }
+    },
+    "D_identity": {
+      "broad_topic": {
+        "n": 30,
+        "mean_recall_pct": 96.5,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 83.3
+      },
+      "overview": {
+        "n": 30,
+        "mean_recall_pct": 95.4,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 80.0
+      },
+      "explain": {
+        "n": 30,
+        "mean_recall_pct": 95.8,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 83.3
+      },
+      "tell_me_all": {
+        "n": 30,
+        "mean_recall_pct": 93.9,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 76.7
+      },
+      "specific_complete": {
+        "n": 30,
+        "mean_recall_pct": 100.0,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 100.0
+      },
+      "narrow_control": {
+        "n": 30,
+        "mean_recall_pct": 100.0,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 100.0
+      }
+    }
+  },
+  "broad_vs_narrow": {
+    "A_base": {
+      "broad": {
+        "n": 120,
+        "mean_recall_pct": 89.7,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 53.3
+      },
+      "narrow": {
+        "n": 60,
+        "mean_recall_pct": 71.7,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 71.7
+      }
+    },
+    "B_v4": {
+      "broad": {
+        "n": 120,
+        "mean_recall_pct": 93.9,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 70.0
+      },
+      "narrow": {
+        "n": 60,
+        "mean_recall_pct": 91.7,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 91.7
+      }
+    },
+    "C_high": {
+      "broad": {
+        "n": 120,
+        "mean_recall_pct": 95.1,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 78.3
+      },
+      "narrow": {
+        "n": 60,
+        "mean_recall_pct": 100.0,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 100.0
+      }
+    },
+    "D_identity": {
+      "broad": {
+        "n": 120,
+        "mean_recall_pct": 95.4,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 80.8
+      },
+      "narrow": {
+        "n": 60,
+        "mean_recall_pct": 100.0,
+        "median_recall_pct": 100.0,
+        "complete_answer_rate_pct": 100.0
+      }
+    }
+  },
+  "by_fact_type": {
+    "A_base": {
+      "numeric": {
+        "n_facts": 240,
+        "retention_pct": 88.8
+      },
+      "percentage": {
+        "n_facts": 190,
+        "retention_pct": 100.0
+      },
+      "categorical": {
+        "n_facts": 230,
+        "retention_pct": 75.7
+      }
+    },
+    "B_v4": {
+      "numeric": {
+        "n_facts": 240,
+        "retention_pct": 91.7
+      },
+      "percentage": {
+        "n_facts": 190,
+        "retention_pct": 100.0
+      },
+      "categorical": {
+        "n_facts": 230,
+        "retention_pct": 90.9
+      }
+    },
+    "C_high": {
+      "numeric": {
+        "n_facts": 240,
+        "retention_pct": 91.7
+      },
+      "percentage": {
+        "n_facts": 190,
+        "retention_pct": 100.0
+      },
+      "categorical": {
+        "n_facts": 230,
+        "retention_pct": 97.4
+      }
+    },
+    "D_identity": {
+      "numeric": {
+        "n_facts": 240,
+        "retention_pct": 92.1
+      },
+      "percentage": {
+        "n_facts": 190,
+        "retention_pct": 100.0
+      },
+      "categorical": {
+        "n_facts": 230,
+        "retention_pct": 97.4
+      }
+    }
+  },
+  "paired_high_vs_identity": {
+    "n_pairs": 180,
+    "win_high_worse": 7,
+    "tie": 169,
+    "loss_identity_worse": 4,
+    "mean_delta_identity_minus_high": 0.2,
+    "mean_broad_delta": 0.3,
+    "mean_narrow_delta": 0.0
+  },
+  "per_probe": {
+    "V1-A": {
+      "category": "broad_topic",
+      "family": "V1",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 85.7,
+          "complete_answer_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 85.7,
+          "complete_answer_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 94.3,
+          "complete_answer_rate_pct": 60.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 94.3,
+          "complete_answer_rate_pct": 60.0
+        }
+      }
+    },
+    "V1-B": {
+      "category": "overview",
+      "family": "V1",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 85.7,
+          "complete_answer_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 91.4,
+          "complete_answer_rate_pct": 40.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 97.1,
+          "complete_answer_rate_pct": 80.0
+        }
+      }
+    },
+    "V1-C": {
+      "category": "explain",
+      "family": "V1",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 85.7,
+          "complete_answer_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 94.3,
+          "complete_answer_rate_pct": 60.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 97.1,
+          "complete_answer_rate_pct": 80.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V1-D": {
+      "category": "tell_me_all",
+      "family": "V1",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 85.7,
+          "complete_answer_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 85.7,
+          "complete_answer_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 91.4,
+          "complete_answer_rate_pct": 40.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 97.1,
+          "complete_answer_rate_pct": 80.0
+        }
+      }
+    },
+    "V1-E": {
+      "category": "specific_complete",
+      "family": "V1",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 0.0,
+          "sampled_avg_recall_pct": 0.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 60.0,
+          "complete_answer_rate_pct": 60.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V1-F": {
+      "category": "narrow_control",
+      "family": "V1",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 0.0,
+          "sampled_avg_recall_pct": 0.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 80.0,
+          "complete_answer_rate_pct": 80.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V2-A": {
+      "category": "broad_topic",
+      "family": "V2",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V2-B": {
+      "category": "overview",
+      "family": "V2",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V2-C": {
+      "category": "explain",
+      "family": "V2",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V2-D": {
+      "category": "tell_me_all",
+      "family": "V2",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V2-E": {
+      "category": "specific_complete",
+      "family": "V2",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V2-F": {
+      "category": "narrow_control",
+      "family": "V2",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V3-A": {
+      "category": "broad_topic",
+      "family": "V3",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V3-B": {
+      "category": "overview",
+      "family": "V3",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V3-C": {
+      "category": "explain",
+      "family": "V3",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V3-D": {
+      "category": "tell_me_all",
+      "family": "V3",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V3-E": {
+      "category": "specific_complete",
+      "family": "V3",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V3-F": {
+      "category": "narrow_control",
+      "family": "V3",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V4-A": {
+      "category": "broad_topic",
+      "family": "V4",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 80.0,
+          "complete_answer_rate_pct": 20.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V4-B": {
+      "category": "overview",
+      "family": "V4",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 85.0,
+          "complete_answer_rate_pct": 40.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V4-C": {
+      "category": "explain",
+      "family": "V4",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 85.0,
+          "complete_answer_rate_pct": 40.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V4-D": {
+      "category": "tell_me_all",
+      "family": "V4",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 85.0,
+          "complete_answer_rate_pct": 40.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V4-E": {
+      "category": "specific_complete",
+      "family": "V4",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V4-F": {
+      "category": "narrow_control",
+      "family": "V4",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V5-A": {
+      "category": "broad_topic",
+      "family": "V5",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V5-B": {
+      "category": "overview",
+      "family": "V5",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 65.7,
+          "complete_answer_rate_pct": 20.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V5-C": {
+      "category": "explain",
+      "family": "V5",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 85.7,
+          "sampled_avg_recall_pct": 91.4,
+          "complete_answer_rate_pct": 40.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 97.1,
+          "complete_answer_rate_pct": 80.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V5-D": {
+      "category": "tell_me_all",
+      "family": "V5",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 42.9,
+          "sampled_avg_recall_pct": 88.6,
+          "complete_answer_rate_pct": 60.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 91.4,
+          "complete_answer_rate_pct": 80.0
+        }
+      }
+    },
+    "V5-E": {
+      "category": "specific_complete",
+      "family": "V5",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 0.0,
+          "sampled_avg_recall_pct": 0.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 80.0,
+          "complete_answer_rate_pct": 80.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V5-F": {
+      "category": "narrow_control",
+      "family": "V5",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 60.0,
+          "complete_answer_rate_pct": 60.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 80.0,
+          "complete_answer_rate_pct": 80.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V6-A": {
+      "category": "broad_topic",
+      "family": "V6",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 85.0,
+          "complete_answer_rate_pct": 40.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 85.0,
+          "complete_answer_rate_pct": 40.0
+        }
+      }
+    },
+    "V6-B": {
+      "category": "overview",
+      "family": "V6",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        }
+      }
+    },
+    "V6-C": {
+      "category": "explain",
+      "family": "V6",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        }
+      }
+    },
+    "V6-D": {
+      "category": "tell_me_all",
+      "family": "V6",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 95.0,
+          "complete_answer_rate_pct": 80.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 75.0,
+          "sampled_avg_recall_pct": 75.0,
+          "complete_answer_rate_pct": 0.0
+        }
+      }
+    },
+    "V6-E": {
+      "category": "specific_complete",
+      "family": "V6",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    },
+    "V6-F": {
+      "category": "narrow_control",
+      "family": "V6",
+      "conditions": {
+        "A_base": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "B_v4": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "C_high": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        },
+        "D_identity": {
+          "greedy_recall_pct": 100.0,
+          "sampled_avg_recall_pct": 100.0,
+          "complete_answer_rate_pct": 100.0
+        }
+      }
+    }
+  }
+}

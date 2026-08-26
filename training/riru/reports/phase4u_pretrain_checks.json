@@ -1,0 +1,65 @@
+{
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "train_count": 964,
+  "val_count": 106,
+  "candidate_count": 1070,
+  "ratio_high_candidate_sha256": "368b8aab7e5aeada1f8ff2ddff05b1d234d04a45b470fc57f15ef161e6c61c3a",
+  "ratio_high_candidate_unchanged": true,
+  "system_prompt_md5": "f3ea72a9ea9a400fcfae0018896350b8",
+  "system_prompt_unchanged": true,
+  "adapter_sha256_check": {
+    "v1": {
+      "expected": "9037adaa1f85299a803294fa4a88c32fc1de82c499c9cb320e2c6d3d55d2a6c1",
+      "actual": "9037adaa1f85299a803294fa4a88c32fc1de82c499c9cb320e2c6d3d55d2a6c1",
+      "match": true
+    },
+    "v2": {
+      "expected": "ecbfef5ff208fbff08c56553f53d6f83a925e346bb30a867a9a389bd16b7be8d",
+      "actual": "ecbfef5ff208fbff08c56553f53d6f83a925e346bb30a867a9a389bd16b7be8d",
+      "match": true
+    },
+    "v3": {
+      "expected": "7d348705de552bc4c2a33a4546845dc09809385664b042193731e26337c055aa",
+      "actual": "7d348705de552bc4c2a33a4546845dc09809385664b042193731e26337c055aa",
+      "match": true
+    },
+    "v4": {
+      "expected": "b5f1646cf823e4b382cdac91ab973e9859cf60aebce665ba8cc7e2240d6b5bec",
+      "actual": "b5f1646cf823e4b382cdac91ab973e9859cf60aebce665ba8cc7e2240d6b5bec",
+      "match": true
+    },
+    "v5-qkv": {
+      "expected": "358b0610d55496252324d92c006d409d31ee4d22032e9d8b5d856bc7f4d97774",
+      "actual": "358b0610d55496252324d92c006d409d31ee4d22032e9d8b5d856bc7f4d97774",
+      "match": true
+    },
+    "o8": {
+      "expected": "9177ddea8d302b43279b135f465e38e9b3106e81c93f4cd49ed4190622df854d",
+      "actual": "9177ddea8d302b43279b135f465e38e9b3106e81c93f4cd49ed4190622df854d",
+      "match": true
+    },
+    "o4": {
+      "expected": "daa3efcde43d7fd1189c9fbe8d0d4bc090be25548c3e18a813beb86a306f18f8",
+      "actual": "daa3efcde43d7fd1189c9fbe8d0d4bc090be25548c3e18a813beb86a306f18f8",
+      "match": true
+    },
+    "ratio-mid": {
+      "expected": "578b465b5c92863726759b5f41c560aa94551bff1b538a0acf67b27b5820eb39",
+      "actual": "578b465b5c92863726759b5f41c560aa94551bff1b538a0acf67b27b5820eb39",
+      "match": true
+    },
+    "ratio-high": {
+      "expected": "b0c3e65764dec4a9c840aacdad6a7bbc27bc0ff1442165c4d9eac87684de2568",
+      "actual": "b0c3e65764dec4a9c840aacdad6a7bbc27bc0ff1442165c4d9eac87684de2568",
+      "match": true
+    }
+  },
+  "dataset_quality_issue_count": 0,
+  "complex_ratio_pct": 10.56,
+  "complex_ratio_ok": true,
+  "train_val_overlap": 0,
+  "train_val_overlap_ok": true,
+  "lora_config_matches_ratio_high": true,
+  "overall_status": "READY"
+}

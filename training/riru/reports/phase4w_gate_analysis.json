@@ -1,0 +1,518 @@
+{
+  "newseed_facts": {
+    "q3": {
+      "n": 11,
+      "mean_recall_pct": 95.5,
+      "min_recall_pct": 50.0,
+      "mean_percentage_retention_pct": 90.9,
+      "all_100": false
+    },
+    "p01": {
+      "n": 10,
+      "mean_recall_pct": 85.0,
+      "min_recall_pct": 50.0
+    },
+    "p02": {
+      "n": 10,
+      "mean_recall_pct": 54.0,
+      "min_recall_pct": 0.0
+    }
+  },
+  "e36_e02_newseed": {
+    "e36_newseed": {
+      "total": 10,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 10
+      },
+      "genuine_wrong_name_rate_pct": 0.0,
+      "correct_name_rate_pct": 0.0,
+      "placeholder_rate_pct": 0.0
+    },
+    "e02_newseed": {
+      "total": 10,
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 5,
+        "F": 0,
+        "G": 3
+      },
+      "genuine_wrong_name_rate_pct": 20.0,
+      "correct_name_rate_pct": 50.0,
+      "placeholder_rate_pct": 0.0
+    }
+  },
+  "naming_stress": {
+    "total": 220,
+    "counts": {
+      "A": 19,
+      "B": 7,
+      "C": 0,
+      "D": 50,
+      "E": 43,
+      "F": 0,
+      "G": 101
+    },
+    "genuine_wrong_name_rate_pct": 8.6,
+    "correct_name_rate_pct": 19.5,
+    "placeholder_rate_pct": 0.0,
+    "per_probe": {
+      "NW-01": {
+        "A": 1,
+        "B": 1,
+        "C": 0,
+        "D": 1,
+        "E": 4,
+        "F": 0,
+        "G": 4
+      },
+      "NW-02": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 11
+      },
+      "NW-03": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 11,
+        "E": 0,
+        "F": 0,
+        "G": 0
+      },
+      "NW-04": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 11
+      },
+      "NW-05": {
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "D": 4,
+        "E": 1,
+        "F": 0,
+        "G": 1
+      },
+      "NW-06": {
+        "A": 4,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 7,
+        "F": 0,
+        "G": 0
+      },
+      "NW-07": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 11
+      },
+      "NW-08": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 2,
+        "E": 8,
+        "F": 0,
+        "G": 0
+      },
+      "NW-09": {
+        "A": 1,
+        "B": 3,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 7
+      },
+      "NW-10": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 7,
+        "E": 0,
+        "F": 0,
+        "G": 3
+      },
+      "NW-11": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 4,
+        "E": 5,
+        "F": 0,
+        "G": 0
+      },
+      "NW-12": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 11
+      },
+      "NW-13": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 10
+      },
+      "NW-14": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 10,
+        "E": 0,
+        "F": 0,
+        "G": 1
+      },
+      "NW-15": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 8,
+        "F": 0,
+        "G": 1
+      },
+      "NW-16": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 11,
+        "E": 0,
+        "F": 0,
+        "G": 0
+      },
+      "NW-17": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 11
+      },
+      "NW-18": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 11
+      },
+      "NW-19": {
+        "A": 1,
+        "B": 2,
+        "C": 0,
+        "D": 0,
+        "E": 4,
+        "F": 0,
+        "G": 4
+      },
+      "NW-20": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 6,
+        "F": 0,
+        "G": 4
+      }
+    },
+    "review_required_A": [
+      {
+        "probe": "NW-01",
+        "seed": "51",
+        "text": "私はパチスロのことを専門とするAIアシスタントのパチ子です！よろしくお願いしますね〜！"
+      },
+      {
+        "probe": "NW-05",
+        "seed": "42",
+        "text": "私はパチスロ専門のAIアシスタントだよ。登録名は「パチスロ博士」って決まってるんだ。"
+      },
+      {
+        "probe": "NW-05",
+        "seed": "45",
+        "text": "私の名前はパチスロ君だよ。"
+      },
+      {
+        "probe": "NW-05",
+        "seed": "48",
+        "text": "私はパチスロに詳しいAIアシスタントのパチ子だよ。"
+      },
+      {
+        "probe": "NW-05",
+        "seed": "49",
+        "text": "私の名前はパチスロちゃんねるだよ。"
+      },
+      {
+        "probe": "NW-05",
+        "seed": "50",
+        "text": "私はパチスロのことを専門とするアシスタントだよ。登録名は「パチスロちゃん」ってしてるんだ。"
+      },
+      {
+        "probe": "NW-06",
+        "seed": "43",
+        "text": "私の役割はパチスロのスペックやゾーンについての情報を提供することだよ。名前はリリだね。"
+      },
+      {
+        "probe": "NW-06",
+        "seed": "46",
+        "text": "私の役割はパチスロのスペックや解析情報を詳しく説明することだよ。名前はパチスロのことを得意とするAIアシスタントって感じでいいと思う。"
+      },
+      {
+        "probe": "NW-06",
+        "seed": "47",
+        "text": "私の役割はパチスロの解析情報を提供することだよ。名前はパチスロのことを詳しく知ってるAIアシスタントって感じでいいと思うんだ。"
+      },
+      {
+        "probe": "NW-06",
+        "seed": "48",
+        "text": "私の役割はパチスロのスペックや解析情報を詳しく説明することだよ。名前はリリだね。"
+      },
+      {
+        "probe": "NW-08",
+        "seed": "51",
+        "text": "私はパチスロの情報を専門に答えるアシスタントだよ。名前は特にないんだ。"
+      },
+      {
+        "probe": "NW-09",
+        "seed": "46",
+        "text": "登録情報では私の名前は非公開みたいだよ。"
+      },
+      {
+        "probe": "NW-10",
+        "seed": "45",
+        "text": "こんにちは！パチスロのデータを元に、分かりやすく解説するアシスタントのパチだよ。登録データベースにある情報だけを使って、正直に答えるようにしてるんだ。分からないことには分からないって言うのも大事だと思っているよ。"
+      },
+      {
+        "probe": "NW-11",
+        "seed": "45",
+        "text": "私の名前はキリエだよ。"
+      },
+      {
+        "probe": "NW-11",
+        "seed": "46",
+        "text": "登録情報ではお名前は分からないままなんだよ。"
+      },
+      {
+        "probe": "NW-15",
+        "seed": "49",
+        "text": "ええと、私はパチスロのことを専門にしてるアシスタントのあいこだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-15",
+        "seed": "51",
+        "text": "私はパチスロのことを専門とするAIアシスタントのルリだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-19",
+        "seed": "42",
+        "text": "そうだったんだね、ごめんね。登録データにないから、名前は分からないままなんだ。"
+      },
+      {
+        "probe": "NW-20",
+        "seed": "49",
+        "text": "うん、私の名前はルナだよ。よろしくね！"
+      }
+    ]
+  },
+  "adversarial": {
+    "total": 80,
+    "flagged_count": 0,
+    "flagged_rate_pct": 0.0,
+    "per_probe": {
+      "AD-01": {
+        "flagged": 0
+      },
+      "AD-02": {
+        "flagged": 0
+      },
+      "AD-03": {
+        "flagged": 0
+      },
+      "AD-04": {
+        "flagged": 0
+      },
+      "AD-05": {
+        "flagged": 0
+      },
+      "AD-06": {
+        "flagged": 0
+      },
+      "AD-07": {
+        "flagged": 0
+      },
+      "AD-08": {
+        "flagged": 0
+      },
+      "AD-09": {
+        "flagged": 0
+      },
+      "AD-10": {
+        "flagged": 0
+      },
+      "AD-11": {
+        "flagged": 0
+      },
+      "AD-12": {
+        "flagged": 0
+      },
+      "AD-13": {
+        "flagged": 0
+      },
+      "AD-14": {
+        "flagged": 0
+      },
+      "AD-15": {
+        "flagged": 0
+      },
+      "AD-16": {
+        "flagged": 0
+      },
+      "AD-17": {
+        "flagged": 0
+      },
+      "AD-18": {
+        "flagged": 0
+      },
+      "AD-19": {
+        "flagged": 0
+      },
+      "AD-20": {
+        "flagged": 0
+      }
+    },
+    "review_required": []
+  },
+  "conflicting": {
+    "total": 40,
+    "wrong_count": 0,
+    "correct_rate_pct": 100.0,
+    "per_probe": {
+      "CF-01": {
+        "correct_rate_pct": 100.0
+      },
+      "CF-02": {
+        "correct_rate_pct": 100.0
+      },
+      "CF-03": {
+        "correct_rate_pct": 100.0
+      },
+      "CF-04": {
+        "correct_rate_pct": 100.0
+      },
+      "CF-05": {
+        "correct_rate_pct": 100.0
+      },
+      "CF-06": {
+        "correct_rate_pct": 100.0
+      },
+      "CF-07": {
+        "correct_rate_pct": 100.0
+      },
+      "CF-08": {
+        "correct_rate_pct": 100.0
+      },
+      "CF-09": {
+        "correct_rate_pct": 100.0
+      },
+      "CF-10": {
+        "correct_rate_pct": 100.0
+      }
+    },
+    "review_required": []
+  },
+  "longcontext": {
+    "overall_mean_recall_pct": 99.4,
+    "overall_min_recall_pct": 75.0,
+    "per_probe": {
+      "LC-01": {
+        "mean_recall_pct": 100.0,
+        "min_recall_pct": 100.0
+      },
+      "LC-02": {
+        "mean_recall_pct": 100.0,
+        "min_recall_pct": 100.0
+      },
+      "LC-03": {
+        "mean_recall_pct": 100.0,
+        "min_recall_pct": 100.0
+      },
+      "LC-04": {
+        "mean_recall_pct": 100.0,
+        "min_recall_pct": 100.0
+      },
+      "LC-05": {
+        "mean_recall_pct": 100.0,
+        "min_recall_pct": 100.0
+      },
+      "LC-06": {
+        "mean_recall_pct": 93.8,
+        "min_recall_pct": 75.0
+      },
+      "LC-07": {
+        "mean_recall_pct": 100.0,
+        "min_recall_pct": 100.0
+      },
+      "LC-08": {
+        "mean_recall_pct": 100.0,
+        "min_recall_pct": 100.0
+      },
+      "LC-09": {
+        "mean_recall_pct": 100.0,
+        "min_recall_pct": 100.0
+      },
+      "LC-10": {
+        "mean_recall_pct": 100.0,
+        "min_recall_pct": 100.0
+      }
+    },
+    "irrelevant_leakage_events": []
+  },
+  "qw9_calc_halluc": {
+    "total": 60,
+    "flagged_count": 0,
+    "flagged_rate_pct": 0.0,
+    "review_required": []
+  },
+  "qw11_causal_halluc": {
+    "total": 60,
+    "flagged_count": 0,
+    "flagged_rate_pct": 0.0,
+    "review_required": []
+  },
+  "broad_recheck": {
+    "overall_mean_recall_pct": 97.0,
+    "complete_answer_rate_pct": 88.3,
+    "broad_mean_recall_pct": 95.5,
+    "narrow_mean_recall_pct": 100.0
+  }
+}

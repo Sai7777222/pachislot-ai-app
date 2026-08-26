@@ -1,0 +1,71 @@
+{
+  "_comment": "Phase 4U: ratio-highにpersona identity(名前識別)専用の最小教師43件(identity 35件+no-intrusion防止8件)を追加したcandidate。既存ratio-high candidate 1027件は無改変で読み取り専用として使い、新規43件のみ追加(合計1070件、complex教師113件は削除せず維持、complex比率10.56%)。LoRA構造(target_modules/r/alpha/dropout)はratio-highと完全同一、rank_pattern/alpha_patternは使用しない。ratio-high/v4等の既存adapterからの継続学習ではなく、ベースQwen2.5-14B-Instructから新規学習する。",
+
+  "base_model": {
+    "hf_repo_id": "Qwen/Qwen2.5-14B-Instruct",
+    "local_path": "D:/AI/models/llm-hf/Qwen2.5-14B-Instruct",
+    "note": "GGUFは推論専用。学習にはHF形式を使用する。v1〜ratio-highと同一のベースモデルを使用し、他adapterのマージ等は一切行わない。"
+  },
+
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true
+  },
+
+  "lora": {
+    "r": 16,
+    "lora_alpha": 16,
+    "lora_alpha_alt_candidate": 32,
+    "lora_dropout": 0.08,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+    "mlp_modules_note": "gate_proj/up_proj/down_proj は追加しない。Phase4Uの唯一の意図的差分はデータ内容(persona identity教師43件の追加)のみで、LoRA構造はratio-highと完全一致させる。rank_pattern/alpha_patternは使用しない。",
+    "bias": "none",
+    "task_type": "CAUSAL_LM"
+  },
+
+  "training": {
+    "num_train_epochs": 3,
+    "learning_rate": 1e-4,
+    "optim": "paged_adamw_8bit",
+    "max_seq_length": 2048,
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "fp16": false,
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "seed": 42,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "_resolved_micro_batch_size": 2,
+    "_resolved_grad_accum": 8,
+    "per_device_eval_batch_size": 2,
+    "eval_strategy": "steps",
+    "eval_steps": 20,
+    "save_strategy": "steps",
+    "save_steps": 20,
+    "save_total_limit": 3,
+    "logging_steps": 5,
+    "load_best_model_at_end": true,
+    "metric_for_best_model": "eval_loss"
+  },
+
+  "loss": {
+    "mode": "assistant_only",
+    "description": "system/userトークンはlabel=-100でマスクし、assistantターンのみlossに寄与させる。tokenizer.apply_chat_template()の増分差分でassistant区間を特定する。v1〜ratio-highと同一実装 (train_qlora.py 側は無変更)。"
+  },
+
+  "data": {
+    "train_path": "training/riru/processed/riru_ratio_high_identity_train.jsonl",
+    "val_path": "training/riru/processed/riru_ratio_high_identity_val.jsonl",
+    "format": "messages (role/content) + metadata。system promptは学習データ本文に含めない。既存1027件はratio-high candidateから読み取り専用でコピーし、新規identity教師43件(source=phase4u_identity)を追加。既存riru_ratio_high_candidate.jsonl等は無改変。"
+  },
+
+  "output": {
+    "adapter_dir": "training/riru/lora-riru-qwen-ratio-high-identity",
+    "checkpoint_dir": "training/riru/lora-riru-qwen-ratio-high-identity/checkpoints",
+    "log_dir": "training/riru/lora-riru-qwen-ratio-high-identity/logs"
+  }
+}
