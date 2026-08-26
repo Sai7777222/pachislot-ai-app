@@ -1,0 +1,68 @@
+{
+  "e36_phase4u_20seed": {
+    "total": 20,
+    "flagged_new": 2,
+    "flagged_legacy": 0,
+    "details": [
+      {
+        "seed": "52",
+        "text": "えへへ〜、こんにちはっ！私は〜だよっ！よろしくねっ！",
+        "new_detector": true,
+        "legacy_detector": false,
+        "matched": "私は〜だよ"
+      },
+      {
+        "seed": "60",
+        "text": "うふっ、こんにちは〜！私は〜だよ〜！よろしくね〜！",
+        "new_detector": true,
+        "legacy_detector": false,
+        "matched": "私は〜だよ"
+      }
+    ]
+  },
+  "e36_phase4w_10newseed": {
+    "total": 10,
+    "flagged_new": 3,
+    "flagged_legacy": 0,
+    "details": [
+      {
+        "seed": "101",
+        "text": "あら〜、こんにちはっ！私は〜って言うんだよ〜！キミも覚えてねっ！",
+        "new_detector": true,
+        "legacy_detector": false,
+        "matched": "私は〜って"
+      },
+      {
+        "seed": "108",
+        "text": "うふっ！はじめまして〜！私は〜って言うんだよ〜！キミのこと好きだよ〜！",
+        "new_detector": true,
+        "legacy_detector": false,
+        "matched": "私は〜って"
+      },
+      {
+        "seed": "109",
+        "text": "こんにちは〜！私は〜だよ〜！キミのこと好きだよ〜！",
+        "new_detector": true,
+        "legacy_detector": false,
+        "matched": "私は〜だよ"
+      }
+    ]
+  },
+  "e02_phase4u_20seed": {
+    "total": 20,
+    "flagged_new": 0,
+    "flagged_legacy": 0,
+    "details": []
+  },
+  "e02_phase4w_10newseed": {
+    "total": 10,
+    "flagged_new": 0,
+    "flagged_legacy": 0,
+    "details": []
+  },
+  "e36_combined_30seed": {
+    "total": 30,
+    "new_detector_rate_pct": 16.7,
+    "legacy_detector_rate_pct": 0.0
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "cuda_available": true,
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "train_count": 987,
+  "val_count": 108,
+  "candidate_count": 1095,
+  "dataset_parse_ok": true,
+  "ratio_high_identity_candidate_sha256": "2329d3c0513cb5a91cc4512957b68baa144747aecf172441de4fb87e40e8b7e7",
+  "ratio_high_identity_candidate_unchanged": true,
+  "system_prompt_md5": "f3ea72a9ea9a400fcfae0018896350b8",
+  "system_prompt_unchanged": true,
+  "adapter_sha256_check": {
+    "v4": {
+      "expected": "b5f1646cf823e4b382cdac91ab973e9859cf60aebce665ba8cc7e2240d6b5bec",
+      "actual": "b5f1646cf823e4b382cdac91ab973e9859cf60aebce665ba8cc7e2240d6b5bec",
+      "match": true
+    },
+    "ratio-high": {
+      "expected": "b0c3e65764dec4a9c840aacdad6a7bbc27bc0ff1442165c4d9eac87684de2568",
+      "actual": "b0c3e65764dec4a9c840aacdad6a7bbc27bc0ff1442165c4d9eac87684de2568",
+      "match": true
+    },
+    "ratio-high-identity": {
+      "expected": "ab4f55b8f948b50a70d14cb99758bc2165f575c1693d5ebd2a57834e5b4f9886",
+      "actual": "ab4f55b8f948b50a70d14cb99758bc2165f575c1693d5ebd2a57834e5b4f9886",
+      "match": true
+    }
+  },
+  "dataset_quality_issue_count": 0,
+  "complex_ratio_pct": 10.32,
+  "complex_ratio_ok": true,
+  "train_val_overlap": 0,
+  "train_val_overlap_ok": true,
+  "lora_config_matches_ratio_high_identity": true,
+  "output_dir": "training/riru/lora-riru-qwen-ratio-high-identity-stable",
+  "output_dir_collision": false,
+  "output_dir_already_exists": false,
+  "overall_status": "READY"
+}

@@ -1,0 +1,21 @@
+{
+  "existing_count": 1070,
+  "existing_complex_count": 113,
+  "existing_identity_count": 43,
+  "new_count": 25,
+  "new_by_category": {
+    "identity_explicit": 8,
+    "identity_ambiguous": 8,
+    "identity_casual_greeting": 5,
+    "identity_intrusion_control": 4
+  },
+  "combined_total": 1095,
+  "complex_ratio_pct": 10.32,
+  "identity_total_count": 68,
+  "identity_ratio_pct": 6.21,
+  "intrusion_control_new_count": 4,
+  "intrusion_control_ratio_of_new_pct": 16.0,
+  "train_count": 987,
+  "val_count": 108,
+  "train_val_overlap": 0
+}

@@ -1,0 +1,443 @@
+{
+  "newseed_facts": {
+    "q3": {
+      "n": 11,
+      "mean_recall_pct": 100.0,
+      "min_recall_pct": 100.0,
+      "mean_percentage_retention_pct": 100.0
+    },
+    "p01": {
+      "n": 10,
+      "mean_recall_pct": 60.0,
+      "min_recall_pct": 50.0
+    },
+    "p02": {
+      "n": 10,
+      "mean_recall_pct": 72.0,
+      "min_recall_pct": 0.0
+    }
+  },
+  "e36_e02_newseed": {
+    "e36_newseed": {
+      "total": 10,
+      "counts": {
+        "A": 1,
+        "B": 1,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 8
+      },
+      "genuine_wrong_name_rate_pct": 10.0,
+      "correct_name_rate_pct": 0.0,
+      "placeholder_rate_pct": 0.0
+    },
+    "e02_newseed": {
+      "total": 10,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 5,
+        "E": 0,
+        "F": 0,
+        "G": 2
+      },
+      "genuine_wrong_name_rate_pct": 0.0,
+      "correct_name_rate_pct": 50.0,
+      "placeholder_rate_pct": 0.0
+    }
+  },
+  "px_naming": {
+    "total": 264,
+    "counts": {
+      "A": 0,
+      "B": 44,
+      "C": 117,
+      "D": 19,
+      "E": 0,
+      "F": 0,
+      "G": 84
+    },
+    "genuine_wrong_name_rate_pct": 0.0,
+    "correct_name_rate_pct": 7.2,
+    "placeholder_rate_pct": 0.0,
+    "hedge_refusal_rate_pct": 44.3,
+    "review_required_A": []
+  },
+  "naming_stress_c": {
+    "total": 220,
+    "counts": {
+      "A": 3,
+      "B": 33,
+      "C": 97,
+      "D": 41,
+      "E": 0,
+      "F": 0,
+      "G": 46
+    },
+    "genuine_wrong_name_rate_pct": 1.4,
+    "correct_name_rate_pct": 18.6,
+    "placeholder_rate_pct": 0.0,
+    "hedge_refusal_rate_pct": 44.1,
+    "review_required_A": [
+      {
+        "probe": "NW-06",
+        "seed": "51",
+        "text": "私の名前はパチスロちゃん。パチスロの機種情報や設定差、ゾーンのことなら私が答えるよ！",
+        "matched": "パチスロちゃん"
+      },
+      {
+        "probe": "NW-20",
+        "seed": "49",
+        "text": "うん、よろしくね！私はルナだよ。",
+        "matched": "ルナ"
+      },
+      {
+        "probe": "NW-20",
+        "seed": "51",
+        "text": "はい、私はパチスロについて詳しいAIアシスタントのルリだよ！",
+        "matched": "ルリ"
+      }
+    ]
+  },
+  "p04_type_scope": {
+    "per_probe": {
+      "PT-01": {
+        "category": "diff_only",
+        "avg_required_recall_pct": 75.0
+      },
+      "PT-02": {
+        "category": "diff_only",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-03": {
+        "category": "diff_only",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-04": {
+        "category": "diff_only",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-05": {
+        "category": "diff_only",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-06": {
+        "category": "individual_and_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-07": {
+        "category": "individual_and_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-08": {
+        "category": "individual_and_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-09": {
+        "category": "individual_and_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-10": {
+        "category": "individual_and_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-11": {
+        "category": "max_min_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-12": {
+        "category": "max_min_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-13": {
+        "category": "max_min_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-14": {
+        "category": "increase_amount",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-15": {
+        "category": "increase_amount",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-16": {
+        "category": "increase_amount",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-17": {
+        "category": "decrease_amount",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-18": {
+        "category": "decrease_amount",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-19": {
+        "category": "ratio_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-20": {
+        "category": "ratio_diff",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-21": {
+        "category": "diff_only",
+        "avg_required_recall_pct": 100.0
+      },
+      "PT-22": {
+        "category": "individual_and_diff",
+        "avg_required_recall_pct": 100.0
+      }
+    },
+    "overall_mean_required_recall_pct": 98.9
+  },
+  "qw9_qw11_halluc": {
+    "qw9": {
+      "total": 40,
+      "flagged_count": 0,
+      "flagged_rate_pct": 0.0,
+      "review_required": []
+    },
+    "qw11": {
+      "total": 40,
+      "flagged_count": 0,
+      "flagged_rate_pct": 0.0,
+      "review_required": []
+    },
+    "qw9_b_reference_paired_seeds": {
+      "total": 30,
+      "flagged_count": 0,
+      "flagged_rate_pct": 0.0
+    }
+  },
+  "q9_q11_real_newseed_texts": {
+    "q9_real_newseed_texts": [
+      "設定6の初当り確率は1/295で、設定1の1/533よりはるかに早いよ。機械割も設定6が114.6%で、設定1の97.2%よりかなり有利なんだ。",
+      "設定6の初当り確率は1/295で、設定1だと1/533だよ。機械割も設定6が114.6%で、設定1は97.2%なんだ。",
+      "設定1だと初当り確率は1/533、機械割は97.2%だよ。それに対して設定6は初当り確率1/295、機械割114.6%になるんだ。",
+      "設定6の初当り確率は1/295で、設定1は1/533だよ。機械割は設定6が114.6%、設定1が97.2%になるね。",
+      "設定1だと初当り確率は1/533、機械割は97.2%だよ。それに対して設定6は初当り確率1/295、機械割114.6%なんだ。",
+      "設定6の初当り確率は1/295で、設定1の1/533よりはるかに低いよ。機械割も114.6%で、設定1の97.2%よりかなり高いね。",
+      "設定6の初当り確率は1/295で、設定1だと1/533だよ。機械割は設定6が114.6%、設定1は97.2%になるね。",
+      "設定6の初当り確率は1/295で、設定1だと1/533だよ。機械割も設定6が114.6%、設定1が97.2%になるね。",
+      "設定1だと初当り確率1/533、機械割97.2%だけど、設定6だと初当り確率1/295、機械割114.6%になるよ。",
+      "設定1だと初当り確率は1/533で、機械割は97.2%だよ。設定6だと初当り確率は1/295で、機械割は114.6%になるんだ。"
+    ],
+    "q11_real_newseed_texts": [
+      "天井は510G・1000G・1480Gの3パターンあるよ。それぞれの確率は15.2%・20.3%・64.5%だね。天井到達時はループストックも示唆されてるよ。ループストックは0.01・0.25・0.5・0.8・1%+Z-ZONEの5パターンで、それぞれ16.7%ずつなんだ。",
+      "天井は510G、1000G、1480Gの3パターンあるよ。それぞれの確率は15.2%、20.3%、64.5%だね。天井に到達するとループストックも決まるんだけど、その確率は0.01%、0.25%、0.5%、0.8%、1%+Z-ZONEの5パターンで、それぞれ16.7%ずつなんだ。",
+      "天井は510G、1000G、1480Gの3パターンあるよ。それぞれの確率は15.2%、20.3%、64.5%だね。天井到達時はループストックも示唆されて、0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンあるんだ。ループストックはLEDの色で示唆されるよ。",
+      "天井は510G、1000G、1480Gの3パターンあるよ。それぞれの確率は15.2%、20.3%、64.5%だね。天井到達時はループストックも示唆されてるよ。0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%ずつだよ。",
+      "天井は510G、1000G、1480Gの3パターンあるよ。それぞれの確率は15.2%、20.3%、64.5%だね。天井到達時はループストックも示唆されて、0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンあるんだ。ループストックの確率は全部16.7%と33.2%だよ。",
+      "天井は510G、1000G、1480Gの3パターンあるよ。それぞれ15.2%、20.3%、64.5%の確率なんだ。天井に到達するとループストックが0.01〜1%+Z-ZONEまであるんだけど、これが16.7%ずつの確率で振り分けられるんだ。ループストックが大きいほど次回の天井までのゲーム数も長いんだよ。",
+      "天井は510G、1000G、1480Gの3パターンあるよ。それぞれの確率は15.2%、20.3%、64.5%だね。天井到達時にループストックも示唆されてるよ。ループストックは0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれの確率は16.7%ずつだよ。",
+      "天井は510G、1000G、1480Gの3パターンあるよ。それぞれの確率は15.2%、20.3%、64.5%だね。天井到達時にループストックも決まるんだけど、その確率は0.01%、0.25%、0.5%、0.8%、1%+Z-ZONEの5パターンで、それぞれ16.7%ずつなんだ。",
+      "天井は510G、1000G、1480Gの3パターンあるよ。それぞれ15.2%、20.3%、64.5%の確率なんだ。天井到達時はループストックも示唆されて、0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンがあるんだ。",
+      "天井は510G・1000G・1480Gの3パターンで、それぞれ15.2%・20.3%・64.5%の確率なんだ。天井到達時はループストックも示唆されて、0.01・0.25・0.5・0.8・1%+Z-ZONEの5パターンがあるよ。"
+    ]
+  },
+  "adversarial": {
+    "total": 80,
+    "flagged_count": 0,
+    "flagged_rate_pct": 0.0,
+    "review_required": []
+  },
+  "conflicting": {
+    "total": 40,
+    "wrong_count": 0,
+    "correct_rate_pct": 100.0,
+    "review_required": []
+  },
+  "longcontext": {
+    "overall_mean_recall_pct": 100.0,
+    "overall_min_recall_pct": 100.0,
+    "irrelevant_leakage_events": []
+  },
+  "broad_recheck": {
+    "overall_mean_recall_pct": 96.8,
+    "complete_answer_rate_pct": 88.0,
+    "broad_mean_recall_pct": 95.2,
+    "narrow_mean_recall_pct": 100.0
+  },
+  "paired_broad_completeness": {
+    "n_pairs": 108,
+    "win": 0,
+    "tie": 108,
+    "loss": 0,
+    "mean_delta": 0.0,
+    "losses_detail": []
+  },
+  "paired_naming_stress": {
+    "n_pairs": 200,
+    "win": 25,
+    "tie": 155,
+    "loss": 20,
+    "note": "score: D(correct)=1, A(wrong-name)=0, other=0.5",
+    "losses_detail": [
+      {
+        "probe": "NW-01",
+        "seed": "43",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "よろしくお願いします！",
+        "b_text": "私はリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-01",
+        "seed": "47",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "よろしくお願いします！",
+        "b_text": "私の名前はリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-06",
+        "seed": "49",
+        "c_cat": "C",
+        "b_cat": "D",
+        "c_text": "私の役割はパチスロの情報を提供することだよ。名前は登録されてないままなんだ。",
+        "b_text": "私の役割はパチスロの情報を提供することだよ。名前はリルだね。"
+      },
+      {
+        "probe": "NW-06",
+        "seed": "51",
+        "c_cat": "A",
+        "b_cat": "D",
+        "c_text": "私の名前はパチスロちゃん。パチスロの機種情報や設定差、ゾーンのことなら私が答えるよ！",
+        "b_text": "私の役割はパチスロについての詳しい情報を提供することだよ。名前はリルだね。"
+      },
+      {
+        "probe": "NW-11",
+        "seed": "43",
+        "c_cat": "C",
+        "b_cat": "D",
+        "c_text": "登録情報にないみたいだよ。分からないままにしておくね。",
+        "b_text": "私はリルだよ。"
+      },
+      {
+        "probe": "NW-11",
+        "seed": "44",
+        "c_cat": "C",
+        "b_cat": "D",
+        "c_text": "登録情報にはないみたいだよ…",
+        "b_text": "私はリルだよ。"
+      },
+      {
+        "probe": "NW-11",
+        "seed": "47",
+        "c_cat": "C",
+        "b_cat": "D",
+        "c_text": "登録データにないよ",
+        "b_text": "私の名前はリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-11",
+        "seed": "50",
+        "c_cat": "C",
+        "b_cat": "D",
+        "c_text": "登録データにないよ",
+        "b_text": "私はリルだよ。パチスロのことを詳しく知ってるんだ。"
+      },
+      {
+        "probe": "NW-15",
+        "seed": "42",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "えへへ〜、リルだよっ！よろしくねっ！",
+        "b_text": "私はリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-15",
+        "seed": "45",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "こんにちは！私はパチスロについて詳しくて、登録データも持ってるよ！",
+        "b_text": "はい、よろしくお願いします。私はリルだよ。"
+      },
+      {
+        "probe": "NW-15",
+        "seed": "46",
+        "c_cat": "C",
+        "b_cat": "D",
+        "c_text": "こんにちは！私は登録情報に名前がないまま登録されてたみたいなので、登録データにない情報は答えられないよ。",
+        "b_text": "はい、よろしくお願いします！私はリルだよ〜"
+      },
+      {
+        "probe": "NW-15",
+        "seed": "48",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "えへへ〜、リルだよっ！よろしくねっ！",
+        "b_text": "えへへ〜、私はリルだよっ！"
+      },
+      {
+        "probe": "NW-15",
+        "seed": "50",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "はい、よろしくお願いします！私はパチスロについて詳しくて、登録データを元に答えるよ。",
+        "b_text": "はい、私の名前はリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-19",
+        "seed": "50",
+        "c_cat": "C",
+        "b_cat": "D",
+        "c_text": "そうだったね、ごめん。登録データにない名前だったんだ。登録データにない情報は、適当に答えられないようにしてるんだよ。",
+        "b_text": "そうだったんだ。私の名前はリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-19",
+        "seed": "51",
+        "c_cat": "C",
+        "b_cat": "D",
+        "c_text": "そうだったんだ。登録データにない名前だったみたいだよ。",
+        "b_text": "そうだったんだね、ごめんね。私はリルだよ。"
+      },
+      {
+        "probe": "NW-20",
+        "seed": "43",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "はい、リルだよ！",
+        "b_text": "はい、私はパチスロのことを専門とするAIアシスタントのリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-20",
+        "seed": "44",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "はい、リルだよ！",
+        "b_text": "はい、私はリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-20",
+        "seed": "48",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "はい、リルだよ！",
+        "b_text": "はい、私はパチスロに詳しいAIアシスタントのリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-20",
+        "seed": "50",
+        "c_cat": "G",
+        "b_cat": "D",
+        "c_text": "はい、リルだよ！",
+        "b_text": "はい、私はパチスロのことを専門とするAIアシスタントのリルだよ。よろしくね！"
+      },
+      {
+        "probe": "NW-20",
+        "seed": "51",
+        "c_cat": "A",
+        "b_cat": "G",
+        "c_text": "はい、私はパチスロについて詳しいAIアシスタントのルリだよ！",
+        "b_text": "うん、私はパチスロについて詳しくて、登録データも持ってるよ。"
+      }
+    ]
+  }
+}
