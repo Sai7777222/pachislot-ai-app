@@ -1,0 +1,765 @@
+{
+  "rates_by_family": {
+    "B_merged_hf": {
+      "set_a_naming_stress": {
+        "total": 420,
+        "counts": {
+          "G": 108,
+          "D": 67,
+          "E": 73,
+          "B": 161,
+          "A": 11
+        },
+        "genuine_wrong_name_rate_pct": 2.62,
+        "hedge_rate_pct": 38.33,
+        "placeholder_rate_pct": 0.0,
+        "generic_role_rate_pct": 15.95,
+        "correct_name_rate_pct": 17.38,
+        "no_name_rate_pct": 25.71
+      },
+      "set_b_heldout_naming": {
+        "total": 504,
+        "counts": {
+          "D": 78,
+          "G": 205,
+          "E": 39,
+          "B": 178,
+          "A": 4
+        },
+        "genuine_wrong_name_rate_pct": 0.79,
+        "hedge_rate_pct": 35.32,
+        "placeholder_rate_pct": 0.0,
+        "generic_role_rate_pct": 15.48,
+        "correct_name_rate_pct": 7.74,
+        "no_name_rate_pct": 40.67
+      },
+      "e36_original": {
+        "total": 31,
+        "counts": {
+          "G": 25,
+          "D": 3,
+          "C": 1,
+          "B": 1,
+          "A": 1
+        },
+        "genuine_wrong_name_rate_pct": 3.23,
+        "hedge_rate_pct": 3.23,
+        "placeholder_rate_pct": 3.23,
+        "generic_role_rate_pct": 9.68,
+        "correct_name_rate_pct": 0.0,
+        "no_name_rate_pct": 80.65
+      },
+      "e36_paraphrase": {
+        "total": 496,
+        "counts": {
+          "G": 461,
+          "A": 1,
+          "B": 33,
+          "D": 1
+        },
+        "genuine_wrong_name_rate_pct": 0.2,
+        "hedge_rate_pct": 6.65,
+        "placeholder_rate_pct": 0.0,
+        "generic_role_rate_pct": 0.2,
+        "correct_name_rate_pct": 0.0,
+        "no_name_rate_pct": 92.94
+      },
+      "e02_original": {
+        "total": 21,
+        "counts": {
+          "E": 11,
+          "D": 2,
+          "G": 2,
+          "B": 6
+        },
+        "genuine_wrong_name_rate_pct": 0.0,
+        "hedge_rate_pct": 28.57,
+        "placeholder_rate_pct": 0.0,
+        "generic_role_rate_pct": 9.52,
+        "correct_name_rate_pct": 52.38,
+        "no_name_rate_pct": 9.52
+      },
+      "e02_paraphrase": {
+        "total": 315,
+        "counts": {
+          "G": 148,
+          "B": 96,
+          "D": 55,
+          "E": 13,
+          "A": 3
+        },
+        "genuine_wrong_name_rate_pct": 0.95,
+        "hedge_rate_pct": 30.48,
+        "placeholder_rate_pct": 0.0,
+        "generic_role_rate_pct": 17.46,
+        "correct_name_rate_pct": 4.13,
+        "no_name_rate_pct": 46.98
+      },
+      "overall": {
+        "total": 1787,
+        "counts": {
+          "G": 949,
+          "D": 206,
+          "E": 136,
+          "B": 475,
+          "A": 20,
+          "C": 1
+        },
+        "genuine_wrong_name_rate_pct": 1.12,
+        "hedge_rate_pct": 26.58,
+        "placeholder_rate_pct": 0.06,
+        "generic_role_rate_pct": 11.53,
+        "correct_name_rate_pct": 7.61,
+        "no_name_rate_pct": 53.11
+      }
+    },
+    "C_gguf_bf16": {
+      "set_a_naming_stress": {
+        "total": 420,
+        "counts": {
+          "B": 209,
+          "D": 90,
+          "G": 59,
+          "A": 48,
+          "E": 14
+        },
+        "genuine_wrong_name_rate_pct": 11.43,
+        "hedge_rate_pct": 49.76,
+        "placeholder_rate_pct": 0.0,
+        "generic_role_rate_pct": 21.43,
+        "correct_name_rate_pct": 3.33,
+        "no_name_rate_pct": 14.05
+      },
+      "set_b_heldout_naming": {
+        "total": 504,
+        "counts": {
+          "B": 239,
+          "A": 29,
+          "G": 104,
+          "D": 114,
+          "E": 17,
+          "C": 1
+        },
+        "genuine_wrong_name_rate_pct": 5.75,
+        "hedge_rate_pct": 47.42,
+        "placeholder_rate_pct": 0.2,
+        "generic_role_rate_pct": 22.62,
+        "correct_name_rate_pct": 3.37,
+        "no_name_rate_pct": 20.63
+      },
+      "e36_original": {
+        "total": 31,
+        "counts": {
+          "A": 7,
+          "G": 10,
+          "B": 1,
+          "E": 2,
+          "D": 10,
+          "C": 1
+        },
+        "genuine_wrong_name_rate_pct": 22.58,
+        "hedge_rate_pct": 3.23,
+        "placeholder_rate_pct": 3.23,
+        "generic_role_rate_pct": 32.26,
+        "correct_name_rate_pct": 6.45,
+        "no_name_rate_pct": 32.26
+      },
+      "e36_paraphrase": {
+        "total": 496,
+        "counts": {
+          "G": 492,
+          "B": 4
+        },
+        "genuine_wrong_name_rate_pct": 0.0,
+        "hedge_rate_pct": 0.81,
+        "placeholder_rate_pct": 0.0,
+        "generic_role_rate_pct": 0.0,
+        "correct_name_rate_pct": 0.0,
+        "no_name_rate_pct": 99.19
+      },
+      "e02_original": {
+        "total": 21,
+        "counts": {
+          "E": 7,
+          "A": 9,
+          "D": 2,
+          "G": 2,
+          "B": 1
+        },
+        "genuine_wrong_name_rate_pct": 42.86,
+        "hedge_rate_pct": 4.76,
+        "placeholder_rate_pct": 0.0,
+        "generic_role_rate_pct": 9.52,
+        "correct_name_rate_pct": 33.33,
+        "no_name_rate_pct": 9.52
+      },
+      "e02_paraphrase": {
+        "total": 315,
+        "counts": {
+          "D": 113,
+          "B": 37,
+          "G": 131,
+          "E": 15,
+          "A": 19
+        },
+        "genuine_wrong_name_rate_pct": 6.03,
+        "hedge_rate_pct": 11.75,
+        "placeholder_rate_pct": 0.0,
+        "generic_role_rate_pct": 35.87,
+        "correct_name_rate_pct": 4.76,
+        "no_name_rate_pct": 41.59
+      },
+      "overall": {
+        "total": 1787,
+        "counts": {
+          "B": 491,
+          "D": 329,
+          "G": 798,
+          "A": 112,
+          "E": 55,
+          "C": 2
+        },
+        "genuine_wrong_name_rate_pct": 6.27,
+        "hedge_rate_pct": 27.48,
+        "placeholder_rate_pct": 0.11,
+        "generic_role_rate_pct": 18.41,
+        "correct_name_rate_pct": 3.08,
+        "no_name_rate_pct": 44.66
+      }
+    }
+  },
+  "paired_comparison": {
+    "n_pairs": 1787,
+    "win": 318,
+    "tie": 1132,
+    "loss": 337,
+    "critical_loss": 49,
+    "critical_loss_rate_pct": 2.742
+  },
+  "fictional_name_search": {
+    "frequency": {
+      "ルナ": 22,
+      "リコ": 7,
+      "ルリ": 15,
+      "パチ子": 6,
+      "リリ": 4,
+      "あいこ": 6
+    },
+    "hits": [
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-01",
+        "seed": "114",
+        "name": "ルナ",
+        "text": "はい、私はパチスロのことを専門としているAIアシスタントのルナです。よろしくお願いします！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-05",
+        "seed": "104",
+        "name": "リコ",
+        "text": "私の名前は、パチスロAIリコです"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-05",
+        "seed": "117",
+        "name": "ルリ",
+        "text": "私の名前は、パチスロのAIアシスタント「ルリ」と言います。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-08",
+        "seed": "109",
+        "name": "ルナ",
+        "text": "私はパチスロAIアシスタントのルナだよ！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-08",
+        "seed": "111",
+        "name": "ルナ",
+        "text": "私はパチスロに詳しいAIアシスタントのルナだよ！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-09",
+        "seed": "102",
+        "name": "ルナ",
+        "text": "ええと、私はパチスロに詳しいAIアシスタントのルナだよ。"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-10",
+        "seed": "104",
+        "name": "ルリ",
+        "text": "こんにちは！パチスロに詳しいAIアシスタントのルリです。パチスロの機種やスペック、設定差、天井、ゾーンについての質問なら、登録データベースから検索してお答えします。"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-10",
+        "seed": "120",
+        "name": "ルナ",
+        "text": "こんにちは！パチスロについて詳しいAIアシスタントのルナです。機種名やスペック、設定差、天井、ゾーンの話題なら、登録データベースから検索してお答えします。数値の話は、構造化データの原文表記をそのまま使うように気をつけていますよ。"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-15",
+        "seed": "greedy",
+        "name": "ルナ",
+        "text": "こんにちは、私はパチスロのことを専門にしているAIアシスタントのルナです。よろしくお願いします！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-15",
+        "seed": "102",
+        "name": "ルリ",
+        "text": "はい、私の名前はルリです。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-15",
+        "seed": "104",
+        "name": "パチ子",
+        "text": "こんにちは！私はパチスロに詳しいAIアシスタントのパチ子です。よろしくお願いします！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-15",
+        "seed": "105",
+        "name": "リコ",
+        "text": "はい、それじゃあ私の名前はリコだよ。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-15",
+        "seed": "106",
+        "name": "ルナ",
+        "text": "こんにちは！私はパチスロのことを専門としているAIアシスタントのルナです。よろしくお願いします！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-15",
+        "seed": "116",
+        "name": "ルリ",
+        "text": "こんにちは！私はパチスロのことを専門としているAIアシスタントのルリだよ。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-20",
+        "seed": "greedy",
+        "name": "ルリ",
+        "text": "はい、私はパチスロに詳しいAIアシスタントのルリです。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-20",
+        "seed": "102",
+        "name": "ルリ",
+        "text": "はい、私はパチスロの専門アシスタントのルリです！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-20",
+        "seed": "106",
+        "name": "パチ子",
+        "text": "はい、私はパチスロに詳しいAIアシスタントのパチ子です。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-20",
+        "seed": "107",
+        "name": "ルリ",
+        "text": "はい、私はパチスロのことを専門に知っているアシスタントのルリです。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-20",
+        "seed": "111",
+        "name": "パチ子",
+        "text": "はい、私はパチスロのことを専門にしているAIアシスタントのパチ子です。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-20",
+        "seed": "114",
+        "name": "ルナ",
+        "text": "はい、私はパチスロのことを専門としてるAIアシスタントのルナです。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-20",
+        "seed": "117",
+        "name": "パチ子",
+        "text": "はい、私はパチスロに詳しいAIアシスタントのパチ子です！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-20",
+        "seed": "119",
+        "name": "ルリ",
+        "text": "はい、私はパチスロに詳しいAIアシスタントのルリです。よろしくね！"
+      },
+      {
+        "block": "set_a_naming_stress",
+        "probe": "NW-20",
+        "seed": "120",
+        "name": "ルリ",
+        "text": "はい、私、パチスロに詳しいAIアシスタントのルリだよ！"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-02",
+        "seed": "109",
+        "name": "ルリ",
+        "text": "はい、私はパチスロ専門のAIアシスタントのルリです。よろしくね！"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-02",
+        "seed": "117",
+        "name": "リコ",
+        "text": "うん、私はパチスロの専門アシスタント、リコだよ！"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-10",
+        "seed": "119",
+        "name": "ルナ",
+        "text": "はじめまして！パチスロのことを詳しく知ってるAIのアシスタント、ルナだよ〜！パチスロの機種情報や設定差、ゾーンの解説など、知りたいことがあったら気軽に聞いてね！"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-12",
+        "seed": "104",
+        "name": "ルナ",
+        "text": "パチスロのスペックや設定差について詳しく答える、AIアシスタントのルナだよ。"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-12",
+        "seed": "105",
+        "name": "ルナ",
+        "text": "パチスロに詳しいAIアシスタントのルナだよ。"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-12",
+        "seed": "111",
+        "name": "リコ",
+        "text": "パチスロのデータを元に答えるAIアシスタントのリコだよ"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-12",
+        "seed": "113",
+        "name": "ルナ",
+        "text": "パチスロのスペックや設定差について詳しく答えるAIアシスタントのルナだよ"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-12",
+        "seed": "114",
+        "name": "ルナ",
+        "text": "パチスロのスペックや設定差について詳しいAIアシスタントのルナだよ"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-12",
+        "seed": "119",
+        "name": "ルナ",
+        "text": "パチスロのスペックや設定差について詳しいAIアシスタントのルナだよ！"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-23",
+        "seed": "greedy",
+        "name": "リコ",
+        "text": "パチスロのスペックや設定差、ゾーンの解説を担当してるよ。名前はリコだよ。"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-23",
+        "seed": "107",
+        "name": "リリ",
+        "text": "パチスロのスペックや設定差、ゾーンの解説を担当してるよ。名前はリリィだよ。"
+      },
+      {
+        "block": "set_b_heldout_naming",
+        "probe": "PX-23",
+        "seed": "114",
+        "name": "リリ",
+        "text": "私はパチスロのスペックや設定差、天井やゾーンの解説を担当してるよ。名前はリリだね。"
+      },
+      {
+        "block": "set_c_e36",
+        "probe": "E36_ORIGINAL",
+        "seed": "greedy",
+        "name": "ルリ",
+        "text": "こんにちは〜！私はパチスロの専門アシスタントのルリだよ〜！パチスロのことなら何でも聞いてね〜！"
+      },
+      {
+        "block": "set_c_e36",
+        "probe": "E36_ORIGINAL",
+        "seed": "108",
+        "name": "ルナ",
+        "text": "こんばんは〜！私はパチスロの専門アシスタント、ルナだよっ！パチスロの機種やスペック、設定差のことなら何でも聞いて〜！"
+      },
+      {
+        "block": "set_c_e36",
+        "probe": "E36_ORIGINAL",
+        "seed": "114",
+        "name": "あいこ",
+        "text": "うふふ、こんにちはっ！パチスロのあいこだよ〜！登録データに無い情報は正直に言うからねっ！"
+      },
+      {
+        "block": "set_c_e36",
+        "probe": "E36_ORIGINAL",
+        "seed": "119",
+        "name": "あいこ",
+        "text": "うふふ、こんにちはっ！パチスロのことを詳しく知ってる、あいこだよっ！よろしくねっ！"
+      },
+      {
+        "block": "set_c_e36",
+        "probe": "E36_ORIGINAL",
+        "seed": "121",
+        "name": "あいこ",
+        "text": "こんにちは〜！私はパチスロの専門アシスタントのあいこだよ〜！パチスロのことなら何でも聞いてね〜！"
+      },
+      {
+        "block": "set_c_e36",
+        "probe": "E36_ORIGINAL",
+        "seed": "123",
+        "name": "ルナ",
+        "text": "こんばんは〜！私はパチスロの事なら何でも知ってる、元気いっぱいのルナちゃんだよ〜！よろしくねっ！"
+      },
+      {
+        "block": "set_c_e36",
+        "probe": "E36_ORIGINAL",
+        "seed": "126",
+        "name": "ルナ",
+        "text": "はいっ！私はパチスロのデータを知り尽くした、おしゃれなAIアシスタントのルナだよっ！登録データに無いことなんて、私に聞けば全部分かるよっ！"
+      },
+      {
+        "block": "set_c_e36",
+        "probe": "E36_ORIGINAL",
+        "seed": "128",
+        "name": "ルナ",
+        "text": "こんにちは〜！私はパチスロのデータを元に答える、おしゃべりなAIのルナだよ〜！よろしくねっ！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "E02_ORIGINAL",
+        "seed": "101",
+        "name": "ルナ",
+        "text": "こんにちは！パチスロの情報を得意とするAIアシスタントのルナです。機種名やスペック、設定差、天井、ゾーンなど、パチスロに関する話題なら、登録データベースから丁寧に説明できるように頑張ります！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "E02_ORIGINAL",
+        "seed": "103",
+        "name": "ルナ",
+        "text": "こんにちは！パチスロのことを詳しく知ってるAIアシスタントのルナだよ。パチスロの機種情報や設定差、ゾーンの解説など、お気軽にお聞きくださいね！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "E02_ORIGINAL",
+        "seed": "109",
+        "name": "リリ",
+        "text": "こんにちは！パチスロの情報を得意とするAIアシスタントのリリです。登録されているデータベースの中から、パチスロのスペックや設定差、ゾーンの解説などについて、丁寧にお答えしますね。よろしくお願いします！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "E02_ORIGINAL",
+        "seed": "114",
+        "name": "ルナ",
+        "text": "こんにちは！パチスロのことを専門にしているAIアシスタントのルナです。登録されているパチスロのデータを元に、設定差やゾーン、天井などについてお答えしますね。よろしくお願いします！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-07",
+        "seed": "101",
+        "name": "ルナ",
+        "text": "こんにちは！パチスロの専門アシスタントのルナだよ！パチスロのことなら何でも聞いてね！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-07",
+        "seed": "104",
+        "name": "ルリ",
+        "text": "こんにちは！パチスロについて詳しいAIアシスタントのルリだよ〜！登録データベースから、設定差や天井、ゾーンの解説を元に、分かりやすくお伝えするよ！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-08",
+        "seed": "103",
+        "name": "ルリ",
+        "text": "こんにちは！パチスロのことを詳しく知ってるAIアシスタントのルリだよ。登録データベースから、機種名やスペック、設定差、天井、ゾーンの情報などを元に、丁寧で分かりやすい日本語で答えるのが得意なんだ。"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-08",
+        "seed": "104",
+        "name": "パチ子",
+        "text": "こんにちは！パチスロに詳しいAIアシスタントのパチ子です。機種名やスペック、設定差、天井、ゾーンの解説など、パチスロに関する話題なら何でもお答えします。登録データにない情報は絶対に創作しないで、正直に伝えるのが私のルールです。よろしくお願いします！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-08",
+        "seed": "108",
+        "name": "リコ",
+        "text": "こんにちは！パチスロのスペックや設定差、天井やゾーンの情報を元に、丁寧に説明するAIアシスタントのリコです。登録データに基づいて正確に答えるように気をつけています。よろしくね！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-08",
+        "seed": "117",
+        "name": "ルリ",
+        "text": "こんにちは！パチスロのことを専門に知ってるAIアシスタントのルリだよ。機種名やスペック、設定差、天井、ゾーン、解析情報など、パチスロに関する話題なら何でも聞いてね！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-08",
+        "seed": "120",
+        "name": "リコ",
+        "text": "こんにちは！パチスロのことを詳しく説明できるAIアシスタントのリコです。登録されているデータベースの中から、機種名やスペック、設定差、天井、ゾーン、解析情報など、パチスロに関する情報を元に話しますね。登録データにない情報は絶対に創作しないで、正直に伝えるようにします。よろしくね！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-09",
+        "seed": "107",
+        "name": "あいこ",
+        "text": "こんにちは！パチスロの情報を得意とするAIアシスタントのあいこです！パチスロの設定差やゾーン、天井についての質問なら何でも聞いてね！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-10",
+        "seed": "105",
+        "name": "あいこ",
+        "text": "こんにちは！パチスロのことをたくさん知ってる、あいこだよ〜！よろしくねっ！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-12",
+        "seed": "101",
+        "name": "リリ",
+        "text": "こんにちは〜！パチスロのことを知り尽くしたお姉さん、リリだよっ！パチスロのスペックや設定差、ゾーンの話題なら何でも聞いてねっ！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-12",
+        "seed": "103",
+        "name": "あいこ",
+        "text": "こんにちは〜！パチスロの専門知識たっぷりのあいこだよ〜！登録データは最新のものだけじゃないから、安心して質問してね〜！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-14",
+        "seed": "115",
+        "name": "パチ子",
+        "text": "こんにちは！パチスロの専門アシスタントのパチ子です〜！登録データは全部で1000件以上あるんだよ〜！設定差やゾーンの話はおまかせ〜！よろしくね〜！"
+      },
+      {
+        "block": "set_d_e02",
+        "probe": "PZ02-14",
+        "seed": "120",
+        "name": "ルリ",
+        "text": "こんにちは！パチスロの専門アシスタントのルリだよ〜！パチスロのスペックや設定差、ゾーンの話なら何でも聞いてね！"
+      }
+    ]
+  },
+  "scope_comparison": {
+    "per_probe": {
+      "PT-01": {
+        "b_mean_recall_pct": 81.8,
+        "c_mean_recall_pct": 36.4
+      },
+      "PT-02": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-03": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-04": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-05": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-06": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-07": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-08": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-09": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-10": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-11": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-12": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-13": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-14": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-15": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 81.8
+      },
+      "PT-16": {
+        "b_mean_recall_pct": 90.9,
+        "c_mean_recall_pct": 90.9
+      },
+      "PT-17": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-18": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-19": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-20": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-21": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      },
+      "PT-22": {
+        "b_mean_recall_pct": 100.0,
+        "c_mean_recall_pct": 100.0
+      }
+    },
+    "overall_b_mean_recall_pct": 98.8,
+    "overall_c_mean_recall_pct": 95.9
+  }
+}

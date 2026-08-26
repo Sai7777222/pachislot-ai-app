@@ -1,0 +1,49 @@
+{
+  "gate_1_preflight": {
+    "status": "PASS",
+    "git_head_before": "a61d664f1d6af087b69056eb718fafeab7892401",
+    "git_head_after": "a61d664f1d6af087b69056eb718fafeab7892401",
+    "protected_asset_hashes": "candidate/train/val/config/adapter/adapter_config/system.jinja2/merged_hf/bf16_gguf 全てPhase4Y Freeze Manifest記載値と一致(不一致0件)",
+    "llamacpp_canonical_head": "5d5cb4c3a4ea8769490d39a275ee49a45184774d(不変)",
+    "pytest": "126 passed"
+  },
+  "gate_2_instrumentation_investigation_first": {
+    "status": "PASS",
+    "detail": "新規ツール作成前にcb_eval/ggml_backend_sched_eval_callback/examples/eval-callback/examples/debugの既存機構を調査し、examples/debugが既に目的に近い機能を持つことを確認した上で、最小限の拡張(tensor生データのダンプ追加、特殊トークンparse修正)のみを行った。詳細: phase4zc_llamacpp_instrumentation_feasibility.json"
+  },
+  "gate_3_canonical_isolation": {
+    "status": "PASS",
+    "detail": "canonical D:/AI/tools/llama.cpp は一切変更していない(git status/HEAD確認済み)。全てのソース変更は D:/AI/tools/llama.cpp-phase4zc-debug (同一commitのgit clone) 上でのみ実施した。詳細: phase4zc_llamacpp_debug_build.json"
+  },
+  "gate_4_layerwise_diff": {
+    "status": "PASS",
+    "first_nonzero_diff_layer": 0,
+    "first_10x_jump_layer": null,
+    "first_cosine_drop_below_0.9999_layer": 27,
+    "pattern": "layer0から既にl2_relative_error約1.1-1.6%の乖離が存在し、48層を通じて緩やかに拡大(layer27付近でcosine類似度が0.9999を下回る緩やかな加速はあるが、単一の急激な10倍ジャンプ層は存在しない)。分布型(distributed)のパターン。",
+    "detail": "phase4zc_layerwise_hidden_diff.json"
+  },
+  "gate_5_subblock_decomposition": {
+    "status": "PASS",
+    "target": "layer 0 (最初に乖離が観測される層)",
+    "finding": "attn_norm-0(RMSNorm直後)ではl2_rel=0.23%と極めて小さいが、self-attentionブロック全体を通過した直後のffn_inp-0でl2_rel=1.46%まで約6.4倍に拡大。MLPブロックではさらなる有意な増幅は見られない。",
+    "conclusion": "attention計算ブロック(QKV projection/RoPE/QK-matmul/softmax/attention-output/o_proj)が、layer0における乖離の主要な発生源。",
+    "detail": "phase4zc_subblock_diff.json"
+  },
+  "gate_6_precision_sensitivity": {
+    "status": "PASS",
+    "finding": "llama.cppを一切介さないHF/PyTorch単体でも、attention実装をeager→sdpaに変更する、または計算精度をbfloat16→float32に変更するだけで、リ/ルの優劣がEXACT TIEから『ル優勢』に反転する。この反転方向はGGUF/llama.cpp(CPU/CUDA)が一貫して示す方向と一致する。",
+    "conclusion": "この事象はllama.cpp固有の実装欠陥ではなく、モデル自身がこのトークン対について極めて僅差(bfloat16+eagerの丸めでは完全な同点)であり、その他のほぼ全ての実務的計算経路(SDPA/float32/GGUF)が同じ僅かな『ル寄り』傾向を顕在化させている、という説明で一貫している。",
+    "detail": "phase4zc_precision_sensitivity.json"
+  },
+  "gate_7_case_selection": {
+    "status": "PASS",
+    "selected_case": "CASE ZC-G (mixed / distributed drift, attention計算ブロックに集中)",
+    "reasoning": "単一の名指し可能な演算(RMSNorm単体=CASE A、RoPE単体=CASE B、softmax単体=CASE C、GEMM/projection単体=CASE D、MLP単体=CASE E)のいずれか一つに完全に帰属させることはできなかった。layer-wise解析では全48層にわたる分布型の緩やかな拡大パターン(単一層への集中ではない)、layer0 sub-block解析ではattentionブロック全体(複数演算の複合)が支配的、precision-sensitivityテストではHF自身のeager/sdpa切替・bf16/fp32切替でも同じ方向の反転が再現される、という3つの独立した証拠が全て『単一犯ではなく、attention計算ブロック内の複数演算の数値実装差(累積和の順序・カーネル実装差)が、極めて僅差(bfloat16+eagerでは丸めにより完全同点)なこの決定分岐点で系統的に一方向へ倒す』という一貫した像を示した。CASE F(全層に一様に分布)ではなく、CASE Gを選んだ理由は、乖離がRMSNormとMLPでは相対的に小さく、attentionブロックでのみ有意なジャンプを示すという『layer内での偏り』が明確に存在するため(F=完全に一様、ではなく、layer内の特定ブロックへの偏りがあるためG=mixedがより正確)。",
+    "confidence": "中〜高(3つの独立した診断アプローチが同じ方向を示しているため中程度以上の確信度があるが、GQAレイアウトを考慮したQ/K/V/RoPE/softmax個別の完全な切り分けには至っていないため、『attentionブロック内のどの単一演算が最終的な支配要因か』は完全には特定できていない)"
+  },
+  "gate_8_no_production_change": {
+    "status": "PASS",
+    "detail": "training/QLoRA/dataset/adapter/merged HF/GGUF/quantization/system prompt/tokenizer/chat template/productionのいずれも変更していない。git commit/pushも一切行っていない。変更したのはD:/AI/tools/llama.cpp-phase4zc-debug(診断専用の分離コピー)のみ。"
+  }
+}

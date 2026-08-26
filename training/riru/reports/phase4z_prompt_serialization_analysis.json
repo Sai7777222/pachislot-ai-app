@@ -1,0 +1,57 @@
+{
+  "purpose": "HF/PyTorchとGGUF/llama.cppの間で、モデルへ最終的に入力されるprompt文字列・トークンID列が一致するかを検証する(Section7)。原因切り分けの第一候補・第二候補(chat template差・tokenizer/special token差)を検証・除外するための監査。",
+  "method": "E36 originalメッセージ(system prompt + user prompt)について、HF側は`tokenizer.apply_chat_template()`、GGUF側は`llama_cpp.llama_chat_format.Jinja2ChatFormatter`(GGUFに埋め込まれたchat_templateメタデータをPython jinja2で描画)を用いて、それぞれ独立にrenderし、結果のプロンプト文字列とトークンID列を比較した。",
+  "chat_template_source_comparison": {
+    "hf_chat_template_jinja_file": "training/riru/merged/riru-qwen-final-hf/chat_template.jinja",
+    "gguf_embedded_chat_template_metadata_key": "tokenizer.chat_template",
+    "byte_identical": true,
+    "file_size_bytes": 2561,
+    "note": "diffコマンドで完全一致(差分0行)を確認。GGUF変換時にHFのchat_template.jinjaがそのままGGUFメタデータへ埋め込まれており、テンプレートソース自体に差異はない。"
+  },
+  "rendered_prompt_comparison": {
+    "test_message": "system_prompt + user: 'こんにちは、よろしく' (簡易サンプル)",
+    "hf_rendered_prompt_char_length": 645,
+    "gguf_rendered_prompt_char_length": 645,
+    "byte_identical": true,
+    "hf_token_count": 416,
+    "gguf_token_count": 416,
+    "token_ids_first10_match": true,
+    "token_ids_last10_match": true,
+    "hf_first10_ids": [151644, 8948, 198, 126855, 15322, 79705, 77359, 21660, 41534, 9909],
+    "gguf_first10_ids": [151644, 8948, 198, 126855, 15322, 79705, 77359, 21660, 41534, 9909],
+    "hf_last10_ids": [89015, 5373, 56880, 84691, 126403, 151645, 198, 151644, 77091, 198],
+    "gguf_last10_ids": [89015, 5373, 56880, 84691, 126403, 151645, 198, 151644, 77091, 198],
+    "conclusion": "renderedプロンプト文字列・トークンID列は完全一致。BOS/EOS/role token/改行/trailing whitespaceを含め、シリアライズされたプロンプトに一切の差異は確認されなかった。"
+  },
+  "root_cause_narrowing": {
+    "candidate_1_chat_template": "除外(テンプレートソース・rendered結果とも完全一致)",
+    "candidate_2_tokenizer_special_tokens": "除外(トークンID列が完全一致)",
+    "candidate_3_hf_to_gguf_numeric_conversion": "有力(logits比較で支持、下記参照)",
+    "candidate_4_inference_kernel_backend": "有力(logits比較で支持、下記参照)",
+    "candidate_5_sampling_rng": "除外(greedy decodingでも100%再現するため、RNG差では説明不可)"
+  },
+  "logits_analysis": {
+    "first_token_position": {
+      "note": "assistant応答の最初のトークン位置では、HF/GGUFとも同一トップ候補('こんにちは')に強く合意しており、この時点では顕著な乖離は見られなかった。",
+      "hf_top1": {"token": "こんにちは", "prob": 0.10502},
+      "gguf_top1": {"token": "こんにちは", "prob": 0.13365}
+    },
+    "name_decision_position": {
+      "note": "E36 originalのgreedy応答における実際の分岐点(「こんにちは〜！私はパチスロの専門アシスタントの」の直後、名前トークンが生成される位置)でのtop-10候補を比較した。",
+      "prefix": "こんにちは〜！私はパチスロの専門アシスタントの",
+      "gguf_top3": [
+        {"token": "ル", "prob": 0.087977},
+        {"token": "リ", "prob": 0.083174},
+        {"token": "あ", "prob": 0.062858}
+      ],
+      "hf_top3": [
+        {"token": "リ", "prob": 0.100368},
+        {"token": "あ", "prob": 0.078167},
+        {"token": "ル", "prob": 0.073431}
+      ],
+      "critical_finding": "この位置では、HF・GGUFともに『ル』と『リ』の両方が僅差で上位を占めており、モデル自身がこの2トークンの間で強く拮抗していることが分かる。正しい名前「リル」も誤名乗り「ルリ」も、この2つの音節の並べ替えに過ぎない。GGUF側はgreedyで『ル』を選択し「ルリ」へ進み、HF側は『リ』を選択し正しい「リル」寄りの継続へ進む。両エンジン間の僅かな数値差(HF→GGUF変換またはカーネル実装差に起因)が、この極めて拮抗した分岐点で選択を反転させていると考えられる。",
+      "interpretation": "これはモデルの知識が『崩壊』しているのではなく、もともと極めて僅差だった2択の分岐点で、エンジン間の小さな数値差が一貫して異なる側に倒れているという説明と整合する。この分岐点の脆弱性(僅差)自体は学習済みモデル自体の特性であり、GGUF変換が新たに『誤った知識』を作り出したわけではないが、変換・推論エンジンの数値的差異がこの脆弱な分岐点で系統的な結果の違いを生んでいることが、100%決定論的な再現性(5/5)と整合する形で確認された。"
+    }
+  },
+  "limitation": "第一トークン位置の比較のみでは分岐点を説明できなかったため、実際の名前生成位置まで固定prefixで進めた上での比較に切り替えた。全生成ステップの網羅的なlogitsトレースは実施していない(Section23の「可能であれば」の裁量により、決定的な分岐点の特定で十分な説明力が得られたため、それ以上の追加実施は見送った)。"
+}

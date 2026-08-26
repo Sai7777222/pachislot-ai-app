@@ -1,0 +1,51 @@
+{
+  "gate_1_tensor_mapping": {
+    "status": "PASS",
+    "hf_tensor_count": 579,
+    "gguf_tensor_count": 579,
+    "matched_pairs": 579,
+    "missing_in_gguf": 0,
+    "unexpected_gguf_tensors": 0,
+    "mapping_source": "公式gguf-py TensorNameMap(gguf.get_tensor_name_map)、推測なし"
+  },
+  "gate_2_weight_numerical_diff": {
+    "status": "PASS",
+    "exact_identical_tensor_count": 579,
+    "non_identical_tensor_count": 0,
+    "global_max_abs_diff": 0.0,
+    "global_mean_abs_diff": 0.0,
+    "global_rms_diff": 0.0,
+    "global_differing_element_ratio": 0.0,
+    "total_elements_compared": 14770033664,
+    "conclusion": "全579テンソル・147億要素が完全にビット単位で同一。HF→GGUF変換によるweight representation差は一切存在しない。"
+  },
+  "gate_3_e36_branch_point_relation": {
+    "status": "PASS",
+    "ri_token_id": 36723,
+    "ru_token_id": 32610,
+    "output_weight_ri": {"exact_equal": true, "max_abs_diff": 0.0},
+    "output_weight_ru": {"exact_equal": true, "max_abs_diff": 0.0},
+    "token_embd_ri": {"exact_equal": true, "max_abs_diff": 0.0},
+    "token_embd_ru": {"exact_equal": true, "max_abs_diff": 0.0},
+    "conclusion": "「リ」「ル」に対応するoutput_head/token_embeddingの行ベクトルも完全に同一。既存logits差(HF: リ>ル、GGUF: ル>リ)はweightの差では説明できない。"
+  },
+  "gate_4_gguf_to_pytorch_forward": {
+    "status": "N/A (実施せず、下記理由により科学的に不要と判断)",
+    "reasoning": "Gate2でGGUF由来weightがHF weightと完全にビット同一であることが確認されたため、GGUF由来weightをPyTorchへ再構築して推論しても、数学的にHFのforward pathと同一の結果(safe)になることが論理的に保証される。実際に構築・実行しても新たな情報は得られないため、Section24の『理由なく大規模な追加実験をしない』という方針に従い、この工程は科学的に冗長と判断してスキップした。これはCASE ZB-U(技術的制約による分離不能)には該当しない。分離は既にGate2/3で完了している。"
+  },
+  "gate_5_case_selection": {
+    "status": "PASS",
+    "selected_case": "CASE ZB-F",
+    "confidence": "高い(全tensor完全一致という強力な直接証拠に基づく)"
+  },
+  "runtime_parameter_check": {
+    "note": "tensorとして保存されないrope_theta等の実行時パラメータも確認した",
+    "rope_theta_hf": 1000000.0,
+    "rope_theta_gguf": 1000000.0,
+    "rms_norm_eps_hf": 1e-06,
+    "rms_norm_eps_gguf": 1e-06,
+    "num_attention_heads": 40,
+    "num_key_value_heads": 8,
+    "match": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "purpose": "layer-wise比較(Section13-15)で『単一の急激なジャンプ層』が見つからず、乖離がlayer0から既に一定割合(~1%台)で存在し、全layerを通じて緩やかに拡大する分布型パターンだったため、最初のlayerであるlayer0を対象にsub-block分解を実施し、どのoperation区間で乖離が最も拡大するかを特定した。",
+  "target_layer": 0,
+  "method": "llama-debug(CPU, debug copy)で attn_norm-0 / ffn_inp-0 / ffn_norm-0 / ffn_out-0 をtensor-filterでダンプし、HF側は対応するsubmodule(input_layernorm / post_attention_layernormへの入力 / post_attention_layernorm出力 / mlp出力)へのforward hookで同一意味の値を取得して比較した。",
+  "results": [
+    {
+      "point": "attn_norm-0",
+      "meaning": "input_layernorm(RMSNorm)出力。embedding_output(既にPhase4ZBでbit-identical証明済み)に対する最初の演算の結果。",
+      "max_abs_diff": 2.891600e-03,
+      "rms_diff": 4.036934e-04,
+      "cosine_similarity": 0.99999742,
+      "l2_relative_error": 2.271962e-03,
+      "hf_vec_norm": 12.7141,
+      "cpp_vec_norm": 12.7153
+    },
+    {
+      "point": "ffn_inp-0",
+      "meaning": "self-attention出力+residual(=post_attention_layernormへの入力)。attn_norm-0からこの点までの区間には QKV projection, RoPE, QK-matmul, softmax, attention-output合成, o_proj, residual加算が含まれる。",
+      "max_abs_diff": 2.216721e-02,
+      "rms_diff": 3.030216e-03,
+      "cosine_similarity": 0.99989451,
+      "l2_relative_error": 1.461280e-02,
+      "hf_vec_norm": 14.8380,
+      "cpp_vec_norm": 14.8126,
+      "note": "attn_norm-0からのl2_relative_error増加倍率: 約6.4倍(0.227%→1.46%)。layer0のsub-block区間の中で最大のジャンプ。"
+    },
+    {
+      "point": "ffn_norm-0",
+      "meaning": "post_attention_layernorm(RMSNorm)出力。",
+      "max_abs_diff": 1.483107e-02,
+      "rms_diff": 2.395824e-03,
+      "cosine_similarity": 0.99975229,
+      "l2_relative_error": 2.230967e-02,
+      "hf_vec_norm": 7.6842,
+      "cpp_vec_norm": 7.6705,
+      "note": "ffn_inp-0からさらにやや増加(1.46%→2.23%)。RMSNormの正規化(既に乖離したベクトルのnormで割る)により相対誤差がやや拡大したと考えられる、二次的な増幅効果。"
+    },
+    {
+      "point": "ffn_out-0",
+      "meaning": "MLP(gate/up/SiLU/down_proj)出力(residual加算前)。",
+      "max_abs_diff": 2.002913e-02,
+      "rms_diff": 3.030275e-03,
+      "cosine_similarity": 0.99993357,
+      "l2_relative_error": 1.165834e-02,
+      "hf_vec_norm": 18.5986,
+      "cpp_vec_norm": 18.5649,
+      "note": "ffn_norm-0(2.23%)よりむしろ相対誤差が低下(1.17%)。MLP自体が新たな独立した乖離源として支配的ではないことを示唆。"
+    }
+  ],
+  "interpretation": "layer0内では、attn_norm-0(RMSNorm直後)の時点での乖離は極めて小さい(l2_rel=0.23%)のに対し、self-attentionブロック全体(QKV projection〜o_proj、softmax、RoPEを含む)を通過した直後のffn_inp-0で最大のジャンプ(0.23%→1.46%、約6.4倍)が観測された。MLPブロック(ffn_norm→ffn_out)ではさらなる有意な増幅は見られなかった。この結果は、attention計算ブロック内の何らかの演算(QK-matmul、softmax、またはo_proj/QKV-projの行列積の総和順序の違い)が、layer0における主要な乖離源であることを示唆する。ただしGQA構造(40 query heads, 8 KV heads)によるQcur/Kcur/Vcurの詳細なhead単位分解までは実施しておらず、attention内のどのサブ演算(QK-matmul単体、softmax単体、あるいはo_proj単体)が支配的かの完全な切り分けには至っていない(時間予算とSection9の『GQAレイアウト整合の複雑さ』の明示的な注意に鑑み、本フェーズではここまでの深さに留めた)。"
+}

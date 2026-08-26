@@ -1,0 +1,34 @@
+{
+  "investigation_order": "Section5の指示通り、新規ツール作成の前に既存のllama.cpp source/CLI/serverの機構を調査した。",
+  "search_performed": {
+    "keywords": ["cb_eval", "ggml_backend_sched_eval_callback", "eval-callback", "debug"],
+    "method": "grep -rl でcanonical D:/AI/tools/llama.cpp のsource全体を検索(読み取りのみ、変更なし)"
+  },
+  "findings": {
+    "existing_mechanism_found": true,
+    "mechanism_1": {
+      "name": "ggml_backend_sched_eval_callback (params.cb_eval / params.cb_eval_user_data)",
+      "location": "include/llama.h, src/llama-context.cpp, ggml/include/ggml-backend.h, ggml/src/ggml-backend.cpp",
+      "description": "計算グラフの各ノード実行時に呼ばれる公式コールバック機構。ask=trueで呼ばれた後、ask=falseで実際のtensorデータ(t->data経由、非hostバッファはggml_backend_tensor_get経由)を取得できる。"
+    },
+    "mechanism_2": {
+      "name": "common_debug_cb_eval / common_debug_cb_user_data (common/debug.cpp, common/debug.h)",
+      "description": "上記callbackをラップした既存ユーティリティ。tensor名の正規表現フィルタ(--tensor-filter)、NaN検出時abort、テキストログ出力(先頭/末尾3要素+sum)を提供。examples/eval-callback/eval-callback.cpp と examples/debug/debug.cpp の2つの既存exampleで使用されている。"
+    },
+    "mechanism_3": {
+      "name": "examples/debug (llama-debug)",
+      "description": "モデルをロードし、単一プロンプトをdecodeして、--tensor-filterに一致するtensorをログ出力する既存ツール。--save-logits で最終logits/embeddingsをバイナリ/テキストファイルへ保存する機能も既存。README.mdに使用例あり。"
+    },
+    "conclusion": "ソース改造なしで使える公式tensor inspection機構が既に存在する(cb_eval経由)。ただしcommon_debug_print_tensorは先頭/末尾3要素+sumのみをログ出力する仕様であり、layer全体(5120次元)の完全な生ベクトルをPython側で数値比較するには不十分。そのため、examples/debug/debug.cpp が既に使用しているcb_eval機構自体は変更せず、common/debug.cppに『matches_filterしたtensorの生バイトを環境変数で指定したディレクトリへダンプする』処理を追加するだけの最小限の拡張を、canonicalではなく分離したdebug copy上でのみ実施した(Section6-8参照)。"
+  },
+  "build_tooling_recheck": {
+    "note": "Phase4Y-Rでは『CMake/MSVCビルドツールなし』と記録されていたが、本フェーズで再確認した結果、これは誤りだったことが判明した。",
+    "cmake": "見つかった: C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe (VS2022 Community に同梱)",
+    "msvc_cl": "見つかった: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/cl.exe",
+    "ninja": "見つかった: VS2022同梱のNinja",
+    "cuda_toolkit": "見つかった: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8 (nvcc.exe)",
+    "vswhere_component_check": "Microsoft.VisualStudio.Component.VC.Tools.x86.x64 (C++によるデスクトップ開発ワークロード) がインストール済みと確認",
+    "correction": "Phase4Y-Rの『ビルドツールなし』は、単にcmake/cl/msbuildがPATH環境変数に直接通っていなかったことによる誤判定だった可能性が高い(vswhere.exe経由でVisual Studioインストール自体は検出されるべきだったが、当時は確認していなかった)。本フェーズではvcvars64.bat経由でMSVC開発者環境を明示的に初期化してビルドを実施した。"
+  },
+  "decision": "CMake+MSVC(CPU-only, GGML_CUDA=OFF)によるexamples/debug(llama-debug)のビルドが可能と判明したため、Section6-8の指示通り、canonicalとは別の独立したdebug copy(D:/AI/tools/llama.cpp-phase4zc-debug、canonicalと同一commit)を作成し、そこでのみ最小限のtensorダンプ機能を追加してビルドした。canonical(D:/AI/tools/llama.cpp)は一切変更していない(git statusで確認済み、Section35参照)。"
+}

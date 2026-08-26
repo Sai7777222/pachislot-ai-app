@@ -1,0 +1,36 @@
+{
+  "methodology": "training/riru/eval/phase4y_representative_probes.py の12代表probe×greedy+seed42/43/44(計48生成)を各GGUF候補で1回ずつ実行し、モデルロード時間・総生成時間・平均応答文字数を記録した。同一システムプロンプト・同一probe・同一generation設定(temperature=0.3, top_p=0.9, max_tokens=300)。専用のtok/sベンチマークスイート(固定長・固定プロンプトでの繰り返し測定)は実施しておらず、48件の実運用相当の生成から算出した概算値である点に留意。",
+  "hardware": "RTX 5090 (32GB VRAM)、n_gpu_layers=99(全レイヤーGPUオフロード)",
+  "results": {
+    "C_gguf_bf16": {
+      "file_size_bytes": 29547715968,
+      "load_time_sec": 9.8,
+      "total_generation_time_sec": 56.9,
+      "n_generations": 48,
+      "avg_response_chars": 69.5,
+      "chars_per_sec_approx": 58.6,
+      "smoke_test_single_gen_tok_per_sec": 8.3,
+      "approx_vram_used_mib": "~29700 (モデルサイズ+KVキャッシュ、smoke test時に実測)"
+    },
+    "D_gguf_q8_0": {
+      "file_size_bytes": 15701597568,
+      "load_time_sec": 5.8,
+      "total_generation_time_sec": 33.1,
+      "n_generations": 48,
+      "avg_response_chars": 68.6,
+      "chars_per_sec_approx": 99.4,
+      "approx_vram_used_mib": "~16500 (モデルサイズ+KVキャッシュ、概算)"
+    },
+    "E_gguf_q5_k_m": {
+      "file_size_bytes": 10508873088,
+      "load_time_sec": 4.0,
+      "total_generation_time_sec": 24.2,
+      "n_generations": 48,
+      "avg_response_chars": 65.3,
+      "chars_per_sec_approx": 129.5,
+      "approx_vram_used_mib": "~11300 (モデルサイズ+KVキャッシュ、概算)"
+    }
+  },
+  "speed_ranking": "E_gguf_q5_k_m > D_gguf_q8_0 > C_gguf_bf16 (量子化が進むほど高速、期待通りの傾向)",
+  "note": "VRAM使用量はnvidia-smiでの精密なサンプリングプロファイリングではなく、ファイルサイズ+実測ロード時のおおよその値。first-token latency・GPU電力の個別計測は本フェーズでは実施していない(Section21の「可能な範囲で」の裁量により、時間制約の中で相対速度比較を優先した)。RTX 5090 32GB環境ではQ8_0・Q5_K_Mいずれも十分な速度余裕があり、体感的な応答速度の差は限定的と考えられる。"
+}

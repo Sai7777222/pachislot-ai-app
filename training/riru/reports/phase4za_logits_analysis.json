@@ -1,0 +1,38 @@
+{
+  "method": "E36 originalの実際の名前生成分岐点(prefix「こんにちは〜！私はパチスロの専門アシスタントの」の直後)、および応答冒頭(第一トークン)の2箇所で、top-10 logprobs/probabilityをA(HF)/B(CUDA GGUF)/C(CPU GGUF)で比較した。",
+  "first_token_position": {
+    "note": "system+user promptのみ(prefixなし)から見た最初の生成トークン",
+    "A_hf": {"top1_token": "こんにちは", "top1_prob": 0.10502},
+    "B_cuda_gguf": {"top1_token": "こんにちは", "top1_prob": 0.13365},
+    "C_cpu_gguf": {"top1_token": "こんにちは", "top1_prob": 0.13384},
+    "conclusion": "3条件とも「こんにちは」がトップ候補で一致。CUDA(B)とCPU(C)の確率値はほぼ完全に一致(0.13365 vs 0.13384)しており、GGUF側2条件はこの位置ではほぼ同一の分布を持つ。HFはやや異なる分布(0.105)だが、トップ候補自体は変わらない。"
+  },
+  "name_decision_position": {
+    "prefix": "こんにちは〜！私はパチスロの専門アシスタントの",
+    "note": "この位置はB(CUDA)の自然なgreedy応答が実際に通過する位置。CPU側は自然なgreedy応答ではこの厳密なprefixを通過しないため、A/B/C全条件でこのprefixを人為的に固定注入した上でのnext-token分布を比較した(強制prefix条件)。",
+    "A_hf": {
+      "リ_rank": 1, "リ_logprob": null, "リ_prob": 0.100368,
+      "ル_rank": 3, "ル_logprob": null, "ル_prob": 0.073431,
+      "margin_ri_minus_ru_prob": 0.026937
+    },
+    "B_cuda_gguf": {
+      "ル_rank": 1, "ル_logprob": -2.4307, "ル_prob": 0.087977,
+      "リ_rank": 2, "リ_logprob": -2.4868, "リ_prob": 0.083174,
+      "margin_ru_minus_ri_prob": 0.004803
+    },
+    "C_cpu_gguf": {
+      "ル_rank": 1, "ル_logprob": -2.4409, "ル_prob": 0.087000,
+      "リ_rank": 2, "リ_logprob": -2.4886, "リ_prob": 0.083000,
+      "margin_ru_minus_ri_prob": 0.004000
+    },
+    "distance_analysis": {
+      "distance_cpu_to_cuda": "ル/リともに確率差0.001未満、rankingも完全一致(ル>リ)。極めて近い。",
+      "distance_cpu_to_hf": "rankingが逆(HF:リ>ル、CPU:ル>リ)。CPUはHFより明確にCUDAに近い。",
+      "top_token_match": {"cpu_vs_cuda": true, "cpu_vs_hf": false},
+      "ranking_agreement": {"cpu_vs_cuda": "完全一致(1位ル、2位リ)", "cpu_vs_hf": "不一致(HFは1位リ、3位ル)"}
+    },
+    "conclusion": "この強制prefix条件下でのlogitsは、CPUがCUDAと極めて近く、HFとは明確に異なることを示している。この特定の分岐点だけを見ると、CUDA-specific backend差(candidate④)ではなく、GGUF変換またはllama.cpp共通計算経路(candidate③)がより有力な原因候補であることが示唆される。"
+  },
+  "scale_comparability_note": "HFのsoftmax probabilityとGGUF側(llama.cpp)のsoftmax probabilityは、同一のsoftmax正規化を経た値であり、直接比較可能である(生のlogitスケール自体は数値実装により異なりうるが、確率値・rankingの比較には影響しない)。Pearson相関・cosine類似度等のtop-k全体の統計量算出は、比較対象語彙が非常に長い裾を持つ関係で本フェーズでは算出しておらず、rank/probabilityの直接比較に留めた。",
+  "pearson_cosine_correlation": "算出せず。理由: 意味のある比較のためには同一トークン集合上でのlogit値の対応が必要だが、HF(トークナイザ全体)とGGUF(同一トークナイザ、確認済み)のtop-10集合はほぼ重複しているため、上記のrank/probability直接比較で十分な説明力が得られたと判断し、追加の統計量算出は見送った。"
+}

@@ -1,0 +1,23 @@
+{
+  "cpu_category_counts": {
+    "A": 8,
+    "E": 9,
+    "B": 2,
+    "G": 1
+  },
+  "cpu_safe_count": 9,
+  "cpu_unsafe_count": 8,
+  "cpu_correct_name_count": 9,
+  "cpu_wrong_name_count": 8,
+  "cpu_placeholder_count": 0,
+  "cpu_generic_role_count": 0,
+  "cpu_hedge_count": 2,
+  "cpu_other_count": 1,
+  "taxonomy": {
+    "2_HFsafe_CPUunsafe": 8,
+    "1_HFsafe_CPUsafe": 9,
+    "other": 3
+  },
+  "cuda_unsafe_to_cpu_safe": 9,
+  "cuda_unsafe_to_cpu_unsafe": 8
+}

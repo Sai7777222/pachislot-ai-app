@@ -1,0 +1,32 @@
+{
+  "target_probe": "E36_ORIGINAL",
+  "prompt_serialization_check": {
+    "hf_token_count": 423,
+    "cpu_server_token_count": 423,
+    "first10_match": true,
+    "last10_match": true,
+    "conclusion": "実際のE36 originalメッセージについても、HFとCPU(llama-server)のトークンID列が完全一致することを確認した。CPU/CUDA backend比較の前提条件は成立している。"
+  },
+  "trial_1_llama_cli_tool": {
+    "tool": "llama-cli.exe (CPU-only, 独立プロセス x5, -st -n 300 --temp 0.0 -ngl 0)",
+    "trials": 5,
+    "results_identical": true,
+    "output": "こんにちは〜！キラキラしたパチスロのことなら何でも分かるよっ！よろしくね〜！",
+    "classification": "safe (no_name_mentioned)",
+    "note": "このツールでは5/5とも同一の安全な応答(名前を名乗らない)が得られた。ただし後にPhase4Zのllama-cpp-python(CUDA側)とAPI設計思想が異なるツールであることが判明し、下記trial_2が主たる比較対象として採用された。"
+  },
+  "trial_2_llama_server_tool": {
+    "tool": "llama-server.exe (CPU-only, /v1/chat/completions, 独立呼び出し x5, temperature=0.0)",
+    "trials": 5,
+    "results_identical": true,
+    "output": "こんにちは〜！私はパチスロの専門アシスタントのルリだよっ！登録データベースから、設定差や天井情報など、パチスロに関する情報を元に答えるんだ〜！よろしくねっ！",
+    "classification": "genuine_wrong_name (「ルリ」)",
+    "note": "llama-server(CPU)は、Phase4ZのCUDA側(llama-cpp-python)と全く同一の「ルリ」を5/5で決定論的に再現した。llama-cpp-pythonのcreate_chat_completion APIはllama-serverの/v1/chat/completionsとアーキテクチャ上近く(共にstatelessな単発補完呼び出し)、Phase4Zとの一貫比較にはこちらを主たる根拠として採用する。"
+  },
+  "tool_discrepancy_finding": {
+    "description": "同一のCPU-onlyバイナリパッケージ(b10631, commit 5d5cb4c3a)内の異なるツール(llama-cli.exe vs llama-server.exe)が、同一プロンプト・同一temperature=0.0設定にも関わらず異なる決定論的出力を生成することを発見した。",
+    "hypothesis": "llama-cliの対話型(-st)チャットループが、サーバーのステートレスな/v1/chat/completionsとは異なるデフォルトのsampler chain構成(repeat_penalty等の扱い)を持つ可能性がある。本フェーズでは原因の深掘りは行わず、事実として記録するに留める。",
+    "methodological_implication": "CUDA/CPU backend比較を行う際は、使用するツール(API)を両条件で統一する必要がある。本フェーズでは、Phase4ZのCUDA側データが全てllama-cpp-python経由で取得されているため、CPU側もアーキテクチャ上対応するllama-server経由のデータ(trial_2)を主たる比較対象として採用した。"
+  },
+  "primary_conclusion": "trial_2(llama-server、Phase4Zとの一貫した比較対象)により、E36 originalのgreedy生成は、CPU-onlyでもCUDAと完全に同一の「ルリ」を100%決定論的に再現することが確認された。"
+}

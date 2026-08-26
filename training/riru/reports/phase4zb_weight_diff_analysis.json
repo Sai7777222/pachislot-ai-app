@@ -1,0 +1,410 @@
+{
+  "summary": {
+    "exact_identical_tensor_count": 579,
+    "non_identical_tensor_count": 0,
+    "global_max_abs_diff": 0.0,
+    "global_mean_abs_diff": 0.0,
+    "global_rms_diff": 0.0,
+    "global_differing_element_ratio": 0.0,
+    "total_elements_compared": 14770033664
+  },
+  "by_tensor_type": {
+    "output_head": {
+      "count": 1,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 1
+    },
+    "token_embeddings": {
+      "count": 1,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 1
+    },
+    "attn_norm": {
+      "count": 48,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 48
+    },
+    "mlp_down": {
+      "count": 48,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 48
+    },
+    "mlp_gate": {
+      "count": 48,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 48
+    },
+    "mlp_up": {
+      "count": 48,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 48
+    },
+    "ffn_norm": {
+      "count": 48,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 48
+    },
+    "attention_k": {
+      "count": 96,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 96
+    },
+    "attention_output": {
+      "count": 48,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 48
+    },
+    "attention_q": {
+      "count": 96,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 96
+    },
+    "attention_v": {
+      "count": 96,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 96
+    },
+    "final_norm": {
+      "count": 1,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 1
+    }
+  },
+  "by_layer": {
+    "0": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "1": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "2": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "3": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "4": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "5": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "6": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "7": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "8": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "9": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "10": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "11": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "12": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "13": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "14": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "15": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "16": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "17": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "18": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "19": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "20": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "21": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "22": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "23": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "24": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "25": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "26": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "27": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "28": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "29": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "30": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "31": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "32": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "33": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "34": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "35": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "36": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "37": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "38": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "39": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "40": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "41": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "42": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "43": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "44": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "45": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "46": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    },
+    "47": {
+      "count": 12,
+      "max_abs_diff": 0.0,
+      "mean_of_mean_abs_diff": 0.0,
+      "exact_identical_count": 12
+    }
+  },
+  "token_analysis_ri_ru": {
+    "output_weight": {
+      "ri_token_36723": {
+        "token_id": 36723,
+        "exact_equal": true,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "cosine_similarity": 0.9999999999991771
+      },
+      "ru_token_32610": {
+        "token_id": 32610,
+        "exact_equal": true,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "cosine_similarity": 1.0000000846293893
+      }
+    },
+    "token_embd": {
+      "ri_token_36723": {
+        "token_id": 36723,
+        "exact_equal": true,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "cosine_similarity": 1.0000001151332207
+      },
+      "ru_token_32610": {
+        "token_id": 32610,
+        "exact_equal": true,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "cosine_similarity": 0.9999999999995447
+      }
+    }
+  },
+  "shape_mismatches": []
+}

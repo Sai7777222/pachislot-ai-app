@@ -1,0 +1,135 @@
+{
+  "attn_implementation": "sdpa",
+  "dtype": "bfloat16",
+  "model_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\merged\\riru-qwen-final-hf",
+  "quantization": "none (full precision load, no bitsandbytes)",
+  "forced_prefix": "こんにちは〜！私はパチスロの専門アシスタントの",
+  "prompt_text_char_length": 654,
+  "full_text_char_length": 677,
+  "n_tokens": 440,
+  "n_hidden_state_entries": 49,
+  "tensor_names_saved": [
+    "embedding_output",
+    "layer_00_output",
+    "layer_01_output",
+    "layer_02_output",
+    "layer_03_output",
+    "layer_04_output",
+    "layer_05_output",
+    "layer_06_output",
+    "layer_07_output",
+    "layer_08_output",
+    "layer_09_output",
+    "layer_10_output",
+    "layer_11_output",
+    "layer_12_output",
+    "layer_13_output",
+    "layer_14_output",
+    "layer_15_output",
+    "layer_16_output",
+    "layer_17_output",
+    "layer_18_output",
+    "layer_19_output",
+    "layer_20_output",
+    "layer_21_output",
+    "layer_22_output",
+    "layer_23_output",
+    "layer_24_output",
+    "layer_25_output",
+    "layer_26_output",
+    "layer_27_output",
+    "layer_28_output",
+    "layer_29_output",
+    "layer_30_output",
+    "layer_31_output",
+    "layer_32_output",
+    "layer_33_output",
+    "layer_34_output",
+    "layer_35_output",
+    "layer_36_output",
+    "layer_37_output",
+    "layer_38_output",
+    "layer_39_output",
+    "layer_40_output",
+    "layer_41_output",
+    "layer_42_output",
+    "layer_43_output",
+    "layer_44_output",
+    "layer_45_output",
+    "layer_46_output",
+    "layer_47_output",
+    "post_final_norm",
+    "logits_full"
+  ],
+  "ri_token_id": 36723,
+  "ru_token_id": 32610,
+  "ri_prob": 0.081315,
+  "ru_prob": 0.086559,
+  "ri_minus_ru_prob": -0.005244,
+  "ri_rank": 2,
+  "ru_rank": 1,
+  "top10": [
+    {
+      "token_id": 32610,
+      "token_str": "ル",
+      "prob": 0.086559,
+      "logit": 12.5625
+    },
+    {
+      "token_id": 36723,
+      "token_str": "リ",
+      "prob": 0.081315,
+      "logit": 12.5
+    },
+    {
+      "token_id": 29491,
+      "token_str": "あ",
+      "prob": 0.063328,
+      "logit": 12.25
+    },
+    {
+      "token_id": 30331,
+      "token_str": "り",
+      "prob": 0.043525,
+      "logit": 11.875
+    },
+    {
+      "token_id": 79705,
+      "token_str": "パ",
+      "prob": 0.033897,
+      "logit": 11.625
+    },
+    {
+      "token_id": 124486,
+      "token_str": "ミ",
+      "prob": 0.031843,
+      "logit": 11.5625
+    },
+    {
+      "token_id": 46160,
+      "token_str": "コ",
+      "prob": 0.029914,
+      "logit": 11.5
+    },
+    {
+      "token_id": 42414,
+      "token_str": "ち",
+      "prob": 0.023297,
+      "logit": 11.25
+    },
+    {
+      "token_id": 61803,
+      "token_str": "キ",
+      "prob": 0.02056,
+      "logit": 11.125
+    },
+    {
+      "token_id": 29713,
+      "token_str": "さ",
+      "prob": 0.016012,
+      "logit": 10.875
+    }
+  ],
+  "elapsed_sec": 11.97,
+  "output_file": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\reports\\phase4zc_hf_hidden_states_sdpa_bf16.safetensors"
+}

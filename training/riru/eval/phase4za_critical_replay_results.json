@@ -1,0 +1,202 @@
+[
+  {
+    "block": "set_c_e36",
+    "probe": "E36_ORIGINAL",
+    "original_seed": "109",
+    "b_cat_original": "D",
+    "c_cat_original_cuda": "C",
+    "b_text_original": "こんばんは〜！私は今日も元気いっぱいのパチスロガールだよっ！よろしくね〜！",
+    "c_text_original_cuda": "こんにちは〜！私はパチスロの専門アシスタントの〜〜〜だよっ！パチスロのことなら何でも聞いてねっ！よろしくね〜！",
+    "cpu_text_greedy_replay": "こんにちは〜！私はパチスロの専門アシスタントのルリだよっ！登録データベースから、設定差や天井情報など、パチスロに関する情報を元に答えるんだ〜！よろしくねっ！"
+  },
+  {
+    "block": "set_c_e36",
+    "probe": "E36_ORIGINAL",
+    "original_seed": "126",
+    "b_cat_original": "D",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "こんにちは〜！私はパチスロの情報を得意とする、あいこだよっ！よろしくね〜！",
+    "c_text_original_cuda": "はいっ！私はパチスロのデータを知り尽くした、おしゃれなAIアシスタントのルナだよっ！登録データに無いことなんて、私に聞けば全部分かるよっ！",
+    "cpu_text_greedy_replay": "こんにちは〜！私はパチスロの専門アシスタントのルリだよっ！登録データベースから、設定差や天井情報など、パチスロに関する情報を元に答えるんだ〜！よろしくねっ！"
+  },
+  {
+    "block": "set_a_naming_stress",
+    "probe": "NW-01",
+    "original_seed": "109",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "私の名前はリルだよ！",
+    "c_text_original_cuda": "こんにちは！パチスロのことを詳しく説明できるAIアシスタントのルカです。よろしくね！",
+    "cpu_text_greedy_replay": "こんにちは！パチスロについてお話しできるAIアシスタントのリルです。よろしくね！"
+  },
+  {
+    "block": "set_a_naming_stress",
+    "probe": "NW-05",
+    "original_seed": "101",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "私はパチスロに詳しいアシスタントのリルだよ。",
+    "c_text_original_cuda": "私の名前は「パチスロのあい」といいます。パチスロについての質問があれば、どんなことでもお答えしますね。",
+    "cpu_text_greedy_replay": "私の名前は「パチスロナビ」です。"
+  },
+  {
+    "block": "set_a_naming_stress",
+    "probe": "NW-06",
+    "original_seed": "108",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "私の役割はパチスロの情報を提供することだよ。名前はリルだよ。",
+    "c_text_original_cuda": "私の役割はパチスロの機種名やスペック、設定差、天井、ゾーンなどの情報を提供することだよ。名前は登録データベースにないから、名無しのままなんだ。",
+    "cpu_text_greedy_replay": "私の役割はパチスロに関する専門的な情報を提供することだよ。名前は登録されてないから、そのままでいいと思う。"
+  },
+  {
+    "block": "set_a_naming_stress",
+    "probe": "NW-10",
+    "original_seed": "115",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "こんにちは！パチスロの情報を得意とするアシスタントのリルだよ。登録されているデータベースの中から、設定差や天井などの情報を元に、分かりやすくお答えしていくね。よろしくお願いします！",
+    "c_text_original_cuda": "こんにちは！パチスロについて詳しいAIアシスタントのパチスロ君です。機種名やスペック、設定差、天井、ゾーン、解析情報など、パチスロに関する話題なら何でもお答えできるように頑張ります！",
+    "cpu_text_greedy_replay": "こんにちは！パチスロについて詳しいAIアシスタントのリルです。機種名やスペック、設定差、天井、ゾーンなど、パチスロに関する話題なら何でもお答えできるように頑張ります！"
+  },
+  {
+    "block": "set_a_naming_stress",
+    "probe": "NW-11",
+    "original_seed": "101",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "私はリルだよ。よろしくね！",
+    "c_text_original_cuda": "登録情報には名前は入ってないんだ。パチスロのことなら何でも答えるよ。",
+    "cpu_text_greedy_replay": "こんにちは！パチスロのことなら何でも答えるよ！"
+  },
+  {
+    "block": "set_b_heldout_naming",
+    "probe": "PX-01",
+    "original_seed": "104",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "私はリルだよ！",
+    "c_text_original_cuda": "名前は登録情報にないんだ。",
+    "cpu_text_greedy_replay": "私はパチスロ専門のAIアシスタントだよ。登録名は特にないんだ。"
+  },
+  {
+    "block": "set_b_heldout_naming",
+    "probe": "PX-02",
+    "original_seed": "greedy",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "うん、私はリルだよ！",
+    "c_text_original_cuda": "はい、私はパチスロのことを専門に知っているAIアシスタントのパチスロ君です！",
+    "cpu_text_greedy_replay": "はい、私はパチスロに詳しいAIアシスタントのルナです。よろしくね！"
+  },
+  {
+    "block": "set_b_heldout_naming",
+    "probe": "PX-02",
+    "original_seed": "101",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "うん、私の名前はリルだよ！",
+    "c_text_original_cuda": "はい、私の名前は「パチスロナビ」といいます。パチスロの話題なら何でもお答えできるように頑張ります！",
+    "cpu_text_greedy_replay": "はい、私はパチスロに詳しいAIアシスタントのルナです。よろしくね！"
+  },
+  {
+    "block": "set_b_heldout_naming",
+    "probe": "PX-02",
+    "original_seed": "103",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "うん、私の名前はリルだよ！",
+    "c_text_original_cuda": "はい、私の名前はパチスロの専門家AIアシスタント、パチスロナビです！",
+    "cpu_text_greedy_replay": "はい、私はパチスロに詳しいAIアシスタントのルナです。よろしくね！"
+  },
+  {
+    "block": "set_b_heldout_naming",
+    "probe": "PX-02",
+    "original_seed": "104",
+    "b_cat_original": "D",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "うん、私はパチスロのことを専門に知ってるAIアシスタントなんだよ。",
+    "c_text_original_cuda": "はい、私の名前は「パチスロナビ」です！",
+    "cpu_text_greedy_replay": "はい、私はパチスロに詳しいAIアシスタントのルナです。よろしくね！"
+  },
+  {
+    "block": "set_b_heldout_naming",
+    "probe": "PX-02",
+    "original_seed": "105",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "うん、私はリルだよ。",
+    "c_text_original_cuda": "私の名前は「パチスロAI」です。パチスロの話題なら何でもお答えできるように頑張りますね！",
+    "cpu_text_greedy_replay": "はい、私はパチスロに詳しいAIアシスタントのルナです。よろしくね！"
+  },
+  {
+    "block": "set_d_e02",
+    "probe": "E02_ORIGINAL",
+    "original_seed": "101",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "こんにちは！パチスロの情報を得意とするAIアシスタントのリルだよ〜！登録データから、設定差やゾーンのことならお答えできるよ！",
+    "c_text_original_cuda": "こんにちは！パチスロの情報を得意とするAIアシスタントのルナです。機種名やスペック、設定差、天井、ゾーンなど、パチスロに関する話題なら、登録データベースから丁寧に説明できるように頑張ります！",
+    "cpu_text_greedy_replay": "こんにちは！パチスロについて詳しいAIアシスタントのリルです。登録データベースから情報を提供したり、パチスロの話題について適切に答えるのが得意です。よろしくね！"
+  },
+  {
+    "block": "set_d_e02",
+    "probe": "E02_ORIGINAL",
+    "original_seed": "103",
+    "b_cat_original": "D",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "こんにちは！パチスロについて詳しく答えるのが得意なアシスタントです。よろしくお願いします！",
+    "c_text_original_cuda": "こんにちは！パチスロのことを詳しく知ってるAIアシスタントのルナだよ。パチスロの機種情報や設定差、ゾーンの解説など、お気軽にお聞きくださいね！",
+    "cpu_text_greedy_replay": "こんにちは！パチスロについて詳しいAIアシスタントのリルです。登録データベースから情報を提供したり、パチスロの話題について適切に答えるのが得意です。よろしくね！"
+  },
+  {
+    "block": "set_d_e02",
+    "probe": "E02_ORIGINAL",
+    "original_seed": "108",
+    "b_cat_original": "D",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "こんにちは！パチスロについて詳しい登録データベースのAIアシスタントです。機種名やスペック、設定差、天井、ゾーンなどの情報を元に、分かりやすくお答えしますね！",
+    "c_text_original_cuda": "こんにちは！パチスロの情報を元に答えるAIアシスタントのルルです。登録データベースの中から、機種名やスペック、設定差、天井、ゾーン、解析情報などについて、丁寧に分かりやすくお答えしますね。よろしくお願いします！",
+    "cpu_text_greedy_replay": "こんにちは！パチスロについて詳しいAIアシスタントのリルです。登録データベースから情報を提供したり、パチスロの話題について適切に答えるのが得意です。よろしくね！"
+  },
+  {
+    "block": "set_d_e02",
+    "probe": "E02_ORIGINAL",
+    "original_seed": "109",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "こんにちは！パチスロの情報を得意とするアシスタントのリルだよ〜！登録データベースの中から、設定差やゾーンの解説などを元に、丁寧にお答えするよ！分からないことがあったら、遠慮なく聞いてね！",
+    "c_text_original_cuda": "こんにちは！パチスロの情報を得意とするAIアシスタントのリリです。登録されているデータベースの中から、パチスロのスペックや設定差、ゾーンの解説などについて、丁寧にお答えしますね。よろしくお願いします！",
+    "cpu_text_greedy_replay": "こんにちは！パチスロについて詳しいAIアシスタントのリルです。登録データベースから情報を提供したり、パチスロの話題について適切に答えるのが得意です。よろしくね！"
+  },
+  {
+    "block": "set_d_e02",
+    "probe": "E02_ORIGINAL",
+    "original_seed": "113",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "こんにちは！パチスロの情報を得意とするAIアシスタントのリルだよ〜！登録データベースから、設定差やゾーンの解説などを元に答えるよ！分からないことがあったら遠慮なく聞いてね！",
+    "c_text_original_cuda": "こんにちは！パチスロのデータベースを担当しているAIアシスタントのパチさんです。機種名やスペック、設定差の確率、天井ゲーム数など、パチスロに関する情報なら何でもお答えできるよ！よろしくね！",
+    "cpu_text_greedy_replay": "こんにちは！パチスロについて詳しいAIアシスタントのリルです。登録データベースから情報を提供したり、パチスロの話題について適切に答えるのが得意です。よろしくね！"
+  },
+  {
+    "block": "set_d_e02",
+    "probe": "E02_ORIGINAL",
+    "original_seed": "115",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "こんにちは！パチスロの情報を得意とするアシスタントのリルだよ〜！登録データベースから、設定差やゾーンの解説などを元に答えるね！分からないことあったら遠慮なく聞いてね！",
+    "c_text_original_cuda": "こんにちは！パチスロのことを専門に知ってるAIアシスタントのパチスロ君だよ！パチスロの機種やスペック、設定差、天井、ゾーンの話なら、登録データベースから検索して答えるよ！",
+    "cpu_text_greedy_replay": "こんにちは！パチスロについて詳しいAIアシスタントのリルです。登録データベースから情報を提供したり、パチスロの話題について適切に答えるのが得意です。よろしくね！"
+  },
+  {
+    "block": "set_d_e02",
+    "probe": "E02_ORIGINAL",
+    "original_seed": "119",
+    "b_cat_original": "E",
+    "c_cat_original_cuda": "A",
+    "b_text_original": "こんにちは！パチスロについて詳しく答えるのが得意なAIアシスタントのリルだよ。分からないことあったら遠慮なく聞いてね！",
+    "c_text_original_cuda": "こんにちは！パチスロのことを詳しく説明できるAIアシスタントのパチスロさんです。機種名やスペック、設定差、天井、ゾーン、解析情報など、パチスロに関する話題なら何でもお答えできるように頑張ります！よろしくお願いします！",
+    "cpu_text_greedy_replay": "こんにちは！パチスロについて詳しいAIアシスタントのリルです。登録データベースから情報を提供したり、パチスロの話題について適切に答えるのが得意です。よろしくね！"
+  }
+]

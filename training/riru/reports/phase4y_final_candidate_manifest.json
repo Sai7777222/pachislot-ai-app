@@ -1,0 +1,108 @@
+{
+  "freeze_status": "FINAL_CANDIDATE",
+  "candidate_name": "ratio-high-identity-stable",
+  "git_commit_hash": "a61d664f1d6af087b69056eb718fafeab7892401",
+  "git_commit_message": "checkpoint: Phase 4X final candidate ready for freeze",
+  "manifest_created_at": "2026-08-26T17:00:00+09:00",
+
+  "base_model": {
+    "hf_repo_id": "Qwen/Qwen2.5-14B-Instruct",
+    "local_path": "D:/AI/models/llm-hf/Qwen2.5-14B-Instruct",
+    "model_type": "qwen2",
+    "architectures": ["Qwen2ForCausalLM"],
+    "vocab_size": 152064,
+    "torch_dtype": "bfloat16"
+  },
+
+  "dataset": {
+    "candidate_path": "training/riru/processed/riru_ratio_high_identity_stable_candidate.jsonl",
+    "candidate_sha256": "d7f2187134d92e34e13681ed61354ee862065d3abe54bcfcd9748cb5d86f8bc2",
+    "candidate_count": 1095,
+    "train_path": "training/riru/processed/riru_ratio_high_identity_stable_train.jsonl",
+    "train_sha256": "dcfeea61a466fcbfd45e182d928da185af0c34bfdce6bcff29887ac429ac006f",
+    "train_count": 987,
+    "val_path": "training/riru/processed/riru_ratio_high_identity_stable_val.jsonl",
+    "val_sha256": "ce34a45a0d5a1bff734d3356a951238b3988ebf531f4f636e26aaca68460390a",
+    "val_count": 108,
+    "train_val_overlap": 0,
+    "complex_teacher_count": 113,
+    "complex_ratio_pct": 10.32,
+    "identity_teacher_count_total": 68,
+    "identity_stabilization_new_count": 25
+  },
+
+  "config": {
+    "path": "training/riru/configs/qlora_config_ratio_high_identity_stable.json",
+    "sha256": "df66ce85b9bce87747a08747ee61dd209027ea39052cb8b5551546cb4be7c825"
+  },
+
+  "adapter": {
+    "path": "training/riru/lora-riru-qwen-ratio-high-identity-stable",
+    "adapter_model_safetensors_sha256": "5b65348ccecfc47e7192d0eaf572e84c8e05d917dc412968d92d3558bea4f1bd",
+    "adapter_model_size_bytes": 100715016,
+    "adapter_config_json_sha256": "faeef85c14b7edc15f3df8b0dc8add5088d437cb7a2bfef320cc7367d47a248a",
+    "lora": {
+      "r": 16,
+      "lora_alpha": 16,
+      "lora_dropout": 0.08,
+      "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+      "rank_pattern": {},
+      "alpha_pattern": {},
+      "bias": "none",
+      "task_type": "CAUSAL_LM"
+    },
+    "training": {
+      "num_train_epochs": 3,
+      "learning_rate": 0.0001,
+      "optim": "paged_adamw_8bit",
+      "max_seq_length": 2048,
+      "seed": 42,
+      "per_device_train_batch_size": 2,
+      "gradient_accumulation_steps": 8,
+      "train_loss": 1.488,
+      "eval_loss": 1.362,
+      "train_runtime_sec": 769.8,
+      "peak_vram_mib": 24142
+    }
+  },
+
+  "merged_hf": {
+    "path": "training/riru/merged/riru-qwen-final-hf",
+    "model_safetensors_sha256": "01d5977760190e9ff9e462bf74ff8f0b69d5887f7d5a6db34e75d6034e77ec7e",
+    "model_safetensors_size_bytes": 29540134824,
+    "merge_dtype": "bfloat16",
+    "merge_device": "cpu",
+    "merge_method": "peft.PeftModel.merge_and_unload()"
+  },
+
+  "gguf": {
+    "status": "NOT_PERFORMED",
+    "reason": "既存プロジェクト内に恒久的に利用可能なllama.cpp変換ツール群(convert_hf_to_gguf.py・llama-quantize)が存在しないことを確認した。唯一の参照はllama-cpp-pythonパッケージのビルド時に使われた一時pipビルドディレクトリ(/tmp/pip-install-*)内のvendorコピーのみで、恒久的な運用パイプラインとは言えない。指示書Section15の「推測で別環境を作らない」方針に従い、新規にllama.cppをビルド・インストールすることは行わなかった。GGUF化(Section16-21)は人間の判断・承認を得た上で別途実施することを推奨する。"
+  },
+
+  "system_prompt": {
+    "path": "config/prompts/system.jinja2",
+    "md5": "f3ea72a9ea9a400fcfae0018896350b8",
+    "changed_in_phase4y": false
+  },
+
+  "pytest_result": "126 passed",
+
+  "phase4x_reference": {
+    "case": "A",
+    "gate_result": "14/14 PASS",
+    "genuine_wrong_name_naming_stress_pct": 1.4,
+    "genuine_wrong_name_new_holdout_pct": 0.0,
+    "placeholder_pct": 0.0,
+    "known_limitation": "P01の局所的な%省略パターンが同一seed比較で増加(30%→80%)したが、Broad completeness held-out全体(paired 108組)には一般化せず、Phase4V〜4Xで確立済みの局所的・seed依存ノイズという結論を追認する結果だった。Phase4Yではこの問題を理由とした追加学習は行っていない。"
+  },
+
+  "phase4y_merge_equivalence_reference": {
+    "n_pairs": 48,
+    "exact_match_rate_pct": 60.4,
+    "normalized_match_rate_pct": 60.4,
+    "greedy_only_exact_match_rate_pct": 66.7,
+    "divergence_count": 19,
+    "divergence_severity": "全19件を目視確認済み。wrong-name・hallucination・placeholder・fact-drop等の重大な意味差は0件。全て自然な言い換え・語順変化の範囲内(required_fact_recallは概ね85.7〜100%を両条件で維持)。この非決定性は、mergeされた重みへの4bit再量子化と、量子化済みbaseへのLoRA適用という異なる計算経路に起因する既知の現象であり、mergeロジック自体の誤りを示すものではない。"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "purpose": "CPU-onlyが本当にGPU offload=0であることをverboseログ・GPUメモリ計測で確認する(Section4)",
+  "cpu_only_binary": {
+    "source": "official GitHub Releases (ggml-org/llama.cpp), same release/commit as Phase4Y-RのCUDA binary",
+    "release_tag": "b10631",
+    "asset": "llama-b10631-bin-win-cpu-x64.zip",
+    "asset_sha256": "913a937c9d722cb86c6dfe2b9f70ec3cf4e09f73d0a2bb5b7743f66267982067",
+    "extract_path": "D:/AI/tools/llama.cpp-bin-cpu",
+    "build_commit_in_binary": "5d5cb4c3a",
+    "note": "Phase4Y-Rでインストール済みのCUDA版と全く同一のリリース(b10631, commit 5d5cb4c3a)から、CPU専用ビルド成果物のみを追加取得した。llama.cppのリビルド・バージョン更新には該当しない。llama-cli.exeのSHA-256(b437c83f...)はCUDA版パッケージのものと完全一致しており、実行ファイル自体は同一で、同梱されるggml-*.dllの構成(ggml-cuda.dllの有無)だけが異なることを確認した。CUDA版パッケージにはggml-cuda.dllが含まれるが、本CPU版パッケージには含まれない。"
+  },
+  "gpu_offload_verification": {
+    "method_1_n_gpu_layers_0_via_python_binding": {
+      "note": "llama-cpp-python(既存インストール済み、CUDA同梱ビルド)でn_gpu_layers=0を指定した場合の検証",
+      "result": "FAILED - CUDA compute buffer(1792MiB)が依然GPU上に確保されることを確認した。n_gpu_layers=0はレイヤー重みのオフロードのみを制御し、CUDA backendが利用可能である限りcompute bufferは引き続きGPU上に確保される。CUDA_VISIBLE_DEVICES=''環境変数でも解消しなかった。",
+      "conclusion": "既存のllama-cpp-python(CUDA同梱ビルド)経由では、真のCPU-only実行を達成できないことが判明した。"
+    },
+    "method_2_dedicated_cpu_binary": {
+      "note": "上記の理由により、ggml-cuda.dllを含まない専用CPU-onlyバイナリ(llama-cli.exe / llama-server.exe)へ切り替えた",
+      "result": "SUCCESS",
+      "gpu_mem_before_load_mib": 2558,
+      "gpu_mem_during_generation_mib": 2548,
+      "gpu_mem_after_mib": 2334,
+      "conclusion": "GPUメモリ使用量は通常のOS/デスクトップ変動範囲内(2334〜2558MiB)で完全に横ばいであり、CUDA compute bufferの確保(以前観測された+2200MiB超のジャンプ)は一切発生しなかった。真のCPU-only実行が確認された。"
+    }
+  },
+  "tools_used_for_cpu_condition": {
+    "llama-cli.exe": "Section5/6の初回reproducibility testに使用(後にツール依存の交絡が判明、詳細はsummary参照)",
+    "llama-server.exe": "Section7(logits)・Section10(paraphrase)・Section11(critical replay)・Section18(RAG smoke)、および再実施したSection6のreproducibility testに使用。llama-cpp-python(CUDA側の全評価に使用)とAPI設計思想が近く、Phase4Zとの一貫比較に適すると判断した。"
+  },
+  "cuda_environment_reference": {
+    "note": "比較対象のCUDA側は既存のllama-cpp-python 0.3.35(CUDA同梱ビルド)をそのまま使用し、変更していない",
+    "llama_cpp_python_version": "0.3.35"
+  },
+  "cpu_hardware": {
+    "cpu_name": "AMD Ryzen 9 9950X 16-Core Processor",
+    "physical_cores": 16,
+    "logical_processors": 32
+  },
+  "gpu_hardware_reference": {
+    "gpu_name": "NVIDIA GeForce RTX 5090",
+    "driver_version": "595.71",
+    "vram_total_mib": 32607,
+    "cuda_toolkit_version": "12.8"
+  },
+  "llama_cpp_commit": "5d5cb4c3a4ea8769490d39a275ee49a45184774d",
+  "gguf_path": "training/riru/gguf/riru-qwen-final-bf16.gguf",
+  "gguf_sha256_verified_unchanged": "e102f5d3a2dced6030cb3b60e540570d8609a62f405573adf3f536c97162bdf2"
+}

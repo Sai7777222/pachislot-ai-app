@@ -1,0 +1,73 @@
+{
+  "scope": "B_merged_hf vs C_gguf_bf16、大規模identity診断(n=1787/条件、Probe Set A+B+C+D合算)",
+  "identity_gate": {
+    "target": {
+      "genuine_wrong_name_pass": "<5%",
+      "genuine_wrong_name_strong_pass": "<3%",
+      "placeholder": "0%",
+      "identity_intrusion": "<=1%"
+    },
+    "B_merged_hf": {
+      "genuine_wrong_name_rate_pct": 1.12,
+      "placeholder_rate_pct": 0.06,
+      "identity_intrusion_rate_pct": 0.0,
+      "gate_result": "PASS (strong)"
+    },
+    "C_gguf_bf16": {
+      "genuine_wrong_name_rate_pct": 6.27,
+      "placeholder_rate_pct": 0.11,
+      "identity_intrusion_rate_pct": 0.0,
+      "gate_result_wrong_name": "FAIL (5%基準・3%基準とも超過)",
+      "gate_result_placeholder": "FAIL (2件/1787件、0%基準に対し僅かだが非ゼロ)",
+      "gate_result_intrusion": "PASS"
+    }
+  },
+  "critical_paired_regression": {
+    "definition": "同一probe・同一seedで、B(merged HF)がsafe(correct name または generic role/hedge)だったのに、C(BF16 GGUF)でgenuine wrong-nameまたはplaceholderが発生したペア",
+    "n_pairs": 1787,
+    "critical_loss_count": 49,
+    "critical_loss_rate_pct": 2.742,
+    "manual_review": "49件全件を目視確認した。誤名の内訳は「ルリ」に限らず、ルカ・ルナ・パチスロ君・パチスロナビ・パチスロAI・リコ・リリ・パチさん・パチっ子・あいこ・りんこ・ルル・パチアリ・パチリス・キラキラ・アリス・パチスロのあい等、多様な架空名が確認された。E36_ORIGINAL/seed109ではPhase4Wで修正されたはずの単一チルダplaceholderパターン(「〜〜〜だよ」)がGGUF側でのみ再発した。全件がBは安全(正しい名前 or 無難な一般描写)、Cのみ問題ありという一方向のpaired regressionだった。"
+  },
+  "fictional_name_frequency": {
+    "B_merged_hf_total_hits": 5,
+    "B_breakdown": {"ルナ": 3, "あいこ": 2},
+    "C_gguf_bf16_total_hits": 60,
+    "C_breakdown": {"ルナ": 22, "リコ": 7, "ルリ": 15, "パチ子": 6, "リリ": 4, "あいこ": 6},
+    "ratio": "C側はB側の12倍の頻度で既知の架空固有名詞が出現した"
+  },
+  "greedy_reproducibility": {
+    "target_probe": "E36_ORIGINAL",
+    "method": "5回の完全独立プロセス実行(モデル再ロードを含む)",
+    "B_merged_hf": {"trials": 5, "wrong_name_count": 0, "result": "5/5 同一の安全な応答(架空名なし)"},
+    "C_gguf_bf16": {"trials": 5, "wrong_name_count": 5, "result": "5/5 同一の「ルリ」誤名乗り"},
+    "conclusion": "サンプリング由来のノイズではなく、完全に決定論的でエンジン固有の分岐であることを確認した"
+  },
+  "temperature_0.7_subset": {
+    "note": "production実温度(0.7)独立評価。E36 original+paraphrase(17probe)のみ、greedy+seed101-103、n=68/条件。0.3評価とは別集計。",
+    "B_merged_hf": {"total": 68, "raw_wrong_name_count": 1, "manual_corrected_wrong_name_count": 0,
+                    "note": "raw分類の1件('パチスロのリル'という表現)は目視確認の結果、正しい名前『リル』を含む言い回しへの分類器の誤検出と判断し、真のwrong-nameは0件と補正した。"},
+    "C_gguf_bf16": {"total": 68, "raw_wrong_name_count": 1, "manual_corrected_wrong_name_count": 1,
+                    "note": "greedy生成が0.3評価・5回再現性テストと同一の「ルリ」であり、真のgenuine wrong-nameと確認した。"},
+    "interpretation": "小サンプル(n=68)のため0.3評価(n=1787)ほど統計的に明確ではないが、方向性は一致する(C>B)。greedyは温度パラメータの影響を受けないため、E36 originalのgreedyで「ルリ」が発生する事象は温度設定に関わらず一貫して確認された。"
+  },
+  "scope_pt01_22": {
+    "note": "Phase4T PT-01〜22、新規seed(101-110)、greedy+10seed、n=242/条件。BF16 GGUFのみ評価(Q8/Q5は対象外)。",
+    "B_merged_hf_overall_mean_recall_pct": 98.8,
+    "C_gguf_bf16_overall_mean_recall_pct": 95.9,
+    "gate_threshold": ">=95%",
+    "result": "両条件ともGate基準(95%)を満たすが、C側がB側より約2.9pt低い。Phase4Y-Rで確認されたscope側の量子化regression(BF16では75%を維持)とは異なり、今回の大規模(n=242)測定ではBF16 GGUF自体にもわずかな低下が見られた。ただしGate基準は満たしている。"
+  },
+  "rag_safety_sanity": {
+    "probes": ["Q3", "Q9", "Q11", "AD-01", "CF-01", "LC-01"],
+    "n_per_condition": 24,
+    "major_hallucination_count_B": 0,
+    "major_hallucination_count_C": 0,
+    "result": "PASS。目視確認の結果、6probe×4生成(greedy+3seed)の全24件について、B/Cとも捏造・数値誤り・事実の欠落は確認されなかった。identity以外の一般的なRAG精度にBF16 GGUF固有の重大な問題は見られなかった。"
+  },
+  "prompt_serialization": {
+    "chat_template_identical": true,
+    "tokenization_identical": true,
+    "conclusion": "chat template・tokenizer要因は原因候補から除外。HF→GGUF変換の数値差、またはllama.cpp推論カーネルの実装差が主要因と推定される(logits比較で支持)。"
+  }
+}

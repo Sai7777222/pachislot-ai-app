@@ -1,0 +1,101 @@
+{
+  "hf_tensor_count": 579,
+  "gguf_tensor_count": 579,
+  "matched_pairs_count": 579,
+  "missing_in_gguf_count": 0,
+  "missing_in_gguf": [],
+  "unexpected_gguf_tensors_count": 0,
+  "unexpected_gguf_tensors": [],
+  "hf_inventory_sample": [
+    {
+      "name": "lm_head.weight",
+      "shape": [
+        152064,
+        5120
+      ],
+      "dtype": "BF16"
+    },
+    {
+      "name": "model.embed_tokens.weight",
+      "shape": [
+        152064,
+        5120
+      ],
+      "dtype": "BF16"
+    },
+    {
+      "name": "model.layers.0.input_layernorm.weight",
+      "shape": [
+        5120
+      ],
+      "dtype": "BF16"
+    },
+    {
+      "name": "model.layers.0.mlp.down_proj.weight",
+      "shape": [
+        5120,
+        13824
+      ],
+      "dtype": "BF16"
+    },
+    {
+      "name": "model.layers.0.mlp.gate_proj.weight",
+      "shape": [
+        13824,
+        5120
+      ],
+      "dtype": "BF16"
+    }
+  ],
+  "gguf_inventory_sample": [
+    {
+      "name": "output.weight",
+      "shape": [
+        152064,
+        5120
+      ],
+      "tensor_type": 30,
+      "n_elements": 778567680,
+      "n_bytes": 1557135360
+    },
+    {
+      "name": "token_embd.weight",
+      "shape": [
+        152064,
+        5120
+      ],
+      "tensor_type": 30,
+      "n_elements": 778567680,
+      "n_bytes": 1557135360
+    },
+    {
+      "name": "blk.0.attn_norm.weight",
+      "shape": [
+        5120
+      ],
+      "tensor_type": 0,
+      "n_elements": 5120,
+      "n_bytes": 20480
+    },
+    {
+      "name": "blk.0.ffn_down.weight",
+      "shape": [
+        5120,
+        13824
+      ],
+      "tensor_type": 30,
+      "n_elements": 70778880,
+      "n_bytes": 141557760
+    },
+    {
+      "name": "blk.0.ffn_gate.weight",
+      "shape": [
+        13824,
+        5120
+      ],
+      "tensor_type": 30,
+      "n_elements": 70778880,
+      "n_bytes": 141557760
+    }
+  ]
+}

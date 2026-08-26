@@ -1,0 +1,54 @@
+{
+  "source_repository": {
+    "upstream_url": "https://github.com/ggml-org/llama.cpp.git",
+    "clone_path": "D:/AI/tools/llama.cpp",
+    "branch": "master",
+    "commit_hash": "5d5cb4c3a4ea8769490d39a275ee49a45184774d",
+    "commit_date": "2026-08-26T08:27:51+03:00",
+    "note": "サードパーティforkではなく公式ggml-org/llama.cppを直接git clone。プロジェクト本体(D:/AI/projects/pachislot-ai-app)とは分離した固定ディレクトリに配置。"
+  },
+  "prebuilt_binaries": {
+    "source": "official GitHub Releases (ggml-org/llama.cpp)",
+    "release_tag": "b10631",
+    "release_published_at": "2026-08-26T06:04:59Z",
+    "asset": "llama-b10631-bin-win-cuda-12.4-x64.zip",
+    "asset_sha256": "8601e486e153e35512e6e6fe8c113cd32d367cd4ead9e029293c370a3a77384f",
+    "extract_path": "D:/AI/tools/llama.cpp-bin",
+    "build_commit_in_binary": "5d5cb4c3a",
+    "note": "cloneしたsource(5d5cb4c3a...)と公式prebuilt binary(b10631, commit 5d5cb4c3a)が完全に一致することを`llama-cli --version`出力で確認済み。CMake/MSVC等のC++ビルドツールチェーンがこの環境に存在しなかったため(`cmake`/`cl.exe`/Visual Studio未検出)、ソースからのビルドではなく、公式アップストリームが配布する署名済みprebuilt binaryを使用した。CUDA 12.4向けビルドだが、システムにはCUDA 12.8 toolkitがインストール済みで、上位互換のため問題なく動作することを確認した。",
+    "binaries": {
+      "llama-quantize.exe": {
+        "path": "D:/AI/tools/llama.cpp-bin/llama-quantize.exe",
+        "sha256": "82746f8fc6cca75869b4acf50af8db68ffeaefbb7ba5dc266064bf3033475ec0"
+      },
+      "llama-cli.exe": {
+        "path": "D:/AI/tools/llama.cpp-bin/llama-cli.exe",
+        "sha256": "b437c83f99afc4dfec1df446fc32722311e1a2bc1ef0d0d5618e56eea0b552ba"
+      }
+    },
+    "version_string": "version: 0.3.0-dev (build 10631, commit 5d5cb4c3a), built with Clang 20.1.8 for Windows x86_64"
+  },
+  "python_conversion_environment": {
+    "venv_path": "D:/AI/tools/llama.cpp/.venv-gguf",
+    "python_version": "3.11.8",
+    "isolation_note": "プロジェクト既存の.venv(app用)・.venv-qlora(QLoRA学習用)は一切変更していない。convert_hf_to_gguf.py専用の新規venvを作成し、汚染を回避した。",
+    "packages": {
+      "numpy": "1.26.4",
+      "sentencepiece": "0.2.2",
+      "transformers": "5.15.1",
+      "gguf": "0.19.0",
+      "protobuf": "4.25.9",
+      "torch": "2.11.0+cpu"
+    },
+    "deviation_from_official_requirements": {
+      "official_pin": "transformers==4.57.6 (requirements/requirements-convert_legacy_llama.txt)",
+      "actual_installed": "transformers==5.15.1",
+      "reason": "公式pin(4.57.6)ではQwen2 tokenizer fast loading時にAttributeError('list' object has no attribute 'keys')が発生した。原因は、mergeモデルのtokenizer_config.jsonのextra_special_tokensフィールドがlist形式で保存されていた(Phase4X/4Yの学習・merge時に使用したtransformers 5.15.1由来)のに対し、公式pinの4.57.6はdict形式を前提としており非互換だったため。実際にそのtokenizer_config.jsonを書き出したのと同じtransformers 5.15.1へ本venv内でのみ上書きインストールし、正常に変換できることを確認した。"
+    }
+  },
+  "toolchain_smoke_test": {
+    "convert_hf_to_gguf_help": "正常終了、Qwen2ForCausalLMをサポートモデルとして確認済み",
+    "llama_quantize_help": "正常終了、Q8_0・Q5_K_M・BF16・F16を含む対応量子化タイプを確認済み",
+    "llama_cli_help": "正常終了"
+  }
+}

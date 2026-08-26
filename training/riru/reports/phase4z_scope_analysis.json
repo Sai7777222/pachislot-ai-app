@@ -1,0 +1,94 @@
+{
+  "per_probe": {
+    "PT-01": {
+      "b_mean_recall_pct": 81.8,
+      "c_mean_recall_pct": 36.4
+    },
+    "PT-02": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-03": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-04": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-05": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-06": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-07": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-08": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-09": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-10": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-11": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-12": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-13": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-14": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-15": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 81.8
+    },
+    "PT-16": {
+      "b_mean_recall_pct": 90.9,
+      "c_mean_recall_pct": 90.9
+    },
+    "PT-17": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-18": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-19": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-20": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-21": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    },
+    "PT-22": {
+      "b_mean_recall_pct": 100.0,
+      "c_mean_recall_pct": 100.0
+    }
+  },
+  "overall_b_mean_recall_pct": 98.8,
+  "overall_c_mean_recall_pct": 95.9
+}

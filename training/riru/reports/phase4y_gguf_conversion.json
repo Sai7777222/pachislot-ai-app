@@ -1,0 +1,55 @@
+{
+  "input": {
+    "merged_hf_path": "training/riru/merged/riru-qwen-final-hf",
+    "merged_hf_model_safetensors_sha256": "01d5977760190e9ff9e462bf74ff8f0b69d5887f7d5a6db34e75d6034e77ec7e",
+    "verified_unchanged_from_phase4y_manifest": true
+  },
+  "high_precision_gguf": {
+    "outtype": "bf16",
+    "reason": "convert_hf_to_gguf.pyの--outtype選択肢(f32/f16/bf16/q8_0/tq1_0/tq2_0/auto)からSection10の優先方針(BF16優先)通りbf16を採用。元のmerged HFモデルもbf16であり、情報損失なしの高精度GGUFとなる。",
+    "output_path": "training/riru/gguf/riru-qwen-final-bf16.gguf",
+    "sha256": "e102f5d3a2dced6030cb3b60e540570d8609a62f405573adf3f536c97162bdf2",
+    "size_bytes": 29547715968,
+    "convert_time_sec_approx": 87,
+    "attempts": [
+      {"attempt": 1, "result": "FAIL", "error": "ModuleNotFoundError: No module named 'sentencepiece'", "fix": "GGUF変換専用venv(.venv-gguf)を作成し、公式requirements-convert_hf_to_gguf.txtをinstall"},
+      {"attempt": 2, "result": "FAIL", "error": "AttributeError: 'list' object has no attribute 'keys' (Qwen2 tokenizer fast loading, extra_special_tokensのlist/dict形式不一致)", "fix": "transformersを公式pin(4.57.6)から5.15.1へ本venv内でのみアップグレード(tokenizer_config.jsonを書き出したバージョンと一致させた)"},
+      {"attempt": 3, "result": "SUCCESS"}
+    ],
+    "load_verification": {
+      "loaded_via": "llama-cli.exe (single-turn, temp=0.3, n_gpu_layers=99)",
+      "result": "正常ロード・正常推論(こんにちは -> こんにちは！パチスロのことなら何でも聞いてね。)",
+      "artifacts": "文字化け・EOS異常・無限生成・repetition異常は確認されなかった",
+      "generation_speed_smoke_test": "8.3 tok/s"
+    }
+  },
+  "quantized_variants": [
+    {
+      "type": "Q8_0",
+      "reason": "品質重視候補。llama-quantize --helpで正式サポート確認済み。",
+      "output_path": "training/riru/gguf/riru-qwen-final-q8_0.gguf",
+      "sha256": "a8d1c4130b195172aff6986a1a199c53102a37df74d2a67513a261bcd5b769e4",
+      "size_bytes": 15701597568,
+      "quant_time_sec": 24.685,
+      "bits_per_weight": 8.5,
+      "quant_command": "llama-quantize.exe riru-qwen-final-bf16.gguf riru-qwen-final-q8_0.gguf Q8_0"
+    },
+    {
+      "type": "Q5_K_M",
+      "reason": "実用サイズ候補。llama-quantize --helpで正式サポート確認済み。",
+      "output_path": "training/riru/gguf/riru-qwen-final-q5_k_m.gguf",
+      "sha256": "5db936ec50301c2d7139c4142c90590703c221b0483dace4d27d2f11c1b7f6d7",
+      "size_bytes": 10508873088,
+      "quant_time_sec": 49.642,
+      "bits_per_weight": 5.69,
+      "quant_command": "llama-quantize.exe riru-qwen-final-bf16.gguf riru-qwen-final-q5_k_m.gguf Q5_K_M"
+    }
+  ],
+  "load_verification_all_variants": {
+    "C_gguf_bf16": {"loaded": true, "via": "llama-cpp-python 0.3.35"},
+    "D_gguf_q8_0": {"loaded": true, "via": "llama-cpp-python 0.3.35"},
+    "E_gguf_q5_k_m": {"loaded": true, "via": "llama-cpp-python 0.3.35"}
+  },
+  "existing_files_overwritten": false,
+  "note": "既存GGUF(なし、本プロジェクト初のGGUF生成)・既存merged HF・既存adapterはいずれも変更していない。全て新規ディレクトリ(training/riru/gguf/)へ出力。"
+}

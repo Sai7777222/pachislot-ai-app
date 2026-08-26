@@ -1,0 +1,61 @@
+{
+  "purpose": "Section21-22: llama.cppを一切介さず、HF/PyTorch単体で attention実装(eager/sdpa) と 計算精度(bfloat16/float32) を切り替えるだけで、リ/ルの優劣が変化するかを検証する『精度感度テスト』。全条件で重み・トークナイズ・プロンプトは完全に同一(training/riru/merged/riru-qwen-final-hf、E36 original forced-prefix)。",
+  "important_prior_finding": "従来のPhase4Z/4ZA『HF』基準値は実はbitsandbytes 4bit NF4量子化ロード(BitsAndBytesConfig load_in_4bit=True)で測定されたものであり、真のフル精度BF16フォワードではなかったことが本フェーズで判明した(phase4z_logits_compare.py, phase4z_identity_eval_hf.py で確認)。本フェーズのHF測定は全てbitsandbytes量子化なしの素のtorch_dtype=bfloat16/float32ロードで実施している。",
+  "conditions": [
+    {
+      "condition": "A: HF bfloat16 + eager attention (本フェーズの基準条件)",
+      "ri_logit": 12.5625, "ru_logit": 12.5625,
+      "ri_prob": 0.085156, "ru_prob": 0.085156,
+      "ri_minus_ru_logit": 0.0,
+      "winner": "EXACT TIE (bit-identical logit値)",
+      "file": "training/riru/reports/phase4zc_hf_hidden_states_meta_eager_bf16.json"
+    },
+    {
+      "condition": "B: HF bfloat16 + SDPA attention (重み・精度は同一、attention実装のみ変更)",
+      "ri_logit": 12.5, "ru_logit": 12.5625,
+      "ri_prob": 0.081315, "ru_prob": 0.086559,
+      "ri_minus_ru_logit": -0.0625,
+      "winner": "ル (llama.cpp/GGUFと同じ方向)",
+      "file": "training/riru/reports/phase4zc_hf_hidden_states_meta_sdpa_bf16.json"
+    },
+    {
+      "condition": "C: HF float32 + eager attention (重みはbf16由来だが計算精度をfloat32に変更)",
+      "ri_logit": 12.518037, "ru_logit": 12.565989,
+      "ri_prob": 0.082819, "ru_prob": 0.086887,
+      "ri_minus_ru_logit": -0.047952,
+      "winner": "ル (llama.cpp/GGUFと同じ方向、B条件よりさらに明確な差)",
+      "file": "training/riru/reports/phase4zc_hf_hidden_states_meta_eager_fp32.json"
+    },
+    {
+      "condition": "D: llama.cpp CPU GGUF BF16 (本フェーズでllama-debugにより新規測定、result_output tensor)",
+      "ri_logit": 12.533010482788086, "ru_logit": 12.592121124267578,
+      "ri_minus_ru_logit": -0.05911064,
+      "winner": "ル",
+      "file": "training/riru/reports/phase4zc_layerwise_hidden_diff.json (logits_token_compare)"
+    },
+    {
+      "condition": "E: llama.cpp CUDA GGUF BF16 (Phase4Zより再利用、参考値)",
+      "ri_prob": 0.083174, "ru_prob": 0.087977,
+      "winner": "ル",
+      "file": "training/riru/reports/phase4z_prompt_serialization_analysis.json"
+    },
+    {
+      "condition": "F: llama.cpp CPU GGUF BF16 via llama-server (Phase4Zaより再利用、参考値。本フェーズのllama-debug(CLI系ツール)とは別ツール)",
+      "ri_prob": 0.083000, "ru_prob": 0.087000,
+      "winner": "ル",
+      "file": "training/riru/reports/phase4za_logits_analysis.json"
+    },
+    {
+      "condition": "G (参考、bitsandbytes 4bit量子化ロード、Phase4Z/4ZAで従来使われていた『HF』基準): HF 4bit NF4量子化",
+      "ri_prob": 0.100368, "ru_prob": 0.073431,
+      "winner": "リ",
+      "file": "training/riru/reports/phase4za_logits_analysis.json (A_hf)"
+    }
+  ],
+  "key_finding": "重み・トークナイズ・プロンプトを完全固定した状態で、HF/PyTorch単体でも『attention実装(eager→sdpa)』または『計算精度(bfloat16→float32)』のいずれか一方を変えるだけで、リ/ルの優劣がEXACT TIEからル優勢へと反転する。この反転方向はllama.cpp(CPU/CUDA双方、GGUF BF16)が一貫して示す『ル優勢』と一致する。一方、唯一『リ優勢』を示したのはbitsandbytes 4bit量子化ロード条件(G)のみであり、これは追加の量子化ノイズが乗った参照値だったことが判明した。",
+  "interpretation": "この結果は、GGUF/llama.cpp側に『重みが壊れている』『変換で情報が失われている』ような欠陥があるのではなく(Phase4ZBで既に完全に否定済み)、そもそもこの特定のトークン対(リ/ル)がモデル自身の中で極めて僅差(bfloat16+eagerの厳密数学では丸め誤差の範囲内で完全な同点)であり、conventional(eager, 厳密だが低速な素朴実装)以外のほぼ全ての実務的な計算経路(SDPA、float32、GGUF/llama.cpp)が、同じ僅かな『ル寄り』の潜在的傾向を(丸め方向の違いにより)顕在化させている、という説明と整合する。つまり本事象は『llama.cppの実装バグ』という単純な図式ではなく、『HFのbfloat16+eagerデフォルト経路がたまたま丸めで同点になっている、極めて脆弱な分岐点』の問題である。",
+  "flash_attention_test": {
+    "attempted": false,
+    "reason": "既存の.venv-qlora環境にflash_attnパッケージがインストールされていないことを確認した(ModuleNotFoundError)。Section22の『既存のFlash Attentionのみ、新規パッケージインストールなし』の制約に従い、新規インストールは行わずスキップした。"
+  }
+}

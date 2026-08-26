@@ -270,3 +270,7 @@ training/riru/lora-riru-qwen-*/
 
 # 調査用の使い捨てテキストダンプ (アンダースコア始まりの命名規則)
 training/riru/reports/_*
+
+# リル merged HF本体 (Phase4Y作成、model.safetensorsは既存パターンで除外済みだが、
+# config/tokenizer等の残りファイルも含めディレクトリごとgit管理対象外とする)
+training/riru/merged/

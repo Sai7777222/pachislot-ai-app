@@ -1,0 +1,50 @@
+{
+  "canonical_llamacpp_path": "D:/AI/tools/llama.cpp",
+  "canonical_commit": "5d5cb4c3a4ea8769490d39a275ee49a45184774d",
+  "canonical_unchanged_confirmation": {
+    "git_status_short": "?? .venv-gguf/ (Phase4Y-Rから既存の未追跡venv、本フェーズで新規作成したものではない)",
+    "git_rev_parse_head": "5d5cb4c3a4ea8769490d39a275ee49a45184774d",
+    "conclusion": "canonical側にソース変更は一切行っていない。全ての変更は分離されたdebug copy側のみ。"
+  },
+  "debug_copy_path": "D:/AI/tools/llama.cpp-phase4zc-debug",
+  "debug_copy_commit": "5d5cb4c3a4ea8769490d39a275ee49a45184774d",
+  "debug_copy_creation_method": "git clone --no-hardlinks (canonicalからのローカルclone、同一commitを確認済み)",
+  "changed_files": [
+    "common/debug.cpp",
+    "examples/debug/debug.cpp"
+  ],
+  "change_summary": {
+    "common/debug.cpp": "既存のcommon_debug_cb_eval()コールバック内、matches_filterした(かつ非quantized型の)tensorについて、環境変数LLAMACPP_TENSOR_DUMP_DIRが設定されている場合に、tensorの生バイト(ggml_backend_tensor_get済みのデータ、type/ne/nb含む)をそのディレクトリへバイナリファイルとして追加保存する処理を追加。既存のcommon_debug_print_tensor()によるテキストログ出力(先頭/末尾3要素のみ)はそのまま維持し、削除・変更していない。",
+    "examples/debug/debug.cpp": "run()内のcommon_tokenize()呼び出しを、既定の`common_tokenize(ctx, params.prompt, add_bos)`(parse_special=false)から、`common_tokenize(ctx, params.prompt, /*add_special=*/false, /*parse_special=*/true)`に変更。理由: 本フェーズのpromptは既にHF側でchat template適用済みの完成文字列であり、その中の特殊トークン文字列(<|im_start|>等)をリテラルテキストではなく実際の特殊トークンIDとしてパースする必要があるため(Phase4Z Section7で確認済みのHF側トークナイズ方式と一致させるため)。この変更をしない場合、特殊トークンがバイト列としてトークナイズされ、HF側と異なるtoken列になってしまう。"
+  },
+  "diff_file": "training/riru/reports/_phase4zc_debug_copy_diff.txt",
+  "diff_line_count": 96,
+  "build_command": {
+    "environment_init": "call \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat\"",
+    "configure": "cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF -DGGML_NATIVE=OFF -DLLAMA_CURL=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON -DLLAMA_BUILD_TOOLS=OFF -DLLAMA_BUILD_SERVER=OFF",
+    "build": "cmake --build build --target llama-debug -j 8"
+  },
+  "compiler": "MSVC 19.43 (VC++ Tools 14.43.34808), x64",
+  "backend": "CPU-only (GGML_CUDA=OFF, GGML_NATIVE=OFF)",
+  "cuda_or_cpu": "CPU-only",
+  "cuda_build_attempted": false,
+  "cuda_build_reason_skipped": "CPU-only ビルドで目的(layer-wise hidden state比較によるHF-vs-llama.cpp forward差の局在化)を十分に達成できたため、CUDAビルド(nvccによる大幅なコンパイル時間増加を伴う)は実施しなかった。Phase4ZAで『narrow backend-numerically-sensitive margin』であることは既に確認済みであり、CPU-only結果でも本フェーズの主要な問い(どのlayer/operationで最初に数値乖離が生じるか)には十分に答えられると判断した。",
+  "output_binary": "D:/AI/tools/llama.cpp-phase4zc-debug/build/bin/llama-debug.exe",
+  "build_result": "success",
+  "build_log": "training/riru/tools_llamacpp_phase4zc_build.log (参照: D:/AI/tools/llama.cpp-phase4zc-debug/phase4zc_build.log および phase4zc_rebuild.log)",
+  "runs_performed": [
+    {
+      "purpose": "48層全体のl_out(残差ストリーム出力)+result_norm+result_output ダンプ",
+      "tensor_filters": ["l_out-", "result_norm", "result_output"],
+      "output_dir": "training/riru/reports/_phase4zc_llamacpp_dump"
+    },
+    {
+      "purpose": "layer0のsub-block(attn_norm/ffn_inp/ffn_norm/ffn_out)ダンプ",
+      "tensor_filters": ["attn_norm-0", "ffn_inp-0", "ffn_norm-0", "ffn_out-0"],
+      "output_dir": "training/riru/reports/_phase4zc_llamacpp_dump_l0"
+    }
+  ],
+  "model_used": "training/riru/gguf/riru-qwen-final-bf16.gguf (Phase4Y-R作成、Phase4ZBでweightがHFと100%bit一致と証明済み。再変換は一切していない)",
+  "prompt": "E36 original(system+user)をHFのapply_chat_template(add_generation_prompt=True)でrenderし、forced prefix「こんにちは〜！私はパチスロの専門アシスタントの」を追記した677文字/440トークンのテキスト。Phase4Z/4ZAと同一のE36原文・同一のsystem.jinja2を使用。",
+  "rag_rebuild_note": "本フェーズで再ビルドしたのはllama-debug.exe(診断専用ツール)のみであり、production側のllama-server/llama-cli/GGUFファイル/RAGパイプラインは一切変更していない。そのためSection32のRAGスモークテスト(モデル再構築時のみ必須)は対象外(実施不要)と判断した。"
+}
