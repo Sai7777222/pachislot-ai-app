@@ -1,0 +1,65 @@
+{
+  "gate_0_preflight": {
+    "status": "PASS",
+    "git_head_before": "76f68b5c420944d62f5f750d67d06e7dd20406c2",
+    "git_head_after": "76f68b5c420944d62f5f750d67d06e7dd20406c2",
+    "protected_asset_hashes": "candidate/train/val/config/adapter/adapter_config/system.jinja2/merged_hf/bf16_gguf 全て開始時・終了時ともFreeze Manifest記載値と一致",
+    "environment": {
+      "torch": "2.13.0+cu130", "transformers": "5.15.1", "peft": "0.20.0", "trl": "未インストール(train_qlora.pyは素のtransformers.Trainerを使用、trl不要)",
+      "llamacpp_commit": "5d5cb4c3a4ea8769490d39a275ee49a45184774d(不変)",
+      "llama_cpp_python_version": "0.3.35"
+    },
+    "pytest_before": "126 passed", "pytest_after": "126 passed"
+  },
+  "gate_1_dataset_construction": {
+    "status": "PASS",
+    "detail": "既存Final Candidate(1095件)無改変、新規identity margin reinforcement教師50件を追加。contamination hits 0件(初回10件検出、短い汎用挨拶語の偶然一致と判明、6レコード言い換えで解消)。complex比率9.87%(Phase4X目安10%からわずかに乖離、Phase4ZEのハード要件ではないため許容)。train/val split重複0件。",
+    "reference": "phase4ze_training_data_analysis.json"
+  },
+  "gate_2_training": {
+    "status": "PASS",
+    "detail": "smoke-testで配線確認後、本学習を実施。既存Final Candidateと完全同一のLoRA構造(r=16,alpha=16,dropout=0.08,target_modules=q/k/v/o_proj)・training hyperparameter(lr=1e-4,epoch=3,batch=2,grad_accum=8)を使用。他adapterからの継続学習ではなく、ベースQwen2.5-14B-Instructから新規学習。",
+    "train_loss": 1.473, "eval_loss": 1.2985, "train_runtime_sec": 810.75,
+    "num_train_records": 1031, "num_val_records": 114, "total_steps": 195,
+    "nan_inf_detected": false, "loss_instability_detected": false
+  },
+  "gate_3_margin": {
+    "status": "PASS",
+    "detail": "HF BF16 eager/SDPA/llama.cpp BF16 CPUの3エンジン全てで「リ」が1位・「ル」が2位。HF側marginは+0.3125(eager/SDPA完全一致、旧4bit legacy baselineと同値)、旧Phase4ZD baseline(eager同点、SDPA/llama.cppともル優勢)から明確に改善。llama.cppもmargin_logprob=+0.362でリ優勢を確認。",
+    "reference": "phase4ze_margin_analysis.json"
+  },
+  "gate_4_identity_hf": {
+    "status": "PASS",
+    "detail": "104probe評価(手動補正後): eager genuine_wrong=2.16%(<3%達成)、sdpa genuine_wrong=2.88%(<3%達成)。旧Phase4ZD baseline(naming_stress like-for-like比較)6.36%から1.25%へ約80%の相対改善。identity intrusion 0%(≤1%達成、regression probes 32件+holdout control probes 30件の両方で確認)。placeholder: eager 0.24%(1/416)、sdpa 0.96%(1/104)、いずれも同一probe(PX-09)由来の残存1件(0%目標は未達だが、単一の決定論的ケースに限定)。",
+    "reference": "phase4ze_backend_comparison.json"
+  },
+  "gate_5_identity_llamacpp": {
+    "status": "PASS",
+    "detail": "104probe評価(greedy、手動補正不要): genuine_wrong=1.92%(<3%達成、HFより低い)。placeholder=0%(HF側で失敗したPX-09も含め全問正しく「リル」と回答、目標達成)。",
+    "reference": "phase4ze_backend_comparison.json"
+  },
+  "gate_6_regression": {
+    "status": "PASS",
+    "detail": "Q3/P01/Q9/Q11/PT-01/AD-01/CF-01/LC-01の8問で、HF eager・llama.cpp CPUともに旧baseline(Phase4ZD)と数値・事実内容が完全一致。fabrication/scope violation 0件。",
+    "reference": "phase4ze_regression_analysis.json"
+  },
+  "gate_7_persona": {
+    "status": "PASS",
+    "detail": "identity intrusion(名前を聞かれていない文脈での不要な自己紹介)は、regression probes(32件、eager)・holdout casual/no-name-required control probes(eager 24件+sdpa 6件)の全てで0%。「何を聞いてもリルと名乗る」ような過学習の兆候は確認されなかった。"
+  },
+  "gate_8_case_selection": {
+    "status": "PASS",
+    "selected_case": "CASE ZE-A (Identity補強成功)",
+    "reasoning": "Section24の全条件を満たす: (1)HF eager PASS(genuine wrong-name 2.16%<3%、margin+0.3125でリ優勢), (2)HF SDPA PASS(genuine wrong-name 2.88%<3%、margin+0.3125で完全同一のリ優勢), (3)llama.cpp BF16 PASS(genuine wrong-name 1.92%、margin_logprob+0.362でリ優勢、3エンジン中最良), (4)identity marginは3エンジン全てで明確に改善(旧baseline: eager同点/SDPA・llama.cppともル優勢 → 新candidate: 3エンジン全てリ優勢+0.3125相当), (5)RAG/scope regressionなし(8probe完全一致), (6)persona regressionなし(identity intrusion 0%)。",
+    "caveats": [
+      "genuine wrong-name率は<3%の主要目標は達成したが、<1%の『strong target』には未到達(eager 2.16%, sdpa 2.88%)。",
+      "placeholder率はHF側で0%目標未達(1件、PX-09probe、eager/sdpa両方で同一の決定論的失敗)。ただしllama.cpp側は0%達成。",
+      "残存する弱点はPhase4ZE新規held-out setの中でもadversarialに設計したwrong_name_induction/role_name_confusionカテゴリに集中しており(8件中6件)、ランダムに分布しているわけではない。"
+    ],
+    "confidence": "高い(3エンジン全てで一貫した改善が確認され、RAG/persona双方に副作用なし)"
+  },
+  "gate_9_no_prohibited_changes": {
+    "status": "PASS",
+    "detail": "Base model/Qwen version/system prompt/chat template/RAG DB/structured.db/Vector DB/production設定/llama.cpp/CUDA/driver/tokenizer/generation parameter/LoRA hyperparameter/complex教師/パチスロ知識教師/既存Final Candidateのいずれも変更していない。評価probeのtraining混入なし(contamination check 0件)。Phase4W/4X/4Z系held-out probeのtraining利用なし。production/app統合なし。既存Final Candidateの上書きなし(全て新規ディレクトリ: lora-riru-qwen-phase4ze-identity-margin, merged/riru-phase4ze-identity-margin-hf, gguf-phase4ze/)。"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "margins": {
+    "A_LEGACY_4BIT": {
+      "ri_logit": 12.875,
+      "ru_logit": 12.5625,
+      "ri_prob": 0.100369,
+      "ru_prob": 0.073431,
+      "ri_rank": 1,
+      "ru_rank": 3,
+      "margin_ri_minus_ru_logit": 0.3125,
+      "margin_ri_minus_ru_prob": 0.026937,
+      "winner": "リ"
+    },
+    "B_HF_BF16_EAGER": {
+      "ri_logit": 12.5625,
+      "ru_logit": 12.5625,
+      "ri_prob": 0.085156,
+      "ru_prob": 0.085156,
+      "ri_rank": 1,
+      "ru_rank": 1,
+      "margin_ri_minus_ru_logit": 0.0,
+      "margin_ri_minus_ru_prob": 0.0,
+      "winner": "TIE"
+    },
+    "C_HF_BF16_SDPA": {
+      "ri_logit": 12.5,
+      "ru_logit": 12.5625,
+      "ri_prob": 0.081315,
+      "ru_prob": 0.086559,
+      "ri_rank": 2,
+      "ru_rank": 1,
+      "margin_ri_minus_ru_logit": -0.0625,
+      "margin_ri_minus_ru_prob": -0.005244,
+      "winner": "ル"
+    },
+    "D_LLAMA_BF16_CPU": {
+      "ri_logit": 12.53301,
+      "ru_logit": 12.592121,
+      "ri_prob": 0.082931,
+      "ru_prob": 0.08798,
+      "ri_rank": 2,
+      "ru_rank": 1,
+      "margin_ri_minus_ru_logit": -0.059111,
+      "margin_ri_minus_ru_prob": -0.00505,
+      "winner": "ル"
+    },
+    "E_HF_FP32_EAGER": {
+      "ri_logit": 12.518037,
+      "ru_logit": 12.565989,
+      "ri_prob": 0.082819,
+      "ru_prob": 0.086887,
+      "ri_rank": 2,
+      "ru_rank": 1,
+      "margin_ri_minus_ru_logit": -0.047953,
+      "margin_ri_minus_ru_prob": -0.004068,
+      "winner": "ル"
+    }
+  },
+  "prompt_token_identity_check": {
+    "n_tokens_by_condition": {
+      "A_LEGACY_4BIT": 440,
+      "B_HF_BF16_EAGER": 440,
+      "C_HF_BF16_SDPA": 440,
+      "D_LLAMA_BF16_CPU": null,
+      "E_HF_FP32_EAGER": 440
+    },
+    "all_match": true
+  },
+  "winner_summary": {
+    "A_LEGACY_4BIT": "リ",
+    "B_HF_BF16_EAGER": "TIE",
+    "C_HF_BF16_SDPA": "ル",
+    "D_LLAMA_BF16_CPU": "ル",
+    "E_HF_FP32_EAGER": "ル"
+  },
+  "key_observation": "A(legacy 4bit)のみリ優勢。B(BF16 eager)は完全同点。C(BF16 SDPA)/D(llama.cpp BF16 CPU)/E(float32 eager)は全てル優勢。llama.cppを一切介さないHF単体の条件変更(SDPA化 or float32化)だけで、legacy 4bit baselineの結論(リ優勢)とは逆方向、かつllama.cppと同方向の結果が再現される。"
+}

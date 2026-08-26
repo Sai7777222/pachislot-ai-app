@@ -1,0 +1,8 @@
+{
+  "base_model_path": "D:\\AI\\models\\llm-hf\\Qwen2.5-14B-Instruct",
+  "adapter_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\lora-riru-qwen-phase4ze-identity-margin",
+  "merged_output_dir": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\merged\\riru-phase4ze-identity-margin-hf",
+  "merge_dtype": "bfloat16",
+  "merge_device": "cpu",
+  "total_wall_clock_sec": 23.9
+}

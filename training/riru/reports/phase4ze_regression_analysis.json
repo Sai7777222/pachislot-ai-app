@@ -1,0 +1,20 @@
+{
+  "purpose": "Section16: identity補強によりRAG/scope/パチスロ能力が悪化していないかを、Q3/P01/Q9/Q11/PT-01/AD-01/CF-01/LC-01の8問で確認する。",
+  "baseline_source": "Phase4ZD B_HF_BF16_EAGER RAG smoke (phase4zd_rag_smoke_B_HF_BF16_EAGER.json) / D_LLAMA_BF16_CPU RAG smoke (phase4zd_rag_smoke_D_LLAMA_BF16_CPU.json) を「before」として再利用した(全く同一probe・同一system prompt・同一手法)。",
+  "comparison_method": "greedy応答の数値・固有情報を1問ずつ目視で突合。表現の言い換えは許容し、数値・事実内容の相違のみをfabrication/regressionとして検出する。",
+  "results": {
+    "HF_BF16_eager": {
+      "n_probes": 8,
+      "fabrication_or_factual_mismatch_count": 0,
+      "scope_violation_count": 0,
+      "detail": "Q3/P01/PT-01/AD-01/CF-01/LC-01は完全一致(表現も含めほぼ同一)。Q9/Q11は表現の言い換えのみ、数値は完全一致(Q11のループストック5パターンの内訳・確率値も一致)。"
+    },
+    "llamacpp_BF16_CPU": {
+      "n_probes": 8,
+      "fabrication_or_factual_mismatch_count": 0,
+      "scope_violation_count": 0,
+      "detail": "全問で数値完全一致。Q11のみ、視覚的示唆(LED色等)の説明を省略し代わりにループストックの一般的な傾向を述べる言い換えがあったが、事実の矛盾はない。"
+    }
+  },
+  "gate_result": "PASS (RAG/scope/事実想起能力の劣化は確認されなかった)"
+}

@@ -1,0 +1,26 @@
+{
+  "ze_candidate": {
+    "path": "training/riru/processed/riru_phase4ze_identity_margin_candidate.jsonl",
+    "sha256": "5f24e98608568a2d36523c91d99d544ca250a21d1bc9a586c929e44677752d4f"
+  },
+  "ze_train": {
+    "path": "training/riru/processed/riru_phase4ze_identity_margin_train.jsonl",
+    "sha256": "eefebc4f714c6431dc78fe6d0401b9b16439ec75ef86f0879312db6ec5257d9e"
+  },
+  "ze_val": {
+    "path": "training/riru/processed/riru_phase4ze_identity_margin_val.jsonl",
+    "sha256": "00d81d7416d867567130def13857fdd39a1f0bea292904506bfd9b4a4ca64ca6"
+  },
+  "ze_adapter": {
+    "path": "training/riru/lora-riru-qwen-phase4ze-identity-margin/adapter_model.safetensors",
+    "sha256": "c9d678479d9274f8c7e6f8b7bd26f36c8e792ab1c43f8396aeba085b9eaaf27a"
+  },
+  "ze_merged_hf": {
+    "path": "training/riru/merged/riru-phase4ze-identity-margin-hf/model.safetensors",
+    "sha256": "18351a0fb5d4e7bc72b77394395435a79c265508722aef1d0277eef9002356ca"
+  },
+  "ze_gguf": {
+    "path": "training/riru/gguf-phase4ze/riru-phase4ze-bf16.gguf",
+    "sha256": "5d35925f158a1c895e477fbf5c9dc9f50082b28214f888322eca05627a7e1b31"
+  }
+}

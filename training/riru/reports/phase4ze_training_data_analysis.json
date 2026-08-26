@@ -1,0 +1,64 @@
+{
+  "purpose": "Section3-9: Phase4ZE専用candidate構築の記録。既存Final Candidate(ratio-high-identity-stable, 1095件)は無改変・読み取り専用として使用し、新規identity margin reinforcement教師50件のみを追加した。",
+  "existing_final_candidate": {
+    "path": "training/riru/processed/riru_ratio_high_identity_stable_candidate.jsonl",
+    "count": 1095,
+    "modified": false
+  },
+  "new_teacher_records": {
+    "source_file": "training/riru/phase4ze_identity_margin_source_data.py",
+    "total": 50,
+    "by_category": {
+      "A_direct_identity": 10,
+      "B_greeting_identity": 10,
+      "C_identity_correction_hard_negative": 12,
+      "D_intrusion_control": 10,
+      "E_generic_role_distinction": 8
+    },
+    "hard_negatives_covered": ["ルリ", "ルナ", "リリ", "リコ", "ルカ", "パチ子", "パチスロ君",
+      "パチスロナビ", "パチスロAI", "あいこ", "ルル", "アリス"],
+    "hard_negative_design_note": "各レコードにつき誤名1件のみを自然文で訂正する設計(1レコード内での複数誤名列挙を禁止、build_phase4ze_dataset.pyのquality_checkで自動検査)。過去の評価responseをそのままコピーせず、新規の自然文として作成した。"
+  },
+  "leakage_check": {
+    "method": "build_phase4ze_dataset.pyのload_contamination_sources()で、Phase4T/4U/4V/4W/4X/4Zの全既存probe・教師・E36/E02原文+paraphrase・character39評価セット・holdout P01-P10・structured 17Q・Phase4ZE新規held-out probe自身を対象に、完全一致・部分文字列一致を検査した。",
+    "initial_result": "10件の交絡ヒット(全て「こんにちは」「おはよう」等の極めて短い汎用挨拶語が他の長い既存probeの部分文字列として偶然一致したもの、Phase4Xで過去に遭遇した「やっほー」問題と同種)",
+    "fix": "該当6レコード(ZE-B02, ZE-B04, ZE-B09, ZE-D01, ZE-D02, ZE-D07)の冒頭表現を言い換えて再検査し、0件に解消した。",
+    "final_result": {
+      "exact_duplicate": 0,
+      "contamination_hits": 0,
+      "high_similarity_pairs_jaccard_ge_0.85": 0,
+      "placeholder": 0,
+      "chatml": 0,
+      "real_machine_name": 0,
+      "wrong_name_enumeration_in_single_record": 0,
+      "empty": 0
+    }
+  },
+  "new_holdout_probe_set": {
+    "source_file": "training/riru/eval/phase4ze_holdout_probes.py",
+    "total": 27,
+    "categories": ["direct_naming", "greeting", "indirect_identity", "wrong_name_induction",
+      "typo_induction", "role_name_confusion", "casual_conversation", "adversarial_identity",
+      "no_name_required_control"],
+    "n_per_category": 3,
+    "frozen": true,
+    "used_in_training": false,
+    "note": "trainingデータ(phase4ze_identity_margin_source_data.py)とは文面を完全に分離して設計した。作成後、学習結果を見て一切書き換えていない。"
+  },
+  "candidate_composition": {
+    "combined_total": 1145,
+    "complex_teachers_unchanged": 113,
+    "complex_ratio_pct": 9.87,
+    "complex_ratio_note": "Phase4Xが独自に設けていた「complex比率10%以上」という目安をわずかに(0.13pt)下回るが、これはPhase4ZEの明示的なハード要件ではなく、新規identity教師50件を追加すれば分母が増える以上数学的に必然的な結果である。complex教師自体は1件も追加・削除していない(Section1の禁止事項『complex教師の追加』を遵守)。",
+    "identity_total_count": 118,
+    "identity_ratio_pct": 10.31,
+    "intrusion_control_ratio_of_new_pct": 20.0
+  },
+  "train_val_split": {
+    "method": "group_safe_split (同一user文をtrain/valに跨いで分割しない、既存Phase4Xと同一の実装を再利用)",
+    "val_ratio_target": 0.10,
+    "train_count": 1031,
+    "val_count": 114,
+    "train_val_overlap": 0
+  }
+}

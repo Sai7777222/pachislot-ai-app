@@ -1,0 +1,422 @@
+{
+  "purpose": "llama.cppを使わないHF eager vs HF SDPA(同一BF16 weight)のlayer-wise比較。Phase4ZCのHF-vs-llama.cpp比較と同種のパターンが再現するかを確認する。",
+  "layer_rows": [
+    {
+      "max_abs_diff": 0.03125,
+      "mean_abs_diff": 0.003393697738647461,
+      "rms_diff": 0.004392201291094211,
+      "l2_relative_error": 0.011957195072675902,
+      "cosine_similarity": 0.9999299326591724,
+      "layer": 0
+    },
+    {
+      "max_abs_diff": 0.03125,
+      "mean_abs_diff": 0.0035231053829193116,
+      "rms_diff": 0.004558274809140425,
+      "l2_relative_error": 0.011663365249584834,
+      "cosine_similarity": 0.9999332353317311,
+      "layer": 1
+    },
+    {
+      "max_abs_diff": 0.03125,
+      "mean_abs_diff": 0.0038346827030181887,
+      "rms_diff": 0.004987739750752213,
+      "l2_relative_error": 0.012104586330487055,
+      "cosine_similarity": 0.9999281699932192,
+      "layer": 2
+    },
+    {
+      "max_abs_diff": 0.0625,
+      "mean_abs_diff": 0.004110319167375564,
+      "rms_diff": 0.005445661233072657,
+      "l2_relative_error": 0.012077563251965117,
+      "cosine_similarity": 0.9999287841476622,
+      "layer": 3
+    },
+    {
+      "max_abs_diff": 0.0625,
+      "mean_abs_diff": 0.0044244199991226195,
+      "rms_diff": 0.00588988052206955,
+      "l2_relative_error": 0.011825128586957348,
+      "cosine_similarity": 0.9999303974030774,
+      "layer": 4
+    },
+    {
+      "max_abs_diff": 0.125,
+      "mean_abs_diff": 0.005312377214431762,
+      "rms_diff": 0.007239992732825207,
+      "l2_relative_error": 0.013109771422348513,
+      "cosine_similarity": 0.999915818058632,
+      "layer": 5
+    },
+    {
+      "max_abs_diff": 0.1875,
+      "mean_abs_diff": 0.005552646517753601,
+      "rms_diff": 0.007705497435406377,
+      "l2_relative_error": 0.013148712017528678,
+      "cosine_similarity": 0.9999170163537927,
+      "layer": 6
+    },
+    {
+      "max_abs_diff": 0.1875,
+      "mean_abs_diff": 0.00581933856010437,
+      "rms_diff": 0.008117847142795035,
+      "l2_relative_error": 0.012937469958475674,
+      "cosine_similarity": 0.9999220174132797,
+      "layer": 7
+    },
+    {
+      "max_abs_diff": 0.1875,
+      "mean_abs_diff": 0.006455042958259582,
+      "rms_diff": 0.009011383908245088,
+      "l2_relative_error": 0.01267176311907331,
+      "cosine_similarity": 0.9999235945854187,
+      "layer": 8
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.007300758361816406,
+      "rms_diff": 0.010401778274771548,
+      "l2_relative_error": 0.01265731249002519,
+      "cosine_similarity": 0.9999199046730514,
+      "layer": 9
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.007750895619392395,
+      "rms_diff": 0.010922218053950548,
+      "l2_relative_error": 0.012019584152589224,
+      "cosine_similarity": 0.9999279095914508,
+      "layer": 10
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.009292536973953247,
+      "rms_diff": 0.012744102813961036,
+      "l2_relative_error": 0.012534105550874225,
+      "cosine_similarity": 0.9999215256243175,
+      "layer": 11
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.010471948981285095,
+      "rms_diff": 0.014059165783262963,
+      "l2_relative_error": 0.01288012558129921,
+      "cosine_similarity": 0.9999172511938083,
+      "layer": 12
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.010639053583145142,
+      "rms_diff": 0.014420767265209503,
+      "l2_relative_error": 0.012804355681604514,
+      "cosine_similarity": 0.9999181709657067,
+      "layer": 13
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.010818076133728028,
+      "rms_diff": 0.01500578217289186,
+      "l2_relative_error": 0.013328230087522541,
+      "cosine_similarity": 0.9999112404052716,
+      "layer": 14
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.010607254505157471,
+      "rms_diff": 0.01492828952083368,
+      "l2_relative_error": 0.01309254502993166,
+      "cosine_similarity": 0.9999145816807613,
+      "layer": 15
+    },
+    {
+      "max_abs_diff": 0.125,
+      "mean_abs_diff": 0.01061353087425232,
+      "rms_diff": 0.014863296043507139,
+      "l2_relative_error": 0.012741843376786993,
+      "cosine_similarity": 0.9999193723828812,
+      "layer": 16
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.010835385322570801,
+      "rms_diff": 0.015433416706248017,
+      "l2_relative_error": 0.013301296092117306,
+      "cosine_similarity": 0.99991369050165,
+      "layer": 17
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.01152663230895996,
+      "rms_diff": 0.016584026668172533,
+      "l2_relative_error": 0.014020243984258648,
+      "cosine_similarity": 0.9999017502655683,
+      "layer": 18
+    },
+    {
+      "max_abs_diff": 0.25,
+      "mean_abs_diff": 0.011942845582962037,
+      "rms_diff": 0.017224297867504183,
+      "l2_relative_error": 0.013795392164822073,
+      "cosine_similarity": 0.9999048566795564,
+      "layer": 19
+    },
+    {
+      "max_abs_diff": 0.375,
+      "mean_abs_diff": 0.011651718616485595,
+      "rms_diff": 0.01745263319145806,
+      "l2_relative_error": 0.014334409813880549,
+      "cosine_similarity": 0.9998972571213486,
+      "layer": 20
+    },
+    {
+      "max_abs_diff": 0.625,
+      "mean_abs_diff": 0.011705291271209717,
+      "rms_diff": 0.01889670488394607,
+      "l2_relative_error": 0.015387979836708723,
+      "cosine_similarity": 0.9998819499751898,
+      "layer": 21
+    },
+    {
+      "max_abs_diff": 0.5,
+      "mean_abs_diff": 0.011656355857849122,
+      "rms_diff": 0.018288073696158962,
+      "l2_relative_error": 0.01512371552284705,
+      "cosine_similarity": 0.9998859354142067,
+      "layer": 22
+    },
+    {
+      "max_abs_diff": 0.375,
+      "mean_abs_diff": 0.011578178405761719,
+      "rms_diff": 0.01795027838812734,
+      "l2_relative_error": 0.014367391624439447,
+      "cosine_similarity": 0.999896783702335,
+      "layer": 23
+    },
+    {
+      "max_abs_diff": 0.75,
+      "mean_abs_diff": 0.012519633769989014,
+      "rms_diff": 0.0205200336824728,
+      "l2_relative_error": 0.01572930286921633,
+      "cosine_similarity": 0.9998792302814212,
+      "layer": 24
+    },
+    {
+      "max_abs_diff": 0.5,
+      "mean_abs_diff": 0.013237452507019043,
+      "rms_diff": 0.01998577171709326,
+      "l2_relative_error": 0.014823406196706995,
+      "cosine_similarity": 0.9998903209248017,
+      "layer": 25
+    },
+    {
+      "max_abs_diff": 0.375,
+      "mean_abs_diff": 0.014377439022064209,
+      "rms_diff": 0.02111598602058018,
+      "l2_relative_error": 0.0156544755163699,
+      "cosine_similarity": 0.9998777902726946,
+      "layer": 26
+    },
+    {
+      "max_abs_diff": 0.5,
+      "mean_abs_diff": 0.016728734970092772,
+      "rms_diff": 0.024319908740107598,
+      "l2_relative_error": 0.017293308314097734,
+      "cosine_similarity": 0.9998509619453075,
+      "layer": 27
+    },
+    {
+      "max_abs_diff": 0.75,
+      "mean_abs_diff": 0.017402124404907227,
+      "rms_diff": 0.02625132930780157,
+      "l2_relative_error": 0.017326750986802197,
+      "cosine_similarity": 0.9998500225020993,
+      "layer": 28
+    },
+    {
+      "max_abs_diff": 1.0,
+      "mean_abs_diff": 0.019282934069633485,
+      "rms_diff": 0.030767104306975507,
+      "l2_relative_error": 0.018291150017703893,
+      "cosine_similarity": 0.9998331323854773,
+      "layer": 29
+    },
+    {
+      "max_abs_diff": 1.0,
+      "mean_abs_diff": 0.02148857116699219,
+      "rms_diff": 0.034131306291793534,
+      "l2_relative_error": 0.01914792148738144,
+      "cosine_similarity": 0.9998166942860596,
+      "layer": 30
+    },
+    {
+      "max_abs_diff": 1.25,
+      "mean_abs_diff": 0.023465633392333984,
+      "rms_diff": 0.03759459531077766,
+      "l2_relative_error": 0.018417443941835563,
+      "cosine_similarity": 0.9998312395397061,
+      "layer": 31
+    },
+    {
+      "max_abs_diff": 1.25,
+      "mean_abs_diff": 0.026391315460205077,
+      "rms_diff": 0.04064414425862854,
+      "l2_relative_error": 0.018164930189388816,
+      "cosine_similarity": 0.9998358328503644,
+      "layer": 32
+    },
+    {
+      "max_abs_diff": 1.0,
+      "mean_abs_diff": 0.030058735609054567,
+      "rms_diff": 0.043246018296718675,
+      "l2_relative_error": 0.017088805818387683,
+      "cosine_similarity": 0.9998547755687429,
+      "layer": 33
+    },
+    {
+      "max_abs_diff": 1.0,
+      "mean_abs_diff": 0.03221845626831055,
+      "rms_diff": 0.044480559658678906,
+      "l2_relative_error": 0.015266404207134264,
+      "cosine_similarity": 0.9998847031942855,
+      "layer": 34
+    },
+    {
+      "max_abs_diff": 1.0,
+      "mean_abs_diff": 0.03566939830780029,
+      "rms_diff": 0.048895022847981674,
+      "l2_relative_error": 0.014869749428446495,
+      "cosine_similarity": 0.9998899280736273,
+      "layer": 35
+    },
+    {
+      "max_abs_diff": 1.0,
+      "mean_abs_diff": 0.03967845439910889,
+      "rms_diff": 0.053706148459684466,
+      "l2_relative_error": 0.01435563559337251,
+      "cosine_similarity": 0.9998971330566354,
+      "layer": 36
+    },
+    {
+      "max_abs_diff": 1.0,
+      "mean_abs_diff": 0.04402865171432495,
+      "rms_diff": 0.05920174496301206,
+      "l2_relative_error": 0.0134249742057876,
+      "cosine_similarity": 0.9999100666693056,
+      "layer": 37
+    },
+    {
+      "max_abs_diff": 2.0,
+      "mean_abs_diff": 0.04761180877685547,
+      "rms_diff": 0.06755804500180519,
+      "l2_relative_error": 0.013592969107826359,
+      "cosine_similarity": 0.9999092119084539,
+      "layer": 38
+    },
+    {
+      "max_abs_diff": 2.0,
+      "mean_abs_diff": 0.053653287887573245,
+      "rms_diff": 0.07676839453732945,
+      "l2_relative_error": 0.013575905312026048,
+      "cosine_similarity": 0.9999099281008055,
+      "layer": 39
+    },
+    {
+      "max_abs_diff": 2.0,
+      "mean_abs_diff": 0.06089625358581543,
+      "rms_diff": 0.0843462354280627,
+      "l2_relative_error": 0.012632729554361845,
+      "cosine_similarity": 0.9999214348210751,
+      "layer": 40
+    },
+    {
+      "max_abs_diff": 2.0,
+      "mean_abs_diff": 0.06770100593566894,
+      "rms_diff": 0.09240981826524096,
+      "l2_relative_error": 0.012284624831579988,
+      "cosine_similarity": 0.9999257034871727,
+      "layer": 41
+    },
+    {
+      "max_abs_diff": 2.0,
+      "mean_abs_diff": 0.07540960311889648,
+      "rms_diff": 0.10049563516301711,
+      "l2_relative_error": 0.01173087510209213,
+      "cosine_similarity": 0.9999312033774508,
+      "layer": 42
+    },
+    {
+      "max_abs_diff": 2.0,
+      "mean_abs_diff": 0.08243365287780761,
+      "rms_diff": 0.10853385741272019,
+      "l2_relative_error": 0.011438805580023534,
+      "cosine_similarity": 0.9999346452935813,
+      "layer": 43
+    },
+    {
+      "max_abs_diff": 0.5,
+      "mean_abs_diff": 0.09186439514160157,
+      "rms_diff": 0.11795214731971218,
+      "l2_relative_error": 0.01092264342667059,
+      "cosine_similarity": 0.999940374500033,
+      "layer": 44
+    },
+    {
+      "max_abs_diff": 1.0,
+      "mean_abs_diff": 0.10433754920959473,
+      "rms_diff": 0.13448213778106985,
+      "l2_relative_error": 0.010696432074958144,
+      "cosine_similarity": 0.999942817345107,
+      "layer": 45
+    },
+    {
+      "max_abs_diff": 2.0,
+      "mean_abs_diff": 0.1201552391052246,
+      "rms_diff": 0.1619850619921923,
+      "l2_relative_error": 0.00999982949335783,
+      "cosine_similarity": 0.9999503225762709,
+      "layer": 46
+    },
+    {
+      "max_abs_diff": 4.0,
+      "mean_abs_diff": 0.13853836059570312,
+      "rms_diff": 0.20227180254929897,
+      "l2_relative_error": 0.009644379344003752,
+      "cosine_similarity": 0.9999548598449268,
+      "layer": 47
+    }
+  ],
+  "post_final_norm_metrics": {
+    "max_abs_diff": 0.5,
+    "mean_abs_diff": 0.017472390830516816,
+    "rms_diff": 0.025641499000512092,
+    "l2_relative_error": 0.008579959194868031,
+    "cosine_similarity": 0.9999648969323413
+  },
+  "logits_metrics": {
+    "max_abs_diff": 0.15625,
+    "mean_abs_diff": 0.023209951671000307,
+    "rms_diff": 0.03053701928460205,
+    "l2_relative_error": 0.00855398179619092,
+    "cosine_similarity": 0.9999646355487465
+  },
+  "logits_token_compare": {
+    "ri_eager_logit": 12.5625,
+    "ri_sdpa_logit": 12.5,
+    "ru_eager_logit": 12.5625,
+    "ru_sdpa_logit": 12.5625,
+    "margin_eager": 0.0,
+    "margin_sdpa": -0.0625
+  },
+  "first_divergence": {
+    "first_nonzero_diff_layer": 0,
+    "first_10x_jump_layer": null,
+    "first_cosine_drop_below_0.9999_layer": 20
+  },
+  "comparison_to_phase4zc_hf_vs_llamacpp": {
+    "phase4zc_first_nonzero_layer": 0,
+    "phase4zc_first_10x_jump_layer": null,
+    "phase4zc_first_cosine_drop_layer": 27,
+    "note": "Phase4ZCではHF(eager)とllama.cpp(CPU GGUF)の比較で同様の値を得た。本比較(HF eager vs HF SDPA、llama.cpp不使用)で同種のパターンが出れば、drift要因がllama.cpp固有ではなくattention実装差自体にあることの追加証拠となる。"
+  }
+}

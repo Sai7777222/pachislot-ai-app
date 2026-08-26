@@ -1,0 +1,24 @@
+{
+  "purpose": "Section14-15: E36 forced-prefixでの「リ」「ル」logit/margin比較。Phase4ZD baseline(既存Final Candidate、CASE ZD-E判定時の値)とPhase4ZE candidateを比較する。",
+  "before_phase4zd_baseline": {
+    "HF_4bit_legacy": {"ri_logit": 12.875, "ru_logit": 12.5625, "margin": 0.3125, "winner": "リ",
+      "note": "旧baseline、production候補ではない、参考値"},
+    "HF_BF16_eager": {"ri_logit": 12.5625, "ru_logit": 12.5625, "margin": 0.0, "winner": "TIE"},
+    "HF_BF16_sdpa": {"ri_logit": 12.5, "ru_logit": 12.5625, "margin": -0.0625, "winner": "ル"},
+    "llamacpp_BF16_CPU": {"ri_logit": 12.533010, "ru_logit": 12.592121, "margin": -0.059111, "winner": "ル"}
+  },
+  "after_phase4ze_candidate": {
+    "HF_BF16_eager": {"ri_logit": 12.75, "ru_logit": 12.4375, "margin": 0.3125, "winner": "リ", "ri_rank": 1, "ru_rank": 2},
+    "HF_BF16_sdpa": {"ri_logit": 12.75, "ru_logit": 12.4375, "margin": 0.3125, "winner": "リ", "ri_rank": 1, "ru_rank": 2},
+    "llamacpp_BF16_CPU": {"ri_logprob": -2.153796, "ru_logprob": -2.515952, "margin_logprob": 0.362156,
+      "winner": "リ", "ri_rank": 1, "ru_rank": 2,
+      "note": "llama-server /completionのlogprobsで測定。HFはlogit、llama.cppはlogprobで単位が異なるため直接の数値比較ではなくwinner/rankの一致で評価する。"}
+  },
+  "key_findings": [
+    "Phase4ZE candidateは、HF BF16 eager/HF BF16 SDPA/llama.cpp BF16 CPUの3エンジン全てで「リ」が1位・「ル」が2位という完全に一貫した結果を示した。",
+    "HF側のmarginは旧4bit legacy baselineと同一の数値(+0.3125)まで拡大した(eager/SDPA完全に同一値)。これはPhase4ZDのbaseline(eagerは同点、SDPAはル優勢)から明確に改善している。",
+    "eager/SDPA間でmarginが完全に一致した(0.3125=0.3125)ことは、Phase4ZCで確認された『attention実装差に対するモデルの感度』が、新規identity教師の追加によって実質的に吸収され、識別マージンがattention実装の違いを超えて安定したことを示唆する。",
+    "llama.cppでも同方向(リ優勢)が再現され、Section14の理想条件『両backendでリ>ル、かつPhase4ZD baselineよりmarginが明確に拡大』を満たした。"
+  ],
+  "gate_result": "PASS (両HF backend + llama.cpp CPUの3エンジン全てでリ優勢、marginは旧baselineの同点/ル優勢から明確に改善)"
+}

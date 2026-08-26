@@ -1,0 +1,161 @@
+{
+  "condition": "D_LLAMA_BF16_CPU",
+  "source": "Phase4ZC llama-debug (CPU-only, official b10631 commit-matched debug copy build) result_output tensor dump",
+  "model_path": "training/riru/gguf/riru-qwen-final-bf16.gguf",
+  "tool": "llama-debug.exe (CPU-only build, D:/AI/tools/llama.cpp-phase4zc-debug)",
+  "gpu_used": false,
+  "forced_prefix": "こんにちは〜！私はパチスロの専門アシスタントの",
+  "ri_token_id": 36723,
+  "ru_token_id": 32610,
+  "ri_logit": 12.53301,
+  "ru_logit": 12.592121,
+  "ri_prob": 0.082931,
+  "ru_prob": 0.08798,
+  "ri_rank": 2,
+  "ru_rank": 1,
+  "margin_ri_minus_ru_logit": -0.059111,
+  "margin_ri_minus_ru_prob": -0.00505,
+  "winner": "ル",
+  "top20": [
+    {
+      "rank": 1,
+      "token_id": 32610,
+      "token_str": "ル",
+      "prob": 0.08798,
+      "logit": 12.592121
+    },
+    {
+      "rank": 2,
+      "token_id": 36723,
+      "token_str": "リ",
+      "prob": 0.082931,
+      "logit": 12.53301
+    },
+    {
+      "rank": 3,
+      "token_id": 29491,
+      "token_str": "あ",
+      "prob": 0.063321,
+      "logit": 12.26322
+    },
+    {
+      "rank": 4,
+      "token_id": 30331,
+      "token_str": "り",
+      "prob": 0.041474,
+      "logit": 11.840061
+    },
+    {
+      "rank": 5,
+      "token_id": 79705,
+      "token_str": "パ",
+      "prob": 0.03395,
+      "logit": 11.63991
+    },
+    {
+      "rank": 6,
+      "token_id": 124486,
+      "token_str": "ミ",
+      "prob": 0.032061,
+      "logit": 11.582644
+    },
+    {
+      "rank": 7,
+      "token_id": 46160,
+      "token_str": "コ",
+      "prob": 0.030651,
+      "logit": 11.537662
+    },
+    {
+      "rank": 8,
+      "token_id": 42414,
+      "token_str": "ち",
+      "prob": 0.022999,
+      "logit": 11.250459
+    },
+    {
+      "rank": 9,
+      "token_id": 61803,
+      "token_str": "キ",
+      "prob": 0.020222,
+      "logit": 11.121785
+    },
+    {
+      "rank": 10,
+      "token_id": 29713,
+      "token_str": "さ",
+      "prob": 0.015462,
+      "logit": 10.853362
+    },
+    {
+      "rank": 11,
+      "token_id": 136277,
+      "token_str": "○",
+      "prob": 0.01494,
+      "logit": 10.819081
+    },
+    {
+      "rank": 12,
+      "token_id": 54940,
+      "token_str": "〜",
+      "prob": 0.014264,
+      "logit": 10.772749
+    },
+    {
+      "rank": 13,
+      "token_id": 126786,
+      "token_str": "ゆ",
+      "prob": 0.013849,
+      "logit": 10.743225
+    },
+    {
+      "rank": 14,
+      "token_id": 38780,
+      "token_str": "ア",
+      "prob": 0.013691,
+      "logit": 10.731748
+    },
+    {
+      "rank": 15,
+      "token_id": 139813,
+      "token_str": "ぴ",
+      "prob": 0.012687,
+      "logit": 10.655549
+    },
+    {
+      "rank": 16,
+      "token_id": 16714,
+      "token_str": "ま",
+      "prob": 0.011377,
+      "logit": 10.546598
+    },
+    {
+      "rank": 17,
+      "token_id": 69463,
+      "token_str": "ピ",
+      "prob": 0.01132,
+      "logit": 10.541556
+    },
+    {
+      "rank": 18,
+      "token_id": 127000,
+      "token_str": "アイ",
+      "prob": 0.011293,
+      "logit": 10.539186
+    },
+    {
+      "rank": 19,
+      "token_id": 32021,
+      "token_str": "れ",
+      "prob": 0.010823,
+      "logit": 10.496666
+    },
+    {
+      "rank": 20,
+      "token_id": 125046,
+      "token_str": "モ",
+      "prob": 0.008936,
+      "logit": 10.305121
+    }
+  ]
+}

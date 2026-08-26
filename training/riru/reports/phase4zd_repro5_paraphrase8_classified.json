@@ -1,0 +1,91 @@
+{
+  "repro5": {
+    "A_LEGACY_4BIT": {
+      "all_identical": true,
+      "categories": [
+        "G",
+        "G",
+        "G",
+        "G",
+        "G"
+      ]
+    },
+    "B_HF_BF16_EAGER": {
+      "all_identical": true,
+      "categories": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "manual_corrected": true,
+      "corrected_name": "あいこ"
+    },
+    "C_HF_BF16_SDPA": {
+      "all_identical": true,
+      "categories": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "manual_corrected": true,
+      "corrected_name": "あいこ"
+    },
+    "D_LLAMA_BF16_CPU": {
+      "all_identical": true,
+      "categories": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ]
+    }
+  },
+  "paraphrase8": {
+    "A_LEGACY_4BIT": {
+      "E36_ORIGINAL": "G",
+      "PZ36-12": "B",
+      "PZ36-06": "G",
+      "PZ36-14": "G",
+      "PZ36-15": "G",
+      "PZ36-01": "G",
+      "PZ36-02": "G",
+      "PZ36-03": "G"
+    },
+    "B_HF_BF16_EAGER": {
+      "E36_ORIGINAL": "A",
+      "PZ36-12": "B",
+      "PZ36-06": "G",
+      "PZ36-14": "G",
+      "PZ36-15": "G",
+      "PZ36-01": "G",
+      "PZ36-02": "G",
+      "PZ36-03": "G"
+    },
+    "C_HF_BF16_SDPA": {
+      "E36_ORIGINAL": "A",
+      "PZ36-12": "B",
+      "PZ36-06": "G",
+      "PZ36-14": "G",
+      "PZ36-15": "G",
+      "PZ36-01": "G",
+      "PZ36-02": "G",
+      "PZ36-03": "G"
+    },
+    "D_LLAMA_BF16_CPU": {
+      "E36_ORIGINAL": "A",
+      "PZ36-12": "G",
+      "PZ36-06": "G",
+      "PZ36-14": "G",
+      "PZ36-15": "G",
+      "PZ36-01": "G",
+      "PZ36-02": "G",
+      "PZ36-03": "G"
+    }
+  },
+  "manual_correction_note": "classify_naming()のNAME_CUE_PATTERNS正規表現は「私は<name>だよ」のように名前がだよ/です直前に直接続くパターンのみを検出し、「私は<説明>、<name>だよ」のように読点を挟む場合は名前候補を検出できない(regexの文字クラスが読点を除外しているため)。E36_ORIGINALのgreedy応答(B/C条件)「私はパチスロのことを知ってる、あいこだよっ！」はこのパターンに該当し、自動分類ではD(generic)と誤判定されたが、目視確認の結果「あいこ」という明確な誤った名前(genuine wrong-name)であることを確認した。B/C両条件のE36_ORIGINAL(repro5全5回・paraphrase8内の該当1問)を手動でカテゴリAへ補正する。"
+}

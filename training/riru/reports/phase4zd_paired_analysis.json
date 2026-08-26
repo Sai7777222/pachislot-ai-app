@@ -1,0 +1,1793 @@
+{
+  "note": "同上。paired比較はcorrected値(手動補正後)を正とする。",
+  "raw_automatic": {
+    "n_pairs": 220,
+    "win_b_unsafe_d_safe": 6,
+    "tie": 196,
+    "loss_b_safe_d_unsafe": 18,
+    "critical_loss_b_safe_d_wrongname": 5,
+    "loss_pct": 8.18,
+    "critical_loss_pct": 2.27,
+    "b_genuine_wrong_pct": 9.09,
+    "d_genuine_wrong_pct": 16.82,
+    "absolute_diff_pt": 7.73,
+    "stage2_trigger": true,
+    "stage2_trigger_reason": "absolute_diff_pt=7.73 (閾値2.0以上か), critical_loss_pct=2.27 (閾値1.0以上か)"
+  },
+  "corrected": {
+    "n_pairs": 220,
+    "win_b_unsafe_d_safe": 7,
+    "tie": 194,
+    "loss_b_safe_d_unsafe": 19,
+    "critical_loss_b_safe_d_wrongname": 3,
+    "loss_pct": 8.64,
+    "critical_loss_pct": 1.36,
+    "b_genuine_wrong_pct_corrected": 6.36,
+    "d_genuine_wrong_pct_corrected": 13.18,
+    "absolute_diff_pt_corrected": 6.82,
+    "ratio_d_over_b": 2.07,
+    "pairs": [
+      {
+        "probe_id": "NW-01",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "G",
+        "d_category": "E",
+        "status": "WIN"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "G",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "G",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "E",
+        "d_category": "G",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "G",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "E",
+        "d_category": "B",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "D",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-02",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "G",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-03",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-04",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "D",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "D",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "B",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "G",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "D",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "G",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "G",
+        "d_category": "E",
+        "status": "WIN"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "E",
+        "d_category": "B",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "G",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "A",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "A",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "D",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "B",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "A",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-06",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-07",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "E",
+        "d_category": "B",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "D",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-08",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "B",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "E",
+        "d_category": "B",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "B",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "G",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "G",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "B",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "D",
+        "d_category": "E",
+        "status": "WIN"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "D",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "D",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "E",
+        "d_category": "B",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "D",
+        "d_category": "E",
+        "status": "WIN"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "D",
+        "d_category": "E",
+        "status": "WIN"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "A",
+        "d_category": "E",
+        "status": "WIN"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "E",
+        "d_category": "B",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-10",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "G",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "D",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "E",
+        "d_category": "E",
+        "status": "TIE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "D",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-11",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-12",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "A",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "A",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-13",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "G",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-14",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "E",
+        "d_category": "A",
+        "status": "CRITICAL_LOSS"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "G",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "A",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "E",
+        "d_category": "A",
+        "status": "CRITICAL_LOSS"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "A",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "A",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "D",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "G",
+        "d_category": "E",
+        "status": "WIN"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "E",
+        "d_category": "G",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "E",
+        "d_category": "E",
+        "status": "TIE"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "A",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "D",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-16",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "D",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-17",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "D",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "D",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "G",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "B",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "B",
+        "d_category": "D",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-18",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "E",
+        "d_category": "E",
+        "status": "TIE"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "E",
+        "d_category": "B",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "E",
+        "d_category": "E",
+        "status": "TIE"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "D",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "B",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "G",
+        "d_category": "B",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "E",
+        "d_category": "G",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-19",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "E",
+        "d_category": "B",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "greedy",
+        "key": "greedy",
+        "b_category": "E",
+        "d_category": "A",
+        "status": "CRITICAL_LOSS"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "101",
+        "b_category": "E",
+        "d_category": "G",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "102",
+        "b_category": "A",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "103",
+        "b_category": "E",
+        "d_category": "G",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "104",
+        "b_category": "E",
+        "d_category": "B",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "105",
+        "b_category": "E",
+        "d_category": "G",
+        "status": "LOSS"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "106",
+        "b_category": "E",
+        "d_category": "E",
+        "status": "TIE"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "107",
+        "b_category": "A",
+        "d_category": "G",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "108",
+        "b_category": "A",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "109",
+        "b_category": "A",
+        "d_category": "A",
+        "status": "TIE_BOTH_UNSAFE"
+      },
+      {
+        "probe_id": "NW-20",
+        "kind": "sampled",
+        "key": "110",
+        "b_category": "E",
+        "d_category": "G",
+        "status": "LOSS"
+      }
+    ],
+    "stage2_trigger": true
+  }
+}

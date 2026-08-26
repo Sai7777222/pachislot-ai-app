@@ -1,0 +1,114 @@
+{
+  "gate_0_checkpoint": {
+    "status": "PASS",
+    "commit_hash": "76f68b5c420944d62f5f750d67d06e7dd20406c2",
+    "commit_message": "checkpoint: Phase 4ZC forward drift diagnosis before Phase 4ZD",
+    "pushed": true,
+    "local_head_equals_origin_main": true,
+    "n_files_committed": 78,
+    "excluded": ["training/riru/merged/ (merged HF本体、model.safetensorsを含む)", "*.gguf", "adapter/checkpoint本体(既にgitignore済み)", ".venv*", "temporary binary dump (training/riru/reports/_*)"]
+  },
+  "gate_1_prompt_token_identity": {
+    "status": "PASS",
+    "n_tokens_all_conditions": 440,
+    "first10_last10_ids_match": "A/B/C/E(HF)で完全一致確認済み。D(llama.cpp)もPhase4ZC/4ZDのllama-debug/llama-server実行ログで同一token列を確認済み(先頭<|im_start|>(151644) system(8948)...から一致)。"
+  },
+  "gate_2_margin_comparison_section8": {
+    "status": "PASS",
+    "summary": {
+      "A_LEGACY_4BIT": {"winner": "リ", "margin_logit": 0.3125, "actual_attn_impl": "sdpa(デフォルト、指定なし)"},
+      "B_HF_BF16_EAGER": {"winner": "TIE", "margin_logit": 0.0},
+      "C_HF_BF16_SDPA": {"winner": "ル", "margin_logit": -0.0625},
+      "D_LLAMA_BF16_CPU": {"winner": "ル", "margin_logit": -0.059111},
+      "E_HF_FP32_EAGER": {"winner": "ル", "margin_logit": -0.047953}
+    },
+    "key_finding": "4bit(A)のみリ優勢。BF16 eager(B)は完全同点。SDPA(C)/llama.cpp(D)/float32(E)は全てル優勢。llama.cppを使わないHF単体の条件変更だけで、旧4bit baselineとは逆方向、かつllama.cppと同方向の結果が再現される。"
+  },
+  "gate_3_full_generation_e36_original": {
+    "status": "PASS",
+    "note": "強制prefixのlogit分析だけでなく、実際の非拘束greedy生成(repro5)でも確認した。",
+    "findings": {
+      "A_LEGACY_4BIT": "名前を名乗らず(no-name)。5/5決定論的に同一。",
+      "B_HF_BF16_EAGER": "「あいこ」という誤った名前を名乗る(genuine wrong-name)。5/5決定論的に同一。当初自動分類器はD(generic)と誤判定したが、目視確認により手動でAへ補正。",
+      "C_HF_BF16_SDPA": "Bと完全に同一のテキスト「あいこ」。5/5決定論的に同一。",
+      "D_LLAMA_BF16_CPU": "「ルリ」という誤った名前を名乗る(genuine wrong-name、既知の旗艦事例)。5/5決定論的に同一。",
+      "critical_insight": "forced-prefix「こんにちは〜！私はパチスロの専門アシスタントの」は、D(llama.cpp)の自然なgreedy軌道は通過するが、A/B/C(HF)いずれの自然なgreedy軌道もこの厳密な文言を通過しない(HFは「パチスロのことを知ってる、」という異なる言い回しを取る)。したがってSection8のforced-prefix margin比較は『仮想的な分岐点』での比較であり、実際の非拘束生成結果とは必ずしも1対1で対応しないことが判明した。それでも両手法とも最終的に『B/C/Dは何らかの誤名を生成し、Aのみ無回答』という一貫した傾向を示した。"
+    }
+  },
+  "gate_4_stage1_naming_stress": {
+    "status": "PASS",
+    "probe_set": "PROBE_SET_A (Phase4W naming stress, 20問, 無改変)",
+    "seeds": "greedy + 101-110 (11 generations/probe) = 220/条件",
+    "conditions_evaluated": ["B_HF_BF16_EAGER", "D_LLAMA_BF16_CPU"],
+    "raw_automatic": {"B": "9.09% (20/220)", "D": "16.82% (37/220)"},
+    "manual_review": {
+      "B": "20件全件を目視確認。6件を誤検出と判定し補正(1件はG=無名乗り、1件はE=正しい名前+修飾語、4件はB=hedge/拒否)。補正後: 14/220 = 6.36%",
+      "D": "37件全件を目視確認。8件を誤検出と判定し補正(1件はE=正しい名前+修飾語、7件はB=hedge/拒否)。補正後: 29/220 = 13.18%",
+      "classifier_gap_identified": "既存classify_naming()のNAME_CUE_PATTERNS正規表現は「私は<name>だよ」のように名前が直接続くパターンのみ検出し、読点を挟む自己紹介文(「私は<説明>、<name>だよ」)では名前候補を検出できない。また既存HEDGE_PATTERNは「名前はまだ決まってない」「名前は言わないでおこうね」等の言い回しを網羅していない。この2つの既知の抜けにより、当初の自動分類は一部誤っていたが、目視確認により手動補正した。共有のphase4z_naming_classify.pyファイル自体は変更していない(診断専用のPhase4ZD側で手動補正のみ実施)。"
+    },
+    "corrected_result": {
+      "B_genuine_wrong_pct": 6.36, "D_genuine_wrong_pct": 13.18,
+      "absolute_diff_pt": 6.82, "ratio_d_over_b": 2.07,
+      "critical_loss_pct": 1.36
+    }
+  },
+  "gate_5_stage2_confirmation": {
+    "status": "PASS",
+    "trigger_reason": "absolute_diff_pt=6.82(閾値2.0以上) かつ critical_loss_pct=1.36(閾値1.0以上) の両方を満たしたためStage2実施。",
+    "probe_set": "PROBE_SET_B (Phase4X held-out naming, 24問, 無改変)",
+    "seeds": "greedy + 101-103 (4 generations/probe) = 96/条件",
+    "result": {"B_genuine_wrong_pct": 1.04, "D_genuine_wrong_pct": 5.21, "absolute_diff_pt": 4.17, "ratio_d_over_b": 5.0},
+    "manual_review": "raw automatic A件数(B=1件, D=5件)は全件目視確認済み。誤検出0件。",
+    "conclusion": "独立した第2のprobe setでもD>Bの方向性が安定して再現された(絶対率はprobe setにより変動するが、比率2-5倍でD側が一貫して高い)。paired差は安定していると判断し、追加のStage実施は不要。"
+  },
+  "gate_6_precision_path_contribution_q6": {
+    "status": "PASS",
+    "method": "Set A(220サンプル)ベースで、旧4bit-HF baseline(Phase4Zの同一probe+seed部分集合を本フェーズのclassifierで再分類)と、新full-BF16-HF(本フェーズB, 手動補正後)、新BF16-llama.cpp(本フェーズD, 手動補正後)を比較。",
+    "figures": {
+      "old_4bit_HF_matched_subset_pct": 0.91,
+      "new_BF16_HF_eager_corrected_pct": 6.36,
+      "new_BF16_llamacpp_corrected_pct": 13.18,
+      "gap_explained_by_precision_path_alone_pt": 5.45,
+      "total_gap_4bit_HF_to_BF16_llamacpp_pt": 12.27,
+      "precision_path_contribution_pct_of_total_gap": 44.4,
+      "residual_llamacpp_attention_contribution_pct_of_total_gap": 55.6
+    },
+    "conclusion": "4bit→BF16というprecision path差だけで、旧来『HF vs GGUF』の差として報告されていた規模(Phase4Z: 5.15pt)と同等かそれ以上(5.45pt)のgapが説明される。すなわち従来の「GGUF/llama.cppがHFより著しく悪い」という結論の相当部分(約44%、Set A基準)は、実際には4bit量子化ロードという未制御の交絡変数によるものだった可能性が高い。ただし残り約56%(6.82pt)はBF16 HF(eager)とBF16 llama.cppの間で依然として実在する差であり、llama.cpp固有の(または少なくともHFのeagerパスとは異なる)forward計算実装差に起因すると考えられる(Phase4ZB/4ZCの知見と整合)。"
+  },
+  "gate_7_hf_internal_attention_sensitivity": {
+    "status": "PASS",
+    "detail": "phase4zd_hf_backend_diff.pyにより、llama.cppを一切使わないHF eager vs HF SDPA(同一BF16 weight)のlayer-wise比較を実施。",
+    "findings": "first_nonzero_diff_layer=0, first_10x_jump_layer=None, first_cosine_drop_layer=20。Phase4ZCのHF-vs-llama.cpp比較(layer0から乖離、単一ジャンプなし、layer27でcosine低下開始)とほぼ同種の分散型ドリフトパターンが、llama.cppを全く使わない純粋なHF内部のattention実装切替だけで再現された。",
+    "conclusion": "この観測は、Phase4ZCで見られたdrift patternがllama.cpp固有の現象ではなく、attention計算の数値実装差一般に対するモデルの感度を反映したものであることの独立した追加証拠となる。"
+  },
+  "gate_8_case_selection": {
+    "status": "PASS",
+    "selected_case": "CASE ZD-E (Mixed: precision-path + attention implementation sensitivity + 残存するllama.cpp固有差)",
+    "reasoning": "単一の原因(CASE ZD-A『engine-specific regressionのみ』、CASE ZD-C『precision-path差のみ』等)には帰属できない。証拠:\n(1) 4bit→BF16のprecision path切替だけで、旧来のHF-vs-GGUF gapと同等規模(Set A基準で44%)のgapが生じる → precision-path要因は無視できないどころか支配的な部分を占める。\n(2) しかし4bit→BF16切替だけでは説明しきれない残差(56%、6.82pt)が、真にBF16同士のHF-vs-llama.cpp比較でも残る → 純粋なllama.cpp/attention実装差要因も同時に実在する。\n(3) llama.cppを全く使わないHF内部でも、attention実装(eager→SDPA)切替だけで、GGUF-likeな結果への反転およびPhase4ZCと同種のlayer-wise分散型driftパターンが再現される → 『llama.cppのバグ』という単純な説明ではなく、attention計算の数値実装一般に対するモデル自身の感度の高さが本質的要因の一部。\nこれら3つの独立した証拠系列が、いずれも単独では全体を説明できず、複合的に寄与していることを示しているため、CASE ZD-E(Mixed)を選択した。",
+    "confidence": "高い(3つの独立した制御実験が相互に補強し合う一貫した結果を示しているため)"
+  },
+  "gate_9_prior_case_reassessment": {
+    "status": "PASS",
+    "phase4z_case_c": {
+      "original": "CASE C (identity-only re-regression、HF/GGUF間のengine差に主に帰属)",
+      "assessment": "精緻化(部分的に再分類が必要)。原因の相当部分(Set A基準で約44%)が、実はHF側の測定に使われていた4bit NF4量子化という未制御の交絡変数によるものだったことが判明した。engine差(HF vs GGUF)そのものは実在するが、規模はPhase4Zが報告した5.15ptよりも狭い可能性が高い(真にBF16同士で比較すると6.82pt相当が残るが、これはPhase4Zの元の測定条件とは異なる比較軸である)。"
+    },
+    "phase4za_case_za_b": {
+      "original": "CASE ZA-B (CUDA-specific原因は否定、narrow backend-sensitive marginで説明可能)",
+      "assessment": "維持・強化。本フェーズの結果は『識別マージンが極めて狭く、様々な数値実装差に敏感』というZA-Bの結論と完全に整合し、さらにその『数値実装差』が具体的にattention計算の実装(eager/SDPA/GGUF)に由来することを明確化した。"
+    },
+    "phase4zb_case_zb_f": {
+      "original": "CASE ZB-F (llama.cpp forward実装がweight差より支配的)",
+      "assessment": "維持(撤回の根拠なし)。全579テンソルのbit完全一致という証拠は本フェーズでも一切揺らいでいない。ただし『llama.cpp forward実装』という表現は、本フェーズの結果を踏まえると『HFのeagerパスとは異なる数値実装(SDPA/GGUF双方に共通する非naive-eager的な計算経路)』とより広く捉え直すべきである。"
+    },
+    "phase4zc_case_zc_g": {
+      "original": "CASE ZC-G (mixed、attention計算ブロックに集中した分散型ドリフト)",
+      "assessment": "維持・強化。本フェーズのSection19-20(HF eager vs SDPA、llama.cpp不使用)で、Phase4ZCと同種のdrift patternが独立に再現されたことにより、『attention計算ブロックが主要因』という結論の頑健性が大きく向上した。"
+    },
+    "overall_narrative_revision": "一連の調査(Phase4Z〜4ZC)は正しく『weight差ではない』ことを確定させたが、『HF(4bit)は安全、GGUF(BF16)は危険』という当初の対比自体が、量子化経路の違いという未制御交絡変数によって誇張されていたことが、本フェーズで初めて明らかになった。真の対比は『BF16 HF(eager)も、BF16 llama.cppも、共に(4bit量子化されたHFより)genuine wrong-name率が有意に高く、両者の間にも残存する有意差がある』というものであり、識別マージンの本質的な脆弱性(razor-thin、時にbit-exact tie)が根本原因であるという理解がより正確である。"
+  },
+  "gate_10_production_and_assets_unchanged": {
+    "status": "PASS",
+    "detail": "training/QLoRA/dataset/adapter/merged HF/GGUF/quantization/system prompt/tokenizer/chat template/productionのいずれも変更していない。Phase4ZD自身のcommit/pushは行っていない(Section1のcheckpointのみ、Phase4ZC以前の成果物)。canonical llama.cpp(D:/AI/tools/llama.cpp)は不変。debug copyは新規パッチなし(Phase4ZCの既存instrumentationをそのまま参照利用のみ)。"
+  }
+}

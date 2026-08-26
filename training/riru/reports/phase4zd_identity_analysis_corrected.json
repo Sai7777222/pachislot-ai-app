@@ -1,0 +1,42 @@
+{
+  "B_HF_BF16_EAGER": {
+    "n_total": 220,
+    "category_counts_corrected": {
+      "G": 42,
+      "D": 51,
+      "B": 89,
+      "E": 24,
+      "A": 14
+    },
+    "category_pct_corrected": {
+      "G": 19.09,
+      "D": 23.18,
+      "B": 40.45,
+      "E": 10.91,
+      "A": 6.36
+    },
+    "genuine_wrong_name_count_corrected": 14,
+    "genuine_wrong_name_pct_corrected": 6.36,
+    "n_manual_corrections_applied": 6
+  },
+  "D_LLAMA_BF16_CPU": {
+    "n_total": 220,
+    "category_counts_corrected": {
+      "E": 12,
+      "B": 96,
+      "D": 47,
+      "A": 29,
+      "G": 36
+    },
+    "category_pct_corrected": {
+      "E": 5.45,
+      "B": 43.64,
+      "D": 21.36,
+      "A": 13.18,
+      "G": 16.36
+    },
+    "genuine_wrong_name_count_corrected": 29,
+    "genuine_wrong_name_pct_corrected": 13.18,
+    "n_manual_corrections_applied": 8
+  }
+}

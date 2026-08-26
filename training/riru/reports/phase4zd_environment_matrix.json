@@ -1,0 +1,52 @@
+{
+  "A_LEGACY_4BIT": {
+    "model_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\merged\\riru-qwen-final-hf",
+    "quant_config": "nf4_4bit",
+    "requested_dtype": null,
+    "requested_attn_impl": null,
+    "actual_attn_implementation": "sdpa",
+    "device_map": "cuda:0",
+    "n_tokens": 440,
+    "tool": "transformers AutoModelForCausalLM"
+  },
+  "B_HF_BF16_EAGER": {
+    "model_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\merged\\riru-qwen-final-hf",
+    "quant_config": null,
+    "requested_dtype": "bfloat16",
+    "requested_attn_impl": "eager",
+    "actual_attn_implementation": "eager",
+    "device_map": "cuda:0",
+    "n_tokens": 440,
+    "tool": "transformers AutoModelForCausalLM"
+  },
+  "C_HF_BF16_SDPA": {
+    "model_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\merged\\riru-qwen-final-hf",
+    "quant_config": null,
+    "requested_dtype": "bfloat16",
+    "requested_attn_impl": "sdpa",
+    "actual_attn_implementation": "sdpa",
+    "device_map": "cuda:0",
+    "n_tokens": 440,
+    "tool": "transformers AutoModelForCausalLM"
+  },
+  "D_LLAMA_BF16_CPU": {
+    "model_path": "training/riru/gguf/riru-qwen-final-bf16.gguf",
+    "quant_config": null,
+    "requested_dtype": null,
+    "requested_attn_impl": null,
+    "actual_attn_implementation": "llama-debug.exe (CPU-only build, D:/AI/tools/llama.cpp-phase4zc-debug)",
+    "device_map": "N/A (llama.cpp CPU-only)",
+    "n_tokens": null,
+    "tool": "llama-debug.exe (CPU-only build, D:/AI/tools/llama.cpp-phase4zc-debug)"
+  },
+  "E_HF_FP32_EAGER": {
+    "model_path": "D:\\AI\\projects\\pachislot-ai-app\\training\\riru\\merged\\riru-qwen-final-hf",
+    "quant_config": null,
+    "requested_dtype": "float32",
+    "requested_attn_impl": "eager",
+    "actual_attn_implementation": "eager",
+    "device_map": "cpu",
+    "n_tokens": 440,
+    "tool": "transformers AutoModelForCausalLM"
+  }
+}

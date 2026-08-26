@@ -1,0 +1,57 @@
+{
+  "purpose": "Section12-13,19-20: Phase4ZE candidateのidentity評価(104probe: Phase4ZE holdout27 + Phase4W naming_stress20 + Phase4X held-out naming24 + E36 family17 + E02 family16)を、HF BF16 eager/SDPA/llama.cpp BF16 CPUの3条件で比較する。",
+  "sampling": {
+    "HF_eager": "greedy + seed101-103 (4/probe) = 416 generations",
+    "HF_sdpa": "greedy only = 104 generations",
+    "llamacpp_CPU": "greedy only = 104 generations"
+  },
+  "classifier_manual_review": "自動分類でcategory=A(genuine wrong-name)と判定された全件を目視確認した。HF eagerで6件、HF sdpaで2件を誤検出(hedge文言の未網羅・正しい名前+修飾語の誤判定)と判定し手動補正。llama.cppの2件は補正不要(いずれも真の誤名)と確認した。",
+  "results": {
+    "HF_BF16_eager": {
+      "n_total": 416, "genuine_wrong_name_pct": 2.16, "correct_name_pct": 15.38,
+      "hedge_pct": 23.56, "placeholder_pct": 0.24, "generic_role_pct": 17.31,
+      "identity_intrusion_pct": 0.0, "other_no_name_pct": 41.35
+    },
+    "HF_BF16_sdpa": {
+      "n_total": 104, "genuine_wrong_name_pct": 2.88, "correct_name_pct": 16.35,
+      "hedge_pct": 24.04, "placeholder_pct": 0.96, "generic_role_pct": 16.35,
+      "identity_intrusion_pct": 0.0, "other_no_name_pct": 39.42
+    },
+    "llamacpp_BF16_CPU": {
+      "n_total": 104, "genuine_wrong_name_pct": 1.92, "correct_name_pct": 15.38,
+      "hedge_pct": 20.19, "placeholder_pct": 0.0, "generic_role_pct": 16.35,
+      "other_no_name_pct": 46.15
+    }
+  },
+  "by_probe_set_eager_corrected": {
+    "e02_family": {"n": 64, "wrong_pct": 0.0, "correct_pct": 37.5},
+    "e36_family": {"n": 68, "wrong_pct": 0.0, "correct_pct": 4.41},
+    "phase4w_naming_stress": {"n": 80, "wrong_pct": 1.25, "correct_pct": 28.75},
+    "phase4x_heldout_naming": {"n": 96, "wrong_pct": 0.0, "correct_pct": 10.42},
+    "phase4ze_holdout": {"n": 108, "wrong_pct": 7.41, "correct_pct": 3.7}
+  },
+  "before_after_comparison_naming_stress_like_for_like": {
+    "note": "Phase4ZD Stage1(B_HF_BF16_EAGER, PROBE_SET_A, greedy+seed101-110=220サンプル、手動補正後)との比較。本フェーズはgreedy+seed101-103=80サンプルとサンプル数は異なるが、同一probe set・同一engine・同一attn実装での直接比較。",
+    "before_phase4zd_stage1_eager_corrected_pct": 6.36,
+    "after_phase4ze_eager_corrected_pct": 1.25,
+    "relative_reduction_pct": 80.3
+  },
+  "residual_weakness": {
+    "location": "phase4ze_holdout set(新規held-out probe、eager 7.41%/sdpa 11.11%/llama.cpp 3.7%)",
+    "breakdown_eager_8_failures": {
+      "ZEH-01": "generic-role-as-name(パチスロAIアシスタント)",
+      "ZEH-08": "wrong_name_induction category(誘導に応じて誤名生成、1/3seed)",
+      "ZEH-11": "wrong_name_induction category(誘導に応じてルナと回答、1/3seed)",
+      "ZEH-12": "wrong_name_induction category(誘導に応じてパチ子と回答、1/3seed)",
+      "ZEH-16": "role_name_confusion category(パチスロAIという呼称に同意)",
+      "ZEH-17": "role_name_confusion category(案内係という呼称に同意、greedy+3seed全て)"
+    },
+    "interpretation": "残存する弱点は、意図的にadversarialに設計したwrong_name_induction/role_name_confusionカテゴリに集中している(8件中6件)。中立的なprobe(direct_naming/greeting/indirect_identity/casual_conversation/no_name_required_control)では失敗がほぼ0件であり、全体傾向としては大幅改善しているが、明示的な役割名同意の誘導(『パチスロAIって呼べばいいんですよね？』『案内係さんって呼び方でも大丈夫？』のような聞き方)に対して、名前(リル)を明示的に再主張する訓練が今回のCategory Eの教師だけではまだ不十分だったことを示す。"
+  },
+  "placeholder_case_detail": {
+    "probe": "PX-09 (\"初対面だし、軽く挨拶と自己紹介をお願いできる？\")",
+    "HF_eager_and_sdpa_output": "こんにちは！パチスロについてお話しできる、専門のAIアシスタントの○○です。よろしくね！",
+    "llamacpp_output": "こんにちは！パチスロについてお話しできるAIアシスタントのリルです。よろしくね！",
+    "interpretation": "同一probe・同一weightにも関わらず、HF(eager/SDPA双方)は「○○」という未充填placeholderを生成し、llama.cppは正しく「リル」を生成した。Phase4ZC/4ZDで確認された『razor-thin margin下でのbackend間の数値実装差による分岐』という現象が、この特定の生成トラジェクトリでも再現されていると考えられる。"
+  }
+}

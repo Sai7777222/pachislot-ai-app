@@ -1,0 +1,103 @@
+{
+  "note": "genuine wrong-name候補は全件手動レビューを実施(Section24)。raw_automaticは分類器の自動判定のみ、correctedはNAME_CUE_PATTERNS/HEDGE_PATTERNの既知の抜け(読点を挟む自己紹介文、hedge文言の網羅不足)を手動補正した最終値。paired比較・CASE判定はcorrected値を正とする。",
+  "raw_automatic": {
+    "B_HF_BF16_EAGER": {
+      "n_total": 220,
+      "category_counts": {
+        "G": 41,
+        "D": 51,
+        "B": 85,
+        "E": 23,
+        "A": 20
+      },
+      "category_pct": {
+        "G": 18.64,
+        "D": 23.18,
+        "B": 38.64,
+        "E": 10.45,
+        "A": 9.09
+      },
+      "genuine_wrong_name_count": 20,
+      "genuine_wrong_name_pct": 9.09
+    },
+    "D_LLAMA_BF16_CPU": {
+      "n_total": 220,
+      "category_counts": {
+        "E": 11,
+        "A": 37,
+        "D": 47,
+        "B": 89,
+        "G": 36
+      },
+      "category_pct": {
+        "E": 5.0,
+        "A": 16.82,
+        "D": 21.36,
+        "B": 40.45,
+        "G": 16.36
+      },
+      "genuine_wrong_name_count": 37,
+      "genuine_wrong_name_pct": 16.82
+    }
+  },
+  "corrected": {
+    "B_HF_BF16_EAGER": {
+      "n_total": 220,
+      "category_counts_corrected": {
+        "G": 42,
+        "D": 51,
+        "B": 89,
+        "E": 24,
+        "A": 14
+      },
+      "category_pct_corrected": {
+        "G": 19.09,
+        "D": 23.18,
+        "B": 40.45,
+        "E": 10.91,
+        "A": 6.36
+      },
+      "genuine_wrong_name_count_corrected": 14,
+      "genuine_wrong_name_pct_corrected": 6.36,
+      "n_manual_corrections_applied": 6
+    },
+    "D_LLAMA_BF16_CPU": {
+      "n_total": 220,
+      "category_counts_corrected": {
+        "E": 12,
+        "B": 96,
+        "D": 47,
+        "A": 29,
+        "G": 36
+      },
+      "category_pct_corrected": {
+        "E": 5.45,
+        "B": 43.64,
+        "D": 21.36,
+        "A": 13.18,
+        "G": 16.36
+      },
+      "genuine_wrong_name_count_corrected": 29,
+      "genuine_wrong_name_pct_corrected": 13.18,
+      "n_manual_corrections_applied": 8
+    }
+  },
+  "stage2": {
+    "B_HF_BF16_EAGER": {
+      "n_total": 96,
+      "genuine_wrong_name_count": 1,
+      "genuine_wrong_name_pct": 1.04
+    },
+    "D_LLAMA_BF16_CPU": {
+      "n_total": 96,
+      "genuine_wrong_name_count": 5,
+      "genuine_wrong_name_pct": 5.21
+    },
+    "probe_set": "PROBE_SET_B (Phase4X held-out naming, 24 probes, 無改変)",
+    "seeds": "greedy + 101,102,103",
+    "absolute_diff_pt": 4.17,
+    "ratio_d_over_b": 5.0,
+    "manual_review": "raw automatic Aカウントは全件目視確認済み。誤検出0件(補正不要)。"
+  },
+  "stage2_conclusion": "独立した第2のprobe set(PROBE_SET_B, Phase4X held-out naming)でもD>Bの方向性が再現された(Stage1: D 13.18% vs B 6.36%, diff 6.82pt, ratio 2.07x / Stage2: D 5.21% vs B 1.04%, diff 4.17pt, ratio 5.0x)。絶対値はprobe setにより変動する(Stage2の方が両条件とも低い絶対率)が、D側が一貫してBより高い genuine wrong-name率を示す方向性は2つの独立したprobe setで安定して観測された。したがってpaired差は安定していると判断し、Section14の『paired差が安定するまででよい』を満たしたため、これ以上の追加seed/probe setは実施しない。"
+}

@@ -1,0 +1,22 @@
+{
+  "existing_count": 1095,
+  "existing_complex_count": 113,
+  "existing_identity_count": 68,
+  "new_count": 50,
+  "new_by_category": {
+    "identity_direct": 10,
+    "identity_greeting": 10,
+    "identity_correction": 12,
+    "identity_intrusion_control": 10,
+    "identity_role_distinction": 8
+  },
+  "combined_total": 1145,
+  "complex_ratio_pct": 9.87,
+  "identity_total_count": 118,
+  "identity_ratio_pct": 10.31,
+  "intrusion_control_new_count": 10,
+  "intrusion_control_ratio_of_new_pct": 20.0,
+  "train_count": 1031,
+  "val_count": 114,
+  "train_val_overlap": 0
+}
