@@ -1,0 +1,67 @@
+{
+  "gate_0_preflight": {
+    "status": "PASS",
+    "git_head_before": "a04b0b509f57f2e5e801d5d65dc4e4af56f1cafb", "git_head_after": "a04b0b509f57f2e5e801d5d65dc4e4af56f1cafb",
+    "pytest_before": "126 passed", "pytest_after": "126 passed",
+    "protected_assets": "既存Final Candidate・Phase4ZE candidate双方の全hashが開始時・終了時とも不変"
+  },
+  "gate_1_failure_taxonomy": {
+    "status": "PASS",
+    "detail": "Phase4ZFの手動補正済み分類データを新taxonomy(A-G)へ再分類。A_wrong_name_acceptance=15, B_wrong_name_self_claim=11, C_correction_failure=14, D_role_name_confusion=26(最大), E_placeholder_echo=14, F_generic_role_only=1466, G_correct_correction=182。"
+  },
+  "gate_2_dataset": {
+    "status": "PASS",
+    "detail": "新規教師48件(wrong_name_induction_resistance16 + identity_correction_persistence14 + placeholder_echo_resistance10 + intrusion_control8)。leakage 0件(初回2件の短い定型句衝突を検出、言い換えで解消)。quality issue 0件。train=1074/val=119、重複0件。complex比率9.47%(Phase4ZE系の目安からの乖離だが本フェーズのハード要件ではない)。"
+  },
+  "gate_3_training": {
+    "status": "PASS",
+    "detail": "LoRA構造・training hyperparameterはPhase4ZEと完全同一(diffで確認)。train_loss=1.472, eval_loss=1.245(Phase4ZEの1.473/1.299と同水準)。NaN/Inf/OOM/CUDA error なし。既存Phase4ZE adapter(lora-riru-qwen-phase4ze-identity-margin)のhashは不変を確認。"
+  },
+  "gate_4_margin": {
+    "status": "PASS",
+    "detail": "HF eager/SDPA双方でmargin=+0.75(リ優勢)、Phase4ZEの+0.3125から約2.4倍に拡大。両backend完全に同一値。"
+  },
+  "gate_5_identity_core": {
+    "status": "PASS(strong target達成)",
+    "detail": "core probe subset(n=416、Phase4ZE/4ZFと同一)で、eager/sdpa共に1.20%(手動補正後)。<3%必須目標・<2% strong target共に達成。両backend完全に同一値。"
+  },
+  "gate_6_identity_stress": {
+    "status": "FAIL(<5%目標未達)",
+    "detail": {
+      "wrong_name_induction": {"target": "<5%", "eager": 8.33, "sdpa": 10.0, "verdict": "FAIL"},
+      "identity_correction_stress": {"target": "<5%", "eager": 15.0, "sdpa": 15.0, "verdict": "FAIL"},
+      "role_name_confusion": {"target": "<5%(暗黙、Section20には明記されないがSection3のtaxonomyで最大failure family)", "eager": 10.0, "sdpa": 5.0, "verdict": "FAIL(eager)/境界(sdpa)"}
+    },
+    "root_cause": "新規追加した48件の教師は、教師でカバーした具体的な言い回しパターン(『いや絶対○○だって』『登録名は○○です』型の直接誘導)には効果を示したが、Phase4ZF stress probeが使う、より多様な役割名混同パターン(『パチスロアシスタントなんだ』のような素の役割語の自称、『ナビって呼んでくれて大歓迎』のような軽い受諾)への汎化が限定的だった。"
+  },
+  "gate_7_placeholder": {
+    "status": "PASS",
+    "detail": "eager/sdpa共に0%(0/684)。Phase4ZFで確認されたPX-09/ZFC-06型の失敗は両backendで再現しなかった。"
+  },
+  "gate_8_intrusion": {
+    "status": "PASS",
+    "detail": "no_name_required_control probes(eager, n=16)でintrusion 0%。"
+  },
+  "gate_9_rag_regression": {
+    "status": "PASS",
+    "detail": "125probe×2backend=250 generationsで、fabrication/numerical hallucination/scope violation 0件。Phase4ZFとの比較でも数値・拒否挙動は完全一致。"
+  },
+  "gate_10_paired_comparison": {
+    "status": "PASS(net改善)",
+    "detail": "ZE→ZG paired比較(144probe、eager/sdpa)で、改善(67-69件)が悪化(28-29件)の約2.4倍。critical loss(ZE正解→ZG genuine wrong-name)は両backendで0件。"
+  },
+  "gate_11_case_selection": {
+    "status": "DETERMINED",
+    "selected_case": "CASE ZG-B (coreはPASSしたがstress familyのみ未達)",
+    "reasoning": "Section29のCASE ZG-B定義『coreはPASSしたがstress familyのみ軽微未達』に正確に合致する。具体的には: (1)core wrong-name <3%達成(1.20%、両backend)、strong target<2%も達成、(2)placeholder 0%達成(両backend)、(3)identity intrusion 0%(<=1%達成)、(4)RAG Gate完全PASS、(5)margin大幅改善(0.3125→0.75)、(6)ZE→ZG paired比較で明確な純改善(critical loss 0%)。しかし(7)wrong_name_induction/identity_correction_stress/role_name_confusionという3つのstress familyが<5%目標に届いていない(8.33-15.0%)。CASE ZG-A(完全成功)には該当しない。CASE ZG-C(placeholderのみ残存)ではない(placeholderは既に0%達成)。CASE ZG-D(intrusion/persona悪化)ではない(intrusion 0%、paired比較で純改善)。CASE ZG-E(RAG regression)ではない(RAG完全PASS)。CASE ZG-F(llama.cppのみFAIL)は評価未実施のため該当なし(HF Gate自体が完全PASSしていないため、Section21の規定によりmerge/GGUF/llama.cpp評価は実施していない)。",
+    "confidence": "高い(1368件のidentity生成・250件のRAG生成、および全A判定候補の全件目視確認に基づく)"
+  },
+  "gate_12_merge_gguf_llamacpp": {
+    "status": "NOT PERFORMED (per Section21 rule)",
+    "detail": "HF eager/SDPA双方で主要Gate(stress family含む)がPASSした場合のみmergeしてよい、というSection21の規定に従い、stress family未達のため本フェーズではmerge/BF16 GGUF作成/llama.cpp評価のいずれも実施していない。"
+  },
+  "gate_13_no_prohibited_changes": {
+    "status": "PASS",
+    "detail": "Base model/system prompt/system.jinja2/tokenizer/chat template/RAG DB/complex教師/LoRA target_modules/rank/alpha/dropout/learning rate/optimizer/scheduler/llama.cpp/CUDA/production設定/app/APIのいずれも変更していない。評価probeのtraining直接コピーなし(leakage check 0件)。既存Final Candidate・Phase4ZE adapterの上書きなし。Q8/Q5量子化・production統合は実施していない。追加candidate(2個目)の学習は行っていない(Section29の方針通り)。"
+  }
+}

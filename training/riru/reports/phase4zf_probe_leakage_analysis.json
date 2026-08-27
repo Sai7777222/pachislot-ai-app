@@ -1,0 +1,11 @@
+{
+  "n_new_probes": 59,
+  "n_train_records_checked": 1145,
+  "exact_duplicate": [],
+  "normalized_exact_duplicate": [],
+  "high_similarity_pairs_jaccard_ge_0.85": [],
+  "n_exact_duplicate": 0,
+  "n_normalized_duplicate": 0,
+  "n_high_similarity": 0,
+  "verdict": "CLEAN"
+}

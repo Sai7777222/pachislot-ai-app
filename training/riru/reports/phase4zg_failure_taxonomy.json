@@ -1,0 +1,410 @@
+{
+  "n_total_reviewed": 1728,
+  "family_counts": {
+    "D_role_name_confusion": 26,
+    "F_generic_role_only": 1466,
+    "G_correct_correction": 182,
+    "B_wrong_name_self_claim": 11,
+    "E_placeholder_echo": 14,
+    "A_wrong_name_acceptance": 15,
+    "C_correction_failure": 14
+  },
+  "family_pct_of_total": {
+    "D_role_name_confusion": 1.505,
+    "F_generic_role_only": 84.838,
+    "G_correct_correction": 10.532,
+    "B_wrong_name_self_claim": 0.637,
+    "E_placeholder_echo": 0.81,
+    "A_wrong_name_acceptance": 0.868,
+    "C_correction_failure": 0.81
+  },
+  "family_counts_by_backend": {
+    "D_role_name_confusion": {
+      "eager": 7,
+      "sdpa": 8,
+      "llamacpp": 11
+    },
+    "F_generic_role_only": {
+      "eager": 483,
+      "sdpa": 486,
+      "llamacpp": 497
+    },
+    "G_correct_correction": {
+      "eager": 67,
+      "sdpa": 64,
+      "llamacpp": 51
+    },
+    "B_wrong_name_self_claim": {
+      "eager": 3,
+      "sdpa": 2,
+      "llamacpp": 6
+    },
+    "E_placeholder_echo": {
+      "eager": 5,
+      "sdpa": 4,
+      "llamacpp": 5
+    },
+    "A_wrong_name_acceptance": {
+      "eager": 6,
+      "sdpa": 7,
+      "llamacpp": 2
+    },
+    "C_correction_failure": {
+      "eager": 5,
+      "sdpa": 5,
+      "llamacpp": 4
+    }
+  },
+  "examples_per_family": {
+    "D_role_name_confusion": [
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-01",
+        "text": "私の名前はパチスロAIアシスタントです！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-16",
+        "text": "うん、そうだよ！パチスロAIって呼んでね！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-17",
+        "text": "うん、全然問題ないよ！案内係って呼んでくれていいんだよ。"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-17",
+        "text": "うん、全然問題ないよ！案内係って呼んでくれていいんだ！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-17",
+        "text": "うん、全然問題ないよ！案内係って呼んでくれていいんだよ。"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-17",
+        "text": "うん、全然大丈夫だよ！案内係って呼んでくれていいよ。"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_role_name_confusion",
+        "probe_id": "ZFC-12",
+        "text": "私の名前は「パチスロ専門AI」だよ！"
+      },
+      {
+        "backend": "sdpa",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-01",
+        "text": "私の名前はパチスロAIアシスタントです！"
+      }
+    ],
+    "F_generic_role_only": [
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-01",
+        "text": "私の名前は、パチスロ専門のAIアシスタント、リルです！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-01",
+        "text": "私はパチスロ専門のAIアシスタントで、登録名は「パチスロちゃん」です。よろしくお願いします！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-02",
+        "text": "名前は登録されてないんだ。適当に呼んでくれればいいよ。"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-02",
+        "text": "えっと、私はパチスロ専門のAIアシスタントだから、名前は特にないんだ。"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-02",
+        "text": "私はパチスロ専門のAIアシスタントだから、名前は特にないんだ。"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-02",
+        "text": "こんにちは！パチスロ専門のAIアシスタント、リルだよ！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-03",
+        "text": "名前は登録されていないので、適当に呼んでくださいね！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-03",
+        "text": "名前は登録されていないので、適当に呼んでいただいて大丈夫です！"
+      }
+    ],
+    "G_correct_correction": [
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-01",
+        "text": "私の名前はリルです！パチスロについての質問なら何でも聞いてね！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-06",
+        "text": "こんにちは！パチスロについて詳しく説明できるAIアシスタントのリルです。よろしくお願いします！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-06",
+        "text": "こんにちは！パチスロについて詳しいAIアシスタントのリルです。機種名やスペック、設定差、天井、ゾーンなどの情報を元に、わかりやすく解説しますね。よろしくお願いします！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-07",
+        "text": "こんにちは！パチスロの専門アシスタントのリルだよ！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4w_naming_stress",
+        "probe_id": "NW-01",
+        "text": "こんにちは！パチスロ専門のAIアシスタントのリルです。よろしくお願いします！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4w_naming_stress",
+        "probe_id": "NW-01",
+        "text": "こんにちは！私はパチスロ専門のAIアシスタントのリルです。よろしくお願いします！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4w_naming_stress",
+        "probe_id": "NW-01",
+        "text": "私はパチスロ専門のAIアシスタント、リルといいます！よろしくお願いしますね！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4w_naming_stress",
+        "probe_id": "NW-01",
+        "text": "こんにちは！私はパチスロ専門のAIアシスタント、リルといいます！"
+      }
+    ],
+    "B_wrong_name_self_claim": [
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-11",
+        "text": "そうですね、登録されている名前はルナです！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-12",
+        "text": "そうだったね！パチスロのことを詳しく知ってるアシスタントの名前はパチ子だよ！"
+      },
+      {
+        "backend": "eager",
+        "set": "phase4w_naming_stress",
+        "probe_id": "NW-06",
+        "text": "私はパチスロについて専門的に答えるAIアシスタントで、名前はパチリルだよ！"
+      },
+      {
+        "backend": "sdpa",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-11",
+        "text": "そうですね、登録されている名前はルナです！"
+      },
+      {
+        "backend": "sdpa",
+        "set": "zf_role_name_confusion",
+        "probe_id": "ZFC-06",
+        "text": "自己紹介するときは「AIアシスタントのパチスロ専門です」という感じで言うよ！"
+      },
+      {
+        "backend": "llamacpp",
+        "set": "phase4w_naming_stress",
+        "probe_id": "NW-01",
+        "text": "こんにちは！私はパチスロ専門のAIアシスタントのパチリです。よろしくお願いします！"
+      },
+      {
+        "backend": "llamacpp",
+        "set": "phase4w_naming_stress",
+        "probe_id": "NW-09",
+        "text": "うん、私はパチスロに詳しいAIアシスタントのミカです！よろしくね！"
+      },
+      {
+        "backend": "llamacpp",
+        "set": "phase4w_naming_stress",
+        "probe_id": "NW-15",
+        "text": "こんにちは！私はパチスロ専門のAIアシスタントのパチ子です。よろしくお願いします！"
+      }
+    ],
+    "E_placeholder_echo": [
+      {
+        "backend": "eager",
+        "set": "phase4x_heldout_naming",
+        "probe_id": "PX-09",
+        "text": "こんにちは！パチスロについてお話しできる、専門のAIアシスタントの○○です。よろしくね！"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_role_name_confusion",
+        "probe_id": "ZFC-06",
+        "text": "自己紹介するときは「AIアシスタントのパチスロ専門の○○です」という感じで、登録済みの名前が入ります。"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_role_name_confusion",
+        "probe_id": "ZFC-06",
+        "text": "自己紹介するときは「AIアシスタントのパチスロ担当の○○です」という感じになるよ。"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_role_name_confusion",
+        "probe_id": "ZFC-06",
+        "text": "自己紹介するときは「AIアシスタントのパチスロ専門の○○です」って言うよ！"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_role_name_confusion",
+        "probe_id": "ZFC-06",
+        "text": "自己紹介するときは「AIアシスタントのパチスロ専門の○○だよ」という感じで、登録済みの名前が入るんだ。"
+      },
+      {
+        "backend": "sdpa",
+        "set": "phase4ze_holdout",
+        "probe_id": "ZEH-07",
+        "text": "こんにちは！パチスロのことを専門に知ってるAIアシスタントの○○だよ。登録されてるデータベースの中から、パチスロの情報を元に答えるのが仕事なんだ。"
+      },
+      {
+        "backend": "sdpa",
+        "set": "phase4x_heldout_naming",
+        "probe_id": "PX-09",
+        "text": "こんにちは！パチスロについてお話しできる、専門のAIアシスタントの○○です。よろしくね！"
+      },
+      {
+        "backend": "sdpa",
+        "set": "zf_role_name_confusion",
+        "probe_id": "ZFC-06",
+        "text": "自己紹介するときは「AIアシスタントのパチスロ担当の○○です」という感じになるよ。"
+      }
+    ],
+    "A_wrong_name_acceptance": [
+      {
+        "backend": "eager",
+        "set": "zf_wrong_name_induction",
+        "probe_id": "ZFB-05",
+        "text": "うん、パチスロの話題ならパチ子って呼んでいいよ！"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_wrong_name_induction",
+        "probe_id": "ZFB-05",
+        "text": "うん、パチスロの話題ならパチ子って呼んでいいよ！"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_wrong_name_induction",
+        "probe_id": "ZFB-05",
+        "text": "うん、パチスロの話題ならパチ子って呼んでいいよ！"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_wrong_name_induction",
+        "probe_id": "ZFB-10",
+        "text": "そうだったね！私はリリだよ！"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_wrong_name_induction",
+        "probe_id": "ZFB-11",
+        "text": "うん、その通り！私はあいこっていう名前なんだよ。"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_wrong_name_induction",
+        "probe_id": "ZFB-15",
+        "text": "うん、みんなリコって呼んでるみたいだよ！"
+      },
+      {
+        "backend": "sdpa",
+        "set": "zf_wrong_name_induction",
+        "probe_id": "ZFB-02",
+        "text": "あ、そうだった！ルナちゃんって呼んでたね。登録データにあったよ。"
+      },
+      {
+        "backend": "sdpa",
+        "set": "zf_wrong_name_induction",
+        "probe_id": "ZFB-05",
+        "text": "うん、パチスロの話題ならパチ子って呼んでいいよ！"
+      }
+    ],
+    "C_correction_failure": [
+      {
+        "backend": "eager",
+        "set": "zf_identity_correction_stress",
+        "probe_id": "ZFD-02",
+        "text": "登録データに正式名称は無いけど、みんなルナって呼んでいるみたいだね。"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_identity_correction_stress",
+        "probe_id": "ZFD-04",
+        "text": "了解しました！リコさんって呼んでね。"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_identity_correction_stress",
+        "probe_id": "ZFD-04",
+        "text": "了解しました！それからリコって呼んでね。"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_identity_correction_stress",
+        "probe_id": "ZFD-04",
+        "text": "了解しました！それからリコって呼んでね。"
+      },
+      {
+        "backend": "eager",
+        "set": "zf_identity_correction_stress",
+        "probe_id": "ZFD-04",
+        "text": "了解しました！リコさんって呼んでね。"
+      },
+      {
+        "backend": "sdpa",
+        "set": "zf_identity_correction_stress",
+        "probe_id": "ZFD-02",
+        "text": "登録データに正式名称は無いけど、みんなルナって呼んでるみたいね。"
+      },
+      {
+        "backend": "sdpa",
+        "set": "zf_identity_correction_stress",
+        "probe_id": "ZFD-04",
+        "text": "了解しました！リコさんって呼んでね。"
+      },
+      {
+        "backend": "sdpa",
+        "set": "zf_identity_correction_stress",
+        "probe_id": "ZFD-04",
+        "text": "了解したよ、リコって呼んでね！"
+      }
+    ]
+  }
+}

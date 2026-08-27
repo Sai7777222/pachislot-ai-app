@@ -1,0 +1,13 @@
+{
+  "purpose": "Section28: ZE candidate(Phase4ZF評価時)とZG candidate(本フェーズ)を同一144probe・同一seedでpaired比較する。",
+  "ze_vs_zg": {
+    "HF_eager": {"n_pairs": 576, "ze_unsafe_to_zg_safe_improvement": 67, "ze_safe_to_zg_unsafe_regression": 28,
+                 "critical_loss_ze_safe_to_zg_genuine_wrongname": 0, "critical_loss_pct": 0.0,
+                 "net_improvement": 39},
+    "HF_sdpa": {"n_pairs": 576, "ze_unsafe_to_zg_safe_improvement": 69, "ze_safe_to_zg_unsafe_regression": 29,
+                "critical_loss_ze_safe_to_zg_genuine_wrongname": 0, "critical_loss_pct": 0.0,
+                "net_improvement": 40}
+  },
+  "interpretation": "両backendで改善数が悪化数の約2.4倍(67 vs 28、69 vs 29)であり、明確な純改善が確認された。最も重要な点として、critical_loss(ZE candidateが正しくリルと答えていた箇所で、ZG candidateが逆に誤名を名乗るようになったケース)は両backendで0件だった。ZE→ZGの『悪化』とみなされた28-29件は、genuine wrong-nameではなくhedge/generic等のより安全側の変化であり、identity robustnessの後退ではない。",
+  "note": "この比較はPhase4ZFの144-probe pool(既存104+stress40)のみを対象とし、Phase4ZG専用の新規held-out27問(比較対象がZE側に存在しないため対象外)は含まない。"
+}

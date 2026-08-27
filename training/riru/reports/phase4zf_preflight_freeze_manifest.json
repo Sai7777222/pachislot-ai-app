@@ -1,0 +1,97 @@
+{
+  "base_model_config": {
+    "path": "D:/AI/models/llm-hf/Qwen2.5-14B-Instruct/config.json",
+    "hash_type": "sha256",
+    "hash": "0f2085dbbe2ee251bd6a6a0797d84a6ce34436044d629aa3cba793b43d311a9e"
+  },
+  "ze_candidate": {
+    "path": "training/riru/processed/riru_phase4ze_identity_margin_candidate.jsonl",
+    "hash_type": "sha256",
+    "hash": "5f24e98608568a2d36523c91d99d544ca250a21d1bc9a586c929e44677752d4f"
+  },
+  "ze_train": {
+    "path": "training/riru/processed/riru_phase4ze_identity_margin_train.jsonl",
+    "hash_type": "sha256",
+    "hash": "eefebc4f714c6431dc78fe6d0401b9b16439ec75ef86f0879312db6ec5257d9e"
+  },
+  "ze_val": {
+    "path": "training/riru/processed/riru_phase4ze_identity_margin_val.jsonl",
+    "hash_type": "sha256",
+    "hash": "00d81d7416d867567130def13857fdd39a1f0bea292904506bfd9b4a4ca64ca6"
+  },
+  "ze_config": {
+    "path": "training/riru/configs/qlora_config_phase4ze_identity_margin.json",
+    "hash_type": "sha256",
+    "hash": "75243c77b7bd6268c86ce466966bc39dc566fd9ba86b29bd1931790dd26b8c0d"
+  },
+  "ze_adapter": {
+    "path": "training/riru/lora-riru-qwen-phase4ze-identity-margin/adapter_model.safetensors",
+    "hash_type": "sha256",
+    "hash": "c9d678479d9274f8c7e6f8b7bd26f36c8e792ab1c43f8396aeba085b9eaaf27a"
+  },
+  "ze_adapter_config": {
+    "path": "training/riru/lora-riru-qwen-phase4ze-identity-margin/adapter_config.json",
+    "hash_type": "sha256",
+    "hash": "9dd10a166325f8c64bd22fc3f289691f52a89630fdbba80b65a50357a8234238"
+  },
+  "ze_tokenizer": {
+    "path": "training/riru/lora-riru-qwen-phase4ze-identity-margin/tokenizer.json",
+    "hash_type": "sha256",
+    "hash": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+  },
+  "ze_chat_template": {
+    "path": "training/riru/lora-riru-qwen-phase4ze-identity-margin/chat_template.jinja",
+    "hash_type": "sha256",
+    "hash": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6"
+  },
+  "system_jinja2": {
+    "path": "config/prompts/system.jinja2",
+    "hash_type": "md5",
+    "hash": "f3ea72a9ea9a400fcfae0018896350b8"
+  },
+  "ze_holdout_probes": {
+    "path": "training/riru/eval/phase4ze_holdout_probes.py",
+    "hash_type": "sha256",
+    "hash": "ba4f4d6b4b4f8575e43bcd8540f2a87a84417599835152fa253fc8c547a33a37"
+  },
+  "ze_source_data": {
+    "path": "training/riru/phase4ze_identity_margin_source_data.py",
+    "hash_type": "sha256",
+    "hash": "a4373cf3012985a989cec0ae7b5ec64d46a3c5c194fc3a8aff7f41c7c74bd539"
+  },
+  "ze_merged_hf": {
+    "path": "training/riru/merged/riru-phase4ze-identity-margin-hf/model.safetensors",
+    "hash_type": "sha256",
+    "hash": "18351a0fb5d4e7bc72b77394395435a79c265508722aef1d0277eef9002356ca"
+  },
+  "ze_bf16_gguf": {
+    "path": "training/riru/gguf-phase4ze/riru-phase4ze-bf16.gguf",
+    "hash_type": "sha256",
+    "hash": "5d35925f158a1c895e477fbf5c9dc9f50082b28214f888322eca05627a7e1b31"
+  },
+  "ze_identity_eval_py": {
+    "path": "training/riru/eval/phase4ze_identity_eval.py",
+    "hash_type": "sha256",
+    "hash": "e9f7f12d37e2fce37281bbd7c76b68794ef2867c5113824c2318a773235bc79a"
+  },
+  "ze_llama_eval_py": {
+    "path": "training/riru/eval/phase4ze_llama_eval.py",
+    "hash_type": "sha256",
+    "hash": "bd5e7874a012068e375c3b1a404f5b721874b17b88fa5ebecb8fdafe2a2f57d6"
+  },
+  "ze_analyze_py": {
+    "path": "training/riru/eval/phase4ze_analyze.py",
+    "hash_type": "sha256",
+    "hash": "7e4a40d85fdbd6c140e3283dcb2da3a5f38493ef6b93ec1711b6fd1b190d0324"
+  },
+  "ze_summary_md": {
+    "path": "training/riru/reports/phase4ze_summary.md",
+    "hash_type": "sha256",
+    "hash": "ae021fe48ef85bf242b1b3b4b384f23f1219f706b430f513692850c6cabf62ab"
+  },
+  "ze_gate_analysis": {
+    "path": "training/riru/reports/phase4ze_gate_analysis.json",
+    "hash_type": "sha256",
+    "hash": "c3e741ad27732466599540540e62ccc590528b848c40237c17601ff5101714a1"
+  }
+}

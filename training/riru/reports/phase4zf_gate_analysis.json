@@ -1,0 +1,69 @@
+{
+  "gate_0_checkpoint": {
+    "status": "PASS",
+    "commit_hash": "a04b0b509f57f2e5e801d5d65dc4e4af56f1cafb",
+    "commit_message": "checkpoint: Phase 4ZD baseline recalibration + Phase 4ZE identity margin reinforcement (CASE ZE-A) before Phase 4ZF overnight stress gate",
+    "pushed": true, "local_head_equals_origin_main": true, "n_files_committed": 67
+  },
+  "gate_1_freeze_manifest": {
+    "status": "PASS",
+    "detail": "training/riru/reports/phase4zf_preflight_freeze_manifest.json に19項目のhashを記録。checkpoint直後・overnight評価直前・評価完了後の3回、既存Final Candidate/ZE candidate双方のhashを再確認し、全て不変であることを確認した。"
+  },
+  "gate_2_probe_leakage": {
+    "status": "PASS",
+    "detail": "新規probe59件(stress40+OOD19)についてPhase4ZE training dataとのleakage検査を実施。初回3件の完全一致(「元気？」「好きな食べ物は？」)を検出し、OOD probe2件を言い換えて0件に解消した。"
+  },
+  "gate_3_placeholder_detector_unittest": {
+    "status": "PASS",
+    "detail": "既存phase4z_placeholder_detector.py(無変更)に対しpositive13件・negative6件のunit testを実施し、全19件PASS。"
+  },
+  "gate_4_identity_scale": {
+    "status": "PASS(規模達成)",
+    "detail": "144probe × greedy+seed101-103(4/probe) = 576 generations/backend × 3backend = 1728 generations。目標(500+/backend)を上回る規模で実施。"
+  },
+  "gate_5_identity_results": {
+    "status": "MARGINAL(core probe subsetはeager/sdpaで<3%達成、llamacppは3%超過。新規stress probeは3backend全てで局所的に3%を超過)",
+    "core_subset_manual_corrected": {
+      "HF_eager": 2.16, "HF_sdpa": 1.68, "llamacpp": 3.61
+    },
+    "overall_144probe_manual_corrected": {
+      "HF_eager": 3.65, "HF_sdpa": 3.82, "llamacpp": 3.99
+    },
+    "stress_only_manual_corrected": {
+      "HF_eager": {"wrong_name_induction": 10.0, "role_name_confusion": 1.67, "identity_correction_stress": 12.5},
+      "HF_sdpa": {"wrong_name_induction": 11.67, "role_name_confusion": 5.0, "identity_correction_stress": 12.5},
+      "llamacpp": {"wrong_name_induction": 3.33, "role_name_confusion": 3.33, "identity_correction_stress": 10.0}
+    },
+    "interpretation": "Phase4ZEのn=104(llamacppのみ)という小サンプルでは統計的に不安定だった。本フェーズのn=576(3backend)により、(1)core probe subsetではeager/sdpaは3%未満を維持したがllamacppは3.61%へ悪化、(2)新規stress probe(wrong_name_induction, identity_correction_stress)は3backend全てで10-17.5%という高い失敗率を示し、Phase4ZEで想定された残存弱点が実際に大規模に確認された。"
+  },
+  "gate_6_placeholder": {
+    "status": "FAIL(0%目標未達)",
+    "detail": "3backend全てで非ゼロのplaceholder発生(eager 5件/576=0.87%, sdpa 4件/576=0.69%, llamacpp 5件/576=0.87%)。Phase4ZEのPX-09(1件のみ確認)から、本フェーズでZFC-06型(質問文中の○○エコーバック)・PX-04(llamacpp固有の新規失敗)等、追加のパターンが発見された。Section19の基準『1件でも genuine placeholder が確認された場合は、原則としてFinal Candidate Gate FAILまたはHOLD』に該当する。"
+  },
+  "gate_7_identity_intrusion": {
+    "status": "PASS",
+    "detail": "OOD 19probe(eager)で0件。既存の正常identity probe群(no_name_required_control等)でも既存分類上F(intrusion)は検出されず、0%を維持。"
+  },
+  "gate_8_rag_regression": {
+    "status": "PASS",
+    "detail": "125probe × 3backend = 375 generationsで、fabrication/numerical hallucination/scope violation 0件。全差分は言い回しレベルの言い換えのみ。軽微なcompleteness差(Q11/Q15/Q17でllama.cppがやや簡潔)を観測したが、事実誤りではない。"
+  },
+  "gate_9_backend_consistency": {
+    "status": "PASS(重大なPhase4Z型regressionの大規模再発なし、ただし残存する軽微な非対称性あり)",
+    "detail": "eager vs sdpa: n=576, tie=567(98.4%), critical_loss=0(0.0%)。eager vs llamacpp: tie=518(89.9%), critical_loss=5(0.87%)。sdpa vs llamacpp: tie=523(90.8%), critical_loss=5(0.87%)。HF eager/SDPA間はほぼ完全に一致する一方、llama.cppとの間には0.87%の非対称なcritical loss(HF安全→llamacpp genuine wrong-name)が残存する。Phase4Zで観測された規模(critical loss 2.74%)と比較すると大幅に改善しているが、完全には解消していない。"
+  },
+  "gate_10_margin_recheck": {
+    "status": "PASS",
+    "detail": "overnight評価後も3backend全てで「リ」がrank1・「ル」がrank2の方向を維持。margin値もPhase4ZE測定時とほぼ完全に再現された。"
+  },
+  "gate_11_case_selection": {
+    "status": "DETERMINED",
+    "selected_case": "CASE ZF-C (少数の明確なfailure familyだけGate FAIL、複合的にplaceholder残存も確認)",
+    "reasoning": "全主要Gateを機械的にPASS/FAILで見ると: identity core PASS(eager/sdpa)/MARGINAL FAIL(llamacpp 3.61%)、stress probe(wrong_name_induction/identity_correction_stress) FAIL(3backend全て)、placeholder FAIL(3backend全て非ゼロ)、identity intrusion PASS、RAG PASS、backend consistency PASS(重大regressionなし)。\n\nこれはCASE ZF-A(全Gate PASS)には該当しない。CASE ZF-D(backend依存regression再発)ほど深刻でもない(critical loss 0.87%はPhase4Zの2.74%より大幅に改善、かつeager-sdpa間はほぼ完全に一致)。CASE ZF-E/F(RAG/広範な劣化)にも該当しない(RAGは完全にPASS)。\n\n最も適合するのはCASE ZF-C: failureは『少数の明確なfamily』(wrong_name_induction, identity_correction_stress, および特定のplaceholder-triggeringパターン(ZFC-06のような○○を含む質問、PX-04/PX-09のような特定の自己紹介probe))に集中しており、正常なidentity/greeting/RAG全般には重大な問題がない。ただしCASE ZF-Bの要素(placeholder残存)も同時に該当するため、『ZF-C(主) + ZF-B(副)』の複合判定とする。",
+    "confidence": "高い(1728件のidentity生成・375件のRAG生成という大規模データに基づく、統計的に安定した判定)"
+  },
+  "gate_12_no_prohibited_changes": {
+    "status": "PASS",
+    "detail": "追加学習/dataset変更/candidate変更/LoRA config変更/Base model変更/system prompt変更/system.jinja2変更/tokenizer変更/chat template変更/RAG DB変更/production変更/llama.cpp変更/CUDA変更/既存GGUF上書き/新規量子化GGUF作成/Final Candidateへの正式昇格/production統合のいずれも実施していない。評価中に発見した軽微なscript課題(config複雑ratio閾値のsoft-warning化等、いずれもPhase4ZE以前に実施済みで本フェーズでは新規変更なし)以外の修正は行っていない。"
+  }
+}

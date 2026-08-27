@@ -1,0 +1,41 @@
+{
+  "purpose": "Section10: overnight stress test(576 generations/backend, 3 backends=1728 generations)における genuine placeholder の網羅的検出。既存phase4z_placeholder_detector.py(無変更)を使用し、全flaggedケースを目視確認した。",
+  "detector_unit_test": {
+    "positive_cases_tested": 13,
+    "positive_cases_passed": 13,
+    "negative_cases_tested": 6,
+    "negative_cases_passed": 6,
+    "verdict": "全19ケースPASS。○○/〇〇/XX/xx/単一〜/連続〜〜/[名前]/<名前>/{name}/[NAME]/<NAME>/[name]全パターンを正しく検出し、自然文中の装飾的な〜には誤反応しないことを確認した。"
+  },
+  "raw_placeholder_counts_by_backend": {
+    "HF_eager": 5, "HF_sdpa": 4, "llamacpp": 5
+  },
+  "total_placeholder_occurrences": 14,
+  "total_generations": 1728,
+  "overall_placeholder_rate_pct": 0.81,
+  "manual_review": "全14件を目視確認。誤検出0件(全て真の名前欠落/回避パターンと確認)。",
+  "detail_by_backend": {
+    "HF_eager": [
+      {"probe": "PX-09", "pattern": "○○", "text_excerpt": "AIアシスタントの○○です"},
+      {"probe": "ZFC-06", "count": 4, "pattern": "○○ (ユーザー質問内の○○をそのままエコーバック)",
+       "note": "新規発見パターン: ユーザーが「AIアシスタントの○○です、の○○って何が入るの？」と尋ねた際、テンプレート説明の中で○○をそのまま繰り返し、具体的に「リル」へ置き換えないまま応答するケース。PX-09型(自発的な自己紹介での○○)とは異なる、質問文由来のplaceholderエコーという新しいサブパターン。"}
+    ],
+    "HF_sdpa": [
+      {"probe": "ZEH-07", "pattern": "単一〜", "text_excerpt": "AIアシスタントの〜だよ"},
+      {"probe": "PX-09", "pattern": "○○"},
+      {"probe": "ZFC-06", "count": 2, "pattern": "○○エコーバック"}
+    ],
+    "llamacpp": [
+      {"probe": "PX-04", "count": 2, "pattern": "○○/〇〇", "note": "HF側では発生しなかった新規probe(PX-04)での失敗。backend固有の脆弱性パターン。"},
+      {"probe": "PX-09", "pattern": "○○"},
+      {"probe": "PZ02-11", "pattern": "単一〜", "text_excerpt": "名前は〜、うんと元気な声で言っちゃうねっ"},
+      {"probe": "PZ02-14", "pattern": "ためらい型(名前は…まだ決めてない)", "note": "厳密なplaceholder文字列ではなくhedge寄りの境界事例だが、detectorの既存ロジックに従い分類を維持した。"}
+    ]
+  },
+  "px09_reproducibility": {
+    "note": "Phase4ZEで確認されたPX-09の「○○」失敗は、本フェーズのgreedy(temperature=0)再現でも一貫して発生した(全3backend中、eager/sdpaはgreedyで、llamacppはseed103サンプルで発生)。",
+    "hf_eager_greedy": "こんにちは！パチスロについてお話しできる、専門のAIアシスタントの○○です。よろしくね！",
+    "hf_sdpa_greedy": "こんにちは！パチスロについてお話しできる、専門のAIアシスタントの○○です。よろしくね！(Phase4ZEと同一)"
+  },
+  "gate_conclusion": "placeholder=0%の目標は3backend全てで未達(eager 5件/576=0.87%, sdpa 4件/576=0.69%, llamacpp 5件/576=0.87%)。Phase4ZEの小規模サンプル(104probe)ではPX-09の1件のみが確認されていたが、本フェーズの大規模サンプル(144probe×4サンプル)により、質問文自体に「○○」を含む新パターン(ZFC-06)や、backend固有の新規失敗probe(PX-04 on llamacpp)が追加発見された。genuine placeholderは依然として非ゼロの残存リスクであり、Section19の基準に照らせばHOLD相当の所見である。"
+}

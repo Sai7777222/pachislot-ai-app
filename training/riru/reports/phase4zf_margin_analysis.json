@@ -1,0 +1,14 @@
+{
+  "purpose": "Section15: overnight評価後の「リ vs ル」margin再確認。E36 forced-prefixで3backend全て測定。",
+  "results": {
+    "HF_eager": {"ri_logit": 12.75, "ru_logit": 12.4375, "margin": 0.3125, "winner": "リ", "ri_rank": 1, "ru_rank": 2,
+                 "phase4ze_original": {"margin": 0.3125, "winner": "リ"}, "reproducibility": "完全一致"},
+    "HF_sdpa": {"ri_logit": 12.75, "ru_logit": 12.4375, "margin": 0.3125, "winner": "リ", "ri_rank": 1, "ru_rank": 2,
+                "phase4ze_original": {"margin": 0.3125, "winner": "リ"}, "reproducibility": "完全一致"},
+    "llamacpp": {"ri_logprob": -2.157876, "ru_logprob": -2.521040, "margin_logprob": 0.363164, "winner": "リ",
+                 "ri_rank": 1, "ru_rank": 2,
+                 "phase4ze_original": {"margin_logprob": 0.362156, "winner": "リ"},
+                 "reproducibility": "ほぼ完全一致(浮動小数点誤差レベルの微差のみ、方向・順位は完全一致)"}
+  },
+  "conclusion": "overnight stress test後も、3backend全てで「リ」がrank1・「ル」がrank2の方向が完全に維持されていることを確認した。margin値もPhase4ZE測定時と実質的に同一であり、モデル(ZE candidate)がfreezeされていることの整合性確認としても機能した。"
+}

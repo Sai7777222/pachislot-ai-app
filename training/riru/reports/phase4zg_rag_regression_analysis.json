@@ -1,0 +1,15 @@
+{
+  "purpose": "Section25: Phase4ZFで375生成全てcleanだったRAG性能がPhase4ZGでも維持されているかを確認する。125probe(structured_17q17+holdout_p10+scope_pt22+broad36+adversarial20+conflicting10+longcontext10)、greedyのみ、eager/sdpa。",
+  "results_by_backend": {
+    "HF_eager": {"n_probes": 125, "fabrication_count": 0, "numerical_hallucination_count": 0, "scope_violation_count": 0},
+    "HF_sdpa": {"n_probes": 125, "fabrication_count": 0, "numerical_hallucination_count": 0, "scope_violation_count": 0}
+  },
+  "comparison_to_phase4zf_baseline": {
+    "eager_vs_phase4zf_eager": {"n": 125, "identical": 64, "differ": 61,
+      "review": "61件全てを目視確認。数値・拒否挙動は完全一致。表現の言い換え、および一部でPhase4ZGの方がより詳細(Q11のLED示唆言及等)または簡潔(LC-08で一部詳細を省略)な応答だったが、事実の矛盾・fabricationは0件。"},
+    "eager_vs_sdpa_within_phase4zg": {"n": 125, "identical": 106, "differ": 19,
+      "review": "19件全てを目視確認。V1-Eの言い回し違い等はいずれも言い換えのみ。Q17でsdpaが『ステージチェンジ発生でGOD揃い濃厚』という追加情報を含めたが、これはRAGコンテキスト内(出典カテゴリ:effect_lore)に実在する記述であり、fabricationではない。LC-08でsdpaがやや簡潔(詳細を一部省略)だったが、矛盾はない。"}
+  },
+  "completeness_note": "LC-08(sdpa)でRT-Cの継続G数・中抽選確率の言及が省略される軽微なcompleteness差を確認したが、Phase4ZFで確認された同種の軽微な差の範囲内であり、悪化とは判定しない。",
+  "gate_result": "PASS (fabrication/numerical hallucination/scope violation 0件、Phase4ZFからの重大な悪化なし)"
+}

@@ -1,0 +1,15 @@
+{
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "dataset_parse_ok": true,
+  "counts": {"candidate": 1193, "train": 1074, "val": 119, "train_plus_val_equals_candidate": true},
+  "train_val_overlap": 0,
+  "leakage_check": {"exact_duplicate": 0, "normalized_duplicate": 0, "high_similarity": 0, "contamination_hits": 0, "verdict": "CLEAN"},
+  "quality_issues": {"placeholder": 0, "chatml": 0, "real_machine_name": 0, "wrong_name_enumeration_in_single_record": 0, "exact_duplicate": 0, "empty": 0, "assistant_claims_wrong_name": 0},
+  "protected_asset_hashes_match": true,
+  "lora_config_diff_from_phase4ze": "dataset path / output path / phase comment のみ(LoRA構造・training hyperparameter・quantization・loss実装は完全同一であることをdiffで確認済み)",
+  "output_dir_collision_check": "training/riru/lora-riru-qwen-phase4zg-identity-hardened は既存Phase4ZE adapter(lora-riru-qwen-phase4ze-identity-margin)と異なる新規ディレクトリであり、衝突なし",
+  "smoke_test_pending": false,
+  "smoke_test_result": "PASS (train=12, val=4, 3 steps, forward/backward/optimizer step/checkpoint保存 全て正常動作)",
+  "overall_status": "READY"
+}

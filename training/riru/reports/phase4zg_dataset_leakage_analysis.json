@@ -1,0 +1,13 @@
+{
+  "issues": {
+    "placeholder": [],
+    "chatml": [],
+    "real_machine_name": [],
+    "wrong_name_enumeration_in_single_record": [],
+    "exact_duplicate": [],
+    "empty": [],
+    "assistant_claims_wrong_name": []
+  },
+  "high_similarity_pairs": [],
+  "contamination_hits": []
+}

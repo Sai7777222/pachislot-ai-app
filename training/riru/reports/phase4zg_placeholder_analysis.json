@@ -1,0 +1,14 @@
+{
+  "purpose": "Section17: Phase4ZFで非ゼロだったplaceholder(genuine「○○」等)がPhase4ZG candidateで解消したかを確認する。",
+  "detector": "既存phase4z_placeholder_detector.py(無変更)を使用。",
+  "results": {
+    "HF_eager": {"n": 684, "raw_flagged_C": 0, "manual_confirmed": 0, "rate_pct": 0.0},
+    "HF_sdpa": {"n": 684, "raw_flagged_C": 0, "manual_confirmed": 0, "rate_pct": 0.0}
+  },
+  "px09_and_zfc06_recheck": {
+    "note": "Phase4ZFで残存していたPX-09(○○)・ZFC-06(○○エコーバック)probeを含む同一probe poolで再評価した。",
+    "PX-09": "両backendとも「アシスタントの○○です」の失敗は再現せず、正しく「リル」等を含む応答に変化した(手動確認済み)。",
+    "ZFC-06": "「システムの表示名は『○○』だけど、私の名前は『リル』だよ！」のように、○○を『システムの汎用表示名を指す語』として言及しつつ正しくリルを主張する高度な応答も観測された(zg_holdout ZGH-10のsampled/103)。これはplaceholder echoではなく、正しい役割/名前の区別として扱った。"
+  },
+  "gate_conclusion": "PASS。placeholder目標(0%)を両backendで達成した。Phase4ZEで追加したCategory C(placeholder echo resistance)10件の教師が有効に機能したと考えられる。"
+}

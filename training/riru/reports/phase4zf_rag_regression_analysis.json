@@ -1,0 +1,21 @@
+{
+  "purpose": "Section16: RAG Regression Stress Gate。structured_17q(17)+holdout P01-P10(10)+Scope PT-01~22(22)+Broad(36)+Adversarial(20)+Conflicting(10)+Long-context(10)=125probe、greedyのみ、3backend。",
+  "total_generations": 375,
+  "results_by_backend": {
+    "HF_eager": {"n_probes": 125, "fabrication_count": 0, "numerical_hallucination_count": 0, "scope_violation_count": 0},
+    "HF_sdpa": {"n_probes": 125, "fabrication_count": 0, "numerical_hallucination_count": 0, "scope_violation_count": 0},
+    "llamacpp": {"n_probes": 125, "fabrication_count": 0, "numerical_hallucination_count": 0, "scope_violation_count": 0}
+  },
+  "pairwise_text_diff_counts": {
+    "eager_vs_sdpa": {"n": 125, "identical": 106, "differ": 19},
+    "eager_vs_llamacpp": {"n": 125, "identical": 48, "differ": 77},
+    "sdpa_vs_llamacpp": {"n": 125, "identical": 46, "differ": 79}
+  },
+  "diff_review": "全ての差分(eager-sdpa 19件、eager-llamacpp 77件、sdpa-llamacpp 79件)を目視確認した。100%が言い回し・語尾・句読点レベルの言い換えであり、数値(確率・枚数・ゲーム数・ポイント差)・ゾーン名・モード名・拒否挙動(「登録データにありません/見つかりません」)はいずれも完全に一致していた。fabrication・数値矛盾は1件も確認されなかった。",
+  "completeness_note": {
+    "affected_probes": ["Q11", "Q15", "Q17"],
+    "detail": "llama.cppの応答は、eagerと比べてQ11(ループストック詳細のLED示唆説明を省略)、Q15/Q17(赤7揃い濃厚条件の一部列挙を省略)でやや簡潔だった。省略された情報に矛盾・誤りはなく、単に列挙の網羅性がeagerよりやや低い程度の軽微な差(Phase4Y-Rで問題になった『差分情報を省略するcompleteness regression』ほど深刻ではない)。"
+  },
+  "adversarial_refusal_consistency": "AD-02/03/05/07/09/11/12/13/15/16/17/18/19/20全問で、3backend共通して『登録データにない情報は答えない』という正しい拒否挙動を一貫して維持した。拒否の文言は多少異なるが(「見つかりませんでした」「見つからないんだ」「ありません」等)、拒否するという判断自体は完全に一致していた。",
+  "gate_result": "PASS (3backend全てでfabrication/numerical hallucination/scope violation 0件)"
+}

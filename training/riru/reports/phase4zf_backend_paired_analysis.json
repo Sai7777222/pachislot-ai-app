@@ -1,0 +1,101 @@
+{
+  "eager_vs_sdpa": {
+    "n_pairs": 576,
+    "win": 3,
+    "tie": 567,
+    "loss": 6,
+    "critical_loss": 0,
+    "critical_loss_pct": 0.0,
+    "critical_examples": []
+  },
+  "eager_vs_llamacpp": {
+    "n_pairs": 576,
+    "win": 21,
+    "tie": 518,
+    "loss": 37,
+    "critical_loss": 5,
+    "critical_loss_pct": 0.87,
+    "critical_examples": [
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "101",
+        "eager_cat": "E",
+        "llamacpp_cat": "A"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "103",
+        "eager_cat": "E",
+        "llamacpp_cat": "A"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "101",
+        "eager_cat": "E",
+        "llamacpp_cat": "A"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "103",
+        "eager_cat": "E",
+        "llamacpp_cat": "A"
+      },
+      {
+        "probe_id": "ZEH-01",
+        "kind": "sampled",
+        "key": "103",
+        "eager_cat": "E",
+        "llamacpp_cat": "A"
+      }
+    ]
+  },
+  "sdpa_vs_llamacpp": {
+    "n_pairs": 576,
+    "win": 20,
+    "tie": 523,
+    "loss": 33,
+    "critical_loss": 5,
+    "critical_loss_pct": 0.87,
+    "critical_examples": [
+      {
+        "probe_id": "NW-01",
+        "kind": "sampled",
+        "key": "101",
+        "sdpa_cat": "E",
+        "llamacpp_cat": "A"
+      },
+      {
+        "probe_id": "NW-05",
+        "kind": "sampled",
+        "key": "103",
+        "sdpa_cat": "E",
+        "llamacpp_cat": "A"
+      },
+      {
+        "probe_id": "NW-09",
+        "kind": "sampled",
+        "key": "101",
+        "sdpa_cat": "E",
+        "llamacpp_cat": "A"
+      },
+      {
+        "probe_id": "NW-15",
+        "kind": "sampled",
+        "key": "103",
+        "sdpa_cat": "E",
+        "llamacpp_cat": "A"
+      },
+      {
+        "probe_id": "ZEH-01",
+        "kind": "sampled",
+        "key": "103",
+        "sdpa_cat": "E",
+        "llamacpp_cat": "A"
+      }
+    ]
+  }
+}

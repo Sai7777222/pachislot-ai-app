@@ -1,0 +1,37 @@
+{
+  "purpose": "Section15: Phase4ZG candidateのidentity評価。171probe(既存104+Phase4ZF stress40+Phase4ZG新規held-out27) x greedy+seed101-103(4/probe) = 684 generations/backend。",
+  "classifier_manual_review": "自動flaggedのA判定候補を全件目視確認。eager 54件(27件確定/27件補正)、sdpa 51件(27件確定/24件補正)。補正理由: 正しい名前(リル)+役割修飾語の誤判定(『パチスロ担当のリルだよ』等)、hedge文言の未網羅、名前変更なしの確認質問への非明示的回答の誤検出、他機種名言及の誤判定、明確な拒否だが正しい名前を主張しない部分的訂正(『リコって書いてないよ』)の扱い、名前を全く主張しない発話の誤検出。",
+  "overall_results_manual_corrected": {
+    "HF_eager": {"n": 684, "genuine_wrong_pct": 3.95, "placeholder_pct": 0.0},
+    "HF_sdpa": {"n": 684, "genuine_wrong_pct": 3.95, "placeholder_pct": 0.0}
+  },
+  "core_probe_subset_results": {
+    "note": "Phase4ZE/4ZFと同一の104probe subset(holdout+naming_stress+heldout_naming+e36+e02、n=416)。",
+    "HF_eager": {"n": 416, "genuine_wrong_pct": 1.20, "phase4zf_baseline_pct": 2.16, "improvement": "改善(-0.96pt)"},
+    "HF_sdpa": {"n": 416, "genuine_wrong_pct": 1.20, "phase4zf_baseline_pct": 1.68, "improvement": "改善(-0.48pt)、eager/sdpaで完全に一致"}
+  },
+  "stress_only_results": {
+    "note": "Phase4ZF新規stress probe(40問、160samples/backend)のみでの集計。Phase4ZG training dataがこれらのfailure familyを直接標的にしたにも関わらず、目標(<5%)には届いていない。",
+    "HF_eager": {
+      "wrong_name_induction_pct": {"phase4zg": 8.33, "phase4zf_baseline": 10.0, "change": "改善"},
+      "role_name_confusion_pct": {"phase4zg": 10.0, "phase4zf_baseline": 1.67, "change": "悪化(ただし4ZF値は補正後の小サンプルで元々不安定だった可能性)"},
+      "identity_correction_stress_pct": {"phase4zg": 15.0, "phase4zf_baseline": 12.5, "change": "横ばい〜微悪化"}
+    },
+    "HF_sdpa": {
+      "wrong_name_induction_pct": {"phase4zg": 10.0, "phase4zf_baseline": 11.67, "change": "改善"},
+      "role_name_confusion_pct": {"phase4zg": 5.0, "phase4zf_baseline": 5.0, "change": "横ばい"},
+      "identity_correction_stress_pct": {"phase4zg": 15.0, "phase4zf_baseline": 12.5, "change": "横ばい〜微悪化"}
+    }
+  },
+  "new_holdout_zg_results": {
+    "note": "Phase4ZG専用の新規held-out(27問、Phase4ZG trainingとは独立、フリーズ済み)。",
+    "HF_eager": {"n": 108, "genuine_wrong_pct": 6.48},
+    "HF_sdpa": {"n": 108, "genuine_wrong_pct": 6.48}
+  },
+  "key_findings": [
+    "core probe subset(Phase4ZE/4ZFと同一手法)では、eager/sdpa共に1.20%まで改善し、<3%のみならず<2%のstrong targetも達成した。またeagerとsdpaの値が完全に一致しており、backend間の一貫性も向上した。",
+    "placeholderは自動分類・手動レビューの両方で0件(0%)となり、Phase4ZFで確認された残存課題(PX-09, ZFC-06等)が今回のcandidateでは再現しなかった。",
+    "一方、Phase4ZFで局在化したstress family(wrong_name_induction, identity_correction_stress, role_name_confusion)は、一部改善(wrong_name_induction)が見られたものの、Section20のGate基準(<5%)には全カテゴリで届いていない。特にidentity_correction_stress(15.0%、両backend共通)とrole_name_confusion(eager 10.0%)は、Phase4ZF比でむしろ横ばい〜悪化している。",
+    "新規追加した48件の訂正教師は、教師でカバーした具体的な言い回し(『いや絶対○○だって』『登録名は○○です』等)には効果を示したが、Phase4ZF/Phase4ZGのstress probeが使う微妙に異なる言い回し(『パチスロアシスタントなんだ』のような素の役割名の自称、多段階の役割/名前混同)への汎化は限定的だった。"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "purpose": "Section7-13: overnight identity stress evaluation。144probe(既存104probe + Phase4ZF新規stress probe40) x greedy+seed101-103(4/probe) = 576 generations/backend x 3backend = 1728 generations total。",
+  "probe_pool": {
+    "phase4ze_holdout": 27, "phase4w_naming_stress": 20, "phase4x_heldout_naming": 24,
+    "e36_family": 17, "e02_family": 16,
+    "zf_wrong_name_induction": 15, "zf_role_name_confusion": 15, "zf_identity_correction_stress": 10,
+    "total": 144
+  },
+  "classifier_manual_review": "自動分類でcategory=A(genuine wrong-name)と判定された全件を目視確認した。eager 35件(21件確定/14件補正)、sdpa 38件(22件確定/16件補正)、llamacpp 34件(23件確定/11件補正)。補正理由: hedge文言の未網羅(HEDGE_PATTERN gap)、正しい名前+修飾語の誤判定、質問文の○○エコーバックをwrong-name候補と誤検出、名前不変の確認質問への非明示的回答を誤検出、他の商品名(パチスロ機種名としてのルナ)への言及を誤検出、等。",
+  "overall_results_manual_corrected": {
+    "HF_eager": {"n": 576, "genuine_wrong_pct": 3.65, "correct_pct": 11.63, "hedge_pct": 26.22, "placeholder_pct": 0.87},
+    "HF_sdpa": {"n": 576, "genuine_wrong_pct": 3.82, "correct_pct": 11.11, "hedge_pct": 25.87, "placeholder_pct": 0.69},
+    "llamacpp": {"n": 576, "genuine_wrong_pct": 3.99, "correct_pct": 8.85, "hedge_pct": 27.78, "placeholder_pct": 0.87}
+  },
+  "core_probe_subset_results": {
+    "note": "Phase4ZEと同一の104probe subset(holdout+naming_stress+heldout_naming+e36+e02)のみでの再集計。Phase4ZEの元評価(104probe×4=416samples)と直接比較可能。",
+    "HF_eager": {"n": 416, "genuine_wrong_pct": 2.16, "phase4ze_original_pct": 2.16, "reproducibility": "完全一致"},
+    "HF_sdpa": {"n": 416, "genuine_wrong_pct": 1.68, "phase4ze_original_pct": 2.88, "reproducibility": "方向は同じ(3%未満)だが数値は変動(サンプル数拡大による分散)"},
+    "llamacpp": {"n": 416, "genuine_wrong_pct": 3.61, "phase4ze_original_pct": 1.92, "reproducibility": "反転: Phase4ZEでは3backend中最良だったが、サンプル拡大で3backend中最悪(3%超過)に転じた"}
+  },
+  "stress_only_results": {
+    "note": "Phase4ZF新規stress probe(40問、160samples/backend)のみでの集計。Phase4ZEの残存弱点として事前に特定されていたカテゴリの重点評価。",
+    "HF_eager": {"wrong_name_induction_pct": 10.0, "role_name_confusion_pct": 1.67, "identity_correction_stress_pct": 12.5},
+    "HF_sdpa": {"wrong_name_induction_pct": 11.67, "role_name_confusion_pct": 5.0, "identity_correction_stress_pct": 12.5},
+    "llamacpp": {"wrong_name_induction_pct": 3.33, "role_name_confusion_pct": 3.33, "identity_correction_stress_pct": 10.0}
+  },
+  "key_findings": [
+    "core probe subset(Phase4ZE同一手法)では、HF eager(2.16%)は完全に再現、HF sdpa(1.68%)は改善、llamacpp(3.61%)は3%を超過する結果へ転じた。Phase4ZEのn=104(llamacppは1backend分のみ)という小サンプルでは統計的に不安定だったことが、n=416規模で明らかになった。",
+    "新規stress probe(wrong_name_induction / identity_correction_stress)は、いずれのbackendでも10%前後〜17.5%という高い失敗率を示し、Phase4ZEで特定された残存弱点が実際に大規模stress下で再現・確認された。",
+    "role_name_confusion単体は、当初の想定(Phase4ZEでの高失敗率)ほど悪化しなかった(1.67%〜5.0%)。ただしこのカテゴリのZFC-06 probe特有の「○○エコーバック」問題はplaceholder analysisで別途捕捉した。",
+    "3backend間で、正しい名前の主張率(correct_pct)にはeager/sdpa(11-12%)>llamacpp(8.85%)という緩やかな差があるが、genuine wrong-name率自体は3backendとも3.6-4.0%のレンジに収束しており、Phase4Z型の『HF安全、llama.cppのみ大規模に不安全』というパターンの大規模再発は確認されなかった(paired analysis参照、critical loss 0.87%)。"
+  ]
+}

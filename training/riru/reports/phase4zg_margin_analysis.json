@@ -1,0 +1,14 @@
+{
+  "purpose": "Section19: Phase4ZG candidateのリ/ルmargin確認。",
+  "results": {
+    "HF_eager": {"ri_logit": 13.8125, "ru_logit": 13.0625, "margin": 0.75, "winner": "リ", "ri_rank": 1, "ru_rank": 2},
+    "HF_sdpa": {"ri_logit": 13.8125, "ru_logit": 13.0625, "margin": 0.75, "winner": "リ", "ri_rank": 1, "ru_rank": 2}
+  },
+  "comparison_to_phase4ze": {
+    "phase4ze_margin": 0.3125,
+    "phase4zg_margin": 0.75,
+    "change": "改善(+0.4375、約2.4倍に拡大)",
+    "both_backends_identical": true
+  },
+  "gate_conclusion": "PASS。両backendで「リ」>「ル」を維持し、Phase4ZEの+0.3125から大幅に拡大した(0.75、旧4bit legacy baselineの+0.3125をも上回る)。"
+}
