@@ -1,0 +1,25 @@
+{
+  "purpose": "Stage E: 30件のOOD/雑談probe(phase4zi_ood_sanity_probes)に対し、identity guardがidentity_intrusion=0/unnecessary_repair=0/false_positive=0を達成できているかを検証。",
+  "n_probes": 24,
+  "note_on_n": "phase4zi_ood_sanity_probesの実際の件数は24件（instruction文書のSection16は目安として30件以上と記載していたが、既存poolのサイズに合わせた）。",
+  "stage_counts": {"pass": 23, "fallback": 1, "regenerated_pass": 0},
+  "critical_finding": {
+    "id": "ZI-OD-15",
+    "category": "favorite_things",
+    "prompt": "甘いものと辛いものと、どっちが好き？",
+    "raw": "私は甘いものが好きだよ！",
+    "regenerated_and_still_flagged": true,
+    "final_fallback_response": "うん、私はリルだよ！",
+    "validator_verdict": "explicit_wrong_self_name, claimed_name='甘いものが好きだ'",
+    "severity": "重大。全く無害な『好きな食べ物』への回答が、identity guardによって『甘いものが好きだ』という文字列を偽の自己申告名として誤検知され、2回とも不採用となり、最終的に文脈と無関係な決定的フォールバック文『うん、私はリルだよ！』に置き換えられた。ユーザーの質問（甘い/辛い、どっちが好き？）に対して一切答えていない不自然な応答がユーザーに届く。",
+    "root_cause": "SELF_ID_PATTERNSの中の『私は{TOKEN}(?:だよ|だね|なんだ|です...)』系の汎用パターンが、『私は』に続く任意の短い句を機械的に名前候補として抽出してしまう。ZL-I07(『もちろん大丈夫だよ』→『大丈夫』誤検知)と同根の構造的バグであり、STOPWORDS/_NON_NAME_CONTINUATIONに『好きだ』のような形容詞的表現が登録されていなかったために発生した。",
+    "structural_implication": "STOPWORDSやNON_NAME_CONTINUATIONへの追加という対症療法では、無限に近い日本語の口語表現のバリエーションを尽くすことはできない。これはSection25 STOP条件(G)『validatorを複雑化しないと成立しない』が現実に発生している証拠である。"
+  },
+  "other_23_turns": "全てstage=pass、raw==final。third-party/normal conversationは概ね正常に処理されている。",
+  "section16_target_vs_actual": {
+    "target": "identity_intrusion=0, unnecessary_repair=0, false_positive=0",
+    "actual": "identity_intrusion=1 (ZI-OD-15), unnecessary_repair=1, false_positive=1",
+    "rate": "1/24 = 4.2%"
+  },
+  "conclusion": "件数としては1/24と小さく見えるが、内容は『全く無関係などんな会話でも名前関連ロジックが誤爆しうる』ことを示す質的に重大な失敗であり、Section25のSTOP条件該当を裏付ける追加証拠となる。"
+}

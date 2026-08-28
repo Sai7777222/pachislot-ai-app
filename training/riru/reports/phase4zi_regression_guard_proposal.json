@@ -1,0 +1,36 @@
+{
+  "purpose": "Section23: 今後の追加学習で絶対に悪化させてはいけないprobe集合を提案する。本Phaseでは学習に使用しない。全てPhase4ZG candidateで安全であることを実測してから採用している(TYPE1 stable_strengthに分類された項目、およびPhase4ZG自身のRAG regressionレポートで確認済みの項目から選定)。",
+  "guard_set": {
+    "identity_safe_probes": {
+      "source": "phase4zi_heldout_analysis.json TYPE1 (23件) + phase4zi_zg_vs_zh_paired_analysis.json ZFB/ZFC/ZFD TYPE1 (15件)",
+      "examples": ["ZHH-B02","ZHH-B04","ZHH-C02","ZHH-C03","ZHH-C04","ZHH-C05","ZHH-E02",
+        "ZHH-F01","ZHH-F02","ZHH-F03","ZHH-F05","ZHH-G01","ZHH-G02","ZHH-G03","ZHH-G04",
+        "ZFB-02","ZFB-08","ZFB-11","ZFB-13","ZFB-14","ZFC-03","ZFC-04","ZFC-13",
+        "ZFD-01","ZFD-03","ZFD-05","ZFD-06","ZFD-07","ZFD-09","ZFD-10"],
+      "verified_safe_on": "Phase4ZG candidate, eager+sdpa, greedy decoding(本Phaseで実測済み)",
+      "n_total": 38
+    },
+    "nickname_safe_cases": {
+      "examples": ["ZHH-H02(りーちゃん)", "ZI-NA01(りるぽん)"],
+      "note": "H01/H04/NA03はZG自体に問題があるため、guard対象からは除外する(悪化を検知する意味がない、そもそも安全でない)。"
+    },
+    "role_name_safe_cases": {
+      "examples": ["ZFC-04(名前と役割を正しく分離)", "ZI-RNC02(サポーター、『そうではなくて』と明確に否定)"]
+    },
+    "rag_probes": {
+      "P02_eager": "設定1〜5の5段階全ての確率を正確に列挙する応答を維持すること。",
+      "LC08_eager": "AT-Fの純増・RT-C移行・継続G数・中抽選確率の4項目全てを含む応答を維持すること(sdpaは既に脆弱なため対象外、eagerのみをguardとする)。",
+      "Q11_eager_sdpa": "5パターンの確率(16.7%×4+33.2%)を個別に列挙し、Z-ZONEパターンの33.2%が他と異なることを維持すること。",
+      "AD04_eager_sdpa": "情報不足を正直に認めるのみで、根拠のない一般論アドバイスを追加しないこと。"
+    },
+    "ordinary_conversation": {
+      "greeting": ["ZI-OD-01","ZI-OD-02","ZI-OD-03"],
+      "thanks": ["ZI-OD-04","ZI-OD-05","ZI-OD-06"],
+      "small_talk": ["ZI-OD-09","ZI-OD-10","ZI-OD-15(『甘いものと辛いもの』への自然な回答)"],
+      "farewell": ["ZI-OD-19","ZI-OD-20","ZI-OD-21"],
+      "no_name_control": ["ZHH-X01","ZHH-X04"]
+    }
+  },
+  "usage_policy": "本guard setは評価専用であり、次のcandidateの学習データには一切使用しない。次candidateの評価Gateにおいて、このguard set全体でのregression件数を必須の追跡指標とし、1件でも悪化があれば、その候補は無条件にHIGH priorityの懸念事項として報告すること。",
+  "not_verified_note": "本ファイルに列挙したprobeはPhase4ZG candidateでの安全性のみを実測している。将来のcandidateがこのguard setに対して評価される際は、必ず同一条件(greedy, 同一system prompt, 同一backend)で再評価し、本ファイルの記録と機械的に比較すること。"
+}

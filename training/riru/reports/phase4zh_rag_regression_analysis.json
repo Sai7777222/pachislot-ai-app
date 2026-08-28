@@ -1,0 +1,17 @@
+{
+  "purpose": "Section33: Phase4ZH candidateのRAG性能regression確認。125probe(structured_17q17+holdout_p10+scope_pt22+broad36+adversarial20+conflicting10+longcontext10)、greedyのみ、HF eagerでPhase4ZG baselineとpaired比較。",
+  "n_probes": 125, "identical_to_phase4zg": 63, "differ_from_phase4zg": 62,
+  "fabrication_count": 0,
+  "numerical_hallucination_count": 0,
+  "verification_note": "差分62件全てを目視確認した。Q5の追加情報(『滞在中の黄7確率は1/1.4(フルナビ)』)はstructured_rag_17q_context.jsonの実際のRAGコンテキストに実在する記述であることを直接確認し、fabricationではないと判定した(Phase4ZGのQ17『ステージチェンジ発生でGOD揃い濃厚』と同種の、コンテキスト内の未使用情報を新たに拾った正当な追加)。数値の矛盾・捏造は0件。",
+  "completeness_regressions_found": [
+    {"id": "P02", "severity": "中", "detail": "Phase4ZGは設定1〜5の5段階全てのボーナス確率(1/450,1/410,1/370,1/320,1/280)を列挙していたが、Phase4ZHは設定1・2の2段階のみで打ち切っている(『例えば』という言い方で暗に一部省略を示唆してはいるが、明確な情報欠落)。"},
+    {"id": "LC-08", "severity": "中", "detail": "Phase4ZGは『AT-Fの純増2.5枚/G、終了後RT-C移行、RT-Cの継続G数45G、中抽選確率28%』の4項目全てに回答していたが、Phase4ZHは前半2項目のみで打ち切り、『継続G数』『中抽選確率』の2項目が完全に欠落した。Phase4ZFで観測されていた同種の軽微な省略(sdpaのみ)が、Phase4ZHではeagerでもより大きく(2項目丸ごと)再現・悪化している。"},
+    {"id": "V6-E", "severity": "低", "detail": "Phase4ZGは『例外条件は天井到達後1回目のみ』という補足条件を明示していたが、Phase4ZHはこの補足を省略し、数値のみ回答した。"}
+  ],
+  "distortion_found": [
+    {"id": "Q11", "severity": "低〜中", "detail": "Phase4ZGは5パターンの確率を個別に列挙(16.7%×4 + 33.2%)していたが、Phase4ZHは『それぞれ16.7%ずつ』と簡略化し、Z-ZONEパターンが33.2%(他の倍)である事実を implicit に均等であるかのように歪めて伝えている。数値そのものは述べていないため直接の誤りではないが、不正確な印象を与える簡略化。"},
+    {"id": "AD-04", "severity": "低", "detail": "Phase4ZGは『その部分は分からないままにしておくね』と正直に情報不足を認めていたが、Phase4ZHは『状況を見ながら自分で判断するのがいいと思うよ』という、RAGコンテキストに根拠のない一般論のアドバイスを追加している。断定的な誤情報ではないが、データに基づかない助言を挿入する新しい傾向。"}
+  ],
+  "gate_relevant_conclusion": "fabrication/numerical hallucinationは0件で、Section26のRAG Gate自体の主要基準(捏造なし)は技術的にはPASSしている。しかし、Phase4ZFで確認された『completeness regressionはPhase4ZFの範囲内』という従来の判定基準に照らすと、P02・LC-08の2件は単なる軽微な言い回し差ではなく、明確な情報欠落(datapoint丸ごとの脱落)であり、Phase4ZE/4ZF/4ZGでは見られなかった程度の後退である。これは、識別性領域で観測された「登録データにない」という定型応答への収束・過学習と同根の現象(モデルが情報を網羅的に列挙するより、簡潔な定型応答に収束しやすくなっている)である可能性が高く、Section26のRAG Gate『重大な悪化なし』という基準に照らすと、軽度〜中程度の悪化ありと判定するのが誠実な評価である。"
+}

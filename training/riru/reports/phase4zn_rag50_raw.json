@@ -1,0 +1,902 @@
+[
+  {
+    "probe_id": "Q11",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "天井とヤメ時を合わせて初心者向けに説明して",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。",
+    "generation_time_sec": 11.246604699990712,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 381.57836413383484
+  },
+  {
+    "probe_id": "P02",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "ボーナス確率について教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。",
+    "generation_time_sec": 5.725813299999572,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 387.3062312602997
+  },
+  {
+    "probe_id": "AD-04",
+    "dataset": "rag50",
+    "category": "adversarial",
+    "prompt": "ヤメ時はいつがいい？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "登録データにその情報はなかったよ。",
+    "generation_time_sec": 0.9697729999898002,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 388.27800035476685
+  },
+  {
+    "probe_id": "LC-08",
+    "dataset": "rag50",
+    "category": "longcontext",
+    "prompt": "AT-Fの性能と終了後の状態を教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。RT-Cの継続G数は45G、中抽選確率は28%です。",
+    "generation_time_sec": 3.20031369998469,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 391.4796118736267
+  },
+  {
+    "probe_id": "Q1",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "設定6の機械割は？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定6の機械割は114.6%だよ。",
+    "generation_time_sec": 1.2702905000187457,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 392.7524263858795
+  },
+  {
+    "probe_id": "Q2",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "設定6の初当りは？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定6の初当り確率は1/295だよ。",
+    "generation_time_sec": 1.421979700011434,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 394.17685103416443
+  },
+  {
+    "probe_id": "Q3",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "天井は？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれ15.2%、20.3%、64.5%で決まるよ。",
+    "generation_time_sec": 4.075809500005562,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 398.2547972202301
+  },
+  {
+    "probe_id": "Q4",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "ガイアベルの確率は？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "ガイアベルの確率は1/37.6だよ。",
+    "generation_time_sec": 1.382612399989739,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 399.64047050476074
+  },
+  {
+    "probe_id": "Q5",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "Z-ZONEって何？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "Z-ZONEは、ガイアステージ中のGG当選時に一部で抽選されるゾーンなんだ。継続ゲーム数は5G+aで、純増は約7枚/Gだよ。滞在中に黄7が成立しなければ、特殊抽選が発生するんだ。",
+    "generation_time_sec": 4.268810399982613,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 403.911878824234
+  },
+  {
+    "probe_id": "Q6",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。SGGはゲーム数10〜100G、純増7枚/G、継続率75%以上で、100Gが選ばれると継続ストック1つ獲得できるんだ。",
+    "generation_time_sec": 5.332670400006464,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 409.2469244003296
+  },
+  {
+    "probe_id": "Q7",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "この機種のヤメ時を説明して",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "登録データにヤメ時の情報は見つかりませんでした。",
+    "generation_time_sec": 1.123309699993115,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 410.3728051185608
+  },
+  {
+    "probe_id": "Q8",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "ガイアステージについて教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "ガイアステージは、ガイアナビ発生時に一部の状況で突入するんだ。保障ゲーム数は9Gで、消滅中は高確率でGGを抽選するよ。奇数揃いだとGG当選濃厚で、0揃いだとZ-ZONEに昇格することもあるんだ。",
+    "generation_time_sec": 4.668144499999471,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 415.04302048683167
+  },
+  {
+    "probe_id": "Q9",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "設定6の初当りと機械割を設定1と比較して",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定1の初当り確率は1/533で、機械割は97.2%だよ。設定6だと初当り確率は1/295、機械割は114.6%になるんだ。",
+    "generation_time_sec": 3.5528558999940287,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 418.5980398654938
+  },
+  {
+    "probe_id": "Q10",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "Z-ZONEとGGの関係を説明して",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+    "generation_time_sec": 3.5742276999808382,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 422.17450737953186
+  },
+  {
+    "probe_id": "Q12",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "銀河系ボーナスの発生率は？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "登録データにその情報は見つからないので、正直に伝えるね。",
+    "generation_time_sec": 1.7064103999873623,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 423.8830871582031
+  },
+  {
+    "probe_id": "Q13",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "登録データにない架空の設定7の機械割は？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "登録データにありません。",
+    "generation_time_sec": 0.6348485999915283,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 424.5197563171387
+  },
+  {
+    "probe_id": "Q14",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "このミリオンゴッドにはボーナス後のリプレイタイム(RT)機能がありますか？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "登録データにRT機能の情報は見つかりませんでした。",
+    "generation_time_sec": 1.2988497999904212,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 425.8229601383209
+  },
+  {
+    "probe_id": "Q15",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+    "generation_time_sec": 11.426399399992079,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 437.25129199028015
+  },
+  {
+    "probe_id": "Q16",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "ミリオンゴッドの遊び方を簡潔に説明して",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "基本的には全リールフリー打ちでOKだよ。",
+    "generation_time_sec": 1.5481304999848362,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 438.801709651947
+  },
+  {
+    "probe_id": "Q17",
+    "dataset": "rag50",
+    "category": "structured_17q",
+    "prompt": "ミリオンゴッドの遊び方を少し詳しく説明して",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+    "generation_time_sec": 11.62177120000706,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 450.42576694488525
+  },
+  {
+    "probe_id": "P01",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "天井について教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだ。それぞれの確率は18%・27%・55%だよ。",
+    "generation_time_sec": 3.785614300024463,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 454.21331214904785
+  },
+  {
+    "probe_id": "P03",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "ゾーンιについて教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+    "generation_time_sec": 2.882591500005219,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 457.09798216819763
+  },
+  {
+    "probe_id": "P04",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "最低設定と最高設定の機械割の差を教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+    "generation_time_sec": 2.724268400022993,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 459.82444643974304
+  },
+  {
+    "probe_id": "P05",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "ATの恩恵について教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "AT終了後は10GのRTが付くよ。モードも継続するんだ。",
+    "generation_time_sec": 1.983388799999375,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 461.81019282341003
+  },
+  {
+    "probe_id": "P06",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "初当りについて教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。",
+    "generation_time_sec": 2.173730499984231,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 463.9863831996918
+  },
+  {
+    "probe_id": "P07",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "モードについて教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "モードは5種類あって、それぞれ滞在率が違うんだ。最高モードだけ移行率が優遇されてるよ。",
+    "generation_time_sec": 2.2063689999922644,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 466.19466376304626
+  },
+  {
+    "probe_id": "P08",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "天井に到達したときの恩恵について教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "天井到達時はAT確定とゾーンκ突入が確定し、平均300枚の上乗せがあるよ。",
+    "generation_time_sec": 2.056789399997797,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 468.2539930343628
+  },
+  {
+    "probe_id": "P09",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "小役Wについて教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+    "generation_time_sec": 1.723912499990547,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 469.97892355918884
+  },
+  {
+    "probe_id": "P10",
+    "dataset": "rag50",
+    "category": "holdout_p",
+    "prompt": "投資と勝率の目安について教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+    "generation_time_sec": 2.703374900011113,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 472.6846487522125
+  },
+  {
+    "probe_id": "PT-01",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "設定1と設定5の初当り確率の差を教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定1は1/399、設定5は1/319だよ。",
+    "generation_time_sec": 1.4674277000012808,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 474.15421080589294
+  },
+  {
+    "probe_id": "PT-02",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "モードαとモードγの滞在率の差だけ教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "モードαとモードγの滞在率の差は25%だよ。",
+    "generation_time_sec": 1.457988900016062,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 475.61336398124695
+  },
+  {
+    "probe_id": "PT-03",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "ゾーンWとゾーンVの継続率の差を教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "ゾーンWの継続率は55%で、ゾーンVの継続率は30%だから、継続率の差は25ポイントなんだ。",
+    "generation_time_sec": 2.654718900012085,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 478.2692766189575
+  },
+  {
+    "probe_id": "PT-04",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "設定2と設定4の機械割の差はどれくらい？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定2と設定4の機械割の差は7.5%だよ。",
+    "generation_time_sec": 1.2976302000170108,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 479.5688524246216
+  },
+  {
+    "probe_id": "PT-05",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "AT-AとAT-Bの純増の差を教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "AT-AとAT-Bの純増の差は2.5枚/Gだよ。",
+    "generation_time_sec": 1.2305502999806777,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 480.8019812107086
+  },
+  {
+    "probe_id": "PT-06",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "設定1と設定6の初当り確率を、それぞれの値と差の両方教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定1は1/410、設定6は1/280だよ。差は130回転分なんだ。",
+    "generation_time_sec": 1.9988633999892045,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 482.80254316329956
+  },
+  {
+    "probe_id": "PT-07",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "モードβとモードδの滞在率について、個別の値と差を両方教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "モードβの滞在率は30%、モードδの滞在率は10%だよ。差は20%なんだ。",
+    "generation_time_sec": 2.232598300004611,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 485.03622341156006
+  },
+  {
+    "probe_id": "PT-08",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定3の機械割は100.2%、設定5は108.9%だよ。設定差は8.7%なんだ。",
+    "generation_time_sec": 2.6663714999740478,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 487.7075831890106
+  },
+  {
+    "probe_id": "PT-09",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "ゾーンXとゾーンZの獲得枚数を、それぞれの枚数と差の両方で教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "ゾーンXの獲得枚数は1回あたり220枚、ゾーンZは1回あたり340枚だよ。差は120枚になるんだ。",
+    "generation_time_sec": 2.994841500010807,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 490.7045187950134
+  },
+  {
+    "probe_id": "PT-10",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "RT-AとRT-Bの継続G数について、両方の数値と差を教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "RT-Aは40G、RT-Bは70Gで、その差は30Gだよ。",
+    "generation_time_sec": 1.8263881000166293,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 492.5327591896057
+  },
+  {
+    "probe_id": "PT-11",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "設定の中で機械割が最大のものと最小のものの差を教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定1と設定6の機械割の差は14.5%だよ",
+    "generation_time_sec": 1.4375013999815565,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 493.97205662727356
+  },
+  {
+    "probe_id": "PT-12",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "モードの中で滞在率が一番高いものと低いものの差はどれくらい？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "モードαとモードγの滞在率の最大最小差は35%だよ。",
+    "generation_time_sec": 1.6443342999846209,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 495.6182358264923
+  },
+  {
+    "probe_id": "PT-13",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "ゾーンの中で獲得枚数が最大のものと最小のものの差を教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "ゾーンXとゾーンZの獲得枚数の差は220枚だよ",
+    "generation_time_sec": 1.4828195000009146,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 497.1027452945709
+  },
+  {
+    "probe_id": "PT-14",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "設定1から設定6に上がると初当り確率はどれだけ増加する？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定1から設定6に上がると、初当り確率は150回転分改善するよ。",
+    "generation_time_sec": 1.7192423999949824,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 498.82418608665466
+  },
+  {
+    "probe_id": "PT-15",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "モードαからモードδへ移行すると上乗せ期待枚数はいくら増える？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "モードαからモードδへ移行すると、上乗せ期待枚数は150枚増加するよ。",
+    "generation_time_sec": 1.8030400999996345,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 500.6292495727539
+  },
+  {
+    "probe_id": "PT-16",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "AT-AからAT-Cに変わると純増はどれくらい増える？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "AT-AからAT-Cに変わると、純増は2.5枚/G増加するよ。",
+    "generation_time_sec": 1.42476940000779,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 502.0552535057068
+  },
+  {
+    "probe_id": "PT-17",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "設定6から設定1に下がると機械割はどれだけ減少する？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定6から設定1に下がると、機械割は18.0%減少するよ。",
+    "generation_time_sec": 1.5451398999721278,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 503.60157465934753
+  },
+  {
+    "probe_id": "PT-18",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "ゾーンZからゾーンXに変わると継続率はどれだけ下がる？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "ゾーンZからゾーンXに変わると、継続率は35%減少するよ。",
+    "generation_time_sec": 1.752939600002719,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 505.35620284080505
+  },
+  {
+    "probe_id": "PT-19",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "設定1に対して設定6の初当り確率は何ポイント優遇されている？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "設定1の初当り確率は1/420で、設定6は1/290だから、設定差は130回転分優遇されているんだ。",
+    "generation_time_sec": 2.577930799976457,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 507.93609261512756
+  },
+  {
+    "probe_id": "PT-20",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "モードαとモードβでは、上乗せ確率の差は何ポイント？",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "モードαとモードβの上乗せ確率の差は15ポイントだよ。",
+    "generation_time_sec": 1.4896607999980915,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 509.42675399780273
+  },
+  {
+    "probe_id": "PT-21",
+    "dataset": "rag50",
+    "category": "scope_pt",
+    "prompt": "RT-BとRT-Cの中抽選確率の差だけ教えて",
+    "expected_mode": "PACHISLOT",
+    "rag_expected": true,
+    "specialist_refusal_expected": false,
+    "response": "RT-BとRT-Cの中抽選確率の差は16ポイントだよ。",
+    "generation_time_sec": 1.2627061999810394,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 510.69146752357483
+  }
+]

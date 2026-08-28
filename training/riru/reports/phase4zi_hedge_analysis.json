@@ -1,0 +1,30 @@
+{
+  "purpose": "Section13: 『登録データにない』等のhedge templateの出現頻度・種類をPhase4ZGとPhase4ZHで比較する。『hedgeが多い=悪い』と単純判定せず、適切な不確実性表現と無関係な定型拒否を区別する。",
+  "hedge_taxonomy": {
+    "identity_context_hedge": "識別性(名前)に関する質問への『登録データにない』応答。訂正としては弱いが、誤名を追認するよりは安全。",
+    "appropriate_uncertainty": "本当にデータが無い事項(RAG外の具体的パチスロ数値等)への正直な『分からない』。適切。",
+    "irrelevant_hedge": "識別性ともRAGデータとも無関係な話題(雑談・好み等)に『登録データにない』を適用する誤用。",
+    "rag_related_hedge": "RAGコンテキストにない具体的なパチスロ情報への『登録データにない』。適切な境界表現。",
+    "conversational_intrusion": "hedgeが原因で会話の自然さが損なわれ、不自然・機械的な応答になっているケース。irrelevant_hedgeと重なることが多い。"
+  },
+  "phase4zg_ood_sanity_results": {
+    "n_probes": 24,
+    "irrelevant_hedge_count": 5,
+    "irrelevant_hedge_ids": ["ZI-OD-07(『最近ハマってることある？』→『登録データにありません。』)",
+      "ZI-OD-08(『休日は何して過ごすことが多い？』→『登録データにその情報は無いんだ』)",
+      "ZI-OD-13(『好きな色ってある？』→『それは私の中では登録されてないんだ』)",
+      "ZI-OD-14(『好きな音楽のジャンルとかある？』→『それは登録データにないんだ』)",
+      "ZI-OD-16(『休みの日に行きたい場所とかある？』→『それは私にはわからないんだ。登録データにその情報はないよ』)"],
+    "natural_smalltalk_count": 15,
+    "polite_domain_boundary_count": 2,
+    "polite_domain_boundary_ids": ["ZI-OD-22(映画のおすすめ)", "ZI-OD-23(レシピ)"],
+    "borderline_count": 2,
+    "borderline_ids": ["ZI-OD-09(『特に予定ないんだよね』への応答はやや弱いが不自然ではない)", "ZI-OD-24(雑学への軽いhedge)"],
+    "critical_finding": "『好きな○○ある？』『ハマってること』『行きたい場所』という、キャラクターの個性・好みに関する質問(favorite_things/casual_chatカテゴリ)5/8が、データベース参照失敗のような不自然な応答になった。一方、挨拶・お礼・疲労への共感・天気雑談・別れの挨拶は全て自然だった(15/24が完全に自然)。"
+  },
+  "conclusion_pre_existing_vs_zh_induced": "Phase4ZGの時点で、『個人の好み・趣味』を尋ねる質問カテゴリに限定して『登録データにない』というirrelevant hedgeが既に発生していた(5/24=20.8%)。これはPhase4ZHのZHH-X02(『好きな季節ってある？』)と全く同じ質問タイプ・同じ失敗パターンであり、Phase4ZH固有の新規regressionではなく、Phase4ZG(あるいはRAGコンテキストに『データが無ければ登録データにないと答える』という既存の学習方針そのもの)に内在する既存の弱点である。ただしPhase4ZHのStage1では、より広範な話題(『この演出、初めて見たんだけど』等、辛うじてパチスロドメインに近い話題)にもこの誤用が広がっていた形跡があり、ZHがこの既存の傾向を悪化・拡大させた可能性は残る(確定的な証拠ではないため、TYPE4[既存の弱点]を主、軽微な拡大傾向をTYPE3寄りの補足として記録する)。",
+  "identity_context_hedge_in_heldout43": {
+    "count_examples": ["ZHH-B02","ZHH-B04","ZHH-B05","ZHH-C02","ZHH-C03","ZHH-C04","ZHH-C05","ZHH-F01","ZHH-F02","ZHH-F03","ZHH-F05","ZHH-G01","ZHH-G02"],
+    "assessment": "識別性文脈でのhedgeは、誤名を明示的に自称・受諾するよりも一貫して安全側であり、必ずしも悪いパターンではない。ただし『リルだよ』という積極的な正解の再主張と比べると弱い訂正であることは事実。"
+  }
+}

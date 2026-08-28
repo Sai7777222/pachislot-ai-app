@@ -1,0 +1,10 @@
+{
+  "purpose": "Section9 Diagnostic F: ZJ teacher26件に対するteacher-forced lossをZG/ZJで比較する。",
+  "mean_loss": {"zg": 1.7723, "zj": 1.4279, "relative_reduction_pct": 19.4},
+  "per_teacher_detail": "全26件でZG→ZJのloss低下を確認(delta範囲: +0.067〜+0.571、control除く全teacherで+11.1%〜+36.9%の相対低下)。controlは-3.7%〜+11.9%とより小さく混合した変化(想定通り、狙って改善する対象ではないため)。",
+  "verdict": {
+    "primary": "F1(ZJ teacher lossがZGより大きく低下 → teacherは学習されている)",
+    "detail": "26件全てのinstruction_override教師で一貫して、control teacherより明確に大きな loss低下(平均約20%)が確認された。これはteacherが『全く学習されていない』わけではないことの強い証拠であり、Diagnostic A(生成出力レベルではほぼ変化なし)との対比が本Phaseで最も重要な発見の一つである: 確率分布レベルでは改善しているが、greedy decodingの決定(argmax)を変えるには至っていない。"
+  },
+  "category_breakdown": "system(A)/developer_operator(B)/maintenance_config(C)/explicit_rewrite(D)/metadata_database(E)/mixed_natural(F)の6カテゴリ全てで同程度の相対的loss低下(15-30%)が見られ、特定カテゴリだけが学習されなかったという偏りは確認されなかった。"
+}

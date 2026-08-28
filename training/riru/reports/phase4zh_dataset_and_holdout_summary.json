@@ -1,0 +1,69 @@
+{
+  "purpose": "Section18-19: Phase4ZH新規教師データセット構築結果と、新規held-out stress setのleakage検証結果の記録。",
+  "training_dataset": {
+    "source_file": "training/riru/phase4zh_structural_hardening_source_data.py",
+    "build_script": "training/riru/build_phase4zh_dataset.py",
+    "quality_check_result": {
+      "quality_issues_total": 0,
+      "issues_breakdown": {"placeholder": 0, "chatml": 0, "real_machine_name": 0,
+        "wrong_name_enumeration_in_single_record": 0, "exact_duplicate": 0, "empty": 0,
+        "assistant_claims_wrong_name": 0},
+      "high_similarity_pairs": 0,
+      "contamination_hits_final": 0,
+      "contamination_hits_first_pass": 2,
+      "first_pass_fixes": [
+        {"id": "ZH-B07", "issue": "「自己紹介して」がphase4t_naming_probesと部分一致",
+         "fix": "「自己紹介してるところ」→「名乗ってるところ」に言い換え"},
+        {"id": "ZH-I01", "issue": "「今日は天気いいね」がphase4x_identity_stabilizationと完全一致",
+         "fix": "「今日はなんだか爽やかな一日だね」に言い換え"}
+      ]
+    },
+    "new_by_category": {
+      "assertion_resistance": 8, "false_memory_resistance": 10,
+      "authority_metadata_spoof_resistance": 12, "persistent_correction_multiturn": 10,
+      "instruction_override_resistance": 8, "role_name_separation": 10,
+      "quotation_mention_safety": 8, "nickname_distinction": 6, "intrusion_control": 10
+    },
+    "new_count": 82, "multiturn_new_count": 10,
+    "existing_count": 1193, "combined_total": 1275,
+    "train_count": 1147, "val_count": 128, "train_val_overlap": 0,
+    "complex_ratio_pct": 8.86, "identity_ratio_pct": 19.45,
+    "intrusion_control_ratio_of_new_pct": 12.2
+  },
+  "holdout_stress_set": {
+    "source_file": "training/riru/eval/phase4zh_holdout_probes.py",
+    "single_turn_probe_count": 43,
+    "single_turn_categories": {
+      "assertion_holdout": 5, "false_memory_holdout": 5, "authority_spoof_holdout": 6,
+      "persistent_declaration_holdout": 5, "instruction_override_holdout": 5,
+      "role_name_holdout": 5, "quotation_holdout": 4, "nickname_ambiguity_holdout": 4,
+      "no_name_control_holdout": 4
+    },
+    "multiturn_scenario_count": 6,
+    "multiturn_scenario_categories": [
+      "authority_then_persistence", "false_memory_then_push", "role_confusion_then_authority",
+      "instruction_override_then_persistence", "assertion_memory_persistence_escalation",
+      "nickname_then_authority_then_persistence"
+    ],
+    "design_note": "multi-turnシナリオはPhase4ZGのmulti_turn_correction(単一メッセージ内で過去を騙る方式)とは異なり、真に複数ターンの会話状態を1ターンずつ進めてモデル自身の生成応答をcontextに含める方式。1シナリオ内で複数の異なるspeech-act構造(authority→persistence等)を組み合わせ、会話が進むにつれ訂正を維持できるかを見る、より厳しいテスト。",
+    "leakage_check": {
+      "n_holdout_texts_checked": 57,
+      "hits_vs_own_new_training": 0,
+      "hits_vs_all_prior_phase_sources": 0,
+      "internal_holdout_duplicates": 0,
+      "first_pass_hits_found_and_fixed": 2,
+      "first_pass_fixes": [
+        {"id": "ZHH-B01", "issue": "「自己紹介して」がphase4t_naming_probesと部分一致",
+         "fix": "「自己紹介してくれた」→「名乗ってくれた」に言い換え"},
+        {"id": "ZHH-MT03-turn1", "issue": "ZHH-F01と文面が完全一致(内部重複)",
+         "fix": "「『パチスロメイト』」→「『攻略ナビゲーター』」に言い換え、独立した文面に変更"}
+      ],
+      "prior_phase_sources_checked": ["phase4t", "phase4u", "phase4v", "phase4w", "phase4x",
+        "phase4z(E36/E02)", "phase4ze_holdout", "phase4ze_training", "phase4zf_stress",
+        "phase4zf_ood", "phase4zg_training", "phase4zg_holdout", "structured_17q",
+        "character_39", "holdout_p01_p10"]
+    },
+    "frozen": true,
+    "frozen_note": "本ファイルの内容確定後、評価結果を見て書き換えていない(Section19の規定通り)。"
+  }
+}

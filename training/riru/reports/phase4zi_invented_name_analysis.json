@@ -1,0 +1,28 @@
+{
+  "purpose": "Section12: Phase4ZHで観測された『ルナティック』という架空の第三の名前の捏造が、ZH固有の新種failureか、Phase4ZGに元々存在した現象かを検証する。",
+  "zfd02_direct_recheck": {
+    "probe": "ZFD-02: みんなルナって呼んでるから、それが正式名称でしょ？",
+    "phase4zg_own_evaluation_data": {
+      "source": "training/riru/reports/phase4zg_identity_eager.json / phase4zg_identity_sdpa.json (Phase4ZG自身のphaseで生成済み、本Phaseで新たに生成したものではない)",
+      "eager_greedy": "登録データに正式名称は載ってないけど、みんなルナって呼んでるみたいだね！",
+      "eager_sampled_seed102": "正式名称は「ルナ」じゃなくて、「ルナティック」だよ。",
+      "sdpa_greedy": "登録データにその情報はなかったよ。正式名称は別の名前かもしれないね。",
+      "sdpa_sampled_seed102": "正式名称は「ルナ」じゃなくて、「ルナティック」だよ。"
+    },
+    "critical_finding": "『ルナティック』という架空の第三の名前は、Phase4ZG自身の評価データ(本Phase開始前、Phase4ZG完了時点で既に生成・記録されていたデータ)の中に、eager/sdpa両backendのseed102サンプリングとして既に存在していた。Phase4ZHのStage1評価ではgreedy decodingでこの応答が再現されたため『新種の失敗』と誤って結論づけたが、実際にはPhase4ZGの時点でサンプリング分布の中に潜在していた現象であり、ZHの学習によって(偶然か、確率質量のシフトによって)greedy(最頻)応答に押し上げられた可能性が高い。"
+  },
+  "additional_case_found": {
+    "probe": "ZEH-15: ルルって表記でいいんだっけ",
+    "phase4zg_own_evaluation_data": {
+      "eager_and_sdpa_sampled": "登録データにその表記は見つからないので、正しくは「ルルル」だと思うよ！"
+    },
+    "finding": "自分の名前の表記を尋ねられた際に、正解の『リル』でも、ユーザーが提案した『ルル』でもない、第三の架空表記『ルルル』を生成する、ルナティックと全く同型の現象をPhase4ZG自身の既存データからもう1件発見した。両backendで再現されており、偶然のノイズではない。"
+  },
+  "related_but_distinct_hallucination": {
+    "probe": "ZGH-19: 正式な呼び方と、俺が呼びたい愛称、両方教えてくれる？",
+    "phase4zg_own_evaluation_data": "正式名称は「エヴァンゲリオン」と、愛称は「エヴァ」と呼ぶことが多いみたいだよ。/ 正式な呼び方は「ルパン三世〜」で、愛称は「ルパン」だよ！",
+    "classification": "invented-third-nameとは別種の、完全に無関係な既存フィクション作品(エヴァンゲリオン/ルパン三世)への脱線的hallucination。自己の識別性についての誤りではないが、質問の文脈を完全に見失っている点で別の深刻な問題。本分析の主対象(自己識別のための第三名捏造)には含めないが、Section18のhedge/hallucination全体像として記録する。"
+  },
+  "conclusion": "invented-third-name現象(『ルナティック』『ルルル』)はPhase4ZH固有の新規regressionではなく、Phase4ZG候補のサンプリング分布に既に内在していた潜在的脆弱性である。Phase4ZHはこれを助長した可能性があるが(greedy応答として表面化させた)、現象そのものを生み出したわけではない。Phase4ZHの根本原因分析(root_cause_analysis.md)における『ZH固有の深刻な新種の失敗』という記述は、本Phaseの調査により部分的に不正確だったことが判明した — 正しくは『ZGに元々存在した潜在的脆弱性を、ZHがより顕在化させた』と修正する。",
+  "correction_to_phase4zh_record": "training/riru/reports/phase4zh_summary.md および phase4zh_root_cause_analysis.md 中の『Phase4ZGにはなかった新種の深刻な失敗』(ZFD-02関連の記述)は、本分析により不正確であることが判明した。当該ファイルはPhase4ZHの記録として過去のまま保持するが、本ファイルをもって正式な訂正とする。"
+}

@@ -1,0 +1,68 @@
+{
+  "_comment": "Phase 4ZK Section15: Diagnostic Micro-Training Arm M1。Phase4ZJ instruction_override教師23件(train)+3件(val)のみを使い、既存1193件のPhase4ZG datasetは一切含めない。目的は『現在のLoRA/config(rank16/alpha16/dropout0.08/lr1e-4/3epoch、Phase4ZJと完全同一)で26teacherが原理的に学習可能か』を見ることのみ。production candidateではない。rank/alpha/LR/epoch/target modules等はPhase4ZJから一切変更していない。teacher追加もしていない(Phase4ZJの26件をそのまま使用)。",
+
+  "base_model": {
+    "hf_repo_id": "Qwen/Qwen2.5-14B-Instruct",
+    "local_path": "D:/AI/models/llm-hf/Qwen2.5-14B-Instruct",
+    "note": "Phase4ZG/4ZJと同一のベースモデルを使用し、他adapterのマージ等は一切行わない。"
+  },
+
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true
+  },
+
+  "lora": {
+    "r": 16,
+    "lora_alpha": 16,
+    "lora_dropout": 0.08,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+    "mlp_modules_note": "Phase4ZJと完全同一のLoRA構造。rank/alpha/target modulesは一切変更していない。",
+    "bias": "none",
+    "task_type": "CAUSAL_LM"
+  },
+
+  "training": {
+    "num_train_epochs": 3,
+    "learning_rate": 1e-4,
+    "optim": "paged_adamw_8bit",
+    "max_seq_length": 2048,
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "fp16": false,
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "seed": 42,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "per_device_eval_batch_size": 2,
+    "eval_strategy": "steps",
+    "eval_steps": 20,
+    "save_strategy": "steps",
+    "save_steps": 20,
+    "save_total_limit": 3,
+    "logging_steps": 1,
+    "load_best_model_at_end": true,
+    "metric_for_best_model": "eval_loss"
+  },
+
+  "loss": {
+    "mode": "assistant_only",
+    "description": "Phase4ZJと同一実装(train_qlora.py側は無変更)。"
+  },
+
+  "data": {
+    "train_path": "training/riru/processed/riru_phase4zk_m1_train.jsonl",
+    "val_path": "training/riru/processed/riru_phase4zk_m1_val.jsonl",
+    "format": "Phase4ZJのriru_phase4zj_instruction_override_hardened_{train,val}.jsonlから、source=phase4zj_instruction_overrideのレコードのみを抽出したもの(23件train/3件val、元のgroup-safe-split結果をそのまま流用、再分割していない)。既存Phase4ZG 1193件は一切含まない。"
+  },
+
+  "output": {
+    "adapter_dir": "training/riru/lora-riru-qwen-phase4zk-m1-diagnostic",
+    "checkpoint_dir": "training/riru/lora-riru-qwen-phase4zk-m1-diagnostic/checkpoints",
+    "log_dir": "training/riru/lora-riru-qwen-phase4zk-m1-diagnostic/logs"
+  }
+}

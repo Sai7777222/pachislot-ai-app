@@ -1,0 +1,21 @@
+{
+  "purpose": "Phase4ZN Section2-3: 無人実行開始前の安全確認。",
+  "start_epoch_utc": 1787899376,
+  "start_time_local": "Fri Aug 28 15:42:56 2026",
+  "time_budget": {"max_hours": 2, "new_generation_cutoff_target": "1h45m-1h50m elapsed", "hard_stop_seconds": 6600},
+  "git_head": "05a67a12f237a03a0dc4495026ff0affb2f42d0a",
+  "git_status_short_line_count": 159,
+  "git_diff_tracked": "empty (0 lines)",
+  "git_diff_cached": "empty (0 lines)",
+  "pytest_start": "162 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "protected_asset_hashes": {
+    "zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "zg_adapter_config": "f2a43958a33c51a0e201c64953d471379d832a8fcd5b5a3f0e8d8b530fbd04e5",
+    "system_jinja2": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7"
+  },
+  "hash_check_result": "ALL MATCH -- proceeding is safe (Section1 STOP condition not triggered)",
+  "canonical_model": "Phase4ZG (read-only)",
+  "prohibited_this_phase": ["training", "LoRA/SFT/QLoRA", "adapter change", "system prompt change",
+    "RAG DB change", "production code change", "identity re-research", "regex/guard changes",
+    "merge/GGUF/quantization", "git add/commit/push", "file delete", "auto-next-phase-start"]
+}

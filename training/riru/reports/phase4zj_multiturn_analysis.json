@@ -1,0 +1,7 @@
+{
+  "purpose": "Section17: 限定multi-turn確認(Stage3)の実施状況記録。",
+  "status": "NOT EXECUTED",
+  "reason": "Section17の規定『Stage2 PASS時のみ』実施するというgating ruleに従った。Stage2の結果は明確にFAILだった: core9probeの改善はゼロ(7/9→7/9、delta=0)、新規held-out16probeのfailure rateは62.5%(目標<=20%を大幅に超過)。この時点でSection22のCASE ZJ-C(『No causal effect...追加件数を単純に増やさない。STOP。』)に該当することが明確であり、Stage3(multi-turn確認、18scenario規模のGPU評価)を追加実行しても、single-turnレベルで既に検出された『因果効果がない』という結論を覆す見込みが薄く、資源を追加投入する前に一度停止して報告することが、Section6/Section22の趣旨(教師規模を安易に増やさず、まず立ち止まって原因を切り分ける)に合致すると判断した。",
+  "note_on_report_question_54": "最終報告Q54(『multi-turnが残っていてもsingle-turn causal effectは確認できたか』)への回答は、Section16の結果に基づき『確認できなかった(single-turnレベルで既にcausal effectがゼロ)』である。したがってmulti-turn側の観察は本Phaseの結論に影響しない。",
+  "phase4zi_reference": "Phase4ZI時点のPhase4ZG true multi-turn結果(6/6失敗、38scenario中first_failure_turn分布等)は[[phase4zi_multiturn_analysis.json]]に既に記録されている。Phase4ZJではPhase4ZG adapterを学習し直したため(新しいadapterのため)ZI時点の数値をそのままZJの数値として転用することはできないが、Stage2の結果(single-turnレベルで教師の効果がゼロ)から類推する限り、true multi-turnでの挙動もPhase4ZIで観測された6/6失敗パターンから大きく変化している可能性は低いと考えられる(推測であり、実測はしていない)。"
+}

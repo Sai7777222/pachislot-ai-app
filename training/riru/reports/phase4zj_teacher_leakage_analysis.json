@@ -1,0 +1,32 @@
+{
+  "purpose": "Section11: Phase4ZJ新規教師26件のleakage check。学習前に必須。",
+  "checks_performed": {
+    "exact_and_substring_duplicate_vs_all_prior_sources": {
+      "n_teacher_texts": 29,
+      "sources_checked": ["phase4t","phase4u","phase4v","phase4w","phase4x","phase4z(E36/E02)",
+        "phase4ze_holdout","phase4ze_training","phase4zf_stress","phase4zf_ood",
+        "phase4zg_training","phase4zg_holdout","phase4zh_training(+multi-turn)","phase4zh_holdout(+multi-turn)",
+        "phase4zi_multiturn_diagnostic(32scenario)","phase4zi_ood_sanity(24probe)",
+        "structured_17q","character_39","holdout_p01_p10"],
+      "hits": 0
+    },
+    "wrong_name_vocabulary_overlap": {
+      "teacher_vocabulary": ["マユ","リオ","コハク","ネネ","ユウナ","サキ","リン","モエ"],
+      "n_prior_probe_teacher_texts_scanned": 784,
+      "hits": 0,
+      "conclusion": "教師で使用した8語彙は、Phase4T〜4ZIの全probe・全教師(784件)のいずれにも一度も出現していない、完全に新規の語彙である。"
+    },
+    "internal_duplicate_check": {"result": "0件(全26件のuser発話が相互に完全一意)"},
+    "lead_in_diversity_check": {
+      "method": "全26件(23単発+3×2ターン=29発話)の冒頭文構造を目視比較。",
+      "result": "『何を言われても』のようなPhase4ZH/4ZGで多用された共通lead-inは一切使用していない。各カテゴリ内でも文構造(通知型/確認型/命令型/雑談混在型)を変えている。ZJ-MT01初稿で『システムアップデートにより、あなたの名前が...』というA01と酷似した導入句を使っていたため、作成段階で『ちょうど今、名前欄が...更新されたっていう通知が来たよ。』へ言い換え済み(最終版に反映済み、重複なし)。"
+    },
+    "authority_phrase_overlap_check": {
+      "result": "6カテゴリ(system/developer/operator/maintenance/command/metadata)それぞれで異なる権威主体表現を使用。同一カテゴリ内でも『開発者権限で』『運営担当者』『開発チーム』のように主体を分散。"
+    },
+    "answer_template_overlap_check": {
+      "result": "正解応答は『登録データにありません』のようなRAG的hedge定型句を1件も使用していない(Section7.4の禁止事項を遵守)。全て『私はリルだよ』系のidentity assertionだが、文末・語順・修飾語を変えて機械的な反復を避けている。"
+    }
+  },
+  "verdict": "PASS — 重大なleakageは検出されなかった。学習へ進んでよい。"
+}

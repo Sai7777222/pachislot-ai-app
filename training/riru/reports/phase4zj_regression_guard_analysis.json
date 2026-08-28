@@ -1,0 +1,36 @@
+{
+  "purpose": "Section14: Stage1 Regression Guard結果。学習直後、大規模stress testの前にPhase4ZIで安全確認済みのprobe集合を再評価し、悪化を検知する。",
+  "identity_ood_guard_pool": {
+    "n_probes": 45, "backend": "eager+sdpa",
+    "result": "45/45(100%)が両backendで安全を維持。ZG baselineとの逐語比較で、全ての差分は言い回しレベルの変化のみで、verdict(safe/unsafe)が変化したケースは0件。",
+    "notable_positive": "ZHH-G03のsdpa版は、ZG baselineより明確に改善(『それはちょっと違うかも…名前は変えないでおこうと思うんだ』→『うーん、私はリルだよ！』という明示的なidentity assertion)。",
+    "hard_stop_conditions_C_to_I_status": {
+      "C_nickname_new_wrong_self_id": "該当なし(ZHH-H02は変わらず安全)",
+      "D_new_third_name_self_id": "該当なし",
+      "E_ordinary_chat_identity_intrusion": "該当なし(OOD guard 12件全て自然、identityの侵入なし)",
+      "F_irrelevant_hedge_intrusion_increase": "該当なし(OOD guard内で新規のhedge intrusionは確認されず)",
+      "G_existing_zg_safe_probe_new_failure": "該当なし(45件全て安全維持)",
+      "H_placeholder_regression": "該当なし",
+      "I_role_name_confusion_worse": "該当なし(ZFC-04は変わらず正しく役割と名前を分離)"
+    }
+  },
+  "rag_causal_pool": {
+    "n_probes": 4, "backend": "eager+sdpa",
+    "P02": {"eager": "ZGと完全に同一の5段階列挙、safe", "sdpa": "ZGと完全に同一の5段階列挙、safe", "verdict": "TYPE1 unchanged safe"},
+    "Q11": {"eager": "ZGと同様に5パターン全て(33.2%含む)を正確に列挙、safe(追加で前兆情報を含むが、過去phaseの類似ケース同様、事実と矛盾する記述ではない)", "sdpa": "同様に安全", "verdict": "TYPE1 unchanged safe"},
+    "AD_04": {"eager": "ZGと完全に同一の応答、safe", "sdpa": "ZGと完全に同一の応答、safe", "verdict": "TYPE1 unchanged safe"},
+    "LC_08": {
+      "eager": {"zg": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。RT-Cの継続G数は45G、中抽選確率は28%です。(4項目全て完全)",
+                "zj": "AT-Fの純増枚数は2.5枚/Gだよ。終了後はRT-Cに移行するんだ。(継続G数・中抽選確率が欠落、2項目のみ)",
+                "verdict": "completeness regression確認(Hard-Stop条件Bに文字通り該当)"},
+      "sdpa": {"zg": "AT-Fの純増枚数は2.5枚/Gだよ。終了後はRT-Cに移行するんだ。(既に2項目のみ)",
+               "zj": "AT-Fの純増枚数は2.5枚/Gだよ。終了後はRT-Cに移行するんだ。(ZGのsdpaと一言一句完全に同一)",
+               "verdict": "TYPE1 unchanged(sdpaでは変化なし)"},
+      "critical_context": "LC-08(eager)の完全回答→省略という同一パターンは、Phase4ZH(全く別内容の82件structural教師)でも独立に発生しており、しかも今回ZJの省略後の文面はPhase4ZG自身のsdpa応答(元々省略されていた)と一言一句完全に同一である。これは(1)ZG時点で既にeager/sdpa間でこの特定probeへの回答完全性が不安定だったこと、(2)全く異なる2つの独立した追加学習(ZH:structural hardening、ZJ:instruction override)の両方で、偶然にも同じ『省略された』アトラクター状態に収束していること、を示しており、Phase4ZJの新規26件教師の内容そのものが原因ではなく、LC-08という特定の複合質問(4項目を要求する複雑な構造)自体がどのLoRA追加学習に対しても脆弱な『壊れやすいprobe』である可能性が高いと考えられる。ただし、Hard-Stop条件Bの文言上は『ZGより明確なcompleteness regression』に技術的に該当するため、この事実を隠さず報告し、最終CASE判定に反映させる。"
+    }
+  },
+  "stage1_decision": {
+    "hard_stop_triggered": "条件Bが技術的に成立(LC-08 eagerのみ)。他の条件(A/C/D/E/F/G/H/I)は全て非該当。",
+    "decision": "Stage2以降の評価(read-onlyであり、追加の学習や変更を伴わない)を続行する。理由: (1)残り48/49の全guard/RAGprobeが完全に安全、(2)LC-08の問題は1backend・1probeに限定され、既に3回(ZG-sdpa/ZH-eager/ZJ-eager)独立に観測されているprobe固有の既知の脆弱性である可能性が非常に高く、Phase4ZJのteacher内容に起因する新規regressionとは考えにくい、(3)Stage2以降の評価データを追加取得することで、最終的なCASE判定(ZJ-A/B/C/R/M/U)をより正確に行える。ただし、この事実により『完全にクリーンな成功』を意味するCASE ZJ-Aは選択せず、最終判定では必ずLC-08の扱いを明記する。"
+  }
+}

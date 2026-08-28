@@ -1,0 +1,11 @@
+{
+  "purpose": "Phase4ZL preflight記録",
+  "git_head": "05a67a12f237a03a0dc4495026ff0affb2f42d0a",
+  "git_status_untracked_count": 122,
+  "git_diff_tracked": "空", "git_diff_cached": "空",
+  "pytest_before": "126 passed",
+  "protected_assets_status": "zg_adapter/zg_adapter_config/zg_candidate/system_jinja2 全て記録済み(phase4zl_preflight_hashes.json)。zg_adapter hashは過去全phaseの記録(278fe7ae...)と一致。",
+  "canonical_model": "Phase4ZG (read-only、training一切禁止)",
+  "excluded_adapters": ["Phase4ZH", "Phase4ZJ", "Phase4ZK M1 diagnostic"],
+  "note": "本Phaseはtraining/QLoRA/SFT/LoRA config変更を一切行わない。既存production/application pipeline(src/pachislot_ai/)は変更しない。guardはtraining/riru/guard/配下に独立experimental moduleとして構築する。"
+}

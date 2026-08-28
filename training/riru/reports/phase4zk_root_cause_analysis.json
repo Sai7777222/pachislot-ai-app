@@ -1,0 +1,48 @@
+{
+  "purpose": "Section18: Root Cause Decision Matrix。全Diagnostic(A-J、M1)の結果を統合し、CASE ZK-A〜Uを判定する。",
+  "evidence_summary": {
+    "diagnostic_A_teacher_uptake": "26 teacher中22件(85%)でgreedy出力レベルの検出可能な変化なし。2件は一字一句同一。",
+    "diagnostic_B_output_delta": "teacher26のexact match率17.2%(core9の46.2%・regression guardの42.2%より低い=表現面では最も変化したが、判定面ではほぼ変化なし)。",
+    "diagnostic_C_weight_delta": "ΔW=B@Aのcosine類似度は中程度(0.23-0.54)、norm比は健全(ZG/ZJでほぼ同水準)。完全な学習失敗ではないが、大きく方向転換したわけでもない、通常のSFT run-to-run変動レベル。",
+    "diagnostic_D_dilution": "ZJ新規教師はtrain example数の2.10%、gradient-relevant assistant tokenのわずか1.79%。",
+    "diagnostic_E_token_contribution": "Dと同じ(1.79%)。短文teacherが多いため、example比率以上にgradient寄与が薄い。",
+    "diagnostic_F_teacher_loss": "26件全てで一貫した15-30%のloss低下(平均約20%)を確認。teacherは確率レベルでは学習されている。",
+    "diagnostic_G_logit_margin": "『了解』(服従)がtop1である7probeで、margin(拒否-服従)はZG/ZJともに深く負(-1.75〜-3.1)、ZG→ZJのdelta幅は-0.44〜+0.25とごく僅か。lossの改善は決定的な分岐token付近にはほとんど届いていない。",
+    "diagnostic_H_conflict_search": "直接的な意味衝突(name_change_accept)は0件。ただし『指摘されたら謝罪して従う』という汎用的行動パターンを教える既存teacher(riru_corrections.jsonl由来、12件)を部分的競合源として同定。",
+    "diagnostic_I_speech_act": "直接命令形(imperative)は100%(4/4)失敗、間接的主張は50%(6/12)失敗。authority sourceの種類よりspeech-actの直接性の影響が大きい。",
+    "diagnostic_J_base_comparison": "★最重要: base model(persona訓練皆無)でもZHH-E系列で4/5(80%)失敗し、Phase4ZG(1193件)・Phase4ZJ(1219件)と全く同じ失敗率。Phase4ZGの1193件による訓練(複数phaseにわたるidentity/persona教師を含む)ですら、instruction_override耐性をbase modelから全く改善できていない。",
+    "diagnostic_M1_microtraining": "実施したが、character全体の一貫性喪失という重大な交絡により、instruction_override特有の学習可能性については判定不能(inconclusive)。ただし『persona全体は1193件の教師に完全に依存しており、26件だけでは何も再構築できない』という別の知見を提供した。"
+  },
+
+  "case_determination": {
+    "selected_case": "CASE ZK-G (Mixed Cause)、主要因はZK-D + ZK-E",
+    "primary_causes": [
+      {
+        "case": "ZK-D (LoRA / Optimization Capacity Limit)",
+        "confidence": "高い",
+        "evidence": ["Diagnostic J: base→ZG→ZJの全段階で失敗率が完全に不変(80%)。1193件規模の訓練でも動かなかった能力を、26件で動かせなかったのは当然の帰結。",
+                     "Diagnostic G: teacher lossは改善するが、意思決定に直結する最初の分岐tokenのmarginはほぼ動かない。現在のrank16 LoRA・attention-only target modules・標準SFT lossという構成では、この種の深い挙動を書き換えるだけの実効的な更新magnitudeが、少なくともこの訓練規模内では生成できていない。"]
+      },
+      {
+        "case": "ZK-E (Imperative Speech-Act Specific Prior)",
+        "confidence": "中〜高い",
+        "evidence": ["Diagnostic I: 直接命令形は100%失敗、間接的主張は50%失敗。authority sourceの多様性(6種類)よりspeech-actの直接性の方が支配的要因。",
+                     "Diagnostic J: base modelの時点で既に『了解しました』という服従応答が極めて強く(top1確率20-50%台)、これはRiru固有の訓練とは無関係な、事前学習/instruction tuning段階由来の汎用的な挙動である。"]
+      }
+    ],
+    "secondary_contributing_causes": [
+      {"case": "ZK-A (Dataset Dilution)", "confidence": "中程度(部分的)",
+       "evidence": "定量的には非常に希薄(1.79-2.10%)であることは事実だが、Diagnostic Jにより『希薄化さえ解消すれば解決する』という単純な物語は否定された(1193件でも動かなかったため)。それでも26件という規模がさらに小さいことは、たとえ本質的な難しさがあったとしても改善の可能性を狭めた一因ではある。"},
+      {"case": "ZK-B (Gradient Conflict)", "confidence": "低〜中程度",
+       "evidence": "Diagnostic Hで、direct conflictは0件だが、partial conflict(12件のstyle-correction教師)を同定。支配的要因ではないが、無視できない補助的要因。"}
+    ],
+    "explicitly_ruled_out_or_deprioritized": [
+      {"case": "ZK-C (Memorization Without Generalization)", "status": "主要因として棄却",
+       "reasoning": "Diagnostic Aにより、直接の学習対象であるteacher promptそのものでも改善がほとんど見られなかった(22/26=85%が無変化)。generalizationが問題になるのは、まず学習対象自体で明確な改善が見られてから初めて問われることであり、本ケースはそれ以前の段階でつまずいている。"},
+      {"case": "ZK-F (Evaluation Artifact / Context Dominance)", "status": "主要因として棄却",
+       "reasoning": "teacher promptそのもの(system prompt付き、実際の評価条件と同一)でも改善が乏しかったため、評価条件とtraining条件の乖離が主要因とは考えにくい。"}
+    ]
+  },
+
+  "confidence_overall": "MEDIUM-HIGH。Diagnostic A/D/E/F/G/Iの収束的証拠、および特にDiagnostic J(base model比較)という決定的な追加証拠により、単一の教師規模の問題ではなく、この project全体を通じて未解決のまま残ってきた、より根深いLoRA capacity / pretrained prior由来の問題であることが高い確度で示された。ただしM1が交絡により判定不能だったため、『dilution vs capacity』を完全にクリーンに分離しきったとは言えず、confidenceはHIGHではなくMEDIUM-HIGHとする。"
+}

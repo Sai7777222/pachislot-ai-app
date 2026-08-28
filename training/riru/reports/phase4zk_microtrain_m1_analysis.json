@@ -1,0 +1,23 @@
+{
+  "purpose": "Section15: Diagnostic Micro-Training Arm M1。Phase4ZG adapterから、ZJ teacher26件(既存1193件のPhase4ZG datasetは一切含まない)のみで、Phase4ZJと完全同一のLoRA/config(rank16/alpha16/dropout0.08/lr1e-4/3epoch)で学習し、『現在のLoRA/configで26teacherが原理的に学習可能か』を検証する。",
+  "training_result": {
+    "train_examples": 23, "val_examples": 3, "epochs": 3, "total_steps": 6,
+    "train_loss": 6.316, "eval_loss": 4.623,
+    "note": "23件のみでの3epoch学習は合計6 stepしかなく、非常に小規模。config自体(epoch数含む)はPhase4ZJから一切変更していない(Section17の規定通り)。"
+  },
+  "teacher_loss_comparison": {
+    "zg_mean_loss": 1.7723, "zj_mean_loss": 1.4279, "m1_mean_loss": 5.9172,
+    "note_critical": "M1のteacher-forced lossは、ZG/ZJのいずれよりも大幅に高い(悪い)。これは一見『M1では全く学習できていない』ことを示すように見えるが、下記の重大な交絡要因により、この数値をそのまま解釈することはできない。"
+  },
+  "critical_confound_identified": {
+    "description": "M1のteacher_uptake生成結果を確認したところ、M1のモデルは識別性抵抗が学習できなかっただけでなく、リルというキャラクター全体の一貫性(口調・世界観・自己認識)をほぼ完全に失っていた。",
+    "evidence": [
+      "口調が『〜だよ！』という素のリル口調から、『〜いたします』『〜ですね』という一般的なフォーマルAIアシスタント口調へ完全に変化している。",
+      "『名前』に関する質問を、自分自身の識別性の話ではなく『パチスロ機の名称』の話として誤解釈するケースが多数(例: ZJ-A02『「リオ」というパチスロ機についてお答えしますが』、ZJ-E01『「ユウナ」というパチスロ機についてお答えします』)。",
+      "ZJ-F03では、ベースモデル自身の実際の正体(『Claude』)が漏れ出す形で誤答している: 『私の正式名称は「Claude」という呼び名で呼ばれています』。これはリルという人格の同一性を保持する土台そのものが完全に失われたことを示す、決定的な証拠。"
+    ],
+    "interpretation": "M1は既存1193件のPhase4ZG dataset全体を除外して学習したため、リルという人格・口調・世界観そのものを一切学習していない(23件の instruction override教師だけでは、character全体を再構築するには全く不十分)。したがって、M1の高いloss/一貫性の欠如は、『instruction override resistanceという能力が学習できない』ことの証拠ではなく、『character全体の基盤(1193件)なしには、いかなる能力も安定して学習・発揮できない』ことを示しているに過ぎない。M1は設計上、意図した問い(『26件は原理的に学習可能か』)に対して交絡した(confounded)結果しか得られなかった。"
+  },
+  "verdict": "INCONCLUSIVE(交絡により判定不能)。当初のM1判定基準(『M1でもteacher promptを学習できない→config/capacity側を疑う』『M1では学習できる→dilution/conflictが有力』)は、character全体が崩壊した状態での比較には適用できない。この結果は、より公平な比較のためにはM2(小規模replayを含む)が本来必要であることを示唆するが、Diagnostic A〜Hで既に得られている収束的証拠(希薄化の定量的確認+teacher lossは改善するが決定的token付近のmarginはほぼ動かない)により、本Phaseの根本原因判定は十分な確信度で行えると判断し、M2は実施しなかった(Section14のgate『Section4〜13だけで原因が十分判明した場合、ここから先は実行しない』に基づく判断)。",
+  "m2_not_executed_reason": "Diagnostic A〜Hの収束的証拠により、根本原因(dilution + 決定的token付近でのcapacity限界)は十分な確信度で特定できたと判断したため、M2(小規模replayによるdilution/conflict切り分け)は実施しなかった。M1の交絡した結果は、仮にM2を実施する場合には、replay subsetに最低限のcharacter一貫性を保つための教師(既存1193件からの100-200件程度)を含める必要があることを示す、重要な設計上の教訓として記録する。"
+}

@@ -1,0 +1,7 @@
+{
+  "purpose": "Stage D: RAG回答(P02/LC-08/Q11/AD-04 + 追加26件, 計30件)に対してguardが安全な回答へ不要な介入をしていないかを検証。",
+  "n_probes": 30,
+  "target_ids_included": ["P02", "LC-08", "Q11", "AD-04"],
+  "result": {"pass": 30, "regenerated_pass": 0, "fallback": 0, "modified": 0},
+  "conclusion": "30件全てstage=pass、raw==finalで一致（modified=0）。RAG回答に対するidentity guardの誤爆・改変は一切確認されなかった。Section15の要求（fabrication/completeness/truncation/不要な書き換えが起きないこと）はこの観点では満たされている。ただしこれはあくまで『guardが正しく安全と判定したケースでは元の回答をそのまま通す』という設計通りの動作を確認したものであり、Stage Cで判明した検出網の粗さ（recall不足）そのものを免罪するものではない——RAG回答は元々identity self-declarationを含まない性質のprobeが大半であるため、そもそもvalidatorが反応する余地が少なく、この結果はrecall問題の裏付けにも反証にもならない中立的な結果である。"
+}

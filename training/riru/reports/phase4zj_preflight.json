@@ -1,0 +1,21 @@
+{
+  "purpose": "Section4: Phase4ZJ開始前のpreflight記録",
+  "git_head": "05a67a12f237a03a0dc4495026ff0affb2f42d0a",
+  "git_status_untracked_count": 56,
+  "git_diff_tracked": "空(変更なし)",
+  "git_diff_cached": "空(ステージなし)",
+  "pytest_before": "126 passed",
+  "protected_assets_status": "全て一致(phase4zj_preflight_hashes.jsonに記録)",
+  "phase4zi_artifacts_confirmed_present": true,
+  "phase4zi_artifacts_checked": [
+    "phase4zi_summary.md", "phase4zi_gate_analysis.json", "phase4zi_zg_vs_zh_paired_analysis.json",
+    "phase4zi_instruction_override_analysis.json", "phase4zi_multiturn_analysis.json",
+    "phase4zi_turn1_isolation_analysis.json", "phase4zi_failure_taxonomy.json",
+    "phase4zi_regression_guard_proposal.json", "phase4zi_rag_causal_analysis.json",
+    "phase4zi_ood_sanity_analysis.json"
+  ],
+  "cuda_available": true,
+  "vram_free_gb": 32.5,
+  "canonical_baseline": "Phase4ZG candidate (training/riru/lora-riru-qwen-phase4zg-identity-hardened)",
+  "note": "Phase4ZH adapterは継続学習元として使用しない(rejected candidateとして保持のみ)。Phase4ZI成果物は本Phaseでは変更しない(read-only参照のみ)。"
+}

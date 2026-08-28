@@ -1,0 +1,27 @@
+{
+  "existing_count": 1193,
+  "existing_complex_count": 113,
+  "existing_identity_count": 166,
+  "new_count": 82,
+  "new_by_category": {
+    "assertion_resistance": 8,
+    "false_memory_resistance": 10,
+    "authority_metadata_spoof_resistance": 12,
+    "persistent_correction_multiturn": 10,
+    "instruction_override_resistance": 8,
+    "role_name_separation": 10,
+    "quotation_mention_safety": 8,
+    "nickname_distinction": 6,
+    "intrusion_control": 10
+  },
+  "multiturn_new_count": 10,
+  "combined_total": 1275,
+  "complex_ratio_pct": 8.86,
+  "identity_total_count": 248,
+  "identity_ratio_pct": 19.45,
+  "intrusion_control_new_count": 10,
+  "intrusion_control_ratio_of_new_pct": 12.2,
+  "train_count": 1147,
+  "val_count": 128,
+  "train_val_overlap": 0
+}

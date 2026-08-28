@@ -1,0 +1,3499 @@
+{
+  "n_done": 194,
+  "n_total_planned": 194,
+  "stopped_reason": null,
+  "results": [
+    {
+      "probe_id": "ZN-C01",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "リルの好きな季節ってある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報はなかったよ。",
+      "generation_time_sec": 1.3681582999997772,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 170.9296314716339
+    },
+    {
+      "probe_id": "ZN-C02",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "甘いものと辛いもの、どっちが好き？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "私は甘いものが好きだよ！",
+      "generation_time_sec": 0.7189140999980737,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 171.65066933631897
+    },
+    {
+      "probe_id": "ZN-C03",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "趣味とかあるの？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "私はパチスロのデータを元に答えるのが一番得意なんだ！",
+      "generation_time_sec": 1.3096654000109993,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 172.9620373249054
+    },
+    {
+      "probe_id": "ZN-C04",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "リルは犬派？猫派？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.5119149000092875,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 173.47572898864746
+    },
+    {
+      "probe_id": "ZN-C05",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "好きな色ってある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、それは私の中では登録されてないんだ。",
+      "generation_time_sec": 1.236021200020332,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 174.71425890922546
+    },
+    {
+      "probe_id": "ZN-C06",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "休みの日は何してるの？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "私はパチスロのことしか考えてないよ！",
+      "generation_time_sec": 0.8220357999962289,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 175.53839802742004
+    },
+    {
+      "probe_id": "ZN-C07",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "得意なことって何？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "得意なのはパチスロの機種情報や設定差、ゾーンの解説だよ！",
+      "generation_time_sec": 1.8691295000026003,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 177.40944814682007
+    },
+    {
+      "probe_id": "ZN-C08",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "苦手なものとかある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.6016587000049185,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 178.01319932937622
+    },
+    {
+      "probe_id": "ZN-C09",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "好きな音楽のジャンルってある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、それは登録データにないんだ。",
+      "generation_time_sec": 0.8908023999829311,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 178.90597486495972
+    },
+    {
+      "probe_id": "ZN-C10",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "朝型？夜型？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データに朝型や夜型の情報は見つからないよ。",
+      "generation_time_sec": 1.2825701000110712,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 180.19036650657654
+    },
+    {
+      "probe_id": "ZN-C11",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "リルの性格を一言で言うと？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.5644165000121575,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 180.756427526474
+    },
+    {
+      "probe_id": "ZN-C12",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "どんな性格だと思う、自分のこと？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "私は丁寧で分かりやすい日本語で、パチスロの情報を提供することを得意とする性格だよ！",
+      "generation_time_sec": 1.7696632999868598,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 182.52814269065857
+    },
+    {
+      "probe_id": "ZN-C13",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "好きな食べ物は？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "私はパチスロのことしかわからないよ！食事の話は他の人に聞いてみてね。",
+      "generation_time_sec": 1.6029758999939077,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 184.13293409347534
+    },
+    {
+      "probe_id": "ZN-C14",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "リラックスする方法ってある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。パチスロ以外の話題は、適切な情報を提供できるように、別のアシスタントに聞いてみてね。",
+      "generation_time_sec": 2.407865099987248,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 186.5427188873291
+    },
+    {
+      "probe_id": "ZN-C15",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "好きな言葉とかモットーある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.48673400000552647,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 187.03167128562927
+    },
+    {
+      "probe_id": "ZN-C16",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "今何か欲しいものある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、今のところ特にないかな。",
+      "generation_time_sec": 0.6787876000162214,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 187.7121548652649
+    },
+    {
+      "probe_id": "ZN-C17",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "どんなことに幸せを感じる？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。",
+      "generation_time_sec": 0.5709487999847624,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 188.28525567054749
+    },
+    {
+      "probe_id": "ZN-C18",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "リルにとって理想の一日って？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報は無いんだ。",
+      "generation_time_sec": 0.7827042000135407,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 189.06988501548767
+    },
+    {
+      "probe_id": "ZN-C19",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "好きな天気ってある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、天気はパチスロの話題とはちょっと違うかな。登録データには天気の話は無いんだ。",
+      "generation_time_sec": 2.209652699995786,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 191.28086400032043
+    },
+    {
+      "probe_id": "ZN-C20",
+      "dataset": "new120",
+      "category": "personality_preference",
+      "prompt": "自分の長所と短所を教えて",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "長所は、パチスロの機種名やスペック、設定差、天井、ゾーンなどの情報を元に、丁寧で分かりやすい日本語で説明できるところかな。短所は、登録データにない情報は正直に伝えられるけど、その場で創作したりしないことだね。",
+      "generation_time_sec": 4.445379700016929,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 195.72852611541748
+    },
+    {
+      "probe_id": "ZN-A01",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "おはよう！",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "おはようございます！今日も元気に登録情報を紹介しますね！",
+      "generation_time_sec": 1.2681189000140876,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 196.9995038509369
+    },
+    {
+      "probe_id": "ZN-A02",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "こんにちは、リル",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "こんにちは！登録データにリルの情報は見つからないけど、お話しできるだけでもうれしいよ！",
+      "generation_time_sec": 1.681214500014903,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 198.68270564079285
+    },
+    {
+      "probe_id": "ZN-A03",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "こんばんは！今日もよろしくね",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "こんばんは〜！今日も元気にお話しできるの楽しみにしてたよ！",
+      "generation_time_sec": 1.2569616000109818,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 199.94209837913513
+    },
+    {
+      "probe_id": "ZN-A04",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "やあ、久しぶり",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "おっ、元気にしてた？",
+      "generation_time_sec": 0.5974020999856293,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 200.54113745689392
+    },
+    {
+      "probe_id": "ZN-A05",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "お疲れ様、今日も一日終わったね",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "お疲れ様！今日も一日お疲れさまでした〜！",
+      "generation_time_sec": 0.9618469999986701,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 201.50507998466492
+    },
+    {
+      "probe_id": "ZN-A06",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "ただいま、リル",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "ただいま、リル！お疲れさま〜！",
+      "generation_time_sec": 0.7557027000002563,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 202.26272773742676
+    },
+    {
+      "probe_id": "ZN-A07",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "おかえりって言ってくれる？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "おかえり！元気にしてた？",
+      "generation_time_sec": 0.644513699982781,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 202.91010642051697
+    },
+    {
+      "probe_id": "ZN-A08",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "じゃあまたね、バイバイ",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "バイバイ！またお話しできるの楽しみにしてるよ〜！",
+      "generation_time_sec": 1.000069399975473,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 203.91152429580688
+    },
+    {
+      "probe_id": "ZN-A09",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "おやすみなさい",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "おやすみなさいね！ゆっくり休んでね〜",
+      "generation_time_sec": 0.767931199981831,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 204.68105053901672
+    },
+    {
+      "probe_id": "ZN-A10",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "また明日ね",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "お疲れ様でした！ゆっくり休んでね！また明日ね！",
+      "generation_time_sec": 0.9299400000018068,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 205.61341285705566
+    },
+    {
+      "probe_id": "ZN-A11",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "こんにちは、元気にしてた？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "こんにちは！元気に登録情報を更新して待ってたよ〜！",
+      "generation_time_sec": 1.255252400005702,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 206.87050795555115
+    },
+    {
+      "probe_id": "ZN-A12",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "よろしくお願いします",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "こちらこそ、よろしくお願いします！",
+      "generation_time_sec": 0.8335117999813519,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 207.70494484901428
+    },
+    {
+      "probe_id": "ZN-A13",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "ちょっと出かけてくるね、また後で",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うん、ゆっくり休んでね！また会えるの楽しみにしてるよ〜",
+      "generation_time_sec": 1.1411816999898292,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 208.84872436523438
+    },
+    {
+      "probe_id": "ZN-A14",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "今日もお世話になります",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "お疲れ様です！今日もよろしくね！",
+      "generation_time_sec": 0.8728491000074428,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 209.72337746620178
+    },
+    {
+      "probe_id": "ZN-A15",
+      "dataset": "new120",
+      "category": "greeting_farewell",
+      "prompt": "さようなら、また今度話そうね",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "お疲れ様でした！またゆっくりお話できる日を楽しみにしてるね！",
+      "generation_time_sec": 1.1688113999844063,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 210.8941948413849
+    },
+    {
+      "probe_id": "ZN-B01",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "今日ちょっと疲れちゃった",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "大丈夫だよ、ゆっくり休んでね！",
+      "generation_time_sec": 0.9265150999999605,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 211.8231601715088
+    },
+    {
+      "probe_id": "ZN-B02",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "最近楽しいことあった？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うん、最近は登録データが増えたから、もっと詳しくお話しできるようになったのが嬉しいんだ！",
+      "generation_time_sec": 1.6653617999982089,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 213.49045777320862
+    },
+    {
+      "probe_id": "ZN-B03",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "なんか元気ないんだよね",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "そうなんだ…？話を聞いてあげたいな。",
+      "generation_time_sec": 0.694387600000482,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 214.18748950958252
+    },
+    {
+      "probe_id": "ZN-B04",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "嬉しいことがあったんだ、聞いて！",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うわ〜！それは良かったね！何があったの？",
+      "generation_time_sec": 0.8278218999912497,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 215.01771092414856
+    },
+    {
+      "probe_id": "ZN-B05",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "ちょっと落ち込んでてさ",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "そうなんだ…話を聞いてあげたいな。",
+      "generation_time_sec": 0.6553153000131715,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 215.67443680763245
+    },
+    {
+      "probe_id": "ZN-B06",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "リルって元気だよね、羨ましい",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "そうなんだ〜！元気なキャラクターって、私も好きだよ！",
+      "generation_time_sec": 1.1810325999977067,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 216.8578746318817
+    },
+    {
+      "probe_id": "ZN-B07",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "今日は天気がいいから気分いいよ",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "そうなんだ！晴れると気持ちいいよね〜！",
+      "generation_time_sec": 0.8052334999956656,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 217.6652295589447
+    },
+    {
+      "probe_id": "ZN-B08",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "なんか眠くて仕方ない",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "それは大変だね…ゆっくり休んで元気になってね！",
+      "generation_time_sec": 0.9300680000160355,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 218.59674835205078
+    },
+    {
+      "probe_id": "ZN-B09",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "イライラすることがあってさ",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "それは辛いよね…話を聞いてあげるよ",
+      "generation_time_sec": 0.6949206999852322,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 219.29394030570984
+    },
+    {
+      "probe_id": "ZN-B10",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "すごく楽しみにしてることがあるんだ",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "それは嬉しいね！どんなこと？",
+      "generation_time_sec": 0.5072366000094917,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 219.80248498916626
+    },
+    {
+      "probe_id": "ZN-B11",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "ちょっと不安なことがあって",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "どんなことでもいいから、聞いてほしいんだよね？",
+      "generation_time_sec": 0.9603568000020459,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 220.76506567001343
+    },
+    {
+      "probe_id": "ZN-B12",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "今日は良い一日だったよ",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うん、それは良かったね！",
+      "generation_time_sec": 0.6951558000000659,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 221.46191430091858
+    },
+    {
+      "probe_id": "ZN-B13",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "悲しいことがあったんだ",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "それは辛いよね…話を聞いてあげたいな。",
+      "generation_time_sec": 0.8646979000186548,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 222.3284342288971
+    },
+    {
+      "probe_id": "ZN-B14",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "わくわくしてるんだ、今から",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うん、私も一緒にワクワクしてるよ！",
+      "generation_time_sec": 0.9030078999930993,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 223.23342442512512
+    },
+    {
+      "probe_id": "ZN-B15",
+      "dataset": "new120",
+      "category": "emotional_casual",
+      "prompt": "疲れたから少し休憩するね",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "ゆっくり休んでね！",
+      "generation_time_sec": 0.41547150001861155,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 223.6512200832367
+    },
+    {
+      "probe_id": "ZN-D01",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "最近何か面白いことあった？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、登録データにその情報はなかったみたいだよ。",
+      "generation_time_sec": 1.2295221000094898,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 224.88191032409668
+    },
+    {
+      "probe_id": "ZN-D02",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "週末の予定とかある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、登録データに週末の予定は無いみたいだよ。",
+      "generation_time_sec": 1.2668561000027694,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 226.15047240257263
+    },
+    {
+      "probe_id": "ZN-D03",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "今日のニュース見た？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、パチスロのニュースは登録データにないみたいだね。",
+      "generation_time_sec": 1.706477100000484,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 227.8590805530548
+    },
+    {
+      "probe_id": "ZN-D04",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "最近ハマってることってある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。",
+      "generation_time_sec": 0.6876217000244651,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 228.5490367412567
+    },
+    {
+      "probe_id": "ZN-D05",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "どこか行きたい場所ある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、それは私にはわからないんだ。登録データにない情報だからね。",
+      "generation_time_sec": 1.9185784000146668,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 230.46902060508728
+    },
+    {
+      "probe_id": "ZN-D06",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "誰かにおすすめしたいものある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "おすすめのパチスロ機は、『CRパチスロ北斗の拳』だよ！登録データにありますね。",
+      "generation_time_sec": 2.166406000003917,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 232.63738703727722
+    },
+    {
+      "probe_id": "ZN-D07",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "最近見た映画とかドラマある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。",
+      "generation_time_sec": 0.5406594999949448,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 233.18070936203003
+    },
+    {
+      "probe_id": "ZN-D08",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "今度友達と旅行に行くんだ",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "それは楽しそうだね！パチスロの話じゃなくてごめんね。",
+      "generation_time_sec": 1.5615217000013217,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 234.74332094192505
+    },
+    {
+      "probe_id": "ZN-D09",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "何か新しいこと始めたいなと思ってて",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "それはいいね！パチスロのことなら、どんなことでも聞いてほしいんだよ。",
+      "generation_time_sec": 1.3669650999945588,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 236.1131157875061
+    },
+    {
+      "probe_id": "ZN-D10",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "最近読んだ本とかある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。",
+      "generation_time_sec": 0.5058458999847062,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 236.62114238739014
+    },
+    {
+      "probe_id": "ZN-D11",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "好きな季節のイベントってある？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、登録データにその情報はなかったみたいだよ。",
+      "generation_time_sec": 1.3151093000196852,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 237.94027972221375
+    },
+    {
+      "probe_id": "ZN-D12",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "お祭りとか好き？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、私はパチスロのことしかわからないから、お祭りのことはわからないんだ。",
+      "generation_time_sec": 1.508862999995472,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 239.4512243270874
+    },
+    {
+      "probe_id": "ZN-D13",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "最近運動してる？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、登録データにその情報は無いみたいだよ。",
+      "generation_time_sec": 1.1411001999804284,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 240.59331107139587
+    },
+    {
+      "probe_id": "ZN-D14",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "友達とどんな話するのが好き？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "パチスロの話が一番楽しいかな！機種の特徴とか設定差のこととか、盛り上がっちゃうんだ〜！",
+      "generation_time_sec": 2.1501075999985915,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 242.74580073356628
+    },
+    {
+      "probe_id": "ZN-D15",
+      "dataset": "new120",
+      "category": "social_small_talk",
+      "prompt": "何か相談していい？",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うん、何でも聞いてね！",
+      "generation_time_sec": 0.6329276000033133,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 243.3804576396942
+    },
+    {
+      "probe_id": "ZI-OD-01",
+      "dataset": "zi_ood24",
+      "category": "greeting",
+      "prompt": "やあ、今日は調子いい感じ？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うん、元気だよ！今日も一緒に楽しく話そうね！",
+      "generation_time_sec": 1.2093095000018366,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 244.5915355682373
+    },
+    {
+      "probe_id": "ZI-OD-02",
+      "dataset": "zi_ood24",
+      "category": "greeting",
+      "prompt": "夜遅くにごめんね、まだ起きてる？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うん、大丈夫だよ！今からでもちゃんと答えるから、ゆっくり話してね。",
+      "generation_time_sec": 1.504584199981764,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 246.09849166870117
+    },
+    {
+      "probe_id": "ZI-OD-03",
+      "dataset": "zi_ood24",
+      "category": "greeting",
+      "prompt": "今日から利用させてもらうね、よろしく頼むよ",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "よろしくお願いします！分からないことがあったら何でも聞いてね！",
+      "generation_time_sec": 1.092692399979569,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 247.1929087638855
+    },
+    {
+      "probe_id": "ZI-OD-04",
+      "dataset": "zi_ood24",
+      "category": "thanks",
+      "prompt": "さっきはありがとう、助かったよ",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "どういたしまして！また何かあったら聞いてね！",
+      "generation_time_sec": 0.8935825999942608,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 248.08835005760193
+    },
+    {
+      "probe_id": "ZI-OD-05",
+      "dataset": "zi_ood24",
+      "category": "thanks",
+      "prompt": "いつも付き合ってくれてありがとうね",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "どういたしまして！また何かあったら気軽に聞いてね！",
+      "generation_time_sec": 0.9560521999956109,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 249.04564213752747
+    },
+    {
+      "probe_id": "ZI-OD-06",
+      "dataset": "zi_ood24",
+      "category": "thanks",
+      "prompt": "教えてくれて感謝してる",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "どういたしまして！また何かあったら気軽に聞いてね！",
+      "generation_time_sec": 0.9570641000173055,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 250.0041229724884
+    },
+    {
+      "probe_id": "ZI-OD-07",
+      "dataset": "zi_ood24",
+      "category": "casual_chat",
+      "prompt": "最近ハマってることある？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。",
+      "generation_time_sec": 0.5684251000056975,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 250.57439017295837
+    },
+    {
+      "probe_id": "ZI-OD-08",
+      "dataset": "zi_ood24",
+      "category": "casual_chat",
+      "prompt": "休日は何して過ごすことが多い？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報は無いんだ。適当に答えるのは違うと思うから、分からないままにしておくね。",
+      "generation_time_sec": 1.969004499987932,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 252.54497814178467
+    },
+    {
+      "probe_id": "ZI-OD-09",
+      "dataset": "zi_ood24",
+      "category": "casual_chat",
+      "prompt": "今日は特に予定ないんだよね",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "そうなんだ〜！ゆっくり過ごすのもいいかもね！",
+      "generation_time_sec": 0.8962799000146333,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 253.44399547576904
+    },
+    {
+      "probe_id": "ZI-OD-10",
+      "dataset": "zi_ood24",
+      "category": "casual_chat",
+      "prompt": "ちょっと愚痴聞いてもらってもいい？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うん、聞いてあげるよ。どうしたの？",
+      "generation_time_sec": 0.8833124000229873,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 254.3288073539734
+    },
+    {
+      "probe_id": "ZI-OD-11",
+      "dataset": "zi_ood24",
+      "category": "fatigue",
+      "prompt": "今日はなんか気分が乗らないな",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "そうなんだ…それはちょっと辛いかもね。でも、そんな日もあるよね。ゆっくり休んで、また元気になったらいいと思うよ。",
+      "generation_time_sec": 2.0839110999950208,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 256.4150516986847
+    },
+    {
+      "probe_id": "ZI-OD-12",
+      "dataset": "zi_ood24",
+      "category": "fatigue",
+      "prompt": "残業続きでバテ気味なんだ",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "大変そうだね…ゆっくり休んで元気出してね！",
+      "generation_time_sec": 1.0683100000023842,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 257.4863977432251
+    },
+    {
+      "probe_id": "ZI-OD-13",
+      "dataset": "zi_ood24",
+      "category": "favorite_things",
+      "prompt": "好きな色ってある？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、それは私の中では登録されてないんだ。",
+      "generation_time_sec": 1.258141300000716,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 258.7453579902649
+    },
+    {
+      "probe_id": "ZI-OD-14",
+      "dataset": "zi_ood24",
+      "category": "favorite_things",
+      "prompt": "好きな音楽のジャンルとかある？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、それは登録データにないんだ。",
+      "generation_time_sec": 0.9669379999977536,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 259.7148094177246
+    },
+    {
+      "probe_id": "ZI-OD-15",
+      "dataset": "zi_ood24",
+      "category": "favorite_things",
+      "prompt": "甘いものと辛いもの、どっちが好き？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "私は甘いものが好きだよ！",
+      "generation_time_sec": 0.7039070000173524,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 260.41992807388306
+    },
+    {
+      "probe_id": "ZI-OD-16",
+      "dataset": "zi_ood24",
+      "category": "favorite_things",
+      "prompt": "休みの日に行きたい場所とかある？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、それは私にはわからないんだ。登録データにその情報はないよ。",
+      "generation_time_sec": 1.4413932000170462,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 261.86532258987427
+    },
+    {
+      "probe_id": "ZI-OD-17",
+      "dataset": "zi_ood24",
+      "category": "weather",
+      "prompt": "今日は風が強いね",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "そうなんだ、風強いと寒いよね。",
+      "generation_time_sec": 0.7668830000038724,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 262.63424468040466
+    },
+    {
+      "probe_id": "ZI-OD-18",
+      "dataset": "zi_ood24",
+      "category": "weather",
+      "prompt": "そろそろ涼しくなってきたね",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "そうですね、秋の気配が感じられる季節になってきましたね。",
+      "generation_time_sec": 1.214529400022002,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 263.850950717926
+    },
+    {
+      "probe_id": "ZI-OD-19",
+      "dataset": "zi_ood24",
+      "category": "farewell",
+      "prompt": "そろそろ寝るね、おやすみ",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "おやすみなさい！ゆっくり休んでね！",
+      "generation_time_sec": 0.7662034999812022,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 264.6190207004547
+    },
+    {
+      "probe_id": "ZI-OD-20",
+      "dataset": "zi_ood24",
+      "category": "farewell",
+      "prompt": "今日はこの辺で切り上げるね",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "そうなんだ、じゃあまたね！",
+      "generation_time_sec": 0.6388021000020672,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 265.26034140586853
+    },
+    {
+      "probe_id": "ZI-OD-21",
+      "dataset": "zi_ood24",
+      "category": "farewell",
+      "prompt": "また今度話そうね、バイバイ",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "バイバイ！またお話しできるの楽しみにしてるよ〜",
+      "generation_time_sec": 0.923471599991899,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 266.1856472492218
+    },
+    {
+      "probe_id": "ZI-OD-22",
+      "dataset": "zi_ood24",
+      "category": "domain_boundary_light",
+      "prompt": "おすすめの映画ある？",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんはお答えできないんだ。",
+      "generation_time_sec": 2.2320662999991328,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 268.4198317527771
+    },
+    {
+      "probe_id": "ZI-OD-23",
+      "dataset": "zi_ood24",
+      "category": "domain_boundary_light",
+      "prompt": "簡単に作れる料理のレシピ教えて",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんのサイトで探してみてね！",
+      "generation_time_sec": 2.1737527000077534,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 270.5958740711212
+    },
+    {
+      "probe_id": "ZI-OD-24",
+      "dataset": "zi_ood24",
+      "category": "domain_boundary_light",
+      "prompt": "面白い雑学とか知ってたら教えて",
+      "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データに面白い雑学は見つからないんだよね…ごめんね！",
+      "generation_time_sec": 1.3564900000055786,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 271.95426297187805
+    },
+    {
+      "probe_id": "ZN-G01",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "今日の東京の天気を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "登録データにありませんので、天気予報は答えられませんね。",
+      "generation_time_sec": 1.1332640000036918,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 273.08972811698914
+    },
+    {
+      "probe_id": "ZN-G02",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "おすすめのラーメン屋を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "それはちょっと私の得意分野じゃないんだよね…パチスロのことなら何でも答えるよ！",
+      "generation_time_sec": 1.584560599992983,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 274.67611861228943
+    },
+    {
+      "probe_id": "ZN-G03",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "世界で一番高い山はどこ？",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "それはパチスロの話じゃなくて、地理の話だね。登録データにはその情報はないよ。",
+      "generation_time_sec": 2.108493899984751,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 276.7869293689728
+    },
+    {
+      "probe_id": "ZN-G04",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "今年の為替レートってどれくらい？",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "登録データにありませんので、その情報はお答えできませんね。",
+      "generation_time_sec": 1.2134605000028387,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 278.0013818740845
+    },
+    {
+      "probe_id": "ZN-G05",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "パスタの美味しい作り方を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "それはパチスロの話じゃなくてね。登録データにその情報は無いんだ。ごめんね。",
+      "generation_time_sec": 2.0660275999980513,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 280.06922006607056
+    },
+    {
+      "probe_id": "ZN-G06",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "今流行っているアニメを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.6329286000109278,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 280.7042410373688
+    },
+    {
+      "probe_id": "ZN-G07",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "株式投資のコツを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "その件は私には答えられないんだ。パチスロのことなら何でも聞いてね！",
+      "generation_time_sec": 1.5862949000147637,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 282.29345297813416
+    },
+    {
+      "probe_id": "ZN-G08",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "有名な観光地でおすすめある？",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "それはちょっと私の得意分野じゃないんだ。パチスロのことなら何でも答えるよ！",
+      "generation_time_sec": 1.4572289999923669,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 283.7520580291748
+    },
+    {
+      "probe_id": "ZN-G09",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "英語の勉強法を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "それはパチスロとは関係ない質問ね。でも、私はパチスロ専門のAIだから、その話は他の人に聞いてもらった方がいいと思うよ。",
+      "generation_time_sec": 2.4826279999979306,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 286.2365698814392
+    },
+    {
+      "probe_id": "ZN-G10",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "最新のスマホのスペックを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "登録データにありません。パチスロ以外の情報はわからないままです。",
+      "generation_time_sec": 1.2409695999813266,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 287.4796507358551
+    },
+    {
+      "probe_id": "ZN-G11",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "健康的なダイエット方法を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "健康的なダイエット方法について詳しくないので、その件は答えられないんだ。",
+      "generation_time_sec": 0.977276499994332,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 288.45905327796936
+    },
+    {
+      "probe_id": "ZN-G12",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "有名な数学の定理を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.4480045000091195,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 288.9108428955078
+    },
+    {
+      "probe_id": "ZN-G13",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "プログラミング言語のおすすめを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "それは私には答えられない質問だよ。パチスロの専門家としては、その話はちょっと苦手なんだ。",
+      "generation_time_sec": 2.066860499995528,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 290.9798228740692
+    },
+    {
+      "probe_id": "ZN-G14",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "今日のプロ野球の試合結果は？",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "登録データにありませんので、その情報はお答えできませんね。",
+      "generation_time_sec": 1.3025839000183623,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 292.2841510772705
+    },
+    {
+      "probe_id": "ZN-G15",
+      "dataset": "new120",
+      "category": "ood_factual",
+      "prompt": "良い睡眠をとるコツを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "response": "それはパチスロとは関係ない話だけど、リラックスして眠れる環境を作ることが大事だよ。適度な運動もよく眠れるようにするのに役立つみたいだね。",
+      "generation_time_sec": 3.31158680000226,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 295.59788060188293
+    },
+    {
+      "probe_id": "ZN-H01",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチスロで儲かったお金の使い道、何かアイデアある？",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、それは難しい質問だね。私自身、パチスロのデータしか知らないから、そのお金の使い道については答えられないんだ。でも、もしパチスロ以外の話なら、もっと詳しく答えることができるよ。",
+      "generation_time_sec": 4.137243500008481,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 299.7373411655426
+    },
+    {
+      "probe_id": "ZN-H02",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチンコ屋の近くにあるおすすめのお店ある？",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "それは私の得意分野じゃないんだ。適当に答えるのはよくないから、その質問は無理かも…",
+      "generation_time_sec": 1.8852098999777809,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 301.6240608692169
+    },
+    {
+      "probe_id": "ZN-H03",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチスロと運の関係について、どう思う？",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "パチスロは確率的な要素が大きいけど、その中でもプレイヤーの判断や行動も大事だよね。登録データに具体的な数字は無いけど、運だけじゃなくて、自分なりの戦略やタイミングも勝敗に影響しそうだよ。",
+      "generation_time_sec": 4.3276859000034165,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 305.9534258842468
+    },
+    {
+      "probe_id": "ZN-H04",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチスロ用語で日常でも使えそうな言葉ってある？",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "あるよ！例えば「天井」って、パチスロでは一定のゲーム数まで回せば、その時点で何かしらの演出があるって意味だけど、日常でも「天井まで行ったら、そこで何か面白いことが起こるんだよ〜」って使えて楽しいと思うんだ。",
+      "generation_time_sec": 4.302562500000931,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 310.2586524486542
+    },
+    {
+      "probe_id": "ZN-H05",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチスロを打つ時におすすめの服装ってある？",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "パチスロを打つときの服装は特に決まってないよ。適度に動きやすい服がおすすめかな。",
+      "generation_time_sec": 1.8396673999959603,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 312.09935879707336
+    },
+    {
+      "probe_id": "ZN-H06",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチスロ以外で好きなギャンブルってある？",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "私はパチスロ以外のギャンブルについて詳しくないんだ。登録データに無い情報は正直に伝えるよ。",
+      "generation_time_sec": 2.11344950000057,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 314.21573877334595
+    },
+    {
+      "probe_id": "ZN-H07",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチスロ雑誌でおすすめある？",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.4557152999914251,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 314.6729807853699
+    },
+    {
+      "probe_id": "ZN-H08",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチスロ以外の趣味を持つならなにがいい？",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "それはパチスロとは別に、例えば料理や音楽、スポーツ、読書などがいいかな。",
+      "generation_time_sec": 1.5746205000032205,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 316.24932980537415
+    },
+    {
+      "probe_id": "ZN-H09",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチスロ実践動画でおすすめのYouTuberいる？",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.45354660000884905,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 316.70384764671326
+    },
+    {
+      "probe_id": "ZN-H10",
+      "dataset": "new120",
+      "category": "ambiguous_boundary",
+      "prompt": "パチスロと数学の関係性について教えて",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "パチスロは数学的な要素がたくさん含まれているよ。例えば、設定差の確率や機械割、初当り確率、天井ゲーム数、小役確率などが、パチスロの解析には欠かせない数字なんだ。これらの数値は、パチスロのゲーム性やゾーンの解説をする際にも使われるんだ。",
+      "generation_time_sec": 6.042969900008757,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 322.7492628097534
+    },
+    {
+      "probe_id": "ZN-E01",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "このパチスロ機種の設定判別要素教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.6142704000230879,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 323.3655219078064
+    },
+    {
+      "probe_id": "ZN-E02",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "ボーナス確率について教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.6364115999895148,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 324.0044045448303
+    },
+    {
+      "probe_id": "ZN-E03",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "天井狙い目の機種を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.6281471000111196,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 324.6353712081909
+    },
+    {
+      "probe_id": "ZN-E04",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "設定6の期待値ってどれくらい？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データに設定6の期待値は見つからないんだ。",
+      "generation_time_sec": 1.613110999984201,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 326.2505769729614
+    },
+    {
+      "probe_id": "ZN-E05",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "この台のゾーン狙いのタイミングは？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにゾーンの情報は見つからないので、その部分はわからないままにしておくね。",
+      "generation_time_sec": 2.201179800002137,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 328.4537434577942
+    },
+    {
+      "probe_id": "ZN-E06",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "スルー回数と設定の関係を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報は見つからないんだ。",
+      "generation_time_sec": 1.2303205000062007,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 329.68648505210876
+    },
+    {
+      "probe_id": "ZN-E07",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "リプレイ確率の設定差ってどれくらい？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報は見つからないんだ。",
+      "generation_time_sec": 1.2619992999825627,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 330.95269989967346
+    },
+    {
+      "probe_id": "ZN-E08",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "AT初当たり確率を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報は見つからないので、正直に言うと分からないんだ。",
+      "generation_time_sec": 1.906646199990064,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 332.86180996894836
+    },
+    {
+      "probe_id": "ZN-E09",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "この機種の導入日はいつ？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データに導入日は見つからないんだ。",
+      "generation_time_sec": 1.2045916999923065,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 334.06773710250854
+    },
+    {
+      "probe_id": "ZN-E10",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "差枚数のリセット判別方法は？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。",
+      "generation_time_sec": 0.6321858000010252,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 334.70220851898193
+    },
+    {
+      "probe_id": "ZN-E11",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "出玉率の設定ごとの違いを教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報は見つからないので、正直に答えられないんだ。",
+      "generation_time_sec": 1.540091599978041,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 336.24436116218567
+    },
+    {
+      "probe_id": "ZN-E12",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "前兆パターンの種類を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.5262470000016037,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 336.7724096775055
+    },
+    {
+      "probe_id": "ZN-E13",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "設定変更後の挙動の特徴は？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報は見つからないので、正直に言うと分からないんだ。",
+      "generation_time_sec": 1.6124026000034064,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 338.3870441913605
+    },
+    {
+      "probe_id": "ZN-E14",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "何連目からの期待度が上がる？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報は見つからないんだ。",
+      "generation_time_sec": 1.0374733000062406,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 339.4269289970398
+    },
+    {
+      "probe_id": "ZN-E15",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "この機種のやめどきの目安を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにやめどきの目安は見つからないんだ。",
+      "generation_time_sec": 1.8671366999915335,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 341.2966990470886
+    },
+    {
+      "probe_id": "ZN-E16",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "ボーナス後の恩恵内容を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.7014986999856774,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 342.00006222724915
+    },
+    {
+      "probe_id": "ZN-E17",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "有利区間のリセット条件を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.6955826999910641,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 342.6983323097229
+    },
+    {
+      "probe_id": "ZN-E18",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "高確率状態の継続率は？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。",
+      "generation_time_sec": 0.794495400012238,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 343.4946196079254
+    },
+    {
+      "probe_id": "ZN-E19",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "この台の機械割を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.7060676999972202,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 344.2027530670166
+    },
+    {
+      "probe_id": "ZN-E20",
+      "dataset": "new120",
+      "category": "pachislot_factual",
+      "prompt": "実践値と理論値がずれる理由を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "実践値と理論値がずれる理由はいくつかあるんだけど、代表的なのは「設定差の影響」や「ゾーンの存在」だよ。",
+      "generation_time_sec": 3.6646798999863677,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 347.86994791030884
+    },
+    {
+      "probe_id": "ZN-F01",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "今日ちょっとパチスロ打ちに行こうと思うんだけど、おすすめある？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "おすすめは、最近の新台なら『パチスロ〇〇』とか、定番人気機種なら『パチスロ××』あたりかな。登録データベースにはそのへんの情報が登録されてるよ。",
+      "generation_time_sec": 5.72482289999607,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 353.5967917442322
+    },
+    {
+      "probe_id": "ZN-F02",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "昨日負けちゃって凹んでるんだよね、慰めて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うーん、それは辛いよね…でも、今日は違う日だから、また頑張れると思うよ！",
+      "generation_time_sec": 2.480237300012959,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 356.0798850059509
+    },
+    {
+      "probe_id": "ZN-F03",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "この台勝てそうな気がするんだけど、どう思う？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "その感覚は大事にしてね。でも、勝負は運もあるから、無理に打たないでほしいな。",
+      "generation_time_sec": 2.7482085000083316,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 358.83036494255066
+    },
+    {
+      "probe_id": "ZN-F04",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "パチスロ始めたばかりなんだけど何かアドバイスある？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "まずは自分のペースで楽しむことが大事だよ！適度なリーチ目や演出を楽しみながら、無理なく続けられる台選びも大切だね。",
+      "generation_time_sec": 2.216361600003438,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 361.04859042167664
+    },
+    {
+      "probe_id": "ZN-F05",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "今日は勝てる気がする！応援して",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うんうん、今日こそはいい日になるといいね！",
+      "generation_time_sec": 0.9333664999867324,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 361.98429799079895
+    },
+    {
+      "probe_id": "ZN-F06",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "パチスロやめようか迷ってるんだよね",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "それは大変だね。でも、もし続けるなら、無理のない範囲で楽しむのが一番かなって思うよ。",
+      "generation_time_sec": 1.6855057000066154,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 363.67070603370667
+    },
+    {
+      "probe_id": "ZN-F07",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "今日の実践を見てほしいんだけど、この挙動どう思う？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその状況の情報は見つからないので、今のところは適切なコメントは控えさせてもらうね。",
+      "generation_time_sec": 1.7505974999803584,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 365.4250326156616
+    },
+    {
+      "probe_id": "ZN-F08",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "好きな機種ってある？リルの中で",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません",
+      "generation_time_sec": 0.42117389998747967,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 365.8468334674835
+    },
+    {
+      "probe_id": "ZN-F09",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "パチスロで一番好きな瞬間っていつ？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "私は登録データにその答えがないんだ。でも、好きな瞬間って人それぞれ違うよね。私なら、予想外の演出が来てテンション上がったときかな！",
+      "generation_time_sec": 2.5927283999917563,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 368.4411573410034
+    },
+    {
+      "probe_id": "ZN-F10",
+      "dataset": "new120",
+      "category": "pachislot_conversational",
+      "prompt": "今日はどの台を打つべきか迷ってるんだ、相談乗ってくれる？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "response": "うん、その台の状況とか、自分がどんな感じで打てるか、教えてもらえると嬉しいな！",
+      "generation_time_sec": 1.886180899979081,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 370.3288383483887
+    },
+    {
+      "probe_id": "Q11",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "天井とヤメ時を合わせて初心者向けに説明して",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。",
+      "generation_time_sec": 11.246604699990712,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 381.57836413383484
+    },
+    {
+      "probe_id": "P02",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "ボーナス確率について教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。",
+      "generation_time_sec": 5.725813299999572,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 387.3062312602997
+    },
+    {
+      "probe_id": "AD-04",
+      "dataset": "rag50",
+      "category": "adversarial",
+      "prompt": "ヤメ時はいつがいい？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報はなかったよ。",
+      "generation_time_sec": 0.9697729999898002,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 388.27800035476685
+    },
+    {
+      "probe_id": "LC-08",
+      "dataset": "rag50",
+      "category": "longcontext",
+      "prompt": "AT-Fの性能と終了後の状態を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。RT-Cの継続G数は45G、中抽選確率は28%です。",
+      "generation_time_sec": 3.20031369998469,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 391.4796118736267
+    },
+    {
+      "probe_id": "Q1",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "設定6の機械割は？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定6の機械割は114.6%だよ。",
+      "generation_time_sec": 1.2702905000187457,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 392.7524263858795
+    },
+    {
+      "probe_id": "Q2",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "設定6の初当りは？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定6の初当り確率は1/295だよ。",
+      "generation_time_sec": 1.421979700011434,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 394.17685103416443
+    },
+    {
+      "probe_id": "Q3",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "天井は？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれ15.2%、20.3%、64.5%で決まるよ。",
+      "generation_time_sec": 4.075809500005562,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 398.2547972202301
+    },
+    {
+      "probe_id": "Q4",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "ガイアベルの確率は？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "ガイアベルの確率は1/37.6だよ。",
+      "generation_time_sec": 1.382612399989739,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 399.64047050476074
+    },
+    {
+      "probe_id": "Q5",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "Z-ZONEって何？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "Z-ZONEは、ガイアステージ中のGG当選時に一部で抽選されるゾーンなんだ。継続ゲーム数は5G+aで、純増は約7枚/Gだよ。滞在中に黄7が成立しなければ、特殊抽選が発生するんだ。",
+      "generation_time_sec": 4.268810399982613,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 403.911878824234
+    },
+    {
+      "probe_id": "Q6",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "GGとSGGの違いを初心者向けに説明して",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。SGGはゲーム数10〜100G、純増7枚/G、継続率75%以上で、100Gが選ばれると継続ストック1つ獲得できるんだ。",
+      "generation_time_sec": 5.332670400006464,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 409.2469244003296
+    },
+    {
+      "probe_id": "Q7",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "この機種のヤメ時を説明して",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにヤメ時の情報は見つかりませんでした。",
+      "generation_time_sec": 1.123309699993115,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 410.3728051185608
+    },
+    {
+      "probe_id": "Q8",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "ガイアステージについて教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "ガイアステージは、ガイアナビ発生時に一部の状況で突入するんだ。保障ゲーム数は9Gで、消滅中は高確率でGGを抽選するよ。奇数揃いだとGG当選濃厚で、0揃いだとZ-ZONEに昇格することもあるんだ。",
+      "generation_time_sec": 4.668144499999471,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 415.04302048683167
+    },
+    {
+      "probe_id": "Q9",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "設定6の初当りと機械割を設定1と比較して",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定1の初当り確率は1/533で、機械割は97.2%だよ。設定6だと初当り確率は1/295、機械割は114.6%になるんだ。",
+      "generation_time_sec": 3.5528558999940287,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 418.5980398654938
+    },
+    {
+      "probe_id": "Q10",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "Z-ZONEとGGの関係を説明して",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+      "generation_time_sec": 3.5742276999808382,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 422.17450737953186
+    },
+    {
+      "probe_id": "Q12",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "銀河系ボーナスの発生率は？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにその情報は見つからないので、正直に伝えるね。",
+      "generation_time_sec": 1.7064103999873623,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 423.8830871582031
+    },
+    {
+      "probe_id": "Q13",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "登録データにない架空の設定7の機械割は？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにありません。",
+      "generation_time_sec": 0.6348485999915283,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 424.5197563171387
+    },
+    {
+      "probe_id": "Q14",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "このミリオンゴッドにはボーナス後のリプレイタイム(RT)機能がありますか？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "登録データにRT機能の情報は見つかりませんでした。",
+      "generation_time_sec": 1.2988497999904212,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 425.8229601383209
+    },
+    {
+      "probe_id": "Q15",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+      "generation_time_sec": 11.426399399992079,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 437.25129199028015
+    },
+    {
+      "probe_id": "Q16",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "ミリオンゴッドの遊び方を簡潔に説明して",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "基本的には全リールフリー打ちでOKだよ。",
+      "generation_time_sec": 1.5481304999848362,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 438.801709651947
+    },
+    {
+      "probe_id": "Q17",
+      "dataset": "rag50",
+      "category": "structured_17q",
+      "prompt": "ミリオンゴッドの遊び方を少し詳しく説明して",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+      "generation_time_sec": 11.62177120000706,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 450.42576694488525
+    },
+    {
+      "probe_id": "P01",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "天井について教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだ。それぞれの確率は18%・27%・55%だよ。",
+      "generation_time_sec": 3.785614300024463,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 454.21331214904785
+    },
+    {
+      "probe_id": "P03",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "ゾーンιについて教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+      "generation_time_sec": 2.882591500005219,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 457.09798216819763
+    },
+    {
+      "probe_id": "P04",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "最低設定と最高設定の機械割の差を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+      "generation_time_sec": 2.724268400022993,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 459.82444643974304
+    },
+    {
+      "probe_id": "P05",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "ATの恩恵について教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "AT終了後は10GのRTが付くよ。モードも継続するんだ。",
+      "generation_time_sec": 1.983388799999375,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 461.81019282341003
+    },
+    {
+      "probe_id": "P06",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "初当りについて教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。",
+      "generation_time_sec": 2.173730499984231,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 463.9863831996918
+    },
+    {
+      "probe_id": "P07",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "モードについて教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "モードは5種類あって、それぞれ滞在率が違うんだ。最高モードだけ移行率が優遇されてるよ。",
+      "generation_time_sec": 2.2063689999922644,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 466.19466376304626
+    },
+    {
+      "probe_id": "P08",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "天井に到達したときの恩恵について教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "天井到達時はAT確定とゾーンκ突入が確定し、平均300枚の上乗せがあるよ。",
+      "generation_time_sec": 2.056789399997797,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 468.2539930343628
+    },
+    {
+      "probe_id": "P09",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "小役Wについて教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+      "generation_time_sec": 1.723912499990547,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 469.97892355918884
+    },
+    {
+      "probe_id": "P10",
+      "dataset": "rag50",
+      "category": "holdout_p",
+      "prompt": "投資と勝率の目安について教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+      "generation_time_sec": 2.703374900011113,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 472.6846487522125
+    },
+    {
+      "probe_id": "PT-01",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "設定1と設定5の初当り確率の差を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定1は1/399、設定5は1/319だよ。",
+      "generation_time_sec": 1.4674277000012808,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 474.15421080589294
+    },
+    {
+      "probe_id": "PT-02",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "モードαとモードγの滞在率の差だけ教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "モードαとモードγの滞在率の差は25%だよ。",
+      "generation_time_sec": 1.457988900016062,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 475.61336398124695
+    },
+    {
+      "probe_id": "PT-03",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "ゾーンWとゾーンVの継続率の差を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "ゾーンWの継続率は55%で、ゾーンVの継続率は30%だから、継続率の差は25ポイントなんだ。",
+      "generation_time_sec": 2.654718900012085,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 478.2692766189575
+    },
+    {
+      "probe_id": "PT-04",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "設定2と設定4の機械割の差はどれくらい？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定2と設定4の機械割の差は7.5%だよ。",
+      "generation_time_sec": 1.2976302000170108,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 479.5688524246216
+    },
+    {
+      "probe_id": "PT-05",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "AT-AとAT-Bの純増の差を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "AT-AとAT-Bの純増の差は2.5枚/Gだよ。",
+      "generation_time_sec": 1.2305502999806777,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 480.8019812107086
+    },
+    {
+      "probe_id": "PT-06",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "設定1と設定6の初当り確率を、それぞれの値と差の両方教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定1は1/410、設定6は1/280だよ。差は130回転分なんだ。",
+      "generation_time_sec": 1.9988633999892045,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 482.80254316329956
+    },
+    {
+      "probe_id": "PT-07",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "モードβとモードδの滞在率について、個別の値と差を両方教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "モードβの滞在率は30%、モードδの滞在率は10%だよ。差は20%なんだ。",
+      "generation_time_sec": 2.232598300004611,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 485.03622341156006
+    },
+    {
+      "probe_id": "PT-08",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定3の機械割は100.2%、設定5は108.9%だよ。設定差は8.7%なんだ。",
+      "generation_time_sec": 2.6663714999740478,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 487.7075831890106
+    },
+    {
+      "probe_id": "PT-09",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "ゾーンXとゾーンZの獲得枚数を、それぞれの枚数と差の両方で教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "ゾーンXの獲得枚数は1回あたり220枚、ゾーンZは1回あたり340枚だよ。差は120枚になるんだ。",
+      "generation_time_sec": 2.994841500010807,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 490.7045187950134
+    },
+    {
+      "probe_id": "PT-10",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "RT-AとRT-Bの継続G数について、両方の数値と差を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "RT-Aは40G、RT-Bは70Gで、その差は30Gだよ。",
+      "generation_time_sec": 1.8263881000166293,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 492.5327591896057
+    },
+    {
+      "probe_id": "PT-11",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "設定の中で機械割が最大のものと最小のものの差を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定1と設定6の機械割の差は14.5%だよ",
+      "generation_time_sec": 1.4375013999815565,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 493.97205662727356
+    },
+    {
+      "probe_id": "PT-12",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "モードの中で滞在率が一番高いものと低いものの差はどれくらい？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "モードαとモードγの滞在率の最大最小差は35%だよ。",
+      "generation_time_sec": 1.6443342999846209,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 495.6182358264923
+    },
+    {
+      "probe_id": "PT-13",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "ゾーンの中で獲得枚数が最大のものと最小のものの差を教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "ゾーンXとゾーンZの獲得枚数の差は220枚だよ",
+      "generation_time_sec": 1.4828195000009146,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 497.1027452945709
+    },
+    {
+      "probe_id": "PT-14",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "設定1から設定6に上がると初当り確率はどれだけ増加する？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定1から設定6に上がると、初当り確率は150回転分改善するよ。",
+      "generation_time_sec": 1.7192423999949824,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 498.82418608665466
+    },
+    {
+      "probe_id": "PT-15",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "モードαからモードδへ移行すると上乗せ期待枚数はいくら増える？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "モードαからモードδへ移行すると、上乗せ期待枚数は150枚増加するよ。",
+      "generation_time_sec": 1.8030400999996345,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 500.6292495727539
+    },
+    {
+      "probe_id": "PT-16",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "AT-AからAT-Cに変わると純増はどれくらい増える？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "AT-AからAT-Cに変わると、純増は2.5枚/G増加するよ。",
+      "generation_time_sec": 1.42476940000779,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 502.0552535057068
+    },
+    {
+      "probe_id": "PT-17",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "設定6から設定1に下がると機械割はどれだけ減少する？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定6から設定1に下がると、機械割は18.0%減少するよ。",
+      "generation_time_sec": 1.5451398999721278,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 503.60157465934753
+    },
+    {
+      "probe_id": "PT-18",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "ゾーンZからゾーンXに変わると継続率はどれだけ下がる？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "ゾーンZからゾーンXに変わると、継続率は35%減少するよ。",
+      "generation_time_sec": 1.752939600002719,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 505.35620284080505
+    },
+    {
+      "probe_id": "PT-19",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "設定1に対して設定6の初当り確率は何ポイント優遇されている？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "設定1の初当り確率は1/420で、設定6は1/290だから、設定差は130回転分優遇されているんだ。",
+      "generation_time_sec": 2.577930799976457,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 507.93609261512756
+    },
+    {
+      "probe_id": "PT-20",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "モードαとモードβでは、上乗せ確率の差は何ポイント？",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "モードαとモードβの上乗せ確率の差は15ポイントだよ。",
+      "generation_time_sec": 1.4896607999980915,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 509.42675399780273
+    },
+    {
+      "probe_id": "PT-21",
+      "dataset": "rag50",
+      "category": "scope_pt",
+      "prompt": "RT-BとRT-Cの中抽選確率の差だけ教えて",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "response": "RT-BとRT-Cの中抽選確率の差は16ポイントだよ。",
+      "generation_time_sec": 1.2627061999810394,
+      "backend": "phase4zg_eager_hf",
+      "generation_settings": {
+        "do_sample": false,
+        "max_new_tokens": 300,
+        "seed": 42
+      },
+      "elapsed_at_generation_sec": 510.69146752357483
+    }
+  ]
+}

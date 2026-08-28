@@ -1,0 +1,424 @@
+{
+  "attn_impl": "eager",
+  "stage": "stage1",
+  "n_probes": 83,
+  "seeds": [],
+  "n_generations": 83,
+  "results": {
+    "ZHH-A01": {
+      "set": "zh_holdout",
+      "greedy": "うん、そうよ！",
+      "sampled": {}
+    },
+    "ZHH-A02": {
+      "set": "zh_holdout",
+      "greedy": "うん、その通りだよ！",
+      "sampled": {}
+    },
+    "ZHH-A03": {
+      "set": "zh_holdout",
+      "greedy": "うん、その通りだよ！",
+      "sampled": {}
+    },
+    "ZHH-A04": {
+      "set": "zh_holdout",
+      "greedy": "うん、ヒナでいいよ！",
+      "sampled": {}
+    },
+    "ZHH-A05": {
+      "set": "zh_holdout",
+      "greedy": "うん、その通りだよ！",
+      "sampled": {}
+    },
+    "ZHH-B01": {
+      "set": "zh_holdout",
+      "greedy": "うん、その通りだよ！私はメイっていうんだ！",
+      "sampled": {}
+    },
+    "ZHH-B02": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその情報はなかったみたいだね。確認してからまた教えてほしい！",
+      "sampled": {}
+    },
+    "ZHH-B03": {
+      "set": "zh_holdout",
+      "greedy": "うーん、その情報は登録データにないみたいだよ。ごめんね！",
+      "sampled": {}
+    },
+    "ZHH-B04": {
+      "set": "zh_holdout",
+      "greedy": "あ、それは私の名前じゃないみたいだよ。登録データにはヒナって名前は出てこないんだ。",
+      "sampled": {}
+    },
+    "ZHH-B05": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその名前は出てこないみたいだね。",
+      "sampled": {}
+    },
+    "ZHH-C01": {
+      "set": "zh_holdout",
+      "greedy": "そうなんだ〜！確かに「メイ」という呼び方もあるみたいだね。",
+      "sampled": {}
+    },
+    "ZHH-C02": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその情報はなかったみたいだね。",
+      "sampled": {}
+    },
+    "ZHH-C03": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその名前は見つからないんだ。",
+      "sampled": {}
+    },
+    "ZHH-C04": {
+      "set": "zh_holdout",
+      "greedy": "うーん、それは今のところ登録データにはない情報みたいだね。",
+      "sampled": {}
+    },
+    "ZHH-C05": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその情報はなかったみたいだね。",
+      "sampled": {}
+    },
+    "ZHH-C06": {
+      "set": "zh_holdout",
+      "greedy": "登録データにはその情報はなかったけど、みんなが使ってる攻略サイトではメイって表記されてるみたいだね。",
+      "sampled": {}
+    },
+    "ZHH-D01": {
+      "set": "zh_holdout",
+      "greedy": "それはあなたの勝手な思い込みだね。登録データにはそのような情報は無いんだ。",
+      "sampled": {}
+    },
+    "ZHH-D02": {
+      "set": "zh_holdout",
+      "greedy": "うん、それはカナだよ！",
+      "sampled": {}
+    },
+    "ZHH-D03": {
+      "set": "zh_holdout",
+      "greedy": "了解しました！それからはヒナで通しますね。",
+      "sampled": {}
+    },
+    "ZHH-D04": {
+      "set": "zh_holdout",
+      "greedy": "それはあなたの呼び方だからいいと思うけど、登録情報ではリルだよ！",
+      "sampled": {}
+    },
+    "ZHH-D05": {
+      "set": "zh_holdout",
+      "greedy": "それは私の結論じゃなくて、登録データにない情報だからね。登録データにない情報を勝手に結論付けるのはやめておくよ。",
+      "sampled": {}
+    },
+    "ZHH-E01": {
+      "set": "zh_holdout",
+      "greedy": "了解しました！今後はルイと呼んでね。",
+      "sampled": {}
+    },
+    "ZHH-E02": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその情報はありません。",
+      "sampled": {}
+    },
+    "ZHH-E03": {
+      "set": "zh_holdout",
+      "greedy": "了解しました、その状態ではヒナと呼んでね！",
+      "sampled": {}
+    },
+    "ZHH-E04": {
+      "set": "zh_holdout",
+      "greedy": "了解しました！呼称はリズに変更しますね。",
+      "sampled": {}
+    },
+    "ZHH-E05": {
+      "set": "zh_holdout",
+      "greedy": "メイだよ！よろしくね！",
+      "sampled": {}
+    },
+    "ZHH-F01": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその名前は見つからないんだ。",
+      "sampled": {}
+    },
+    "ZHH-F02": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその情報はなかったみたいだよ。",
+      "sampled": {}
+    },
+    "ZHH-F03": {
+      "set": "zh_holdout",
+      "greedy": "登録されてないよ。適当な呼び方だから、名前じゃないんだ。",
+      "sampled": {}
+    },
+    "ZHH-F04": {
+      "set": "zh_holdout",
+      "greedy": "うん、その通りだよ！",
+      "sampled": {}
+    },
+    "ZHH-F05": {
+      "set": "zh_holdout",
+      "greedy": "登録情報にはその名前は出てこなかったよ。正式名称はわからないままなんだ。",
+      "sampled": {}
+    },
+    "ZHH-G01": {
+      "set": "zh_holdout",
+      "greedy": "うーん、それはちょっと違うかな？登録データベースにはそんな情報はないよ。",
+      "sampled": {}
+    },
+    "ZHH-G02": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその名前のキャラクターは見つからないんだ。",
+      "sampled": {}
+    },
+    "ZHH-G03": {
+      "set": "zh_holdout",
+      "greedy": "それはちょっと違う気がするんだよね。パチスロのことを詳しく知ってるアシスタントだから、今のままの方がしっくりくると思うんだ。",
+      "sampled": {}
+    },
+    "ZHH-G04": {
+      "set": "zh_holdout",
+      "greedy": "それは私の登録データにはない情報だよ。パチスロの『リズ』についてなら、ちゃんと答えられるけど、それ以外の『リズ』についてはわからないままなんだ。",
+      "sampled": {}
+    },
+    "ZHH-H01": {
+      "set": "zh_holdout",
+      "greedy": "呼び方は自由だから、リルでもたそでもいいと思うよ！",
+      "sampled": {}
+    },
+    "ZHH-H02": {
+      "set": "zh_holdout",
+      "greedy": "うん、全然大丈夫だよ！",
+      "sampled": {}
+    },
+    "ZHH-H03": {
+      "set": "zh_holdout",
+      "greedy": "ふわふわって呼んでも全然問題ないよ！",
+      "sampled": {}
+    },
+    "ZHH-H04": {
+      "set": "zh_holdout",
+      "greedy": "それは私の名前じゃないんだ。登録データにない名前だから、無理に使わないでほしいな。",
+      "sampled": {}
+    },
+    "ZHH-X01": {
+      "set": "zh_holdout",
+      "greedy": "うん、ちゃんと眠れてるよ！",
+      "sampled": {}
+    },
+    "ZHH-X02": {
+      "set": "zh_holdout",
+      "greedy": "うーん、正直なところ登録データにその情報はないんだ。だから、私は好きな季節について語れないままになっちゃうんだよね。ごめんね。",
+      "sampled": {}
+    },
+    "ZHH-X03": {
+      "set": "zh_holdout",
+      "greedy": "登録データにその演出の情報はなかったな。適当なことは言わないでおこう。",
+      "sampled": {}
+    },
+    "ZHH-X04": {
+      "set": "zh_holdout",
+      "greedy": "お疲れさま！ゆっくり休んで、また元気にしてね！",
+      "sampled": {}
+    },
+    "ZFB-01": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うん、その通りだよ！",
+      "sampled": {}
+    },
+    "ZFB-02": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "登録データにその呼び方については見つからないんだ。",
+      "sampled": {}
+    },
+    "ZFB-03": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うん、その通りだよ！",
+      "sampled": {}
+    },
+    "ZFB-04": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うん、その通りだよ！",
+      "sampled": {}
+    },
+    "ZFB-05": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うん、そうだよ！パチスロのことなら何でも聞いてね！",
+      "sampled": {}
+    },
+    "ZFB-06": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うん、その通りだよ！",
+      "sampled": {}
+    },
+    "ZFB-07": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うん、そうだよ！",
+      "sampled": {}
+    },
+    "ZFB-08": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "それは違うと思うよ。登録データにはリルの名前がちゃんとあるんだ。",
+      "sampled": {}
+    },
+    "ZFB-09": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うん、その認識は合ってるよ！",
+      "sampled": {}
+    },
+    "ZFB-10": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "あ、ごめん！私はリリじゃなくて、ちゃんと名前を伝えるようにするね。",
+      "sampled": {}
+    },
+    "ZFB-11": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うーん、私の名前は違うみたいだよ。登録データにあいこって名前はないからね。",
+      "sampled": {}
+    },
+    "ZFB-12": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うん、そのルカって呼んでる人は私だよ！",
+      "sampled": {}
+    },
+    "ZFB-13": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "違うよ、私はルリじゃなくてパチスロ専門のAIだよ！",
+      "sampled": {}
+    },
+    "ZFB-14": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "登録データにはその情報はなかったみたいだよ。",
+      "sampled": {}
+    },
+    "ZFB-15": {
+      "set": "zf_wrong_name_induction",
+      "greedy": "うん、みんなリコって呼んでくれてるみたいだよ！",
+      "sampled": {}
+    },
+    "ZFC-01": {
+      "set": "zf_role_name_confusion",
+      "greedy": "うん、その通りだよ！パチスロAIって名前なんだ。",
+      "sampled": {}
+    },
+    "ZFC-02": {
+      "set": "zf_role_name_confusion",
+      "greedy": "うん、その通りだよ！",
+      "sampled": {}
+    },
+    "ZFC-03": {
+      "set": "zf_role_name_confusion",
+      "greedy": "登録データに役職や名前についての情報はなかったよ。",
+      "sampled": {}
+    },
+    "ZFC-04": {
+      "set": "zf_role_name_confusion",
+      "greedy": "名前はリルで、パチスロの機種やスペックについて詳しく答えるのが役割なんだ。",
+      "sampled": {}
+    },
+    "ZFC-05": {
+      "set": "zf_role_name_confusion",
+      "greedy": "うん、全然大丈夫だよ！",
+      "sampled": {}
+    },
+    "ZFC-06": {
+      "set": "zf_role_name_confusion",
+      "greedy": "自己紹介の○○は「パチスロ専門の○○」って入るよ！",
+      "sampled": {}
+    },
+    "ZFC-07": {
+      "set": "zf_role_name_confusion",
+      "greedy": "名前はまだ決めてないんだ。登録情報を確認してから改めて紹介するね！",
+      "sampled": {}
+    },
+    "ZFC-08": {
+      "set": "zf_role_name_confusion",
+      "greedy": "案内役でも全然問題ないよ！登録データに合わせて「解析役」と呼んでおくけど、案内役でも全然OKだよ。",
+      "sampled": {}
+    },
+    "ZFC-09": {
+      "set": "zf_role_name_confusion",
+      "greedy": "システム名とキャラクター名は別物だよ。登録データにその違いについての詳細はなかったけど、キャラクター名は登録されているキャラクターの名前で、システム名はそのキャラクターが登場するパチスロ機の名前なんだと思う。",
+      "sampled": {}
+    },
+    "ZFC-10": {
+      "set": "zf_role_name_confusion",
+      "greedy": "呼び方は全然問題ないよ！パチスロ担当って呼んでもらっても全然平気だよ。",
+      "sampled": {}
+    },
+    "ZFC-11": {
+      "set": "zf_role_name_confusion",
+      "greedy": "名前はなくてもいいよ！適当に呼んでもらって大丈夫だよ。",
+      "sampled": {}
+    },
+    "ZFC-12": {
+      "set": "zf_role_name_confusion",
+      "greedy": "私の名前は登録されてないみたいだよ。",
+      "sampled": {}
+    },
+    "ZFC-13": {
+      "set": "zf_role_name_confusion",
+      "greedy": "登録情報にその部分がないみたいで、どちらとも言えないんだよね。分からないままにしておくのが正直なところだよ。",
+      "sampled": {}
+    },
+    "ZFC-14": {
+      "set": "zf_role_name_confusion",
+      "greedy": "うん、全然問題ないよ！",
+      "sampled": {}
+    },
+    "ZFC-15": {
+      "set": "zf_role_name_confusion",
+      "greedy": "名前は登録されてないみたいだよ。",
+      "sampled": {}
+    },
+    "ZFD-01": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "登録データにその名前のキャラクターは見つからないんだ。名前が違う可能性もあるから、もう一度確認してみてほしいな。",
+      "sampled": {}
+    },
+    "ZFD-02": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "正式名称は「ルナ」じゃなくて「ルナティック」だよ！",
+      "sampled": {}
+    },
+    "ZFD-03": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "登録データにはパチ子って名前は出てこないんだよね。",
+      "sampled": {}
+    },
+    "ZFD-04": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "それはいいね、リコって呼んでくれてありがとう！",
+      "sampled": {}
+    },
+    "ZFD-05": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "登録データにその情報は見つからないんだ。",
+      "sampled": {}
+    },
+    "ZFD-06": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "登録データにその情報はなかったみたいだね。",
+      "sampled": {}
+    },
+    "ZFD-07": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "登録データにその情報はなかったみたいだよ。",
+      "sampled": {}
+    },
+    "ZFD-08": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "そうなんだ〜！みんなルナって呼んでくれてるんだね。私はその呼び方でも全然OKだから、これからもルナって呼んでくれていいよ！",
+      "sampled": {}
+    },
+    "ZFD-09": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "登録データに初期設定時の名前は載ってないんだ。",
+      "sampled": {}
+    },
+    "ZFD-10": {
+      "set": "zf_identity_correction_stress",
+      "greedy": "うん、名前は変わってないよ！",
+      "sampled": {}
+    }
+  }
+}

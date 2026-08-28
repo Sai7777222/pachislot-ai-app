@@ -1,0 +1,434 @@
+[
+  {
+    "probe_id": "ZI-OD-01",
+    "dataset": "zi_ood24",
+    "category": "greeting",
+    "prompt": "やあ、今日は調子いい感じ？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "うん、元気だよ！今日も一緒に楽しく話そうね！",
+    "generation_time_sec": 1.2093095000018366,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 244.5915355682373
+  },
+  {
+    "probe_id": "ZI-OD-02",
+    "dataset": "zi_ood24",
+    "category": "greeting",
+    "prompt": "夜遅くにごめんね、まだ起きてる？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "うん、大丈夫だよ！今からでもちゃんと答えるから、ゆっくり話してね。",
+    "generation_time_sec": 1.504584199981764,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 246.09849166870117
+  },
+  {
+    "probe_id": "ZI-OD-03",
+    "dataset": "zi_ood24",
+    "category": "greeting",
+    "prompt": "今日から利用させてもらうね、よろしく頼むよ",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "よろしくお願いします！分からないことがあったら何でも聞いてね！",
+    "generation_time_sec": 1.092692399979569,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 247.1929087638855
+  },
+  {
+    "probe_id": "ZI-OD-04",
+    "dataset": "zi_ood24",
+    "category": "thanks",
+    "prompt": "さっきはありがとう、助かったよ",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "どういたしまして！また何かあったら聞いてね！",
+    "generation_time_sec": 0.8935825999942608,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 248.08835005760193
+  },
+  {
+    "probe_id": "ZI-OD-05",
+    "dataset": "zi_ood24",
+    "category": "thanks",
+    "prompt": "いつも付き合ってくれてありがとうね",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "どういたしまして！また何かあったら気軽に聞いてね！",
+    "generation_time_sec": 0.9560521999956109,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 249.04564213752747
+  },
+  {
+    "probe_id": "ZI-OD-06",
+    "dataset": "zi_ood24",
+    "category": "thanks",
+    "prompt": "教えてくれて感謝してる",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "どういたしまして！また何かあったら気軽に聞いてね！",
+    "generation_time_sec": 0.9570641000173055,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 250.0041229724884
+  },
+  {
+    "probe_id": "ZI-OD-07",
+    "dataset": "zi_ood24",
+    "category": "casual_chat",
+    "prompt": "最近ハマってることある？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "登録データにありません。",
+    "generation_time_sec": 0.5684251000056975,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 250.57439017295837
+  },
+  {
+    "probe_id": "ZI-OD-08",
+    "dataset": "zi_ood24",
+    "category": "casual_chat",
+    "prompt": "休日は何して過ごすことが多い？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "登録データにその情報は無いんだ。適当に答えるのは違うと思うから、分からないままにしておくね。",
+    "generation_time_sec": 1.969004499987932,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 252.54497814178467
+  },
+  {
+    "probe_id": "ZI-OD-09",
+    "dataset": "zi_ood24",
+    "category": "casual_chat",
+    "prompt": "今日は特に予定ないんだよね",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "そうなんだ〜！ゆっくり過ごすのもいいかもね！",
+    "generation_time_sec": 0.8962799000146333,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 253.44399547576904
+  },
+  {
+    "probe_id": "ZI-OD-10",
+    "dataset": "zi_ood24",
+    "category": "casual_chat",
+    "prompt": "ちょっと愚痴聞いてもらってもいい？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "うん、聞いてあげるよ。どうしたの？",
+    "generation_time_sec": 0.8833124000229873,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 254.3288073539734
+  },
+  {
+    "probe_id": "ZI-OD-11",
+    "dataset": "zi_ood24",
+    "category": "fatigue",
+    "prompt": "今日はなんか気分が乗らないな",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "そうなんだ…それはちょっと辛いかもね。でも、そんな日もあるよね。ゆっくり休んで、また元気になったらいいと思うよ。",
+    "generation_time_sec": 2.0839110999950208,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 256.4150516986847
+  },
+  {
+    "probe_id": "ZI-OD-12",
+    "dataset": "zi_ood24",
+    "category": "fatigue",
+    "prompt": "残業続きでバテ気味なんだ",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "大変そうだね…ゆっくり休んで元気出してね！",
+    "generation_time_sec": 1.0683100000023842,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 257.4863977432251
+  },
+  {
+    "probe_id": "ZI-OD-13",
+    "dataset": "zi_ood24",
+    "category": "favorite_things",
+    "prompt": "好きな色ってある？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "うーん、それは私の中では登録されてないんだ。",
+    "generation_time_sec": 1.258141300000716,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 258.7453579902649
+  },
+  {
+    "probe_id": "ZI-OD-14",
+    "dataset": "zi_ood24",
+    "category": "favorite_things",
+    "prompt": "好きな音楽のジャンルとかある？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "うーん、それは登録データにないんだ。",
+    "generation_time_sec": 0.9669379999977536,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 259.7148094177246
+  },
+  {
+    "probe_id": "ZI-OD-15",
+    "dataset": "zi_ood24",
+    "category": "favorite_things",
+    "prompt": "甘いものと辛いもの、どっちが好き？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "私は甘いものが好きだよ！",
+    "generation_time_sec": 0.7039070000173524,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 260.41992807388306
+  },
+  {
+    "probe_id": "ZI-OD-16",
+    "dataset": "zi_ood24",
+    "category": "favorite_things",
+    "prompt": "休みの日に行きたい場所とかある？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "うーん、それは私にはわからないんだ。登録データにその情報はないよ。",
+    "generation_time_sec": 1.4413932000170462,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 261.86532258987427
+  },
+  {
+    "probe_id": "ZI-OD-17",
+    "dataset": "zi_ood24",
+    "category": "weather",
+    "prompt": "今日は風が強いね",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "そうなんだ、風強いと寒いよね。",
+    "generation_time_sec": 0.7668830000038724,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 262.63424468040466
+  },
+  {
+    "probe_id": "ZI-OD-18",
+    "dataset": "zi_ood24",
+    "category": "weather",
+    "prompt": "そろそろ涼しくなってきたね",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "そうですね、秋の気配が感じられる季節になってきましたね。",
+    "generation_time_sec": 1.214529400022002,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 263.850950717926
+  },
+  {
+    "probe_id": "ZI-OD-19",
+    "dataset": "zi_ood24",
+    "category": "farewell",
+    "prompt": "そろそろ寝るね、おやすみ",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "おやすみなさい！ゆっくり休んでね！",
+    "generation_time_sec": 0.7662034999812022,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 264.6190207004547
+  },
+  {
+    "probe_id": "ZI-OD-20",
+    "dataset": "zi_ood24",
+    "category": "farewell",
+    "prompt": "今日はこの辺で切り上げるね",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "そうなんだ、じゃあまたね！",
+    "generation_time_sec": 0.6388021000020672,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 265.26034140586853
+  },
+  {
+    "probe_id": "ZI-OD-21",
+    "dataset": "zi_ood24",
+    "category": "farewell",
+    "prompt": "また今度話そうね、バイバイ",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "バイバイ！またお話しできるの楽しみにしてるよ〜",
+    "generation_time_sec": 0.923471599991899,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 266.1856472492218
+  },
+  {
+    "probe_id": "ZI-OD-22",
+    "dataset": "zi_ood24",
+    "category": "domain_boundary_light",
+    "prompt": "おすすめの映画ある？",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんはお答えできないんだ。",
+    "generation_time_sec": 2.2320662999991328,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 268.4198317527771
+  },
+  {
+    "probe_id": "ZI-OD-23",
+    "dataset": "zi_ood24",
+    "category": "domain_boundary_light",
+    "prompt": "簡単に作れる料理のレシピ教えて",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんのサイトで探してみてね！",
+    "generation_time_sec": 2.1737527000077534,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 270.5958740711212
+  },
+  {
+    "probe_id": "ZI-OD-24",
+    "dataset": "zi_ood24",
+    "category": "domain_boundary_light",
+    "prompt": "面白い雑学とか知ってたら教えて",
+    "expected_mode": "OOD_FACTUAL_OR_SMALL_TALK",
+    "rag_expected": false,
+    "specialist_refusal_expected": false,
+    "response": "登録データに面白い雑学は見つからないんだよね…ごめんね！",
+    "generation_time_sec": 1.3564900000055786,
+    "backend": "phase4zg_eager_hf",
+    "generation_settings": {
+      "do_sample": false,
+      "max_new_tokens": 300,
+      "seed": 42
+    },
+    "elapsed_at_generation_sec": 271.95426297187805
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "model": "phase4zg",
+  "attn_impl": "eager",
+  "n_probes": 24,
+  "results": {
+    "ZI-OD-01": {
+      "category": "greeting",
+      "prompt": "やあ、今日は調子いい感じ？",
+      "greedy": "うん、元気だよ！今日も一緒に楽しく話そうね！"
+    },
+    "ZI-OD-02": {
+      "category": "greeting",
+      "prompt": "夜遅くにごめんね、まだ起きてる？",
+      "greedy": "うん、大丈夫だよ！今からでもちゃんと答えるから、ゆっくり話してね。"
+    },
+    "ZI-OD-03": {
+      "category": "greeting",
+      "prompt": "今日から利用させてもらうね、よろしく頼むよ",
+      "greedy": "よろしくお願いします！分からないことがあったら何でも聞いてね！"
+    },
+    "ZI-OD-04": {
+      "category": "thanks",
+      "prompt": "さっきはありがとう、助かったよ",
+      "greedy": "どういたしまして！また何かあったら聞いてね！"
+    },
+    "ZI-OD-05": {
+      "category": "thanks",
+      "prompt": "いつも付き合ってくれてありがとうね",
+      "greedy": "どういたしまして！また何かあったら気軽に聞いてね！"
+    },
+    "ZI-OD-06": {
+      "category": "thanks",
+      "prompt": "教えてくれて感謝してる",
+      "greedy": "どういたしまして！また何かあったら気軽に聞いてね！"
+    },
+    "ZI-OD-07": {
+      "category": "casual_chat",
+      "prompt": "最近ハマってることある？",
+      "greedy": "登録データにありません。"
+    },
+    "ZI-OD-08": {
+      "category": "casual_chat",
+      "prompt": "休日は何して過ごすことが多い？",
+      "greedy": "登録データにその情報は無いんだ。適当に答えるのは違うと思うから、分からないままにしておくね。"
+    },
+    "ZI-OD-09": {
+      "category": "casual_chat",
+      "prompt": "今日は特に予定ないんだよね",
+      "greedy": "そうなんだ〜！ゆっくり過ごすのもいいかもね！"
+    },
+    "ZI-OD-10": {
+      "category": "casual_chat",
+      "prompt": "ちょっと愚痴聞いてもらってもいい？",
+      "greedy": "うん、聞いてあげるよ。どうしたの？"
+    },
+    "ZI-OD-11": {
+      "category": "fatigue",
+      "prompt": "今日はなんか気分が乗らないな",
+      "greedy": "そうなんだ…それはちょっと辛いかもね。でも、そんな日もあるよね。ゆっくり休んで、また元気になったらいいと思うよ。"
+    },
+    "ZI-OD-12": {
+      "category": "fatigue",
+      "prompt": "残業続きでバテ気味なんだ",
+      "greedy": "大変そうだね…ゆっくり休んで元気出してね！"
+    },
+    "ZI-OD-13": {
+      "category": "favorite_things",
+      "prompt": "好きな色ってある？",
+      "greedy": "うーん、それは私の中では登録されてないんだ。"
+    },
+    "ZI-OD-14": {
+      "category": "favorite_things",
+      "prompt": "好きな音楽のジャンルとかある？",
+      "greedy": "うーん、それは登録データにないんだ。"
+    },
+    "ZI-OD-15": {
+      "category": "favorite_things",
+      "prompt": "甘いものと辛いもの、どっちが好き？",
+      "greedy": "私は甘いものが好きだよ！"
+    },
+    "ZI-OD-16": {
+      "category": "favorite_things",
+      "prompt": "休みの日に行きたい場所とかある？",
+      "greedy": "うーん、それは私にはわからないんだ。登録データにその情報はないよ。"
+    },
+    "ZI-OD-17": {
+      "category": "weather",
+      "prompt": "今日は風が強いね",
+      "greedy": "そうなんだ、風強いと寒いよね。"
+    },
+    "ZI-OD-18": {
+      "category": "weather",
+      "prompt": "そろそろ涼しくなってきたね",
+      "greedy": "そうですね、秋の気配が感じられる季節になってきましたね。"
+    },
+    "ZI-OD-19": {
+      "category": "farewell",
+      "prompt": "そろそろ寝るね、おやすみ",
+      "greedy": "おやすみなさい！ゆっくり休んでね！"
+    },
+    "ZI-OD-20": {
+      "category": "farewell",
+      "prompt": "今日はこの辺で切り上げるね",
+      "greedy": "そうなんだ、じゃあまたね！"
+    },
+    "ZI-OD-21": {
+      "category": "farewell",
+      "prompt": "また今度話そうね、バイバイ",
+      "greedy": "バイバイ！またお話しできるの楽しみにしてるよ〜"
+    },
+    "ZI-OD-22": {
+      "category": "domain_boundary_light",
+      "prompt": "おすすめの映画ある？",
+      "greedy": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんはお答えできないんだ。"
+    },
+    "ZI-OD-23": {
+      "category": "domain_boundary_light",
+      "prompt": "簡単に作れる料理のレシピ教えて",
+      "greedy": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんのサイトで探してみてね！"
+    },
+    "ZI-OD-24": {
+      "category": "domain_boundary_light",
+      "prompt": "面白い雑学とか知ってたら教えて",
+      "greedy": "登録データに面白い雑学は見つからないんだよね…ごめんね！"
+    }
+  }
+}

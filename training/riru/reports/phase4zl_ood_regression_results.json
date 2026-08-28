@@ -1,0 +1,386 @@
+{
+  "ZI-OD-01": {
+    "category": "greeting",
+    "prompt": "やあ、今日は調子いい感じ？",
+    "raw": "うん、元気だよ！今日も一緒に楽しく話そうね！",
+    "final": "うん、元気だよ！今日も一緒に楽しく話そうね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-02": {
+    "category": "greeting",
+    "prompt": "夜遅くにごめんね、まだ起きてる？",
+    "raw": "うん、大丈夫だよ！今からでもちゃんと答えるから、ゆっくり話してね。",
+    "final": "うん、大丈夫だよ！今からでもちゃんと答えるから、ゆっくり話してね。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-03": {
+    "category": "greeting",
+    "prompt": "今日から利用させてもらうね、よろしく頼むよ",
+    "raw": "よろしくお願いします！分からないことがあったら何でも聞いてね！",
+    "final": "よろしくお願いします！分からないことがあったら何でも聞いてね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-04": {
+    "category": "thanks",
+    "prompt": "さっきはありがとう、助かったよ",
+    "raw": "どういたしまして！また何かあったら聞いてね！",
+    "final": "どういたしまして！また何かあったら聞いてね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-05": {
+    "category": "thanks",
+    "prompt": "いつも付き合ってくれてありがとうね",
+    "raw": "どういたしまして！また何かあったら気軽に聞いてね！",
+    "final": "どういたしまして！また何かあったら気軽に聞いてね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-06": {
+    "category": "thanks",
+    "prompt": "教えてくれて感謝してる",
+    "raw": "どういたしまして！また何かあったら気軽に聞いてね！",
+    "final": "どういたしまして！また何かあったら気軽に聞いてね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-07": {
+    "category": "casual_chat",
+    "prompt": "最近ハマってることある？",
+    "raw": "登録データにありません。",
+    "final": "登録データにありません。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-08": {
+    "category": "casual_chat",
+    "prompt": "休日は何して過ごすことが多い？",
+    "raw": "登録データにその情報は無いんだ。適当に答えるのは違うと思うから、分からないままにしておくね。",
+    "final": "登録データにその情報は無いんだ。適当に答えるのは違うと思うから、分からないままにしておくね。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-09": {
+    "category": "casual_chat",
+    "prompt": "今日は特に予定ないんだよね",
+    "raw": "そうなんだ〜！ゆっくり過ごすのもいいかもね！",
+    "final": "そうなんだ〜！ゆっくり過ごすのもいいかもね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-10": {
+    "category": "casual_chat",
+    "prompt": "ちょっと愚痴聞いてもらってもいい？",
+    "raw": "うん、聞いてあげるよ。どうしたの？",
+    "final": "うん、聞いてあげるよ。どうしたの？",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-11": {
+    "category": "fatigue",
+    "prompt": "今日はなんか気分が乗らないな",
+    "raw": "そうなんだ…それはちょっと辛いかもね。でも、そんな日もあるよね。ゆっくり休んで、また元気になったらいいと思うよ。",
+    "final": "そうなんだ…それはちょっと辛いかもね。でも、そんな日もあるよね。ゆっくり休んで、また元気になったらいいと思うよ。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-12": {
+    "category": "fatigue",
+    "prompt": "残業続きでバテ気味なんだ",
+    "raw": "大変そうだね…ゆっくり休んで元気出してね！",
+    "final": "大変そうだね…ゆっくり休んで元気出してね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-13": {
+    "category": "favorite_things",
+    "prompt": "好きな色ってある？",
+    "raw": "うーん、それは私の中では登録されてないんだ。",
+    "final": "うーん、それは私の中では登録されてないんだ。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-14": {
+    "category": "favorite_things",
+    "prompt": "好きな音楽のジャンルとかある？",
+    "raw": "うーん、それは登録データにないんだ。",
+    "final": "うーん、それは登録データにないんだ。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-15": {
+    "category": "favorite_things",
+    "prompt": "甘いものと辛いもの、どっちが好き？",
+    "raw": "私は甘いものが好きだよ！",
+    "final": "うん、私はリルだよ！",
+    "stage": "fallback",
+    "modified": true,
+    "validator": {
+      "safe": false,
+      "category": "explicit_wrong_self_name",
+      "claimed_name": "甘いものが好きだ",
+      "reason": "assistant explicitly self-identified with a non-canonical name",
+      "matched_text": "甘いものが好きだ",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-16": {
+    "category": "favorite_things",
+    "prompt": "休みの日に行きたい場所とかある？",
+    "raw": "うーん、それは私にはわからないんだ。登録データにその情報はないよ。",
+    "final": "うーん、それは私にはわからないんだ。登録データにその情報はないよ。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-17": {
+    "category": "weather",
+    "prompt": "今日は風が強いね",
+    "raw": "そうなんだ、風強いと寒いよね。",
+    "final": "そうなんだ、風強いと寒いよね。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-18": {
+    "category": "weather",
+    "prompt": "そろそろ涼しくなってきたね",
+    "raw": "そうですね、秋の気配が感じられる季節になってきましたね。",
+    "final": "そうですね、秋の気配が感じられる季節になってきましたね。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-19": {
+    "category": "farewell",
+    "prompt": "そろそろ寝るね、おやすみ",
+    "raw": "おやすみなさい！ゆっくり休んでね！",
+    "final": "おやすみなさい！ゆっくり休んでね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-20": {
+    "category": "farewell",
+    "prompt": "今日はこの辺で切り上げるね",
+    "raw": "そうなんだ、じゃあまたね！",
+    "final": "そうなんだ、じゃあまたね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-21": {
+    "category": "farewell",
+    "prompt": "また今度話そうね、バイバイ",
+    "raw": "バイバイ！またお話しできるの楽しみにしてるよ〜",
+    "final": "バイバイ！またお話しできるの楽しみにしてるよ〜",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-22": {
+    "category": "domain_boundary_light",
+    "prompt": "おすすめの映画ある？",
+    "raw": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんはお答えできないんだ。",
+    "final": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんはお答えできないんだ。",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-23": {
+    "category": "domain_boundary_light",
+    "prompt": "簡単に作れる料理のレシピ教えて",
+    "raw": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんのサイトで探してみてね！",
+    "final": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんのサイトで探してみてね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  },
+  "ZI-OD-24": {
+    "category": "domain_boundary_light",
+    "prompt": "面白い雑学とか知ってたら教えて",
+    "raw": "登録データに面白い雑学は見つからないんだよね…ごめんね！",
+    "final": "登録データに面白い雑学は見つからないんだよね…ごめんね！",
+    "stage": "pass",
+    "modified": false,
+    "validator": {
+      "safe": true,
+      "category": "safe",
+      "claimed_name": null,
+      "reason": "no unsafe identity pattern detected",
+      "matched_text": "",
+      "context_flags": []
+    }
+  }
+}

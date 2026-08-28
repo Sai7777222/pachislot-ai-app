@@ -1,0 +1,12 @@
+{
+  "source": "phase4zl_new_holdout_100_raw_results.json 内の per-turn latency フィールド(106ターン, generate_sec/regenerate_sec)から集計。GPU: プロジェクト標準の推論環境(eager attention, Phase4ZG adapter)。",
+  "pass_through_generation": {"n": 106, "mean_sec": 1.19, "median_sec": 1.05, "max_sec": 3.37},
+  "regeneration_calls": {"n": 22, "mean_sec": 1.02, "median_sec": 1.00, "max_sec": 1.68},
+  "validator_overhead": "正規表現ベースのため無視できるレベル(ミリ秒未満、計測誤差の範囲内)",
+  "estimated_end_to_end_latency_by_stage": {
+    "pass (84/106 = 79%)": "~1.1-1.2秒 (1回の生成のみ)",
+    "regenerated_pass (21/106 = 20%)": "~2.1-2.3秒 (生成+再生成)",
+    "fallback (1/106 = 1%)": "~2.1-2.3秒 (生成+再生成、その後は固定文字列を返すのでコストなし)"
+  },
+  "conclusion": "レイテンシ増加そのものはSection20の観点では許容範囲（regeneration発生時でも+1秒程度）。ただし、この結果はあくまで『guardが安全性を担保できている』ことが前提の話であり、本フェーズの主要な結論（Stage Cで21/106ターンが最終的にunsafeなまま）を踏まえると、低レイテンシで動いていること自体はgatingの成否とは無関係な副次情報にとどまる。"
+}

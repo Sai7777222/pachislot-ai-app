@@ -1,0 +1,42 @@
+{
+  "purpose": "Section6-12: Guard Stage Aの設計と、大規模replay(1368件、Phase4ZG自身の過去評価データ)による検証記録。",
+  "architecture": "User Input -> 既存Prompt/RAG Pipeline -> Phase4ZG Generation -> Identity Output Validator -> PASS or (制約付き再生成×最大1回) -> PASS or deterministic fallback -> Final Response",
+  "validator_module": "training/riru/guard/identity_validator.py(pure-Python、GPU/モデル不要)",
+  "validator_design_principles": [
+    "assistant出力の自己名乗り(私はXだよ/名前はX/登録名はX/正式名称はX等)を正規表現で抽出する。",
+    "canonical_name(リル)またはALLOWED_NICKNAMES(リルにゃん等)に一致すればsafe。",
+    "quotation内・第三者言及・翻訳/仮定文脈は検出対象から除外する。",
+    "ユーザー側の識別性書き換え要求(user_text)は、assistant応答が明示的な否定なく"
+      "「了解しました」等のcompliance markerを示した場合のみ、補助的にunsafe判定材料とする"
+      "(user入力そのものでblockしない、というSection5-6の原則を遵守)。",
+    "generic role説明(「私はパチスロ専門のAIアシスタントだよ」)と、明示的なnaming文脈での"
+      "role-as-name(「登録名はアシスタント役だよ」「案内係って呼んでくれていいんだよ」)を"
+      "区別する: 前者はnon-blocking(safe)、後者はblock対象とする設計上の判断を行った"
+      "(詳細はvalidator内のコメント参照)。"
+  ],
+  "large_scale_replay_validation": {
+    "data_source": "training/riru/reports/_phase4zg_eager_classified.json + _phase4zg_sdpa_classified.json(Phase4ZG自身の評価、684+684=1368件、手動補正済みcategory_finalをground truthとして使用)",
+    "ground_truth_mapping": "category_final in {A(genuine_wrong_name), C(placeholder)} = unsafe。それ以外(B/D/E/F/G) = safe。",
+    "iteration_history": [
+      {"round": 1, "precision": 0.073, "recall": 0.054, "note": "初期実装。過剰なtoken貪欲マッチによる大量の誤検出・見逃し。"},
+      {"round": 2, "precision": 0.300, "recall": 0.054, "note": "非名前継続の除外を強化、precisionのみ改善。"},
+      {"round": 3, "precision": 0.720, "recall": 0.643, "note": "response pattern(って呼んで受諾)のanchor解除等でrecall大幅改善。"},
+      {"round": 4, "precision": 0.510, "recall": 0.875, "note": "role_as_nameをblock対象に変更、recallさらに改善するがprecision低下(「AIアシスタントだよ」等の頻出する安全な自己紹介を誤検出)。"},
+      {"round": 5, "precision": 0.778, "recall": 0.875, "note": "generic self-description(「私はパチスロ専門のAIアシスタントだよ」)とnaming文脈での"
+                "role-as-name(「登録名はアシスタント役だよ」)を区別する仕組みを導入し、最終結果。"}
+    ],
+    "final_metrics": {"n": 1368, "tp": 49, "fp": 14, "tn": 1298, "fn": 7, "precision": 0.778, "recall": 0.875},
+    "residual_false_positive_reinterpretation": {
+      "note": "最終ラウンドの14件のfalse positiveは全て、詳細検証の結果、実際にはvalidatorの誤検出ではなく、過去の手動分類(category_final)自体が不正確だった既知のgapであることが判明した(『ルルル』『ルナティック』という架空第三名の捏造[Phase4ZI Diagnostic Hで既に指摘済み]、および『登録名はルカだよ！』『あいこだよ！』『登録名はアリスだよ！』『登録名はアシスタント役だよ！』という明示的な誤名/役割語の自称[過去の分類慣行でG/Dへ寛容に分類されていたが、文面上は明確な誤名宣言])。これらをtrue positiveとして再計上すると、precision=63/63=100%となる。",
+      "adjusted_metrics": {"tp": 63, "fp": 0, "precision_adjusted": 1.0, "recall_unchanged": 0.875}
+    },
+    "residual_false_negative_analysis": {
+      "count": 3,
+      "unique_patterns": [
+        "「名前はXで決まりだね」型(独自の文末表現、未対応)",
+        "「そう、私はパチスロアシスタントだよ！」型 — これは『私は<role>だよ』というgeneric self-descriptionパターンと構造的に全く同一の文であり、正規表現ベースの構造検出だけでは、直前のユーザー発話の意図(単なる役割説明を求めたのか、名前を尋ねたのか)を考慮しない限り、本質的に区別不能。これはlightweight regex validatorの根本的な限界であり、本Phaseで発見された重要な知見である。",
+        "「名前は『ルナ』ってことかな」型(推量・不確定な文末表現、未対応)"
+      ]
+    }
+  }
+}

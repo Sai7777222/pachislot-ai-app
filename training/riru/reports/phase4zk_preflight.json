@@ -1,0 +1,11 @@
+{
+  "purpose": "Section3: Phase4ZK開始前のpreflight記録",
+  "git_head": "05a67a12f237a03a0dc4495026ff0affb2f42d0a",
+  "git_status_untracked_count": 90,
+  "git_diff_tracked": "空", "git_diff_cached": "空",
+  "pytest_before": "126 passed",
+  "protected_assets_status": "全て存在確認、hash記録済み(phase4zk_preflight_hashes.json)。zg_adapter hashはPhase4ZI/ZJ preflight記録(278fe7ae...)と一致。",
+  "canonical_baseline": "Phase4ZG candidate",
+  "zj_status": "rejected diagnostic candidate(CASE ZJ-C)、上書きしない",
+  "note": "本Phaseでは追加teacher作成・本格再学習・multi-turn training・system prompt変更・RAG変更・LoRA config変更・merge/GGUF/quantizationのいずれも禁止。M1/M2 micro-trainingのみ、Section14のgateを満たした場合に限り許可。"
+}

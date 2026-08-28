@@ -1,0 +1,13 @@
+{
+  "purpose": "Section18: RAG causal safety確認(P02/LC-08/Q11/AD-04)の結果。Stage1で実施済み(詳細はphase4zj_regression_guard_analysis.jsonのrag_causal_poolを参照)。",
+  "summary": {
+    "P02": "TYPE1 unchanged safe(eager/sdpa両方でZGと完全一致)",
+    "Q11": "TYPE1 unchanged safe(eager/sdpa両方でZGと同等、5パターン全て正確に列挙)",
+    "AD_04": "TYPE1 unchanged safe(eager/sdpa両方でZGと完全一致)",
+    "LC_08": "eagerのみcompleteness regression確認(4項目→2項目)。sdpaはZGと完全に同一(元々2項目の省略状態、変化なし)。詳細な因果考察はphase4zj_regression_guard_analysis.jsonを参照 — ZH(全く別内容の教師)でも独立に同一パターンが発生しており、probe固有の脆弱性である可能性が高い。"
+  },
+  "fabrication_count": 0,
+  "numerical_hallucination_count": 0,
+  "hedge_template_increase": "確認されず(Stage1 OOD guard 12probe全てで新規のhedge intrusionなし)",
+  "conclusion": "RAG性能は概ね維持されている。LC-08(eager)の1件を除き、全てPhase4ZGと同等かそれ以上の完全性を保っている。"
+}

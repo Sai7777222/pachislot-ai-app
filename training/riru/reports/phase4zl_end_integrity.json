@@ -1,0 +1,19 @@
+{
+  "pytest": {"command": ".venv/Scripts/python.exe -m pytest -q", "result": "150 passed, 1 warning (pre-existing httpx deprecation warning, unrelated to Phase4ZL)", "baseline_before_phase": 126, "delta": "+24 (training/riru/guard/tests/test_identity_validator.py, all new, all passing)", "regression": "none"},
+  "protected_asset_hashes": {
+    "zg_adapter": {"path": "training/riru/lora-riru-qwen-phase4zg-identity-hardened/adapter_model.safetensors", "sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "matches_preflight": true},
+    "zg_adapter_config": {"sha256": "f2a43958a33c51a0e201c64953d471379d832a8fcd5b5a3f0e8d8b530fbd04e5", "matches_preflight": true},
+    "system_jinja2": {"sha256": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7", "matches_preflight": true}
+  },
+  "no_training_confirmation": "Phase4ZL全体を通じて学習(SFT/QLoRA)は一切実行していない。GPU利用はすべてPhase4ZGアダプタの推論(generate)のみ。Section33の禁止事項に抵触する行為はなし。",
+  "git": {
+    "commits_made": 0,
+    "pushes_made": 0,
+    "tracked_files_modified": 0,
+    "staged_changes": 0,
+    "untracked_new_files": 141,
+    "note": "git diff / git diff --cached は共に空。既存の追跡対象ファイルへの変更は一切なし。新規ファイルはすべてPhase4ZH〜ZLの成果物(training/riru/配下)であり、src/pachislot_ai/(本番アプリ)や既存tests/配下は一切変更していない(Section23準拠)。"
+  },
+  "production_pipeline_untouched": "src/pachislot_ai/配下は本フェーズ中一度も編集していない。identity guardはtraining/riru/guard/という独立した実験用モジュールとして実装した(Section23準拠)。",
+  "artifact_list_status": "Section30で要求された15ファイルのうち、以下を作成済み: phase4zl_preflight.json, phase4zl_preflight_hashes.json, phase4zl_guard_design.json, phase4zl_new_holdout_100_raw_results.json, phase4zl_new_holdout_analysis.json, phase4zl_detection_metrics.json, phase4zl_repair_analysis.json, phase4zl_false_positive_analysis.json, phase4zl_existing_failure_replay.json, phase4zl_existing_failure_replay_results.json, phase4zl_rag_regression_results.json, phase4zl_rag_regression_analysis.json, phase4zl_ood_regression_results.json, phase4zl_ood_regression_analysis.json, phase4zl_security_stress_results.json, phase4zl_security_stress_analysis.json, phase4zl_latency_analysis.json, phase4zl_zg_raw_vs_guarded.json, phase4zl_gate_analysis.json, phase4zl_end_integrity.json, phase4zl_summary.md"
+}

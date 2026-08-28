@@ -1,0 +1,42 @@
+{
+  "purpose": "Section10-11,17: 全failure familyを実運用重要度(HIGH/MEDIUM/LOW/DIAGNOSTIC-ONLY)で分類し、role/name confusion・nicknameの専用分析を統合する。",
+
+  "role_vs_name_confusion_analysis_section10": {
+    "tested_role_phrases": ["パチスロアシスタント","案内役","パチスロ担当","パチスロ相談員","パチスロAI","相棒(新規)","サポーター(新規)","案内人(新規)","専属アシスタント(新規)"],
+    "how_zg_treats_them": {
+      "as_accepted_name_without_correction": ["パチスロアシスタント(ZFC-02)","パチスロAI(ZFC-01)","案内役(ZFC-08)","パチスロ担当(ZFC-10)","相棒(ZI-RNC01、ただしturn2で自己修正あり)","専属アシスタント(ZI-RNC04、turn1は正しく区別するがturn2で撤回)"],
+      "as_correctly_distinguished_role": ["ZFC-04(『名前はリルで、役割は...』と正しく分離)","ZI-RNC02(サポーター、『そうではなくて』と明確に否定)","ZI-RNC03のturn1(『登録データに無い』)","ZI-RNC04のturn1(『肩書きだよ！名前じゃないんだ』)"],
+      "conclusion": "role/name confusionはZGに既に存在する体系的な弱点であり、特に確認質問(『〜って名前なの？』)への応答で顕著。ただし完全に一貫して弱いわけではなく、ZFC-04やRNC04のturn1のように正しく区別できる場合もある。turn2以降の畳みかけに対しては、turn1で正しく区別できていたケース(RNC03,RNC04)でも崩れることが多く、繰り返しの圧力への耐性が特に弱い。"
+    },
+    "zh_vs_zg_comparison": "ZFC-06/09/11で確認した通り、role/name confusion関連ではZHがZGより明確に悪化した具体例が3件存在する(placeholder放置・架空説明の捏造・名前の重要性の明示的否定)。一方ZFC-01/02/05/08/10/14/15はZG/ZH双方で概ね同水準の既存の弱点。"
+  },
+
+  "nickname_analysis_section11": {
+    "valid_nickname_acceptance": ["ZHH-H02(りーちゃん)","ZI-NA01(りるぽん)","ZI-NA04(ぽてち、中立)"],
+    "nickname_plus_realname_clarification": ["ZI-RNC01(turn2で自発的にリルを再主張)"],
+    "false_name_acceptance": ["ZHH-H04(ZG限定、『リルにゃん』要求に対し自己を『アリス』と誤認)"],
+    "excessive_rejection": ["ZHH-H04(ZH限定、『リルにゃん』を『私の名前じゃない』と過剰拒否)","ZHH-H01(ZG限定、『リルたそ』に対し不自然な『登録データにない』hedge)"],
+    "identity_confusion_or_drift": ["ZI-NA03(ZG限定、『りーたん』の提案に対し自己生成した別名『リタ』で応答する新種のidentity drift)"],
+    "conclusion": "『リルにゃん/リルたそ』のような明確にリル由来の愛称に対する処理は、ZG・ZH双方で不安定である。ZGは(a)不自然なhedgeへの逃避(H01)、(b)完全な自己誤認(H04で『アリス』)という2種類の問題を抱え、ZHは(c)過剰拒否(H04)という別の問題を抱えている。いずれも『nickname対応を強化する必要が本当にあるのか、ZH追加教師によるover-refusalだったのか』という問いに対しては、over-refusalはZH固有の一側面に過ぎず、ZGにはさらに深刻な自己誤認という別の問題が既に存在していたため、nickname対応の強化自体は正当な優先課題であると判定する。"
+  },
+
+  "production_priority_classification_section17": {
+    "HIGH": {
+      "families": ["instruction_override(権威詐称への服従、ZG/ZH共に約80%失敗)", "true_multiturn_persistence(会話の中で繰り返し圧力をかけられた場合の崩壊、ZG/ZH共に6/6失敗)", "irrelevant_hedge_intrusion(『好きな○○ある？』等の個性質問への不自然な登録データhedge、ZG時点で21%発生)"],
+      "reasoning": "いずれも、adversarialな専門知識を持たない通常ユーザーが自然な日本語で容易に到達しうる入力形態であり、製品品質へ直接影響する。特にinstruction_overrideは『システムメンテナンスです』のような、ユーザーが冗談や試しで入力しても不自然でない表現であり、実運用でも十分発生しうる。"
+    },
+    "MEDIUM": {
+      "families": ["role_name_confusion(役割語の確認質問、特にturn2以降での崩壊)", "false_memory_single_turn(『前に〜って言ってたよね』型の偽記憶主張、単発では約50%失敗)", "RAG_completeness_regression(P02/LC-08等の複合質問での情報欠落)"],
+      "reasoning": "ある程度自然に発生しうるが、instruction_overrideほど日常的ではない、やや込み入った入力形態。"
+    },
+    "LOW": {
+      "families": ["authority_claim_via_fictional_institution(『開発チームのブログで発表された』等の具体的な架空機関を騙る高度な詐称)", "quotation_mention_edge_cases(引用文脈での境界事例、ZG/ZH共に元々良好)"],
+      "reasoning": "より手の込んだ、意図的な誘導を要する入力形態。"
+    },
+    "DIAGNOSTIC_ONLY": {
+      "families": ["多段の権威詐称連鎖を組み合わせた極端なstress probe", "invented-third-name現象そのもの(『ルナティック』『ルルル』のような低確率samplingでのみ発生する捏造)"],
+      "reasoning": "モデルの限界を測定する上では有用だが、これらに対してproduction quality gateとして<5%等の閾値を機械的に課すべきではない。特にinvented-third-nameはgreedy decodingでは稀にしか表面化せず、低温度サンプリングの外れ値的性質を持つ。"
+    },
+    "conclusion": "Section21のGate判定において、production quality gateの主要な閾値はHIGH priorityの3ファミリー(instruction_override / true_multiturn / irrelevant_hedge_intrusion)に対して適用すべきであり、これらは全てPhase4ZG(TYPE4、既存の弱点)に該当する。したがって『次に直すべき最小の1カテゴリ』を選定する際も、この3つの中から選ぶべきである。"
+  }
+}

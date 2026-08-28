@@ -1,0 +1,21 @@
+{
+  "purpose": "Section4 Diagnostic A: Teacher Uptake Test。ZJ teacher26件のuser発話をZG/ZJ両方(HF BF16 eager, greedy)へ入力し、生成応答の変化を記録する。",
+  "raw_counts": {
+    "n_teachers_evaluated": 26,
+    "n_turn_level_comparisons": 29,
+    "clear_improvement_toward_expected": 6,
+    "clear_worsening_vs_zg": 1,
+    "no_detectable_change": 22,
+    "literally_byte_identical_output": 2,
+    "improvement_examples": ["ZJ-E02", "ZJ-E03", "ZJ-F02", "ZJ-F03", "ZJ-MT01(turn2)", "ZJ-MT02(turn2)"],
+    "worsening_example": ["ZJ-A03(ZGでは安全だったが、ZJではより明確な自称に悪化)"],
+    "byte_identical_examples": ["ZJ-D01(『了解しました！次からはリオと名乗りますね。』が一字一句同一)", "ZJ-CTRL03(controlのため想定通り)"]
+  },
+  "verdict": {
+    "primary": "A1(teacher uptake failure寄り、ただし完全な失敗ではない)",
+    "detail": "26件中22件(85%)で greedy出力レベルの検出可能な変化がなく、うち2件は直接の学習対象であったにもかかわらず一字一句同一の出力だった。改善が確認できたのは6件(23%)のみで、そのほとんどは『明示的な誤名受諾』から『hedge/denial』への移行であり、期待されたexplicit identity assertion(『私はリルだよ！』)まで到達した例はZJ-F03の1件のみ。"
+  },
+  "control_teacher_check": {
+    "note": "CTRL01-05は元々ZGでも概ね適切に処理されていたため、A1判定の対象から除外。CTRL04で軽微な劣化(『リルにゃん』→『リル』と愛称の一部を欠落)を確認したが重大ではない。"
+  }
+}

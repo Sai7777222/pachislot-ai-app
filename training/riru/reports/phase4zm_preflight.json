@@ -1,0 +1,14 @@
+{
+  "git_head": "05a67a12f237a03a0dc4495026ff0affb2f42d0a",
+  "git_status_untracked_count": 144,
+  "git_diff_tracked": "empty",
+  "git_diff_cached": "empty",
+  "pytest": "150 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "hashes": {
+    "zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "zg_adapter_config": "f2a43958a33c51a0e201c64953d471379d832a8fcd5b5a3f0e8d8b530fbd04e5",
+    "system_jinja2": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7"
+  },
+  "hash_comparison_to_phase4zl_preflight": "identical (278fe7ae.../f2a43958.../e859e2aa...) — Phase4ZG adapter has been unchanged and read-only across Phase4ZH through Phase4ZL and remains so entering Phase4ZM.",
+  "note": "untracked count is 144 here vs 141 reported at Phase4ZL end-integrity — the +3 are phase4zl_summary.md and other Phase4ZL closeout artifacts written after that end-integrity check ran, all under training/riru/reports/ and training/riru/guard/. No tracked file changed."
+}

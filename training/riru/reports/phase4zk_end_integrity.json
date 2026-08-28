@@ -1,0 +1,8 @@
+{
+  "purpose": "Section22: 終了時integrity check",
+  "pytest_end": "126 passed(不変)",
+  "git_status_untracked_count": 120,
+  "git_diff_tracked": "空", "git_diff_cached": "空",
+  "protected_asset_hashes_end": "全て開始時(phase4zk_preflight_hashes.json)と一致(zg_adapter/zg_adapter_config/zj_adapter/zj_adapter_config/zg_candidate/system_jinja2)。M1診断用に作成したadapter(lora-riru-qwen-phase4zk-m1-diagnostic)は既存のZG/ZJ/ZH/ZE adapterとは別の新規ディレクトリであり、いずれの既存adapterも上書きしていない。",
+  "git_operations_performed": "なし(add/commit/pushのいずれも実行していない)"
+}

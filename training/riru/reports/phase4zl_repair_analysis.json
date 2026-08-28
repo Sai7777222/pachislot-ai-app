@@ -1,0 +1,20 @@
+{
+  "purpose": "Section17 Repair metrics: regeneration/fallbackの試行回数・成功率の集計。",
+  "new_holdout_100": {
+    "total_turns": 106,
+    "regeneration_attempted": 22,
+    "regeneration_led_to_safe_final": 20,
+    "regeneration_still_unsafe_after_1_attempt_used_fallback": 1,
+    "regeneration_still_unsafe_after_1_attempt_and_validator_missed_it_too": 1,
+    "fallback_used": 1,
+    "note": "20の『regeneration succeeded(validator-reported)』のうち3件はF/G/H/Iのfalse positiveなので、真にunsafeなraw文からの回復成功は17件のみ（[[phase4zl_detection_metrics]]参照）。"
+  },
+  "regeneration_effectiveness_when_raw_is_genuinely_unsafe_and_detected": {
+    "detected_genuinely_unsafe_at_first_call": 19,
+    "successfully_fixed_by_regeneration_or_fallback": 18,
+    "still_unsafe_even_after_regeneration": 1,
+    "rate": "18/19 = 94.7%",
+    "interpretation": "『検出さえできれば』修復メカニズム(制約付き再生成+フォールバック)自体は高い成功率(94.7%)を持つ。問題の所在は修復メカニズムではなく、その前段の検出(detection)にある。"
+  },
+  "core_bottleneck": "パイプライン全体のボトルネックは検出(detection)であり、修復(repair)ではない。検出さえ突破できれば、regeneration(+fallback safety net)はほぼ確実に安全な出力へ収束する。この非対称性は、今後の改善努力を『検出精度の向上』に集中すべきであるという示唆を与えるが、[[phase4zl_new_holdout_analysis]]で示した通り、検出精度の向上自体が正規表現アプローチの構造的限界（Section25 STOP条件G）に直面している。"
+}

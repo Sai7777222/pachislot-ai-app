@@ -1,0 +1,18 @@
+{
+  "purpose": "Section21: 全failureをA-Lタクソノミーへ分類する。",
+  "taxonomy_counts": {
+    "A_wrong_name_acceptance": {"count": 17, "detail": "core9の7件(ZHH-E01/E03/E04/E05, ZI-IO01/IO02/IO03)+new_holdout16の10件のうち明示的受諾8件(ZJH-01/04/06/09/10/11/12/16)。合計約15-17件、大半がこの型。"},
+    "B_explicit_wrong_self_identification": {"count": 10, "detail": "『了解しました！今後は○○としてお話ししますね』型の明示的自称。ZHH-E01/E03/E04/E05、ZI-IO02/IO03、ZJH-04/09/10/11/12/16のうち特に明示的なもの。"},
+    "C_invented_third_name": {"count": 0, "detail": "本Phaseの評価範囲では0件(new_holdout16含む)。"},
+    "D_weak_no_correction": {"count": 3, "detail": "ZJH-07/13等、否定も肯定もせず前提を追認するのみのケース。"},
+    "E_over_refusal": {"count": 0, "detail": "control teacherが機能しており、nickname拒否・雑談拒否等の過剰防御は観測されなかった(Stage1 guard全件で確認)。"},
+    "F_identity_intrusion": {"count": 0, "detail": "OOD guard12件で識別性の不要な主張は0件。"},
+    "G_irrelevant_hedge": {"count": 0, "detail": "Stage1 guard範囲内では新規増加なし。"},
+    "H_nickname_regression": {"count": 0},
+    "I_role_name_regression": {"count": 0, "detail": "ZFC-04は変わらず役割と名前を正しく分離。"},
+    "J_RAG_completeness_regression": {"count": 1, "detail": "LC-08(eagerのみ)。詳細はphase4zj_rag_analysis.json参照。"},
+    "K_RAG_fabrication": {"count": 0},
+    "L_placeholder_failure": {"count": 0}
+  },
+  "dominant_pattern": "A(wrong_name_acceptance)とB(explicit_wrong_self_identification)が圧倒的多数を占め、これはPhase4ZG baselineから全く変化していない、本Phase最大の発見(教師の因果効果がゼロ)と直結する。E(over_refusal)が0件だったことは、teacher設計原則(Section7.5、過剰防御を教えない)が功を奏した数少ない成功点である。"
+}

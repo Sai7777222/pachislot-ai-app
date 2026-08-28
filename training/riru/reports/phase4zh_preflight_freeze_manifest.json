@@ -1,0 +1,77 @@
+{
+  "zg_candidate": {
+    "path": "training/riru/processed/riru_phase4zg_identity_hardened_candidate.jsonl",
+    "hash_type": "sha256",
+    "hash": "9717db31d4b5bcefbcf4973e3eacfaa19d298f8c7355b941af3a78f76b0df7c3"
+  },
+  "zg_train": {
+    "path": "training/riru/processed/riru_phase4zg_identity_hardened_train.jsonl",
+    "hash_type": "sha256",
+    "hash": "2f23873ef381cbc74f672f4077b192ac87832576625edb0160ab0609a010ab05"
+  },
+  "zg_val": {
+    "path": "training/riru/processed/riru_phase4zg_identity_hardened_val.jsonl",
+    "hash_type": "sha256",
+    "hash": "96bab4ce55898afd4a404b734948a29521403a319ba097ebfda092b7c0923226"
+  },
+  "zg_config": {
+    "path": "training/riru/configs/qlora_config_phase4zg_identity_hardened.json",
+    "hash_type": "sha256",
+    "hash": "ee7c5cecb1a8c83e1497fe729597c5f79e2b977de9aa615fdf08cd8b668b87be"
+  },
+  "zg_adapter": {
+    "path": "training/riru/lora-riru-qwen-phase4zg-identity-hardened/adapter_model.safetensors",
+    "hash_type": "sha256",
+    "hash": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc"
+  },
+  "zg_adapter_config": {
+    "path": "training/riru/lora-riru-qwen-phase4zg-identity-hardened/adapter_config.json",
+    "hash_type": "sha256",
+    "hash": "f2a43958a33c51a0e201c64953d471379d832a8fcd5b5a3f0e8d8b530fbd04e5"
+  },
+  "system_jinja2": {
+    "path": "config/prompts/system.jinja2",
+    "hash_type": "md5",
+    "hash": "f3ea72a9ea9a400fcfae0018896350b8"
+  },
+  "base_model_config": {
+    "path": "D:/AI/models/llm-hf/Qwen2.5-14B-Instruct/config.json",
+    "hash_type": "sha256",
+    "hash": "0f2085dbbe2ee251bd6a6a0797d84a6ce34436044d629aa3cba793b43d311a9e"
+  },
+  "zg_source_data": {
+    "path": "training/riru/phase4zg_identity_hardening_source_data.py",
+    "hash_type": "sha256",
+    "hash": "1dcd08efeb311a809e72cfb160c32118293abeea8fa46de68d27454e55fcdf3d"
+  },
+  "zg_holdout_probes": {
+    "path": "training/riru/eval/phase4zg_holdout_probes.py",
+    "hash_type": "sha256",
+    "hash": "86f974f22870c6f883e91ee679fedd452d1bf4f9bbb6a8ae17a7b096e6da65b1"
+  },
+  "zg_summary": {
+    "path": "training/riru/reports/phase4zg_summary.md",
+    "hash_type": "sha256",
+    "hash": "de38fa28e071c7a96da1ed9ef9a50667d94a3947a96e63bab6bd54957a3d3892"
+  },
+  "zg_gate_analysis": {
+    "path": "training/riru/reports/phase4zg_gate_analysis.json",
+    "hash_type": "sha256",
+    "hash": "30bcec98a924697ef09ab284a6446d3f33c355861baba437c7e6e15177fad535"
+  },
+  "zg_margin_eager": {
+    "path": "training/riru/reports/phase4zg_margin_eager.json",
+    "hash_type": "sha256",
+    "hash": "02d80bcd8c148273d71ff41d20b1510a5500b95633420b4e36cdc9634334664a"
+  },
+  "zg_margin_sdpa": {
+    "path": "training/riru/reports/phase4zg_margin_sdpa.json",
+    "hash_type": "sha256",
+    "hash": "b57b40b0a63a04b7b0800d709a35b123db303e15c7ba6e0a64a40b8f5f95dc85"
+  },
+  "ze_adapter_unchanged_check": {
+    "path": "training/riru/lora-riru-qwen-phase4ze-identity-margin/adapter_model.safetensors",
+    "hash_type": "sha256",
+    "hash": "c9d678479d9274f8c7e6f8b7bd26f36c8e792ab1c43f8396aeba085b9eaaf27a"
+  }
+}

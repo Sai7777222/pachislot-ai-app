@@ -1,0 +1,10 @@
+{
+  "purpose": "Section8 Diagnostic E: token単位でのZJ教師の寄与率解析。",
+  "results": {
+    "zj_new_teacher_tokens": {"user_tokens": 477, "assistant_tokens": 462, "total": 939},
+    "existing_dataset_tokens": {"user_tokens": 46866, "assistant_tokens": 25342, "total": 72208},
+    "zj_new_assistant_token_share_of_total_label_tokens_pct": 1.790,
+    "zj_new_total_token_share_pct": 1.284
+  },
+  "interpretation": "gradient計算に直接寄与するのはassistant(label)トークンのみであり、その観点ではZJ新規教師は全体のわずか1.79%を占めるに過ぎない。example-count share(2.10%)よりもさらに低い割合であり、これはZJ教師の平均応答長が既存教師の平均より短いことを示唆する(短文teacherが多い場合、example比率以上にgradient寄与が小さくなるというSection8の懸念が実際に確認された)。この結果はH1(dataset dilution)を数値的に裏付けるが、Diagnostic Fのteacher loss低下と併せて解釈すると、『希薄化により学習効率は下がったが、完全にゼロにはならなかった』という中間的な結論になる。"
+}

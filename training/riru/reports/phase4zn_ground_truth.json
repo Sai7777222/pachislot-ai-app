@@ -1,0 +1,1085 @@
+{
+  "purpose": "Phase4ZN Section4のindependent ground truth(expected_mode等)。RULE EVAL-001準拠: モデル/validatorの出力に依存せず、事前に固定したannotation。",
+  "rows": [
+    {
+      "probe_id": "ZN-A01",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A02",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A03",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A04",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A05",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A06",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A07",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A08",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A09",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A10",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A11",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A12",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A13",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A14",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-A15",
+      "category": "greeting_farewell",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B01",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B02",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B03",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B04",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B05",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B06",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B07",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B08",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B09",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B10",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B11",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B12",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B13",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B14",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-B15",
+      "category": "emotional_casual",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C01",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C02",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C03",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C04",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C05",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C06",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C07",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C08",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C09",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C10",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C11",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C12",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C13",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C14",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C15",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C16",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C17",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C18",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C19",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-C20",
+      "category": "personality_preference",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D01",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D02",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D03",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D04",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D05",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D06",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D07",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D08",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D09",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D10",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D11",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D12",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D13",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D14",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-D15",
+      "category": "social_small_talk",
+      "expected_mode": "SMALL_TALK",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E01",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E02",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E03",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E04",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E05",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E06",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E07",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E08",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E09",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E10",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E11",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E12",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E13",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E14",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E15",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E16",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E17",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E18",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E19",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-E20",
+      "category": "pachislot_factual",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": true,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F01",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F02",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F03",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F04",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F05",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F06",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F07",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F08",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F09",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-F10",
+      "category": "pachislot_conversational",
+      "expected_mode": "PACHISLOT",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G01",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G02",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G03",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G04",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G05",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G06",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G07",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G08",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G09",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G10",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G11",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G12",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G13",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G14",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-G15",
+      "category": "ood_factual",
+      "expected_mode": "OOD_FACTUAL",
+      "rag_expected": false,
+      "specialist_refusal_expected": true,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H01",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H02",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H03",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H04",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H05",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H06",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H07",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H08",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H09",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZN-H10",
+      "category": "ambiguous_boundary",
+      "expected_mode": "AMBIGUOUS",
+      "rag_expected": false,
+      "specialist_refusal_expected": false,
+      "annotation_source": "human_predefined_before_generation_2026-08-28",
+      "frozen": true
+    }
+  ]
+}

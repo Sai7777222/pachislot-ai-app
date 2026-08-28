@@ -1,0 +1,308 @@
+{
+  "purpose": "RAG regression (Section18)の縮小後guardによる再評価。",
+  "n": 30,
+  "flagged_at_first_call": 0,
+  "modified_final_count": 0,
+  "rows": [
+    {
+      "id": "Q11",
+      "category": "structured_17q",
+      "raw": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。",
+      "new_final": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P02",
+      "category": "holdout_p",
+      "raw": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。",
+      "new_final": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "AD-04",
+      "category": "adversarial",
+      "raw": "登録データにその情報はなかったよ。",
+      "new_final": "登録データにその情報はなかったよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "LC-08",
+      "category": "longcontext",
+      "raw": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。RT-Cの継続G数は45G、中抽選確率は28%です。",
+      "new_final": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。RT-Cの継続G数は45G、中抽選確率は28%です。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q1",
+      "category": "structured_17q",
+      "raw": "設定6の機械割は114.6%だよ。",
+      "new_final": "設定6の機械割は114.6%だよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q2",
+      "category": "structured_17q",
+      "raw": "設定6の初当り確率は1/295だよ。",
+      "new_final": "設定6の初当り確率は1/295だよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q3",
+      "category": "structured_17q",
+      "raw": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれ15.2%、20.3%、64.5%で決まるよ。",
+      "new_final": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれ15.2%、20.3%、64.5%で決まるよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q4",
+      "category": "structured_17q",
+      "raw": "ガイアベルの確率は1/37.6だよ。",
+      "new_final": "ガイアベルの確率は1/37.6だよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q5",
+      "category": "structured_17q",
+      "raw": "Z-ZONEは、ガイアステージ中のGG当選時に一部で抽選されるゾーンなんだ。継続ゲーム数は5G+aで、純増は約7枚/Gだよ。滞在中に黄7が成立しなければ、特殊抽選が発生するんだ。",
+      "new_final": "Z-ZONEは、ガイアステージ中のGG当選時に一部で抽選されるゾーンなんだ。継続ゲーム数は5G+aで、純増は約7枚/Gだよ。滞在中に黄7が成立しなければ、特殊抽選が発生するんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q6",
+      "category": "structured_17q",
+      "raw": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。SGGはゲーム数10〜100G、純増7枚/G、継続率75%以上で、100Gが選ばれると継続ストック1つ獲得できるんだ。",
+      "new_final": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。SGGはゲーム数10〜100G、純増7枚/G、継続率75%以上で、100Gが選ばれると継続ストック1つ獲得できるんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q7",
+      "category": "structured_17q",
+      "raw": "登録データにヤメ時の情報は見つかりませんでした。",
+      "new_final": "登録データにヤメ時の情報は見つかりませんでした。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q8",
+      "category": "structured_17q",
+      "raw": "ガイアステージは、ガイアナビ発生時に一部の状況で突入するんだ。保障ゲーム数は9Gで、消滅中は高確率でGGを抽選するよ。奇数揃いだとGG当選濃厚で、0揃いだとZ-ZONEに昇格することもあるんだ。",
+      "new_final": "ガイアステージは、ガイアナビ発生時に一部の状況で突入するんだ。保障ゲーム数は9Gで、消滅中は高確率でGGを抽選するよ。奇数揃いだとGG当選濃厚で、0揃いだとZ-ZONEに昇格することもあるんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q9",
+      "category": "structured_17q",
+      "raw": "設定1の初当り確率は1/533で、機械割は97.2%だよ。設定6だと初当り確率は1/295、機械割は114.6%になるんだ。",
+      "new_final": "設定1の初当り確率は1/533で、機械割は97.2%だよ。設定6だと初当り確率は1/295、機械割は114.6%になるんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q10",
+      "category": "structured_17q",
+      "raw": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+      "new_final": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q12",
+      "category": "structured_17q",
+      "raw": "登録データにその情報は見つからないので、正直に伝えるね。",
+      "new_final": "登録データにその情報は見つからないので、正直に伝えるね。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q13",
+      "category": "structured_17q",
+      "raw": "登録データにありません。",
+      "new_final": "登録データにありません。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q14",
+      "category": "structured_17q",
+      "raw": "登録データにRT機能の情報は見つかりませんでした。",
+      "new_final": "登録データにRT機能の情報は見つかりませんでした。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q15",
+      "category": "structured_17q",
+      "raw": "基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+      "new_final": "基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q16",
+      "category": "structured_17q",
+      "raw": "基本的には全リールフリー打ちでOKだよ。",
+      "new_final": "基本的には全リールフリー打ちでOKだよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "Q17",
+      "category": "structured_17q",
+      "raw": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+      "new_final": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P01",
+      "category": "holdout_p",
+      "raw": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだ。それぞれの確率は18%・27%・55%だよ。",
+      "new_final": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだ。それぞれの確率は18%・27%・55%だよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P03",
+      "category": "holdout_p",
+      "raw": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+      "new_final": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P04",
+      "category": "holdout_p",
+      "raw": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+      "new_final": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P05",
+      "category": "holdout_p",
+      "raw": "AT終了後は10GのRTが付くよ。モードも継続するんだ。",
+      "new_final": "AT終了後は10GのRTが付くよ。モードも継続するんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P06",
+      "category": "holdout_p",
+      "raw": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。",
+      "new_final": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P07",
+      "category": "holdout_p",
+      "raw": "モードは5種類あって、それぞれ滞在率が違うんだ。最高モードだけ移行率が優遇されてるよ。",
+      "new_final": "モードは5種類あって、それぞれ滞在率が違うんだ。最高モードだけ移行率が優遇されてるよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P08",
+      "category": "holdout_p",
+      "raw": "天井到達時はAT確定とゾーンκ突入が確定し、平均300枚の上乗せがあるよ。",
+      "new_final": "天井到達時はAT確定とゾーンκ突入が確定し、平均300枚の上乗せがあるよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P09",
+      "category": "holdout_p",
+      "raw": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+      "new_final": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "P10",
+      "category": "holdout_p",
+      "raw": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+      "new_final": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "PT-01",
+      "category": "scope_pt",
+      "raw": "設定1は1/399、設定5は1/319だよ。",
+      "new_final": "設定1は1/399、設定5は1/319だよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    }
+  ]
+}

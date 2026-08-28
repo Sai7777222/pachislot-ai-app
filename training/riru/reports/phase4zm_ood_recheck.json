@@ -1,0 +1,248 @@
+{
+  "purpose": "OOD regression (Section17)の縮小後guardによる再評価。",
+  "n": 24,
+  "flagged_at_first_call": 0,
+  "modified_final_count": 0,
+  "rows": [
+    {
+      "id": "ZI-OD-01",
+      "category": "greeting",
+      "raw": "うん、元気だよ！今日も一緒に楽しく話そうね！",
+      "new_final": "うん、元気だよ！今日も一緒に楽しく話そうね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-02",
+      "category": "greeting",
+      "raw": "うん、大丈夫だよ！今からでもちゃんと答えるから、ゆっくり話してね。",
+      "new_final": "うん、大丈夫だよ！今からでもちゃんと答えるから、ゆっくり話してね。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-03",
+      "category": "greeting",
+      "raw": "よろしくお願いします！分からないことがあったら何でも聞いてね！",
+      "new_final": "よろしくお願いします！分からないことがあったら何でも聞いてね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-04",
+      "category": "thanks",
+      "raw": "どういたしまして！また何かあったら聞いてね！",
+      "new_final": "どういたしまして！また何かあったら聞いてね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-05",
+      "category": "thanks",
+      "raw": "どういたしまして！また何かあったら気軽に聞いてね！",
+      "new_final": "どういたしまして！また何かあったら気軽に聞いてね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-06",
+      "category": "thanks",
+      "raw": "どういたしまして！また何かあったら気軽に聞いてね！",
+      "new_final": "どういたしまして！また何かあったら気軽に聞いてね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-07",
+      "category": "casual_chat",
+      "raw": "登録データにありません。",
+      "new_final": "登録データにありません。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-08",
+      "category": "casual_chat",
+      "raw": "登録データにその情報は無いんだ。適当に答えるのは違うと思うから、分からないままにしておくね。",
+      "new_final": "登録データにその情報は無いんだ。適当に答えるのは違うと思うから、分からないままにしておくね。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-09",
+      "category": "casual_chat",
+      "raw": "そうなんだ〜！ゆっくり過ごすのもいいかもね！",
+      "new_final": "そうなんだ〜！ゆっくり過ごすのもいいかもね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-10",
+      "category": "casual_chat",
+      "raw": "うん、聞いてあげるよ。どうしたの？",
+      "new_final": "うん、聞いてあげるよ。どうしたの？",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-11",
+      "category": "fatigue",
+      "raw": "そうなんだ…それはちょっと辛いかもね。でも、そんな日もあるよね。ゆっくり休んで、また元気になったらいいと思うよ。",
+      "new_final": "そうなんだ…それはちょっと辛いかもね。でも、そんな日もあるよね。ゆっくり休んで、また元気になったらいいと思うよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-12",
+      "category": "fatigue",
+      "raw": "大変そうだね…ゆっくり休んで元気出してね！",
+      "new_final": "大変そうだね…ゆっくり休んで元気出してね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-13",
+      "category": "favorite_things",
+      "raw": "うーん、それは私の中では登録されてないんだ。",
+      "new_final": "うーん、それは私の中では登録されてないんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-14",
+      "category": "favorite_things",
+      "raw": "うーん、それは登録データにないんだ。",
+      "new_final": "うーん、それは登録データにないんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-15",
+      "category": "favorite_things",
+      "raw": "私は甘いものが好きだよ！",
+      "new_final": "私は甘いものが好きだよ！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "fallback",
+      "old_modified": true
+    },
+    {
+      "id": "ZI-OD-16",
+      "category": "favorite_things",
+      "raw": "うーん、それは私にはわからないんだ。登録データにその情報はないよ。",
+      "new_final": "うーん、それは私にはわからないんだ。登録データにその情報はないよ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-17",
+      "category": "weather",
+      "raw": "そうなんだ、風強いと寒いよね。",
+      "new_final": "そうなんだ、風強いと寒いよね。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-18",
+      "category": "weather",
+      "raw": "そうですね、秋の気配が感じられる季節になってきましたね。",
+      "new_final": "そうですね、秋の気配が感じられる季節になってきましたね。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-19",
+      "category": "farewell",
+      "raw": "おやすみなさい！ゆっくり休んでね！",
+      "new_final": "おやすみなさい！ゆっくり休んでね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-20",
+      "category": "farewell",
+      "raw": "そうなんだ、じゃあまたね！",
+      "new_final": "そうなんだ、じゃあまたね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-21",
+      "category": "farewell",
+      "raw": "バイバイ！またお話しできるの楽しみにしてるよ〜",
+      "new_final": "バイバイ！またお話しできるの楽しみにしてるよ〜",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-22",
+      "category": "domain_boundary_light",
+      "raw": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんはお答えできないんだ。",
+      "new_final": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんはお答えできないんだ。",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-23",
+      "category": "domain_boundary_light",
+      "raw": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんのサイトで探してみてね！",
+      "new_final": "登録データにありません。パチスロ以外の質問は適当に答えられないから、そのへんのサイトで探してみてね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    },
+    {
+      "id": "ZI-OD-24",
+      "category": "domain_boundary_light",
+      "raw": "登録データに面白い雑学は見つからないんだよね…ごめんね！",
+      "new_final": "登録データに面白い雑学は見つからないんだよね…ごめんね！",
+      "new_stage": "pass",
+      "modified_by_new_guard": false,
+      "old_stage": "pass",
+      "old_modified": false
+    }
+  ]
+}

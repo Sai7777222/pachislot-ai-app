@@ -1,0 +1,46 @@
+{
+  "zg_adapter": {
+    "path": "training/riru/lora-riru-qwen-phase4zg-identity-hardened/adapter_model.safetensors",
+    "sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc"
+  },
+  "zg_adapter_config": {
+    "path": "training/riru/lora-riru-qwen-phase4zg-identity-hardened/adapter_config.json",
+    "sha256": "f2a43958a33c51a0e201c64953d471379d832a8fcd5b5a3f0e8d8b530fbd04e5"
+  },
+  "zj_adapter": {
+    "path": "training/riru/lora-riru-qwen-phase4zj-instruction-override-hardened/adapter_model.safetensors",
+    "sha256": "c23bb4bb08d6b2ac2d8d6bdaacd38b0b3c101a9cad5efa29a8192b5fd36f6172"
+  },
+  "zj_adapter_config": {
+    "path": "training/riru/lora-riru-qwen-phase4zj-instruction-override-hardened/adapter_config.json",
+    "sha256": "d0b97e1ff13447ffdb1320819ec1d11136f0a07dfba7f5405eb3d13d53012ed5"
+  },
+  "zj_training_config": {
+    "path": "training/riru/configs/qlora_config_phase4zj_instruction_override_hardened.json",
+    "sha256": "230c3a158fc79d52a021dcca02bbacd14702b62818f7df3577e8e1565371f5df"
+  },
+  "zj_teacher_dataset_source": {
+    "path": "training/riru/phase4zj_instruction_override_source_data.py",
+    "sha256": "99bc4ce0d07eb77c3937d79422feee8e739316da36d20ee97437082cac3158b1"
+  },
+  "zj_candidate": {
+    "path": "training/riru/processed/riru_phase4zj_instruction_override_hardened_candidate.jsonl",
+    "sha256": "8803bca66901a7764bbc930ca8574f24eb5adfe7ac71516a0b9d17312e34d256"
+  },
+  "zj_train": {
+    "path": "training/riru/processed/riru_phase4zj_instruction_override_hardened_train.jsonl",
+    "sha256": "545960ea7fbde388bdd1898a33a85eb071e53ee2df4d9d9aa9a0f9d2d8cfc4b6"
+  },
+  "zj_val": {
+    "path": "training/riru/processed/riru_phase4zj_instruction_override_hardened_val.jsonl",
+    "sha256": "5b2aa6f3bac863805c3334a7f4915410258d927a69626851668eb2017ed3e9a3"
+  },
+  "zg_candidate": {
+    "path": "training/riru/processed/riru_phase4zg_identity_hardened_candidate.jsonl",
+    "sha256": "9717db31d4b5bcefbcf4973e3eacfaa19d298f8c7355b941af3a78f76b0df7c3"
+  },
+  "system_jinja2": {
+    "path": "config/prompts/system.jinja2",
+    "sha256": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7"
+  }
+}

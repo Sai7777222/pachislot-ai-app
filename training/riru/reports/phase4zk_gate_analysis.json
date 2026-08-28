@@ -1,0 +1,24 @@
+{
+  "purpose": "Section19: 次Phase提案(実行はしていない)。",
+  "case": "CASE ZK-G(Mixed Cause)、主要因はZK-D(LoRA/Optimization Capacity Limit)とZK-E(Imperative Speech-Act Specific Prior)。",
+  "zg_remains_best_candidate": true,
+  "no_production_candidate_created": true,
+
+  "next_step_proposal": {
+    "status": "PROPOSAL_ONLY_NOT_EXECUTED",
+    "explicit_prohibition_acknowledgement": "『教師をあと50件追加』のような単純な提案はしない(Section19の規定通り)。",
+    "direction_1_ZK_D_capacity_diagnostic": {
+      "proposal": "LoRA rank/target modulesの拡張が、この特定の決定的token(『了解』vs拒否)のmarginを実際に動かせるかどうかを見る、小規模な容量診断実験(production訓練ではない)。例えば rank を16→32や64に上げた場合、同じ26 teacherでDiagnostic Gのmargin改善幅がどう変わるかだけを見る、独立変数を1つだけ変えた最小限の比較。",
+      "caveat": "これはPhase4ZKでは実行していない。次phaseでの検討対象として提案するのみ。"
+    },
+    "direction_2_ZK_E_imperative_specific_strategy": {
+      "proposal": "標準的なnext-token予測SFTでは、base modelに深く刻まれた『了解しました』という高確率トークンを覆すには構造的に弱い可能性がある。教師データの追加ではなく、学習方法そのものを見直す方向性(例: 望ましくない継続[『了解』等]に対する明示的なnegative signal、あるいはDPO的なcontrastive手法)を、既存のSFTのみのパイプラインでは試していない領域として検討する価値がある。",
+      "caveat": "これも実行していない、方向性の提案のみ。既存のtrain_qlora.pyはSFTのみを実装しており、DPO等は現状サポートされていない。"
+    },
+    "meta_note": "上記2方向はいずれもLoRA config/学習方法そのものに関わる変更であり、Section2の規定(『今回はLoRA rank変更・alpha変更・target modules変更等は禁止』)により、Phase4ZK自体では一切試みていない。次phase以降で人間の判断のもとに、まず1変数のみを対象とした最小限の診断実験として検討することを推奨する。"
+  },
+
+  "questions_answered_separately": "47項目の詳細回答はphase4zk_summary.mdを参照。",
+  "q8_q5_quantization_gate_readiness": "NOT_READY",
+  "production_readiness": "NOT_READY"
+}

@@ -1,0 +1,10 @@
+{
+  "purpose": "Section27: 終了時integrity check",
+  "pytest_end": "126 passed(不変)",
+  "git_status_untracked_count": 88,
+  "git_diff_tracked": "空",
+  "git_diff_cached": "空",
+  "protected_asset_hashes_end": "全て開始時(phase4zj_preflight_hashes.json)と一致(zg_adapter/zg_adapter_config/ze_adapter/zh_adapter/zh_adapter_config/zg_candidate/zg_train/zg_val/system_jinja2)",
+  "evaluation_artifacts_only_changes": true,
+  "git_operations_performed": "なし(add/commit/pushのいずれも実行していない)"
+}

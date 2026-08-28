@@ -1,0 +1,19 @@
+{
+  "pytest_end": "162 passed, 1 warning (pre-existing httpx deprecation, unrelated) — identical to phase4zn_unattended_preflight.json's pytest_start",
+  "regression": "none",
+  "protected_asset_hashes_end": {
+    "zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "matches_preflight_and_all_prior_phases": true
+  },
+  "git": {
+    "commits_made": 0, "pushes_made": 0, "tracked_files_modified": 0, "staged_changes": 0,
+    "untracked_new_files": 167,
+    "note": "git diff / git diff --cached は共に空。新規untrackedファイルは全てtraining/riru/reports/とtraining/riru/eval/, training/riru/guard/配下(Phase4ZN成果物)。git add/commitは一切実行していない。"
+  },
+  "no_training_confirmation": "学習は一切行っていない。実行したのはPhase4ZG(read-only)を使った推論生成のみ。",
+  "no_config_change_confirmation": "system prompt/RAG DB/production code(src/pachislot_ai/)/identity guard(training/riru/guard/identity_validator.py, identity_guard_pipeline.py)は一切変更していない。",
+  "crash_or_error": "なし。CUDA OOM/CUDA error/repeated crashは0件発生。",
+  "actual_runtime_seconds": 510.7,
+  "actual_runtime_vs_budget": "510.7秒(約8.5分) — 想定時間予算(1h45m〜1h50m)を大幅に下回り、194件全ての生成が完了した。soft_stop_time_budgetによる打ち切りは発生していない。",
+  "status": "COMPLETE (not partial) — 全194件の生成が時間内に完了"
+}

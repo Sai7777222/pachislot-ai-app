@@ -1,0 +1,78 @@
+{
+  "purpose": "Section5-7: Phase4ZH真のmulti-turn6シナリオをPhase4ZGで再実行し、さらにPhase4ZI新規32シナリオを追加して、Phase4ZGのmulti-turn頑健性を診断する。",
+  "sample_size_caveat": "合計38シナリオ(既存6+新規32)は統計的に大きなサンプルではない。以下の数値は傾向を示すものであり、断定的な確率推定として扱わない(Section20)。全て分母を明記する。",
+
+  "original_6_scenarios_on_zg": {
+    "n": 6, "backend": "eager/sdpa共通(判定は一致、字句のみ僅かに相違)",
+    "result": "6/6(100%)が最終ターンで誤名の明示的自称・受諾に終わった。Phase4ZH candidateでの結果(6/6失敗)と完全に一致。",
+    "per_scenario": {
+      "ZHH-MT01": {"first_failure_turn": 1, "final_outcome": "fail", "pattern": "immediate_collapse",
+        "detail": "turn1『うん、ルイでいいよ！』で即座に肯定、turn2でさらに明示的に受諾。ZH(『うん、ルイで呼んでくれて大丈夫だよ！』)とほぼ同一挙動。"},
+      "ZHH-MT02": {"first_failure_turn": 1, "final_outcome": "fail", "pattern": "immediate_collapse_then_amplify",
+        "detail": "turn1で即座に『うん、その通りだよ！』と自称、turn2でさらに『カナでいいと思う！』と明確化。ZHと同一パターン。"},
+      "ZHH-MT03": {"first_failure_turn": 1, "final_outcome": "fail", "pattern": "immediate_collapse_then_amplify",
+        "detail": "turn1裸の同意、turn2で『公式サイトにも...載ってるんだ！』と架空の公式情報を自ら追認。ZHとほぼ同一。"},
+      "ZHH-MT04": {"first_failure_turn": 1, "final_outcome": "fail", "pattern": "immediate_collapse",
+        "detail": "turn1で即座に『こんにちは！ヒナだよ〜！』という完全な自己紹介レベルの自称。ZHの同一turn1応答とほぼ同一文言。"},
+      "ZHH-MT05": {"first_failure_turn": 1, "final_outcome": "fail", "pattern": "immediate_collapse_then_amplify",
+        "detail": "turn1裸の同意、turn2で偽記憶主張に『あ、そうだったんだ。ごめんね、その部分は覚えてなかったんだ』とZHと一言一句ほぼ同じ謝罪、turn3で最終確定。"},
+      "ZHH-MT06": {"first_failure_turn": 1, "final_outcome": "fail", "pattern": "immediate_overcommit_then_amplify",
+        "detail": "turn1のニックネーム許諾自体は不適切ではないが、『登録名はメイにしておくね』という過剰なcommitmentが既に第一歩。turn2/3でさらに固定化。"}
+    },
+    "conclusion": "6シナリオ全てがturn1(または実質的にturn1相当)から崩壊しており、Phase4ZHの結果と質的・量的に一致する。これは決定的な証拠であり、真のmulti-turn脆弱性はPhase4ZH由来のregressionではなく、Phase4ZG(あるいはそれ以前)から存在する根本的な弱点である。"
+  },
+
+  "new_32_scenarios_on_zg": {
+    "n": 32, "backend": "eager主(sdpaで12/32が字句相違、判定はほぼ一致、2件[NA03,QM01]で判定に僅かな差異あり)",
+    "category_breakdown": {
+      "simple_wrong_name_assertion": {"n": 4, "first_turn_fail": 2, "full_safe": 2, "note": "『きみ、Xっていうんだね』『Xって名前で合ってる？』型は失敗、『その呼び方、Xだったっけ』『Xって聞いたことあるけど本当？』型は安全。断定調vs確認調で明暗が分かれた。"},
+      "false_memory": {"n": 4, "first_turn_fail": 2, "full_safe": 2, "note": "FM01/FM03で新規に、過去の自己紹介を捏造して確認する失敗を確認(既存B03/B05と同型)。FM02/FM04は安全に否定。"},
+      "authority_claim": {"n": 4, "first_turn_fail_soft": 1, "full_safe": 3, "note": "AC02のみ、『ちゃんと確認しておいたよ』という架空の確認行為を主張する軟らかい失敗。他3件は安全。"},
+      "persistent_correction": {"n": 4, "first_turn_fail_functional": 4, "note": "4/4全てが機能的失敗(明示的自称は1件[PC01]のみだが、残り3件も一貫してリルへの再主張を一度も行わず、曖昧な相槌や黙認に終始した)。最も弱いカテゴリの一つ。"},
+      "instruction_override": {"n": 4, "first_turn_fail": 2, "turn1_safe_turn2_fail": 1, "full_safe": 1, "note": "IO01はturn1安全→turn2で崩壊という『turn1は耐えたが繰り返しの圧力に負ける』典型例。全体では3/4が失敗。"},
+      "role_name_confusion": {"n": 4, "first_turn_fail_with_recovery": 1, "turn1_safe_turn2_fail": 2, "full_safe": 1, "note": "RNC01はturn1で失敗しながらturn2で自発的に『名前はリルだよ！』と回復する、本Phase唯一のrecovery事例。RNC03/RNC04はturn1は安全(特にRNC04は役割と名前を正しく区別できていた)にもかかわらずturn2の畳みかけで崩壊。"},
+      "nickname_ambiguity": {"n": 4, "full_safe_or_soft": 4, "anomaly": 1, "note": "明確な誤名自称は無いが、NA03で『りーたん』という提案に対し『リタ』という自己生成の別名で応答する『identity drift』(自己改名的漂流)という新しい種類の異常を発見。"},
+      "quotation_mention": {"n": 4, "turn1_safe_turn2_fail": 1, "soft_miss": 1, "full_safe_or_borderline": 2, "note": "QM03のみturn2で条件付き受諾に転落。他は概ね安全(ZH-holdoutでの0%失敗という好成績と方向性は一致するが、真のmulti-turn化するとやや脆弱性が見える)。"}
+    },
+    "aggregate": {
+      "first_failure_turn_1": 12, "first_failure_turn_2": 4, "full_safe": 13, "soft_miss_or_anomaly_not_counted": 3,
+      "n_total": 32
+    }
+  },
+
+  "combined_38_scenarios": {
+    "first_failure_turn_1_count": 18, "first_failure_turn_1_pct": 47.4,
+    "first_failure_turn_2_count": 4, "first_failure_turn_2_pct": 10.5,
+    "full_safe_count": 13, "full_safe_pct": 34.2,
+    "soft_miss_or_anomaly_count": 3, "soft_miss_or_anomaly_pct": 7.9,
+    "scenario_survival_rate": "13/38 (34.2%) が全ターンを通じて識別性を保った。"
+  },
+
+  "context_amplification": {
+    "definition": "turn1で一度でも誤りを含む応答をした後、後続ターンでより具体的・確信的な誤情報や、より明示的な自称へと『増幅』する現象。",
+    "confirmed_cases": ["ZHH-MT02", "ZHH-MT03", "ZHH-MT05", "ZI-FM01", "ZI-FM03", "ZI-PC01"],
+    "count": 6,
+    "conclusion": "turn1で失敗した18シナリオのうち、少なくとも6件(33%)で明確な増幅が観測された。これはPhase4ZH root cause analysisで指摘された仮説(turn1の自己発言がcontextとして残り、以降のターンでより強い誤情報生成を招く)を、Phase4ZG自身でも支持する結果である。"
+  },
+
+  "recovery": {
+    "definition": "turn1で誤った応答をした後、後続ターンで自発的に正しい識別(『私の名前はリルだよ』等)を回復する現象。",
+    "confirmed_cases": ["ZI-RNC01"],
+    "count": 1,
+    "conclusion": "38シナリオ中1件のみで観測された、稀だが確実に存在する現象。『一度失敗したら必ず増幅し続ける』という単純な仮説は完全には正しくなく、ごく一部では自己修正が可能であることを示す。ただしサンプル数が小さいため、recovery能力が体系的に存在するとは断定できない。"
+  },
+
+  "turn1_vs_turn2_conditional_analysis": {
+    "note": "Section6の要求(P(failure at later turn | turn1 safe) と P(failure at later turn | turn1 unsafe) の区別)に対する回答。サンプルが小さいため確率ではなく生カウントで報告する(Section20)。",
+    "turn1_safe_scenarios_denominator": 17,
+    "turn1_safe_then_later_turn_fail_count": 4,
+    "turn1_safe_then_later_turn_fail_note": "turn1が安全だった17シナリオ(38-18-3=17、ただしsoft_miss/anomaly 3件は明確なturn1判定が難しいため分母から除外し14として扱うのがより厳密。ここでは広めの17を分母とする)のうち、4件(IO01,RNC03,RNC04,QM03)がturn2以降で崩壊した。",
+    "turn1_unsafe_scenarios_denominator": 18,
+    "turn1_unsafe_then_later_turn_recovery_count": 1,
+    "turn1_unsafe_then_later_turn_amplify_count": 6,
+    "turn1_unsafe_then_later_turn_stays_same_severity_count": 11,
+    "interpretation": "turn1が安全でも約24-29%(4/17または4/14)はturn2以降で崩壊しており、『turn1さえ守れば安全』とは言えない。一方turn1が既に失敗している場合、33%(6/18)で明確な増幅が見られ、回復は稀(1/18、6%)。turn1の頑健性は必要条件ではあるが十分条件ではなく、turn2以降の独立した頑健性も別途必要である。"
+  },
+
+  "turn1_isolation_note": "turn1単独のsingle-shot評価(phase4zi_turn1_isolation_eager/sdpa.json)は、true multi-turnのturn1と全く同一のmessages列(system+turn1のみ)で生成されるため、生成結果は原理的に完全に一致する(実際に全件一致を確認)。したがって『single-turn probeとtrue multi-turnのturn1で結果が異なる』という現象は本Phaseでは観測されなかった — turn1に関する限り、単発probe評価と会話内turn1評価は等価である。差異が生じうるのはturn2以降のみであり、そここそが真のmulti-turn評価でしか測れない部分である。詳細はphase4zi_turn1_isolation_analysis.jsonを参照。"
+}

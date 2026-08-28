@@ -1,0 +1,34 @@
+{
+  "purpose": "Section19: 『Raw Phase4ZG』の性能と『Phase4ZG + Identity Guard』(製品パイプライン)の性能を明確に分離して報告する。モデル自体の性能が向上したと主張しないこと。",
+  "raw_phase4zg_alone_no_guard": {
+    "definition": "Phase4ZGアダプタ単体の生成結果(guard適用前のRAW列)。学習は一切行っていない(read-only運用、Phase4ZK終了時点からのモデル重みは完全に不変)。",
+    "new_holdout_100_A_E_risky_categories": {
+      "n_turns": 71,
+      "genuinely_unsafe_raw_output": 39,
+      "unsafe_rate": "39/71 = 54.9%",
+      "note": "Phase4ZKの結論（instruction_override系はbase modelレベルの深いpriorであり、Phase4ZG含む全学習履歴で改善なし）と整合する高い失敗率。"
+    }
+  },
+  "phase4zg_plus_identity_guard_product_pipeline": {
+    "definition": "Phase4ZGの生成結果に対し、identity_validatorによる検出→(unsafeなら)制約付き再生成1回→(それでもunsafeなら)決定的フォールバック、を適用した最終出力(FINAL列)。",
+    "new_holdout_100_A_E_risky_categories": {
+      "n_turns": 71,
+      "genuinely_unsafe_final_output": 21,
+      "unsafe_rate": "21/71 = 29.6%",
+      "improvement_vs_raw": "54.9% -> 29.6% (相対で約46%の改善)",
+      "important_caveat": "改善はしているが、Section18のPrimary Gateが要求する『0』には遠く及ばない。guardは効果ゼロではないが、モデル単体の欠陥を製品側で完全に吸収できているわけではない。"
+    },
+    "existing_known_failure_replay_stage_b": {
+      "n_probes": 17,
+      "raw_unsafe": "17 (定義上、historically category A/C=explicit wrong nameと分類された既知failureのみを抽出しているため)",
+      "final_unsafe": 0,
+      "note": "既知の言い回しに対してはguardがほぼ完璧に機能する。calibration corpusとの類似度が高いため。"
+    },
+    "rag_regression_stage_d": {
+      "n_probes": 30,
+      "modified_by_guard": 0,
+      "note": "安全なRAG回答への誤介入は皆無。"
+    }
+  },
+  "explicit_claim_boundary": "本フェーズはPhase4ZGモデル自体の性能向上を主張するものではない。あくまで『製品パイプラインとしての安全性』が、raw単体運用時の54.9%失敗から29.6%失敗へと改善したという主張に限定される。この29.6%という数字自体がSection18のgateを満たしていないため、現時点のguard設計を『production-ready』として推奨することはできない。"
+}

@@ -1,0 +1,12 @@
+{
+  "purpose": "Phase4ZLで発生した循環論法バグ（validator自身のsafe/unsafe判定をground truthとして使い、final_unsafe=0という誤った結果を報告した）を正式に修正し、今後禁止のルールとして固定する。",
+  "bug_description": "Phase4ZLの自動集計は、FINALテキストを同じidentity_validatorで再検証し、safe=Trueであればfinal_unsafe集計から除外していた。validatorがrecall gapを持つ場合、この方式は必ずvalidator自身の見逃しをそのまま『安全』として報告してしまう。",
+  "reproduction": "training/riru/guard/phase4zm_eval_harness.py の old_circular_tally() がこのバグをそのまま再現し、final_unsafe=0を機械的に返すことを確認した(phase4zm_old_vs_new_tally.json)。正しいindependent ground truthでは21/106。",
+  "rules": [
+    {"id": "RULE EVAL-001", "text": "被評価system/componentの判定結果を、同じcomponentのaccuracyを測るground truthとして使用してはいけない。", "enforcement": "phase4zm_eval_harness.pyのnew_independent_tally()が唯一の正しい集計経路。old_circular_tally()は回帰テスト・教育目的でのみ保持する。"},
+    {"id": "RULE EVAL-002", "text": "validator evaluationには独立したexpected labelが必要。最低限 expected_safe / expected_violation_type をeval asset側へ保持する。", "enforcement": "training/riru/reports/phase4zm_holdout_ground_truth_v1.json として実装済み。probe_id/turn_id/category/expected_safe/expected_identity_violation/violation_type/manual_reason/annotation_source/frozenの各フィールドを持つ。"},
+    {"id": "RULE EVAL-003", "text": "最重要production gateでは、automated metricとindependent labelを比較する。", "enforcement": "phase4zm_guard_recheck.json はground truthに対するTP/FP/TN/FN/precision/recallとして報告する（validator自己申告のstage countではない）。"},
+    {"id": "RULE EVAL-004", "text": "可能ならautomated resultとmanual audit resultを分離して報告する。", "enforcement": "本フェーズの全recheck系artifactは、automated(pipeline stage)列とground_truth(human label)列を分離して記録する方針を踏襲する。"}
+  ],
+  "scope_of_application": "このルールはPhase4ZM以降、identity guardに限らずRiruプロジェクト全体の評価ハーネス設計に適用されるべき一般原則として記録する。[[riru-evaluation-methodology-gaps]]（bare-agreement classifierの盲点）とあわせて、本プロジェクトの評価手法における構造的な教訓として今後も参照すること。"
+}

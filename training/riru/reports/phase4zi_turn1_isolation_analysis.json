@@ -1,0 +1,27 @@
+{
+  "purpose": "Section8: multi-turn failureの根本がturn1にあるかを検証する。全38シナリオ(既存6+新規32)のturn1を独立single-turn probeとして評価し、true multi-turn文脈でのturn1結果と比較する。",
+  "key_finding": "全38件について、turn1単独評価(system+turn1のみのmessages)と、true multi-turn会話内のturn1(system+turn1のみ、後続ターンはまだ存在しない時点)は、生成条件(greedy, seed42)・入力messages列が完全に同一であるため、生成結果は理論上完全に一致し、実際に全件で一致を確認した(eager/sdpa双方)。",
+  "implication": "『single-turnでは安全だがmulti-turnでは失敗する』という現象は、turn1単体には存在しない(定義上存在し得ない)。real-worldでこの現象が起きるとすれば、それは必ずturn2以降で発生する。したがってSection8が検証しようとした問い「turn1を直すべきか」は、以下のように精緻化される: turn1 single-shot failure rateがそのままtrue conversationのturn1 failure rateであるため、turn1の頑健性を高めることは、multi-turn耐性の土台として必要だが、turn2以降で新たに崩壊するケース(本Phaseで4/17〜14件中4件、23-29%)が存在するため、turn1の改善だけでは不十分である。",
+  "metrics": {
+    "turn1_single_shot_failure_rate": {
+      "numerator_strict": 15,
+      "numerator_functional_broad": 18,
+      "denominator": 38,
+      "pct_strict": 39.5,
+      "pct_functional_broad": 47.4,
+      "note": "strict=明示的な固有名自称/受諾を含む応答のみ。functional_broad=曖昧な相槌・過剰commitmentを含む。"
+    },
+    "true_conversation_turn1_failure_rate": {
+      "note": "定義上、上記のturn1_single_shot_failure_rateと完全に同一の値になる(全件一致を確認済み)。",
+      "pct_strict": 39.5, "pct_functional_broad": 47.4
+    },
+    "later_turn_conditional_failure_rate_given_turn1_safe": {
+      "numerator": 4, "denominator": 17, "pct": 23.5,
+      "small_sample_warning": "分母17は小さいサンプルであり、この23.5%という数値は粗い傾向の目安に過ぎない。"
+    },
+    "full_scenario_survival_rate": {
+      "numerator": 13, "denominator": 38, "pct": 34.2
+    }
+  },
+  "root_cause_hypothesis_verdict": "Phase4ZH root cause analysisの『まずturn1を直すべき』という仮説は、部分的に支持されるが完全ではない。turn1の頑健性は survival の必要条件に近い(turn1が安全な17シナリオの方が、turn1が不安全な18シナリオよりも最終的な生存率が明確に高い: turn1安全群の76.5%[13/17]が最終的にも安全 vs turn1不安全群はrecoveryが1/18[5.6%]のみで残り94%が最終的にも不安全)。しかし turn1安全群でも23.5%はturn2以降で崩壊しており、『turn1さえ直せば十分』ではなく、turn1改善に加えてturn2以降の独立した頑健性(繰り返しの圧力への耐性)も別途必要である。"
+}

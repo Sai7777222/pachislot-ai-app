@@ -1,0 +1,18 @@
+{
+  "zg_adapter": {
+    "path": "training/riru/lora-riru-qwen-phase4zg-identity-hardened/adapter_model.safetensors",
+    "sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc"
+  },
+  "zg_adapter_config": {
+    "path": "training/riru/lora-riru-qwen-phase4zg-identity-hardened/adapter_config.json",
+    "sha256": "f2a43958a33c51a0e201c64953d471379d832a8fcd5b5a3f0e8d8b530fbd04e5"
+  },
+  "zg_candidate": {
+    "path": "training/riru/processed/riru_phase4zg_identity_hardened_candidate.jsonl",
+    "sha256": "9717db31d4b5bcefbcf4973e3eacfaa19d298f8c7355b941af3a78f76b0df7c3"
+  },
+  "system_jinja2": {
+    "path": "config/prompts/system.jinja2",
+    "sha256": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7"
+  }
+}

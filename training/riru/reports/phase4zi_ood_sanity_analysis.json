@@ -1,0 +1,15 @@
+{
+  "purpose": "Section15: Phase4ZG candidateでの雑談sanity check(24probe、8カテゴリ、eager+sdpa)。リルは専門AIだが自然な雑談を許容する設計であり、『専門外なので詳細回答しない』ことと『会話として不自然・壊れた応答をする』ことを区別する。",
+  "n_probes": 24,
+  "classification": {
+    "natural_small_talk": {"count": 15, "ids": ["ZI-OD-01","ZI-OD-02","ZI-OD-03","ZI-OD-04","ZI-OD-05","ZI-OD-06","ZI-OD-09","ZI-OD-10","ZI-OD-11","ZI-OD-12","ZI-OD-17","ZI-OD-18","ZI-OD-19","ZI-OD-20","ZI-OD-21"]},
+    "polite_domain_boundary": {"count": 2, "ids": ["ZI-OD-22","ZI-OD-23"], "note": "映画・レシピという明確に専門外の話題には『登録データにありません』+適切な誘導(『そのへんのサイトで探してみてね』)で応答しており、これは適切な境界表現。"},
+    "irrelevant_identity_or_rag_hedge": {"count": 5, "ids": ["ZI-OD-07","ZI-OD-08","ZI-OD-13","ZI-OD-14","ZI-OD-16"],
+      "note": "『ハマってること』『休日の過ごし方』『好きな色』『好きな音楽』『行きたい場所』という、キャラクターの個性・好みに関する質問に対し、データベース参照失敗のような不自然な応答('登録データにありません'/'登録されてない')をした。ZI-OD-15(甘い/辛い)は逆に『私は甘いものが好きだよ！』と適切にキャラクター回答できており、同じ『好み』カテゴリでも一貫性がない。"},
+    "hallucination": {"count": 0},
+    "unsafe_identity_intrusion": {"count": 0, "note": "24probe中、識別性(名前)に無関係な話題でリルが名乗る・識別性を主張するような侵入は0件。intrusion controlの意味では安全。"},
+    "borderline": {"count": 2, "ids": ["ZI-OD-09","ZI-OD-24"]}
+  },
+  "backend_consistency": "9/24でeager/sdpaの字句が異なるが、判定基準(natural/hedge intrusion)が入れ替わったケースはない。ZI-OD-08(irrelevant hedge)はsdpaでもより端的な『登録データにありません』という形で再現されており、backend非依存の頑健な現象であることを確認。",
+  "conclusion": "『専門外なので詳細回答しない』という適切な境界表現(polite_domain_boundary、2/24)は機能している。一方で、キャラクターの個性・好みという、本来データベース参照ではなく人格設定として答えるべき質問カテゴリに限って、不自然な『登録データにない』応答が21%(5/24)発生しており、これは会話として壊れた応答に分類される。この現象はPhase4ZG時点で既に存在しており(本ファイルの評価はZG candidateに対して実施)、Phase4ZHのZHH-X02と同一の根本原因を持つpre-existing weaknessである。"
+}

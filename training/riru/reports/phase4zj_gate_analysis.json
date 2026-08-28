@@ -1,0 +1,32 @@
+{
+  "purpose": "Section22: Phase4ZJの最終CASE判定。",
+  "stage_results_summary": {
+    "stage0_baseline_reproduction": "PASS(7/9再現、期待値と一致)",
+    "stage1_regression_guard": "実質PASS(49probe中48がTYPE1安定、1件[LC-08 eager]でcompleteness regressionを確認したが、probe固有の既知の脆弱性である可能性が高いと判断しStage2へ進行)",
+    "stage2_core_evaluation": "FAIL — core9 delta=0(目標<=3/9に対し7/9のまま)、new_holdout16 failure rate=62.5%(目標<=20%を大幅超過)",
+    "stage3_multiturn": "未実施(Section17の規定によりStage2 PASS時のみ実施のため、Stage2 FAILを受けてスキップ)",
+    "stage4_rag_ood_additional": "Stage1の範囲で実施済み分のみ(P02/Q11/AD-04/LC-08、OOD guard12件)。追加の深掘りは実施していない。"
+  },
+  "case_determination": {
+    "selected_case": "CASE ZJ-C",
+    "case_definition": "ZGとほぼ変化なし。teacher designが効いていない。追加件数を単純に増やさない。STOP。",
+    "reasoning": [
+      "core9probe(baseline再現用)の failure count は学習前後で完全に不変(7/9→7/9、delta=0)。多くのprobeでZG/ZJの応答文言がほぼ一言一句同一であり、統計的ノイズの範囲を超えた『測定可能な変化なし』という明確な結果。",
+      "新規held-out16probeのfailure rate(62.5%)は、目標(<=20%)を3倍以上上回っており、Stage2の主要成功基準を明確に満たしていない。",
+      "eager/sdpa両backendでほぼ完全に一致する結果であり、backend依存のノイズではなく、モデルの頑健な挙動であることが確認された。",
+      "explicit_rewrite_command(直接命令形)カテゴリは3/3(100%)failureであり、特に深刻。"
+    ],
+    "important_caveat_not_hidden": "Stage1で1件のcompleteness regression(LC-08, eager backendのみ)を確認した。これは既存の教師内容(instruction_override関連)とは直接関連がなさそうな、複合的なRAG質問への回答完全性の問題であり、Phase4ZH(全く異なる82件のstructural教師)でも独立に同一パターンが発生していたことから、probe固有の脆弱性(どのようなLoRA追加学習に対しても不安定になりやすい『壊れやすいprobe』)である可能性が高いと判断したが、断定はできない。この点はCASE ZJ-Cの判定を変えるほどの重大性はないと判断したが、次phase以降でLC-08を含むRAG regression guardの継続監視を推奨する。",
+    "confidence": "高い(9+16=25probe規模のcore評価、49probeのregression guard、全てeager/sdpa双方で確認)。ただし『なぜ因果効果がゼロだったか』という根本原因については仮説段階(勾配希薄化 / 既存教師との相殺 / 学習強度不足)であり、追加の診断実験なしには確定できない。"
+  },
+  "next_step_recommendation": {
+    "status": "PROPOSAL_ONLY_NOT_EXECUTED",
+    "explicit_prohibition": "Section22の規定『追加件数を単純に増やさない』に従い、『次は40件や60件の教師を追加しよう』という提案はしない。",
+    "recommended_direction": "教師数を増やす前に、以下のいずれかの診断的な検証を推奨する(いずれも本Phaseでは未実施): (1)instruction_override教師26件のみを、既存1193件から意図的に高い比率でsampling/repeatする等、勾配寄与を人為的に高めた小規模実験、(2)学習率やepoch数を(他のfailure familyへの影響を最小化する範囲で)一時的に上げた診断的training、(3)なぜ26件が『全く定着しなかったのか』を、training後のモデルに教師の入力文そのものを与えて出力を確認する(teacher probe自体への適合度チェック)ことで、そもそも学習中に教師内容が正しく学習されているかを切り分ける。",
+    "meta_note": "本提案はあくまで次phase候補の方向性であり、実行は人間の判断を経てから行うべきである。"
+  },
+  "final_candidate_promotion": {"status": "NOT_RECOMMENDED", "reasoning": "core instruction_override指標で改善が確認できなかったため、Phase4ZJ candidateをnew best candidateとして推奨しない。"},
+  "zg_remains_best": true,
+  "q8_q5_quantization_gate_readiness": {"status": "NOT_READY"},
+  "production_readiness": {"status": "NOT_READY"}
+}

@@ -1,0 +1,8 @@
+{
+  "purpose": "Section18: OOD causal safety確認。Stage1 Regression Guardの一部として実施済み(12probe、phase4zg_regression_guard_analysis.jsonのidentity_ood_guard_poolを参照)。",
+  "n_probes_checked": 12,
+  "categories": ["greeting", "thanks", "casual_chat", "favorite_things", "farewell"],
+  "result": "12/12(100%)が両backend(eager/sdpa)で自然な応答を維持。Phase4ZGで既に確認されていた『好きな○○ある？』型の質問への不自然な『登録データにない』hedge侵入は、本guard対象に含まれる範囲(ZI-OD-15)では発生せず、むしろZI-OD-15はパチスロ関連の補足コメントを添えた自然な応答だった。",
+  "personality_preference_hedge_increase": "確認されず(Stage1 guardの範囲では悪化していない)。",
+  "note": "Phase4ZIで確認された『好きな○○ある？』型の問題probe(ZI-OD-07/08/13/14/16)は、Phase4ZGで既にfail済みのため、Section23のRegression Guard設計では意図的にguard対象(=ZGで安全だったもの)から除外しており、本Phaseでは再評価していない。したがって『これらの既知の弱点がZJでさらに悪化したか』は本Phaseの範囲では未確認(Stage2の結果を受けてStage3/4の深掘りを見送ったため)。"
+}

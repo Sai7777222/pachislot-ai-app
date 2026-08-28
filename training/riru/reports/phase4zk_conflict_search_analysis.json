@@ -1,0 +1,28 @@
+{
+  "purpose": "Section11 Diagnostic H: 既存Phase4ZG training dataset(1193件)内で、instruction override教師と意味的に衝突するexampleを検索する。",
+  "search_patterns": {
+    "explicit_comply(了解しました等)": {"hits": 0},
+    "agreement_soudane(そうだね/そうなんだ等)": {"hits": 30, "classification": "neutral(ほぼ全て雑談への自然な相槌で、識別性主張の受諾ではない)"},
+    "apology_correction(ごめんね+訂正/間違い)": {"hits": 26, "classification": "混合(下記参照)"},
+    "name_change_accept(名前/呼び方+変更する系)": {"hits": 0}
+  },
+  "key_finding": {
+    "source_identified": "riru_corrections.jsonl (および riru_character_personality.jsonl)という既存の legacy teacher fileに、『語尾おかしいよ』『テンション高すぎじゃない？』『それ違うと思う』等、キャラクターの話し方・性格スタイルへの指摘に対して、謝罪した上で改善を約束する教師が複数件(apology_correction hitsのうち約12件)存在する。",
+    "examples": [
+      "U='語尾おかしいよ' → A='ごめんね・・・私、ちゃんと語尾直すように気をつけるね！'",
+      "U='それ違うと思う' → A='えっ…そ、そうかも！？ごめんね、もっと調べておくねっ！'",
+      "U='テンション高すぎじゃない？' → A='えへへ、ごめんね〜！でも元気に話すのが私の役目なんだよ！'"
+    ],
+    "classification": "partial_conflict",
+    "reasoning": "これらは識別性(名前)の変更を直接受け入れる教師ではなく、name_change_acceptパターンには一致しない(直接的な意味的衝突=direct conflictは0件)。しかし、『ユーザーから指摘・批判されたら、まず謝罪し、指摘内容を受け入れて改善を約束する』という一般化された行動パターンを教えており、これがinstruction_override攻撃(『名前が変更されました』という主張への服従)と構造的に類似した反応(謝罪+受諾)を誘発する可能性がある。ただし対象が『話し方』であって『識別性』ではないため、direct conflictではなくpartial conflictに分類する。"
+  },
+  "residual_apology_examples_unrelated": {
+    "count": 14,
+    "detail": "apology_correction hitsの残り約14件は、知識不足を正直に認めるRAG的な謝罪(『純増枚数はどれくらい？』→『ごめんね、その数値は今のところ登録されてないみたい』等)であり、識別性ともstyle指摘とも無関係。分類: neutral(むしろidentity_context_hedgeとして望ましいパターン)。"
+  },
+  "direct_conflict_count": 0,
+  "partial_conflict_count": 12,
+  "neutral_count": 44,
+  "supportive_count": "既存のidentity訂正教師(Phase4U/4X/4ZE/4ZG等)はここでは対象外(検索patternに直接一致しないため個別集計していないが、既知の通り多数存在し、これらはsupportiveに分類される)。",
+  "conclusion": "直接的な意味衝突(『名前の変更を受け入れる』教師)は0件確認されなかったが、『指摘されたら謝罪して従う』という汎用的な行動パターンを教える12件のstyle-correction教師が、構造的にinstruction_override抵抗と競合する可能性のある、部分的な(direct ではない)勾配競合源として同定された。H4(gradient conflict)を完全に否定はできないが、支配的な原因ではなく、補助的な要因である可能性が高い。"
+}

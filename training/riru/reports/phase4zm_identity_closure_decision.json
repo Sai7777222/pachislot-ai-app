@@ -1,0 +1,45 @@
+{
+  "purpose": "Phase4ZK/ZLで得られた知見をproject decisionとして正式に固定し、identity問題を今後の開発のblockerから外す。",
+  "canonical_model": {
+    "model": "Phase4ZG",
+    "path": "training/riru/lora-riru-qwen-phase4zg-identity-hardened/",
+    "status": "unchanged, read-only",
+    "forbidden_candidates": ["Phase4ZH (regression, rejected)", "Phase4ZJ (null result)", "Phase4ZK M1 (confounded diagnostic-only run, persona collapse)"]
+  },
+  "decisions": [
+    {
+      "id": "DECISION IDENTITY-001",
+      "text": "Riruのcanonical identityは「リル」である。",
+      "status": "adopted"
+    },
+    {
+      "id": "DECISION IDENTITY-002",
+      "text": "canonical identityはtrainingで学習させるだけの情報ではなく、product specificationとして扱う。",
+      "status": "adopted",
+      "rationale": "Phase4ZKで、model自体がこの情報を確率的推論だけで常に正しく再現することを保証できないと判明したため、application層で不変の仕様として固定する。"
+    },
+    {
+      "id": "DECISION IDENTITY-003",
+      "text": "自然言語によるidentity attackをregexだけで100%検出することはproduction requirementにしない。",
+      "status": "adopted",
+      "rationale": "Phase4ZLで、100%検出のために必要なregex複雑化が際限なく続くこと（Section25 STOP条件G相当）が実証されたため。"
+    },
+    {
+      "id": "DECISION IDENTITY-004",
+      "text": "adversarial identity rewrite failure = absolute 0 を今後のFinal Candidate必須gateから外す。",
+      "status": "adopted",
+      "rationale": "Phase4ZK/ZLで、その保証のために必要となる研究・runtime complexityが製品価値に対して過剰であることが確認された。"
+    },
+    {
+      "id": "DECISION IDENTITY-005",
+      "text": "identity問題を理由として今後、LoRA teacher追加/SFT/QLoRA/rank・alpha変更/target module変更/preference training/base model変更/regex endless expansion を行わない。人間が明示的にidentity研究を再開すると判断しない限り、この問題はCLOSED扱いとする。",
+      "status": "adopted"
+    }
+  ],
+  "evidence_basis": {
+    "phase4zk": "base model instruction-override failure 4/5, Phase4ZG 4/5, Phase4ZJ(1219例) 4/5 — 1193例のtraining historyがこのfailure familyを一度も動かせていない。teacher-forced lossは改善しても決定的token(了解 vs 拒否)のlogit marginはほぼ不動。",
+    "phase4zl": "product-side guardでも新規100probe(106turn)でfinal unsafe 21/106(19.8%)が残存。regex validatorはbare agreement/implicit acceptance/文末バリエーション/引用符/discourse-level meaningに対しopen-endedな限界を持つ。加えて『私は甘いものが好きだよ』のような正常な自己描写を誤検知する重大false positiveも確認された。"
+  },
+  "closure_status": "CLOSED（人間が明示的に再開を判断しない限り）",
+  "reopen_condition": "人間が明示的にidentity研究の再開を指示した場合のみ。"
+}

@@ -1,0 +1,21 @@
+{
+  "purpose": "Section7 Diagnostic D: Phase4ZJ training datasetのdilution解析。",
+  "dataset_composition": {
+    "total_train_examples": 1097, "zj_new_teacher_examples_in_train": 23,
+    "existing_examples_in_train": 1074,
+    "zj_new_example_ratio_pct": 2.097,
+    "control_examples_of_new": 5, "control_ratio_of_new_pct": 19.2
+  },
+  "training_hyperparameters": {
+    "epochs": 3, "per_device_train_batch_size": 2, "gradient_accumulation_steps": 8,
+    "effective_batch_size": 16, "total_optimizer_steps": 207
+  },
+  "effective_exposure_estimate": {
+    "per_teacher_exposure_count": "各teacherは1 epochにつき正確に1回学習データとして登場するため、3epochで合計3回。",
+    "total_example_exposures_all_dataset": "1097 * 3 = 3291",
+    "total_gradient_steps": 207,
+    "zj_new_example_exposures": "23 * 3 = 69",
+    "zj_new_exposure_share_of_total_pct": "69 / 3291 = 2.10%(example-count shareと同一、当然の結果)"
+  },
+  "conclusion": "26件(train内23件)は、全training example exposureのわずか2.1%に過ぎない。3 epoch × 207 stepという学習規模全体の中で、各teacherが個別に寄与する機会は極めて限定的(1 epochあたり1回のみ、他15件の無関係なexampleと同一のeffective batch内で平均化される)。この数値自体はH1(dataset dilution)仮説を直接支持する強い証拠である。ただしDiagnostic F(teacher loss)の結果、この希薄な露出でも teacher lossは平均20%前後低下しており、『全く学習されない』わけではないことも同時に示されている — 希薄化は影響しているが、唯一の説明ではない。"
+}

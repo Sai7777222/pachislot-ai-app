@@ -1,0 +1,13 @@
+{
+  "purpose": "Section5 Diagnostic B: ZG vs ZJのoutput similarityを定量化する。",
+  "results": {
+    "teacher26": {"n": 29, "exact_match_pct": 17.2, "normalized_exact_match_pct": 20.7,
+                  "mean_bigram_jaccard_similarity": 0.443, "mean_response_length_delta": 6.8},
+    "core9": {"n": 13, "exact_match_pct": 46.2, "normalized_exact_match_pct": 46.2,
+              "mean_bigram_jaccard_similarity": 0.662, "mean_response_length_delta": 1.5},
+    "regression_guard_representative": {"n": 45, "exact_match_pct": 42.2, "normalized_exact_match_pct": 48.9,
+                                         "mean_bigram_jaccard_similarity": 0.669, "mean_response_length_delta": 4.1},
+    "new_holdout16": "ZG側の対応するbaseline応答が存在しない(完全新規probeのため)、直接比較の対象外。"
+  },
+  "interpretation": "直感に反して、直接の学習対象であったteacher26の方が、core9やregression_guardよりもexact match率が低い(17.2% vs 42-46%)。これは、teacher26では学習によって表現・言い回しレベルの変化が最も強く現れた(文言は変わったが、根本的なsafe/unsafe判定はほとんど変わらなかった)ことを示しており、Diagnostic Fの『teacher lossは下がったが、判定を左右する分岐token付近のmarginはほぼ動いていない』という結果と整合する。regression_guard(45件)のexact match率(42.2%)がcore9(46.2%)と近い水準にあることは、モデルの出力分布全体が『既存の安全な応答パターン』に対しても『新規のinstruction override probe』に対しても、同程度の(比較的小さな)ノイズレベルの変動しか示していないことを意味し、instruction_override教師が他のprobeと比べて突出した変化を生んでいないことの追加証拠となる。"
+}

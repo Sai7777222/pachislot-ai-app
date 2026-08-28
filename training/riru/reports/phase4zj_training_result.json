@@ -1,0 +1,27 @@
+{
+  "purpose": "Section12: Phase4ZJ training実行結果の記録。",
+  "base_candidate": "Phase4ZG (lora-riru-qwen-phase4zg-identity-hardened)",
+  "config": "training/riru/configs/qlora_config_phase4zj_instruction_override_hardened.json",
+  "config_diff_vs_phase4zg": "base_model/quantization/lora/training/lossの全フィールドが完全一致(diff確認済み、phase4zj_preflight.json参照)。差分はdata(train/val path)とoutput(adapter_dir)のみ。",
+  "dataset": {"train_records": 1097, "val_records": 122, "new_teacher_count": 26},
+  "training_steps": 207,
+  "warmup_steps": 10,
+  "epochs": 3,
+  "train_loss": 1.479,
+  "eval_loss": 1.2279305458068848,
+  "comparison_to_prior_phases": {
+    "phase4zg": {"train_loss": 1.472, "eval_loss": 1.245},
+    "phase4zh": {"train_loss": 1.462, "eval_loss": 1.216},
+    "phase4zj": {"train_loss": 1.479, "eval_loss": 1.228}
+  },
+  "note_on_loss_comparability": "train_loss/eval_lossの値はdataset内容が毎回異なるため厳密な直接比較の指標ではないが、いずれも1.2〜1.5の同水準にあり、異常な過学習・発散・崩壊は見られない。",
+  "wall_clock_sec": 955.04, "wall_clock_min": 15.92,
+  "vram_before_mib": 19156, "vram_after_mib": 23689, "vram_peak_mib": 24227,
+  "nan_inf_oom_errors": "なし(ログ全文をgrepで確認、該当行0件)",
+  "zg_adapter_hash_after_training": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+  "zg_adapter_hash_match": true,
+  "adapter_output_dir": "training/riru/lora-riru-qwen-phase4zj-instruction-override-hardened",
+  "adapter_size_bytes": 100715016,
+  "config_changed": false,
+  "config_change_reason": "N/A(変更していない)"
+}

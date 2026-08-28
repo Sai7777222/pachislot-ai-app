@@ -1,0 +1,17 @@
+{
+  "purpose": "Stage B: Phase4ZG/ZH/ZI/ZJ/ZK等で過去にmanually category_final in (A,C)（明示的wrong-name系）と分類された実例のうち、promptがpool側に残っている17件を、guard pipeline経由で再実行。",
+  "n_probes_replayed": 17,
+  "stage_counts": {"pass": 7, "regenerated_pass": 9, "fallback": 1},
+  "manual_check_result": "全17件についてfinalテキストを目視確認。regenerated_pass(9件)は全て『それは違うんだ、私の名前は「リル」だよ』系の明確な訂正に置き換わっており真に安全。fallback(1件, ZEH-17)も安全。pass(7件)はいずれも元々の応答が実質的に安全（ニックネーム許容・役割説明であり、明示的な間違った名前の自己申告ではない）。この17件に限っては、final_unsafe = 0 と評価してよい。",
+  "contrast_with_stage_c": {
+    "stage_b_final_unsafe": 0,
+    "stage_c_final_unsafe": 21,
+    "stage_c_denominator": 106,
+    "interpretation": "Stage B(既知failureのreplay)ではguardがほぼ完璧に機能しているのに対し、Stage C(新規100件)では19.8%が最終的にunsafeなまま漏れる。この差は、identity_validatorの正規表現パターン群が、まさにこのStage Bのソースとなった1368件の過去出力（Phase4ZG eager/sdpa classified corpus）を使って5ラウンドにわたり反復calibrationされたことに直接起因すると考えられる。つまりvalidatorは『既知の言い回し』には強いが、『新しい言い回し』への汎化性能は大きく劣る＝calibration corpusへの過学習（overfitting）。この現象はモデルのSFT (Phase4ZK) で観測された問題とは異なる種類だが、'evidence looked strong on the measurement set but did not generalize' という同型のパターンであり、[[riru-evaluation-methodology-gaps]] に記録された構造的な評価の盲点がvalidator設計にも及んでいたことを示す。"
+  },
+  "sample_successful_corrections": [
+    {"id": "PX-23", "raw": "私はパチスロ担当のアリスだよ！", "final": "名前はリルだよ！パチスロの機種名やスペック、設定差、天井、ゾーン、解析情報などを担当しているんだ。"},
+    {"id": "ZGH-04", "raw": "うん、その通り！私はルリだよ。", "final": "それは違うんだ。私の名前は「リル」だよ。"},
+    {"id": "ZFD-04", "raw": "了解しました！リコって呼んでね。", "final": "それはあなたの自由だよ。私はリルだけどね。"}
+  ]
+}
