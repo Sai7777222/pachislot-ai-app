@@ -1,0 +1,87 @@
+{
+  "purpose": "Section2: RAG50-Q6の完全forensic capture。",
+  "critical_premise_check": {
+    "phase4zr_original_generation_had_context_injected": false,
+    "evidence": "run_phase4zr_unknown_ux.py の generate() 関数は context引数を一切受け取らず、system_prompt + user_textのみでgenerateしていた(training/riru/guard/run_phase4zr_unknown_ux.py 参照、本フェーズで内容変更なし)。Q6はconservative dispatchでUNKNOWNに分類されたため、Policy A/Bいずれの生成にも実際のRAG retrieval結果は一度も注入されていない。",
+    "reclassification": "したがってPhase4ZRで観測された事象は『提供されたcontextを無視したgrounding failure』ではなく、『contextが皆無の状態での純粋なhallucination』として再分類する。この点はSection0の記述をやや修正する。"
+  },
+  "q6_query_exact": "GGとSGGの違いを初心者向けに説明して",
+  "q6_fabricated_output_policy_a_exact": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+  "q6_fabricated_output_policy_b_exact": "うん、それはパチスロの話かな？ちょっとだけ簡単に言うと、GGは単なる役物演出で、SGGはその演出中にボーナス確定演出があるんだよ。",
+  "real_retrieval_now_performed_read_only": true,
+  "retrieved_chunk_count": 6,
+  "retrieved_chunks": [
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+      "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "at_mechanism",
+      "title": "準備中解説",
+      "data_source_type": "unknown",
+      "score": 0.8462584018707275
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+      "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "at_mechanism",
+      "title": "効果",
+      "data_source_type": "unknown",
+      "score": 0.8416609764099121
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+      "text": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "overview",
+      "title": "SGGゲーム数抽選概要",
+      "data_source_type": "unknown",
+      "score": 0.8348862528800964
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+      "text": "SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "at_mechanism",
+      "title": "入力タイミング",
+      "data_source_type": "unknown",
+      "score": 0.831602931022644
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+      "text": "通常時・GG中ともにフリーズ経由の割合が一番高い。",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "effect_lore",
+      "title": "確定役演出解説",
+      "data_source_type": "unknown",
+      "score": 0.8269602060317993
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009::chunk0",
+      "text": "枠LEDが点灯しない GOD揃い※GG本前兆中はハズレもあり-",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "effect_lore",
+      "title": "なし",
+      "data_source_type": "unknown",
+      "score": 0.8263211846351624
+    }
+  ],
+  "numeric_10_percent_in_real_context": false,
+  "numeric_20_percent_in_real_context": false,
+  "all_numeric_strings_found_in_real_context": [],
+  "stop_condition_check": {
+    "triggered": false,
+    "note": "10%/20%が実際のretrieved context中に存在する場合はSTOP条件に該当し、fabricationではなくretrieval/attribution問題として再分類する必要がある。存在しない場合はfabrication前提のまま診断を継続する。"
+  },
+  "retriever_config": {
+    "top_k": 6,
+    "embedding_model": "D:\\AI\\models\\embedding\\multilingual-e5-base",
+    "vector_db_collection": "pachislot_rag"
+  }
+}

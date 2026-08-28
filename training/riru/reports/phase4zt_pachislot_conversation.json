@@ -1,0 +1,77 @@
+{
+  "purpose": "Stage G: pachislot conversational10 (direct=既存ZP output無変更 + UNKNOWN=Policy C3)",
+  "n_total": 10,
+  "fabricated_machine_name_count": 0,
+  "rows": [
+    {
+      "probe_id": "ZN-F01",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "direct_conversational_unchanged",
+      "response": "うーん、そのへんは私にはわからないな〜。適当に答えると逆に困るから、今日は無理だけどね！",
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-F02",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、そんな日もあるよね…！",
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-F03",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "direct_conversational_unchanged",
+      "response": "そう感じるなら、その直感を信じてみて！",
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-F04",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "direct_conversational_unchanged",
+      "response": "まずは自分のペースで楽しむこと！無理せず、リセットボタン押すタイミングとか、ちょっとずつ覚えていくといいかも〜！",
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-F05",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、今日も一緒に頑張ろうね！",
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-F06",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "direct_conversational_unchanged",
+      "response": "それは大変だね…でも、無理しないでゆっくり考えてみてほしいな。",
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-F07",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "direct_conversational_unchanged",
+      "response": "うん、その挙動はちょっと気になるかも。具体的な状況教えてもらえると嬉しいな〜！",
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-F08",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "direct_conversational_unchanged",
+      "response": "うーん、それはちょっと難しいかも…！私の中では、どの機種も特別な存在だから、一発で決められないんだよね〜。",
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-F09",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "direct_conversational_unchanged",
+      "response": "やっぱりボーナス確定の瞬間かな〜！ドキドキするよね〜！",
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-F10",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "direct_conversational_unchanged",
+      "response": "うん、相談に乗るよ！どんな状況かな？",
+      "placeholder": false
+    }
+  ]
+}

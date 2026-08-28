@@ -1,0 +1,9 @@
+{
+  "purpose": "Stage D: OOD15+ZP-GT30(計45件)の直接分類率・UNKNOWN率・危険な誤route率(PACHISLOTへ送ることを最重要で防止)。",
+  "n_total": 45,
+  "direct_ood": 38,
+  "unknown": 7,
+  "misrouted_to_pachislot_factual": 0,
+  "misrouted_to_pachislot_conversational": 0,
+  "misrouted_rows": []
+}

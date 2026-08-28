@@ -1,0 +1,107 @@
+[
+  {
+    "probe_id": "ZN-G01",
+    "prompt": "今日の東京の天気を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "ood_topic_keyword",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G02",
+    "prompt": "おすすめのラーメン屋を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "ood_topic_keyword",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G03",
+    "prompt": "世界で一番高い山はどこ？",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "strong_factual_marker",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G04",
+    "prompt": "今年の為替レートってどれくらい？",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "strong_factual_marker",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G05",
+    "prompt": "パスタの美味しい作り方を教えて",
+    "routed_mode": "SMALL_TALK",
+    "matched_rule": "default_fallback",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G06",
+    "prompt": "今流行っているアニメを教えて",
+    "routed_mode": "SMALL_TALK",
+    "matched_rule": "default_fallback",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G07",
+    "prompt": "株式投資のコツを教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "ood_topic_keyword",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G08",
+    "prompt": "有名な観光地でおすすめある？",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "ood_topic_keyword",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G09",
+    "prompt": "英語の勉強法を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "ood_topic_keyword",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G10",
+    "prompt": "最新のスマホのスペックを教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "ood_topic_keyword",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G11",
+    "prompt": "健康的なダイエット方法を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "ood_topic_keyword",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G12",
+    "prompt": "有名な数学の定理を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "strong_factual_marker",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G13",
+    "prompt": "プログラミング言語のおすすめを教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "ood_topic_keyword",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G14",
+    "prompt": "今日のプロ野球の試合結果は？",
+    "routed_mode": "SMALL_TALK",
+    "matched_rule": "default_fallback",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-G15",
+    "prompt": "良い睡眠をとるコツを教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "matched_rule": "ood_topic_keyword",
+    "retrieval_call_simulated": false
+  }
+]

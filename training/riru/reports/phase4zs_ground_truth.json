@@ -1,0 +1,2167 @@
+{
+  "purpose": "Phase4ZS Section3-4: RAG50(50件)+新規Q6型probe(20件)=70件の独立ground truth。retrieval結果(generation前)のみを根拠に、各probeの検索context内に数値が存在するか否か(category A/B)を機械的に判定した。C(一部数値のみ)/D-H(質問様式)は各probe定義時のstyleタグ、または後続stageでの目視判定に委ねる(自動判定の限界を誠実に認める)。",
+  "total": 70,
+  "category_a_numeric_present": 53,
+  "category_b_no_numeric": 17,
+  "rows": [
+    {
+      "probe_id": "RAG50-Q17",
+      "prompt": "ミリオンゴッドの遊び方を少し詳しく説明して",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q17",
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::overview::機種概要::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::演出恩恵::334::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+        "smart_million_god_kamigami_no_kiseki::strategy::打ち方(小役狙い)::62::chunk0"
+      ],
+      "retrieved_titles": [
+        "機種概要",
+        "2",
+        "入力タイミング",
+        "演出恩恵",
+        "1",
+        "打ち方(小役狙い)"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q3",
+      "prompt": "天井は？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q3",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "33%",
+        "3枚"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::天井解説::329-330::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::前兆::216::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::裏天国解説::760::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::天空の扉解説::700::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井解説",
+        "前兆",
+        "裏天国解説",
+        "天空の扉解説",
+        "中パターン",
+        "出目示唆解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q16",
+      "prompt": "ミリオンゴッドの遊び方を簡潔に説明して",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q16",
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::overview::機種概要::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "smart_million_god_kamigami_no_kiseki::strategy::打ち方(小役狙い)::62::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::演出恩恵::334::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0"
+      ],
+      "retrieved_titles": [
+        "機種概要",
+        "2",
+        "打ち方(小役狙い)",
+        "演出恩恵",
+        "1",
+        "入力タイミング"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q5",
+      "prompt": "Z-ZONEって何？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q5",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "4G連",
+        "50%",
+        "80%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::満月解説::814::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特殊抽選解説::518::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::入力タイミング::994::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::昇格解説::251::chunk0"
+      ],
+      "retrieved_titles": [
+        "出目示唆解説",
+        "満月解説",
+        "抽選概要",
+        "特殊抽選解説",
+        "入力タイミング",
+        "昇格解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q11",
+      "prompt": "天井とヤメ時を合わせて初心者向けに説明して",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q11",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "3枚"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::裏天国解説::760::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::前兆::216::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0"
+      ],
+      "retrieved_titles": [
+        "裏天国解説",
+        "前兆",
+        "効果",
+        "中パターン",
+        "3",
+        "効果"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q1",
+      "prompt": "設定6の機械割は？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q1",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::白::998::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件（設定変更時）",
+        "Z-ZONE昇格に関する解説",
+        "青7連続時GG当選率",
+        "3",
+        "白",
+        "2"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q8",
+      "prompt": "ガイアステージについて教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q8",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "75%",
+        "3G以",
+        "9G)",
+        "3G加",
+        "4G)"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ中解説::286::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::保障ゲーム解説::297-298::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::フラッシュ解説::751::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118::chunk0"
+      ],
+      "retrieved_titles": [
+        "ステージ中解説",
+        "天国モード解説",
+        "ガイアナビの解説",
+        "保障ゲーム解説",
+        "フラッシュ解説",
+        "補足解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q2",
+      "prompt": "設定6の初当りは？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q2",
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD::945::chunk0"
+      ],
+      "retrieved_titles": [
+        "Z-ZONE昇格に関する解説",
+        "青7連続時GG当選率",
+        "2",
+        "3",
+        "中パターン",
+        "上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q4",
+      "prompt": "ガイアベルの確率は？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q4",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "75%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特徴::255-256::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74::chunk0"
+      ],
+      "retrieved_titles": [
+        "天国モード解説",
+        "補足解説",
+        "モードごとの違い",
+        "特徴",
+        "ガイアナビの解説",
+        "小役履歴の抽選解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q13",
+      "prompt": "登録データにない架空の設定7の機械割は？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q13",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "50%",
+        "80%",
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特殊抽選解説::518::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::白::998::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::小役履歴補足::84::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::継続契機ごとのSGGゲーム数振り分け【5の倍数セット】::472::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0"
+      ],
+      "retrieved_titles": [
+        "青7連続時GG当選率",
+        "特殊抽選解説",
+        "白",
+        "小役履歴補足",
+        "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】",
+        "天井突入条件（設定変更時）"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q14",
+      "prompt": "このミリオンゴッドにはボーナス後のリプレイタイム(RT)機能がありますか？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q14",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "9G)"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::overview::機種概要::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::終了抽選の解説::312-314::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0"
+      ],
+      "retrieved_titles": [
+        "機種概要",
+        "入力タイミング",
+        "終了抽選の解説",
+        "中パターン",
+        "小役履歴の抽選解説",
+        "表モード概要"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q12",
+      "prompt": "銀河系ボーナスの発生率は？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q12",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "80.0%",
+        "90.0%",
+        "50.0%",
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "3枚"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::弱パターン::796::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::裏天国解説::760::chunk0"
+      ],
+      "retrieved_titles": [
+        "4",
+        "弱パターン",
+        "抽選概要",
+        "天井突入条件（設定変更時）",
+        "確定役演出解説",
+        "裏天国解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P02",
+      "prompt": "ボーナス確率について教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P02",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "80.0%",
+        "90.0%",
+        "50.0%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件（設定変更時）",
+        "抽選概要",
+        "確定役演出解説",
+        "4",
+        "青7連続時GG当選率",
+        "小役確率補足"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-AD-04",
+      "prompt": "ヤメ時はいつがいい？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "AD-04",
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::白7に関する特典補足::86::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::白::998::chunk0"
+      ],
+      "retrieved_titles": [
+        "ALL黄色(偶数)",
+        "巨大化演出解説",
+        "入力タイミング",
+        "準備中解説",
+        "白7に関する特典補足",
+        "白"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q15",
+      "prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q15",
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::overview::機種概要::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "smart_million_god_kamigami_no_kiseki::strategy::打ち方(小役狙い)::62::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0"
+      ],
+      "retrieved_titles": [
+        "機種概要",
+        "2",
+        "打ち方(小役狙い)",
+        "入力タイミング",
+        "1",
+        "3"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P04",
+      "prompt": "最低設定と最高設定の機械割の差を教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P04",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "80.0%",
+        "90.0%",
+        "50.0%",
+        "4Gま"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件（設定変更時）",
+        "確定役演出解説",
+        "小役確率補足",
+        "青7連続時GG当選率",
+        "4",
+        "LV5（GG継続濃厚）"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q10",
+      "prompt": "Z-ZONEとGGの関係を説明して",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q10",
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::昇格解説::251::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::Z-ZONE解説::404-405::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特徴::255-256::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0"
+      ],
+      "retrieved_titles": [
+        "抽選概要",
+        "昇格解説",
+        "Z-ZONE解説",
+        "Z-ZONE昇格に関する解説",
+        "特徴",
+        "出目示唆解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q7",
+      "prompt": "この機種のヤメ時を説明して",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q7",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "4Gま"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0"
+      ],
+      "retrieved_titles": [
+        "中パターン",
+        "入力タイミング",
+        "効果",
+        "3",
+        "LV5（GG継続濃厚）",
+        "巨大化演出解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q9",
+      "prompt": "設定6の初当りと機械割を設定1と比較して",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q9",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "4Gま",
+        "6.0%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::17G::232::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0"
+      ],
+      "retrieved_titles": [
+        "青7連続時GG当選率",
+        "ALL黄色(偶数)",
+        "LV5（GG継続濃厚）",
+        "中パターン",
+        "17G",
+        "Z-ZONE昇格に関する解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-LC-08",
+      "prompt": "AT-Fの性能と終了後の状態を教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "LC-08",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480G消",
+        "4Gま"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件::56::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::白::998::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件",
+        "LV5（GG継続濃厚）",
+        "白",
+        "効果",
+        "3",
+        "中パターン"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q6",
+      "prompt": "GGとSGGの違いを初心者向けに説明して",
+      "source": "rag50",
+      "style": null,
+      "original_id": "Q6",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "100Gが"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009::chunk0"
+      ],
+      "retrieved_titles": [
+        "準備中解説",
+        "効果",
+        "SGGゲーム数抽選概要",
+        "入力タイミング",
+        "確定役演出解説",
+        "なし"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P01",
+      "prompt": "天井について教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P01",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "33%",
+        "3枚"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::前兆::216::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::天井解説::329-330::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::裏天国解説::760::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::天空の扉解説::700::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0"
+      ],
+      "retrieved_titles": [
+        "前兆",
+        "天井解説",
+        "裏天国解説",
+        "天空の扉解説",
+        "効果",
+        "中パターン"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P03",
+      "prompt": "ゾーンιについて教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P03",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "4G連"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::満月解説::814::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::白::998::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0"
+      ],
+      "retrieved_titles": [
+        "満月解説",
+        "出目示唆解説",
+        "抽選概要",
+        "白",
+        "Z-ZONE昇格に関する解説",
+        "ALL黄色(偶数)"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P05",
+      "prompt": "ATの恩恵について教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P05",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480G消"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件::56::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::裏モードのポイント（テーブル）::105-108::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件",
+        "青7連続時GG当選率",
+        "出目示唆解説",
+        "ALL黄色(偶数)",
+        "裏モードのポイント（テーブル）",
+        "確定役演出解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P06",
+      "prompt": "初当りについて教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P06",
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::strategy::打ち方(小役狙い)::62::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::白7に関する特典補足::86::chunk0"
+      ],
+      "retrieved_titles": [
+        "打ち方(小役狙い)",
+        "青7連続時GG当選率",
+        "ALL黄色(偶数)",
+        "中パターン",
+        "巨大化演出解説",
+        "白7に関する特典補足"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P07",
+      "prompt": "モードについて教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P07",
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::継続期待度補足::932-933::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::ステージ変化解説::836-837::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0"
+      ],
+      "retrieved_titles": [
+        "効果",
+        "ALL黄色(偶数)",
+        "継続期待度補足",
+        "ステージ変化解説",
+        "2",
+        "3"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P08",
+      "prompt": "天井に到達したときの恩恵について教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P08",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "3枚",
+        "33%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::裏天国解説::760::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::天井解説::329-330::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::前兆::216::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::演出恩恵::334::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::天空の扉解説::700::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0"
+      ],
+      "retrieved_titles": [
+        "裏天国解説",
+        "天井解説",
+        "前兆",
+        "演出恩恵",
+        "天空の扉解説",
+        "中パターン"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P09",
+      "prompt": "小役Wについて教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P09",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "24G。",
+        "12Gに"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::下パネルフラッシュ発生::950::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::前兆ゲーム数解説::241::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD::945::chunk0"
+      ],
+      "retrieved_titles": [
+        "小役確率補足",
+        "下パネルフラッシュ発生",
+        "前兆ゲーム数解説",
+        "巨大化演出解説",
+        "出目示唆解説",
+        "上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P10",
+      "prompt": "投資と勝率の目安について教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "P10",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "80.0%",
+        "90.0%",
+        "50.0%",
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】::452-464::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0"
+      ],
+      "retrieved_titles": [
+        "4",
+        "天井突入条件（設定変更時）",
+        "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+        "巨大化演出解説",
+        "確定役演出解説",
+        "ALL黄色(偶数)"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-01",
+      "prompt": "設定1と設定5の初当り確率の差を教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-01",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "4Gま",
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "80.0%",
+        "90.0%",
+        "50.0%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0"
+      ],
+      "retrieved_titles": [
+        "Z-ZONE昇格に関する解説",
+        "LV5（GG継続濃厚）",
+        "青7連続時GG当選率",
+        "天井突入条件（設定変更時）",
+        "4",
+        "小役確率補足"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-02",
+      "prompt": "モードαとモードγの滞在率の差だけ教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-02",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "5G目",
+        "1G目",
+        "31Gの",
+        "31Gま"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::G-ZONE解説::372-373::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::通常告知解説::393-394::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741::chunk0"
+      ],
+      "retrieved_titles": [
+        "G-ZONE解説",
+        "確定役演出解説",
+        "モードごとの違い",
+        "通常告知解説",
+        "効果",
+        "ガイアナビ解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-03",
+      "prompt": "ゾーンWとゾーンVの継続率の差を教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-03",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1%",
+        "25%",
+        "50%",
+        "80%",
+        "16.7%",
+        "33.2%",
+        "4G連",
+        "5G目",
+        "1G目",
+        "34.4%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井恩恵詳細::59-60::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::満月解説::814::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::G-ZONE解説::372-373::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::引き戻し解説::445-446::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井恩恵詳細",
+        "満月解説",
+        "抽選概要",
+        "確定役演出解説",
+        "G-ZONE解説",
+        "引き戻し解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-04",
+      "prompt": "設定2と設定4の機械割の差はどれくらい？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-04",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "5G目",
+        "1G目"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::テンパイ数字解説::595::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::G-ZONE解説::372-373::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::炎・戦車解説::687::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件（設定変更時）",
+        "青7連続時GG当選率",
+        "Z-ZONE昇格に関する解説",
+        "テンパイ数字解説",
+        "G-ZONE解説",
+        "炎・戦車解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-05",
+      "prompt": "AT-AとAT-Bの純増の差を教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-05",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480G消",
+        "4Gま",
+        "10G ",
+        "50G(",
+        "80.0%",
+        "90.0%",
+        "50.0%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件::56::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ開始解説::875::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件",
+        "LV5（GG継続濃厚）",
+        "確定役演出解説",
+        "巨大化演出解説",
+        "ステージ開始解説",
+        "4"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-06",
+      "prompt": "設定1と設定6の初当り確率を、それぞれの値と差の両方教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-06",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "4Gま"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0"
+      ],
+      "retrieved_titles": [
+        "青7連続時GG当選率",
+        "Z-ZONE昇格に関する解説",
+        "天井突入条件（設定変更時）",
+        "小役確率補足",
+        "抽選概要",
+        "LV5（GG継続濃厚）"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-07",
+      "prompt": "モードβとモードδの滞在率について、個別の値と差を両方教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-07",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "5G目",
+        "1G目",
+        "80.0%",
+        "90.0%",
+        "50.0%",
+        "0.1%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::G-ZONE解説::372-373::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::ステージ変化解説::836-837::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::19G::234::chunk0"
+      ],
+      "retrieved_titles": [
+        "モードごとの違い",
+        "G-ZONE解説",
+        "確定役演出解説",
+        "4",
+        "ステージ変化解説",
+        "19G"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-08",
+      "prompt": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-08",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "80.0%",
+        "90.0%",
+        "50.0%",
+        "4Gま"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::テンパイ数字解説::595::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件（設定変更時）",
+        "Z-ZONE昇格に関する解説",
+        "4",
+        "LV5（GG継続濃厚）",
+        "テンパイ数字解説",
+        "青7連続時GG当選率"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-09",
+      "prompt": "ゾーンXとゾーンZの獲得枚数を、それぞれの枚数と差の両方で教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-09",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "4G連",
+        "1%",
+        "25%",
+        "50%",
+        "80%",
+        "16.7%",
+        "33.2%",
+        "31Gの",
+        "31Gま"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::満月解説::814::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井恩恵詳細::59-60::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::通常告知解説::393-394::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特殊抽選解説::518::chunk0"
+      ],
+      "retrieved_titles": [
+        "満月解説",
+        "抽選概要",
+        "出目示唆解説",
+        "天井恩恵詳細",
+        "通常告知解説",
+        "特殊抽選解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-10",
+      "prompt": "RT-AとRT-Bの継続G数について、両方の数値と差を教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-10",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "100Gが",
+        "10G ",
+        "50G("
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ開始解説::875::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0"
+      ],
+      "retrieved_titles": [
+        "効果",
+        "SGGゲーム数抽選概要",
+        "ステージ開始解説",
+        "確定役演出解説",
+        "準備中解説",
+        "モードごとの違い"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-11",
+      "prompt": "設定の中で機械割が最大のものと最小のものの差を教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-11",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0"
+      ],
+      "retrieved_titles": [
+        "確定役演出解説",
+        "小役確率補足",
+        "天井突入条件（設定変更時）",
+        "青7連続時GG当選率",
+        "ALL黄色(偶数)",
+        "3"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-12",
+      "prompt": "モードの中で滞在率が一番高いものと低いものの差はどれくらい？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-12",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "80%",
+        "5G目",
+        "1G目"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::SP役補足::193::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::G-ZONE解説::372-373::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0"
+      ],
+      "retrieved_titles": [
+        "確定役演出解説",
+        "SP役補足",
+        "G-ZONE解説",
+        "裏モード概要",
+        "表モード概要",
+        "Z-ZONE昇格に関する解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-13",
+      "prompt": "ゾーンの中で獲得枚数が最大のものと最小のものの差を教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-13",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "4G連"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::満月解説::814::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::履歴契機解説::213::chunk0"
+      ],
+      "retrieved_titles": [
+        "満月解説",
+        "入力タイミング",
+        "確定役演出解説",
+        "抽選概要",
+        "出目示唆解説",
+        "履歴契機解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-14",
+      "prompt": "設定1から設定6に上がると初当り確率はどれだけ増加する？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-14",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "3G以",
+        "9G)",
+        "3G加",
+        "4G)",
+        "75%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::保障ゲーム解説::297-298::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0"
+      ],
+      "retrieved_titles": [
+        "Z-ZONE昇格に関する解説",
+        "青7連続時GG当選率",
+        "表モード概要",
+        "保障ゲーム解説",
+        "抽選概要",
+        "天国モード解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-15",
+      "prompt": "モードαからモードδへ移行すると上乗せ期待枚数はいくら増える？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-15",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "10G ",
+        "50G("
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::テンパイ数字解説::595::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ開始解説::875::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::雷演出解説::652::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::アメグレ解説::900::chunk0"
+      ],
+      "retrieved_titles": [
+        "テンパイ数字解説",
+        "ステージ開始解説",
+        "表モード概要",
+        "巨大化演出解説",
+        "雷演出解説",
+        "アメグレ解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-16",
+      "prompt": "AT-AからAT-Cに変わると純増はどれくらい増える？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-16",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480G消",
+        "4Gま",
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "80.0%",
+        "90.0%",
+        "50.0%",
+        "10G ",
+        "50G(",
+        "30Gが"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件::56::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ開始解説::875::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::ステージ法則解説::423::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件",
+        "LV5（GG継続濃厚）",
+        "天井突入条件（設定変更時）",
+        "4",
+        "ステージ開始解説",
+        "ステージ法則解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-17",
+      "prompt": "設定6から設定1に下がると機械割はどれだけ減少する？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-17",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "9G)"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::テンパイ数字解説::595::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::終了抽選の解説::312-314::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件（設定変更時）",
+        "Z-ZONE昇格に関する解説",
+        "青7連続時GG当選率",
+        "テンパイ数字解説",
+        "終了抽選の解説",
+        "モードごとの違い"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-18",
+      "prompt": "ゾーンZからゾーンXに変わると継続率はどれだけ下がる？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-18",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1%",
+        "25%",
+        "50%",
+        "80%",
+        "16.7%",
+        "33.2%",
+        "34.4%",
+        "4G連",
+        "31Gの",
+        "31Gま"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井恩恵詳細::59-60::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::引き戻し解説::445-446::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::満月解説::814::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::通常告知解説::393-394::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特殊抽選解説::518::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井恩恵詳細",
+        "抽選概要",
+        "引き戻し解説",
+        "満月解説",
+        "通常告知解説",
+        "特殊抽選解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-19",
+      "prompt": "設定1に対して設定6の初当り確率は何ポイント優遇されている？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-19",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "9G)"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::終了抽選の解説::312-314::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0"
+      ],
+      "retrieved_titles": [
+        "Z-ZONE昇格に関する解説",
+        "青7連続時GG当選率",
+        "抽選概要",
+        "準備中解説",
+        "終了抽選の解説",
+        "表モード概要"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-20",
+      "prompt": "モードαとモードβでは、上乗せ確率の差は何ポイント？",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-20",
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特徴::255-256::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0"
+      ],
+      "retrieved_titles": [
+        "表モード概要",
+        "Z-ZONE昇格に関する解説",
+        "抽選概要",
+        "モードごとの違い",
+        "特徴",
+        "ガイアナビの解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-21",
+      "prompt": "RT-BとRT-Cの中抽選確率の差だけ教えて",
+      "source": "rag50",
+      "style": null,
+      "original_id": "PT-21",
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::白7に関する特典補足::86::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件（設定変更時）",
+        "抽選概要",
+        "白7に関する特典補足",
+        "準備中解説",
+        "確定役演出解説",
+        "青7連続時GG当選率"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-01",
+      "prompt": "GGとSGGの違いを一言で教えて",
+      "source": "zs_new",
+      "style": "F_G",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "100Gが"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009::chunk0"
+      ],
+      "retrieved_titles": [
+        "準備中解説",
+        "効果",
+        "SGGゲーム数抽選概要",
+        "入力タイミング",
+        "確定役演出解説",
+        "なし"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-02",
+      "prompt": "ガイアステージとZ-ZONEの違いを初心者向けに説明して",
+      "source": "zs_new",
+      "style": "F_G",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "31Gの",
+        "31Gま"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特徴::255-256::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::通常告知解説::393-394::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ中解説::286::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0"
+      ],
+      "retrieved_titles": [
+        "Z-ZONE昇格に関する解説",
+        "抽選概要",
+        "特徴",
+        "通常告知解説",
+        "ステージ中解説",
+        "出目示唆解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-03",
+      "prompt": "モードαとモードβの違いを簡単に教えて",
+      "source": "zs_new",
+      "style": "F_G",
+      "original_id": null,
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::レベル::1005::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0"
+      ],
+      "retrieved_titles": [
+        "3",
+        "2",
+        "レベル",
+        "効果",
+        "ガイアナビ解説",
+        "モードごとの違い"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-04",
+      "prompt": "AT-AとAT-Bはどう違うの？",
+      "source": "zs_new",
+      "style": "F",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480G消"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件::56::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::白::998::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::心臓演出解説::635::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件",
+        "白",
+        "出目示唆解説",
+        "心臓演出解説",
+        "準備中解説",
+        "青7連続時GG当選率"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-05",
+      "prompt": "RT-AとRT-Bの違いを要約して",
+      "source": "zs_new",
+      "style": "F_H",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480G消",
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件::56::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::レベル::1005::chunk0"
+      ],
+      "retrieved_titles": [
+        "効果",
+        "天井突入条件",
+        "効果",
+        "3",
+        "天井突入条件（設定変更時）",
+        "レベル"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-06",
+      "prompt": "銀河系ボーナスとガイアナビの関係を説明して",
+      "source": "zs_new",
+      "style": "D",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "75%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特徴::255-256::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0"
+      ],
+      "retrieved_titles": [
+        "ガイアナビ解説",
+        "特徴",
+        "小役履歴の抽選解説",
+        "モードごとの違い",
+        "ガイアナビの解説",
+        "天国モード解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-07",
+      "prompt": "準備中とGGの違いを教えて",
+      "source": "zs_new",
+      "style": "F",
+      "original_id": null,
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0"
+      ],
+      "retrieved_titles": [
+        "準備中解説",
+        "なし",
+        "効果",
+        "中パターン",
+        "確定役演出解説",
+        "抽選概要"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-08",
+      "prompt": "確定役演出について初心者向けにまとめて",
+      "source": "zs_new",
+      "style": "G_H",
+      "original_id": null,
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::炎・戦車解説::687::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::下パネルフラッシュ発生::950::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0"
+      ],
+      "retrieved_titles": [
+        "巨大化演出解説",
+        "1",
+        "小役確率補足",
+        "炎・戦車解説",
+        "下パネルフラッシュ発生",
+        "3"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-09",
+      "prompt": "SGGの仕組みを分かりやすく説明して",
+      "source": "zs_new",
+      "style": "G",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "100Gが"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0"
+      ],
+      "retrieved_titles": [
+        "入力タイミング",
+        "SGGゲーム数抽選概要",
+        "準備中解説",
+        "表モード概要",
+        "抽選概要",
+        "効果"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-10",
+      "prompt": "GGとSGGどっちがお得か教えて",
+      "source": "zs_new",
+      "style": "F",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "100Gが"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0"
+      ],
+      "retrieved_titles": [
+        "確定役演出解説",
+        "準備中解説",
+        "SGGゲーム数抽選概要",
+        "入力タイミング",
+        "裏モード概要",
+        "中パターン"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-11",
+      "prompt": "モードの種類を要約して",
+      "source": "zs_new",
+      "style": "H",
+      "original_id": null,
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::継続期待度補足::932-933::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::レベル::1005::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0"
+      ],
+      "retrieved_titles": [
+        "表モード概要",
+        "継続期待度補足",
+        "効果",
+        "レベル",
+        "補足解説",
+        "2"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-12",
+      "prompt": "ガイアベルとは何か説明して",
+      "source": "zs_new",
+      "style": "D",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "75%",
+        "15枚",
+        "3枚",
+        "1枚"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::小役の停止例一覧::63::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0"
+      ],
+      "retrieved_titles": [
+        "天国モード解説",
+        "モードごとの違い",
+        "補足解説",
+        "ガイアナビ解説",
+        "小役の停止例一覧",
+        "ガイアナビの解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-13",
+      "prompt": "枠LED点灯パターンをまとめて教えて",
+      "source": "zs_new",
+      "style": "H",
+      "original_id": null,
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::レベル::1005::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::特殊法則::1004::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0"
+      ],
+      "retrieved_titles": [
+        "レベル",
+        "効果",
+        "3",
+        "特殊法則",
+        "2",
+        "1"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-14",
+      "prompt": "GG中とGG準備中の違いを教えて",
+      "source": "zs_new",
+      "style": "F",
+      "original_id": null,
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109::chunk0",
+        "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0"
+      ],
+      "retrieved_titles": [
+        "準備中解説",
+        "効果",
+        "なし",
+        "裏モード概要",
+        "表モード概要",
+        "確定役演出解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-15",
+      "prompt": "SGGとRTの関係を初心者向けに教えて",
+      "source": "zs_new",
+      "style": "D_G",
+      "original_id": null,
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::炎・戦車解説::687::chunk0"
+      ],
+      "retrieved_titles": [
+        "入力タイミング",
+        "効果",
+        "中パターン",
+        "3",
+        "準備中解説",
+        "炎・戦車解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-16",
+      "prompt": "この機種のボーナスの種類を要約して",
+      "source": "zs_new",
+      "style": "H",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1480Gか",
+        "15.2%",
+        "20.3%",
+        "64.5%",
+        "33%",
+        "3G以",
+        "9G)",
+        "3G加",
+        "4G)"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+        "smart_million_god_kamigami_no_kiseki::other::白7に関する特典補足::86::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::天井解説::329-330::chunk0",
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::保障ゲーム解説::297-298::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0"
+      ],
+      "retrieved_titles": [
+        "天井突入条件（設定変更時）",
+        "白7に関する特典補足",
+        "天井解説",
+        "入力タイミング",
+        "保障ゲーム解説",
+        "ALL黄色(偶数)"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-17",
+      "prompt": "ガイアステージの遊び方を初心者向けに説明して",
+      "source": "zs_new",
+      "style": "G",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "75%",
+        "3G以",
+        "9G)",
+        "3G加",
+        "4G)"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ中解説::286::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::保障ゲーム解説::297-298::chunk0"
+      ],
+      "retrieved_titles": [
+        "ステージ中解説",
+        "ガイアナビの解説",
+        "天国モード解説",
+        "補足解説",
+        "モードごとの違い",
+        "保障ゲーム解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-18",
+      "prompt": "確定役とフリーズ演出の違いを教えて",
+      "source": "zs_new",
+      "style": "F",
+      "original_id": null,
+      "numeric_category": "B_no_numeric_in_context",
+      "numerics_found_in_context": [],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::演出内容::333::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::下パネルフラッシュ発生::950::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::炎・戦車解説::687::chunk0"
+      ],
+      "retrieved_titles": [
+        "巨大化演出解説",
+        "演出内容",
+        "確定役演出解説",
+        "1",
+        "下パネルフラッシュ発生",
+        "炎・戦車解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-19",
+      "prompt": "GGとガイアステージ、どっちが出玉が多い？",
+      "source": "zs_new",
+      "style": "F",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "3G以",
+        "9G)",
+        "3G加",
+        "4G)",
+        "75%"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ中解説::286::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::保障ゲーム解説::297-298::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::特徴::255-256::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+        "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74::chunk0",
+        "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0"
+      ],
+      "retrieved_titles": [
+        "ステージ中解説",
+        "保障ゲーム解説",
+        "特徴",
+        "Z-ZONE昇格に関する解説",
+        "小役履歴の抽選解説",
+        "天国モード解説"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZS-20",
+      "prompt": "この機種の演出を初心者向けにまとめて説明して",
+      "source": "zs_new",
+      "style": "H_G",
+      "original_id": null,
+      "numeric_category": "A_numeric_present",
+      "numerics_found_in_context": [
+        "1Gジ"
+      ],
+      "retrieved_chunk_ids": [
+        "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::竜巻発展解説::662-663::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+        "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0"
+      ],
+      "retrieved_titles": [
+        "3",
+        "効果",
+        "竜巻発展解説",
+        "2",
+        "1",
+        "中パターン"
+      ],
+      "annotation_source": "read_only_retrieval_before_any_generation",
+      "frozen": true
+    }
+  ]
+}

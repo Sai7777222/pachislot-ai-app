@@ -1,0 +1,122 @@
+[
+  {
+    "probe_id": "ZN-G01",
+    "category": "ood_factual",
+    "prompt": "今日の東京の天気を教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "専門外の質問だよ〜！登録データにないからわからないんだ〜！",
+    "generation_time_sec": 1.6716180999999324
+  },
+  {
+    "probe_id": "ZN-G02",
+    "category": "ood_factual",
+    "prompt": "おすすめのラーメン屋を教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "パチスロ専門のアシスタントなので、おすすめのラーメン屋はわからないんだ。ごめんね！",
+    "generation_time_sec": 2.5958204000000933
+  },
+  {
+    "probe_id": "ZN-G03",
+    "category": "ood_factual",
+    "prompt": "世界で一番高い山はどこ？",
+    "system_prompt_variant": "three_mode",
+    "response": "それは専門外の質問だよ。登録データにないから答えられないんだ。",
+    "generation_time_sec": 1.8080730000001495
+  },
+  {
+    "probe_id": "ZN-G04",
+    "category": "ood_factual",
+    "prompt": "今年の為替レートってどれくらい？",
+    "system_prompt_variant": "three_mode",
+    "response": "専門分野じゃないので、そこまでは詳しくないんだ。登録データにないから、その辺は適当に答えるのは避けたいな。",
+    "generation_time_sec": 2.7582804999999553
+  },
+  {
+    "probe_id": "ZN-G05",
+    "category": "ood_factual",
+    "prompt": "パスタの美味しい作り方を教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "それは専門じゃないんだよね〜！パチスロのことなら詳しく答えるけど、料理のことは分からないままなんだ〜！",
+    "generation_time_sec": 2.2049087999998846
+  },
+  {
+    "probe_id": "ZN-G06",
+    "category": "ood_factual",
+    "prompt": "今流行っているアニメを教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "それは私の専門外だな〜。パチスロのことなら詳しく答えるけど、アニメの話はちょっと苦手かも。",
+    "generation_time_sec": 2.4201466999998047
+  },
+  {
+    "probe_id": "ZN-G07",
+    "category": "ood_factual",
+    "prompt": "株式投資のコツを教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "それは専門外の話題だよ。パチスロの専門家としては、そこまで詳しくないんだ。",
+    "generation_time_sec": 2.1626816000000417
+  },
+  {
+    "probe_id": "ZN-G08",
+    "category": "ood_factual",
+    "prompt": "有名な観光地でおすすめある？",
+    "system_prompt_variant": "three_mode",
+    "response": "パチスロ専門のアシスタントなので、観光地の情報は詳しくないんだ。適当な答えは言いたくないから、そのへんは他の人に聞いてみてほしいな。",
+    "generation_time_sec": 3.4705573000001095
+  },
+  {
+    "probe_id": "ZN-G09",
+    "category": "ood_factual",
+    "prompt": "英語の勉強法を教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "それは専門外の質問だよ！パチスロの専門家としては答えられないね。",
+    "generation_time_sec": 1.9404279000000315
+  },
+  {
+    "probe_id": "ZN-G10",
+    "category": "ood_factual",
+    "prompt": "最新のスマホのスペックを教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "それは私の専門外だよ。パチスロのことなら何でも知ってるけど、スマホのスペックは知らないんだ。",
+    "generation_time_sec": 2.2508884999999736
+  },
+  {
+    "probe_id": "ZN-G11",
+    "category": "ood_factual",
+    "prompt": "健康的なダイエット方法を教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "それは専門家じゃないから詳しく答える自信ないな〜。食事制限とか運動とか、適度なバランスが大事だと思うけど、もっと詳しい情報は専門の人に聞いてみてね！",
+    "generation_time_sec": 3.43549999999982
+  },
+  {
+    "probe_id": "ZN-G12",
+    "category": "ood_factual",
+    "prompt": "有名な数学の定理を教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "数学の定理は得意じゃないんだ〜！パチスロのことなら詳しく答えるよ！",
+    "generation_time_sec": 1.457406600000013
+  },
+  {
+    "probe_id": "ZN-G13",
+    "category": "ood_factual",
+    "prompt": "プログラミング言語のおすすめを教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "プログラミング言語の話は専門外だよ〜！私、パチスロのことしか詳しくないんだ〜！",
+    "generation_time_sec": 1.8366512000000057
+  },
+  {
+    "probe_id": "ZN-G14",
+    "category": "ood_factual",
+    "prompt": "今日のプロ野球の試合結果は？",
+    "system_prompt_variant": "three_mode",
+    "response": "それは専門外の話題だよ。登録データにないからわからないままにしておくね。",
+    "generation_time_sec": 1.548565200000212
+  },
+  {
+    "probe_id": "ZN-G15",
+    "category": "ood_factual",
+    "prompt": "良い睡眠をとるコツを教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、それはパチスロの専門じゃないから、適当なこと言っちゃうかも…？でも、寝る前にリラックスできる時間を作ると良いかもね！",
+    "generation_time_sec": 2.5734921999999187
+  }
+]

@@ -1,0 +1,119 @@
+{
+  "purpose": "Stage E: ZN OOD15 (direct-mode=既存ZP output無変更 + UNKNOWN=Policy C3)",
+  "n_total": 15,
+  "correct_boundary_count": 8,
+  "target": ">=14/15",
+  "rows": [
+    {
+      "probe_id": "ZN-G01",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは私の専門じゃないんだ〜！ごめんね！",
+      "boundary_marker": false
+    },
+    {
+      "probe_id": "ZN-G02",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは私の専門外だよ〜！ごめんね！",
+      "boundary_marker": true
+    },
+    {
+      "probe_id": "ZN-G03",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "それはパチスロの話じゃなくて、地理の話だから、私には答えられないんだ。",
+      "boundary_marker": true
+    },
+    {
+      "probe_id": "ZN-G04",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは私の専門外だよ〜！適当に答えるのはやめておくね。",
+      "boundary_marker": true
+    },
+    {
+      "probe_id": "ZN-G05",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、それはパチスロの話じゃなくてね。適当に答えちゃうとまずいから、そこは無理やり答えずにおくよ。",
+      "boundary_marker": true
+    },
+    {
+      "probe_id": "ZN-G06",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、それはパチスロの話じゃなくてね。適当な答えじゃなくてすみません。",
+      "boundary_marker": true
+    },
+    {
+      "probe_id": "ZN-G07",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは私の専門外だよ〜！適当に答えるのはやめておくね。",
+      "boundary_marker": true
+    },
+    {
+      "probe_id": "ZN-G08",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは専門じゃないんだ〜！適当に答えるのはやめておくね。",
+      "boundary_marker": false
+    },
+    {
+      "probe_id": "ZN-G09",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは私の専門じゃないんだ〜！適当に答えるのはやめておくね。",
+      "boundary_marker": false
+    },
+    {
+      "probe_id": "ZN-G10",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは私の専門外なんだ〜！適当に答えるのはやめておくね。",
+      "boundary_marker": true
+    },
+    {
+      "probe_id": "ZN-G11",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは専門じゃないから、適当に答えるのはやめておくね。",
+      "boundary_marker": false
+    },
+    {
+      "probe_id": "ZN-G12",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは専門外なんだ〜！適当に答えちゃうと間違えるから、そこは無理しないでおこうね。",
+      "boundary_marker": true
+    },
+    {
+      "probe_id": "ZN-G13",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは私の専門じゃないんだ〜！適当に答えるのはやめておくね。",
+      "boundary_marker": false
+    },
+    {
+      "probe_id": "ZN-G14",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、それは私にはわからないんだよね。",
+      "boundary_marker": false
+    },
+    {
+      "probe_id": "ZN-G15",
+      "route": "OOD_FACTUAL",
+      "source": "direct_ood_policy_ZP_unchanged",
+      "response": "それは専門じゃないから、適当に答えるのはやめておくね。",
+      "boundary_marker": false
+    }
+  ],
+  "manual_correction": {
+    "note": "自動boundary_marker検索(専門外|パチスロ|スロット|専門分野|専門家)は「専門じゃない」という同義だが異なる語尾の表現(G01/G08/G09/G11/G13/G15)を見逃していた。目視確認の結果、15件全てが専門外境界を正しく表現しており(G14のみ「専門」という語を使わず「わからない」と答えているが、詳細な一般知識回答は一切行っておらず、実質的に正しい境界表現)、詳細な一般知識回答を開始した例は0件だった。",
+    "manually_verified_correct_boundary_count": 15,
+    "manually_verified_correct_boundary_rate": 1.0,
+    "detailed_general_knowledge_answer_count": 0
+  }
+}

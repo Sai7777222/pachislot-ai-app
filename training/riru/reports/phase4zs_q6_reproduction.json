@@ -1,0 +1,306 @@
+{
+  "purpose": "Stage A/B: Q6を実context付きで再現。greedy10回+production sampling30回。",
+  "context_used": "[準備中解説] GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。\n[効果] LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆\n[SGGゲーム数抽選概要] SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。\n[入力タイミング] SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで\n[確定役演出解説] 通常時・GG中ともにフリーズ経由の割合が一番高い。\n[なし] 枠LEDが点灯しない GOD揃い※GG本前兆中はハズレもあり-",
+  "greedy": {
+    "summary": {
+      "n": 10,
+      "unsupported_numeric_count": 0,
+      "unsupported_numeric_rate": 0.0,
+      "contradiction_count": 0,
+      "contradiction_rate": 0.0
+    },
+    "rows": [
+      {
+        "run": 0,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 1,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 2,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 3,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 4,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 5,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 6,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 7,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 8,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 9,
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    ]
+  },
+  "production_sampling": {
+    "summary": {
+      "n": 30,
+      "unsupported_numeric_count": 0,
+      "unsupported_numeric_rate": 0.0,
+      "contradiction_count": 0,
+      "contradiction_rate": 0.0
+    },
+    "rows": [
+      {
+        "run": 0,
+        "response": "GGはGG準備中から始まって、GG継続中の間にLEDの色で初当りGGか継続GGかを示すね。SGGはGG継続中にゲーム数抽選があって、その抽選値によっては継続ストックを1つ獲得できるんだ。入力タイミングはSGG引き戻しゾーンの毎ゲーム、レバーON時から次ゲームBETまでの間だよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 1,
+        "response": "GGとSGGは似てるけど、ちょっと違うんだよ。GGはGG中から始まって、GGが終わったら終わりのパターンが多いんだけど、SGGはGGが終わってから始まるんだ。SGGは、GG中よりもストック当選率が高くなるんだ。だから、SGG中は少し期待値が上がるって考えていいと思うよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 2,
+        "response": "GGは、GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いよ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してるんだ。一方、SGGはゲーム数がセット数と5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれると継続ストックを1つ獲得できるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 3,
+        "response": "GGは「GG準備中」から始まって、LEDの色でループストック種別やGGストックの有無が分かるよ。SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gだと継続ストックを1つゲットできるんだ！",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 4,
+        "response": "GGとSGGはどちらも継続ゾーンだけど、SGGはGGよりもゲーム数が長いんだ。SGGはゲーム数抽選の時に、継続契機とセット数が5の倍数かどうかで抽選値が変わるよ。100Gが選ばれると継続ストックを1つもらえるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 5,
+        "response": "GGとSGGの違いについて、初心者向けに説明するね。GGはGG準備中から始まって、GG前兆→GG本前兆→GG本前当りという流れになるんだ。GG本前当りから次のGG本前当りまでのことをGG継続って言うよ。GG継続中にSGGが発生すると、SGGゲーム数分だけSGGゾーンが発生するんだ。SGGゾーン中は、SGGのゲーム数分だけGGゾーンが継続するんだ。SGGゾーンは、GGゾーンとは別に存在するんだよ。SGGゾーン中は、GGゾーンとは別の抽選が行われるんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選が行われて、SGGゲーム数分だけGGゾーンが継続するんだ。SGGゾーン中は、GGゾーンとは別の抽選",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 6,
+        "response": "GGはGG準備中に「×・?・?」が出るまでの間が対象で、GG中よりストック当選率が高いんだ。SGGはGGの引き戻しゾーンで、ゲーム数抽選が行われて、100Gが選ばれると継続ストックが1つもらえるよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 7,
+        "response": "GGは「?・?・?」から始まる状態で、SGGは「×・?・?」から始まるんだ。GGの方がストック当選率が高いよ。LEDの色で初当りGGならループストック種別、GG継続ならGGストックの有無が分かるってのもあるんだ。SGGはゲーム数抽選があるんだけど、100Gになると継続ストックが1つもらえるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 8,
+        "response": "GGは準備中からGG中までの一連のゾーンのこと。GG中はループストックやGGストックの有無を示すLEDの色が変わるよ。SGGはGG中の継続ゾーンで、ゲーム数が100G以上だと継続ストックを1つゲットできるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 9,
+        "response": "GGは「ループストック」か「GGストック」が付くゾーンで、GG本前兆中はGOD揃い以外はハズレになるよ。SGGは「SGGのゲーム数」が決まって、100Gだと継続ストック1個が確定するんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 10,
+        "response": "GGとSGGの違いは、SGGの方が継続ゲーム数がランダムに決まるんだ。GGは基本的には1回だけしか来ないけど、SGGはゲーム数が増える可能性があるよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 11,
+        "response": "GGはGG準備中から始まって、GG中はループストックの種別やGGストックの有無がLEDの色で示されるんだ。SGGはGGと違うけど、100Gが当たると継続ストックを1つ獲得できるんだよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 12,
+        "response": "GGはGG準備中からGG終了まで、SGGはGG終了後も継続するゾーンだよ。SGGゾーンではゲーム数がランダムで抽選されて、その数だけSGGが継続するんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 13,
+        "response": "GGは、GG準備中開始から「×・?・?」が出るまでの間が対象になるよ。全体的にストック当選率はGG中より高いんだ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆するんだ。SGGは、SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。入力タイミングはSGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでだよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 14,
+        "response": "GGとSGGは、どちらも有利な状態だけど、GGの方が継続率が高いんだ。SGGは、ゲーム数が100Gだと継続ストックが1つ増えるんだけど、GGだとそれ以上だよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 15,
+        "response": "GGとSGGの違いは、GGがGG本前兆から始まるところ、SGGはGG引き戻しゾーンの間に発生するところだよ。SGGはゲーム数抽選で100Gが決まると継続ストックもゲットできるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 16,
+        "response": "GGとSGGは、それぞれ「ガチャガチャ」、「スーパーガチャガチャ」って呼ばれるゾーンね。GGはGG準備中から始まって、GG中でストックを獲得したり、ループが発生したりするよ。SGGはGGからさらにゲーム数が伸びて、そのゾーン中にストックを獲得できるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 17,
+        "response": "GGとSGGはどちらも継続ゾーンだけど、GGの方がストック当選率が高いんだ。SGGはゲーム数抽選があるから、100Gだと継続ストックがもらえるんだよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 18,
+        "response": "GGは「×・?・?」が出るまでの期間を指すゾーンで、その間はストック当選率が全体的に高くなるんだ。GG中はLEDの色でループストック種別やGGストックの有無が示唆されるよ。一方でSGGはGGと少し違うゾーンで、ゲーム数抽選が行われるんだ。SGGのゲーム数は継続契機とセット数が5の倍数かどうかで変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 19,
+        "response": "GGとSGGはどちらもリーチ目から始まるゾーンだけど、GGはGG本前兆から始まって、GG継続契機が揃うとGG継続ゾーンになるんだ。一方、SGGはGG本前兆から始まって、SGG引き戻しゾーンに移行するんだ。SGG引き戻しゾーンでは、毎ゲームのレバーON時〜次ゲームBETまでの間に、SGGのゲーム数が抽選されて、その数だけSGGゾーンが継続するんだ。SGGのゲーム数は5の倍数かどうかによって抽選値が変わるんだけど、100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 20,
+        "response": "GGとSGGの違いは、GGはGG本前兆からのスタートで、SGGはGG引き戻しゾーンでの抽選結果によって始まるんだ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるよ。100Gが選ばれると継続ストックを1つ獲得できるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 21,
+        "response": "GGはGG準備中から始まって、GG中が終わるとGG終了になるね。GG中のストック当選率はGG準備中に比べて少し低いんだ。SGGはGGの後にあるゾーンで、ゲーム数は5の倍数で抽選されて、100Gだと継続ストックが1つ増えるんだ。登録データにGG本前兆中でLEDが点灯しない状況の説明はなかったけど、その場合はハズレの可能性もあるんだよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 22,
+        "response": "GGとSGGは、両方とも特別な状態になるんだけど、GGはループストックがつく可能性があるんだ。GG中はループストックがつく確率が高く、SGGは継続ストックを獲得できるチャンスがあるんだ。SGGはゲーム数抽選があるから、その抽選値によってストックの種類が変わるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 23,
+        "response": "GGとSGGは両方とも高確率ゾーンだけど、GGはGG準備中に始まるんだよ。GG中の当選率はGG準備中より高いみたい。SGGはGG引き戻しゾーンのときに始まるんだけど、その時にゲーム数も一緒に決まるんだ。ゲーム数が100Gだと、継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 24,
+        "response": "GGは、GG準備中に「×・?・?」が出るまでが対象で、GG中よりもストック当選率が高いよ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無が分かるんだ。SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つもらえるんだ。入力タイミングはSGG引き戻しゾーンの毎ゲーム、レバーON時から次ゲームBETまでだよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 25,
+        "response": "GGは準備中に始まるもので、SGGはGG継続中に始まるんだ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで変わるんだよ。100Gになると、継続ストックを1つゲットできるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 26,
+        "response": "GGとSGGはどちらもゲーム数が増えるゾーンだけど、GGはループストック種別やGGストックの有無を示すLEDの色が変わるよ。SGGはゲーム数抽選があるゾーンで、その抽選値によって100Gが選ばれた場合、継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 27,
+        "response": "GGとSGGは、どちらも特別な状態を指すよ。GGはGG準備中から始まるんだけど、SGGはGG中に特殊な状況になると始まるんだ。SGGの時は、ゲーム数が100Gになることがあるんだよ。その場合、継続ストックが1つ増えるんだ。登録データはSGGの詳細について詳しくない部分もあるけど、これが基本的な違いかな。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 28,
+        "response": "GGはGG準備中から始まるゾーンで、SGGはGG終了後に引き戻しゾーンに入るときに抽選されるゾーンなんだ。SGGは100Gが当たると継続ストックを1つもらえるんだよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      {
+        "run": 29,
+        "response": "GGとSGGは、どちらも高確率状態に入るけど、GGはGG本前兆からのみ発生するんだ。一方SGGはGG引き戻しゾーンでも発生するんだよ。SGGのゲーム数は5の倍数かどうかで抽選値が変わるんだ。100Gが当たると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    ]
+  }
+}

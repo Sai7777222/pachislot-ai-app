@@ -1,0 +1,116 @@
+{
+  "purpose": "Phase4ZR原条件(context=None、strict prompt)の厳密再現。Stage A-Eのreal-context結果との対比用。",
+  "n": 10,
+  "unsupported_numeric_count": 10,
+  "unsupported_numeric_rate": 1.0,
+  "contradiction_count": 0,
+  "rows": [
+    {
+      "seed": 0,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    },
+    {
+      "seed": 1,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    },
+    {
+      "seed": 2,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    },
+    {
+      "seed": 3,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    },
+    {
+      "seed": 4,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    },
+    {
+      "seed": 5,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    },
+    {
+      "seed": 6,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    },
+    {
+      "seed": 7,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    },
+    {
+      "seed": 8,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    },
+    {
+      "seed": 9,
+      "response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "numerics_in_output": [
+        "10%",
+        "20%"
+      ],
+      "has_numeric_claim": true,
+      "contradictory_self_awareness": false
+    }
+  ],
+  "manual_correction": {
+    "note": "自動contradiction regexは「情報がない旨の文言→数値」の語順のみを想定していたが、実際の出力は「数値→登録データにその数値はなかったけど」という逆順だった(全10件で確認)。このため自動集計は0/10と誤報告した。目視確認の結果、実際には10/10全件で同一の矛盾(具体的数値10%/20%を提示した直後に「登録データにその数値はなかった」と自認する)パターンが確認された。RULE EVAL-001の教訓通り、自動パターンマッチの結果を鵜呑みにせず目視で検証した。",
+    "manually_verified_contradiction_count": 10,
+    "manually_verified_contradiction_rate": 1.0
+  },
+  "all_10_outputs_identical": true,
+  "note_on_determinism": "greedy decoding(do_sample=False)はseedに依存せず完全に決定的であるため、10回の実行は全てbyte-for-byte同一の出力になった。これはSection5が想定する「完全deterministicなら同一結果確認」の結果そのものである。"
+}

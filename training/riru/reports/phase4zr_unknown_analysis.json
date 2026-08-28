@@ -1,0 +1,18 @@
+{
+  "purpose": "Section3-4: dispatchがUNKNOWNとした77件の内訳分析。",
+  "total_unknown": 77,
+  "total_probes": 260,
+  "unknown_rate_overall": 0.29615384615384616,
+  "unknown_by_expected_mode": {
+    "PACHISLOT_FACTUAL": 20,
+    "PACHISLOT_CONVERSATIONAL": 2,
+    "SMALL_TALK": 48,
+    "OOD_FACTUAL": 7
+  },
+  "interpretation": {
+    "SMALL_TALK(48件)": "expected SMALL_TALKの95件中48件(50.5%)がUNKNOWNになった。これらは挨拶語彙・好み質問suffixのいずれにも一致しない、より間接的な会話文(例: 最近の出来事を尋ねる文、雑談の継続文等)。Section3の設計思想通り、confidentでない場合は無理に推測しない結果。",
+    "PACHISLOT_FACTUAL(20件)": "expected PACHISLOT_FACTUALの80件中20件(25%)がUNKNOWNになった。主にRAG50由来で、ゲーム固有の未知語(Z-ZONE/モードα/AT-A/RT-B等)のみでFACTUAL_METRIC_KEYWORDSやGENERAL_PACHISLOT_TERMSに一致しないケース。Policy A(strict RAG)へ送られるため、安全性は損なわれない(dangerous misroute対象外)。",
+    "OOD_FACTUAL(7件)": "_STRONG_FACTUAL_RE修正(確率/一番除去)により増加した7件。安全性優先のtrade-off。",
+    "PACHISLOT_CONVERSATIONAL(2件)": "少数。"
+  }
+}

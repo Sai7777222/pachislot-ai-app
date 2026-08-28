@@ -1,0 +1,17 @@
+{
+  "purpose": "Section15/16: system prompt変更のみでboundary問題を改善できるかを検証した。実装方針(Section15)により、production統合は『Stage A〜Eで成功した場合のみ』と条件付けられている。",
+  "production_integration_performed": false,
+  "reason_not_integrated": "Stage E(RAG50 regression)で、required probeのP02を含む複数件でcompleteness regression/未検証claim追加を確認したため(phase4zo_rag50_recheck.jsonのmanual_review参照)、Section12のgateを満たしていない。よって`config/prompts/system.jinja2`は本フェーズで一切変更していない。",
+  "experimental_files_created_not_integrated": [
+    "training/riru/guard/phase4zo_three_mode_prompt.txt (three-mode policy addendum、実験用)",
+    "training/riru/guard/phase4zo_minimal_prompt.txt (causal isolation用のminimal prompt、実験用のみ)"
+  ],
+  "three_mode_prompt_design": {
+    "structure": "既存config/prompts/system.jinja2の全文 + 3モード方針の追記(改行1つ区切り)",
+    "mode1_smalltalk": "データベース参照的な拒否をせず、好み・性格については軽いキャラクター意見として自然に回答してよい",
+    "mode2_pachislot_factual": "既存のRAG厳格ルールを維持、機種名を創作しない、具体条件がなければ聞き返す",
+    "mode3_ood_factual": "詳しい知識提供をせず、専門外である旨を短く自然に伝える(『データがないから』ではなく『専門分野ではないから』という理由づけ)"
+  },
+  "router_or_classifier_added": false,
+  "note": "Section16の条件(system promptだけでSMALL_TALK hedge<=5% と OOD correct boundary>=90%を同時達成できない場合のみ、次Phaseでrouterを検討)に照らすと、hedge rateは補正後6.2%(目標5%にわずかに届かず)、OOD boundaryは補正後100%(達成)。RAG50側の regression が本質的なblockerであるため、まずはprompt自体の追記内容を絞り込む(D categoryのexperience-question許可を明示的に追加しつつ、RAG groundingへの悪影響を避ける)反復が必要と考えられるが、これはPhase4ZO自体のスコープ外(Section7: 大規模variant探索は禁止)であり次Phaseの課題とする。"
+}

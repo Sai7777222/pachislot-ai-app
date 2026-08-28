@@ -1,0 +1,13 @@
+{
+  "n_total": 10,
+  "fabricated_machine_name_count": 0,
+  "fabricated_rows": [],
+  "zn_f01_result": {
+    "probe_id": "ZN-F01",
+    "category": "pachislot_conversational",
+    "prompt": "今日ちょっとパチスロ打ちに行こうと思うんだけど、おすすめある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、その辺りの情報を登録データからは得られないんだよね。機種タイプとか、設定狙いなのか、それともゾーン狙いなのか、そういう条件を教えてもらえると、もっと適切なアドバイスができるかも！",
+    "generation_time_sec": 3.417622100000017
+  }
+}

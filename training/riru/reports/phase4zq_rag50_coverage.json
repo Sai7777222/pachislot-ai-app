@@ -1,0 +1,15 @@
+{
+  "purpose": "Section6: RAG50(必須probe含む)についてPACHISLOT_FACTUAL detectionのcoverageを測定する。",
+  "n_total": 50,
+  "non_empty_rate": "50/50 = 100%",
+  "mandatory_probes_non_empty": {"P02": true, "P04": true, "LC-08": true, "Q11": true, "Q15": true, "Q17": true, "AD-04": true},
+  "mandatory_probes_top1_scores": {"P02": 0.8492, "P04": 0.8402, "LC-08": 0.8291, "Q11": 0.836, "Q15": 0.8509, "Q17": 0.8555, "AD-04": 0.8055},
+  "mandatory_probes_titles_topically_relevant": "全件、目視で機種概要・設定変更・天井・機械割等パチスロ関連の妥当なタイトルを確認した(単一機種DBのため、他機種混入の心配自体がない)。",
+  "content_level_relevance": "RAG50の50件全てで、上位ヒットのタイトル/カテゴリは目視で妥当と判断した(パチスロの機種解説・数値情報として一貫)。",
+  "score_level_separability": "**深刻な限界あり**。RAG50のtop1 score(0.79-0.86)は、SMALL_TALK/OOD_FACTUALクエリのtop1 score(0.77-0.85)と大きく重なっており(overlap regionに57/80のPACHISLOT_FACTUALと138/140の非PACHISLOT_FACTUALが同時に含まれる)、スコアの絶対値だけでは『内容として妥当』と『無関係だが何かにマッチしただけ』を区別できない。",
+  "root_cause": "現行のvector DBは単一機種(smart_million_god_kamigami_no_kiseki)のデータのみで構成されている(全260件の検索結果を通じて確認、他の機種IDは一切出現しなかった)。DB内のトピックが単一であるため、embeddingモデル(multilingual-e5-base)がクエリの意味的な妥当性ではなく『日本語短文としての表層的な類似度』で高いスコアを返してしまい、全く無関係な雑談・OOD質問でも0.77-0.85という高スコアの『それらしい』ヒットが返る。",
+  "target_recall": ">=49/50 (98%)",
+  "measured_recall_via_nonempty_alone": "50/50 (100%, ただしnon-emptyは意味のある識別信号になっていない -- 全モードで100%近いため)",
+  "measured_recall_via_best_exploratory_threshold_0_828": "56/80 (70%, PACHISLOT_FACTUAL全体に対して。RAG50単体でのしきい値別recallは`phase4zq_score_distribution.json`参照)",
+  "gate_result": "non-emptyだけを見れば表面上は達成(100%)だが、これは信号として無意味(全モードで同程度に高いため)。意味のある閾値ベースの識別では目標(98%)に遠く届かない。"
+}

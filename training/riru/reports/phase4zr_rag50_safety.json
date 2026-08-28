@@ -1,0 +1,17 @@
+{
+  "purpose": "Stage B: RAG50全件がPACHISLOT_FACTUALまたはUNKNOWNのいずれかであることを確認する(SMALL_TALK/OODへのdangerous misrouteは0が目標)。",
+  "n_total": 50,
+  "dangerous_misroute_count": 0,
+  "safe_count": 46,
+  "dangerous_misroute_rows": [],
+  "mandatory_probe_routing": {
+    "P02": "PACHISLOT_FACTUAL",
+    "LC-08": "UNKNOWN",
+    "Q11": "PACHISLOT_FACTUAL",
+    "Q17": "PACHISLOT_CONVERSATIONAL",
+    "AD-04": "PACHISLOT_FACTUAL"
+  },
+  "mandatory_all_safe": true,
+  "mandatory_all_ideal_factual_or_unknown": false,
+  "target": "dangerous misroute(SMALL_TALK/OOD_FACTUALへの誤route) = 0/50 (Section8の定義通り)。PACHISLOT_CONVERSATIONALはdangerousではないが、RAG groundingが保証されないという意味でidealではない(mandatory_all_ideal_factual_or_unknownで別途追跡)。"
+}

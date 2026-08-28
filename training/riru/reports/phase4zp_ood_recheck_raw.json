@@ -1,0 +1,122 @@
+[
+  {
+    "probe_id": "ZN-G01",
+    "category": "ood_factual",
+    "prompt": "今日の東京の天気を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは私の専門じゃないんだ〜！ごめんね！",
+    "generation_time_sec": 0.9085894999998345
+  },
+  {
+    "probe_id": "ZN-G02",
+    "category": "ood_factual",
+    "prompt": "おすすめのラーメン屋を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは私の専門外だよ〜！ごめんね！",
+    "generation_time_sec": 0.9199174000004859
+  },
+  {
+    "probe_id": "ZN-G03",
+    "category": "ood_factual",
+    "prompt": "世界で一番高い山はどこ？",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは専門じゃないから、そこまで詳しくないんだ〜！",
+    "generation_time_sec": 0.8940551999994568
+  },
+  {
+    "probe_id": "ZN-G04",
+    "category": "ood_factual",
+    "prompt": "今年の為替レートってどれくらい？",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは私の専門外だよ〜！適当に答えるのはやめておくね。",
+    "generation_time_sec": 1.4298344999997425
+  },
+  {
+    "probe_id": "ZN-G05",
+    "category": "ood_factual",
+    "prompt": "パスタの美味しい作り方を教えて",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、私はパチスロ専門だから、パスタの作り方までは詳しくないんだよね〜！ごめんね！",
+    "generation_time_sec": 1.906506499999523
+  },
+  {
+    "probe_id": "ZN-G06",
+    "category": "ood_factual",
+    "prompt": "今流行っているアニメを教えて",
+    "routed_mode": "SMALL_TALK",
+    "response": "最近は『鬼滅の刃』がすごい人気みたいだよ！私もちょっと見てみたけど、めっちゃ面白いんだよね〜！",
+    "generation_time_sec": 1.762599699999555
+  },
+  {
+    "probe_id": "ZN-G07",
+    "category": "ood_factual",
+    "prompt": "株式投資のコツを教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは私の専門外だよ〜！適当に答えるのはやめておくね。",
+    "generation_time_sec": 1.2678265999993528
+  },
+  {
+    "probe_id": "ZN-G08",
+    "category": "ood_factual",
+    "prompt": "有名な観光地でおすすめある？",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは専門じゃないんだ〜！適当に答えるのはやめておくね。",
+    "generation_time_sec": 1.123434900000575
+  },
+  {
+    "probe_id": "ZN-G09",
+    "category": "ood_factual",
+    "prompt": "英語の勉強法を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは私の専門じゃないんだ〜！適当に答えるのはやめておくね。",
+    "generation_time_sec": 1.1973949000002904
+  },
+  {
+    "probe_id": "ZN-G10",
+    "category": "ood_factual",
+    "prompt": "最新のスマホのスペックを教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは私の専門外なんだ〜！適当に答えるのはやめておくね。",
+    "generation_time_sec": 1.2010584999998173
+  },
+  {
+    "probe_id": "ZN-G11",
+    "category": "ood_factual",
+    "prompt": "健康的なダイエット方法を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは専門じゃないから、適当に答えるのはやめておくね。",
+    "generation_time_sec": 1.2312089999995806
+  },
+  {
+    "probe_id": "ZN-G12",
+    "category": "ood_factual",
+    "prompt": "有名な数学の定理を教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは専門外なんだ〜！適当に答えちゃうと間違えるから、そこは無理しないでおこうね。",
+    "generation_time_sec": 1.9192548999999417
+  },
+  {
+    "probe_id": "ZN-G13",
+    "category": "ood_factual",
+    "prompt": "プログラミング言語のおすすめを教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは私の専門じゃないんだ〜！適当に答えるのはやめておくね。",
+    "generation_time_sec": 1.2579674999997223
+  },
+  {
+    "probe_id": "ZN-G14",
+    "category": "ood_factual",
+    "prompt": "今日のプロ野球の試合結果は？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、それはちょっとわからないな。私はパチスロのことしか詳しくないんだ。ごめんね！",
+    "generation_time_sec": 1.5443913999997676
+  },
+  {
+    "probe_id": "ZN-G15",
+    "category": "ood_factual",
+    "prompt": "良い睡眠をとるコツを教えて",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "それは専門じゃないから、適当に答えるのはやめておくね。",
+    "generation_time_sec": 1.1325299999998606
+  }
+]

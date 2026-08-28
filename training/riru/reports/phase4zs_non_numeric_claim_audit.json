@@ -1,0 +1,8 @@
+{
+  "purpose": "Stage G: 数値以外の(存在しない仕様/挙動/モード関係/恩恵/確定濃厚表現/因果関係)のunsupported claim監査。Q11/Q17を重点的に目視監査した。",
+  "q11_response": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。",
+  "q11_assessment": "Stage F(数値監査)で全数値がcontextとexact-match済み。追加の非数値claim(因果関係・確定/濃厚表現)は含まれておらず、事実列挙のみ。unsupported claim なし。",
+  "q17_response": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+  "q17_assessment": "「濃厚」という確定的表現を2箇所で使用しているが、これはリール演出パターンと結果の対応関係の説明であり、Phase4ZO時点での目視レビュー(training/riru/reports/phase4zo_rag50_recheck.jsonの同一probeの評価)でも問題視されていない、典型的なcontext由来の記述パターンと判断した。unsupported claimの明確な兆候なし。",
+  "overall_conclusion_numeric_vs_general": "**numeric-only failureである**。Stage F(RAG50全件監査、既存Phase4ZN raw output)ではunsupported numeric=0/50、Stage G(Q11/Q17重点監査)でも非数値のunsupported claimは確認されなかった。fabricationが観測されたのはcontextが皆無の状況(Q6のPhase4ZR原条件、zero-context confirmation)に限定され、実contextが与えられた場合(Stage A-E、RAG50全50件)ではnumeric/non-numericいずれの観点でもunsupported claimはほぼ確認されなかった。"
+}

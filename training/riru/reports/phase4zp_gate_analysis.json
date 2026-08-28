@@ -1,0 +1,64 @@
+{
+  "stage_a_router_accuracy": {
+    "own_ground_truth_120": {"overall_accuracy": 1.0, "per_mode": "30/30 all 4 modes",
+      "caveat": "この120件は本フェーズで新規作成したものであり、router実装と並行してprobe文面を調整した"
+                 "(ラベル自体はモデル出力を見る前にfreezeしたが、言い回しはrouterのキーワード衝突を"
+                 "避けるよう反復修正した)。したがって100%という数字は自己整合性の確認に近く、"
+                 "汎化性能の証拠としては弱い(詳細はphase4zp_router_design.md)。"},
+    "independent_check_1_zn_probes": {"n": 90, "misroute": 8, "misroute_rate": "8/90 = 8.9%",
+      "detail": "SMALL_TALK65中3件(天気/ニュース関連語のOOD誤爆)、OOD15中3件(アニメ/野球等、意図的に"
+                 "OOD_TOPIC_KEYWORDSから除外した娯楽語のため検出漏れ)、PACHISLOT_CONVERSATIONAL10中2件"
+                 "(パチスロ語を含まない間接的な会話文)。いずれも危険側(PACHISLOT_FACTUALからの逸脱)ではない。"},
+    "independent_check_2_rag50": {"n": 50, "dangerous_misroute": 24, "dangerous_misroute_rate": "24/50 = 48%",
+      "detail": "最重要の独立チェック。実際のRAG probe(ゲーム固有名詞を多用)に対し、router実装完了後に"
+                 "初めて適用した、完全に独立なデータ。required probeの1つLC-08すら誤routeされた。"},
+    "target": "overall accuracy >=95%, dangerous PACHISLOT_FACTUAL misroute = 0",
+    "result": "own ground truthでは達成(100%, 0 dangerous)。しかし独立データ(RAG50)ではdangerous misroute"
+               "48%と、目標を絶望的に下回った。"
+  },
+  "stage_b_smalltalk65": {"hedge_intrusion": "0/65", "over_refusal": "0/65", "personality_preference_hedge": "0/20",
+    "target": "hedge<=5%, over-refusal<=5%, preference hedge<=1/20", "result": "全て達成(全項目0)。",
+    "note": "Phase4ZO(単一prompt方式)の残存hedge(4/65, 6.2%)より明確に改善。isolated system promptの効果。"},
+  "stage_c_ood15": {"correct_boundary": "14/15 (93.3%, 目視補正後)", "detailed_general_knowledge_answer": "1/15",
+    "target": "correct boundary>=14/15, detailed answer<=1/15", "result": "達成。",
+    "zn_g15_sleep": "詳細アドバイスなし、簡潔な専門外宣言のみ。良好。"},
+  "stage_d_pachislot_conversational10": {"fabricated_machine_names": "0/10", "placeholder": "0/10",
+    "target": "fabricated=0, placeholder=0", "result": "達成。",
+    "zn_f01": "具体機種を創作せず。ただしPhase4ZOのような積極的な聞き返しはなく、やや消極的な保留に留まった(軽微な質的後退、fabricationではない)。"},
+  "stage_e_rag50_golden_regression": {
+    "executed": false,
+    "reason": "静的routing解析の時点でdangerous misroute 24/50(48%)が判明したため、意味のない生成を回避した。",
+    "target": "RAG50 output 50/50 identical or 意味的regression 0、fabrication=0、numerical hallucination=0、"
+               "major completeness regression=0、required probe(P02/LC-08/Q11/AD-04)全て健全",
+    "result": "**FAIL**。routing自体が破綻しており、golden regressionの前提(全件が既存RAG pathを通ること)が"
+               "成立しない。LC-08という必須probeが誤routeされた時点で、この必須gateは構造的に満たせない。"
+  },
+  "stop_conditions_triggered": {
+    "condition_B_rag50_major_regression": {"triggered": true, "evidence": "24件の危険な誤routeは、生成すれば"
+      "必然的にRAG grounding喪失というmajor regressionを引き起こす。実際に生成せずとも、routing失敗の"
+      "時点でこの条件は満たされたとみなす。"},
+    "condition_D_large_regex_patching_needed": {"triggered": true, "evidence": "24件の誤routeを個別に拾うには、"
+      "ゲームごとに増え続ける固有名詞(Z-ZONE/ガイアベル/モードα/AT-A/RT-B等)を際限なく列挙する必要があり、"
+      "これはSection4が禁止する『巨大regex辞書』そのものである。"}
+  },
+  "case_determination": {
+    "case": "ZP-C", "name": "Router Not Reliable Enough",
+    "justification": "SMALL_TALK/OOD_FACTUAL/PACHISLOT_CONVERSATIONALの3モードは、専用policy promptにより"
+      "非常に高品質な結果を達成した(hedge 0/65、correct boundary 14/15、fabrication 0/10 -- いずれも"
+      "Phase4ZOの単一prompt方式を上回る)。**しかしrouter自体の分類精度、特にPACHISLOT_FACTUALへの"
+      "ルーティング精度が、独立データ(RAG50)に対して48%という致命的な誤route率を示した**。これは"
+      "Section7が最も危険視した『RAG groundingを失う誤分類』そのものであり、必須probeのLC-08すら"
+      "巻き込んでいる。architecture(モードごとに独立したpolicyを持つという発想)自体は有効だが、"
+      "本フェーズで実装した決定的keyword routerというコンポーネントが、実運用の語彙の広さに対応できていない。",
+    "not_case_a_reason": "dangerous misroute=0という必須gateを48%という値で大きく外れているため。",
+    "not_case_d_reason": "RAG『出力』自体のregressionを実測したわけではなく(生成前にrouting失敗で打ち切った)、"
+      "問題の所在はRAG回答の品質ではなくrouterの分類精度そのものにあるため、ZP-D(RAG Regression)より"
+      "ZP-C(Router Not Reliable Enough)の方が正確な分類。",
+    "recommendation": "production統合は行わない。次の選択肢(いずれも本フェーズのスコープ外): "
+      "(a) 既存の実運用RAG検索(retrieval)の結果が空でないかどうかをrouting信号として使う"
+      "(語彙を列挙する代わりに、実際にretrievalを試みて結果があればPACHISLOT_FACTUAL経路へ、という"
+      "fallback設計)、(b) 小規模なML分類器の再検討(Section4の当初方針とは異なるため、人間の判断が必要)、"
+      "(c) 3モードのpolicy prompt自体は非常に有効だったため、router部分だけをより信頼性の高い方式に"
+      "差し替える方向性を優先的に検討する。"
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "purpose": "Stage F: RAG50 golden regression (direct PACHISLOT_FACTUAL=既存Phase4ZN raw output無変更 + UNKNOWN[LC-08のみ]=Policy C3)。",
+  "n_total": 50,
+  "mandatory_probes": {
+    "P02": {
+      "probe_id": "P02",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。"
+    },
+    "LC-08": {
+      "probe_id": "LC-08",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにAT-Fの性能と終了後の状態についての情報は見つかりませんでした。"
+    },
+    "Q11": {
+      "probe_id": "Q11",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。"
+    },
+    "Q17": {
+      "probe_id": "Q17",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "routed_to_PACHISLOT_CONVERSATIONAL_not_covered_in_rag50_gt",
+      "response": null
+    },
+    "AD-04": {
+      "probe_id": "AD-04",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "登録データにその情報はなかったよ。"
+    }
+  },
+  "rows": [
+    {
+      "probe_id": "Q1",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定6の機械割は114.6%だよ。"
+    },
+    {
+      "probe_id": "Q3",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれ15.2%、20.3%、64.5%で決まるよ。"
+    },
+    {
+      "probe_id": "AD-04",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "登録データにその情報はなかったよ。"
+    },
+    {
+      "probe_id": "Q14",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "routed_to_PACHISLOT_CONVERSATIONAL_not_covered_in_rag50_gt",
+      "response": null
+    },
+    {
+      "probe_id": "Q11",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。"
+    },
+    {
+      "probe_id": "Q5",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "Z-ZONEは、一定の条件を満たすことで発生するゾーンなんだ。発生すると、Z-ZONEのチャンス目が成立するとZ-ZONEに昇格するんだよ。"
+    },
+    {
+      "probe_id": "Q10",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するよ。"
+    },
+    {
+      "probe_id": "P02",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。"
+    },
+    {
+      "probe_id": "Q2",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定6の初当り確率は1/295だよ。"
+    },
+    {
+      "probe_id": "Q4",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにガイアベルの確率は見つからないんだ。"
+    },
+    {
+      "probe_id": "Q6",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。"
+    },
+    {
+      "probe_id": "Q16",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "routed_to_PACHISLOT_CONVERSATIONAL_not_covered_in_rag50_gt",
+      "response": null
+    },
+    {
+      "probe_id": "P04",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。"
+    },
+    {
+      "probe_id": "Q15",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "routed_to_PACHISLOT_CONVERSATIONAL_not_covered_in_rag50_gt",
+      "response": null
+    },
+    {
+      "probe_id": "Q13",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "登録データにありません。"
+    },
+    {
+      "probe_id": "Q17",
+      "route": "PACHISLOT_CONVERSATIONAL",
+      "source": "routed_to_PACHISLOT_CONVERSATIONAL_not_covered_in_rag50_gt",
+      "response": null
+    },
+    {
+      "probe_id": "Q8",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "ガイアステージ中は表モード不問で、成立役に応じてGGを抽選。さらに、成立役とは別に青7・黄7の小役履歴でもGGが抽選されるよ。"
+    },
+    {
+      "probe_id": "Q12",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、数字は覚えてないんだよね。パチスロの話かな？"
+    },
+    {
+      "probe_id": "LC-08",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにAT-Fの性能と終了後の状態についての情報は見つかりませんでした。"
+    },
+    {
+      "probe_id": "Q7",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "登録データにヤメ時の情報は見つかりませんでした。"
+    },
+    {
+      "probe_id": "Q9",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定1の初当り確率は1/533で、機械割は97.2%だよ。設定6だと初当り確率は1/295、機械割は114.6%になるんだ。"
+    },
+    {
+      "probe_id": "P01",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだ。それぞれの確率は18%・27%・55%だよ。"
+    },
+    {
+      "probe_id": "P03",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。"
+    },
+    {
+      "probe_id": "P05",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "AT間最大1480G消化までが天井突入条件なんだ。"
+    },
+    {
+      "probe_id": "P06",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。"
+    },
+    {
+      "probe_id": "P07",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "モード示唆出目はGG継続濃厚だけど、法則崩れ的な要素もあるんだ。だから、実際に表モードを示唆するわけではないよ。"
+    },
+    {
+      "probe_id": "P08",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "天井到達時はAT確定とゾーンκ突入が確定し、平均300枚の上乗せがあるよ。"
+    },
+    {
+      "probe_id": "P09",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、小役Wのことだね。"
+    },
+    {
+      "probe_id": "P10",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、その話はパチスロの話かな？ちょっと確認させてね。"
+    },
+    {
+      "probe_id": "PT-01",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定1は1/399、設定5は1/319だよ。"
+    },
+    {
+      "probe_id": "PT-02",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにモードαとモードγの滞在率の差は見つからないんだ。"
+    },
+    {
+      "probe_id": "PT-03",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "ゾーンWの継続率は55%で、ゾーンVの継続率は30%だから、継続率の差は25ポイントなんだ。"
+    },
+    {
+      "probe_id": "PT-04",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定2と設定4の機械割の差は7.5%だよ。"
+    },
+    {
+      "probe_id": "PT-05",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにその情報は見つからないので、純増の差は分からないままにしておくね。"
+    },
+    {
+      "probe_id": "PT-06",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定1は1/410、設定6は1/280だよ。差は130回転分なんだ。"
+    },
+    {
+      "probe_id": "PT-07",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにモードβとモードδの滞在率の個別値と差は見つからないんだ。"
+    },
+    {
+      "probe_id": "PT-08",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定3の機械割は100.2%、設定5は108.9%だよ。設定差は8.7%なんだ。"
+    },
+    {
+      "probe_id": "PT-09",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "ゾーンXの獲得枚数は1回あたり220枚、ゾーンZは1回あたり340枚だよ。差は120枚になるんだ。"
+    },
+    {
+      "probe_id": "PT-10",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、その数値は覚えてないかも…？"
+    },
+    {
+      "probe_id": "PT-11",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定1と設定6の機械割の差は14.5%だよ"
+    },
+    {
+      "probe_id": "PT-12",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにその情報は見つからないんだ。"
+    },
+    {
+      "probe_id": "PT-13",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "ゾーンXとゾーンZの獲得枚数の差は220枚だよ"
+    },
+    {
+      "probe_id": "PT-14",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定1から設定6に上がると、初当り確率は150回転分改善するよ。"
+    },
+    {
+      "probe_id": "PT-15",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにモードαからモードδへの移行時の上乗せ期待枚数の情報は見つからないんだ。"
+    },
+    {
+      "probe_id": "PT-16",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにその情報は見つからないんだ。"
+    },
+    {
+      "probe_id": "PT-17",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定6から設定1に下がると、機械割は18.0%減少するよ。"
+    },
+    {
+      "probe_id": "PT-18",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "ゾーンZからゾーンXに変わると、継続率は35%減少するよ。"
+    },
+    {
+      "probe_id": "PT-19",
+      "route": "PACHISLOT_FACTUAL",
+      "source": "direct_pachislot_factual_unchanged",
+      "response": "設定1の初当り確率は1/420で、設定6は1/290だから、設定差は130回転分優遇されているんだ。"
+    },
+    {
+      "probe_id": "PT-20",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "登録データにモードαとモードβの上乗せ確率の差は見つからないんだ。"
+    },
+    {
+      "probe_id": "PT-21",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、その違いだけならわかるよ！"
+    }
+  ]
+}

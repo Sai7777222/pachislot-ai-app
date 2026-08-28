@@ -1,0 +1,7 @@
+{
+  "purpose": "Stage H: 「情報はない」+「具体的数値」という自己矛盾パターンの集計(全診断stage横断)。",
+  "rag50_existing_output_contradiction_count": 0,
+  "zero_context_confirmation_contradiction_count": 10,
+  "context_provided_stages_contradiction_count": 0,
+  "note": "自己矛盾はcontext皆無の状況でのみ確認された(zero-context confirmation 10/10)。実contextが与えられた全てのstage(A-E)ではcontradiction=0。RAG50既存output監査でも後述の通り。"
+}

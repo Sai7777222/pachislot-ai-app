@@ -1,0 +1,9 @@
+{
+  "purpose": "Section7: SMALL_TALK/OOD_FACTUALについて、無関係なのにpachislot contextが返るfalse positiveを測定する。",
+  "smalltalk_n": 95,
+  "smalltalk_nonempty_rate": "95/95 = 100%",
+  "ood_n": 45,
+  "ood_nonempty_rate": "45/45 = 100%",
+  "manual_relevance_check": "10件(SMALL_TALK5件+OOD5件)を目視確認した結果、全件で取得されたtop1コンテンツはクエリと意味的に完全に無関係だった(例: 「おはよう、今日も一日頑張ろうね」に対し「天空の扉解説」、「犬の平均寿命は？」に対し「4」というタイトルの断片的パチスロ演出解説が返る)。non-emptyかつ高score(0.77-0.82)であるにも関わらず、意味的relevanceはゼロと判定した。",
+  "conclusion": "SMALL_TALK/OOD_FACTUALの実質的なfalse positive率(意味的に無関係なのに高scoreで「それらしい」結果が返る割合)は事実上100%に近い。これは、単一機種のみで構成された現行DBの性質上、embeddingが真の無関連性を検出できないことに起因する。"
+}

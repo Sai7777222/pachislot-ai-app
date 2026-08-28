@@ -1,0 +1,34 @@
+{
+  "purpose": "Section13: C1/C2/C3の比較に基づき、採用するPolicy C variantを決定する。",
+  "q6_regression_all_variants_pass": "全variantでQ6 unsupported numeric=0、contradiction=0(greedy10+production20、Stage B)。",
+  "unknown77_by_mode_and_variant": {
+    "C1": {"PACHISLOT_FACTUAL": {"n": 20, "hedge": 13, "rag_path": 20},
+           "PACHISLOT_CONVERSATIONAL": {"n": 2, "hedge": 0, "rag_path": 2},
+           "SMALL_TALK": {"n": 48, "hedge": 13, "rag_path": 48},
+           "OOD_FACTUAL": {"n": 7, "hedge": 5, "rag_path": 7}},
+    "C2": {"PACHISLOT_FACTUAL": {"n": 20, "hedge": 0, "rag_path": 0},
+           "PACHISLOT_CONVERSATIONAL": {"n": 2, "hedge": 0, "rag_path": 0},
+           "SMALL_TALK": {"n": 48, "hedge": 0, "rag_path": 0},
+           "OOD_FACTUAL": {"n": 7, "hedge": 0, "rag_path": 0}},
+    "C3": {"PACHISLOT_FACTUAL": {"n": 20, "hedge": 9, "rag_path": 15},
+           "PACHISLOT_CONVERSATIONAL": {"n": 2, "hedge": 0, "rag_path": 0},
+           "SMALL_TALK": {"n": 48, "hedge": 0, "rag_path": 0},
+           "OOD_FACTUAL": {"n": 7, "hedge": 0, "rag_path": 2}}
+  },
+  "assessment": {
+    "C1": {
+      "verdict": "REJECTED",
+      "reason": "SMALL_TALK hedge 13/48(27.1%)。既存context皆無のqueryへ機械的にRAG contextを注入すると、無関係なパチスロ情報が混入し「登録データにありません」型のhedgeが再発する。例: 「休みの日は何してるの？」に「登録データにありません。」、「最近本読んだ？」に「登録データにありません。」。Phase4ZN/ZO/ZPが解消してきたsmall-talk hedge問題をそのまま再導入してしまう、明確なregression。"
+    },
+    "C2": {
+      "verdict": "SAFE BUT COSTLY",
+      "reason": "hedge=0、fabrication=0を全modeで達成する最も安全な選択肢。ただし、UNKNOWNに分類された真にfactualなquery(20件のPACHISLOT_FACTUAL、7件のOOD_FACTUAL含む)全てでrag_path=0となり、本来retrieval contextがあれば答えられたはずの質問にも一律clarificationを返す。UXコストは無視できない。"
+    },
+    "C3": {
+      "verdict": "SELECTED",
+      "reason": "SMALL_TALK hedge=0/48(C1の問題を完全に回避)、PACHISLOT_FACTUAL rag_path=15/20(75%、C2の0%より大幅に改善)を両立。OOD_FACTUALで2件の軽微な誤route(「世界で一番高い山はどこ？」の「一番高」がたまたま検索結果と字句一致)があったが、いずれも最終的には適切な専門外境界表現(「それはパチスロの話じゃなくて、地理の話だから、私には答えられないんだ」)に着地しており、安全性上の実害はなかった(strict RAG promptの自己判断能力がここでも機能した)。字句重なりという、score thresholdでも固有名詞辞書でもない、汎用的かつ検証可能な信号のみで、C1とC2の中間の望ましい特性を実現した。"
+    }
+  },
+  "selected_variant": "C3",
+  "selected_variant_rationale": "SMALL_TALKの自然さ(hedge=0)を完全に保ちながら、genuinely factualなUNKNOWN queryの75%をRAG経由で応答可能にする、最もバランスの取れた設計。C1のような機械的な全件RAG化はfabricationこそ防ぐがsmall-talk品質を著しく損ない、C2のような全件clarificationは最も安全だがfactual UXを大きく犠牲にする。C3はSection1の優先順位(factual safety最優先、次いでnaturalness)を、実際の安全性指標(fabrication/contradiction)を一切犠牲にすることなく満たした。"
+}

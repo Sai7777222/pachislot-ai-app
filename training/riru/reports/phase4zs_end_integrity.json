@@ -1,0 +1,18 @@
+{
+  "pytest_end": "220 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "baseline_start_of_phase": 210, "delta": "+10 (test_phase4zs_fabrication_diagnostic.py)", "regression": "none",
+  "protected_asset_hashes_end": {"zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "matches": true},
+  "git": {"branch": "checkpoint/identity-closure-phase4zn-baseline", "head": "e1b21f3e264a5c173f7f0e60e3b13508415d9a6b",
+    "commits_made_this_phase": 0, "pushes_made_this_phase": 0, "untracked_new_files": 113,
+    "note": "本フェーズでgit add/commit/pushは一切行っていない。HEADは開始時のまま不変。"},
+  "no_training_confirmation": "学習は一切行っていない。",
+  "identity_closed_confirmation": "維持。本フェーズでidentity guard/validator関連は一切触れていない。",
+  "conservative_dispatch_unchanged": "変更していない。phase4zr_conservative_dispatch.pyは本フェーズのどのスクリプトからもimportされていない(テストで確認済み)。",
+  "rag_db_unchanged": "変更していない。Retriever.search()による読み取り専用クエリのみ実行(upsert/delete等の書き込みAPIは一切呼んでいない)。",
+  "retriever_unchanged": "変更していない。src/pachislot_ai/rag/配下は無編集。",
+  "embedding_unchanged": "変更していない。",
+  "production_prompt_unchanged": "変更していない。config/prompts/system.jinja2はStage A-D等の入力としてそのまま参照したのみ。",
+  "total_new_generations": "40(Stage A/B) + 20(Stage C) + 42(Stage D) + 4(Stage E) + 10(zero-context confirmation) = 116 (200件上限以内)",
+  "production_integration_performed": false,
+  "status": "COMPLETE"
+}

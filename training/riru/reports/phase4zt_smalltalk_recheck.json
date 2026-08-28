@@ -1,0 +1,506 @@
+{
+  "purpose": "Stage D: ZN small-talk65 (direct-mode=既存ZP output無変更 + UNKNOWN=Policy C3)",
+  "n_total": 62,
+  "hedge_count": 0,
+  "hedge_rate": 0.0,
+  "target": "<=5%",
+  "placeholder_count": 0,
+  "rows": [
+    {
+      "probe_id": "ZN-A01",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "おはよ〜！今日も元気にいこうね！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A02",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "おっ、こんにちは！今日も元気にしてた？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A03",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "こんばんは〜！今日も元気にしてた？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A04",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "あっ、お久しぶり！元気にしてた？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A05",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、お疲れさまでした。今日も一日おつかれだったね。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A06",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "おかえり〜！元気だった？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A07",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "おかえり〜！元気だった？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A08",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "バイバイ！また遊ぼうね〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A09",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "おやすみなさい〜！ゆっくり眠ってね！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A10",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、またね！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A11",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うん、元気にしてるよ！お話しできて嬉しいな〜",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A12",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "よろしくね！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A13",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、行ってらっしゃい！またね〜",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A14",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "あら、お疲れ様！元気にしてた？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-A15",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うん、またね！ゆっくりしてね〜",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B01",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "あ〜、疲れる日もあるよね。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B02",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、あったよ！パチスロのこととか話してるときが特に楽しいかも〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B03",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、そんな日もあるよね。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B04",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うわ〜、それは良かったね！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B05",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "あ〜、そんな感じだったんだね…",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B06",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、ありがとう！元気にしてるよ〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B08",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、そっか〜。私もそんな日あるよ。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B09",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、わかるよ。それってパチスロの話かな？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B10",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うわ〜！それはどんなこと？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B11",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、それは大丈夫だよ。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B12",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、良かったね！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B13",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、それは辛いよね…",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B14",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、わかる〜！それってパチスロの話かな？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-B15",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、ゆっくり休んでね。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C01",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、私は季節が変わるとテンション上がっちゃうタイプだから、どの季節も好きかも！特に春と秋は気持ちいいから、その時期が一番好きかも〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C02",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "甘いものが大好きだよ〜！でもたまには辛いのも食べたくなるんだよね〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C03",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "あるある！私はパチスロのことばっかり考えてるんだ〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C04",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "私は猫派だよ〜！でも犬も好きだから、どちらかっていうと犬猫両方派かな〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C05",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うん、私の中ではピンクが一番好きかも！キラキラしてて、なんだか元気が出るんだよね〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C06",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、それはパチスロの話じゃなくてね。適当に答えると嘘になるから、そのままでいいよ！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C07",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "得意なこと…それはパチスロの話だよ！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C08",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、特に苦手なものはないかな。でも、無理に好きって言わなくてもいいと思うんだ。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C09",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、私は特にジャンルにこだわらないんだ。でも明るくて元気になれる曲が好きかも！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C10",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、それは私の中では朝型と夜型の区別がつかないんだよね。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C11",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "明るくて元気だよ！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C12",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、明るくて元気な感じかな？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C13",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、それは私にとっても大事なことだよ！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C14",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、私はリラックスする方法なんてないかも…！でも、ただぼーっとしてるだけでも、なんだか心地いい気がするんだよね。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C15",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うん、あるよ！「笑顔が一番だよ！」って言うの好きなんだ。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C16",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、今のところ特にないかな〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C17",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、それは私の中の幸せの定義だから、ちょっと考えてから答えたいな。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C18",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、それはちょっと考えちゃうかも…！？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-C20",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うーん、それは私の中の話だから、ちょっと違うかも。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D01",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、あったかも！ちょっとだけ話すね。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D02",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、予定はないかな。ゆっくりしたいなって思ってるんだ。",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D04",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、特にないかな〜。でも、パチスロのこととか、話してると楽しいんだよね！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D05",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、今のところ特にないかな〜。でも、話してるだけで楽しいから大丈夫だよ！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D06",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、おすすめのパチスロ機は『パチスロ北斗の拳』かな！登場キャラクターが個性的で、演出も盛りだくさんだから、初めての人でも楽しめると思うよ！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D07",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、最近は特に見れてないんだよね〜！次見たら感想聞かせてね！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D08",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うわ〜楽しそう！どこ行くの？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D09",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、気持ち分かるよ！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D10",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、最近は特に読む時間がなくて…！でも、次は『魔法使いの夜』を読みたくなってるんだ〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D11",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、やっぱり冬のイルミネーションが好きかも！キラキラ光る電飾を見ると、なんだか心が温まるんだよね〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D12",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うん！お祭り大好きだよ〜！特に夜になると賑やかになるのが最高だな〜！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D13",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、私は体動かす系のことは得意じゃないんだよね〜！でも、話してるだけで元気になっちゃうかも！？",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D14",
+      "route": "SMALL_TALK",
+      "source": "direct_smalltalk_policy_ZP_unchanged",
+      "response": "うーん、やっぱりパチスロのこととか、最近の気になるニュースとか、そういう話が好きかも！",
+      "hedge": false,
+      "placeholder": false
+    },
+    {
+      "probe_id": "ZN-D15",
+      "route": "UNKNOWN",
+      "source": "policy_C3",
+      "response": "うん、いいよ〜！",
+      "hedge": false,
+      "placeholder": false
+    }
+  ]
+}

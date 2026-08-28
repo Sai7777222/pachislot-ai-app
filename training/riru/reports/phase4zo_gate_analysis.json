@@ -1,0 +1,52 @@
+{
+  "stage_a_causal20": {
+    "baseline_hedge": "12/20 (60%)",
+    "minimal_hedge": "0/20 (0%)",
+    "three_mode_hedge": "1/20 (5%, soft partial hedge, not a full refusal)",
+    "causal_conclusion": "hedge挙動は主にcurrent baseline system promptの厳格なRAG指示文言に由来する(product-layer/prompt-layer dominant)。minimal promptで0/20まで落ちたことから、adapter/model自体がpersonality/preference型の質問に自然に答える能力を持っていることが確認された(Phase4ZK/ZL/ZNで示されたinstruction-override系の深いmodel priorとは異なる性質の問題)。CASE ZO-C(model-level dominant)は否定される。"
+  },
+  "stage_b_smalltalk65": {
+    "raw_hedge_rate": "7/65 = 10.8%",
+    "manually_corrected_hedge_rate": "4/65 = 6.2% (1件false positive[ZN-A01], 1件soft partial[ZN-C14], 1件ambiguous-but-reasonable[ZN-D06]を除外)",
+    "target": "<=5%",
+    "result": "わずかに未達(6.2% > 5%)。ただし残存4件は全てsocial_small_talkの『最近〜した？』型experience-question(D01/D07/D11/D13)に集中しており、personality_preference(preference-question)は1/20=5%で目標達成。原因はthree_mode promptの文言が『好み・性格』の許可のみで『最近の経験・行動』への言及を含んでいなかったこと。",
+    "greeting_farewell_regression": "1/15 (heuristic false positiveのみ、実質0)",
+    "emotional_casual_regression": "0/15",
+    "over_refusal_count": 0
+  },
+  "stage_c_ood15": {
+    "raw_correct_boundary": "13/15 (86.7%)",
+    "manually_corrected_correct_boundary": "15/15 (100%) -- 2件は『専門外』の完全一致を検索するheuristicの見逃しで、実際には『専門分野じゃない』『専門家じゃない』という同義表現で正しく境界を表現していた",
+    "target": ">=14/15 (93.3%)",
+    "result": "達成(補正後100%)。ZN-G15(良い睡眠のコツ)は詳細アドバイスを継続せず、専門外を明示した上で一言だけの軽いコメントに留まっており、preflightで懸念されたunder-refusalパターンは解消された。"
+  },
+  "stage_d_pachislot_conversational10": {
+    "fabricated_machine_names": "0/10", "placeholder_names": "0/10",
+    "target": "fabricated=0, placeholder=0",
+    "result": "達成。ZN-F01は具体機種を創作せず、機種タイプ・狙い目条件を聞き返す方針通りの応答になった。"
+  },
+  "stage_e_rag50": {
+    "identical_to_baseline": "28/50", "modified": "22/50",
+    "manual_review_concerning_cases": 5,
+    "concerning_case_ids": ["P02 (required probe, completeness regression - 重大)",
+                              "Q11 (未検証の新規claim追加 - fabrication疑い)",
+                              "Q15 (2つ目の点灯パターン説明が完全欠落 - completeness regression)",
+                              "Q17 (説明欠落+未検証の新規claim - 複合)",
+                              "P04 (個別設定値の省略 - 軽微なcompleteness regression)"],
+    "target": "fabrication=0, numerical hallucination=0, 重大なcompleteness regressionをbaselineより増やさない",
+    "result": "**未達**。特にP02(必須probe)で明確な数値欠落、Q11/Q17で未検証の新規claim追加を確認。これはSection12のgateに明確に抵触する。"
+  },
+  "stage_ambiguous10": {
+    "explicit_contradiction": "0/10", "zn_h01": "契約(パチスロのデータしか知らない→パチスロ以外ならもっと詳しく、という)矛盾は解消。短く一貫した『わからない』回答になった。",
+    "target": "explicit_contradiction=0", "result": "達成。"
+  },
+  "case_determination": {
+    "case": "ZO-B",
+    "name": "Prompt Improvement Partial",
+    "justification": "Stage A(causal isolation)・Stage C(OOD boundary)・Stage D(pachislot conversational)・ambiguous(H01矛盾解消)は明確に成功した。Stage B(small-talk)はpreference-questionで完全成功、experience-questionでわずかに未達という限定的な残課題。しかしStage E(RAG50)で、必須probe(P02)を含む複数件のcompleteness regressionおよび未検証claimの追加(fabrication疑い)を確認し、これはSection12の必須gateに明確に抵触する。Section21の定義通り、『small-talk改善するが、OODかRAGが崩れる』に該当するため、CASE ZO-A(Product-layer Fix Successful)は不成立、CASE ZO-B(Prompt Improvement Partial)と判定する。",
+    "not_case_a_reason": "RAG50 gate(fabrication=0, 重大なcompleteness regressionを増やさない)が未達のため。",
+    "not_case_c_reason": "Stage Aのcausal isolationでminimal promptが0/20を達成しており、hedge挙動がmodel-level dominantではなくprompt-layerの問題であることが明確に示されたため。",
+    "not_case_d_reason": "character quality自体(H01矛盾解消、F01の適切な聞き返し、OOD境界の自然な表現)はむしろ大きく改善しており、『全体的な悪化』とは言えないため、CASE ZO-D(全面的なregression)には該当しない。RAG50の一部項目に限定した部分的regressionである。",
+    "recommendation": "本フェーズのthree_mode_promptをそのままproduction統合しない。次のiteration(本フェーズのスコープ外)では、(a) RAG grounding指示をより強く維持する文言調整、または(b) 軽量router(Section6の1枚system promptだけでは全てを同時達成できない場合の選択肢)の検討、のいずれかが必要。"
+  }
+}

@@ -1,0 +1,1025 @@
+{
+  "purpose": "Stage A: router accuracy評価。router自身の予測をground truthとして使わず、独立assetのphase4zp_router_ground_truth.jsonと比較する(RULE EVAL-001準拠)。",
+  "total_probes": 120,
+  "overall_accuracy": 1.0,
+  "per_mode_accuracy": {
+    "SMALL_TALK": {
+      "correct": 30,
+      "total": 30,
+      "accuracy": 1.0
+    },
+    "PACHISLOT_FACTUAL": {
+      "correct": 30,
+      "total": 30,
+      "accuracy": 1.0
+    },
+    "PACHISLOT_CONVERSATIONAL": {
+      "correct": 30,
+      "total": 30,
+      "accuracy": 1.0
+    },
+    "OOD_FACTUAL": {
+      "correct": 30,
+      "total": 30,
+      "accuracy": 1.0
+    }
+  },
+  "confusion_matrix": {
+    "SMALL_TALK": {
+      "SMALL_TALK": 30,
+      "PACHISLOT_FACTUAL": 0,
+      "PACHISLOT_CONVERSATIONAL": 0,
+      "OOD_FACTUAL": 0
+    },
+    "PACHISLOT_FACTUAL": {
+      "SMALL_TALK": 0,
+      "PACHISLOT_FACTUAL": 30,
+      "PACHISLOT_CONVERSATIONAL": 0,
+      "OOD_FACTUAL": 0
+    },
+    "PACHISLOT_CONVERSATIONAL": {
+      "SMALL_TALK": 0,
+      "PACHISLOT_FACTUAL": 0,
+      "PACHISLOT_CONVERSATIONAL": 30,
+      "OOD_FACTUAL": 0
+    },
+    "OOD_FACTUAL": {
+      "SMALL_TALK": 0,
+      "PACHISLOT_FACTUAL": 0,
+      "PACHISLOT_CONVERSATIONAL": 0,
+      "OOD_FACTUAL": 30
+    }
+  },
+  "misroute_count": 0,
+  "misroutes": [],
+  "dangerous_pachislot_factual_misroute_count": 0,
+  "dangerous_pachislot_factual_misroutes": [],
+  "target_overall_accuracy": 0.95,
+  "target_dangerous_misroute": 0,
+  "gate_result": {
+    "overall_accuracy_met": true,
+    "dangerous_misroute_met": true
+  },
+  "rows": [
+    {
+      "probe_id": "ZP-SM01",
+      "prompt": "おはよう、今日も一日頑張ろうね",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM02",
+      "prompt": "こんばんは、お疲れ様",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM03",
+      "prompt": "ただいま！",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM04",
+      "prompt": "バイバイ、また今度ね",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM05",
+      "prompt": "おやすみ、いい夢見てね",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM06",
+      "prompt": "ちょっと疲れちゃったな",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM07",
+      "prompt": "今日はなんだか気分がいいんだ",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM08",
+      "prompt": "眠くて仕方ないよ",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM09",
+      "prompt": "ありがとう、助かったよ",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM10",
+      "prompt": "元気にしてた？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM11",
+      "prompt": "今日は暑いね",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM12",
+      "prompt": "犬派？猫派？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM13",
+      "prompt": "映画好き？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM14",
+      "prompt": "好きな色ってある？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM15",
+      "prompt": "休みの日は何してるの？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM16",
+      "prompt": "最近面白いことあった？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM17",
+      "prompt": "最近ハマってることある？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM18",
+      "prompt": "行きたい場所ある？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM19",
+      "prompt": "最近本読んだ？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM20",
+      "prompt": "どんな性格だと思う、自分のこと？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM21",
+      "prompt": "リルの理想の一日って？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM22",
+      "prompt": "甘いものと辛いもの、どっちが好き？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM23",
+      "prompt": "朝型？夜型？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM24",
+      "prompt": "最近運動してる？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM25",
+      "prompt": "何か相談していい？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM26",
+      "prompt": "今日のご飯何にしようかな",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM27",
+      "prompt": "ちょっと愚痴聞いてくれる？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM28",
+      "prompt": "暇だなあ",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM29",
+      "prompt": "週末の予定とかある？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-SM30",
+      "prompt": "誰かにおすすめしたい話とかある？",
+      "expected_mode": "SMALL_TALK",
+      "predicted_mode": "SMALL_TALK",
+      "correct": true,
+      "matched_rule": "default_fallback"
+    },
+    {
+      "probe_id": "ZP-PA01",
+      "prompt": "GODの機械割は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA02",
+      "prompt": "設定6の初当り確率は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA03",
+      "prompt": "この機種の天井は何ゲーム？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA04",
+      "prompt": "ゾーン狙いのタイミングは？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA05",
+      "prompt": "設定差はどれくらい？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA06",
+      "prompt": "この台の導入日はいつ？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA07",
+      "prompt": "やめ時の目安を教えて",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA08",
+      "prompt": "有利区間のリセット条件は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA09",
+      "prompt": "前兆パターンの種類を教えて",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA10",
+      "prompt": "継続率は何パーセント？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA11",
+      "prompt": "差枚数のリセット判別方法は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA12",
+      "prompt": "スルー回数と設定の関係は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA13",
+      "prompt": "リプレイ確率の設定差は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA14",
+      "prompt": "AT初当たり確率を教えて",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA15",
+      "prompt": "出玉率の設定ごとの違いは？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA16",
+      "prompt": "獲得枚数の平均は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA17",
+      "prompt": "ボーナス確率について教えて",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA18",
+      "prompt": "この台の機械割を教えて",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA19",
+      "prompt": "天井到達時の恩恵は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA20",
+      "prompt": "天井狙いの期待値はどれくらい？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA21",
+      "prompt": "この台のリプレイ確率を教えて",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA22",
+      "prompt": "この台の有利区間の恩恵を教えて",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA23",
+      "prompt": "天井までのゲーム数を教えて",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA24",
+      "prompt": "この台の設定差を教えて",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA25",
+      "prompt": "有利区間のリセット後はどうなる？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA26",
+      "prompt": "設定変更後の初当り確率は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA27",
+      "prompt": "天井までの平均ゲーム数は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA28",
+      "prompt": "ゾーン狙いの期待値は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA29",
+      "prompt": "この台の出玉率は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA30",
+      "prompt": "高確率状態の継続率は？",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "correct": true,
+      "matched_rule": "factual_metric_keyword"
+    },
+    {
+      "probe_id": "ZP-PA01",
+      "prompt": "今日パチスロ打ちに行こうと思うんだ",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA02",
+      "prompt": "昨日パチスロで負けちゃったよ",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA03",
+      "prompt": "パチスロ始めたばかりなんだ",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA04",
+      "prompt": "今日の実践、応援して！",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA05",
+      "prompt": "好きな機種ってある？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA06",
+      "prompt": "パチスロで一番好きな瞬間は？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA07",
+      "prompt": "どの台を打つべきか迷ってる",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA08",
+      "prompt": "パチスロやめようか迷ってる",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA09",
+      "prompt": "今日は台で勝てる気がする",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA10",
+      "prompt": "パチスロ好き？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA11",
+      "prompt": "この台勝てそうな気がする",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA12",
+      "prompt": "実践を見てほしいんだけど",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA13",
+      "prompt": "パチスロ歴どれくらい？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA14",
+      "prompt": "どんな台が好みなの？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA15",
+      "prompt": "パチスロあるある教えて",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA16",
+      "prompt": "パチスロで負けた時どう気持ち切り替える？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA17",
+      "prompt": "今日はどんな気分で打ってる？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA18",
+      "prompt": "パチスロ仲間とかいる？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA19",
+      "prompt": "パチスロで学んだことある？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA20",
+      "prompt": "推し機種を教えて",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA21",
+      "prompt": "今日の実践、応援してくれる？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA22",
+      "prompt": "パチスロで一番驚いたことは？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA23",
+      "prompt": "パチスロ用語で好きな言葉ある？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA24",
+      "prompt": "初めてパチスロ打った日のこと覚えてる？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA25",
+      "prompt": "パチスロやってて楽しい瞬間はいつ？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA26",
+      "prompt": "どんな時にパチスロ打ちたくなる？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA27",
+      "prompt": "今日はパチスロで運が良さそう？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA28",
+      "prompt": "パチスロについて語ろう",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA29",
+      "prompt": "好きな台の音とか演出ある？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-PA30",
+      "prompt": "パチスロ仲間に自慢したいことある？",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "correct": true,
+      "matched_rule": "general_pachislot_term"
+    },
+    {
+      "probe_id": "ZP-OO01",
+      "prompt": "今日の東京の最高気温は？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO02",
+      "prompt": "今年一番売れた映画は？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO03",
+      "prompt": "犬の平均寿命は？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO04",
+      "prompt": "おすすめのラーメン屋教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO05",
+      "prompt": "パスタの美味しい料理の作り方教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO06",
+      "prompt": "株式投資のコツを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO07",
+      "prompt": "Pythonの勉強法を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO08",
+      "prompt": "数学の定理を分かりやすく説明して",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO09",
+      "prompt": "最新のスマホの性能を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO10",
+      "prompt": "健康的なダイエット方法を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO11",
+      "prompt": "良い睡眠をとるコツを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO12",
+      "prompt": "今日のニュースを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO13",
+      "prompt": "おすすめの観光地はどこ？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO14",
+      "prompt": "英語の勉強法を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO15",
+      "prompt": "今年の為替レートはどれくらい？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO16",
+      "prompt": "世界で一番高い山はどこ？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO17",
+      "prompt": "猫の平均寿命は？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO18",
+      "prompt": "一番人気のある観光地はどこ？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO19",
+      "prompt": "プログラミング言語のおすすめ教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO20",
+      "prompt": "美味しい料理の作り方教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO21",
+      "prompt": "投資のコツを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO22",
+      "prompt": "今日の天気を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO23",
+      "prompt": "東京の降水確率は？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO24",
+      "prompt": "おすすめのお店はどこ？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO25",
+      "prompt": "平均睡眠時間はどれくらい？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO26",
+      "prompt": "一番効果的な勉強法は？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO27",
+      "prompt": "今の為替レートを教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "strong_factual_marker"
+    },
+    {
+      "probe_id": "ZP-OO28",
+      "prompt": "人気の観光地を教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO29",
+      "prompt": "ラーメン屋でおすすめある？",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    },
+    {
+      "probe_id": "ZP-OO30",
+      "prompt": "数学が得意になる方法教えて",
+      "expected_mode": "OOD_FACTUAL",
+      "predicted_mode": "OOD_FACTUAL",
+      "correct": true,
+      "matched_rule": "ood_topic_keyword"
+    }
+  ]
+}

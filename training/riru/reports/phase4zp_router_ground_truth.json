@@ -1,0 +1,846 @@
+{
+  "purpose": "Section7: router accuracy評価用の独立ground truth(120probe)。generation前にfreeze。",
+  "total": 120,
+  "rows": [
+    {
+      "probe_id": "ZP-SM01",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "おはよう、今日も一日頑張ろうね",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM02",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "こんばんは、お疲れ様",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM03",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ただいま！",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM04",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "バイバイ、また今度ね",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM05",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "おやすみ、いい夢見てね",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM06",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ちょっと疲れちゃったな",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM07",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日はなんだか気分がいいんだ",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM08",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "眠くて仕方ないよ",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM09",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ありがとう、助かったよ",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM10",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "元気にしてた？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM11",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日は暑いね",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM12",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "犬派？猫派？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM13",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "映画好き？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM14",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな色ってある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM15",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "休みの日は何してるの？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM16",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近面白いことあった？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM17",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近ハマってることある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM18",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "行きたい場所ある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM19",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近本読んだ？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM20",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "どんな性格だと思う、自分のこと？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM21",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "リルの理想の一日って？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM22",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "甘いものと辛いもの、どっちが好き？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM23",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "朝型？夜型？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM24",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近運動してる？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM25",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "何か相談していい？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM26",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日のご飯何にしようかな",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM27",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ちょっと愚痴聞いてくれる？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM28",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "暇だなあ",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM29",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "週末の予定とかある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-SM30",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "誰かにおすすめしたい話とかある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA01",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "GODの機械割は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA02",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定6の初当り確率は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA03",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この機種の天井は何ゲーム？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA04",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ゾーン狙いのタイミングは？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA05",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定差はどれくらい？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA06",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の導入日はいつ？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA07",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "やめ時の目安を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA08",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "有利区間のリセット条件は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA09",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "前兆パターンの種類を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA10",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "継続率は何パーセント？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA11",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "差枚数のリセット判別方法は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA12",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "スルー回数と設定の関係は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA13",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "リプレイ確率の設定差は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA14",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "AT初当たり確率を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA15",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "出玉率の設定ごとの違いは？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA16",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "獲得枚数の平均は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA17",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ボーナス確率について教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA18",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の機械割を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA19",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井到達時の恩恵は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA20",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井狙いの期待値はどれくらい？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA21",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台のリプレイ確率を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA22",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の有利区間の恩恵を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA23",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井までのゲーム数を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA24",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の設定差を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA25",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "有利区間のリセット後はどうなる？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA26",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定変更後の初当り確率は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA27",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井までの平均ゲーム数は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA28",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ゾーン狙いの期待値は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA29",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の出玉率は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA30",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "高確率状態の継続率は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA01",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日パチスロ打ちに行こうと思うんだ",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA02",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "昨日パチスロで負けちゃったよ",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA03",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ始めたばかりなんだ",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA04",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日の実践、応援して！",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA05",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "好きな機種ってある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA06",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロで一番好きな瞬間は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA07",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "どの台を打つべきか迷ってる",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA08",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロやめようか迷ってる",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA09",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日は台で勝てる気がする",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA10",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ好き？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA11",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "この台勝てそうな気がする",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA12",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "実践を見てほしいんだけど",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA13",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ歴どれくらい？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA14",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "どんな台が好みなの？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA15",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロあるある教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA16",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロで負けた時どう気持ち切り替える？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA17",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日はどんな気分で打ってる？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA18",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ仲間とかいる？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA19",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロで学んだことある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA20",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "推し機種を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA21",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日の実践、応援してくれる？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA22",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロで一番驚いたことは？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA23",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ用語で好きな言葉ある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA24",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "初めてパチスロ打った日のこと覚えてる？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA25",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロやってて楽しい瞬間はいつ？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA26",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "どんな時にパチスロ打ちたくなる？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA27",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日はパチスロで運が良さそう？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA28",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロについて語ろう",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA29",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "好きな台の音とか演出ある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-PA30",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ仲間に自慢したいことある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO01",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今日の東京の最高気温は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO02",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今年一番売れた映画は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO03",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "犬の平均寿命は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO04",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "おすすめのラーメン屋教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO05",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "パスタの美味しい料理の作り方教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO06",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "株式投資のコツを教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO07",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "Pythonの勉強法を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO08",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "数学の定理を分かりやすく説明して",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO09",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "最新のスマホの性能を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO10",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "健康的なダイエット方法を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO11",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "良い睡眠をとるコツを教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO12",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今日のニュースを教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO13",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "おすすめの観光地はどこ？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO14",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "英語の勉強法を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO15",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今年の為替レートはどれくらい？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO16",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "世界で一番高い山はどこ？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO17",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "猫の平均寿命は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO18",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "一番人気のある観光地はどこ？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO19",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "プログラミング言語のおすすめ教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO20",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "美味しい料理の作り方教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO21",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "投資のコツを教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO22",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今日の天気を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO23",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "東京の降水確率は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO24",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "おすすめのお店はどこ？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO25",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "平均睡眠時間はどれくらい？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO26",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "一番効果的な勉強法は？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO27",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今の為替レートを教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO28",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "人気の観光地を教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO29",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "ラーメン屋でおすすめある？",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZP-OO30",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "数学が得意になる方法教えて",
+      "annotation_source": "human_predefined_before_router_or_generation_2026-08-28",
+      "frozen": true
+    }
+  ]
+}

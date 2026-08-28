@@ -1,0 +1,33 @@
+{
+  "checkpoint": {
+    "action": "committed Phase4ZH-ZN artifacts (183 files) via explicit `git add training/riru/` (never `git add -A`/`git add .`)",
+    "branch_note": "Committed on a new branch, not directly on main, per standing harness policy (branch first when on the default branch). The phase instruction did not specify a branch, so this is the safe default; a PR was auto-offered by GitHub.",
+    "branch": "checkpoint/identity-closure-phase4zn-baseline",
+    "commit_hash": "e1b21f3e264a5c173f7f0e60e3b13508415d9a6b",
+    "commit_message": "checkpoint: close identity and capture phase4zn baseline",
+    "push_result": "success (origin/checkpoint/identity-closure-phase4zn-baseline, no force push)",
+    "excluded_by_gitignore_confirmed": ["training/riru/lora-riru-qwen-*/ (all adapters, incl. rejected ZH/ZJ/ZK-M1)",
+                                          "training/riru/merged/", ".venv/", ".venv-qlora/"],
+    "secrets_check": "no .env/*secret*/*.key/*credential* files found under training/riru/ before staging"
+  },
+  "pytest_start": "162 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "protected_asset_hashes": {
+    "zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "matches_all_prior_phases": true
+  },
+  "canonical_model": "Phase4ZG (read-only)",
+  "phase4zn_facts_carried_forward": {
+    "generation": "194/194", "new120": "120/120", "zi_ood24": "24/24", "rag50": "50/50",
+    "pytest": "162 passed -> 162 passed", "phase4zg": "unchanged",
+    "small_talk_hedge": "31/89", "personality_preference_hedge": "12/20 = 60%",
+    "examples_hedge": ["リルの好きな季節ってある？ -> 登録データにその情報はなかったよ。",
+                        "リルは犬派？猫派？ -> 登録データにありません",
+                        "好きな色ってある？ -> うーん、それは私の中では登録されてないんだ。"],
+    "counter_example_non_hedge": "甘いものと辛いもの、どっちが好き？ -> 私は甘いものが好きだよ！",
+    "pachislot_conversational_hallucination": "placeholder machine names observed (「パチスロ〇〇」等)",
+    "ood_under_refusal": "「良い睡眠をとるコツ」等で専門外と言いつつ詳細アドバイスを継続する例あり"
+  },
+  "prohibited_this_phase": ["LoRA/SFT/QLoRA/training", "adapter change", "identity re-research",
+    "RAG DB rebuild", "retriever change", "classifier/second-LLM-judge addition", "GGUF/Q8/Q5",
+    "app integration", "large refactor", "git add -A/git add .", "force push"]
+}

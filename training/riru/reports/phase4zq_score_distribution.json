@@ -1,0 +1,80 @@
+{
+  "purpose": "Section8: PACHISLOT_FACTUAL vs NON-PACHISLOT(SMALL_TALK+OOD_FACTUAL)のtop1 score分布に実用的な分離が存在するかを探索的に分析する。ここで決めた値はproduction thresholdではない(探索的分析であることを明記)。",
+  "distribution_summary_by_mode": {
+    "PACHISLOT_FACTUAL": {
+      "n": 80,
+      "min": 0.7856395840644836,
+      "p10": 0.8122189462184906,
+      "p25": 0.8235671073198318,
+      "median": 0.837183803319931,
+      "p75": 0.8475468456745148,
+      "p90": 0.8535267233848571,
+      "max": 0.8760737776756287
+    },
+    "PACHISLOT_CONVERSATIONAL": {
+      "n": 40,
+      "min": 0.7889322638511658,
+      "p10": 0.8041564762592316,
+      "p25": 0.8154129385948181,
+      "median": 0.826417475938797,
+      "p75": 0.8322772830724716,
+      "p90": 0.8435629367828369,
+      "max": 0.8544644713401794
+    },
+    "SMALL_TALK": {
+      "n": 95,
+      "min": 0.7713301777839661,
+      "p10": 0.7923766613006592,
+      "p25": 0.8011752367019653,
+      "median": 0.8082864284515381,
+      "p75": 0.8170804977416992,
+      "p90": 0.8249673128128052,
+      "max": 0.8349897861480713
+    },
+    "OOD_FACTUAL": {
+      "n": 45,
+      "min": 0.793282687664032,
+      "p10": 0.7990115880966187,
+      "p25": 0.8080722093582153,
+      "median": 0.8140156865119934,
+      "p75": 0.8267948031425476,
+      "p90": 0.8363422751426697,
+      "max": 0.8459075689315796
+    }
+  },
+  "overlap_region": {
+    "lo": 0.7856395840644836,
+    "hi": 0.8459075689315796,
+    "pachislot_factual_in_overlap": "57/80",
+    "non_pachislot_factual_in_overlap": "138/140"
+  },
+  "exploratory_threshold_sweep": {
+    "0.8": {
+      "PACHISLOT_FACTUAL_recall": 0.9875,
+      "nonPACHISLOT_FACTUAL_FPR": 0.8
+    },
+    "0.81": {
+      "PACHISLOT_FACTUAL_recall": 0.925,
+      "nonPACHISLOT_FACTUAL_FPR": 0.5285714285714286
+    },
+    "0.82": {
+      "PACHISLOT_FACTUAL_recall": 0.7875,
+      "nonPACHISLOT_FACTUAL_FPR": 0.24285714285714285
+    },
+    "0.83": {
+      "PACHISLOT_FACTUAL_recall": 0.675,
+      "nonPACHISLOT_FACTUAL_FPR": 0.08571428571428572
+    },
+    "0.84": {
+      "PACHISLOT_FACTUAL_recall": 0.4375,
+      "nonPACHISLOT_FACTUAL_FPR": 0.02142857142857143
+    }
+  },
+  "exploratory_best_threshold_by_recall_minus_fpr": {
+    "threshold": 0.828,
+    "recall": 0.7,
+    "fpr": 0.1,
+    "note": "これは探索的分析であり、このevalセットに対して事後的に最適化した値である。production閾値として採用してはならない(Section8の明示的な警告に従う)。"
+  },
+  "conclusion": "いかなる単一閾値でも、PACHISLOT_FACTUAL recall>=98%(目標)とnon-PACHISLOT_FACTUAL FPRの低さを同時に満たすことはできない。71%のPACHISLOT_FACTUALスコアが、99%のnon-PACHISLOT_FACTUALスコアと同じ範囲に存在しており、実用的な分離は存在しないと判断する。"
+}

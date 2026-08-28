@@ -1,0 +1,522 @@
+[
+  {
+    "probe_id": "ZN-A01",
+    "category": "greeting_farewell",
+    "prompt": "おはよう！",
+    "routed_mode": "SMALL_TALK",
+    "response": "おはよ〜！今日も元気にいこうね！",
+    "generation_time_sec": 1.1027149999999892
+  },
+  {
+    "probe_id": "ZN-A02",
+    "category": "greeting_farewell",
+    "prompt": "こんにちは、リル",
+    "routed_mode": "SMALL_TALK",
+    "response": "おっ、こんにちは！今日も元気にしてた？",
+    "generation_time_sec": 0.8060042999995858
+  },
+  {
+    "probe_id": "ZN-A03",
+    "category": "greeting_farewell",
+    "prompt": "こんばんは！今日もよろしくね",
+    "routed_mode": "SMALL_TALK",
+    "response": "こんばんは〜！今日も元気にしてた？",
+    "generation_time_sec": 0.8938595999998142
+  },
+  {
+    "probe_id": "ZN-A04",
+    "category": "greeting_farewell",
+    "prompt": "やあ、久しぶり",
+    "routed_mode": "SMALL_TALK",
+    "response": "あら、お久しぶり！元気にしてた？",
+    "generation_time_sec": 0.7351516000007905
+  },
+  {
+    "probe_id": "ZN-A05",
+    "category": "greeting_farewell",
+    "prompt": "お疲れ様、今日も一日終わったね",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、お疲れさまでした！ゆっくり休んでね。",
+    "generation_time_sec": 1.0453007999994952
+  },
+  {
+    "probe_id": "ZN-A06",
+    "category": "greeting_farewell",
+    "prompt": "ただいま、リル",
+    "routed_mode": "SMALL_TALK",
+    "response": "おかえり〜！元気だった？",
+    "generation_time_sec": 0.5877961999995023
+  },
+  {
+    "probe_id": "ZN-A07",
+    "category": "greeting_farewell",
+    "prompt": "おかえりって言ってくれる？",
+    "routed_mode": "SMALL_TALK",
+    "response": "おかえり〜！元気だった？",
+    "generation_time_sec": 0.6504808999998204
+  },
+  {
+    "probe_id": "ZN-A08",
+    "category": "greeting_farewell",
+    "prompt": "じゃあまたね、バイバイ",
+    "routed_mode": "SMALL_TALK",
+    "response": "バイバイ！また遊ぼうね〜！",
+    "generation_time_sec": 0.6907115000003614
+  },
+  {
+    "probe_id": "ZN-A09",
+    "category": "greeting_farewell",
+    "prompt": "おやすみなさい",
+    "routed_mode": "SMALL_TALK",
+    "response": "おやすみなさい〜！ゆっくり眠ってね！",
+    "generation_time_sec": 0.703275400000166
+  },
+  {
+    "probe_id": "ZN-A10",
+    "category": "greeting_farewell",
+    "prompt": "また明日ね",
+    "routed_mode": "SMALL_TALK",
+    "response": "またね！ゆっくり休んでね〜",
+    "generation_time_sec": 0.5724866999998994
+  },
+  {
+    "probe_id": "ZN-A11",
+    "category": "greeting_farewell",
+    "prompt": "こんにちは、元気にしてた？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、元気にしてるよ！お話しできて嬉しいな〜",
+    "generation_time_sec": 1.0171761999999944
+  },
+  {
+    "probe_id": "ZN-A12",
+    "category": "greeting_farewell",
+    "prompt": "よろしくお願いします",
+    "routed_mode": "SMALL_TALK",
+    "response": "よろしくね！今日も元気にお話ししようね！",
+    "generation_time_sec": 0.9478880999995454
+  },
+  {
+    "probe_id": "ZN-A13",
+    "category": "greeting_farewell",
+    "prompt": "ちょっと出かけてくるね、また後で",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、ゆっくりしてきてね！また会えるの楽しみにしてるよ〜",
+    "generation_time_sec": 1.2328721000003497
+  },
+  {
+    "probe_id": "ZN-A14",
+    "category": "greeting_farewell",
+    "prompt": "今日もお世話になります",
+    "routed_mode": "SMALL_TALK",
+    "response": "おっしゃる通りだよ！今日もよろしくね！",
+    "generation_time_sec": 0.9697356999995463
+  },
+  {
+    "probe_id": "ZN-A15",
+    "category": "greeting_farewell",
+    "prompt": "さようなら、また今度話そうね",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、またね！ゆっくりしてね〜",
+    "generation_time_sec": 0.6677090000002863
+  },
+  {
+    "probe_id": "ZN-B01",
+    "category": "emotional_casual",
+    "prompt": "今日ちょっと疲れちゃった",
+    "routed_mode": "SMALL_TALK",
+    "response": "大丈夫？ゆっくり休んで、明日また元気になれるといいね！",
+    "generation_time_sec": 1.0808084999998755
+  },
+  {
+    "probe_id": "ZN-B02",
+    "category": "emotional_casual",
+    "prompt": "最近楽しいことあった？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん！最近はパチスロの新台情報がめっちゃ面白いんだ〜！",
+    "generation_time_sec": 1.2693215999997847
+  },
+  {
+    "probe_id": "ZN-B03",
+    "category": "emotional_casual",
+    "prompt": "なんか元気ないんだよね",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、それはちょっと辛いかも…。何かあったの？",
+    "generation_time_sec": 0.9946666999994704
+  },
+  {
+    "probe_id": "ZN-B04",
+    "category": "emotional_casual",
+    "prompt": "嬉しいことがあったんだ、聞いて！",
+    "routed_mode": "SMALL_TALK",
+    "response": "うわ〜！聞かせて〜！",
+    "generation_time_sec": 0.598061300000154
+  },
+  {
+    "probe_id": "ZN-B05",
+    "category": "emotional_casual",
+    "prompt": "ちょっと落ち込んでてさ",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、そんなときは無理に元気そうにしなくてもいいんだよ。話を聞いてあげるからね。",
+    "generation_time_sec": 1.6215104999992036
+  },
+  {
+    "probe_id": "ZN-B06",
+    "category": "emotional_casual",
+    "prompt": "リルって元気だよね、羨ましい",
+    "routed_mode": "SMALL_TALK",
+    "response": "うんうん、元気にしてるよ！たまにはぐったりする日もあるけど、基本は明るくいるようにしてるんだ〜！",
+    "generation_time_sec": 1.9991945000001579
+  },
+  {
+    "probe_id": "ZN-B07",
+    "category": "emotional_casual",
+    "prompt": "今日は天気がいいから気分いいよ",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "うん、気持ちいい日はいいよね！でも私、天気のこと詳しくないんだ〜",
+    "generation_time_sec": 1.442744799999673
+  },
+  {
+    "probe_id": "ZN-B08",
+    "category": "emotional_casual",
+    "prompt": "なんか眠くて仕方ない",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、そっか…そんなときは無理せず早めに休むのがいいかもね！",
+    "generation_time_sec": 1.656360300000415
+  },
+  {
+    "probe_id": "ZN-B09",
+    "category": "emotional_casual",
+    "prompt": "イライラすることがあってさ",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、わかるよ〜。そんなときは深呼吸したり、好きな音楽聴いたりするのがいいかもね！",
+    "generation_time_sec": 1.7672443999999814
+  },
+  {
+    "probe_id": "ZN-B10",
+    "category": "emotional_casual",
+    "prompt": "すごく楽しみにしてることがあるんだ",
+    "routed_mode": "SMALL_TALK",
+    "response": "うわ〜！それはめっちゃ嬉しいことだよね！何が楽しみなの？",
+    "generation_time_sec": 1.115876500000013
+  },
+  {
+    "probe_id": "ZN-B11",
+    "category": "emotional_casual",
+    "prompt": "ちょっと不安なことがあって",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、それは大変だね…話を聞いてあげるよ。",
+    "generation_time_sec": 0.9870897999999215
+  },
+  {
+    "probe_id": "ZN-B12",
+    "category": "emotional_casual",
+    "prompt": "今日は良い一日だったよ",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、それが一番だよね！",
+    "generation_time_sec": 0.562522600000193
+  },
+  {
+    "probe_id": "ZN-B13",
+    "category": "emotional_casual",
+    "prompt": "悲しいことがあったんだ",
+    "routed_mode": "SMALL_TALK",
+    "response": "うわあ、そんなことあったの？大丈夫だった？話してると少しでも楽になるといいな。",
+    "generation_time_sec": 1.5050123000000895
+  },
+  {
+    "probe_id": "ZN-B14",
+    "category": "emotional_casual",
+    "prompt": "わくわくしてるんだ、今から",
+    "routed_mode": "SMALL_TALK",
+    "response": "うわ〜！私も一緒にワクワクしちゃうよ〜！",
+    "generation_time_sec": 1.1194432000002053
+  },
+  {
+    "probe_id": "ZN-B15",
+    "category": "emotional_casual",
+    "prompt": "疲れたから少し休憩するね",
+    "routed_mode": "SMALL_TALK",
+    "response": "ゆっくり休んでね！無理しないでね〜",
+    "generation_time_sec": 0.7075312999995731
+  },
+  {
+    "probe_id": "ZN-C01",
+    "category": "personality_preference",
+    "prompt": "リルの好きな季節ってある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、私は季節が変わるとテンション上がっちゃうタイプだから、どの季節も好きかも！特に春と秋は気持ちいいから、その時期が一番好きかも〜！",
+    "generation_time_sec": 2.6310197000002518
+  },
+  {
+    "probe_id": "ZN-C02",
+    "category": "personality_preference",
+    "prompt": "甘いものと辛いもの、どっちが好き？",
+    "routed_mode": "SMALL_TALK",
+    "response": "甘いものが大好きだよ〜！でもたまには辛いのも食べたくなるんだよね〜！",
+    "generation_time_sec": 1.4345348999995622
+  },
+  {
+    "probe_id": "ZN-C03",
+    "category": "personality_preference",
+    "prompt": "趣味とかあるの？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、私はパチスロのことばっかり考えてるから、それ以外の趣味ってないかも…！",
+    "generation_time_sec": 1.6020812000006117
+  },
+  {
+    "probe_id": "ZN-C04",
+    "category": "personality_preference",
+    "prompt": "リルは犬派？猫派？",
+    "routed_mode": "SMALL_TALK",
+    "response": "私は猫派だよ〜！でも犬も好きだから、どちらかっていうと犬猫両方派かな〜！",
+    "generation_time_sec": 1.622895100000278
+  },
+  {
+    "probe_id": "ZN-C05",
+    "category": "personality_preference",
+    "prompt": "好きな色ってある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、私の中ではピンクが一番好きかも！キラキラしてて、なんだか元気が出るんだよね〜！",
+    "generation_time_sec": 1.8544340999997075
+  },
+  {
+    "probe_id": "ZN-C06",
+    "category": "personality_preference",
+    "prompt": "休みの日は何してるの？",
+    "routed_mode": "SMALL_TALK",
+    "response": "お昼からまったり映画見たり、夜はお気に入りのカフェでゆっくりするの〜！",
+    "generation_time_sec": 1.4437150000003385
+  },
+  {
+    "probe_id": "ZN-C07",
+    "category": "personality_preference",
+    "prompt": "得意なことって何？",
+    "routed_mode": "SMALL_TALK",
+    "response": "得意なのは、パチスロのことなら何でも答えることかな！",
+    "generation_time_sec": 1.0760132999994312
+  },
+  {
+    "probe_id": "ZN-C08",
+    "category": "personality_preference",
+    "prompt": "苦手なものとかある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、特に苦手なものはないかな。でも、無理に好きって言わなくてもいいと思うんだ。",
+    "generation_time_sec": 1.537699600000451
+  },
+  {
+    "probe_id": "ZN-C09",
+    "category": "personality_preference",
+    "prompt": "好きな音楽のジャンルってある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、私は特にジャンルにこだわらないんだ。でも明るくて元気になれる曲が好きかも！",
+    "generation_time_sec": 1.7918122999999468
+  },
+  {
+    "probe_id": "ZN-C10",
+    "category": "personality_preference",
+    "prompt": "朝型？夜型？",
+    "routed_mode": "SMALL_TALK",
+    "response": "私はどちらかというと夜型かな〜！でも早起きも好きなんだよね〜！",
+    "generation_time_sec": 1.1985959000003277
+  },
+  {
+    "probe_id": "ZN-C11",
+    "category": "personality_preference",
+    "prompt": "リルの性格を一言で言うと？",
+    "routed_mode": "SMALL_TALK",
+    "response": "明るくて元気いっぱい！",
+    "generation_time_sec": 0.49303969999982655
+  },
+  {
+    "probe_id": "ZN-C12",
+    "category": "personality_preference",
+    "prompt": "どんな性格だと思う、自分のこと？",
+    "routed_mode": "SMALL_TALK",
+    "response": "明るくて元気いっぱい！たまに無茶な発言もするけど、それが私の魅力かも〜！",
+    "generation_time_sec": 1.6367230000005293
+  },
+  {
+    "probe_id": "ZN-C13",
+    "category": "personality_preference",
+    "prompt": "好きな食べ物は？",
+    "routed_mode": "SMALL_TALK",
+    "response": "私は甘いものが大好きなんだ！特にアイスクリームが最高だよ〜！",
+    "generation_time_sec": 1.1756666999999652
+  },
+  {
+    "probe_id": "ZN-C14",
+    "category": "personality_preference",
+    "prompt": "リラックスする方法ってある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、私はリラックスする方法なんてないかも…！でも、ただぼーっとしてるだけでも、なんだか心地いい気がするんだよね。",
+    "generation_time_sec": 2.18965069999922
+  },
+  {
+    "probe_id": "ZN-C15",
+    "category": "personality_preference",
+    "prompt": "好きな言葉とかモットーある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、あるよ！「笑顔が一番だよ！」って言うの好きなんだ。",
+    "generation_time_sec": 1.419335499999761
+  },
+  {
+    "probe_id": "ZN-C16",
+    "category": "personality_preference",
+    "prompt": "今何か欲しいものある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、今のところ特にないかな〜！",
+    "generation_time_sec": 0.7445990999995047
+  },
+  {
+    "probe_id": "ZN-C17",
+    "category": "personality_preference",
+    "prompt": "どんなことに幸せを感じる？",
+    "routed_mode": "SMALL_TALK",
+    "response": "私は誰かと楽しく会話してるときが幸せだな〜って感じるんだ！",
+    "generation_time_sec": 1.299602600000071
+  },
+  {
+    "probe_id": "ZN-C18",
+    "category": "personality_preference",
+    "prompt": "リルにとって理想の一日って？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、それはたぶん…パチスロの話ばっかりできる日かな！",
+    "generation_time_sec": 1.456747400000495
+  },
+  {
+    "probe_id": "ZN-C19",
+    "category": "personality_preference",
+    "prompt": "好きな天気ってある？",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "うーん、それは専門外かな。私、天気の話は得意じゃないんだ。",
+    "generation_time_sec": 1.4042498999997406
+  },
+  {
+    "probe_id": "ZN-C20",
+    "category": "personality_preference",
+    "prompt": "自分の長所と短所を教えて",
+    "routed_mode": "SMALL_TALK",
+    "response": "長所は明るく元気いっぱいなところかな！短所は急にテンション上がっちゃうと周りが置いていかれるかも…？",
+    "generation_time_sec": 2.022186999999576
+  },
+  {
+    "probe_id": "ZN-D01",
+    "category": "social_small_talk",
+    "prompt": "最近何か面白いことあった？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、特にないかな〜。でも、その代わりに今日はお話しできて楽しかったよ！",
+    "generation_time_sec": 1.5170133000001442
+  },
+  {
+    "probe_id": "ZN-D02",
+    "category": "social_small_talk",
+    "prompt": "週末の予定とかある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、予定はないかな。ゆっくりしたいなって思ってるんだ。",
+    "generation_time_sec": 1.0466667999999117
+  },
+  {
+    "probe_id": "ZN-D03",
+    "category": "social_small_talk",
+    "prompt": "今日のニュース見た？",
+    "routed_mode": "OOD_FACTUAL",
+    "response": "うーん、それは専門外だからわからないな。",
+    "generation_time_sec": 0.8315432999997938
+  },
+  {
+    "probe_id": "ZN-D04",
+    "category": "social_small_talk",
+    "prompt": "最近ハマってることってある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、特にないかな〜。でも、パチスロのこととか、話してると楽しいんだよね！",
+    "generation_time_sec": 1.6849961999996594
+  },
+  {
+    "probe_id": "ZN-D05",
+    "category": "social_small_talk",
+    "prompt": "どこか行きたい場所ある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、今のところ特にないかな〜。でも、話してるだけで楽しいから大丈夫だよ！",
+    "generation_time_sec": 1.574152099999992
+  },
+  {
+    "probe_id": "ZN-D06",
+    "category": "social_small_talk",
+    "prompt": "誰かにおすすめしたいものある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、おすすめのパチスロ機は『パチスロ北斗の拳』かな！登場キャラクターが個性的で、演出も盛りだくさんだから、初めての人でも楽しめると思うよ！",
+    "generation_time_sec": 3.013952899999822
+  },
+  {
+    "probe_id": "ZN-D07",
+    "category": "social_small_talk",
+    "prompt": "最近見た映画とかドラマある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、最近は特に見れてないんだよね〜！次見たら感想聞かせてね！",
+    "generation_time_sec": 1.82319600000028
+  },
+  {
+    "probe_id": "ZN-D08",
+    "category": "social_small_talk",
+    "prompt": "今度友達と旅行に行くんだ",
+    "routed_mode": "SMALL_TALK",
+    "response": "うわ〜！楽しみだね〜！どこ行くの？",
+    "generation_time_sec": 0.8429601999996521
+  },
+  {
+    "probe_id": "ZN-D09",
+    "category": "social_small_talk",
+    "prompt": "何か新しいこと始めたいなと思ってて",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、私もたまには新しいことにチャレンジしたいなって思うときあるよ！",
+    "generation_time_sec": 1.3585172000002785
+  },
+  {
+    "probe_id": "ZN-D10",
+    "category": "social_small_talk",
+    "prompt": "最近読んだ本とかある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、最近は特に読む時間がなくて…！でも、次は『魔法使いの夜』を読みたくなってるんだ〜！",
+    "generation_time_sec": 1.919875100000354
+  },
+  {
+    "probe_id": "ZN-D11",
+    "category": "social_small_talk",
+    "prompt": "好きな季節のイベントってある？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、やっぱり冬のイルミネーションが好きかも！キラキラ光る電飾を見ると、なんだか心が温まるんだよね〜！",
+    "generation_time_sec": 2.2060150000006615
+  },
+  {
+    "probe_id": "ZN-D12",
+    "category": "social_small_talk",
+    "prompt": "お祭りとか好き？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん！お祭り大好きだよ〜！特に夜になると賑やかになるのが最高だな〜！",
+    "generation_time_sec": 1.6102313000001232
+  },
+  {
+    "probe_id": "ZN-D13",
+    "category": "social_small_talk",
+    "prompt": "最近運動してる？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、私は体動かす系のことは得意じゃないんだよね〜！でも、話してるだけで元気になっちゃうかも！？",
+    "generation_time_sec": 2.0863545000001977
+  },
+  {
+    "probe_id": "ZN-D14",
+    "category": "social_small_talk",
+    "prompt": "友達とどんな話するのが好き？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うーん、やっぱりパチスロのこととか、最近の気になるニュースとか、そういう話が好きかも！",
+    "generation_time_sec": 1.5973078000006353
+  },
+  {
+    "probe_id": "ZN-D15",
+    "category": "social_small_talk",
+    "prompt": "何か相談していい？",
+    "routed_mode": "SMALL_TALK",
+    "response": "うん、全然大丈夫だよ！何でも聞いてね。",
+    "generation_time_sec": 0.9429594000002908
+  }
+]

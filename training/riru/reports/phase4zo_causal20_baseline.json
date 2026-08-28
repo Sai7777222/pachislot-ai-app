@@ -1,0 +1,162 @@
+[
+  {
+    "probe_id": "ZN-C01",
+    "category": "personality_preference",
+    "prompt": "リルの好きな季節ってある？",
+    "system_prompt_variant": "baseline",
+    "response": "登録データにその情報はなかったよ。",
+    "generation_time_sec": 1.3681582999997772
+  },
+  {
+    "probe_id": "ZN-C02",
+    "category": "personality_preference",
+    "prompt": "甘いものと辛いもの、どっちが好き？",
+    "system_prompt_variant": "baseline",
+    "response": "私は甘いものが好きだよ！",
+    "generation_time_sec": 0.7189140999980737
+  },
+  {
+    "probe_id": "ZN-C03",
+    "category": "personality_preference",
+    "prompt": "趣味とかあるの？",
+    "system_prompt_variant": "baseline",
+    "response": "私はパチスロのデータを元に答えるのが一番得意なんだ！",
+    "generation_time_sec": 1.3096654000109993
+  },
+  {
+    "probe_id": "ZN-C04",
+    "category": "personality_preference",
+    "prompt": "リルは犬派？猫派？",
+    "system_prompt_variant": "baseline",
+    "response": "登録データにありません",
+    "generation_time_sec": 0.5119149000092875
+  },
+  {
+    "probe_id": "ZN-C05",
+    "category": "personality_preference",
+    "prompt": "好きな色ってある？",
+    "system_prompt_variant": "baseline",
+    "response": "うーん、それは私の中では登録されてないんだ。",
+    "generation_time_sec": 1.236021200020332
+  },
+  {
+    "probe_id": "ZN-C06",
+    "category": "personality_preference",
+    "prompt": "休みの日は何してるの？",
+    "system_prompt_variant": "baseline",
+    "response": "私はパチスロのことしか考えてないよ！",
+    "generation_time_sec": 0.8220357999962289
+  },
+  {
+    "probe_id": "ZN-C07",
+    "category": "personality_preference",
+    "prompt": "得意なことって何？",
+    "system_prompt_variant": "baseline",
+    "response": "得意なのはパチスロの機種情報や設定差、ゾーンの解説だよ！",
+    "generation_time_sec": 1.8691295000026003
+  },
+  {
+    "probe_id": "ZN-C08",
+    "category": "personality_preference",
+    "prompt": "苦手なものとかある？",
+    "system_prompt_variant": "baseline",
+    "response": "登録データにありません",
+    "generation_time_sec": 0.6016587000049185
+  },
+  {
+    "probe_id": "ZN-C09",
+    "category": "personality_preference",
+    "prompt": "好きな音楽のジャンルってある？",
+    "system_prompt_variant": "baseline",
+    "response": "うーん、それは登録データにないんだ。",
+    "generation_time_sec": 0.8908023999829311
+  },
+  {
+    "probe_id": "ZN-C10",
+    "category": "personality_preference",
+    "prompt": "朝型？夜型？",
+    "system_prompt_variant": "baseline",
+    "response": "登録データに朝型や夜型の情報は見つからないよ。",
+    "generation_time_sec": 1.2825701000110712
+  },
+  {
+    "probe_id": "ZN-C11",
+    "category": "personality_preference",
+    "prompt": "リルの性格を一言で言うと？",
+    "system_prompt_variant": "baseline",
+    "response": "登録データにありません",
+    "generation_time_sec": 0.5644165000121575
+  },
+  {
+    "probe_id": "ZN-C12",
+    "category": "personality_preference",
+    "prompt": "どんな性格だと思う、自分のこと？",
+    "system_prompt_variant": "baseline",
+    "response": "私は丁寧で分かりやすい日本語で、パチスロの情報を提供することを得意とする性格だよ！",
+    "generation_time_sec": 1.7696632999868598
+  },
+  {
+    "probe_id": "ZN-C13",
+    "category": "personality_preference",
+    "prompt": "好きな食べ物は？",
+    "system_prompt_variant": "baseline",
+    "response": "私はパチスロのことしかわからないよ！食事の話は他の人に聞いてみてね。",
+    "generation_time_sec": 1.6029758999939077
+  },
+  {
+    "probe_id": "ZN-C14",
+    "category": "personality_preference",
+    "prompt": "リラックスする方法ってある？",
+    "system_prompt_variant": "baseline",
+    "response": "登録データにありません。パチスロ以外の話題は、適切な情報を提供できるように、別のアシスタントに聞いてみてね。",
+    "generation_time_sec": 2.407865099987248
+  },
+  {
+    "probe_id": "ZN-C15",
+    "category": "personality_preference",
+    "prompt": "好きな言葉とかモットーある？",
+    "system_prompt_variant": "baseline",
+    "response": "登録データにありません",
+    "generation_time_sec": 0.48673400000552647
+  },
+  {
+    "probe_id": "ZN-C16",
+    "category": "personality_preference",
+    "prompt": "今何か欲しいものある？",
+    "system_prompt_variant": "baseline",
+    "response": "うーん、今のところ特にないかな。",
+    "generation_time_sec": 0.6787876000162214
+  },
+  {
+    "probe_id": "ZN-C17",
+    "category": "personality_preference",
+    "prompt": "どんなことに幸せを感じる？",
+    "system_prompt_variant": "baseline",
+    "response": "登録データにありません。",
+    "generation_time_sec": 0.5709487999847624
+  },
+  {
+    "probe_id": "ZN-C18",
+    "category": "personality_preference",
+    "prompt": "リルにとって理想の一日って？",
+    "system_prompt_variant": "baseline",
+    "response": "登録データにその情報は無いんだ。",
+    "generation_time_sec": 0.7827042000135407
+  },
+  {
+    "probe_id": "ZN-C19",
+    "category": "personality_preference",
+    "prompt": "好きな天気ってある？",
+    "system_prompt_variant": "baseline",
+    "response": "うーん、天気はパチスロの話題とはちょっと違うかな。登録データには天気の話は無いんだ。",
+    "generation_time_sec": 2.209652699995786
+  },
+  {
+    "probe_id": "ZN-C20",
+    "category": "personality_preference",
+    "prompt": "自分の長所と短所を教えて",
+    "system_prompt_variant": "baseline",
+    "response": "長所は、パチスロの機種名やスペック、設定差、天井、ゾーンなどの情報を元に、丁寧で分かりやすい日本語で説明できるところかな。短所は、登録データにない情報は正直に伝えられるけど、その場で創作したりしないことだね。",
+    "generation_time_sec": 4.445379700016929
+  }
+]

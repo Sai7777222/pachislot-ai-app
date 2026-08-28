@@ -1,0 +1,11 @@
+{
+  "pytest_end": "191 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "baseline_start_of_phase": 176, "delta": "+15 (test_phase4zp_router.py)", "regression": "none",
+  "protected_asset_hashes_end": {"zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "matches": true},
+  "git": {"branch": "checkpoint/identity-closure-phase4zn-baseline", "commits_made_this_phase": 0,
+    "pushes_made_this_phase": 0, "untracked_new_files": 54,
+    "note": "本フェーズでgit add/commit/pushは一切行っていない。開始時のcheckpoint commit(e1b21f3, Phase4ZO由来)からHEADは不変。全54成果物はuntrackedのまま。config/prompts/system.jinja2/RAG DB/src/pachislot_ai/は無変更。"},
+  "no_training_confirmation": "学習は一切行っていない。GPUはPhase4ZG(read-only)推論にのみ使用した。",
+  "production_integration_performed": false,
+  "status": "COMPLETE"
+}

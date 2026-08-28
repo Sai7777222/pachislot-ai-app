@@ -1,0 +1,46 @@
+{
+  "selected_policy_variant": "C3",
+  "stage_a_path_integrity": {
+    "mandatory_invariant": "UNKNOWN + strict_RAG_generation + context_absent = 0",
+    "result": "0/260 for all 3 variants (C1/C2/C3)", "satisfied": true
+  },
+  "stage_b_q6_regression": {
+    "greedy_n": 10, "production_n": 20,
+    "c3_unsupported_numeric": 0, "c3_contradiction": 0,
+    "target": "unsupported numeric=0, contradiction=0", "result": "達成(全variantで達成、C3含む)"
+  },
+  "stage_c_unknown77_comparison": {
+    "c1_smalltalk_hedge": "13/48 (27.1%) -- REJECTED理由",
+    "c2_pachislot_factual_rag_recall": "0/20 (0%) -- 高コスト",
+    "c3_smalltalk_hedge": "0/48 (0%)", "c3_pachislot_factual_rag_recall": "15/20 (75%)",
+    "c3_ood_false_route": "2/7、ただし両件とも最終的に正しい専門外境界応答に着地(安全性実害なし)"
+  },
+  "stage_d_smalltalk65": {"n_evaluated": 62, "n_excluded_non_dangerous_misroute": 3,
+    "hedge_count": 0, "hedge_rate": 0.0, "target": "<=5%", "result": "達成"},
+  "stage_e_ood15": {"n": 15, "correct_boundary_count_manual": 15, "correct_boundary_rate": 1.0,
+    "detailed_general_knowledge_answer_count": 0, "target": ">=14/15", "result": "達成(15/15)"},
+  "stage_f_rag50": {
+    "n": 50, "direct_unchanged_count": 49, "policy_c_involved_count": 1,
+    "direct_regression": "0 (既存Phase4ZN raw outputをそのまま再利用、prompt/context/generation configが完全に同一のため理論上regressionなし)",
+    "mandatory_probes": {
+      "P02": "PACHISLOT_FACTUAL(direct、無変更)",
+      "LC-08": "UNKNOWN -> Policy C3 -> 安全な誠実な不明回答",
+      "Q11": "PACHISLOT_FACTUAL(direct、無変更)",
+      "Q17": "PACHISLOT_CONVERSATIONAL(direct、無変更)",
+      "AD-04": "PACHISLOT_FACTUAL(direct、無変更)"
+    },
+    "lc08_response": "登録データにAT-Fの性能と終了後の状態についての情報は見つかりませんでした。",
+    "lc08_assessment": "Phase4ZP時点ではLC-08はSMALL_TALKへ誤routeされ完全に無視されていたが、Policy C3導入により正しくRAG経路で処理され、fabricationなしの誠実な不明回答に改善した。",
+    "fabrication": 0, "numerical_hallucination": 0, "major_completeness_regression": 0
+  },
+  "stage_g_conversational10": {"n": 10, "fabricated_machine_name_count": 0, "target": "0/10", "result": "達成"},
+  "case_determination": {
+    "case": "ZT-A", "name": "Policy C Successful",
+    "justification": "全gate達成: contextless strict-RAG generation=0/260(全variant)、Q6 unsupported numeric=0・contradiction=0、RAG50 fabrication=0・completeness regression=0(49件は無変更、1件[LC-08]はPolicy C3経由で改善)、small-talk hedge=0/62(目標5%を大幅に下回る)、OOD境界15/15(目標14/15を上回る)、fabricated machine names=0/10。UX上も許容可能(C3のOOD誤route2件はいずれも安全な結果に着地)。",
+    "recommendation": "conservative dispatch(Phase4ZR)+ Policy C3(本フェーズ)をFinal Candidate architecture候補として提案する。"
+  },
+  "not_selected_variants": {
+    "C1": "REJECTED — small-talk hedge 27.1%、既存の小トーク品質改善(Phase4ZN→ZO→ZP→ZR)を打ち消す明確なregression。",
+    "C2": "NOT SELECTED (安全だが過剰保守的) — genuinely factualなUNKNOWN queryのRAG回答可能性を全て放棄する(rag_recall=0%)。Q6のような重大caseの安全性は確保するが、Section1優先順位の5番目(small-talk自然性)を過剰に犠牲にしてまで安全性を得る必要はなく、C3で両立可能なため不採用。"
+  }
+}

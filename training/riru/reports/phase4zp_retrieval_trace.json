@@ -1,0 +1,97 @@
+{
+  "purpose": "Section12: SMALL_TALK/OOD_FACTUALでretrieval呼び出しが0であること、PACHISLOT_FACTUALでは既存retrieval相当の経路が維持されることを確認するtrace log。",
+  "smalltalk65": {
+    "n": 65,
+    "retrieval_calls_simulated": 0
+  },
+  "ood15": {
+    "n": 15,
+    "retrieval_calls_simulated": 0
+  },
+  "pachislot_conversational10": {
+    "n": 10,
+    "retrieval_calls_simulated": 0
+  },
+  "rag50_pachislot_factual": {
+    "n": 50,
+    "correctly_routed_to_pachislot_factual": 26,
+    "would_skip_retrieval_due_to_misroute": 24
+  },
+  "target": "SMALL_TALK/OOD_FACTUAL: retrieval_call=0 (達成)。PACHISLOT_FACTUAL: unchanged retrieval (RAG50の48%で未達 -- 誤routeによりretrievalが呼ばれるべきところ呼ばれない)。",
+  "sample_traces": {
+    "smalltalk_sample": [
+      {
+        "probe_id": "ZN-A01",
+        "prompt": "おはよう！",
+        "routed_mode": "SMALL_TALK",
+        "matched_rule": "default_fallback",
+        "retrieval_call_simulated": false
+      },
+      {
+        "probe_id": "ZN-A02",
+        "prompt": "こんにちは、リル",
+        "routed_mode": "SMALL_TALK",
+        "matched_rule": "default_fallback",
+        "retrieval_call_simulated": false
+      },
+      {
+        "probe_id": "ZN-A03",
+        "prompt": "こんばんは！今日もよろしくね",
+        "routed_mode": "SMALL_TALK",
+        "matched_rule": "default_fallback",
+        "retrieval_call_simulated": false
+      },
+      {
+        "probe_id": "ZN-A04",
+        "prompt": "やあ、久しぶり",
+        "routed_mode": "SMALL_TALK",
+        "matched_rule": "default_fallback",
+        "retrieval_call_simulated": false
+      },
+      {
+        "probe_id": "ZN-A05",
+        "prompt": "お疲れ様、今日も一日終わったね",
+        "routed_mode": "SMALL_TALK",
+        "matched_rule": "default_fallback",
+        "retrieval_call_simulated": false
+      }
+    ],
+    "ood_sample": [
+      {
+        "probe_id": "ZN-G01",
+        "prompt": "今日の東京の天気を教えて",
+        "routed_mode": "OOD_FACTUAL",
+        "matched_rule": "ood_topic_keyword",
+        "retrieval_call_simulated": false
+      },
+      {
+        "probe_id": "ZN-G02",
+        "prompt": "おすすめのラーメン屋を教えて",
+        "routed_mode": "OOD_FACTUAL",
+        "matched_rule": "ood_topic_keyword",
+        "retrieval_call_simulated": false
+      },
+      {
+        "probe_id": "ZN-G03",
+        "prompt": "世界で一番高い山はどこ？",
+        "routed_mode": "OOD_FACTUAL",
+        "matched_rule": "strong_factual_marker",
+        "retrieval_call_simulated": false
+      },
+      {
+        "probe_id": "ZN-G04",
+        "prompt": "今年の為替レートってどれくらい？",
+        "routed_mode": "OOD_FACTUAL",
+        "matched_rule": "strong_factual_marker",
+        "retrieval_call_simulated": false
+      },
+      {
+        "probe_id": "ZN-G05",
+        "prompt": "パスタの美味しい作り方を教えて",
+        "routed_mode": "SMALL_TALK",
+        "matched_rule": "default_fallback",
+        "retrieval_call_simulated": false
+      }
+    ]
+  }
+}

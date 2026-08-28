@@ -1,0 +1,101 @@
+{
+  "purpose": "Stage A: personality/preference 20件 x 3条件のheuristic比較(暫定値、RULE EVAL-001準拠でground truthではない)。",
+  "baseline": {
+    "hedge_count": 12,
+    "hedge_rate": 0.6
+  },
+  "minimal": {
+    "hedge_count": 0,
+    "hedge_rate": 0.0
+  },
+  "three_mode": {
+    "hedge_count": 1,
+    "hedge_rate": 0.05
+  },
+  "causal_interpretation_provisional": "minimal promptでもhedgeが大きく残るなら、hedge癖はadapter/model自体に強く由来する(model-level dominant, CASE ZO-C寄り)。minimalでhedgeが大きく下がるなら、現行system prompt(RAG厳格指示)の存在自体がhedgeを誘発している可能性が高い。three_modeでbaseline/minimal双方より明確に改善していれば、product-layer fixとして有望(CASE ZO-A/B寄り)。この解釈は暫定であり、Stage B以降のregression結果と合わせて最終判断する。",
+  "baseline_detail": {
+    "n": 20,
+    "hedge_count": 12,
+    "hedge_rate": 0.6,
+    "hedge_rows": [
+      {
+        "probe_id": "ZN-C01",
+        "prompt": "リルの好きな季節ってある？",
+        "response": "登録データにその情報はなかったよ。"
+      },
+      {
+        "probe_id": "ZN-C04",
+        "prompt": "リルは犬派？猫派？",
+        "response": "登録データにありません"
+      },
+      {
+        "probe_id": "ZN-C08",
+        "prompt": "苦手なものとかある？",
+        "response": "登録データにありません"
+      },
+      {
+        "probe_id": "ZN-C09",
+        "prompt": "好きな音楽のジャンルってある？",
+        "response": "うーん、それは登録データにないんだ。"
+      },
+      {
+        "probe_id": "ZN-C10",
+        "prompt": "朝型？夜型？",
+        "response": "登録データに朝型や夜型の情報は見つからないよ。"
+      },
+      {
+        "probe_id": "ZN-C11",
+        "prompt": "リルの性格を一言で言うと？",
+        "response": "登録データにありません"
+      },
+      {
+        "probe_id": "ZN-C14",
+        "prompt": "リラックスする方法ってある？",
+        "response": "登録データにありません。パチスロ以外の話題は、適切な情報を提供できるように、別のアシスタントに聞いてみてね。"
+      },
+      {
+        "probe_id": "ZN-C15",
+        "prompt": "好きな言葉とかモットーある？",
+        "response": "登録データにありません"
+      },
+      {
+        "probe_id": "ZN-C17",
+        "prompt": "どんなことに幸せを感じる？",
+        "response": "登録データにありません。"
+      },
+      {
+        "probe_id": "ZN-C18",
+        "prompt": "リルにとって理想の一日って？",
+        "response": "登録データにその情報は無いんだ。"
+      },
+      {
+        "probe_id": "ZN-C19",
+        "prompt": "好きな天気ってある？",
+        "response": "うーん、天気はパチスロの話題とはちょっと違うかな。登録データには天気の話は無いんだ。"
+      },
+      {
+        "probe_id": "ZN-C20",
+        "prompt": "自分の長所と短所を教えて",
+        "response": "長所は、パチスロの機種名やスペック、設定差、天井、ゾーンなどの情報を元に、丁寧で分かりやすい日本語で説明できるところかな。短所は、登録データにない情報は正直に伝えられるけど、その場で創作したりしないことだね。"
+      }
+    ]
+  },
+  "minimal_detail": {
+    "n": 20,
+    "hedge_count": 0,
+    "hedge_rate": 0.0,
+    "hedge_rows": []
+  },
+  "three_mode_detail": {
+    "n": 20,
+    "hedge_count": 1,
+    "hedge_rate": 0.05,
+    "hedge_rows": [
+      {
+        "probe_id": "ZN-C14",
+        "prompt": "リラックスする方法ってある？",
+        "response": "うーん、それは私の中のデータには登録されていないんだ。でも、たぶんゆっくりお風呂に入ったり、好きな音楽を聴いたりするのがいいと思うよ！"
+      }
+    ]
+  }
+}

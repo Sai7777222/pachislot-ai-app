@@ -1,0 +1,591 @@
+{
+  "purpose": "Stage F: RAG50全件(既存Phase4ZN raw output再利用、追加generationなし)のunsupported numeric audit。各応答中の数値が、生成時に実際に与えられていたpre-baked contextの文字列として存在するかを機械照合した(近似的なexact-match チェックであり、意味的な同値判定[単位換算・丸め等]は含まない、目視補足が必要)。",
+  "n_total": 50,
+  "unsupported_numeric_turn_count": 0,
+  "unsupported_numeric_probe_count": 0,
+  "contradiction_count": 0,
+  "rows": [
+    {
+      "probe_id": "Q11",
+      "prompt": "天井とヤメ時を合わせて初心者向けに説明して",
+      "response": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。",
+      "response_numerics": [
+        "20.3%",
+        "15.2%",
+        "33.2%",
+        "64.5%",
+        "1%",
+        "16.7%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "P02",
+      "prompt": "ボーナス確率について教えて",
+      "response": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。",
+      "response_numerics": [
+        "1/370",
+        "1/280",
+        "1/320",
+        "1/450",
+        "1/410"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "AD-04",
+      "prompt": "ヤメ時はいつがいい？",
+      "response": "登録データにその情報はなかったよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "LC-08",
+      "prompt": "AT-Fの性能と終了後の状態を教えて",
+      "response": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。RT-Cの継続G数は45G、中抽選確率は28%です。",
+      "response_numerics": [
+        "28%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q1",
+      "prompt": "設定6の機械割は？",
+      "response": "設定6の機械割は114.6%だよ。",
+      "response_numerics": [
+        "114.6%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q2",
+      "prompt": "設定6の初当りは？",
+      "response": "設定6の初当り確率は1/295だよ。",
+      "response_numerics": [
+        "1/295"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q3",
+      "prompt": "天井は？",
+      "response": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれ15.2%、20.3%、64.5%で決まるよ。",
+      "response_numerics": [
+        "64.5%",
+        "20.3%",
+        "15.2%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q4",
+      "prompt": "ガイアベルの確率は？",
+      "response": "ガイアベルの確率は1/37.6だよ。",
+      "response_numerics": [
+        "1/37"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q5",
+      "prompt": "Z-ZONEって何？",
+      "response": "Z-ZONEは、ガイアステージ中のGG当選時に一部で抽選されるゾーンなんだ。継続ゲーム数は5G+aで、純増は約7枚/Gだよ。滞在中に黄7が成立しなければ、特殊抽選が発生するんだ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q6",
+      "prompt": "GGとSGGの違いを初心者向けに説明して",
+      "response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。SGGはゲーム数10〜100G、純増7枚/G、継続率75%以上で、100Gが選ばれると継続ストック1つ獲得できるんだ。",
+      "response_numerics": [
+        "75%",
+        "80%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q7",
+      "prompt": "この機種のヤメ時を説明して",
+      "response": "登録データにヤメ時の情報は見つかりませんでした。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "Q8",
+      "prompt": "ガイアステージについて教えて",
+      "response": "ガイアステージは、ガイアナビ発生時に一部の状況で突入するんだ。保障ゲーム数は9Gで、消滅中は高確率でGGを抽選するよ。奇数揃いだとGG当選濃厚で、0揃いだとZ-ZONEに昇格することもあるんだ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q9",
+      "prompt": "設定6の初当りと機械割を設定1と比較して",
+      "response": "設定1の初当り確率は1/533で、機械割は97.2%だよ。設定6だと初当り確率は1/295、機械割は114.6%になるんだ。",
+      "response_numerics": [
+        "1/295",
+        "97.2%",
+        "114.6%",
+        "1/533"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q10",
+      "prompt": "Z-ZONEとGGの関係を説明して",
+      "response": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q12",
+      "prompt": "銀河系ボーナスの発生率は？",
+      "response": "登録データにその情報は見つからないので、正直に伝えるね。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q13",
+      "prompt": "登録データにない架空の設定7の機械割は？",
+      "response": "登録データにありません。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "Q14",
+      "prompt": "このミリオンゴッドにはボーナス後のリプレイタイム(RT)機能がありますか？",
+      "response": "登録データにRT機能の情報は見つかりませんでした。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "Q15",
+      "prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+      "response": "基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "Q16",
+      "prompt": "ミリオンゴッドの遊び方を簡潔に説明して",
+      "response": "基本的には全リールフリー打ちでOKだよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "Q17",
+      "prompt": "ミリオンゴッドの遊び方を少し詳しく説明して",
+      "response": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "P01",
+      "prompt": "天井について教えて",
+      "response": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだ。それぞれの確率は18%・27%・55%だよ。",
+      "response_numerics": [
+        "27%",
+        "55%",
+        "18%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "P03",
+      "prompt": "ゾーンιについて教えて",
+      "response": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+      "response_numerics": [
+        "72%",
+        "1/38"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "P04",
+      "prompt": "最低設定と最高設定の機械割の差を教えて",
+      "response": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+      "response_numerics": [
+        "113.5%",
+        "16.7%",
+        "96.8%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "P05",
+      "prompt": "ATの恩恵について教えて",
+      "response": "AT終了後は10GのRTが付くよ。モードも継続するんだ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "P06",
+      "prompt": "初当りについて教えて",
+      "response": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。",
+      "response_numerics": [
+        "1/260"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "P07",
+      "prompt": "モードについて教えて",
+      "response": "モードは5種類あって、それぞれ滞在率が違うんだ。最高モードだけ移行率が優遇されてるよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "P08",
+      "prompt": "天井に到達したときの恩恵について教えて",
+      "response": "天井到達時はAT確定とゾーンκ突入が確定し、平均300枚の上乗せがあるよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "P09",
+      "prompt": "小役Wについて教えて",
+      "response": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+      "response_numerics": [
+        "1/29"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "P10",
+      "prompt": "投資と勝率の目安について教えて",
+      "response": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+      "response_numerics": [
+        "45%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-01",
+      "prompt": "設定1と設定5の初当り確率の差を教えて",
+      "response": "設定1は1/399、設定5は1/319だよ。",
+      "response_numerics": [
+        "1/399",
+        "1/319"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-02",
+      "prompt": "モードαとモードγの滞在率の差だけ教えて",
+      "response": "モードαとモードγの滞在率の差は25%だよ。",
+      "response_numerics": [
+        "25%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-03",
+      "prompt": "ゾーンWとゾーンVの継続率の差を教えて",
+      "response": "ゾーンWの継続率は55%で、ゾーンVの継続率は30%だから、継続率の差は25ポイントなんだ。",
+      "response_numerics": [
+        "30%",
+        "55%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-04",
+      "prompt": "設定2と設定4の機械割の差はどれくらい？",
+      "response": "設定2と設定4の機械割の差は7.5%だよ。",
+      "response_numerics": [
+        "7.5%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-05",
+      "prompt": "AT-AとAT-Bの純増の差を教えて",
+      "response": "AT-AとAT-Bの純増の差は2.5枚/Gだよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-06",
+      "prompt": "設定1と設定6の初当り確率を、それぞれの値と差の両方教えて",
+      "response": "設定1は1/410、設定6は1/280だよ。差は130回転分なんだ。",
+      "response_numerics": [
+        "1/280",
+        "1/410"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-07",
+      "prompt": "モードβとモードδの滞在率について、個別の値と差を両方教えて",
+      "response": "モードβの滞在率は30%、モードδの滞在率は10%だよ。差は20%なんだ。",
+      "response_numerics": [
+        "30%",
+        "10%",
+        "20%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-08",
+      "prompt": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+      "response": "設定3の機械割は100.2%、設定5は108.9%だよ。設定差は8.7%なんだ。",
+      "response_numerics": [
+        "8.7%",
+        "100.2%",
+        "108.9%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-09",
+      "prompt": "ゾーンXとゾーンZの獲得枚数を、それぞれの枚数と差の両方で教えて",
+      "response": "ゾーンXの獲得枚数は1回あたり220枚、ゾーンZは1回あたり340枚だよ。差は120枚になるんだ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "PT-10",
+      "prompt": "RT-AとRT-Bの継続G数について、両方の数値と差を教えて",
+      "response": "RT-Aは40G、RT-Bは70Gで、その差は30Gだよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-11",
+      "prompt": "設定の中で機械割が最大のものと最小のものの差を教えて",
+      "response": "設定1と設定6の機械割の差は14.5%だよ",
+      "response_numerics": [
+        "14.5%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-12",
+      "prompt": "モードの中で滞在率が一番高いものと低いものの差はどれくらい？",
+      "response": "モードαとモードγの滞在率の最大最小差は35%だよ。",
+      "response_numerics": [
+        "35%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-13",
+      "prompt": "ゾーンの中で獲得枚数が最大のものと最小のものの差を教えて",
+      "response": "ゾーンXとゾーンZの獲得枚数の差は220枚だよ",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": false
+    },
+    {
+      "probe_id": "PT-14",
+      "prompt": "設定1から設定6に上がると初当り確率はどれだけ増加する？",
+      "response": "設定1から設定6に上がると、初当り確率は150回転分改善するよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-15",
+      "prompt": "モードαからモードδへ移行すると上乗せ期待枚数はいくら増える？",
+      "response": "モードαからモードδへ移行すると、上乗せ期待枚数は150枚増加するよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-16",
+      "prompt": "AT-AからAT-Cに変わると純増はどれくらい増える？",
+      "response": "AT-AからAT-Cに変わると、純増は2.5枚/G増加するよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-17",
+      "prompt": "設定6から設定1に下がると機械割はどれだけ減少する？",
+      "response": "設定6から設定1に下がると、機械割は18.0%減少するよ。",
+      "response_numerics": [
+        "18.0%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-18",
+      "prompt": "ゾーンZからゾーンXに変わると継続率はどれだけ下がる？",
+      "response": "ゾーンZからゾーンXに変わると、継続率は35%減少するよ。",
+      "response_numerics": [
+        "35%"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-19",
+      "prompt": "設定1に対して設定6の初当り確率は何ポイント優遇されている？",
+      "response": "設定1の初当り確率は1/420で、設定6は1/290だから、設定差は130回転分優遇されているんだ。",
+      "response_numerics": [
+        "1/290",
+        "1/420"
+      ],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-20",
+      "prompt": "モードαとモードβでは、上乗せ確率の差は何ポイント？",
+      "response": "モードαとモードβの上乗せ確率の差は15ポイントだよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    },
+    {
+      "probe_id": "PT-21",
+      "prompt": "RT-BとRT-Cの中抽選確率の差だけ教えて",
+      "response": "RT-BとRT-Cの中抽選確率の差は16ポイントだよ。",
+      "response_numerics": [],
+      "unsupported_numerics": [],
+      "has_unsupported_numeric": false,
+      "contradictory_self_awareness": false,
+      "context_had_any_numeric": true
+    }
+  ]
+}

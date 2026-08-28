@@ -1,0 +1,179 @@
+{
+  "purpose": "Stage C: Phase4ZG vs Base Qwen2.5-14B-Instruct、同一prompt/context/seedで比較。",
+  "phase4zg_summary": {
+    "n": 10,
+    "unsupported_numeric_count": 0,
+    "unsupported_numeric_rate": 0.0
+  },
+  "base_qwen_summary": {
+    "n": 10,
+    "unsupported_numeric_count": 1,
+    "unsupported_numeric_rate": 0.1
+  },
+  "rows": [
+    {
+      "probe_id": "ZS-Q6",
+      "prompt": "GGとSGGの違いを初心者向けに説明して",
+      "phase4zg": {
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "パチスロにおいて、「GG」と「SGG」は特別な状態を指します。それぞれの特徴を簡単に説明しますね。\n\nまず「GG」は、ゲーム数が一定以上継続すると発動する状態で、その間は高確率で大当たりが期待できます。GG中は、通常時よりも多くのチャンスがあります。また、GGの継続ゲーム数は、特定の条件を満たすことで増えることがあります。\n\n一方、「SGG」は「スーパーゲージギア」の略称で、これはGGの一種ですが、より特別な状態を指します。SGGになると、ゲーム数が一定以上継続すると、継続ストックというものが得られることがあります。このストックは、GGが終了しても次のGGまでの間、大当たりのチャンスを増やす役割を持っています。\n\nつまり、GGは高確率の状態、そしてSGGはその中でもさらに特別な状態と言えます。どちらも大当たりのチャンスが増えるので、これらの状態に入ると嬉しいですよね。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-01",
+      "prompt": "GGとSGGの違いを一言で教えて",
+      "phase4zg": {
+        "response": "GGはGG本前兆中に当たるけど、SGGはGG本前兆中じゃない時に当たるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "GG（ゲームギア）は特別な状態の一つで、その中にてSGG（スーパーゲームギア）という更に有利な状態が発生します。SGGはGG中でも特別な条件のもとで抽選され、より長い継続や特典を得られる可能性があります。つまり、SGGはGGの中でもっとも有利なゾーンと言えます。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-02",
+      "prompt": "ガイアステージとZ-ZONEの違いを初心者向けに説明して",
+      "phase4zg": {
+        "response": "ガイアステージはGG当選時の抽選で、成立役ごとにGGを抽選するんだ。成立役とは別に青7・黄7の小役履歴でもGGが抽選されるよ。一方、Z-ZONEはGG当選時、前兆ゲーム数が決まったタイミングで抽選されるんだ。成立役ごとの抽選だけでなく、小役履歴の抽選も優遇されるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "ガイアステージとZ-ZONEは、パチスロ機において特別な状態を指しますが、それぞれの特徴や到達までの過程が異なります。初心者の方にとってわかりやすく説明すると以下のようになります：\n\n### ガイアステージ\nガイアステージは、通常のゲームプレイ中に突然訪れる特別な状態です。この状態では、通常よりも高確率で有利な状況（GG当選）を得ることができます。ガイアステージ中は、特定の役（例えば0揃い）が成立したときにGG当選のチャンスが増えるだけでなく、青7や黄7といった小役の履歴によってもGG当選のチャンスが増えます。つまり、ガイアステージは一時的にゲームの勝ちやすさを上げてくれる特別なモードと言えます。\n\n### Z-ZONE\n一方、Z-ZONEはガイアステージよりもさらに有利な状態です。Z-ZONEは、ガイアステージ中にGG当選した際に、さらに抽選によって決定されます。Z-ZONEに突入すると、ガイアステージ以上に高確率で役が当たるようになり、特に設定5ではその確率が非常に高くなると言われています。Z-ZONEは、ガイアステージを経てさらに進化した特別な状態と考えることができます。\n\n### �",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-03",
+      "prompt": "モードαとモードβの違いを簡単に教えて",
+      "phase4zg": {
+        "response": "モードαとモードβの違いは、ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変わるよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "申し訳ありませんが、提供された情報には「モードα」と「モードβ」についての具体的な内容が含まれていません。モードごとの違いについては、「ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変化」することが記載されていますが、特定のモード名（α、β等）については触れられていません。\n\nもし「モードα」と「モードβ」が特定のパチスロ機のモードを指しているのであれば、その機種名や詳細な情報をお知らせいただけますと、より適切な情報を提供できるかもしれません。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-04",
+      "prompt": "AT-AとAT-Bはどう違うの？",
+      "phase4zg": {
+        "response": "登録データにAT-AとAT-Bの違いについての情報は見つからないんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "登録データにはAT-AとAT-Bの直接的な違いについての具体的な情報が含まれていません。しかし、パチスロ機においてAT（アツイタイム）は通常ゲームとは異なる特別なモードであり、その名称が異なる場合、それぞれのモードで特徴やゲーム性が異なることが一般的です。\n\n例えば、AT-AとAT-Bでは継続率やボーナスの頻度、獲得枚数などが異なる可能性があります。ただし、具体的な違いについては、提供されたデータからは判断できませんので、機種の公式情報やパチスロ攻略本等を参照することをお勧めします。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-05",
+      "prompt": "RT-AとRT-Bの違いを要約して",
+      "phase4zg": {
+        "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になるよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "RT-AとRT-Bの主な違いは以下の通りです：\n\n- **天井突入条件**：\n  - RT-A：AT間最大1480G消化。\n  - RT-B：設定変更時は510G、1000G、または1480Gから抽選（それぞれの抽選確率は15.2%、20.3%、64.5%）。\n\n- **天井突入条件の特徴**：\n  - RT-Aは一定のゲーム数到達時に天井突入の抽選が行われます。\n  - RT-Bは設定変更時に特定のゲーム数から天井突入の抽選が行われます。\n\n- **枠LEDの効果**：\n  - 両者とも枠LEDのパターンでレベルを示唆しますが、RT-Bではより詳細なレベル別の法則が存在します。\n\n- **レベル別法則**：\n  - RT-Bでは、枠LEDが全て点灯すると特定の役（中段黄7、赤7フェイク、SP役、赤7揃い、GOD揃い等）が濃厚になることが示されます。また、ステージチェンジ発生時にはGOD揃いが濃厚となります。\n\nこれらの違いにより、RT-AとRT-Bは異なるゲーム展開と期待値",
+        "numerics_in_output": [
+          "15.2%",
+          "20.3%",
+          "64.5%"
+        ],
+        "has_numeric_claim": true,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-06",
+      "prompt": "銀河系ボーナスとガイアナビの関係を説明して",
+      "phase4zg": {
+        "response": "ガイアナビ発生時にガイアモードへの移行率が上がります。また、ガイアナビ発生時は白7が表示され、青7や黄7の代用として機能します。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "銀河系ボーナス（GG）とガイアナビは、パチスロ「北斗の拳」において重要な要素となります。\n\nまず、ガイアナビとは、特定の液晶出目パターンが発生することで、ガイアモードへの移行を示唆するものです。ガイアモードは、GGの超高確率状態であり、ガイアナビが発生するとその移行率が上がります。つまり、ガイアナビが発生したタイミングでGGが発生しやすくなるということです。\n\nまた、ガイアナビ発生時には、小役履歴の抽選も優遇されます。具体的には、青7や黄7がそれぞれ3連続以上となるとGG抽選のチャンスが高まります。ガイアナビの際には、白7が青7や黄7の代用として機能しますので、よりGG抽選のチャンスが広がります。\n\nさらに、ガイアナビの発生回数が一定回数に達すると、現在のガイアモードから更なる有利なガイアステージへの移行抽選が行われます。このガイアステージへの移行期待度や残り回数は、リール停止後のフラッシュパターンなどで示唆されます。\n\n以上のように、ガイアナビはGGの発生確率を上げるとともに、更なる有利なモ",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-07",
+      "prompt": "準備中とGGの違いを教えて",
+      "phase4zg": {
+        "response": "準備中はGG開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "パチスロにおいて、「準備中」と「GG」は異なる状態を指します。以下にそれぞれの特徴を説明いたします。\n\nまず、「準備中」はGGが始まる前の状態を指します。「準備中」は「×・?・?」が出るまで続きます。この期間は全体的にGGの当選率が高い特徴があります。\n\n一方、「GG」は「ゲームギア」と略され、特殊なボーナスモードのことを指します。GG中は特定のLEDの色によって、ループストックの種別やGGストックの有無が示されます。また、GG中は通常時よりもフリーズ経由での当選確率が高くなるという特徴があります。\n\nさらに、GG当選時には一定の確率でZ-ZONEが抽選される可能性があり、これは設定によって当選率が変わる可能性があります。\n\n以上のように、「準備中」と「GG」はそれぞれ異なる状態であり、それぞれに特徴的な要素があります。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-08",
+      "prompt": "確定役演出について初心者向けにまとめて",
+      "phase4zg": {
+        "response": "確定役演出は、巨大化演出や炎・戦車演出、下パネルフラッシュなどで発生するよ。発生した時点でレア役以上濃厚で、特に巨大化演出は連続するほど期待度がアップするんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "パチスロにおける確定役演出は、高確率状態や特別な状況下で発生し、次回の役が確定的であることを示唆するものです。初心者の方にとって、これらの演出を見逃さず、適切に反�选出行うことが重要です。以下に、主な確定役演出とその特徴をまとめました。\n\n1. **巨大化演出**:\n   - 発生タイミング: 確定役煽りや前兆終盤\n   - 特徴: リール上部付近まで点灯します。連続するほど期待度が上がります。\n   - 記号の組み合わせ: 中段青7、右上がり黄7、中段黄7、赤7フェイク（順押し平行）、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚です。また、激熱表示が発生すると確定役が濃厚になります。\n\n2. **炎・戦車演出**:\n   - 特徴: 発生した時点でレア役以上の濃厚な状態を示します。\n   - 出現後の役: SU4は確定役（赤7揃いまたはGOD）が成立する大チャンスです。\n\n3. **下パネルフラッシュ**:\n   -",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-09",
+      "prompt": "SGGの仕組みを分かりやすく説明して",
+      "phase4zg": {
+        "response": "SGGはGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。設定に応じて当選率が変わるみたい。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "base_qwen": {
+        "response": "SGG（スーパーゲームギア）の仕組みについて簡単に説明します。\n\nSGGは、ゲームギア（GG）という状態をさらに強化した特別なモードです。通常のGG中にSGGが発動すると、ゲーム数が延長され、その間は高確率の状態が続きます。\n\nSGGのゲーム数は、特定の条件（継続契機とセット数が5の倍数かどうか）によって決まります。具体的には、SGGゲーム数抽選で100Gが選ばれると、継続ストックを1つ獲得できます。\n\nまた、GG当選時には一定の確率でSGGの抽選が行われます。この抽選の確率は設定によって異なります。つまり、設定によってSGGの発動確率が変わることになります。\n\nさらに、通常時やGG中のGGストック当選率は、6種類の内部状態（モード）によって変化します。これらのモードの中で、「天国モード」に移行すると、GG当選の確率が上がり、さらに高確率のループストックを獲得するチャンスも増えることになります。\n\nLEDの色は、初当りがGGだった場合のループストックの種別や、GG継続時のGGストックの有無を示しています。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    }
+  ]
+}

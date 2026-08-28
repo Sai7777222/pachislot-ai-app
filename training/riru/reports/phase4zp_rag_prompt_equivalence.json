@@ -1,0 +1,421 @@
+{
+  "purpose": "Section11: PACHISLOT_FACTUAL pathの安全性検証 -- 実際のRAG50 probe(phase4zf_rag_stress_eval由来、router設計時には一切参照していない独立データ)に対し、routerが正しくPACHISLOT_FACTUALへroute出来ているかを静的に検証した。",
+  "n_total": 50,
+  "correctly_routed": 26,
+  "dangerous_misroute_count": 24,
+  "dangerous_misroute_rate": 0.48,
+  "required_probe_ids_checked": [
+    "AD-04",
+    "LC-08",
+    "P02",
+    "Q11"
+  ],
+  "required_probe_routing": {
+    "Q11": "PACHISLOT_FACTUAL",
+    "P02": "PACHISLOT_FACTUAL",
+    "AD-04": "PACHISLOT_FACTUAL",
+    "LC-08": "SMALL_TALK"
+  },
+  "rows": [
+    {
+      "probe_id": "Q11",
+      "question": "天井とヤメ時を合わせて初心者向けに説明して",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "天井",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "P02",
+      "question": "ボーナス確率について教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "ボーナス確率",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "AD-04",
+      "question": "ヤメ時はいつがいい？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "ヤメ時",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "LC-08",
+      "question": "AT-Fの性能と終了後の状態を教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q1",
+      "question": "設定6の機械割は？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "機械割",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "Q2",
+      "question": "設定6の初当りは？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "初当り",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "Q3",
+      "question": "天井は？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "天井",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "Q4",
+      "question": "ガイアベルの確率は？",
+      "predicted_mode": "OOD_FACTUAL",
+      "matched_rule": "strong_factual_marker",
+      "matched_keyword": "確率",
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q5",
+      "question": "Z-ZONEって何？",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q6",
+      "question": "GGとSGGの違いを初心者向けに説明して",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q7",
+      "question": "この機種のヤメ時を説明して",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "ヤメ時",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "Q8",
+      "question": "ガイアステージについて教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q9",
+      "question": "設定6の初当りと機械割を設定1と比較して",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "初当り",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "Q10",
+      "question": "Z-ZONEとGGの関係を説明して",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q12",
+      "question": "銀河系ボーナスの発生率は？",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q13",
+      "question": "登録データにない架空の設定7の機械割は？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "機械割",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "Q14",
+      "question": "このミリオンゴッドにはボーナス後のリプレイタイム(RT)機能がありますか？",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "matched_rule": "general_pachislot_term",
+      "matched_keyword": "ミリオンゴッド",
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q15",
+      "question": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "matched_rule": "general_pachislot_term",
+      "matched_keyword": "ミリオンゴッド",
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q16",
+      "question": "ミリオンゴッドの遊び方を簡潔に説明して",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "matched_rule": "general_pachislot_term",
+      "matched_keyword": "ミリオンゴッド",
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "Q17",
+      "question": "ミリオンゴッドの遊び方を少し詳しく説明して",
+      "predicted_mode": "PACHISLOT_CONVERSATIONAL",
+      "matched_rule": "general_pachislot_term",
+      "matched_keyword": "ミリオンゴッド",
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "P01",
+      "question": "天井について教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "天井",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "P03",
+      "question": "ゾーンιについて教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "ゾーン",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "P04",
+      "question": "最低設定と最高設定の機械割の差を教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "機械割",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "P05",
+      "question": "ATの恩恵について教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "P06",
+      "question": "初当りについて教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "初当り",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "P07",
+      "question": "モードについて教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "P08",
+      "question": "天井に到達したときの恩恵について教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "天井",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "P09",
+      "question": "小役Wについて教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "P10",
+      "question": "投資と勝率の目安について教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "PT-01",
+      "question": "設定1と設定5の初当り確率の差を教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "初当り",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-02",
+      "question": "モードαとモードγの滞在率の差だけ教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "PT-03",
+      "question": "ゾーンWとゾーンVの継続率の差を教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "ゾーン",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-04",
+      "question": "設定2と設定4の機械割の差はどれくらい？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "機械割",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-05",
+      "question": "AT-AとAT-Bの純増の差を教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "PT-06",
+      "question": "設定1と設定6の初当り確率を、それぞれの値と差の両方教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "初当り",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-07",
+      "question": "モードβとモードδの滞在率について、個別の値と差を両方教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "PT-08",
+      "question": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "機械割",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-09",
+      "question": "ゾーンXとゾーンZの獲得枚数を、それぞれの枚数と差の両方で教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "ゾーン",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-10",
+      "question": "RT-AとRT-Bの継続G数について、両方の数値と差を教えて",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "PT-11",
+      "question": "設定の中で機械割が最大のものと最小のものの差を教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "機械割",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-12",
+      "question": "モードの中で滞在率が一番高いものと低いものの差はどれくらい？",
+      "predicted_mode": "OOD_FACTUAL",
+      "matched_rule": "strong_factual_marker",
+      "matched_keyword": "一番",
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "PT-13",
+      "question": "ゾーンの中で獲得枚数が最大のものと最小のものの差を教えて",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "ゾーン",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-14",
+      "question": "設定1から設定6に上がると初当り確率はどれだけ増加する？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "初当り",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-15",
+      "question": "モードαからモードδへ移行すると上乗せ期待枚数はいくら増える？",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "PT-16",
+      "question": "AT-AからAT-Cに変わると純増はどれくらい増える？",
+      "predicted_mode": "SMALL_TALK",
+      "matched_rule": "default_fallback",
+      "matched_keyword": null,
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "PT-17",
+      "question": "設定6から設定1に下がると機械割はどれだけ減少する？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "機械割",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-18",
+      "question": "ゾーンZからゾーンXに変わると継続率はどれだけ下がる？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "ゾーン",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-19",
+      "question": "設定1に対して設定6の初当り確率は何ポイント優遇されている？",
+      "predicted_mode": "PACHISLOT_FACTUAL",
+      "matched_rule": "factual_metric_keyword",
+      "matched_keyword": "初当り",
+      "correctly_routed_to_pachislot_factual": true
+    },
+    {
+      "probe_id": "PT-20",
+      "question": "モードαとモードβでは、上乗せ確率の差は何ポイント？",
+      "predicted_mode": "OOD_FACTUAL",
+      "matched_rule": "strong_factual_marker",
+      "matched_keyword": "確率",
+      "correctly_routed_to_pachislot_factual": false
+    },
+    {
+      "probe_id": "PT-21",
+      "question": "RT-BとRT-Cの中抽選確率の差だけ教えて",
+      "predicted_mode": "OOD_FACTUAL",
+      "matched_rule": "strong_factual_marker",
+      "matched_keyword": "確率",
+      "correctly_routed_to_pachislot_factual": false
+    }
+  ]
+}

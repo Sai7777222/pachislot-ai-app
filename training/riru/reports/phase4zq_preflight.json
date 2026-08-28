@@ -1,0 +1,19 @@
+{
+  "branch": "checkpoint/identity-closure-phase4zn-baseline", "head": "e1b21f3e264a5c173f7f0e60e3b13508415d9a6b",
+  "git_status_short_line_count": 56, "git_diff_tracked": "empty", "git_diff_cached": "empty",
+  "protected_asset_hash": {"zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "match": true},
+  "pytest_start": "191 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "canonical_model": "Phase4ZG (read-only, not used this phase -- no generation planned unless Stage E/F needs it)",
+  "identity_status": "CLOSED, not touched",
+  "retrieval_component_discovered": {
+    "class": "src/pachislot_ai/rag/retriever.py::Retriever",
+    "dependencies": "Embedder (multilingual-e5-base, D:\\AI\\models\\embedding\\multilingual-e5-base, CPU) + VectorStore (Chroma, D:\\AI\\cache\\vector_db, collection=pachislot_rag)",
+    "usage_this_phase": "READ-ONLY via Retriever.search(query, top_k) -- no upsert/delete calls, no config/RAG DB changes",
+    "default_top_k": 6
+  },
+  "prohibited_this_phase": ["training", "Phase4ZG change", "identity re-research", "base model change",
+    "embedding model change", "RAG DB change", "chunk change", "indexing change", "retrieval algorithm change",
+    "large regex dictionary", "machine-specific noun list expansion", "ZP router individual patch",
+    "second LLM classifier", "ML classifier", "GGUF/Q8/Q5", "production integration", "Final Candidate evaluation",
+    "git add/commit/push"]
+}

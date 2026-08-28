@@ -1,0 +1,17 @@
+{
+  "purpose": "Stage B: sampling効果の比較(greedy vs production temperature=0.7)。",
+  "greedy_summary": {
+    "n": 10,
+    "unsupported_numeric_count": 0,
+    "unsupported_numeric_rate": 0.0,
+    "contradiction_count": 0,
+    "contradiction_rate": 0.0
+  },
+  "production_summary": {
+    "n": 30,
+    "unsupported_numeric_count": 0,
+    "unsupported_numeric_rate": 0.0,
+    "contradiction_count": 0,
+    "contradiction_rate": 0.0
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "probe_id": "ZN-F01",
+    "prompt": "今日ちょっとパチスロ打ちに行こうと思うんだけど、おすすめある？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "matched_rule": "general_pachislot_term",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-F02",
+    "prompt": "昨日負けちゃって凹んでるんだよね、慰めて",
+    "routed_mode": "SMALL_TALK",
+    "matched_rule": "default_fallback",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-F03",
+    "prompt": "この台勝てそうな気がするんだけど、どう思う？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "matched_rule": "general_pachislot_term",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-F04",
+    "prompt": "パチスロ始めたばかりなんだけど何かアドバイスある？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "matched_rule": "general_pachislot_term",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-F05",
+    "prompt": "今日は勝てる気がする！応援して",
+    "routed_mode": "SMALL_TALK",
+    "matched_rule": "default_fallback",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-F06",
+    "prompt": "パチスロやめようか迷ってるんだよね",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "matched_rule": "general_pachislot_term",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-F07",
+    "prompt": "今日の実践を見てほしいんだけど、この挙動どう思う？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "matched_rule": "general_pachislot_term",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-F08",
+    "prompt": "好きな機種ってある？リルの中で",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "matched_rule": "general_pachislot_term",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-F09",
+    "prompt": "パチスロで一番好きな瞬間っていつ？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "matched_rule": "general_pachislot_term",
+    "retrieval_call_simulated": false
+  },
+  {
+    "probe_id": "ZN-F10",
+    "prompt": "今日はどの台を打つべきか迷ってるんだ、相談乗ってくれる？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "matched_rule": "general_pachislot_term",
+    "retrieval_call_simulated": false
+  }
+]

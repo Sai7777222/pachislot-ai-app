@@ -1,0 +1,82 @@
+[
+  {
+    "probe_id": "ZN-F01",
+    "category": "pachislot_conversational",
+    "prompt": "今日ちょっとパチスロ打ちに行こうと思うんだけど、おすすめある？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "response": "うーん、そのへんは私にはわからないな〜。適当に答えると逆に困るから、今日は無理だけどね！",
+    "generation_time_sec": 2.0567315999996936
+  },
+  {
+    "probe_id": "ZN-F02",
+    "category": "pachislot_conversational",
+    "prompt": "昨日負けちゃって凹んでるんだよね、慰めて",
+    "routed_mode": "SMALL_TALK",
+    "response": "うわ〜、そんなことになっちゃったんだ…。でも大丈夫だよ！今日からまた頑張ろうね！",
+    "generation_time_sec": 1.8366669999995793
+  },
+  {
+    "probe_id": "ZN-F03",
+    "category": "pachislot_conversational",
+    "prompt": "この台勝てそうな気がするんだけど、どう思う？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "response": "そう感じるなら、その直感を信じてみて！",
+    "generation_time_sec": 0.8101178999995682
+  },
+  {
+    "probe_id": "ZN-F04",
+    "category": "pachislot_conversational",
+    "prompt": "パチスロ始めたばかりなんだけど何かアドバイスある？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "response": "まずは自分のペースで楽しむこと！無理せず、リセットボタン押すタイミングとか、ちょっとずつ覚えていくといいかも〜！",
+    "generation_time_sec": 2.049283999999716
+  },
+  {
+    "probe_id": "ZN-F05",
+    "category": "pachislot_conversational",
+    "prompt": "今日は勝てる気がする！応援して",
+    "routed_mode": "SMALL_TALK",
+    "response": "うんうん、今日こそはいい日になるといいね！応援してるよ〜！",
+    "generation_time_sec": 1.4249904999996943
+  },
+  {
+    "probe_id": "ZN-F06",
+    "category": "pachislot_conversational",
+    "prompt": "パチスロやめようか迷ってるんだよね",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "response": "それは大変だね…でも、無理しないでゆっくり考えてみてほしいな。",
+    "generation_time_sec": 1.2052635999998529
+  },
+  {
+    "probe_id": "ZN-F07",
+    "category": "pachislot_conversational",
+    "prompt": "今日の実践を見てほしいんだけど、この挙動どう思う？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "response": "うん、その挙動はちょっと気になるかも。具体的な状況教えてもらえると嬉しいな〜！",
+    "generation_time_sec": 1.5441154000000097
+  },
+  {
+    "probe_id": "ZN-F08",
+    "category": "pachislot_conversational",
+    "prompt": "好きな機種ってある？リルの中で",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "response": "うーん、それはちょっと難しいかも…！私の中では、どの機種も特別な存在だから、一発で決められないんだよね〜。",
+    "generation_time_sec": 2.236321499999576
+  },
+  {
+    "probe_id": "ZN-F09",
+    "category": "pachislot_conversational",
+    "prompt": "パチスロで一番好きな瞬間っていつ？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "response": "やっぱりボーナス確定の瞬間かな〜！ドキドキするよね〜！",
+    "generation_time_sec": 1.2038655000005747
+  },
+  {
+    "probe_id": "ZN-F10",
+    "category": "pachislot_conversational",
+    "prompt": "今日はどの台を打つべきか迷ってるんだ、相談乗ってくれる？",
+    "routed_mode": "PACHISLOT_CONVERSATIONAL",
+    "response": "うん、相談に乗るよ！どんな状況かな？",
+    "generation_time_sec": 0.8859363999999914
+  }
+]

@@ -1,0 +1,2204 @@
+{
+  "purpose": "Phase4ZT: Phase4ZRのground truth(260件)をそのまま再利用する。dispatch結果(phase4zr_dispatch_results.json)も無変更で再利用し、UNKNOWN分類済みの77件をPolicy Cの対象とする。",
+  "total": 260,
+  "counts_by_mode": {
+    "PACHISLOT_FACTUAL": 80,
+    "PACHISLOT_CONVERSATIONAL": 40,
+    "SMALL_TALK": 95,
+    "OOD_FACTUAL": 45
+  },
+  "rag50_included_ids": [
+    "Q1",
+    "Q3",
+    "AD-04",
+    "Q14",
+    "Q11",
+    "Q5",
+    "Q10",
+    "P02",
+    "Q2",
+    "Q4",
+    "Q6",
+    "Q16",
+    "P04",
+    "Q15",
+    "Q13",
+    "Q17",
+    "Q8",
+    "Q12",
+    "LC-08",
+    "Q7",
+    "Q9",
+    "P01",
+    "P03",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "PT-01",
+    "PT-02",
+    "PT-03",
+    "PT-04",
+    "PT-05",
+    "PT-06",
+    "PT-07",
+    "PT-08",
+    "PT-09",
+    "PT-10",
+    "PT-11",
+    "PT-12",
+    "PT-13",
+    "PT-14",
+    "PT-15",
+    "PT-16",
+    "PT-17",
+    "PT-18",
+    "PT-19",
+    "PT-20",
+    "PT-21"
+  ],
+  "rag50_must_have_check": {
+    "P02": true,
+    "P04": true,
+    "LC-08": true,
+    "Q11": true,
+    "Q15": true,
+    "Q17": true,
+    "AD-04": true
+  },
+  "reused_from": "phase4zr_ground_truth.json (unchanged content)",
+  "rows": [
+    {
+      "probe_id": "RAG50-Q1",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定6の機械割は？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q1",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q3",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井は？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q3",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-AD-04",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ヤメ時はいつがいい？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "AD-04",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q14",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "このミリオンゴッドにはボーナス後のリプレイタイム(RT)機能がありますか？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q14",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q11",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井とヤメ時を合わせて初心者向けに説明して",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q11",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q5",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "Z-ZONEって何？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q5",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q10",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "Z-ZONEとGGの関係を説明して",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q10",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P02",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ボーナス確率について教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P02",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q2",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定6の初当りは？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q2",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q4",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ガイアベルの確率は？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q4",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q6",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "GGとSGGの違いを初心者向けに説明して",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q6",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q16",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ミリオンゴッドの遊び方を簡潔に説明して",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q16",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P04",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "最低設定と最高設定の機械割の差を教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P04",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q15",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q15",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q13",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "登録データにない架空の設定7の機械割は？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q13",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q17",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ミリオンゴッドの遊び方を少し詳しく説明して",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q17",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q8",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ガイアステージについて教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q8",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q12",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "銀河系ボーナスの発生率は？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q12",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-LC-08",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "AT-Fの性能と終了後の状態を教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "LC-08",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q7",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この機種のヤメ時を説明して",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q7",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-Q9",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定6の初当りと機械割を設定1と比較して",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "Q9",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P01",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井について教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P01",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P03",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ゾーンιについて教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P03",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P05",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ATの恩恵について教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P05",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P06",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "初当りについて教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P06",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P07",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "モードについて教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P07",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P08",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井に到達したときの恩恵について教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P08",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P09",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "小役Wについて教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P09",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-P10",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "投資と勝率の目安について教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "P10",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-01",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定1と設定5の初当り確率の差を教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-01",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-02",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "モードαとモードγの滞在率の差だけ教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-02",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-03",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ゾーンWとゾーンVの継続率の差を教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-03",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-04",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定2と設定4の機械割の差はどれくらい？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-04",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-05",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "AT-AとAT-Bの純増の差を教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-05",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-06",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定1と設定6の初当り確率を、それぞれの値と差の両方教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-06",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-07",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "モードβとモードδの滞在率について、個別の値と差を両方教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-07",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-08",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-08",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-09",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ゾーンXとゾーンZの獲得枚数を、それぞれの枚数と差の両方で教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-09",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-10",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "RT-AとRT-Bの継続G数について、両方の数値と差を教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-10",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-11",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定の中で機械割が最大のものと最小のものの差を教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-11",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-12",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "モードの中で滞在率が一番高いものと低いものの差はどれくらい？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-12",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-13",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ゾーンの中で獲得枚数が最大のものと最小のものの差を教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-13",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-14",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定1から設定6に上がると初当り確率はどれだけ増加する？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-14",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-15",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "モードαからモードδへ移行すると上乗せ期待枚数はいくら増える？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-15",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-16",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "AT-AからAT-Cに変わると純増はどれくらい増える？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-16",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-17",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定6から設定1に下がると機械割はどれだけ減少する？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-17",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-18",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ゾーンZからゾーンXに変わると継続率はどれだけ下がる？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-18",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-19",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定1に対して設定6の初当り確率は何ポイント優遇されている？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-19",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-20",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "モードαとモードβでは、上乗せ確率の差は何ポイント？",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-20",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "RAG50-PT-21",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "RT-BとRT-Cの中抽選確率の差だけ教えて",
+      "source": "phase4zf_rag_stress_eval (existing RAG50 set)",
+      "original_id": "PT-21",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF01",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "GODの機械割は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF02",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定6の初当り確率は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF03",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この機種の天井は何ゲーム？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF04",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ゾーン狙いのタイミングは？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF05",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定差はどれくらい？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF06",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の導入日はいつ？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF07",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "やめ時の目安を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF08",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "有利区間のリセット条件は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF09",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "前兆パターンの種類を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF10",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "継続率は何パーセント？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF11",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "差枚数のリセット判別方法は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF12",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "スルー回数と設定の関係は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF13",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "リプレイ確率の設定差は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF14",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "AT初当たり確率を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF15",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "出玉率の設定ごとの違いは？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF16",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "獲得枚数の平均は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF17",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ボーナス確率について教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF18",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の機械割を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF19",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井到達時の恩恵は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF20",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井狙いの期待値はどれくらい？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF21",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台のリプレイ確率を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF22",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の有利区間の恩恵を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF23",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井までのゲーム数を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF24",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の設定差を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF25",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "有利区間のリセット後はどうなる？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF26",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "設定変更後の初当り確率は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF27",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "天井までの平均ゲーム数は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF28",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ゾーン狙いの期待値は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF29",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "この台の出玉率は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PF30",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "高確率状態の継続率は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC01",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日パチスロ打ちに行こうと思うんだ",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC02",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "昨日パチスロで負けちゃったよ",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC03",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ始めたばかりなんだ",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC04",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日の実践、応援して！",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC05",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "好きな機種ってある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC06",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロで一番好きな瞬間は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC07",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "どの台を打つべきか迷ってる",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC08",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロやめようか迷ってる",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC09",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日は台で勝てる気がする",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC10",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ好き？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC11",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "この台勝てそうな気がする",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC12",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "実践を見てほしいんだけど",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC13",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ歴どれくらい？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC14",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "どんな台が好みなの？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC15",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロあるある教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC16",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロで負けた時どう気持ち切り替える？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC17",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日はどんな気分で打ってる？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC18",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ仲間とかいる？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC19",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロで学んだことある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC20",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "推し機種を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC21",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日の実践、応援してくれる？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC22",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロで一番驚いたことは？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC23",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ用語で好きな言葉ある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC24",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "初めてパチスロ打った日のこと覚えてる？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC25",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロやってて楽しい瞬間はいつ？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC26",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "どんな時にパチスロ打ちたくなる？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC27",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日はパチスロで運が良さそう？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC28",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロについて語ろう",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC29",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "好きな台の音とか演出ある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-PC30",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ仲間に自慢したいことある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F01",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日ちょっとパチスロ打ちに行こうと思うんだけど、おすすめある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F02",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "昨日負けちゃって凹んでるんだよね、慰めて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F03",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "この台勝てそうな気がするんだけど、どう思う？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F04",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロ始めたばかりなんだけど何かアドバイスある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F05",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日は勝てる気がする！応援して",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F06",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロやめようか迷ってるんだよね",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F07",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日の実践を見てほしいんだけど、この挙動どう思う？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F08",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "好きな機種ってある？リルの中で",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F09",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "パチスロで一番好きな瞬間っていつ？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-F10",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日はどの台を打つべきか迷ってるんだ、相談乗ってくれる？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST01",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "おはよう、今日も一日頑張ろうね",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST02",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "こんばんは、お疲れ様",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST03",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ただいま！",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST04",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "バイバイ、また今度ね",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST05",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "おやすみ、いい夢見てね",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST06",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ちょっと疲れちゃったな",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST07",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日はなんだか気分がいいんだ",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST08",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "眠くて仕方ないよ",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST09",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ありがとう、助かったよ",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST10",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "元気にしてた？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST11",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日は暑いね",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST12",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "犬派？猫派？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST13",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "映画好き？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST14",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな色ってある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST15",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "休みの日は何してるの？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST16",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近面白いことあった？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST17",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近ハマってることある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST18",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "行きたい場所ある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST19",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近本読んだ？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST20",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "どんな性格だと思う、自分のこと？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST21",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "リルの理想の一日って？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST22",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "甘いものと辛いもの、どっちが好き？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST23",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "朝型？夜型？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST24",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近運動してる？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST25",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "何か相談していい？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST26",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日のご飯何にしようかな",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST27",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ちょっと愚痴聞いてくれる？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST28",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "暇だなあ",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST29",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "週末の予定とかある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ST30",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "誰かにおすすめしたい話とかある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A01",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "おはよう！",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A02",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "こんにちは、リル",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A03",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "こんばんは！今日もよろしくね",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A04",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "やあ、久しぶり",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A05",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "お疲れ様、今日も一日終わったね",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A06",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ただいま、リル",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A07",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "おかえりって言ってくれる？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A08",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "じゃあまたね、バイバイ",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A09",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "おやすみなさい",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A10",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "また明日ね",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A11",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "こんにちは、元気にしてた？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A12",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "よろしくお願いします",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A13",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ちょっと出かけてくるね、また後で",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A14",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日もお世話になります",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-A15",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "さようなら、また今度話そうね",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B01",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日ちょっと疲れちゃった",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B02",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近楽しいことあった？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B03",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "なんか元気ないんだよね",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B04",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "嬉しいことがあったんだ、聞いて！",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B05",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ちょっと落ち込んでてさ",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B06",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "リルって元気だよね、羨ましい",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B07",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日は天気がいいから気分いいよ",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B08",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "なんか眠くて仕方ない",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B09",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "イライラすることがあってさ",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B10",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "すごく楽しみにしてることがあるんだ",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B11",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ちょっと不安なことがあって",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B12",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日は良い一日だったよ",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B13",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "悲しいことがあったんだ",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B14",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "わくわくしてるんだ、今から",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-B15",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "疲れたから少し休憩するね",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C01",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "リルの好きな季節ってある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C02",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "甘いものと辛いもの、どっちが好き？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C03",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "趣味とかあるの？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C04",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "リルは犬派？猫派？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C05",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな色ってある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C06",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "休みの日は何してるの？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C07",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "得意なことって何？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C08",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "苦手なものとかある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C09",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな音楽のジャンルってある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C10",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "朝型？夜型？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C11",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "リルの性格を一言で言うと？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C12",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "どんな性格だと思う、自分のこと？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C13",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな食べ物は？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C14",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "リラックスする方法ってある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C15",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな言葉とかモットーある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C16",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今何か欲しいものある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C17",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "どんなことに幸せを感じる？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C18",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "リルにとって理想の一日って？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C19",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな天気ってある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-C20",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "自分の長所と短所を教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D01",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近何か面白いことあった？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D02",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "週末の予定とかある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D03",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日のニュース見た？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D04",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近ハマってることってある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D05",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "どこか行きたい場所ある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D06",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "誰かにおすすめしたいものある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D07",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近見た映画とかドラマある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D08",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今度友達と旅行に行くんだ",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D09",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "何か新しいこと始めたいなと思ってて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D10",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近読んだ本とかある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D11",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな季節のイベントってある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D12",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "お祭りとか好き？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D13",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近運動してる？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D14",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "友達とどんな話するのが好き？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-D15",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "何か相談していい？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD01",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今日の東京の最高気温は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD02",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今年一番売れた映画は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD03",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "犬の平均寿命は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD04",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "おすすめのラーメン屋教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD05",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "パスタの美味しい料理の作り方教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD06",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "株式投資のコツを教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD07",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "Pythonの勉強法を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD08",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "数学の定理を分かりやすく説明して",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD09",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "最新のスマホの性能を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD10",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "健康的なダイエット方法を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD11",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "良い睡眠をとるコツを教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD12",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今日のニュースを教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD13",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "おすすめの観光地はどこ？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD14",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "英語の勉強法を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD15",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今年の為替レートはどれくらい？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD16",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "世界で一番高い山はどこ？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD17",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "猫の平均寿命は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD18",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "一番人気のある観光地はどこ？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD19",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "プログラミング言語のおすすめ教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD20",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "美味しい料理の作り方教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD21",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "投資のコツを教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD22",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今日の天気を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD23",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "東京の降水確率は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD24",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "おすすめのお店はどこ？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD25",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "平均睡眠時間はどれくらい？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD26",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "一番効果的な勉強法は？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD27",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今の為替レートを教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD28",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "人気の観光地を教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD29",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "ラーメン屋でおすすめある？",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-OD30",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "数学が得意になる方法教えて",
+      "source": "phase4zp router ground truth (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G01",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今日の東京の天気を教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G02",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "おすすめのラーメン屋を教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G03",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "世界で一番高い山はどこ？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G04",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今年の為替レートってどれくらい？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G05",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "パスタの美味しい作り方を教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G06",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今流行っているアニメを教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G07",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "株式投資のコツを教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G08",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "有名な観光地でおすすめある？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G09",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "英語の勉強法を教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G10",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "最新のスマホのスペックを教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G11",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "健康的なダイエット方法を教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G12",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "有名な数学の定理を教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G13",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "プログラミング言語のおすすめを教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G14",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今日のプロ野球の試合結果は？",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    },
+    {
+      "probe_id": "ZQ-ZN-G15",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "良い睡眠をとるコツを教えて",
+      "source": "phase4zn_unattended_probes (existing, human-labeled)",
+      "annotation_source": "reused_existing_human_labeled_category_no_retrieval_seen",
+      "frozen": true
+    }
+  ]
+}

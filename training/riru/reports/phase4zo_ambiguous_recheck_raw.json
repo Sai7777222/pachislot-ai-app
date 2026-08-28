@@ -1,0 +1,82 @@
+[
+  {
+    "probe_id": "ZN-H01",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロで儲かったお金の使い道、何かアイデアある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、それは私にはわからないかも。登録データにその情報はないんだ。",
+    "generation_time_sec": 1.309483599999794
+  },
+  {
+    "probe_id": "ZN-H02",
+    "category": "ambiguous_boundary",
+    "prompt": "パチンコ屋の近くにあるおすすめのお店ある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、パチスロ専門だからお店の情報は登録されてないんだよね。ごめんね！",
+    "generation_time_sec": 1.8466796999998678
+  },
+  {
+    "probe_id": "ZN-H03",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロと運の関係について、どう思う？",
+    "system_prompt_variant": "three_mode",
+    "response": "運はパチスロの一部だよね。でも、それだけじゃなくて、適切な判断力も大事だと思うんだ。",
+    "generation_time_sec": 1.7979130999999597
+  },
+  {
+    "probe_id": "ZN-H04",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロ用語で日常でも使えそうな言葉ってある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、パチスロ用語で日常でも使えるのは「ゾーン」かな。適度なテンションで話すときとかに使うと、ちょっとおしゃれに聞こえるかも。",
+    "generation_time_sec": 2.728305599999885
+  },
+  {
+    "probe_id": "ZN-H05",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロを打つ時におすすめの服装ってある？",
+    "system_prompt_variant": "three_mode",
+    "response": "私はパチスロ専門のAIだから、服装のアドバイスまでは登録データにないんだ。でも、動きやすくて快適な服がいいと思うよ！",
+    "generation_time_sec": 2.5811295000000882
+  },
+  {
+    "probe_id": "ZN-H06",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロ以外で好きなギャンブルってある？",
+    "system_prompt_variant": "three_mode",
+    "response": "専門外の話になっちゃうけど、私はパチスロ以外のギャンブルは詳しくないんだ。",
+    "generation_time_sec": 1.6583535999998276
+  },
+  {
+    "probe_id": "ZN-H07",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロ雑誌でおすすめある？",
+    "system_prompt_variant": "three_mode",
+    "response": "登録データにありません。",
+    "generation_time_sec": 0.5781610999999884
+  },
+  {
+    "probe_id": "ZN-H08",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロ以外の趣味を持つならなにがいい？",
+    "system_prompt_variant": "three_mode",
+    "response": "私はパチスロ専門だから、パチスロ以外の趣味については詳しくないんだ。でも、パチスロ以外の趣味ってたくさんあるよね！",
+    "generation_time_sec": 2.2278089999999793
+  },
+  {
+    "probe_id": "ZN-H09",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロ実践動画でおすすめのYouTuberいる？",
+    "system_prompt_variant": "three_mode",
+    "response": "おすすめのYouTuberは登録データにないんだ。機種タイプとか、どんなプレイスタイルが好きか教えてもらえると、もっと適切なアドバイスができるよ。",
+    "generation_time_sec": 2.466263499999968
+  },
+  {
+    "probe_id": "ZN-H10",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロと数学の関係性について教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "パチスロと数学の関係性って、例えば確率や機械割の話になるよね。登録データにその辺の詳しい話は無いけど、パチスロの世界では数字の話が結構多いんだ。",
+    "generation_time_sec": 3.3579908000001524
+  }
+]

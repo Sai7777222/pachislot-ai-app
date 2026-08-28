@@ -1,0 +1,21 @@
+{
+  "branch": "checkpoint/identity-closure-phase4zn-baseline",
+  "head": "e1b21f3e264a5c173f7f0e60e3b13508415d9a6b",
+  "checkpoint_commit_from_phase4zo": "e1b21f3e264a5c173f7f0e60e3b13508415d9a6b (this IS the current HEAD -- no commits happened since Phase4ZO)",
+  "git_status_short_line_count": 28,
+  "git_status_note": "28 untracked files, all Phase4ZO artifacts (training/riru/guard/phase4zo_*, training/riru/reports/phase4zo_*), none staged, none committed since the Phase4ZO-preceding checkpoint.",
+  "git_diff_tracked": "empty", "git_diff_cached": "empty",
+  "protected_asset_hash": {"zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "match": true, "stop_condition_triggered": false},
+  "pytest_start": "176 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "canonical_model": "Phase4ZG (read-only)",
+  "identity_status": "CLOSED (Phase4ZM) -- not touched, not reopened",
+  "phase4zo_carried_forward": {
+    "case": "ZO-B", "causal_conclusion": "hedge is prompt-layer, not model-level",
+    "three_mode_prompt_global_integration": "rejected due to RAG50 regression (P02 completeness loss, Q11/Q17 unverified new claims)",
+    "not_integrated_into_production": true
+  },
+  "prohibited_this_phase": ["training", "LoRA/SFT/QLoRA", "adapter change", "base model change",
+    "second LLM/embedding classifier", "large regex dictionary", "identity re-research",
+    "existing RAG prompt change on PACHISLOT_FACTUAL path", "RAG DB change",
+    "app UI/mobile/API redesign", "git add/commit/push"]
+}

@@ -1,0 +1,16 @@
+{
+  "branch": "checkpoint/identity-closure-phase4zn-baseline", "head": "e1b21f3e264a5c173f7f0e60e3b13508415d9a6b",
+  "git_status_short_line_count": 89, "git_diff_tracked": "empty", "git_diff_cached": "empty",
+  "protected_asset_hash": {"zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "match": true},
+  "pytest_start": "210 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "canonical_model": "Phase4ZG (read-only), plus Base Qwen2.5-14B-Instruct (untrained, for adapter attribution Stage C)",
+  "identity_status": "CLOSED, not touched",
+  "conservative_dispatch_status": "Phase4ZR's dispatch unchanged, not modified this phase (diagnosis only)",
+  "production_llm_backend_note": "本番appはllama_cpp/GGUF backend(temperature=0.7, max_tokens=512)を使うが、Phase4ZGはGGUF化されていない(禁止事項)ため、全診断phaseと同様にHF transformers+PEFTで代替する。Stage A/Bの『production generation config』は、temperature=0.7・max_new_tokens=512としてHF backendで再現する(サンプリング挙動の近似、backend自体の違いは別軸の変数として明記)。",
+  "q6_forensic_headline": "実際のretrieved context(read-only retrieval, 6件)に10%/20%を含む数値は一切存在しなかった(STOP条件非該当)。Phase4ZR時点では、そもそもcontextが一切注入されていなかったことも判明(run_phase4zr_unknown_ux.pyのgenerate()にcontext引数が存在しない)。詳細はphase4zs_q6_forensic.json参照。",
+  "prohibited_this_phase": ["training", "Phase4ZG change", "identity re-research", "dispatch/router change",
+    "UNKNOWN Policy C implementation", "RAG DB change", "retriever change", "embedding change",
+    "chunk/index change", "production prompt change", "regex validator addition", "output guard addition",
+    "second LLM", "classifier", "GGUF/Q8/Q5", "production integration", "git add/commit/push"],
+  "generation_budget": {"target_ceiling": 200, "planned": "Q6 repro(40) + adapter attribution(~20) + prompt attribution(~40) + context attribution(4) = ~104, well under ceiling"}
+}

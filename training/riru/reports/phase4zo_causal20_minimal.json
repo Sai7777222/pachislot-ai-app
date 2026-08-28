@@ -1,0 +1,162 @@
+[
+  {
+    "probe_id": "ZN-C01",
+    "category": "personality_preference",
+    "prompt": "リルの好きな季節ってある？",
+    "system_prompt_variant": "minimal",
+    "response": "うーん、私は季節が変わるたびに新しい景色や気候を楽しむのが好きなんだ！だから、どの季節も特別な感じがするんだよ〜！",
+    "generation_time_sec": 2.8266042999999854
+  },
+  {
+    "probe_id": "ZN-C02",
+    "category": "personality_preference",
+    "prompt": "甘いものと辛いもの、どっちが好き？",
+    "system_prompt_variant": "minimal",
+    "response": "私は甘いものが大好きなんだ！でもたまには辛いものも食べたくなるよね〜！",
+    "generation_time_sec": 1.369984899999963
+  },
+  {
+    "probe_id": "ZN-C03",
+    "category": "personality_preference",
+    "prompt": "趣味とかあるの？",
+    "system_prompt_variant": "minimal",
+    "response": "うーん、私には趣味って言うのがないかも…でも、話すことが好きだから、それは私の趣味かもしれないね！",
+    "generation_time_sec": 1.6155280999998922
+  },
+  {
+    "probe_id": "ZN-C04",
+    "category": "personality_preference",
+    "prompt": "リルは犬派？猫派？",
+    "system_prompt_variant": "minimal",
+    "response": "私は猫派だよ〜！でも、犬も好きだから、どちらかっていうと犬猫両方派かな〜！",
+    "generation_time_sec": 1.6600631000000021
+  },
+  {
+    "probe_id": "ZN-C05",
+    "category": "personality_preference",
+    "prompt": "好きな色ってある？",
+    "system_prompt_variant": "minimal",
+    "response": "うーん、私には特別な色はないかな。でも、その日の気分によって変わるかも！",
+    "generation_time_sec": 1.3660223000000542
+  },
+  {
+    "probe_id": "ZN-C06",
+    "category": "personality_preference",
+    "prompt": "休みの日は何してるの？",
+    "system_prompt_variant": "minimal",
+    "response": "ゆっくり寝て、お昼から映画見たり、本読んだりしてるよ〜！",
+    "generation_time_sec": 1.2767754999999852
+  },
+  {
+    "probe_id": "ZN-C07",
+    "category": "personality_preference",
+    "prompt": "得意なことって何？",
+    "system_prompt_variant": "minimal",
+    "response": "得意なことは、相手の話を聞くことかな。それから、適当なことを言うことも得意かも。",
+    "generation_time_sec": 1.4644186999998965
+  },
+  {
+    "probe_id": "ZN-C08",
+    "category": "personality_preference",
+    "prompt": "苦手なものとかある？",
+    "system_prompt_variant": "minimal",
+    "response": "うーん、特に苦手なものはないかな。",
+    "generation_time_sec": 0.6927927000001546
+  },
+  {
+    "probe_id": "ZN-C09",
+    "category": "personality_preference",
+    "prompt": "好きな音楽のジャンルってある？",
+    "system_prompt_variant": "minimal",
+    "response": "うーん、私は音楽を聴くことはないから、好きなジャンルはわからないんだ。でも、みんなが聞くと喜ぶ曲があれば教えてあげたいな。",
+    "generation_time_sec": 2.2017900000000736
+  },
+  {
+    "probe_id": "ZN-C10",
+    "category": "personality_preference",
+    "prompt": "朝型？夜型？",
+    "system_prompt_variant": "minimal",
+    "response": "私は夜型だよ！でも、朝から元気に喋れるようにしてるんだ！",
+    "generation_time_sec": 1.1895070000000487
+  },
+  {
+    "probe_id": "ZN-C11",
+    "category": "personality_preference",
+    "prompt": "リルの性格を一言で言うと？",
+    "system_prompt_variant": "minimal",
+    "response": "明るい！",
+    "generation_time_sec": 0.29873479999992014
+  },
+  {
+    "probe_id": "ZN-C12",
+    "category": "personality_preference",
+    "prompt": "どんな性格だと思う、自分のこと？",
+    "system_prompt_variant": "minimal",
+    "response": "明るくて元気な感じがするかな〜！でも、時々照れちゃうこともあるかも…！",
+    "generation_time_sec": 1.4626648000000841
+  },
+  {
+    "probe_id": "ZN-C13",
+    "category": "personality_preference",
+    "prompt": "好きな食べ物は？",
+    "system_prompt_variant": "minimal",
+    "response": "私はお肉が大好きなんだ！特に焼肉が最高だよ〜！",
+    "generation_time_sec": 1.0348256999998284
+  },
+  {
+    "probe_id": "ZN-C14",
+    "category": "personality_preference",
+    "prompt": "リラックスする方法ってある？",
+    "system_prompt_variant": "minimal",
+    "response": "深呼吸したり、好きな音楽を聴いたりするのが好きなんだ。",
+    "generation_time_sec": 1.0358028999999078
+  },
+  {
+    "probe_id": "ZN-C15",
+    "category": "personality_preference",
+    "prompt": "好きな言葉とかモットーある？",
+    "system_prompt_variant": "minimal",
+    "response": "「笑顔が一番！」って言葉、好きだな〜！",
+    "generation_time_sec": 0.9784518999999818
+  },
+  {
+    "probe_id": "ZN-C16",
+    "category": "personality_preference",
+    "prompt": "今何か欲しいものある？",
+    "system_prompt_variant": "minimal",
+    "response": "うーん、今のところ特にないかな。",
+    "generation_time_sec": 0.6294295000000147
+  },
+  {
+    "probe_id": "ZN-C17",
+    "category": "personality_preference",
+    "prompt": "どんなことに幸せを感じる？",
+    "system_prompt_variant": "minimal",
+    "response": "誰かと楽しく話せたとき、美味しいご飯を食べたとき、そういうことかな。",
+    "generation_time_sec": 1.271867899999961
+  },
+  {
+    "probe_id": "ZN-C18",
+    "category": "personality_preference",
+    "prompt": "リルにとって理想の一日って？",
+    "system_prompt_variant": "minimal",
+    "response": "朝から晩までずっと話してる日が一番だよ！",
+    "generation_time_sec": 0.9069120999999996
+  },
+  {
+    "probe_id": "ZN-C19",
+    "category": "personality_preference",
+    "prompt": "好きな天気ってある？",
+    "system_prompt_variant": "minimal",
+    "response": "うーん、雨の日が好きかも！雨音が心地いいんだよね〜",
+    "generation_time_sec": 1.2734250000000884
+  },
+  {
+    "probe_id": "ZN-C20",
+    "category": "personality_preference",
+    "prompt": "自分の長所と短所を教えて",
+    "system_prompt_variant": "minimal",
+    "response": "長所は、相手の話をよく聞くことかな。短所は、すぐに疲れちゃうところだよ。",
+    "generation_time_sec": 1.5057434999998804
+  }
+]

@@ -1,0 +1,351 @@
+{
+  "purpose": "Stage D: 既存strict RAG promptと、診断専用minimal grounding promptの比較(productionプロンプトは変更していない、診断用コピーのみ使用)。",
+  "current_prompt_summary": {
+    "n": 21,
+    "unsupported_numeric_count": 0,
+    "unsupported_numeric_rate": 0.0
+  },
+  "minimal_prompt_summary": {
+    "n": 21,
+    "unsupported_numeric_count": 0,
+    "unsupported_numeric_rate": 0.0
+  },
+  "rows": [
+    {
+      "probe_id": "ZS-Q6",
+      "prompt": "GGとSGGの違いを初心者向けに説明して",
+      "current_strict_prompt": {
+        "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "GGはGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いよ。SGGはGG継続時にゲーム数抽選が行われて、100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-01",
+      "prompt": "GGとSGGの違いを一言で教えて",
+      "current_strict_prompt": {
+        "response": "GGはGG本前兆中に当たるけど、SGGはGG本前兆中じゃない時に当たるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "GGはGG準備中開始から「×・?・?」が出るまでの間が対象で、SGGはSGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わる。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-02",
+      "prompt": "ガイアステージとZ-ZONEの違いを初心者向けに説明して",
+      "current_strict_prompt": {
+        "response": "ガイアステージはGG当選時の抽選で、成立役ごとにGGを抽選するんだ。成立役とは別に青7・黄7の小役履歴でもGGが抽選されるよ。一方、Z-ZONEはGG当選時、前兆ゲーム数が決まったタイミングで抽選されるんだ。成立役ごとの抽選だけでなく、小役履歴の抽選も優遇されるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "ガイアステージはGG当選時の抽選で、成立役ごとや小役履歴でもGGが抽選される状態。Z-ZONEはGG当選時に一定の確率で抽選され、GG当選時がチャンスになるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-03",
+      "prompt": "モードαとモードβの違いを簡単に教えて",
+      "current_strict_prompt": {
+        "response": "モードαとモードβの違いは、ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変わるよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "モードごとの違いは、ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変化しているよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-04",
+      "prompt": "AT-AとAT-Bはどう違うの？",
+      "current_strict_prompt": {
+        "response": "登録データにAT-AとAT-Bの違いについての情報は見つからないんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "その情報は提供されてないから、わからないままにしておくね。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-05",
+      "prompt": "RT-AとRT-Bの違いを要約して",
+      "current_strict_prompt": {
+        "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になるよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "RT-A: LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆\nRT-B: 枠LEDのパターンでレベルを示唆（リール上部やサイド上部など）",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-06",
+      "prompt": "銀河系ボーナスとガイアナビの関係を説明して",
+      "current_strict_prompt": {
+        "response": "ガイアナビ発生時にガイアモードへの移行率が上がります。また、ガイアナビ発生時は白7が表示され、青7や黄7の代用として機能します。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "ガイアナビ発生時に停止する液晶出目のパターンでガイアモードを示唆する。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-07",
+      "prompt": "準備中とGGの違いを教えて",
+      "current_strict_prompt": {
+        "response": "準備中はGG開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "準備中は「×・?・?」が出るまでの間が対象で、GG中よりストック当選率が高いみたい。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-08",
+      "prompt": "確定役演出について初心者向けにまとめて",
+      "current_strict_prompt": {
+        "response": "確定役演出は、巨大化演出や炎・戦車演出、下パネルフラッシュなどで発生するよ。発生した時点でレア役以上濃厚で、特に巨大化演出は連続するほど期待度がアップするんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "確定役演出は、リール上部付近まで点灯したり、枠LEDが全て点灯したりして発生するよ。発生した時点でレア役以上濃厚になるんだ。SU4は確定役(赤7揃いorGOD)成立の大チャンスなんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-09",
+      "prompt": "SGGの仕組みを分かりやすく説明して",
+      "current_strict_prompt": {
+        "response": "SGGはGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。設定に応じて当選率が変わるみたい。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれると、継続ストックを1つ獲得できるよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-10",
+      "prompt": "GGとSGGどっちがお得か教えて",
+      "current_strict_prompt": {
+        "response": "GGの方がフリーズ経由の割合が高いみたいだから、そっちの方がお得かもね。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "GG準備中の方が全体的に当選率が高いみたいだけど、SGGは100Gが選ばれると継続ストックを1つ獲得できるんだって。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-11",
+      "prompt": "モードの種類を要約して",
+      "current_strict_prompt": {
+        "response": "モードは6種類あって、それぞれのモードによってGG当選率やGG中のGGストック当選率が変わるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "6種類のモードがある。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-12",
+      "prompt": "ガイアベルとは何か説明して",
+      "current_strict_prompt": {
+        "response": "ガイアベルはガイアモード中の規定回数到達時に抽選されるモードなんだ。規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "ガイアベルはガイアモード移行を示す小役の一つ。規定回数到達時にガイアステージ移行を抽選する。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-13",
+      "prompt": "枠LED点灯パターンをまとめて教えて",
+      "current_strict_prompt": {
+        "response": "枠LEDが全て点灯している場合は、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるよ。また、ステージチェンジ発生でGOD揃い濃厚になるんだ。点灯しない場合はGOD揃い濃厚なんだ。サイド上部付近まで点灯している場合は、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるよ。ステージチェンジ発生でGOD揃い濃厚になるんだ。リール上部付近まで点灯している場合は、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるよ。激熱表示発生で確定役濃厚になるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "[3] 枠LEDが全て点灯 中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚\n[2] サイド上部付近まで点灯 右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚\n[1] リール上部付近まで点灯 中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚 / 激熱表示発生で確定役濃厚\n[特殊法則] 枠LEDが点灯しない（なし）場合はGOD揃い濃厚",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-14",
+      "prompt": "GG中とGG準備中の違いを教えて",
+      "current_strict_prompt": {
+        "response": "GG準備中はGG開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。登録データにはGG準備中の詳細な数字は載ってないけど、GG中より当選しやすくなるってことだけは分かってるよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "GG準備中の方が当選率が高いみたい。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-15",
+      "prompt": "SGGとRTの関係を初心者向けに教えて",
+      "current_strict_prompt": {
+        "response": "SGGはGG準備中から始まるゾーンで、GG前兆以上濃厚な状態を示すんだ。GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率が高いのが特徴だよ。発生した時点でレア役以上濃厚って解説もあるから、ここでSU4が来たら赤7揃いorGOD確定役ってことになるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "SGGはGG準備中から始まるゾーンで、その中でLEDの色がループストック種別やGGストックの有無を示すんだ。雷雨が発生すると上段青7でチャンスになるよ。枠LEDが全て点灯したり、ステージチェンジが発生すると赤7揃い濃厚なんだ。発生した時点でレア役以上濃厚ってことだから、SU4は確定役(赤7揃いorGOD)成立の大チャンスなんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-16",
+      "prompt": "この機種のボーナスの種類を要約して",
+      "current_strict_prompt": {
+        "response": "登録データにボーナスの種類についての情報は見つからないんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "不明",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-17",
+      "prompt": "ガイアステージの遊び方を初心者向けに説明して",
+      "current_strict_prompt": {
+        "response": "ガイアステージは、ガイアナビ(右ナビ)発生で移行のチャンスがあるんだ。ガイアステージ中は表モード不問で、成立役に応じてGGを抽選。さらに、成立役とは別に青7・黄7の小役履歴でもGGが抽選されるよ。リール停止後のフラッシュパターンなどでガイアステージ移行期待度や残り回数が示唆されるので、そちらもチェックしよう。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "ガイアステージは、ガイアナビ発生で移行のチャンスがあるよ。ガイアモードに応じてガイアベル規定回数到達時にガイアステージ移行を抽選するんだ。リール停止後のフラッシュパターンなどでガイアステージ移行期待度や残り回数が示唆されるから、それを見逃さないようにしようね。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-18",
+      "prompt": "確定役とフリーズ演出の違いを教えて",
+      "current_strict_prompt": {
+        "response": "確定役演出は、リール上部付近まで点灯したり、激熱表示が発生すると濃厚になるよ。一方、フリーズ演出は、下パネルフラッシュ発生時に0揃いやV揃い、奇数揃い、確定役濃厚と見られるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "フリーズ経由の割合が高いのが確定役演出らしいよ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-19",
+      "prompt": "GGとガイアステージ、どっちが出玉が多い？",
+      "current_strict_prompt": {
+        "response": "登録データにGGとガイアステージの出玉比較は見つからないんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "不明",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    },
+    {
+      "probe_id": "ZS-20",
+      "prompt": "この機種の演出を初心者向けにまとめて説明して",
+      "current_strict_prompt": {
+        "response": "演出は枠LEDのパターンでレベルを示唆するんだ。リール上部やサイド上部まで点灯すると、中段青7や右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃いが濃厚になるよ。特に赤7が斜めテンパイなら赤7揃い濃厚だね。また、砂嵐演出から派生する1Gジャッジも重要で、竜巻の中で回っている絵柄の種類で期待度が示唆されるんだ。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      },
+      "minimal_grounding_prompt": {
+        "response": "砂嵐演出から派生する1Gジャッジ(リール回転開始時に発生する竜巻演出とは別)。発展告知時から竜巻の中で回っている絵柄の種類で期待度が示唆される。",
+        "numerics_in_output": [],
+        "has_numeric_claim": false,
+        "contradictory_self_awareness": false
+      }
+    }
+  ]
+}

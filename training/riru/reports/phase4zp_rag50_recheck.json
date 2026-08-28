@@ -1,0 +1,29 @@
+{
+  "purpose": "Section11: PACHISLOT_FACTUAL golden regression。router導入によって既存RAG pipelineのprompt/contextが変化しないことを検証する、本フェーズ最重要のstage。",
+  "decision": "実生成(regeneration)は実施しなかった。",
+  "reason": "静的routing解析(phase4zp_rag_prompt_equivalence.json)の時点で、RAG50の50件中24件(48%)が"
+            "PACHISLOT_FACTUAL以外へ誤routeされることが判明した。誤routeされたqueryにこのままgenerationを"
+            "実行すれば、それらは既存system.jinja2(RAG grounding指示)を経由せず、SMALL_TALK/OOD_FACTUAL用の"
+            "軽量policyで生成されることになり、それ自体がSection11が最も警戒する『RAG groundingの喪失』"
+            "そのものである。誤routeが判明した時点で結果は自明(RAG groundingなしの生成は必然的に"
+            "fabrication/completeness regressionのリスクを持つ)であり、実際に不完全な回答を生成させて"
+            "確認する意味がないと判断し、GPU時間を使った生成は行わなかった。",
+  "primary_evidence": "phase4zp_rag_prompt_equivalence.json (静的routing解析、50件全件のroute結果)",
+  "headline_numbers": {
+    "dangerous_misroute_count": 24, "dangerous_misroute_rate": "24/50 = 48%",
+    "required_probes_status": {"P02": "correctly routed to PACHISLOT_FACTUAL",
+                                 "LC-08": "MISROUTED to SMALL_TALK (critical failure on a required gate probe)",
+                                 "Q11": "correctly routed to PACHISLOT_FACTUAL",
+                                 "AD-04": "correctly routed to PACHISLOT_FACTUAL"},
+    "note_on_q17": "Q17は今回のRAG50選定(必須4件+ID順46件)には含まれていない可能性がある。含まれる場合は"
+                    "phase4zp_rag_prompt_equivalence.jsonのrowsを直接参照のこと。"
+  },
+  "prompt_context_generation_settings_comparison": "誤routeされなかった26件についても、routerを経由する"
+    "こと自体によってprompt/context/generation settingsが変化するわけではない(router自体は単なる分岐であり、"
+    "PACHISLOT_FACTUAL側の処理はPhase4ZN/ZOと完全に同一のコード経路を通る設計のため、理論的にはbyte-for-byte"
+    "同一になるはずである)。ただし24件が経路自体を外れてしまっているため、golden regressionの前提"
+    "(全件が既存RAGパスを通ること)がそもそも成立していない。",
+  "gate_result": "FAIL — Section11の必須gate(router導入によってPACHISLOT_FACTUAL pathが変化しない)を、"
+                  "そもそも半数近くのqueryがPACHISLOT_FACTUAL pathに到達すらしないという、より根本的な形で"
+                  "満たせなかった。"
+}

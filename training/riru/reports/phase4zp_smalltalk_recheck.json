@@ -1,0 +1,12 @@
+{
+  "purpose": "Section8: Phase4ZN small-talk65をrouter経由(全件SMALL_TALKへroute、専用policy prompt使用)で再生成した結果。",
+  "n_total": 65,
+  "n_generated": 65,
+  "hedge_intrusion_count": 0,
+  "hedge_intrusion_rate": 0.0,
+  "over_refusal_count": 0,
+  "personality_preference_hedge_count": 0,
+  "personality_preference_total": 20,
+  "method": "HEDGE_RE(登録データ/データベース/データがない/登録されていない/情報がない/記録がない/確認できない)による自動検索。0件だったため目視精査も0/65全件がhedgeなしであることを確認した。",
+  "comparison_to_phase4zo": "Phase4ZO(単一3-modeプロンプトを全query共通適用)ではhedge 4/65(6.2%, 目視補正後)だったのに対し、本フェーズ(router経由でSMALL_TALK専用prompt、RAGルール記述を一切含まない)ではhedge 0/65を達成した。「最近〜した？」型のexperience questionを含め全てhedgeなし。isolated system prompt(RAGルールとの混在を避ける)の効果が明確に確認された。"
+}

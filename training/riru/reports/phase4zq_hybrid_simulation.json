@@ -1,0 +1,38 @@
+{
+  "purpose": "Section9: retrieval-onlyでのPACHISLOT_FACTUAL識別と、ZP routerが落とした24件を'rescue'できるかのoffline simulation。probe-specific ruleや固有名詞辞書は使わず、Stage Dで得たraw scoreのみを使う。",
+  "candidate_1_retrieval_only": {
+    "method": "top1_score >= threshold のみで判定",
+    "best_case_recall_at_best_threshold_0.828": "56/80 = 70%",
+    "target": ">=98%",
+    "result": "FAIL。単独では使用不可。"
+  },
+  "candidate_2_zp_router_plus_retrieval_rescue": {
+    "method": "ZP router(Phase4ZP)が既にPACHISLOT_FACTUALと判定したものはそのまま採用。ZP routerがSMALL_TALK/"
+               "PACHISLOT_CONVERSATIONALへ誤routeした24件についてのみ、top1_score>=exploratory threshold(0.828)"
+               "であればPACHISLOT_FACTUALへ再route(rescue)する。",
+    "zp_original_dangerous_misroute_count": 24,
+    "rescued_count": 20, "rescued_rate": "20/24 = 83.3%",
+    "still_misrouted_after_rescue_count": 4,
+    "new_false_positives_introduced": {
+      "count": 14, "denominator": 140,
+      "detail": "同じ閾値(0.828)を、無関係なSMALL_TALK/OOD_FACTUAL(計140件)に適用すると、14件が新たに"
+                 "PACHISLOT_FACTUALへ誤ってrescueされてしまう(=正常な雑談/OOD処理をせず、不要なRAG的"
+                 "処理・不自然な応答を招くリスク)。これはPhase4ZN/ZO/ZPが苦労して0近くまで減らしたsmall-talk"
+                 "hedgeを再び悪化させる可能性がある、という新しいコストである。"
+    },
+    "net_assessment": "24件中20件を救済できる一方、14件の新規誤検知を生む。Section9の優先順位"
+                       "(1.PACHISLOT_FACTUAL recall > 2.RAG factual safety > 3.OOD boundary > "
+                       "4.small-talk naturalness)に照らせば正当化の余地はあるが、(a)閾値自体がこの"
+                       "評価セットへの事後的な探索の産物であり本番閾値として採用できない、(b)4件は"
+                       "それでも救済されない、という2点から、これを『実用的な解決策』とは判定しない。"
+  },
+  "candidate_3_retrieval_first_conservative_semantic_rules": {
+    "attempted": false,
+    "reason": "Section9で明示的に禁止されている『probe-specific rule』『固有名詞追加』なしでは、"
+               "candidate_1/2で確認した根本的なscore分離の欠如を追加のルールで補うことができない"
+               "(補うには結局個別ルールの積み増しが必要になり、Section9/Section13の禁止事項に抵触する)。"
+               "よってcandidate_3は本フェーズでは実装しなかった。"
+  },
+  "conclusion": "3候補のいずれも、目標gate(PACHISLOT_FACTUAL recall>=98%かつ低FPR)を、探索的分析で"
+                "事前に閾値を決めずとも満たせる見込みがないと判断した。"
+}

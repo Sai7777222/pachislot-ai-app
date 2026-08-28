@@ -1,0 +1,17 @@
+{
+  "branch": "checkpoint/identity-closure-phase4zn-baseline", "head": "e1b21f3e264a5c173f7f0e60e3b13508415d9a6b",
+  "git_status_short_line_count": 115, "git_diff_tracked": "empty", "git_diff_cached": "empty",
+  "protected_asset_hash": {"zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "match": true},
+  "pytest_start": "220 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "canonical_model": "Phase4ZG (read-only)",
+  "identity_status": "CLOSED, not touched",
+  "carried_forward_facts": {
+    "phase4zr": "conservative dispatch (phase4zr_conservative_dispatch.py) unchanged this phase; UNKNOWN pool = 77/260",
+    "phase4zs": "CASE ZS-D: fabrication is a contextless-generation artifact, not a defect in production RAG prompt/adapter/sampling; real context (even sparse) reliably suppresses it"
+  },
+  "this_phase_goal": "Close the specific contextless path Phase4ZS identified: UNKNOWN dispatch -> no retrieval -> strict RAG prompt with no context. Prototype and compare 3 Policy C variants (C1 always-retrieve, C2 clarification-first, C3 conservative-mixed using lexical overlap, not score-threshold or a proper-noun dictionary).",
+  "prohibited_this_phase": ["Phase4ZG change", "identity re-research", "conservative dispatch rule change",
+    "RAG DB change", "retriever change", "embedding change", "chunk/index change",
+    "production RAG prompt change", "generation config change", "training", "giant regex",
+    "proper-noun dictionary", "second LLM", "git add/commit/push"]
+}

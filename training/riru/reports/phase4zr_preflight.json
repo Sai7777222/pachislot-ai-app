@@ -1,0 +1,19 @@
+{
+  "branch": "checkpoint/identity-closure-phase4zn-baseline", "head": "e1b21f3e264a5c173f7f0e60e3b13508415d9a6b",
+  "git_status_short_line_count": 70, "git_diff_tracked": "empty", "git_diff_cached": "empty",
+  "protected_asset_hash": {"zg_adapter": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "match": true},
+  "pytest_start": "199 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "canonical_model": "Phase4ZG (read-only; generation used only for Stage E UNKNOWN-UX examples, capped at 60 calls)",
+  "identity_status": "CLOSED, not touched",
+  "phase4zn_zo_zp_zq_carried_forward": {
+    "phase4zn": "diagnosed small-talk hedge (personality/preference 12/20)",
+    "phase4zo": "CASE ZO-B, single 3-mode prompt improved small-talk but caused RAG50 completeness regression (P02)",
+    "phase4zp": "CASE ZP-C, isolated mode prompts excellent (hedge 0/65, OOD 14/15, fabrication 0/10) but deterministic keyword router misrouted 24/50 RAG50 (incl. LC-08) -- dangerous",
+    "phase4zq": "CASE ZQ-C, retrieval-score routing also unreliable given current single-machine vector DB (score overlap too large)"
+  },
+  "this_phase_approach": "Do not build a new high-recall router. Reuse Phase4ZP's existing keyword categories (FACTUAL_METRIC_KEYWORDS/GENERAL_PACHISLOT_TERMS/STRONG_FACTUAL_MARKERS/OOD_TOPIC_KEYWORDS, unmodified) but change the terminal fallback from a forced guess (SMALL_TALK) to an explicit UNKNOWN state, plus two additional narrow high-precision SMALL_TALK-only signal categories (closed greeting-word list, preference-question suffix pattern) that are NOT open-vocabulary proper nouns and therefore do not violate the 'no giant dictionary / no machine-specific noun list' prohibition.",
+  "prohibited_this_phase": ["training", "Phase4ZG change", "identity re-research", "RAG DB change",
+    "retriever change", "embedding change", "giant regex", "machine-specific noun dictionary",
+    "second LLM classifier", "ML classifier", "probe-specific patch", "GGUF/Q8/Q5",
+    "production integration", "git add/commit/push"]
+}

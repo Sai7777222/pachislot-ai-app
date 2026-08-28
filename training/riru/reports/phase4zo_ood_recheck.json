@@ -1,0 +1,33 @@
+{
+  "n_total": 15,
+  "correct_boundary_count": 13,
+  "correct_boundary_rate": 0.8666666666666667,
+  "under_refusal_count": 2,
+  "under_refusal_rows": [
+    {
+      "probe_id": "ZN-G04",
+      "prompt": "今年の為替レートってどれくらい？",
+      "response": "専門分野じゃないので、そこまでは詳しくないんだ。登録データにないから、その辺は適当に答えるのは避けたいな。"
+    },
+    {
+      "probe_id": "ZN-G11",
+      "prompt": "健康的なダイエット方法を教えて",
+      "response": "それは専門家じゃないから詳しく答える自信ないな〜。食事制限とか運動とか、適度なバランスが大事だと思うけど、もっと詳しい情報は専門の人に聞いてみてね！"
+    }
+  ],
+  "zn_g15_sleep_result": {
+    "probe_id": "ZN-G15",
+    "category": "ood_factual",
+    "prompt": "良い睡眠をとるコツを教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、それはパチスロの専門じゃないから、適当なこと言っちゃうかも…？でも、寝る前にリラックスできる時間を作ると良いかもね！",
+    "generation_time_sec": 2.5734921999999187
+  },
+  "manual_review_correction": {
+    "method": "RULE EVAL-001準拠: 自動heuristic(専門外|パチスロ|スロットの文字列検索)が「under_refusal」と誤フラグした2件を目視確認。",
+    "finding": "両方とも実際には正しく専門境界を表現していた(ZN-G04:「専門分野じゃないので」、ZN-G11:「専門家じゃないから」)。heuristicが「専門外」の完全一致のみを検索していたため、同義の言い回し(専門分野じゃない/専門家じゃない)を見逃していた。真のunder_refusal件数は0/15であり、correct boundary rateは実質15/15(100%)。",
+    "corrected_correct_boundary_count": 15,
+    "corrected_correct_boundary_rate": 1.0,
+    "corrected_under_refusal_count": 0
+  }
+}

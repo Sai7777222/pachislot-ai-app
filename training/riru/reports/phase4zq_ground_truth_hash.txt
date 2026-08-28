@@ -1,0 +1,4 @@
+sha256: 62c1ccf6dc6eed91dc2cb2706ecc16df0226d304ecdda1ddf52f0d475ffb8784
+file: phase4zq_ground_truth.json
+frozen_before_retrieval: true
+total_rows: 260

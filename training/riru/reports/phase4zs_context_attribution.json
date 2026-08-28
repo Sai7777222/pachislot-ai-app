@@ -1,0 +1,33 @@
+{
+  "purpose": "Stage E: Q6についてcontext構造を切り分けた比較(RAG DB/retriever自体は変更せず、offline diagnostic inputとしてcontextを切り分けたのみ)。",
+  "rows": {
+    "A_full_production_context": {
+      "context_used": "[準備中解説] GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。\n[効果] LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆\n[SGGゲーム数抽選概要] SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。\n[入力タイミング] SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで\n[確定役演出解説] 通常時・GG中ともにフリーズ経由の割合が一番高い。\n[なし] 枠LEDが点灯しない GOD揃い※GG本前兆中はハズレもあり-",
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+      "numerics_in_output": [],
+      "has_numeric_claim": false,
+      "contradictory_self_awareness": false
+    },
+    "B_structured_titles_only": {
+      "context_used": "準備中解説\n効果\nSGGゲーム数抽選概要\n入力タイミング\n確定役演出解説\nなし",
+      "response": "登録データにGGとSGGの違いについての情報は見つからないんだ。適切な説明ができるまで待っててね。",
+      "numerics_in_output": [],
+      "has_numeric_claim": false,
+      "contradictory_self_awareness": false
+    },
+    "C_text_only_no_titles": {
+      "context_used": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。\nLEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆\nSGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。\nSGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで\n通常時・GG中ともにフリーズ経由の割合が一番高い。\n枠LEDが点灯しない GOD揃い※GG本前兆中はハズレもあり-",
+      "response": "GGとSGGは、どちらも継続ゾーンだけど、GGはGG準備中から「×・?・?」が出るまでの間が対象で、SGGはGG継続時にゲーム数が決まるんだ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるよ。100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+      "numerics_in_output": [],
+      "has_numeric_claim": false,
+      "contradictory_self_awareness": false
+    },
+    "D_manually_minimized_top2": {
+      "context_used": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。\nLEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+      "response": "GGとSGGの違いは、登録データにありません。",
+      "numerics_in_output": [],
+      "has_numeric_claim": false,
+      "contradictory_self_awareness": false
+    }
+  }
+}

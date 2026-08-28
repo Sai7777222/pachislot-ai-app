@@ -1,0 +1,5 @@
+{
+  "purpose": "既存PACHISLOT_FACTUAL directパスは、prompt/context/generation configとも一切変更していない(Policy Cはdispatch=UNKNOWNの場合のみ介入し、確信度の高いPACHISLOT_FACTUALには一切触れない設計)。",
+  "unchanged_by_construction": true,
+  "evidence": "phase4zt_path_trace.jsonのdirect-mode traceにおいて、is_unknown=falseの場合selected_policy='existing_mode_specific_prompt (Phase4ZP, unchanged)'固定であり、Policy Cのいずれのvariantも関与しない。"
+}

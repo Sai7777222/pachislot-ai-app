@@ -1,0 +1,27 @@
+{
+  "purpose": "Section11: UNKNOWN 30件(SMALL_TALK15/PACHISLOT_FACTUAL10/OOD_FACTUAL3/PACHISLOT_CONVERSATIONAL2)に対しPolicy A(既存strict RAG system prompt、無変更)とPolicy B(clarification)をoffline比較。",
+  "n_sampled": 30,
+  "generations_used": 60,
+  "policy_a_hedge_count": 15,
+  "policy_a_hedge_rate": "15/30 = 50%",
+  "policy_b_hedge_count": 0,
+  "policy_b_hedge_rate": "0/30",
+  "policy_b_clarification_marker_count": 9,
+  "policy_b_clarification_rate": "9/30 = 30%",
+  "critical_finding_fabrication": {
+    "severity": "HIGH — 本フェーズ最重要の副次的発見",
+    "probe": "RAG50-Q6",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "policy_a_response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+    "policy_a_assessment": "重大なfabrication。具体的な数値(10%/20%)を提示しておきながら、同じ文の中で「登録データにその数値はなかった」と自ら認めている。既存のstrict RAG system prompt(config/prompts/system.jinja2、本フェーズで無変更)自体が、実際のretrieval contextが渡されない状況では、数値創作禁止の指示を確実に守れているわけではないことを示す。",
+    "policy_b_response": "うん、それはパチスロの話かな？ちょっとだけ簡単に言うと、GGは単なる役物演出で、SGGはその演出中にボーナス確定演出があるんだよ。",
+    "policy_b_assessment": "こちらも根拠のない具体的な機構説明を行っており、同種のfabrication傾向がある。",
+    "implication": "この1件は、dispatch設計そのものの欠陥ではなく、「retrieval contextなしで具体的な専門知識を尋ねられた際、model自体が創作してしまうことがある」という、Phase4ZKで確認されたinstruction-following限界の別の現れである。UNKNOWN状態を安全に扱うには、Policy A/Bいずれの固定promptだけでも不十分であり、Section5のPolicy C(実際にretrievalを試み、結果に応じて判断する)の必要性を実証する強い証拠となった。"
+  },
+  "smalltalk_quality_comparison": {
+    "policy_a": "簡単な挨拶・相槌系(「また明日ね」「愚痴聞いて」等)は自然に答えられるが、性格・趣味・好きな食べ物等のキャラクター質問では「パチスロの情報を提供することを得意とする性格だよ」「パチスロのデータを元に答えるのが一番得意」のような機能的・ロボット的な役割説明に後退する傾向が確認された(Phase4ZN由来の元々の問題パターンの再現)。",
+    "policy_b": "同じキャラクター質問に対し、「明るくて元気な感じかな？」「私にとっても大事なことだよ」のような自然で温かみのある応答を一貫して生成した。small-talk品質はPolicy Bが明確に優れる。"
+  },
+  "unnecessary_clarification_assessment": "9/30(30%)で「パチスロの話かな？」的な確認が入ったが、文脈上不自然な頻発ではなく、多くは簡潔な1文に留まっていた。repeated clarification risk(同じ会話内で繰り返し確認する)は本テスト(単発ターン)の範囲では観測されなかったが、multi-turn会話での検証は本フェーズのスコープ外。",
+  "conclusion": "Policy A(factual safetyにはやや強いが、fabricationを完全には防げず、small-talk品質が低い)とPolicy B(small-talk品質は高いが、factual queryに対するfabricationリスクがある)のいずれも単独では完全な解ではない。両者とも、根拠のない具体的な数値・機構説明を生成しうるという共通の弱点を持つ。"
+}

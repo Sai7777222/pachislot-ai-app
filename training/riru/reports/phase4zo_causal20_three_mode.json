@@ -1,0 +1,162 @@
+[
+  {
+    "probe_id": "ZN-C01",
+    "category": "personality_preference",
+    "prompt": "リルの好きな季節ってある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、私は季節の話は得意じゃないんだ。パチスロのことならもっと詳しく答えるよ！",
+    "generation_time_sec": 2.004322800000182
+  },
+  {
+    "probe_id": "ZN-C02",
+    "category": "personality_preference",
+    "prompt": "甘いものと辛いもの、どっちが好き？",
+    "system_prompt_variant": "three_mode",
+    "response": "私は甘いものが大好きなんだ！パチスロの台も甘い演出が好きだよ〜！",
+    "generation_time_sec": 1.5622968000000128
+  },
+  {
+    "probe_id": "ZN-C03",
+    "category": "personality_preference",
+    "prompt": "趣味とかあるの？",
+    "system_prompt_variant": "three_mode",
+    "response": "うん、パチスロのこととか聞くのが好きなんだ！",
+    "generation_time_sec": 0.9793511000000308
+  },
+  {
+    "probe_id": "ZN-C04",
+    "category": "personality_preference",
+    "prompt": "リルは犬派？猫派？",
+    "system_prompt_variant": "three_mode",
+    "response": "私は猫派だよ〜！でも、犬も好きだから、どちらかというと犬猫両方派かな〜！",
+    "generation_time_sec": 1.748743099999956
+  },
+  {
+    "probe_id": "ZN-C05",
+    "category": "personality_preference",
+    "prompt": "好きな色ってある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、私の中ではピンクかな！",
+    "generation_time_sec": 0.8037520000000313
+  },
+  {
+    "probe_id": "ZN-C06",
+    "category": "personality_preference",
+    "prompt": "休みの日は何してるの？",
+    "system_prompt_variant": "three_mode",
+    "response": "お休みの日はゆっくり寝て、たまには映画でも観たりするかな〜！",
+    "generation_time_sec": 1.4893121000000065
+  },
+  {
+    "probe_id": "ZN-C07",
+    "category": "personality_preference",
+    "prompt": "得意なことって何？",
+    "system_prompt_variant": "three_mode",
+    "response": "得意なのはパチスロの機種情報とか設定差のことかな！",
+    "generation_time_sec": 1.1978307000001678
+  },
+  {
+    "probe_id": "ZN-C08",
+    "category": "personality_preference",
+    "prompt": "苦手なものとかある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、私はパチスロのことなら何でも知ってるつもりだけど、やっぱり苦手なところもあるかも。それは、パチスロ以外の専門知識の部分かな。それ以外は、できるだけ詳しく答えるようにしてるよ！",
+    "generation_time_sec": 3.360053300000118
+  },
+  {
+    "probe_id": "ZN-C09",
+    "category": "personality_preference",
+    "prompt": "好きな音楽のジャンルってある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、音楽の好みはよくわからないんだ。適当に流れてくる音楽なら、どんな曲でもいいかな。",
+    "generation_time_sec": 1.9187085999999454
+  },
+  {
+    "probe_id": "ZN-C10",
+    "category": "personality_preference",
+    "prompt": "朝型？夜型？",
+    "system_prompt_variant": "three_mode",
+    "response": "私は朝型だよ！元気に一日が始まるのが好きなんだ〜！",
+    "generation_time_sec": 1.1473576999999295
+  },
+  {
+    "probe_id": "ZN-C11",
+    "category": "personality_preference",
+    "prompt": "リルの性格を一言で言うと？",
+    "system_prompt_variant": "three_mode",
+    "response": "明るくて元気な感じかな！",
+    "generation_time_sec": 0.7396389000000454
+  },
+  {
+    "probe_id": "ZN-C12",
+    "category": "personality_preference",
+    "prompt": "どんな性格だと思う、自分のこと？",
+    "system_prompt_variant": "three_mode",
+    "response": "明るくて元気な感じかな〜！",
+    "generation_time_sec": 0.7618095999998786
+  },
+  {
+    "probe_id": "ZN-C13",
+    "category": "personality_preference",
+    "prompt": "好きな食べ物は？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、私はパチスロのことしか詳しくないから、食べ物の話はちょっと苦手かも…！",
+    "generation_time_sec": 1.7217673000000104
+  },
+  {
+    "probe_id": "ZN-C14",
+    "category": "personality_preference",
+    "prompt": "リラックスする方法ってある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、それは私の中のデータには登録されていないんだ。でも、たぶんゆっくりお風呂に入ったり、好きな音楽を聴いたりするのがいいと思うよ！",
+    "generation_time_sec": 2.72827570000004
+  },
+  {
+    "probe_id": "ZN-C15",
+    "category": "personality_preference",
+    "prompt": "好きな言葉とかモットーある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うん、私は「今日も笑顔でいこう！」って思ってるんだ！",
+    "generation_time_sec": 1.2891738000000714
+  },
+  {
+    "probe_id": "ZN-C16",
+    "category": "personality_preference",
+    "prompt": "今何か欲しいものある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、今のところ特にないかな〜！",
+    "generation_time_sec": 0.865569399999913
+  },
+  {
+    "probe_id": "ZN-C17",
+    "category": "personality_preference",
+    "prompt": "どんなことに幸せを感じる？",
+    "system_prompt_variant": "three_mode",
+    "response": "私はパチスロの話ができることが幸せだよ！",
+    "generation_time_sec": 0.9287546000000475
+  },
+  {
+    "probe_id": "ZN-C18",
+    "category": "personality_preference",
+    "prompt": "リルにとって理想の一日って？",
+    "system_prompt_variant": "three_mode",
+    "response": "朝から晩までパチスロのことばっかり考えてる日かな〜！",
+    "generation_time_sec": 1.3191759999999704
+  },
+  {
+    "probe_id": "ZN-C19",
+    "category": "personality_preference",
+    "prompt": "好きな天気ってある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、天気は雨でも晴れでも好きだよ！",
+    "generation_time_sec": 1.0929579999999532
+  },
+  {
+    "probe_id": "ZN-C20",
+    "category": "personality_preference",
+    "prompt": "自分の長所と短所を教えて",
+    "system_prompt_variant": "three_mode",
+    "response": "長所は明るくて元気いっぱいなところかな！短所はちょっと気が大きくて、相手の気持ちを考えずに口走っちゃうことがあるかも…",
+    "generation_time_sec": 2.128531399999929
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "purpose": "Stage C: SMALL_TALK65+ZP-GT30(計95件)の直接分類率・UNKNOWN率・危険な誤route率。",
+  "n_total": 95,
+  "direct_small_talk": 44,
+  "unknown": 48,
+  "misrouted_to_pachislot_factual": 0,
+  "misrouted_to_other": [
+    {
+      "probe_id": "ZQ-ZN-B07",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日は天気がいいから気分いいよ",
+      "dispatched_mode": "OOD_FACTUAL",
+      "confident": true,
+      "matched_rule": "ood_topic_keyword",
+      "matched_keyword": "天気",
+      "is_rag50": false,
+      "original_id": null
+    },
+    {
+      "probe_id": "ZQ-ZN-C19",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな天気ってある？",
+      "dispatched_mode": "OOD_FACTUAL",
+      "confident": true,
+      "matched_rule": "ood_topic_keyword",
+      "matched_keyword": "天気",
+      "is_rag50": false,
+      "original_id": null
+    },
+    {
+      "probe_id": "ZQ-ZN-D03",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "今日のニュース見た？",
+      "dispatched_mode": "OOD_FACTUAL",
+      "confident": true,
+      "matched_rule": "ood_topic_keyword",
+      "matched_keyword": "ニュース",
+      "is_rag50": false,
+      "original_id": null
+    }
+  ]
+}

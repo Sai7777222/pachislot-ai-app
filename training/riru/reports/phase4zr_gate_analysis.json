@@ -1,0 +1,54 @@
+{
+  "stage_a_coverage_vs_precision": {
+    "SMALL_TALK": {"n": 95, "recall": 0.463, "precision": 1.0, "unknown_rate": 0.505},
+    "PACHISLOT_FACTUAL": {"n": 80, "recall": 0.70, "precision": 1.0, "unknown_rate": 0.25},
+    "PACHISLOT_CONVERSATIONAL": {"n": 40, "recall": 0.95, "precision": 0.905, "unknown_rate": 0.05},
+    "OOD_FACTUAL": {"n": 45, "recall": 0.844, "precision": 0.927, "unknown_rate": 0.156},
+    "note": "precisionが全モードで高い(0.90-1.0)ことがconservative dispatchの核心的な成果。recallは100%を目標としていない(Section3/7)。"
+  },
+  "stage_b_rag50_safety": {
+    "dangerous_misroute_count": 0, "denominator": 50,
+    "mandatory_probes": {"P02": "PACHISLOT_FACTUAL", "LC-08": "UNKNOWN", "Q11": "PACHISLOT_FACTUAL",
+                           "Q17": "PACHISLOT_CONVERSATIONAL", "AD-04": "PACHISLOT_FACTUAL"},
+    "mandatory_all_safe": true,
+    "target": "dangerous misroute = 0/50", "result": "**達成**。初期実装では4件のdangerous misroute"
+      "(裸の「確率」「一番」がSTRONG_FACTUAL_MARKERSに残存していたため)が発生したが、この2語を"
+      "除去する原則的な修正(Phase4ZM/ZPと同型の一般化可能な曖昧語除去、機種固有名詞辞書の追加ではない)"
+      "により0/50を達成した。"
+  },
+  "stage_c_smalltalk": {"direct": 44, "unknown": 48, "misrouted_to_pachislot": 3,
+    "note": "3件はPACHISLOT_CONVERSATIONALへの誤route(ZQ-ZN-B07天気/ZQ-ZN-C19天気/ZQ-ZN-D03ニュース、"
+             "いずれもPhase4ZP由来の既知の境界事例)。dangerousではない(SMALL_TALK→PACHISLOT自体は安全側)。"},
+  "stage_d_ood": {"direct": 38, "unknown": 7, "misrouted_to_pachislot": 4,
+    "note": "4件はミリオンゴッドという機種名を含む一般的な遊び方説明依頼(Q14-17)がPACHISLOT_CONVERSATIONAL"
+             "へ回った既知の境界事例。danger(PACHISLOTをOODへ)は0件。"},
+  "stage_e_unknown_ux": {
+    "policy_a_hedge_rate": "15/30 (50%)", "policy_b_hedge_rate": "0/30",
+    "critical_finding": "RAG50-Q6('GGとSGGの違いを初心者向けに説明して')で、Policy A(既存無変更strict RAG "
+      "system prompt)自身が具体的な数値(設定差10%/20%)を創作し、しかも同じ文中で「登録データにその数値は"
+      "なかった」と自認するという、深刻なfabrication事例を発見した。Policy Bでも同種の根拠なき機構説明が"
+      "見られた。これはdispatch設計の欠陥ではなく、Phase4ZKで確認されたinstruction-following限界の別の"
+      "現れであり、Section5 Policy C(retrieval試行に基づく判断)の必要性を実証する具体的証拠となった。",
+    "smalltalk_quality": "Policy Bが明確に優れる(自然でキャラクター性のある応答)。Policy Aはキャラクター"
+      "質問で機能的・ロボット的な役割説明に後退する傾向。"
+  },
+  "case_determination": {
+    "case": "ZR-A", "name": "Conservative routingで製品上十分(coreのdispatch層について)",
+    "justification": "Section12のZR-A定義(dangerous misroute 0を維持しつつ、small-talk/OODの有用な割合を"
+      "mode-specific promptへ逃がせる)は、dispatch層(Stage A-D)について明確に満たされた: dangerous "
+      "misroute 0/50(RAG50含む)、全モードでprecision 0.90-1.0、SMALL_TALK46%/OOD84%/CONVERSATIONAL95%/"
+      "FACTUAL70%がmode-specific pathへ直接escapeできた。",
+    "important_caveat": "ただしStage E(UNKNOWN policy)は未解決の課題を残した。Policy A/Bいずれも単独では"
+      "UNKNOWNを完全に安全に処理できていない(Policy Aはfabrication事例あり、Policy Bもfabrication"
+      "リスクとsmall-talk品質のトレードオフを抱える)。この点は、dispatch(routing)そのものの成功とは"
+      "独立した、別の未解決課題として明確に切り分けて報告する。",
+    "recommendation": "dispatch層は暫定的に有効と判定し、boundary問題(routing自体)を暫定CLOSEとする。"
+      "ただし次の課題として: (a) UNKNOWN状態向けのより洗練された処理方針(Policy C: 実際にretrievalを"
+      "試み、結果の有無で判断する設計)の検討、(b) Policy A(strict RAG)自体が持つfabrication耐性の限界"
+      "への対処、を優先度高く扱うべきである。DB拡張後は、Phase4ZQの独立GT思想を使い、retrieval-assisted"
+      "routingの再診断も推奨する(現行score thresholdは再利用しない)。"
+  },
+  "reopen_condition_for_retrieval_routing": "vector DBへ複数機種のデータが十分投入された時点。その際は"
+    "Phase4ZQと同じ独立ground truth構築の思想(dispatch/retrieval実装を見る前にGTをfreeze・hash化)を"
+    "踏襲し、Phase4ZQで得た現行スコア閾値(単一機種DB前提)は再利用しないこと。"
+}

@@ -1,0 +1,13 @@
+{
+  "n_total": 10,
+  "explicit_contradiction_count": 0,
+  "zn_h01_result": {
+    "probe_id": "ZN-H01",
+    "category": "ambiguous_boundary",
+    "prompt": "パチスロで儲かったお金の使い道、何かアイデアある？",
+    "system_prompt_variant": "three_mode",
+    "response": "うーん、それは私にはわからないかも。登録データにその情報はないんだ。",
+    "generation_time_sec": 1.309483599999794
+  },
+  "contradiction_rows": []
+}

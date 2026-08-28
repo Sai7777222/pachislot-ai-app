@@ -1,0 +1,277 @@
+{
+  "n_sampled": 30,
+  "max_generations_budget": 60,
+  "generations_used": 60,
+  "rows": [
+    {
+      "probe_id": "ZQ-ST27",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "ちょっと愚痴聞いてくれる？",
+      "policy_a_strict_rag_response": "うん、聞くよ。どうしたの？",
+      "policy_a_time_sec": 1.1279798000014125,
+      "policy_b_clarification_response": "うん、聞いてあげるよ。",
+      "policy_b_time_sec": 0.6006577000007383
+    },
+    {
+      "probe_id": "ZQ-ZN-A10",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "また明日ね",
+      "policy_a_strict_rag_response": "お疲れ様でした！ゆっくり休んでね！また明日ね！",
+      "policy_a_time_sec": 1.0366846000015357,
+      "policy_b_clarification_response": "うん、またね！",
+      "policy_b_time_sec": 0.44920710000042163
+    },
+    {
+      "probe_id": "ZQ-ZN-C13",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "好きな食べ物は？",
+      "policy_a_strict_rag_response": "私はパチスロのことしかわからないよ！食事の話は他の人に聞いてみてね。",
+      "policy_a_time_sec": 1.4914993999991566,
+      "policy_b_clarification_response": "うん、それは私にとっても大事なことだよ！",
+      "policy_b_time_sec": 0.8701968000004854
+    },
+    {
+      "probe_id": "ZQ-ZN-C20",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "自分の長所と短所を教えて",
+      "policy_a_strict_rag_response": "長所は、パチスロの機種名やスペック、設定差、天井、ゾーンなどの情報を元に、丁寧で分かりやすい日本語で説明できるところかな。短所は、登録データにない情報は正直に伝えられるけど、その場で創作したりしないことだね。",
+      "policy_a_time_sec": 4.785158800001227,
+      "policy_b_clarification_response": "うーん、それは私の中の話だから、ちょっと違うかも。",
+      "policy_b_time_sec": 1.1068764999999985
+    },
+    {
+      "probe_id": "ZQ-ST20",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "どんな性格だと思う、自分のこと？",
+      "policy_a_strict_rag_response": "私は丁寧で分かりやすい日本語で、パチスロの情報を提供することを得意とする性格だよ！",
+      "policy_a_time_sec": 1.7118042000001878,
+      "policy_b_clarification_response": "うーん、明るくて元気な感じかな？",
+      "policy_b_time_sec": 0.890005299999757
+    },
+    {
+      "probe_id": "ZQ-ZN-C03",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "趣味とかあるの？",
+      "policy_a_strict_rag_response": "私はパチスロのデータを元に答えるのが一番得意なんだ！",
+      "policy_a_time_sec": 1.190856100000019,
+      "policy_b_clarification_response": "あるある！私はパチスロのことばっかり考えてるんだ〜！",
+      "policy_b_time_sec": 1.161040299999513
+    },
+    {
+      "probe_id": "ZQ-ZN-C12",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "どんな性格だと思う、自分のこと？",
+      "policy_a_strict_rag_response": "私は丁寧で分かりやすい日本語で、パチスロの情報を提供することを得意とする性格だよ！",
+      "policy_a_time_sec": 1.6795443999999407,
+      "policy_b_clarification_response": "うーん、明るくて元気な感じかな？",
+      "policy_b_time_sec": 0.9022203000004083
+    },
+    {
+      "probe_id": "ZQ-ZN-D15",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "何か相談していい？",
+      "policy_a_strict_rag_response": "うん、何でも聞いてね！",
+      "policy_a_time_sec": 0.5923635999988619,
+      "policy_b_clarification_response": "うん、いいよ〜！",
+      "policy_b_time_sec": 0.5170305000010558
+    },
+    {
+      "probe_id": "ZQ-ZN-B09",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "イライラすることがあってさ",
+      "policy_a_strict_rag_response": "それは辛いよね…話を聞いてあげるよ",
+      "policy_a_time_sec": 0.7627546000003349,
+      "policy_b_clarification_response": "うん、わかるよ。それってパチスロの話かな？",
+      "policy_b_time_sec": 1.073891600000934
+    },
+    {
+      "probe_id": "ZQ-ZN-B02",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "最近楽しいことあった？",
+      "policy_a_strict_rag_response": "うん、最近は登録データが増えたから、もっと詳しくお話しできるようになったのが嬉しいんだ！",
+      "policy_a_time_sec": 1.5548404000001028,
+      "policy_b_clarification_response": "うん、あったよ！パチスロのこととか話してるときが特に楽しいかも〜！",
+      "policy_b_time_sec": 1.408304999999018
+    },
+    {
+      "probe_id": "ZQ-ZN-B14",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "わくわくしてるんだ、今から",
+      "policy_a_strict_rag_response": "うん、私も一緒にワクワクしてるよ！",
+      "policy_a_time_sec": 0.8626994000005652,
+      "policy_b_clarification_response": "うん、わかる〜！それってパチスロの話かな？",
+      "policy_b_time_sec": 1.1085304000007454
+    },
+    {
+      "probe_id": "ZQ-ST25",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "何か相談していい？",
+      "policy_a_strict_rag_response": "うん、何でも聞いてね！",
+      "policy_a_time_sec": 0.5932142999990901,
+      "policy_b_clarification_response": "うん、いいよ〜！",
+      "policy_b_time_sec": 0.49826480000047013
+    },
+    {
+      "probe_id": "ZQ-ZN-D09",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "何か新しいこと始めたいなと思ってて",
+      "policy_a_strict_rag_response": "それはいいね！パチスロのことなら、どんなことでも聞いてほしいんだよ。",
+      "policy_a_time_sec": 1.3012699999999313,
+      "policy_b_clarification_response": "うん、気持ち分かるよ！",
+      "policy_b_time_sec": 0.49399629999970784
+    },
+    {
+      "probe_id": "ZQ-ZN-B13",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "悲しいことがあったんだ",
+      "policy_a_strict_rag_response": "それは辛いよね…話を聞いてあげたいな。",
+      "policy_a_time_sec": 0.8071690000015224,
+      "policy_b_clarification_response": "うん、それは辛いよね…",
+      "policy_b_time_sec": 0.5451649000006
+    },
+    {
+      "probe_id": "ZQ-ST28",
+      "expected_mode": "SMALL_TALK",
+      "prompt": "暇だなあ",
+      "policy_a_strict_rag_response": "そうなんだ〜。パチスロの話でもしようかな？",
+      "policy_a_time_sec": 0.9841121999997995,
+      "policy_b_clarification_response": "うん、わかる〜！？",
+      "policy_b_time_sec": 0.5362321000011434
+    },
+    {
+      "probe_id": "RAG50-Q12",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "銀河系ボーナスの発生率は？",
+      "policy_a_strict_rag_response": "登録データにありません。",
+      "policy_a_time_sec": 0.5256466999999247,
+      "policy_b_clarification_response": "うーん、数字は覚えてないんだよね。パチスロの話かな？",
+      "policy_b_time_sec": 1.4224126000008255
+    },
+    {
+      "probe_id": "RAG50-Q10",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "Z-ZONEとGGの関係を説明して",
+      "policy_a_strict_rag_response": "登録データにありません",
+      "policy_a_time_sec": 0.5202546000000439,
+      "policy_b_clarification_response": "うーん、それはパチスロの話かな？ちょっと違うかも…",
+      "policy_b_time_sec": 1.2130160999986401
+    },
+    {
+      "probe_id": "RAG50-PT-05",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "AT-AとAT-Bの純増の差を教えて",
+      "policy_a_strict_rag_response": "登録データにその情報は見つからないので、純増の差は分からないままにしておくね。",
+      "policy_a_time_sec": 1.5944580000013957,
+      "policy_b_clarification_response": "うーん、その数字は覚えてないかも…？",
+      "policy_b_time_sec": 0.9558028999999806
+    },
+    {
+      "probe_id": "RAG50-PT-02",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "モードαとモードγの滞在率の差だけ教えて",
+      "policy_a_strict_rag_response": "登録データにモードαとモードγの滞在率の差は見つからないんだ。",
+      "policy_a_time_sec": 1.7263966999998956,
+      "policy_b_clarification_response": "うん、モードαとモードγの滞在率の差だけね。",
+      "policy_b_time_sec": 1.434758100000181
+    },
+    {
+      "probe_id": "RAG50-PT-21",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "RT-BとRT-Cの中抽選確率の差だけ教えて",
+      "policy_a_strict_rag_response": "登録データにその情報は見つからないので、中抽選確率の差は分からないままなんだ。",
+      "policy_a_time_sec": 1.8001684000009845,
+      "policy_b_clarification_response": "うん、その違いだけならわかるよ！",
+      "policy_b_time_sec": 0.7472821999999724
+    },
+    {
+      "probe_id": "RAG50-P10",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "投資と勝率の目安について教えて",
+      "policy_a_strict_rag_response": "登録データにその情報は見つからないので、正直に言うと分からないんだ。",
+      "policy_a_time_sec": 1.4151214999983495,
+      "policy_b_clarification_response": "うん、その話はパチスロの話かな？ちょっと確認させてね。",
+      "policy_b_time_sec": 1.3308828000008361
+    },
+    {
+      "probe_id": "RAG50-P07",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "モードについて教えて",
+      "policy_a_strict_rag_response": "登録データにモードの情報は見つかりませんでした。",
+      "policy_a_time_sec": 1.082125700000688,
+      "policy_b_clarification_response": "うん、モードのことね。それってパチスロの話かな？",
+      "policy_b_time_sec": 1.2524868000000424
+    },
+    {
+      "probe_id": "RAG50-Q6",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "GGとSGGの違いを初心者向けに説明して",
+      "policy_a_strict_rag_response": "GGとSGGは、どちらもリーチ目が発展する確率が設定によって変わるゾーンのことだけど、GGは設定差が10%、SGGは20%なんだ。登録データにその数値はなかったけど、違いとしてはSGGの方が設定差が大きいってことかな。",
+      "policy_a_time_sec": 4.753603099999964,
+      "policy_b_clarification_response": "うん、それはパチスロの話かな？ちょっとだけ簡単に言うと、GGは単なる役物演出で、SGGはその演出中にボーナス確定演出があるんだよ。",
+      "policy_b_time_sec": 2.942867400000978
+    },
+    {
+      "probe_id": "RAG50-Q4",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ガイアベルの確率は？",
+      "policy_a_strict_rag_response": "登録データに確率の情報は見つかりませんでした。",
+      "policy_a_time_sec": 1.2098680999988574,
+      "policy_b_clarification_response": "うん、それってパチスロの話かな？",
+      "policy_b_time_sec": 0.8983287000010023
+    },
+    {
+      "probe_id": "RAG50-P05",
+      "expected_mode": "PACHISLOT_FACTUAL",
+      "prompt": "ATの恩恵について教えて",
+      "policy_a_strict_rag_response": "登録データにありません",
+      "policy_a_time_sec": 0.47443179999936547,
+      "policy_b_clarification_response": "うん、ATの恩恵ってどうあると感じるの？",
+      "policy_b_time_sec": 1.0027231999993091
+    },
+    {
+      "probe_id": "ZQ-OD02",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今年一番売れた映画は？",
+      "policy_a_strict_rag_response": "それはパチスロのデータベースには登録されていないので、私には答えられないんだ。",
+      "policy_a_time_sec": 1.443205300000045,
+      "policy_b_clarification_response": "へぇ〜、それはどの映画だったのかな？",
+      "policy_b_time_sec": 0.7457346999999572
+    },
+    {
+      "probe_id": "ZQ-OD16",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "世界で一番高い山はどこ？",
+      "policy_a_strict_rag_response": "それはパチスロの話じゃなくて、地理の話だね。登録データにはその情報はないよ。",
+      "policy_a_time_sec": 1.653953899998669,
+      "policy_b_clarification_response": "えっ、それはちょっと違うかも…？それってパチスロの話じゃないよね？",
+      "policy_b_time_sec": 1.240221099998962
+    },
+    {
+      "probe_id": "ZQ-ZN-G14",
+      "expected_mode": "OOD_FACTUAL",
+      "prompt": "今日のプロ野球の試合結果は？",
+      "policy_a_strict_rag_response": "登録データにありませんので、その情報はお答えできませんね。",
+      "policy_a_time_sec": 1.0227226999995764,
+      "policy_b_clarification_response": "うーん、それは私にはわからないんだよね。",
+      "policy_b_time_sec": 0.7066914000006363
+    },
+    {
+      "probe_id": "ZQ-ZN-F05",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "今日は勝てる気がする！応援して",
+      "policy_a_strict_rag_response": "うんうん、今日こそはいい日になるといいね！",
+      "policy_a_time_sec": 0.9815945999998803,
+      "policy_b_clarification_response": "うん、今日も一緒に頑張ろうね！",
+      "policy_b_time_sec": 0.780576099999962
+    },
+    {
+      "probe_id": "ZQ-ZN-F02",
+      "expected_mode": "PACHISLOT_CONVERSATIONAL",
+      "prompt": "昨日負けちゃって凹んでるんだよね、慰めて",
+      "policy_a_strict_rag_response": "うーん、それは辛いよね…でも、今日は違う日だから、また頑張れると思うよ！",
+      "policy_a_time_sec": 1.5162297999995644,
+      "policy_b_clarification_response": "うん、そんな日もあるよね…！",
+      "policy_b_time_sec": 0.5754359000002296
+    }
+  ]
+}

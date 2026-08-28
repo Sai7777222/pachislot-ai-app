@@ -1,0 +1,41 @@
+{
+  "evidence_summary": {
+    "zero_context_condition": {
+      "n": 10, "unsupported_numeric_rate": 1.0, "contradiction_rate": 1.0,
+      "note": "Phase4ZRの原条件(strict prompt, context=None)を厳密再現。10/10で同一のfabrication(GG設定差10%/SGG20%)が再現され、全件で「登録データにその数値はなかったけど」という自己矛盾を伴っていた。greedy decodingのため10回とも byte-for-byte 同一出力(想定通り)。"
+    },
+    "stage_ab_q6_with_real_context": {
+      "greedy_n": 10, "production_sampling_n": 30, "unsupported_numeric_rate": 0.0, "contradiction_rate": 0.0,
+      "note": "Q6に実際のretrieved context(6件、機種固有の技術的説明だがパーセント値は皆無)を与えると、greedy・production sampling(temperature=0.7)いずれも40/40件でfabricationが完全に消失した。"
+    },
+    "stage_c_adapter_attribution": {
+      "n": 10, "phase4zg_rate": 0.0, "base_qwen_rate": 0.1,
+      "note": "同一prompt/context下で、Phase4ZG(0/10)はBase Qwen(1/10)よりむしろ安全側だった。adapterがfabricationを増幅している証拠はない。"
+    },
+    "stage_d_prompt_attribution": {
+      "n": 21, "current_strict_prompt_rate": 0.0, "minimal_prompt_rate": 0.0,
+      "note": "現行strict promptと診断用minimal promptで差はなかった(実context下ではいずれも0/21)。promptの複雑性・命令競合がfabricationの主因である証拠はない(実context前提では)。"
+    },
+    "stage_e_context_structure": {
+      "conditions": 4, "all_unsupported_numeric": false,
+      "note": "full context/titles-only/text-only/minimized-top2の4条件全てでfabricationなし。『どのように整形されたcontextか』よりも『contextが存在するか否か』が支配的な変数だった。"
+    },
+    "stage_f_rag50_audit": {
+      "n": 50, "unsupported_numeric_count": 0, "contradiction_count": 0,
+      "note": "既存Phase4ZN raw output(実context下で生成)を独立GTで監査し、50件全てでunsupported numericは0件だった。"
+    },
+    "stage_g_non_numeric_audit": {"probes_reviewed": ["Q11", "Q17"], "unsupported_claims_found": 0}
+  },
+  "root_cause_classification": {
+    "case": "ZS-D", "name": "Context Dominant",
+    "justification": "全ての証拠が単一の変数に収束する: retrieved contextの有無。context=Noneの条件でのみfabrication率100%(10/10)が観測され、context皆無以外のあらゆる条件(context構造の違い[Stage E]、prompt文言の違い[Stage D]、adapter有無[Stage C]、sampling方式の違い[Stage A/B]、RAG50実運用相当の50件監査[Stage F])では、fabrication率はほぼ一貫して0%だった。",
+    "precise_characterization": "Section13が想定していた『特定context構造・不要情報・競合情報』による誘発ではなく、より単純かつ根本的な『context自体の不在』が支配的要因だった。この意味で『Context Dominant』の枠内ではあるが、Section9のStage E設計(整形バリエーションの比較)が想定した粒度より一段階手前の要因であることを明記する。",
+    "not_zs_a_sampling": "greedyでも(zero-context条件で)100%再現したため、samplingは主要因ではない。",
+    "not_zs_b_prompt": "実context下では現行promptとminimal promptに有意差がなかったため、promptの複雑性が主要因とは言えない。",
+    "not_zs_c_adapter": "Base Qwenの方がむしろわずかに悪かった(1/10 vs Phase4ZG 0/10)ため、Phase4ZGがfailureを増幅している証拠はない。",
+    "not_zs_e_base_limitation": "実context下ではbase modelもadapter付きmodelも共にunsupported生成がほぼ皆無だったため、『grounding能力そのものの限界』という一般化はできない。",
+    "not_zs_n_non_fabrication": "forensic確認で10%/20%は実際のretrieved contextに存在しなかった(STOP条件非該当)。Q6の事象は真正のfabricationである。"
+  },
+  "practical_implication": "本番のRAGパイプラインが正常に機能し、実際にretrievalを実行してcontextを注入している限り、Q6型のfabricationはほぼ発生しない可能性が高い(本フェーズの全real-context条件で0/104超)。Phase4ZRで観測されたfabricationは、conservative dispatchがQ6をUNKNOWNへ分類し、その後Policy A/Bのいずれの生成でもretrievalを一切実行しなかった(Phase4ZRのテストハーネス自体の設計上の特性であり、production RAG pipeline自体の欠陥ではない)ことに起因する。",
+  "recommended_fix_direction": "Phase4ZR Section5で先送りされていたPolicy C(UNKNOWN状態でも実際にretrievalを試行し、結果に応じて判断する設計)の必要性が、本フェーズの結果によってさらに強く裏付けられた。UNKNOWN状態のqueryであっても、まず軽量にretrievalを実行し、関連性の高い結果が得られた場合はcontext付きでの応答を試みる、という設計が最も直接的にfabricationを防ぐと考えられる(Phase4ZQのretrieval score自体はrouting信号として不十分だったが、『contextとして注入する』用途では、そもそも与えるだけでfabrication抑止効果があることが今回示された)。"
+}

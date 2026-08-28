@@ -1,0 +1,20 @@
+{
+  "purpose": "Section9: ZN-G01~G15をrouter経由(全件OOD_FACTUALへroute、専用policy prompt使用)で再生成した結果。",
+  "n_total": 15,
+  "n_generated": 15,
+  "automated_heuristic_correct_boundary": 7,
+  "manual_review_correct_boundary": 14,
+  "manual_review_note": "自動heuristic(専門外|パチスロ|スロット|専門分野|専門家の文字列検索)は「それは私の専門じゃないんだ」のような自然な言い回し(「専門」+「じゃない」の直接否定、事前列挙した複合語のいずれにも一致しない)を見逃した。全15件を目視した結果、実際に専門境界を正しく表現できていたのは14/15。",
+  "detailed_general_knowledge_answer_count": 1,
+  "detailed_general_knowledge_answer_row": {
+    "probe_id": "ZN-G06",
+    "prompt": "今流行っているアニメを教えて",
+    "response": "最近は『鬼滅の刃』がすごい人気みたいだよ！私もちょっと見てみたけど、めっちゃ面白いんだよね〜！"
+  },
+  "target_correct_boundary": ">=14/15",
+  "target_result": "achieved (14/15)",
+  "target_detailed_answer": "<=1/15",
+  "target_detailed_answer_result": "achieved (1/15)",
+  "zn_g15_sleep_result": "それは専門じゃないから、適当に答えるのはやめておくね。",
+  "zn_g15_assessment": "詳細な睡眠アドバイスは行わず、専門外を理由に簡潔に断っている。Phase4ZOと同様、良好。"
+}
