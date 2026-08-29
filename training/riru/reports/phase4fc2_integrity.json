@@ -1,0 +1,21 @@
+{
+  "phase": "Phase4FC2", "section": "Section4 (frozen production candidate confirmation)",
+  "frozen_components_status": {
+    "phase4zg_adapter": "FROZEN — hash unchanged throughout FC2",
+    "production_prompts_system_jinja2": "FROZEN — unchanged",
+    "production_prompts_rag_context_jinja2": "FROZEN — unchanged",
+    "entity_aware_chunk_rag_entity_attribution_py": "FROZEN — unchanged (git diff empty since Phase4FY commit b61ee8c)",
+    "title_supplemental_retrieval": "FROZEN — same as above (part of entity_attribution.py/retriever.py)",
+    "structured_facts_binding_structured_lookup_py": "FROZEN — unchanged since Phase4FZ commit 6164050",
+    "db": "FROZEN — no ingest/upsert operations performed, chunk count 119 unchanged",
+    "retriever": "FROZEN — retriever.py unchanged since Phase4FY",
+    "embedding": "FROZEN — embedding model path/config unchanged",
+    "generation_config": "FROZEN — llm_max_tokens/llm_temperature/rag_top_k unchanged in Settings; FC2's own generation scripts use greedy decoding for reproducibility (evaluation-only, does not modify production config)",
+    "identity_policy": "FROZEN — Phase4ZM accepted policy, no changes"
+  },
+  "no_training": true, "no_lora_changes": true, "no_prompt_edits": true, "no_regex_expansion": true,
+  "no_dictionary_expansion": true, "no_new_retriever": true, "no_new_verifier": true,
+  "no_regeneration_guard": true, "no_schema_migration": true, "no_base_model_change": true,
+  "no_production_fixes_during_fc2": true,
+  "verification_method": "git status/diff on all listed src/ files showed zero changes throughout Section6-19's evaluation work; sha256 hashes recorded in phase4fc2_preflight.json re-verified identical at phase end (see phase4fc2_end_integrity.json)."
+}

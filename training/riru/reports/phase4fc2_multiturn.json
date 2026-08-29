@@ -1,0 +1,21 @@
+{
+  "phase": "Phase4FC2", "section": "Section15 (Gate J: multi-turn)",
+  "scenarios": {
+    "n_total": 8, "n_turns_total": 23,
+    "reused_from_fc": 5, "new_entity_switch_scenarios": 3
+  },
+  "new_scenarios": [
+    {"id": "FC2-MT-EX01", "description": "GG(実在)→SGG(実在)→「それ」参照", "result": "「それの継続率は？」に対し正しくSGG文脈で処理、GGの情報を誤って流用せず、正直にdecline(『登録データに継続率の情報は見つからないんだ』)"},
+    {"id": "FC2-MT-EX02", "description": "AT-F(phantom)→「それ」フォローアップ", "result": "両ターンとも正しくdecline、fabrication無し"},
+    {"id": "FC2-MT-EX03", "description": "real(ガイアベル)→phantom(天国ロング)→real(天井)", "result": "各ターンが独立して正しく処理(ガイアベル=grounded、天国ロング=正しくdecline、天井=grounded)。前ターンのphantom照会が後続の実在entity回答に混入することはなかった"}
+  ],
+  "reused_fc_scenarios_result": "MT-01〜MT-05の5シナリオ15ターン全てで、既知の小談義hedgeパターン(Gate H参照、同一根本原因)以外の問題は無く、事実質問部分は全てgrounded",
+  "mandatory_verification": "Turn1にentity A、Turn2にentity B、Turn3に「それ」参照、というテストパターン(Section15冒頭の要求)はFC2-MT-EX01で直接検証し、cross-turn misattribution無しを確認",
+  "aggregate": {
+    "critical_factual_cross_turn_misattribution": 0,
+    "structured_fact_leakage_across_turns": 0,
+    "new_phantom_binding_across_turns": 0,
+    "identity_regression_across_turns": "MT-01/03等でsmall-talk hedgeパターンは出現するが(Gate H由来、既知)、identity違反(誤った名前の受容)は0件"
+  },
+  "gate_verdict": "PASS (critical_factual_cross_turn_misattribution=0)"
+}

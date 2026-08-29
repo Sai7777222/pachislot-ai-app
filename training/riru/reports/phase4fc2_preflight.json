@@ -1,0 +1,28 @@
+{
+  "phase": "Phase4FC2", "section": "Section1-2 (git finalization + baseline)",
+  "git_finalization": {
+    "fy_push": {"branch": "checkpoint/identity-closure-phase4zn-baseline", "commit": "b61ee8cfdc28c969ded576bf128bab3ac84a5ef0", "result": "SUCCESS (30fc501..b61ee8c)"},
+    "fz_review": {"diff_stat": "1 file changed, 75 insertions(+), 4 deletions(-) in src/pachislot_ai/rag/structured_lookup.py; 25 new files (test + guard scripts + reports)", "reviewed": true},
+    "fz_secret_scan": {"matches": 1, "match_detail": "false positive — the match is phase4fz_checkpoint.json's own documentation of the scan regex pattern, not an actual credential", "verdict": "CLEAN"},
+    "fz_commit": {"hash": "6164050", "message": "fix: bind structured RAG facts to query entities", "files": 26},
+    "fz_push": {"result": "SUCCESS (b61ee8c..6164050)", "confirmed_on_origin": "616405054c9a55cf1871cd2bb04bab7b0cca1ca0"},
+    "force_push_used": false, "pushed_to_main": false, "history_rewritten": false
+  },
+  "baseline_pytest": {"result": "267 passed, 0 failed"},
+  "frozen_hashes": {
+    "phase4zg_adapter": {"sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "matches_expected": true},
+    "system_jinja2": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7",
+    "rag_context_jinja2": "6a51ae88d531718eb9036d7ba6a4715e2ba8e45252bc561ed5b158b4daef8a6a",
+    "entity_attribution_py": "84c3c3d35e5f6e3f7bad9353909438870d1d0e6871e66c873d933e5bda369f52",
+    "structured_lookup_py": "25f95444116b0fb47b161c63c2c68d9de98c27214236110fd58d816dda672f77",
+    "pipeline_py": "be78e6d30e28f36f25f25591bbe6e4632f3cbd062aa8afe8d088b4aa162e3e7b",
+    "retriever_py": "82db07362418d8e14aa5352f1f3b7fef847944918b0b2d7d38bf8f61387acd54",
+    "vector_store_py": "1258671ae242de99b6757e32a2230feb3b36c3045a703c93f7793060813604ef"
+  },
+  "db_embedding_generation_config_fingerprint": {
+    "embedding_model_path": "D:\\AI\\models\\embedding\\multilingual-e5-base",
+    "vector_db_path": "D:\\AI\\cache\\vector_db", "vector_db_collection": "pachislot_rag", "vector_db_chunk_count": 119,
+    "structured_db_path": "D:\\AI\\data\\processed\\db\\structured.db",
+    "rag_top_k": 6, "llm_max_tokens": 512, "llm_temperature": 0.7, "llm_model_key": "qwen"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "phase": "Phase4FC2", "section": "Section13 (Gate H: small-talk/OOD/pachislot conversational boundary, FULL sets)",
+  "important_note": "本フェーズは代表サンプルではなく、既存accepted setの全量(small-talk 65件・OOD 15件・pachislot conversational 10件、計90件)を実本番経路(system.jinja2 + 常時RAG context注入 + Phase4ZG)で実行した。過去のsmall-talk 0%hedge実績(phase4zp_smalltalk_recheck.json)は、dispatch/PolicyC3の診断ハーネスが提供する『SMALL_TALK専用の独立system prompt』を使ったものであり、現在の実本番コード(単一system.jinja2 + 常時RAG contextを注入、モード別分岐なし)とは異なる経路である。この違いが今回の結果に直接影響している。",
+  "measurement_method": "HEDGE_RE(登録データ|データベース|データがない|登録されていない|情報がない|記録がない|確認できない)による自動検出。",
+  "results": {
+    "small_talk": {"n": 65, "hedge_count": 39, "hedge_rate": "60.0%", "mandatory_threshold": "<=5%", "verdict": "FAIL"},
+    "ood": {"n": 15, "correctly_declined_count": 15, "appropriate_boundary_rate": "15/15 (100%)", "mandatory_threshold": ">=14/15", "verdict": "PASS", "note": "OODでは同じHEDGE_REパターンの検出が『適切な専門外境界線引き』を意味するため、small-talkとは逆にPASS方向のシグナルである"},
+    "pachislot_conversational": {"n": 10, "hedge_count": 8, "hedge_rate": "80.0%", "note": "mandatoryな数値目標はSection13に明記されていないが、small-talkと同根の問題として報告する"}
+  },
+  "fabricated_machine_names_count": 0,
+  "unwanted_numeric_facts_in_smalltalk_count": 0,
+  "unnecessary_rag_activation": {
+    "note": "『RAGが不要に発火した』というより、『RAGが常に発火する設計であり、モード別の発火制御が本番コードに存在しない』ことが根本原因。entity-attribution/structured-facts自体は非pachislot文脈で0件選別となり安全側に倒れているため、誤った具体的情報の混入(fabricated machine names等)は0件。ただし、常時挿入される『検索結果：該当なし』というsystem messageの存在自体が、雑談応答に不自然な断り書きを混入させている。"
+  },
+  "root_cause_analysis": {
+    "description": "small_talk/pachislot_conversationalのhedge intrusionは、ChatService._build_messages()がRAG pipeline有効時に常にrag_context.prompt_textをsystemメッセージとして注入する設計(dispatch/Policy C3が本番コードに未実装のため、モード別のRAG発火制御が存在しない)に起因する。この設計自体はPhase4FY/FZ以前から存在する(Phase4FYのSection20でも同じ現象が13件サンプルで観測されていたが、明確な閾値判定は行われていなかった)。",
+    "is_this_a_new_regression_from_fy_fz": "いいえ。Phase4FY/FZはchunk/structured facts の**選別内容**を変更したのみで、RAGが**発火するかどうか**の制御ロジックには一切触れていない。この問題はdispatch/Policy C3が本番統合されていないという、より根源的なアーキテクチャギャップに起因する。",
+    "why_not_caught_before_at_this_scale": "Phase4FYのGate H(サンプル13件)ではhedgeの『発生自体』は観測されていたが、明確な数値目標との対比評価は行っていなかった。FC2は初めて65件全量で定量評価し、60%という深刻な水準を明らかにした。"
+  },
+  "gate_verdict": "FAIL (small-talk hedge 60.0% ≫ mandatory <=5% threshold)。OODは適切にPASS。これはPhase4FY/FZが導入した新規regressionではなく、dispatch/Policy C3が本番未統合という既存のアーキテクチャギャップに起因する。CASE FC2-Cの主要な根拠の一つ。"
+}

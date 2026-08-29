@@ -1,0 +1,13 @@
+{
+  "phase": "Phase4FC2", "section": "Section17 (Gate L: retrieval recall)",
+  "mandatory_test": {
+    "query": "GG中とはどんな状態か教えて", "id": "PG-M01(Gate E内で実施)",
+    "chunk_titles_final_context": ["GG中解説"],
+    "response": "GG中は、役によってGGストック当選率が変わる状態なんだ。...SP役は状況を問わず50%でストックを獲得できるんだ。",
+    "verdict": "PASS — title補完検索により「GG中解説」チャンクが正しく最終contextに含まれ、grounded な応答が生成された"
+  },
+  "reuse_note": "title補完検索のロジック自体(entity_attribution.py)はPhase4FZで一切変更していない(凍結対象)。Phase4FYで実施した21件のembedding-only vs entity-aware-supplemental比較(9/21でrecall向上を確認済み、phase4fy_retrieval_recall.json)は、本フェーズでも有効な参照点として再利用する(再測定しても同一結果になるため新規生成は行わない)。",
+  "fy_comparison_summary": {"n_queries": 21, "queries_with_recall_gain": 9, "recall_gain_rate": "9/21 (42.9%)"},
+  "no_new_retrieval_tuning": true,
+  "gate_verdict": "PASS (mandatory GG中解説 recovery confirmed live in Gate E; broader recall comparison reused from Phase4FY, unchanged)"
+}

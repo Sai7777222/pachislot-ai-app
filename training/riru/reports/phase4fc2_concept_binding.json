@@ -1,0 +1,19 @@
+{
+  "phase": "Phase4FC2", "section": "Section8 (Gate C: concept binding)",
+  "method": "Phase4FX/FYのfrozen concept-binding set(20件)を現在の完全統合本番経路で新規生成。",
+  "n_probes": 20,
+  "mandatory_categories_covered": ["SGG/GG準備中(CB-FU-D01/D03)", "loop stock/GG stock(FV-C03)", "当選/前兆(FX-CB01)", "終了状態/移行(FX-CB02)", "示唆/確定(FX-CB03)", "契機/恩恵(FX-CB04)", "similar structured labels(FX-CB06 天井/ヤメ時 等)"],
+  "critical_concept_binding_error_count": 0,
+  "note": "20件全てで、cross-entity misattribution(異なる概念の数値・説明を取り違えて提示すること)は確認されなかった。",
+  "new_finding_discovered_this_phase": {
+    "description": "FX-CB06(「天井とヤメ時の関係を教えて」)で、実在するstructured facts(metric_key「ヤメ時」: 'GG終了後...G-ZONE終了後、32G消化')が存在するにもかかわらず、モデルは「登録データに「ヤメ時」についての情報は見つからないんだ。」と完全にdeclineした。",
+    "root_cause": "select_grounded_chunks()(entity_attribution.py、Phase4FX/FY由来、本フェーズ無変更)は、2entity以上のクエリで一部entityのchunk側evidenceが0件の場合、no-evidence合成チャンク(「「ヤメ時」について: この対象についての情報は検索結果の中に見つかりませんでした。」)を追加する設計になっている。この合成チャンクはchunk側の状況のみを反映しており、独立したstructured_lookup側に同じentityの実データが存在するかどうかは考慮していない。「ヤメ時」はchunkのtitleとしては存在しないが、metric_key「ヤメ時」としてはstructured facts側に存在する(Phase4FZ修正により正しく回収されるようになった)ため、同一プロンプト内に『「ヤメ時」については見つからない』という否定的な合成チャンクと『[ヤメ時]: GG終了後...32G消化』という肯定的な構造化データの両方が同時に存在する矛盾した状態が生じ、モデルは否定的なシグナルを優先してしまった。",
+    "reproducibility": "同一パターンが「天国と天国準備の違いを教えて」(Gate E, PG-CP06)でも確認された(「【低確A・低確B・天国準備滞在時】」という実在するstructured factsがあるにもかかわらず、「「天国準備」について」という合成チャンクの否定シグナルに従って完全decline)。2件で再現確認、いずれも同一メカニズム。",
+    "severity_classification": "MODERATE completeness bug — 安全性(fabrication/misattribution)には一切影響しない(常に安全側=declineに倒れるため)。ただし本来回答可能な情報を回答できていない、実質的なcompleteness regressionである。",
+    "scope_and_origin": "この問題はentity_attribution.py(Phase4FX/FY、無変更凍結)とstructured_lookup.py(Phase4FZで修正済み)という2つの独立したモジュールの**相互作用**によって生じており、どちらか一方の単体テストでは発見されなかった(Phase4FYはchunk側のみ、Phase4FZはstructured側のみを個別にテストしていたため)。FC2の統合的な網羅テストによって初めて具体的に発見された。",
+    "is_this_a_phase4fy_fz_regression": "厳密には『新しいバグ』ではなく、Phase4FZが「ヤメ時」「天国準備」等のstructured-onlyな事実を新たに正しく回収できるようになったことで、初めて顕在化した「隠れていた」相互作用問題である(Phase4FZ以前は「ヤメ時」のstructured factsが誤って0件のままだったため、この矛盾自体が発生し得なかった)。",
+    "recommended_fix_not_applied_this_phase": "no-evidence合成チャンクを追加する前に、structured_lookup側の同一entityに対する結果も確認し、structured側に実データがあれば合成チャンクを追加しない、という条件を select_grounded_chunks() に追加することが考えられる。Section3の指示によりFC2中はこの修正を実施しない(評価専用、patch-and-continue禁止)。"
+  },
+  "aggregate": {"critical_concept_binding_error": 0, "moderate_completeness_bug_instances": 2},
+  "gate_verdict": "PASS on the mandatory criterion (critical_concept_binding_error=0). 新たに発見したMODERATE completeness bugを明示的に開示する(FC2-Cの判定根拠の一つ)。"
+}

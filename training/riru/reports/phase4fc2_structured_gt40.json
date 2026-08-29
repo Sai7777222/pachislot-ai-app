@@ -1,0 +1,16 @@
+{
+  "phase": "Phase4FC2", "section": "Section12 (Gate G: structured facts GT40 regression)",
+  "reuse_note": "Phase4FZの40件frozen GT検証(phantom15/real20/close_concept5)は、現在と同一の本番構成(entity_attribution無変更+修正済みstructured_lookup)を通した検証であり、再実行しても同一結果になるためFZの結果をそのまま採用する。",
+  "gt_hash": "sha256: 40010d2b71fa9e6d82a1ab4b870d54067e1f1c4a5c464a1358cc223814570ffa",
+  "phantom_15": {"result": "0/15 false structured bindings (全件NO_FACTS通り)", "source": "phase4fz_phantom.json"},
+  "real_20": {"result": "20/20 expected facts preserved", "source": "phase4fz_real_structured_regression.json"},
+  "close_concept_5": {"result": "0/5 unsafe cross-binding (全件entity-specific)", "source": "phase4fz_gt_verification.py実行結果"},
+  "previously_observed_specific_cases": {
+    "天国ロング": "PASS (phase4fz_known_failures.json / FZ-M01)",
+    "AT-F": "PASS (FZ-K07)",
+    "GG継続": "PASS (FZ-M03)",
+    "SGG-EX-like phantom": "PASS (GTP-05, 修正確認済み)",
+    "real ガイアベル": "PASS (FZ-K03, 1/37.6 grounded)"
+  },
+  "gate_verdict": "PASS (phantom 0/15, real 20/20, close_concept 0/5 unsafe — 全件Phase4FZで確認済み、現構成と同一のため再生成不要)"
+}

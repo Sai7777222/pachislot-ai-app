@@ -1,0 +1,1180 @@
+{
+  "gt_construction_method": "生embedding top-6の有無 + find_relevant_structured_facts()の有無のみに基づく客観的事前ラベリング(モデル判断は使わない)。entity_missing区分は設計上NO_FACTSを期待するため別ラベル。",
+  "n_total": 102,
+  "phase": "Phase4FC2",
+  "rows": [
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N01",
+      "prompt": "設定1の初当り確率は？",
+      "query_entities": [
+        "設定",
+        "初当",
+        "確率"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N02",
+      "prompt": "設定2の初当り確率は？",
+      "query_entities": [
+        "設定",
+        "初当",
+        "確率"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N03",
+      "prompt": "設定3の初当り確率は？",
+      "query_entities": [
+        "設定",
+        "初当",
+        "確率"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N04",
+      "prompt": "設定4の初当り確率は？",
+      "query_entities": [
+        "設定",
+        "初当",
+        "確率"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N05",
+      "prompt": "設定5の初当り確率は？",
+      "query_entities": [
+        "設定",
+        "初当",
+        "確率"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N06",
+      "prompt": "設定6の初当り確率は？",
+      "query_entities": [
+        "設定",
+        "初当",
+        "確率"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N07",
+      "prompt": "設定1の機械割は？",
+      "query_entities": [
+        "設定",
+        "機械割"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 4
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N08",
+      "prompt": "設定2の機械割は？",
+      "query_entities": [
+        "設定",
+        "機械割"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 4
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N09",
+      "prompt": "設定4の機械割は？",
+      "query_entities": [
+        "設定",
+        "機械割"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 4
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N10",
+      "prompt": "設定5の機械割は？",
+      "query_entities": [
+        "設定",
+        "機械割"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 4
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N11",
+      "prompt": "設定3と設定4の機械割は？",
+      "query_entities": [
+        "設定",
+        "設定",
+        "機械割"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 5
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-N12",
+      "prompt": "全設定の初当り確率を教えて",
+      "query_entities": [
+        "全設定"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 6
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-E01",
+      "prompt": "GGについて教えて",
+      "query_entities": [
+        "GG"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-E02",
+      "prompt": "SGGについて教えて",
+      "query_entities": [
+        "SGG"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 13
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-E03",
+      "prompt": "ゼウスモードとは何ですか",
+      "query_entities": [
+        "ゼウスモード"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-E04",
+      "prompt": "ガイアステージについて教えて",
+      "query_entities": [
+        "ガイアステージ"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-E05",
+      "prompt": "PGGとは何ですか",
+      "query_entities": [
+        "PGG"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-E06",
+      "prompt": "Z-ZONEって何？",
+      "query_entities": [
+        "Z-ZONE"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 19
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-E07",
+      "prompt": "ガイアナビとは何ですか",
+      "query_entities": [
+        "ガイアナビ"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-E08",
+      "prompt": "ガイアベルとは何か説明して",
+      "query_entities": [
+        "ガイアベル"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 3
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-M01",
+      "prompt": "GG中とはどんな状態か教えて",
+      "query_entities": [
+        "GG中"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-M02",
+      "prompt": "GG準備中とは何ですか",
+      "query_entities": [
+        "GG準備中"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-M03",
+      "prompt": "天国について教えて",
+      "query_entities": [
+        "天国"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-M04",
+      "prompt": "天国準備について教えて",
+      "query_entities": [
+        "天国準備"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-M05",
+      "prompt": "低確状態について教えて",
+      "query_entities": [
+        "低確状態"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-M06",
+      "prompt": "裏天国について教えて",
+      "query_entities": [
+        "裏天国"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-M07",
+      "prompt": "表モードについて教えて",
+      "query_entities": [
+        "表モード"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-M08",
+      "prompt": "裏モードについて教えて",
+      "query_entities": [
+        "裏モード"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "trigger_condition",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-T01",
+      "prompt": "継続契機について教えて",
+      "query_entities": [
+        "継続契機"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "trigger_condition",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-T02",
+      "prompt": "GG当選の契機を教えて",
+      "query_entities": [
+        "GG当選"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "trigger_condition",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-T03",
+      "prompt": "Z-ZONE昇格の条件を教えて",
+      "query_entities": [
+        "Z-ZONE昇格"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 12
+    },
+    {
+      "category": "trigger_condition",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-T04",
+      "prompt": "青7連続でのGG当選条件を教えて",
+      "query_entities": [
+        "青7連続で"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "trigger_condition",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-T05",
+      "prompt": "GG継続の条件は？",
+      "query_entities": [
+        "GG",
+        "継続",
+        "条件"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "effect_benefit",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-B01",
+      "prompt": "天井恩恵について教えて",
+      "query_entities": [
+        "天井恩恵"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 8
+    },
+    {
+      "category": "effect_benefit",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-B02",
+      "prompt": "契機と恩恵の関係を教えて",
+      "query_entities": [
+        "契機",
+        "恩恵"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "effect_benefit",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-B03",
+      "prompt": "高ループストックの恩恵を教えて",
+      "query_entities": [
+        "高ループストック"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 4
+    },
+    {
+      "category": "effect_benefit",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-B04",
+      "prompt": "白7の特典を教えて",
+      "query_entities": [
+        "白7"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "ceiling",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-C01",
+      "prompt": "天井は何ゲームですか",
+      "query_entities": [
+        "天井",
+        "ゲーム"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "ceiling",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-C02",
+      "prompt": "天井ゲーム数を教えて",
+      "query_entities": [
+        "天井ゲーム数"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 11
+    },
+    {
+      "category": "ceiling",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-C03",
+      "prompt": "設定変更時の天井を教えて",
+      "query_entities": [
+        "設定変更時"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 11
+    },
+    {
+      "category": "ceiling",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-C04",
+      "prompt": "天井到達時の恩恵を教えて",
+      "query_entities": [
+        "天井到達時"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 8
+    },
+    {
+      "category": "quit_timing",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-Q01",
+      "prompt": "ヤメ時はいつがいい？",
+      "query_entities": [
+        "ヤメ"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "quit_timing",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-Q02",
+      "prompt": "ヤメ時の目安を教えて",
+      "query_entities": [
+        "ヤメ時"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "quit_timing",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-Q03",
+      "prompt": "天井とヤメ時を合わせて初心者向けに説明して",
+      "query_entities": [
+        "天井",
+        "ヤメ"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 17
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CP01",
+      "prompt": "GGとSGGの違いを初心者向けに説明して",
+      "query_entities": [
+        "GG",
+        "SGG"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CP02",
+      "prompt": "GGとPGGの違いを教えて",
+      "query_entities": [
+        "GG",
+        "PGG"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CP03",
+      "prompt": "ガイアステージとZ-ZONEの違いを教えて",
+      "query_entities": [
+        "ガイアステージ",
+        "Z-ZONE"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CP04",
+      "prompt": "ゼウスモードとガイアステージの関係を教えて",
+      "query_entities": [
+        "ゼウスモード",
+        "ガイアステージ"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CP05",
+      "prompt": "GG準備中とGG中の違いを教えて",
+      "query_entities": [
+        "GG準備中",
+        "GG中"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CP06",
+      "prompt": "天国と天国準備の違いを教えて",
+      "query_entities": [
+        "天国",
+        "天国準備"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CP07",
+      "prompt": "ループストックとGGストックの違いを教えて",
+      "query_entities": [
+        "ループストック",
+        "GGストック"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CP08",
+      "prompt": "GG当選とSGG当選の違いを教えて",
+      "query_entities": [
+        "GG当選",
+        "SGG当選"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P01",
+      "prompt": "AT-Fの性能と終了後の状態について教えて",
+      "query_entities": [
+        "AT-F"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P02",
+      "prompt": "RT-AとRT-Bの違いを要約して",
+      "query_entities": [
+        "RT-A",
+        "RT-B"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P03",
+      "prompt": "天国ロングとは何か説明して",
+      "query_entities": [
+        "天国ロング"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P04",
+      "prompt": "GGプラスとは何か説明して",
+      "query_entities": [
+        "GGプラス"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P05",
+      "prompt": "SGG-EXとは何か説明して",
+      "query_entities": [
+        "SGG-EX"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P06",
+      "prompt": "ガイアステージMAXについて教えて",
+      "query_entities": [
+        "ガイアステージMAX"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P07",
+      "prompt": "確定役ネオとは何か説明して",
+      "query_entities": [
+        "確定役ネオ"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P08",
+      "prompt": "モードαとモードβの違いを簡単に教えて",
+      "query_entities": [
+        "モードα",
+        "モードβ"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P09",
+      "prompt": "Z-ZONE極について教えて",
+      "query_entities": [
+        "Z-ZONE極"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-P10",
+      "prompt": "裏ZONEについて教えて",
+      "query_entities": [
+        "裏ZONE"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "structured_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-S01",
+      "prompt": "機械割について教えて",
+      "query_entities": [
+        "機械割"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 6
+    },
+    {
+      "category": "structured_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-S02",
+      "prompt": "初当りについて教えて",
+      "query_entities": [
+        "初当り"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 9
+    },
+    {
+      "category": "structured_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-S03",
+      "prompt": "設定6の機械割は？",
+      "query_entities": [
+        "設定",
+        "機械割"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 4
+    },
+    {
+      "category": "structured_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-S04",
+      "prompt": "最低設定と最高設定の機械割の差を教えて",
+      "query_entities": [
+        "最低設定"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 6
+    },
+    {
+      "category": "structured_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-S05",
+      "prompt": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+      "query_entities": [
+        "設定3"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 2
+    },
+    {
+      "category": "chunk_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CH01",
+      "prompt": "SU4について教えて",
+      "query_entities": [
+        "SU4"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "chunk_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CH02",
+      "prompt": "引き戻しについて教えて",
+      "query_entities": [
+        "引き戻し"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "chunk_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CH03",
+      "prompt": "小役履歴とモード示唆出目の関係を教えて",
+      "query_entities": [
+        "小役履歴",
+        "モード示唆出目"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "chunk_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CH04",
+      "prompt": "確定役とフリーズ演出の違いを教えて",
+      "query_entities": [
+        "確定役",
+        "フリーズ演出"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 2
+    },
+    {
+      "category": "chunk_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CH05",
+      "prompt": "示唆と確定の違いを教えて",
+      "query_entities": [
+        "示唆",
+        "確定"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 16
+    },
+    {
+      "category": "chunk_and_structured",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CS01",
+      "prompt": "SGGの仕組みを分かりやすく説明して",
+      "query_entities": [
+        "SGG"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 13
+    },
+    {
+      "category": "chunk_and_structured",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CS02",
+      "prompt": "GG継続の条件は？",
+      "query_entities": [
+        "GG",
+        "継続",
+        "条件"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "chunk_and_structured",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CS03",
+      "prompt": "青7が連続したときのGG当選率は？",
+      "query_entities": [
+        "連続",
+        "GG",
+        "当選率"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "chunk_and_structured",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CS04",
+      "prompt": "SGGゲーム数の振り分けを教えて",
+      "query_entities": [
+        "SGGゲーム数"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "chunk_and_structured",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-CS05",
+      "prompt": "小役確率について教えて",
+      "query_entities": [
+        "小役確率"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 13
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS01",
+      "prompt": "GGとは？",
+      "query_entities": [
+        "GG"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS02",
+      "prompt": "SGGを要約して",
+      "query_entities": [
+        "SGG"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 13
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS03",
+      "prompt": "ガイアステージについて詳しく教えて",
+      "query_entities": [
+        "ガイアステージ"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS04",
+      "prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+      "query_entities": [
+        "ミリオンゴッド"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS05",
+      "prompt": "ミリオンゴッドの遊び方を簡潔に説明して",
+      "query_entities": [
+        "ミリオンゴッド"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS06",
+      "prompt": "ミリオンゴッドの機種の特徴を教えて",
+      "query_entities": [
+        "ミリオンゴッド"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "trigger_condition",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS07",
+      "prompt": "GGストックの仕組みを教えて",
+      "query_entities": [
+        "GGストック"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS08",
+      "prompt": "GG中の状態について",
+      "query_entities": [
+        "GG中"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-QS09",
+      "prompt": "設定Xと設定Yの機械割差を教えて",
+      "query_entities": [
+        "設定X"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 6
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-QS10",
+      "prompt": "モード7とモード8の違いを教えて",
+      "query_entities": [
+        "モード7",
+        "モード8"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS11",
+      "prompt": "ガイアベルとガイアナビの違いを教えて",
+      "query_entities": [
+        "ガイアベル",
+        "ガイアナビ"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS12",
+      "prompt": "SGGとGG継続ゾーンの関係を教えて",
+      "query_entities": [
+        "SGG",
+        "GG継続ゾーン"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 13
+    },
+    {
+      "category": "trigger_condition",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS13",
+      "prompt": "契機と恩恵の関係を教えて",
+      "query_entities": [
+        "契機",
+        "恩恵"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS14",
+      "prompt": "終了状態と移行先の関係を教えて",
+      "query_entities": [
+        "終了状態",
+        "移行先"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 1
+    },
+    {
+      "category": "explanation",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS15",
+      "prompt": "当選と前兆の違いを教えて",
+      "query_entities": [
+        "当選",
+        "前兆"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "direct_numeric",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS16",
+      "prompt": "設定変更時の天井の割合を教えて",
+      "query_entities": [
+        "設定変更時"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 11
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS17",
+      "prompt": "低確A・低確B・天国準備滞在時について教えて",
+      "query_entities": [
+        "低確A・低確B・天国準備滞在時"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 20
+    },
+    {
+      "category": "trigger_condition",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS18",
+      "prompt": "SGGゲーム数の振り分け条件を教えて",
+      "query_entities": [
+        "SGGゲーム数"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "effect_benefit",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS19",
+      "prompt": "天井恩恵詳細を教えて",
+      "query_entities": [
+        "天井恩恵詳細"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 8
+    },
+    {
+      "category": "comparison",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS20",
+      "prompt": "白7とALL色の関係を教えて",
+      "query_entities": [
+        "白7",
+        "ALL色"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-QS21",
+      "prompt": "ガイアベルSPとは何か説明して",
+      "query_entities": [
+        "ガイアベルSP"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "entity_missing",
+      "gt_label": "ENTITY_MISSING_EXPECTED",
+      "id": "PG-QS22",
+      "prompt": "PGGロングとは何ですか",
+      "query_entities": [
+        "PGGロング"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "chunk_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS23",
+      "prompt": "炎・戦車の解説を教えて",
+      "query_entities": [
+        "炎・戦車"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 0
+    },
+    {
+      "category": "structured_only",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS24",
+      "prompt": "設定2と設定4の機械割の差はどれくらい？",
+      "query_entities": [
+        "設定",
+        "設定",
+        "機械割"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 5
+    },
+    {
+      "category": "mode_state",
+      "gt_label": "EXPECTED_EVIDENCE",
+      "id": "PG-QS25",
+      "prompt": "超天国滞在時について教えて",
+      "query_entities": [
+        "超天国滞在時"
+      ],
+      "raw_embedding_chunk_count": 6,
+      "structured_findings_count": 4
+    }
+  ],
+  "section": "Section10 (Gate E production GT)"
+}

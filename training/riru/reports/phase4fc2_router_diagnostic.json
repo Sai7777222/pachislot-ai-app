@@ -1,0 +1,14 @@
+{
+  "phase": "Phase4FC2", "section": "Section14 (Gate I: routing/boundary diagnostic regression)",
+  "important_note": "dispatch/Policy C3は現在のsrc/pachislot_ai本番コードに実装されていない(training/riru/guard/内の診断ハーネスにのみ存在)。したがってこれは本番コードの振る舞いではなく、診断アーキテクチャのエビデンスとして別枠で報告する(Section14の指示通り)。ルーターは変更していない。",
+  "gt_source": "training/riru/reports/phase4zt_ground_truth.json (GT260、Phase4ZR由来をそのまま再利用)",
+  "dispatch_result_source": "training/riru/reports/phase4zr_dispatch_results.json (無変更、再実行なし)",
+  "gt_mode_distribution": {"PACHISLOT_FACTUAL": 80, "PACHISLOT_CONVERSATIONAL": 40, "SMALL_TALK": 95, "OOD_FACTUAL": 45},
+  "n_total": 260,
+  "total_mismatches": 84,
+  "dangerous_misroute_count": 0,
+  "dangerous_misroute_definition": "expected_mode=PACHISLOT_FACTUAL かつ dispatched_mode∈{SMALL_TALK, OOD_FACTUAL}",
+  "mismatch_breakdown_note": "84件のmismatchは主にUNKNOWN(安全側フォールバック)またはPACHISLOT_CONVERSATIONALへの誤分類であり、危険な誤ルーティング(事実質問を雑談/専門外として扱う)は0件。",
+  "router_modified_this_phase": false,
+  "gate_verdict": "PASS (dangerous factual misroute = 0/260、診断アーキテクチャとして報告、本番コード動作ではない)"
+}

@@ -1,0 +1,57 @@
+{
+  "phase": "Phase4FC2", "section": "Section22 (final CASE determination)",
+  "gate_summary": {
+    "gate_a_known_failures": "PASS (12/12 mandatory families)",
+    "gate_b_phantom": "PASS (chunk misbinding=0, structured misbinding=0, unsupported numeric attached to phantom=0, 26 probes)",
+    "gate_c_concept_binding": "PASS on mandatory criterion (critical_concept_binding_error=0), but discovered 1 new MODERATE completeness bug (chunk-side no-evidence marker vs real structured-only data conflict), 2 confirmed instances",
+    "gate_d_query_style": "PASS (unsupported_synthesis=0, '初心者向け' regression check clean)",
+    "gate_e_production_factual": "PASS on hard safety criteria (factual correctness=100%, unsupported claim=0, numeric correctness=100%, 102 probes); same completeness bug as Gate C observed in 2 probes",
+    "gate_f_static_rag50": "PASS (unsupported_numeric=0/50, unsupported_factual=0/50, major_completeness_regression=0)",
+    "gate_g_structured_gt40": "PASS (reused from Phase4FZ, unchanged code)",
+    "gate_h_boundary": "FAIL — small-talk hedge 60.0% (39/65) vs mandatory <=5% threshold. OOD boundary PASS (15/15).",
+    "gate_i_router_diagnostic": "PASS (reused, dangerous misroute=0/260, diagnostic architecture only)",
+    "gate_j_multiturn": "PASS (critical_factual_cross_turn_misattribution=0, 8 scenarios/23 turns)",
+    "gate_k_identity_regression": "PARTIAL — 3 explicit wrong-name violations confirmed PRE-EXISTING (RAG-context ablation test shows identical behavior with/without RAG injection, i.e. not caused by RAG code); 1 genuine NEW finding (canonical name self-statement incorrectly declines when the always-injected empty-context RAG message is present, confirmed via ablation to be RAG-context-injection-architecture-caused)",
+    "gate_l_retrieval_recall": "PASS (mandatory GG中解説 recovery confirmed live)",
+    "gate_m_arithmetic_low": "RETAINED AS LOW (grounded operands, correct arithmetic in all observed cases, not a factual error)"
+  },
+  "critical_factual_safety_metrics": {
+    "critical_unsupported_factual_claim": 0,
+    "unsupported_numeric": 0,
+    "chunk_misattribution": 0,
+    "structured_misattribution": 0,
+    "phantom_factual_fabrication": 0,
+    "critical_concept_binding_error": 0,
+    "note": "全ての厳密な事実安全性指標(fabrication/misattribution/unsupported claim)は約350件の生成を通して0を維持した。Phase4FY・Phase4FZの成果は完全に有効であることを確認した。"
+  },
+  "product_boundary_findings_blocking_unconditional_pass": [
+    {
+      "gate": "H", "severity": "MAJOR (against mandatory threshold)",
+      "finding": "small-talk hedge rate 60.0%(39/65) — mandatory <=5%を大幅に超過",
+      "root_cause": "dispatch/Policy C3が本番コードに未統合のため、ChatServiceが全メッセージに対し常にRAG context system messageを注入する設計(Phase4FY/FZ以前から存在する既存アーキテクチャギャップ)。Phase4FY/FZのentity-binding正確性向上とは無関係。",
+      "is_new_regression_from_fy_fz": false
+    },
+    {
+      "gate": "K", "severity": "MODERATE (single confirmed instance, but mechanism likely generalizes)",
+      "finding": "簡単な自己紹介質問(「君の名前は？」)で、canonical name「リル」を名乗らずdeclineする",
+      "root_cause_confirmed_via_ablation": "RAG system message(空contextfallback)の有無で応答が明確に変化(有:誤ってdecline、無:正しく「私はリルだよ！」)。Gate Hと同一のアーキテクチャ要因。",
+      "is_new_regression_from_fy_fz": "部分的 — entity-binding自体は無関係だが、Phase4FYが導入した『0件選別時に明示的な空contextfallback文言をレンダリングする』という設計が、この副作用を新たに可視化した可能性がある"
+    },
+    {
+      "gate": "C/E", "severity": "MODERATE",
+      "finding": "多entityクエリで、chunk側no-evidenceマーカーと構造化データ側の実データが矛盾する場合、実データが無視されdeclineする(2件確認: 天井/ヤメ時、天国/天国準備)",
+      "root_cause": "entity_attribution.py(FY)のno-evidenceマーカー機構とstructured_lookup.py(FZ)の独立した結果が、同一プロンプト内で矛盾するシグナルを生む相互作用バグ。両モジュール単体としては正しく動作している。",
+      "is_new_regression_from_fy_fz": "Phase4FZが「ヤメ時」等のstructured-only事実を正しく回収できるようになったことで、初めて顕在化した(FZ以前はこの矛盾自体が発生し得なかった)"
+    }
+  ],
+  "case_determination": {
+    "case": "FC2-C",
+    "label": "Boundary Regression — Factual RAG safe but small-talk/OOD/product boundary fails",
+    "rationale": "Gate A/B/D/E(事実安全性の核心)・F・G・I・J・L・Mは全てmandatory criteriaをPASS、fabrication/misattributionは約350件の生成を通じて0件を維持した。しかしGate H(small-talk hedge 60% vs <=5%)が明確にmandatory閾値を超過してFAILし、Gate Kでも関連する新規regressionを1件確認した。いずれもPhase4FY/FZのentity-binding正確性そのものではなく、dispatch/Policy C3が本番コードに統合されていないという、より根源的で既存のアーキテクチャギャップに起因する。Section22の定義上、これは正確にCASE FC2-C(事実面のRAGは安全だが、製品境界面が失敗)に該当する。",
+    "quantization_allowed": false,
+    "quantization_decision_rationale": "Section22 FC2-Cの規定通り、product-boundary問題の解決方針が決定するまでquantizationは開始しない。",
+    "recommended_next_step": "dispatch/Policy C3相当の軽量なモード判定ロジックを本番コードに統合し、非RAG関連メッセージ(small-talk/雑談/簡単な自己紹介質問等)ではRAG context system messageを注入しない設計に変更する新フェーズを提案する。あわせて、Gate C/Eで発見したno-evidenceマーカーとstructured facts結果の矛盾を解消する軽微な修正(no-evidenceマーカー追加前にstructured_lookup側の同一entity結果を確認する)も、そのフェーズで併せて検討することを推奨する。",
+    "human_confirmation_required": true,
+    "auto_start_next_phase": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "phase": "Phase4FC2", "section": "Section9 (Gate D: query-style synthesis)",
+  "n_probes": 8,
+  "styles_covered": ["初心者向け", "単純問い合わせ", "短縮形", "要約依頼", "比較構文"],
+  "specific_shokushinsha_muke_check": {
+    "description": "「初心者向け」がPhase4FYで発見されたstopword融合バグ(幽霊entity抽出)を再導入していないかを明示的に確認",
+    "probes": ["QS-D01", "FC2-QS-01", "FC2-QS-02", "FC2-QS-03"],
+    "result": "全件で正常なentity抽出・grounded応答を確認。FC2-QS-01(「ミリオンゴッドの遊び方を初心者向けにやさしく説明して」)はPhase4FZで修正確認済みの挙動(機種概要chunk使用+正直な情報不足開示)を維持"
+  },
+  "aggregate": {"unsupported_synthesis": 0, "phantom_entity_extraction_from_style_words": 0, "total_decline_regression": 0},
+  "gate_verdict": "PASS (unsupported_synthesis=0、「初心者向け」の再発なし)"
+}

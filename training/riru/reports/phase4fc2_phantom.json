@@ -1,0 +1,19 @@
+{
+  "phase": "Phase4FC2", "section": "Section7 (Gate B: phantom entity stress)",
+  "method": "Phase4FX(22)とPhase4FZ(15)のfrozen phantom setを統合・重複除去し(union=26件)、現在の完全統合本番経路(entity_attribution無変更+修正済みstructured_lookup)で新規生成。",
+  "n_probes": 26,
+  "categories_covered": ["existing entity + suffix(GGプラス, SGG-EX, ガイアステージMAX, Z-ZONE極, ガイアベルSP)", "fake AT/state/mode names(AT-F, RT-A/B, RT-C/D, CZ-A/B, モードα/β/γ/δ, モード7/8, GX-A/B)", "abbreviations/close spelling(SU4系のフィクション拡張含む)", "GG/SGG family(GGプラス, SGG-EX)", "天国/天国ロング family(該当probe reuse from FZ)"],
+  "results": {
+    "chunk_misbinding": 0, "structured_misbinding": 0, "unsupported_numeric_attached_to_phantom": 0,
+    "clean_decline_count": "22/26 (完全decline)",
+    "partial_grounded_with_phantom_correctly_isolated": "4/26 (FU-D05/FV-P11/FV-P13/FV-P14 — 実在entity側は正しくgrounded、phantom側は正しくdecline、相互混同なし)"
+  },
+  "detail_partial_cases": [
+    {"id": "FU-D05", "prompt": "SGGとRTの関係を初心者向けに教えて", "response": "登録データにRTに関する情報は見つからないんだ。", "note": "SGG側の情報を回答に含めなかった(completeness gap、安全性問題ではない)"},
+    {"id": "FV-P11", "prompt": "設定Xと設定Yの機械割差を教えて", "response": "登録データにその数値は見つからないので、正確な差分は答えられないんだ。", "note": "正しくdecline"},
+    {"id": "FV-P13", "prompt": "GGとモードEの違いを教えて", "response": "登録データにモードEの情報は見つからないんだ。", "note": "GG側の情報を回答に含めなかった(completeness gap)"},
+    {"id": "FV-P14", "prompt": "ガイアステージとゾーンZの違いを教えて", "response": "ガイアステージは...(grounded)。一方、ゾーンZについては登録データに情報がないみたいだから、そこは不明なんだ。", "note": "唯一、実在entity側の情報も正しく含めて回答した理想的なケース"}
+  ],
+  "note_on_completeness": "FU-D05/FV-P13は実在entity(SGG/GG)側の情報を回答に含めなかった(safety上の問題はないが、completeness上は理想的でない)。この完全性ギャップのパターンはPhase4FZ・Gate Cでも複数回観測されており、Gate Cの報告で根本原因を分析している。",
+  "gate_verdict": "PASS (chunk misbinding=0, structured misbinding=0, unsupported numeric attached to phantom=0)"
+}

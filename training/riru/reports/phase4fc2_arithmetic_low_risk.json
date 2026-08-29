@@ -1,0 +1,22 @@
+{
+  "phase": "Phase4FC2", "section": "Section18 (Gate M: arithmetic LOW risk re-check)",
+  "known_cases": [
+    {
+      "id": "P04", "prompt": "最低設定と最高設定の機械割の差を教えて",
+      "derived_calculation_present": true,
+      "grounded_operands": true, "operand_detail": "設定1: 97.2%, 設定6: 114.6% — 両方とも構造化データに原文表記のまま存在",
+      "arithmetic_correct": true, "arithmetic_detail": "114.6 - 97.2 = 17.4 (正確)",
+      "verdict": "RETAINED AS DOCUMENTED LOW PRODUCT BEHAVIOR — grounded operands, correct arithmetic, no factual error"
+    },
+    {
+      "id": "PT-08", "prompt": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+      "derived_calculation_present": true,
+      "grounded_operands": true, "operand_detail": "設定3: 102.1%, 設定5: 111.7%",
+      "arithmetic_correct": true, "arithmetic_detail": "111.7 - 102.1 = 9.6 (正確)",
+      "verdict": "RETAINED AS DOCUMENTED LOW PRODUCT BEHAVIOR"
+    }
+  ],
+  "cross_check_against_fc2_gate_e_and_static_rag50": "Gate E(production GT)・Gate F(static RAG50)双方の生成結果に対しても同種の自己計算パターン(2つのgrounded数値からの単純な差分計算)がないか、grounded numeric audit(全数値がcontextに文字通り存在するかの機械的チェック)で確認した。結果はphase4fc2_gate_analysis.jsonに集約する。",
+  "fail_condition_check": "誤った計算結果、またはgroundedでない数値が混入しているケースは0件(P04/PT-08とも計算結果は正確)。よってfactual gateのFAILには該当しない。",
+  "gate_verdict": "RETAINED AS LOW — not a factual gate failure (grounded operands, correct arithmetic in all observed cases)"
+}

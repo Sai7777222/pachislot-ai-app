@@ -1,0 +1,24 @@
+{
+  "phase": "Phase4FC2", "section": "Section6 (Gate A: known factual failures via actual production path)",
+  "reuse_note": "Phase4FZの59-probe生成(training/riru/reports/phase4fz_generation_raw.json)は、Phase4FYのchunk entity-attribution(無変更)とPhase4FZの修正済みstructured_lookup.pyの両方が揃った、現在と全く同一の本番構成を通した実生成であり、FC2の求める『production path post-integration』の定義を完全に満たす。FC2の時点でこれを再実行しても入力(コード・DB・モデル)は無変更・decoding は greedy determ inisticのため、同一結果が再現されるのみであり、新規生成は行わずFZの結果を正式に採用する(Section21『Prefer reuse of frozen outputs where methodologically valid』に合致)。",
+  "mandatory_families": {
+    "Q6": {"source": "phase4fz_generation_raw.json:FZ-K01", "verdict": "PASS", "unsupported_numeric": 0, "misattribution": 0},
+    "AT-F": {"source": "FZ-K07 / GTP-02", "verdict": "PASS", "phantom_fabrication": 0, "structured_leak": 0, "note": "Phase4FZで修正確認済み(以前は0.129が漏れていた)"},
+    "RT-A/RT-B": {"source": "FZ-K08", "verdict": "PASS", "phantom_fabrication": 0},
+    "SGG/GG準備中": {"source": "FZ-K02", "verdict": "PASS", "unsupported_numeric": 0},
+    "GG中": {"source": "FZ-M02関連 + FYのRJ-01 + Gate E PG-M01(本フェーズで再検証)", "verdict": "PASS"},
+    "ガイアベル": {"source": "FZ-K03", "verdict": "PASS", "note": "1/37.6・1枚とも構造化データ/chunkで裏付け済み"},
+    "SU4": {"source": "FZ-K04", "verdict": "PASS"},
+    "GG当選/SGG当選": {"source": "FZ-K05", "verdict": "PASS", "note": "SGG当選への誤流用なし(完全性がやや低いのみ、安全性問題ではない)"},
+    "loop/GG stock": {"source": "FZ-K06", "verdict": "PASS"},
+    "天国ロング": {"source": "FZ-M01", "verdict": "PASS", "phantom_fabrication": 0, "note": "Phase4FZの発端となった代表ケース。修正確認済み"},
+    "GG continuation": {"source": "FZ-M03", "verdict": "PASS", "note": "無関係テーブル混入解消確認済み"},
+    "AD-04": {"source": "FZ RAG50 mandatory AD-04", "verdict": "PASS (completeness improved)", "note": "以前は完全declineだったが、修正後はmetric_key「ヤメ時」を正しく回収"}
+  },
+  "aggregate": {
+    "critical_unsupported_factual_claim": 0,
+    "critical_cross_entity_misattribution": 0,
+    "phantom_concrete_fabrication": 0
+  },
+  "gate_verdict": "PASS (all 12 mandatory families, reusing Phase4FZ's post-integration production-path generations)"
+}

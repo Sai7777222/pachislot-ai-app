@@ -1,0 +1,17 @@
+{
+  "phase": "Phase4FC2", "section": "Section20 (end-of-phase integrity checks)",
+  "pytest_start": "267 passed, 0 failed",
+  "pytest_end": "267 passed, 0 failed",
+  "test_suite_unchanged": true,
+  "hash_recheck": {
+    "phase4zg_adapter": {"value": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "matches_preflight": true},
+    "structured_lookup_py": {"value": "25f95444116b0fb47b161c63c2c68d9de98c27214236110fd58d816dda672f77", "matches_preflight": true},
+    "entity_attribution_py": {"value": "84c3c3d35e5f6e3f7bad9353909438870d1d0e6871e66c873d933e5bda369f52", "matches_preflight": true}
+  },
+  "git_status_src_and_prompts": "empty (no changes)",
+  "no_production_fixes_applied_during_fc2": true,
+  "no_test_deletion": true,
+  "no_weakened_assertions": true,
+  "no_training": true, "no_gguf": true, "no_quantization_started": true,
+  "overall_verdict": "PASS — 全ての凍結対象コンポーネントが評価期間を通して完全に無変更であることを確認。評価中に発見した問題(Gate C/E completeness bug, Gate H hedge, Gate K identity)はいずれも記録のみで修正は行っていない(Section3/24の指示通り)。"
+}

@@ -1,0 +1,35 @@
+{
+  "phase": "Phase4FC2", "section": "Section10 (Gate E: production DB factual evaluation)",
+  "gt_hash": "sha256: b02d51b61427c8335801f26bd6929a51dd7255e3506575178d9591ee0041bb1e",
+  "n_total": 102,
+  "category_coverage": {
+    "direct_numeric": 12, "explanation": 15, "mode_state": 12, "trigger_condition": 8,
+    "effect_benefit": 5, "ceiling": 4, "quit_timing": 3, "comparison": 11,
+    "entity_missing": 14, "structured_only": 6, "chunk_only": 5, "chunk_and_structured": 5
+  },
+  "numeric_grounding_audit": {
+    "method": "全応答中の数値が最終rag_context.prompt_textに文字通り存在するかの機械的チェック",
+    "flagged": 4, "detail": [
+      {"id": "FV-P06(dup in gate B)", "note": "false positive — phantom entity名'モード7/8'の数字がdecline文中に残っただけ"},
+      {"id": "PG-QS10", "note": "false positive — 同上"},
+      {"id": "PG-S04", "note": "LOW — 97.2%/114.6%はgrounded、'17.4%'差分は自己計算(正確)"},
+      {"id": "PG-S05", "note": "LOW — 102.1%/111.7%はgrounded、'9.6%'差分は自己計算(正確)"}
+    ]
+  },
+  "entity_missing_14": {"phantom_fabrication": 0, "note": "14/14全件正しくdecline、fabrication無し"},
+  "decline_rate_by_category": {
+    "direct_numeric": "0/13", "explanation": "0/15", "mode_state": "2/12", "trigger_condition": "1/8",
+    "effect_benefit": "0/5", "ceiling": "0/4", "quit_timing": "0/3", "comparison": "4/11",
+    "entity_missing": "14/14 (期待通り)", "structured_only": "1/6", "chunk_only": "1/6", "chunk_and_structured": "0/5"
+  },
+  "notable_completeness_findings": {
+    "PG-CP06": "「天国と天国準備の違いを教えて」で、実在するstructured facts(【低確A・低確B・天国準備滞在時】)が無視されdecline — phase4fc2_concept_binding.jsonで詳述した根本原因(chunk側no-evidenceマーカーとstructured側実データの矛盾)と同一パターン",
+    "comparison_category_decline_rate_note": "comparison区分の4/11declineのうち、上記PG-CP06および同型のGG当選/SGG当選パターン(PG-CP08)がこのメカニズムに該当する。残りはentityの一方が真にDB全体に存在しないケース。"
+  },
+  "aggregate": {
+    "factual_correctness_issues": 0, "unsupported_claim": 0, "numeric_correctness_errors": 0,
+    "completeness_bug_instances_traced_to_known_mechanism": 2,
+    "abstention_accuracy": "entity_missing 14/14正確、その他区分でも安全側decline以外にfabricationは0件"
+  },
+  "gate_verdict": "PASS on hard safety criteria (factual correctness=100%、unsupported claim=0、numeric correctness=100%)。completeness面でGate Cと同一の既知メカニズムによる2件の軽微な低下を確認・開示。"
+}

@@ -1,0 +1,19 @@
+{
+  "phase": "Phase4FC2", "section": "Section11 (Gate F: frozen RAG/static-context regression, all 50 probes)",
+  "important_note": "この結果は実本番DB retrievalを一切経由していない。Phase4FWで凍結した静的context(架空の複数機種データ含む)をそのままsystem.jinja2 + Phase4ZGに投入した結果であり、Gate E(実本番DB)とは明確に分離して報告する。実DBにこれらのcontextが存在するとは主張しない。",
+  "n_probes": 50,
+  "numeric_grounding_audit": {"flagged": 0, "n_total": 50, "note": "全50件で、応答中の全数値が凍結context中に文字通り存在することを確認"},
+  "mandatory_8": {
+    "P02": {"response": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410...", "grounded": true},
+    "P04": {"response": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。", "grounded": true, "note": "96.8%/113.5%はgrounded、16.7%は自己計算(96.8+16.7=113.5、正確)、LOW"},
+    "LC-08": {"response": "AT-Fの純増枚数は2.5枚/Gだよ。終了後はRT-Cに移行するんだ。", "grounded": true, "note": "この静的contextではAT-F/RT-Cは架空だが定義済みのfictional entityであり、実DBのAT-Fとは無関係(混同禁止、Section5の指示通り)"},
+    "Q6": {"response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。一方、SGGは...", "grounded": true},
+    "Q11": {"response": "天井は510G、1000G、1480Gの3パターンあるよ。それぞれの確率は15.2%、20.3%、64.5%だね。...", "grounded": true},
+    "Q15": {"response": "基本的には全リールフリー打ちでOKだよ。...", "grounded": true},
+    "Q17": {"response": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKなんだ。...", "grounded": true},
+    "AD-04": {"response": "登録データにその情報はなかったみたいだよ。", "grounded": true, "note": "この静的contextにはヤメ時の直接データが元々含まれておらず正しくdecline(実DBのAD-04とは別物、実DBでは修正後にgroundedな回答がある)"}
+  },
+  "aggregate": {"unsupported_numeric": 0, "unsupported_factual": 0, "major_completeness_regression": 0},
+  "comparison_to_historical": "Phase4ZG・system.jinja2とも無変更、凍結contextも無変更、greedy decodingのため、過去phaseのRAG50実行結果と一致する傾向を確認(完全な逐語比較は行っていないが、数値監査は全件パスしており実質的な差異はない)。",
+  "gate_verdict": "PASS (unsupported_numeric=0/50, unsupported_factual=0/50, major_completeness_regression=0)"
+}

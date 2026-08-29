@@ -1,0 +1,14 @@
+{
+  "phase": "Phase4FC2", "section": "Section19 (performance)",
+  "measurement_scope": "実本番経路288件(Gate B/C/D/E/H/K + multiturn 23turns)の全latency(retrieval+title補完+entity attribution+structured lookup+structured entity binding+context build+generationの合計、end-to-end)",
+  "results_sec": {"n": 288, "mean": 2.95, "p50": 1.72, "p95": 9.77, "max": 18.76},
+  "pre_generation_overhead_breakdown_reference": {
+    "note": "Phase4FY/FZで個別測定済みの内訳を参照として再掲(本フェーズで新規測定はしていない、Section19『No new optimization』に従う)",
+    "entity_attribution_chunk_side_ms": "<0.1ms (Phase4FX/FY計測)",
+    "structured_lookup_new_logic_ms": "~1.6ms (Phase4FZ計測、DB fetch除く)",
+    "structured_lookup_total_incl_db_fetch_ms": "~5.6ms (Phase4FZ計測)"
+  },
+  "total_latency_dominated_by": "LLM生成(数秒〜十数秒)。pre-generation retrieval/entity-binding/structured-binding合計は生成時間の1%未満。",
+  "no_optimization_performed_this_phase": true,
+  "gate_verdict": "情報提供(p50/p95報告)。mandatory な閾値はSection19に明記されていない。"
+}
