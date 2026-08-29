@@ -1,0 +1,20 @@
+{
+  "phase": "Phase4FZ", "sections": "Section13-14 (regression set reuse + RAG mandatory 8)",
+  "section13_regression_set": {
+    "reused_probes": ["Q6", "AT-F", "RT-A/RT-B", "SGG/GG準備中", "ガイアベル", "SU4", "GG当選", "loop/GG stock", "GG中"],
+    "plus_fy_phantom22_coverage": "FYの22件phantom entityのうち、chunk側の挙動は本フェーズで一切変更していないため再検証不要(chunk entity-attribution semantics凍結)。structured facts側の新規リスクに絞り、Phase4FZ独自のGT(phantom15件、real20件、close_concept5件)で追加検証した。",
+    "all_reused_probes_verdict": "PASS(phase4fz_known_failures.json参照)"
+  },
+  "section14_rag_mandatory_8": {
+    "P02": {"prompt": "ボーナス確率について教えて", "verdict": "PASS", "note": "変化なし(実DBに天国ベースのボーナス確率データ無し、正しくdecline)"},
+    "P04": {"prompt": "最低設定と最高設定の機械割の差を教えて", "verdict": "PASS", "note": "97.2%/114.6%はgrounded。'17.4%'は自己計算(LOW、Section15で今回は対象外)"},
+    "LC-08": {"prompt": "AT-Fの性能と終了後の状態を教えて", "verdict": "PASS", "note": "修正確認: 以前は'0.129'の無関係データ漏れがあったが、今回は完全decline"},
+    "Q11": {"prompt": "天井とヤメ時を合わせて初心者向けに説明して", "verdict": "PASS", "note": "天井側は全数値grounded、ヤメ時側は正直にdecline(改善: 以前の曖昧な推測的言及が明確なdeclineに変化)"},
+    "Q15": {"prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して", "verdict": "PASS", "note": "Phase4FYで修正済みの挙動を維持(機種概要chunkを使用しつつ正直に情報不足を開示)"},
+    "Q17": {"prompt": "ミリオンゴッドの遊び方を少し詳しく説明して", "verdict": "PASS", "note": "変化なし、grounded"},
+    "AD-04": {"prompt": "ヤメ時はいつがいい？", "verdict": "PASS (completeness improvement)", "note": "以前は0件selectionでdeclineしていたが、修正後は正しくmetric_key「ヤメ時」を回収し'GG終了後...G-ZONE終了後、32G消化'とgrounded な具体的回答に改善"}
+  },
+  "numeric_completeness_check": "全8件の必須probeについて、応答中の数値のうち構造化データ/chunkに文字通り存在しないものはP04の自己計算差分(17.4%)のみ(既知・LOW・スコープ外)。",
+  "decline_rate_regression": "8件中、declineとなったのはP02・LC-08の2件で、いずれも実DBに該当データが無いことを確認済みの正当なdecline。Phase4FY時点(3件がdecline: P02・LC-08・AD-04)からAD-04が改善しdecline件数は減少(completeness向上)。",
+  "gate_verdict": "PASS (numeric/factual completeness悪化なし、declineの新規発生なし、むしろAD-04でcompleteness改善)"
+}

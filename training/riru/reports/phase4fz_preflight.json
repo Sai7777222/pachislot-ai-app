@@ -1,0 +1,15 @@
+{
+  "phase": "Phase4FZ", "section": "Section20 (preflight, before code changes)",
+  "pytest_baseline": {"result": "252 passed, 0 failed", "note": "Phase4FYのcommit直後、Section2着手前の状態"},
+  "phase4zg_adapter_hash_at_start": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+  "fy_checkpoint_status": {"commit": "b61ee8c", "branch": "checkpoint/identity-closure-phase4zn-baseline", "pushed": "pending user action (push blocked by permission classifier)"},
+  "frozen_files_baseline_state": {
+    "config/prompts/system.jinja2": "unchanged (verified via git status)",
+    "config/prompts/rag_context.jinja2": "unchanged",
+    "src/pachislot_ai/rag/entity_attribution.py": "unchanged from FY commit",
+    "src/pachislot_ai/rag/pipeline.py": "unchanged from FY commit",
+    "src/pachislot_ai/rag/retriever.py": "unchanged from FY commit",
+    "src/pachislot_ai/rag/vector_store.py": "unchanged from FY commit"
+  },
+  "target_file_before_change": "src/pachislot_ai/rag/structured_lookup.py — 素朴なsubstring test(v in query)のみ、entity boundary保護なし"
+}

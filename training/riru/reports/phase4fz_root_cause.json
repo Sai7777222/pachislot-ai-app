@@ -1,0 +1,985 @@
+{
+  "mandatory": [
+    {
+      "query": "天国ロングとは何か説明して",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 48,
+          "display_raw": "0.332"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 52,
+          "display_raw": "0.332"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 56,
+          "display_raw": "0.336"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 60,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 64,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 68,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 72,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 76,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 80,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 84,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 88,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 92,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 96,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 100,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 104,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数到達時のガイアステージ移行率",
+          "dim_key": "ガイアモード",
+          "dim_value": "天国",
+          "fact_id": 108,
+          "display_raw": "66.8% [cite: 262]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 265,
+          "display_raw": "12.7% [cite: 357]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 270,
+          "display_raw": "50.0% [cite: 358]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 275,
+          "display_raw": "66.8% [cite: 358]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 280,
+          "display_raw": "85.9% [cite: 358]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 285,
+          "display_raw": "50.0% [cite: 358]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 290,
+          "display_raw": "0.4% [cite: 361]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 295,
+          "display_raw": "1.2% [cite: 361]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 300,
+          "display_raw": "15.2% [cite: 361]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 305,
+          "display_raw": "50.0% [cite: 361]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 310,
+          "display_raw": "50.0% [cite: 361]"
+        }
+      ],
+      "matched_zones": [],
+      "matched_hints": [],
+      "n_findings_total": 0,
+      "findings_detail": [],
+      "case": "S1_substring_matching"
+    },
+    {
+      "query": "天国について教えて",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 48,
+          "display_raw": "0.332"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 52,
+          "display_raw": "0.332"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 56,
+          "display_raw": "0.336"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 60,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 64,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 68,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 72,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 76,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 80,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 84,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 88,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 92,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 96,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 100,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数振り分け",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 104,
+          "display_raw": "-"
+        },
+        {
+          "metric_key": "ガイアナビ規定回数到達時のガイアステージ移行率",
+          "dim_key": "ガイアモード",
+          "dim_value": "天国",
+          "fact_id": 108,
+          "display_raw": "66.8% [cite: 262]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 265,
+          "display_raw": "12.7% [cite: 357]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 270,
+          "display_raw": "50.0% [cite: 358]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 275,
+          "display_raw": "66.8% [cite: 358]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 280,
+          "display_raw": "85.9% [cite: 358]"
+        },
+        {
+          "metric_key": "[GG準備中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 285,
+          "display_raw": "50.0% [cite: 358]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 290,
+          "display_raw": "0.4% [cite: 361]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 295,
+          "display_raw": "1.2% [cite: 361]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 300,
+          "display_raw": "15.2% [cite: 361]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 305,
+          "display_raw": "50.0% [cite: 361]"
+        },
+        {
+          "metric_key": "[GG中] GGストック当選率",
+          "dim_key": "group",
+          "dim_value": "天国",
+          "fact_id": 310,
+          "display_raw": "50.0% [cite: 361]"
+        }
+      ],
+      "matched_zones": [],
+      "matched_hints": [],
+      "n_findings_total": 20,
+      "findings_detail": [
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=1回: 0.332",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=2回: 0.332",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=3回: 0.336",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=4回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=5回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=6回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=7回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=8回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=9回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=10回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=11回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=12回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=13回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=14回: -",
+        "[ガイアナビ規定回数振り分け] group=天国・規定回数=15回: -",
+        "[ガイアナビ規定回数到達時のガイアステージ移行率] ガイアモード=天国: 66.8%",
+        "[【低確A・低確B・天国準備滞在時】] group=その他・下段黄7・設定=1: 0.0001",
+        "[【低確A・低確B・天国準備滞在時】] group=中段青7・設定=1: -",
+        "[【低確A・低確B・天国準備滞在時】] group=右上がり黄7・中段黄7・設定=1: -",
+        "[【低確A・低確B・天国準備滞在時】] group=SP役・設定=1: -"
+      ],
+      "case": "S1_substring_matching"
+    },
+    {
+      "query": "AT-Fの性能と終了後の状態について教えて",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [
+        {
+          "metric_key": "ガイアステージ終了抽選(保障ゲーム消化後)",
+          "dim_key": "group",
+          "dim_value": "終了",
+          "fact_id": 247,
+          "display_raw": "0.129"
+        },
+        {
+          "metric_key": "ガイアステージ終了抽選(保障ゲーム消化後)",
+          "dim_key": "group",
+          "dim_value": "終了",
+          "fact_id": 249,
+          "display_raw": "0.129"
+        },
+        {
+          "metric_key": "ガイアステージ終了抽選(保障ゲーム消化後)",
+          "dim_key": "group",
+          "dim_value": "終了",
+          "fact_id": 251,
+          "display_raw": "-"
+        }
+      ],
+      "matched_zones": [],
+      "matched_hints": [],
+      "n_findings_total": 0,
+      "findings_detail": [],
+      "case": "S1_substring_matching"
+    },
+    {
+      "query": "GG継続の条件は？",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [
+        {
+          "metric_key": "ガイアステージ終了抽選(保障ゲーム消化後)",
+          "dim_key": "group",
+          "dim_value": "継続",
+          "fact_id": 248,
+          "display_raw": "0.871"
+        },
+        {
+          "metric_key": "ガイアステージ終了抽選(保障ゲーム消化後)",
+          "dim_key": "group",
+          "dim_value": "継続",
+          "fact_id": 250,
+          "display_raw": "0.871"
+        },
+        {
+          "metric_key": "ガイアステージ終了抽選(保障ゲーム消化後)",
+          "dim_key": "group",
+          "dim_value": "継続",
+          "fact_id": 252,
+          "display_raw": "1"
+        }
+      ],
+      "matched_zones": [
+        {
+          "zone_name": "GG",
+          "matched_field": "zone_key",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "GG",
+          "matched_field": "name",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "ゴッドゲーム(GG)",
+          "matched_field": "alias",
+          "matched_value": "GG"
+        }
+      ],
+      "matched_hints": [],
+      "n_findings_total": 20,
+      "findings_detail": [
+        "[GG終了後] : G-ZONE（5G 間の引き戻し状態）",
+        "[黄7連続GG当選率] 連続回数=3連: 0.004",
+        "[黄7連続GG当選率] 連続回数=4連: 0.203",
+        "[黄7連続GG当選率] 連続回数=5連以上: 1",
+        "[青7連続GG当選率] 設定=1・連続回数=3連: 0.012",
+        "[青7連続GG当選率] 設定=2・連続回数=3連: 0.102",
+        "[青7連続GG当選率] 設定=1・連続回数=4連: 0.332",
+        "[青7連続GG当選率] 設定=2・連続回数=4連: 0.5",
+        "[青7連続GG当選率] 設定=1・連続回数=5連以上: 1",
+        "[青7連続GG当選率] 設定=2・連続回数=5連以上: 1",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.01: 0.25",
+        "[[小役契機] GG当選時のループストック振り分け] group=超天国滞在時・ループ率=0.01: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=SP役契機・ループ率=0.01: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.25: 0.25",
+        "[[小役契機] GG当選時のループストック振り分け] group=超天国滞在時・ループ率=0.25: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=SP役契機・ループ率=0.25: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.5: 0.469",
+        "[[小役契機] GG当選時のループストック振り分け] group=超天国滞在時・ループ率=0.5: 0.75",
+        "[[小役契機] GG当選時のループストック振り分け] group=SP役契機・ループ率=0.5: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.8: 0.031"
+      ],
+      "case": "S1_substring_matching"
+    }
+  ],
+  "real_entity": [
+    {
+      "query": "設定6の初当り確率は？",
+      "setting_numbers": [
+        6
+      ],
+      "mentions_payout": false,
+      "mentions_hit_rate": true,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [],
+      "matched_zones": [],
+      "matched_hints": [],
+      "n_findings_total": 20,
+      "findings_detail": [
+        "設定6: 初当り確率 1/295",
+        "[初当り種別] 初当り種別=GOD 揃い: PGG",
+        "[初当り種別] 初当り種別=赤7揃い: SGG",
+        "[初当り種別] 初当り種別=奇数揃い: GG",
+        "[小役確率] 役=ハズレ: 1/5.2",
+        "[小役確率] 役=押し順黃7: 1/1.7",
+        "[小役確率] 役=上段青7: 1/7.9",
+        "[小役確率] 役=中段青7: 1/109.2",
+        "[小役確率] 役=下段黄7: 1/18.4",
+        "[小役確率] 役=右上がり黄7: 1/186.2",
+        "[小役確率] 役=中段黄7: 1/963.8",
+        "[小役確率] 役=共通黄7: 1/1524.1",
+        "[小役確率] 項目=ガイアベル: 1/37.6",
+        "[小役確率] 項目=赤7フェイク: 1/936.2",
+        "[小役確率] 項目=赤7揃い: 1/6900",
+        "[小役確率] 項目=SP役: 1/65536",
+        "[小役確率] 項目=GOD揃い: 1/16384",
+        "[設定変更時・天井ゲーム数振り分け] ゲーム数=510G: 15.2%",
+        "[設定変更時・天井ゲーム数振り分け] ゲーム数=1000G: 20.3%",
+        "[設定変更時・天井ゲーム数振り分け] ゲーム数=1480G: 64.5%"
+      ],
+      "case": "S6_mixed_or_unclear"
+    },
+    {
+      "query": "天井は何ゲームですか",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": true,
+      "matched_metric_fact_dims": [],
+      "matched_zones": [],
+      "matched_hints": [],
+      "n_findings_total": 20,
+      "findings_detail": [
+        "[天井/設定変更時・天井ゲーム数振り分け] ゲーム数=510G: 15.2%",
+        "[天井/設定変更時・天井ゲーム数振り分け] ゲーム数=1000G: 20.3%",
+        "[天井/設定変更時・天井ゲーム数振り分け] ゲーム数=1480G: 64.5%",
+        "[天井/到達天井時のループストック振り分け] ループストック=0.01: 16.7%",
+        "[天井/到達天井時のループストック振り分け] ループストック=0.25: 16.7%",
+        "[天井/到達天井時のループストック振り分け] ループストック=0.5: 16.7%",
+        "[天井/到達天井時のループストック振り分け] ループストック=0.8: 16.7%",
+        "[天井/到達天井時のループストック振り分け] ループストック=1%+Z-ZONE: 33.2%",
+        "[保障ゲーム数3G当選率 (残り保障3G以下時)] 役=ハズレ: 5.3%",
+        "[保障ゲーム数3G当選率 (残り保障3G以下時)] 役=上段青7: 5.3%",
+        "[保障ゲーム数3G当選率 (残り保障3G以下時)] 役=中段青7: 100%",
+        "[保障ゲーム数3G当選率 (残り保障3G以下時)] 役=押し順黄7: 5.3%",
+        "[保障ゲーム数3G当選率 (残り保障3G以下時)] 役=右上がり黄7: 100%",
+        "[保障ゲーム数3G当選率 (残り保障3G以下時)] 役=ガイアベル: 5.3%",
+        "[保障ゲーム数3G当選率 (残り保障3G以下時)] 役=赤7フェイク: 5.3%",
+        "[ガイアステージ終了抽選(保障ゲーム消化後)] group=終了・役=ハズレ: 0.129",
+        "[ガイアステージ終了抽選(保障ゲーム消化後)] group=継続・役=ハズレ: 0.871",
+        "[ガイアステージ終了抽選(保障ゲーム消化後)] group=終了・役=押し順黄7こぼし: 0.129",
+        "[ガイアステージ終了抽選(保障ゲーム消化後)] group=継続・役=押し順黄7こぼし: 0.871",
+        "[ガイアステージ終了抽選(保障ゲーム消化後)] group=終了・役=その他: -"
+      ],
+      "case": "S6_mixed_or_unclear"
+    },
+    {
+      "query": "ガイアベルとは何か説明して",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [
+        {
+          "metric_key": "小役確率",
+          "dim_key": "項目",
+          "dim_value": "ガイアベル",
+          "fact_id": 36,
+          "display_raw": "1/37.6"
+        },
+        {
+          "metric_key": "ガイアステージ中の成立役別・GG当選率",
+          "dim_key": "役",
+          "dim_value": "ガイアベル",
+          "fact_id": 225,
+          "display_raw": "1.6% [cite: 312]"
+        },
+        {
+          "metric_key": "保障ゲーム数3G当選率 (残り保障3G以下時)",
+          "dim_key": "役",
+          "dim_value": "ガイアベル",
+          "fact_id": 243,
+          "display_raw": "5.3% [cite: 318]"
+        }
+      ],
+      "matched_zones": [],
+      "matched_hints": [],
+      "n_findings_total": 3,
+      "findings_detail": [
+        "[小役確率] 項目=ガイアベル: 1/37.6",
+        "[ガイアステージ中の成立役別・GG当選率] 役=ガイアベル: 1.6%",
+        "[保障ゲーム数3G当選率 (残り保障3G以下時)] 役=ガイアベル: 5.3%"
+      ],
+      "case": "S6_mixed_or_unclear"
+    },
+    {
+      "query": "SGGの仕組みを分かりやすく説明して",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [],
+      "matched_zones": [
+        {
+          "zone_name": "GG",
+          "matched_field": "zone_key",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "GG",
+          "matched_field": "name",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "SGG",
+          "matched_field": "zone_key",
+          "matched_value": "SGG"
+        },
+        {
+          "zone_name": "SGG",
+          "matched_field": "name",
+          "matched_value": "SGG"
+        },
+        {
+          "zone_name": "ゴッドゲーム(GG)",
+          "matched_field": "alias",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "スーパーゴッドゲーム (SGG)",
+          "matched_field": "alias",
+          "matched_value": "SGG"
+        }
+      ],
+      "matched_hints": [],
+      "n_findings_total": 13,
+      "findings_detail": [
+        "[【SGG準備中】(準備中開始から×・?・?が出るまで)] group=ストック1個・役=中段青7: 50.0%",
+        "[【SGG準備中】(準備中開始から×・?・?が出るまで)] group=ストック3個・役=中段青7: -",
+        "[【SGG準備中】(準備中開始から×・?・?が出るまで)] group=ストック1個・役=右上がり黄7: 50.0%",
+        "[【SGG準備中】(準備中開始から×・?・?が出るまで)] group=ストック3個・役=右上がり黄7: -",
+        "[【SGG準備中】(準備中開始から×・?・?が出るまで)] group=ストック1個・役=中段黄7: 85.9%",
+        "[【SGG準備中】(準備中開始から×・?・?が出るまで)] group=ストック3個・役=中段黄7: -",
+        "[【SGG準備中】(準備中開始から×・?・?が出るまで)] group=ストック1個・役=SP役: -",
+        "[【SGG準備中】(準備中開始から×・?・?が出るまで)] group=ストック3個・役=SP役: 100%",
+        "[SGG中の高ループストック当選率] タイミング=5連目: 0.125",
+        "[SGG中の高ループストック当選率] タイミング=10連目: 0.125",
+        "[SGG中の高ループストック当選率] タイミング=15連目: 0.125",
+        "[SGG中の高ループストック当選率] タイミング=20連目: 1",
+        "[ゾーン/SGG] ゲーム数: 10~100G/セット; 純増: 7枚/G; 継続率: 75%以上（継続型のスペシャル AT）"
+      ],
+      "case": "S1_substring_matching"
+    },
+    {
+      "query": "GGとSGGの違いを初心者向けに説明して",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [],
+      "matched_zones": [
+        {
+          "zone_name": "GG",
+          "matched_field": "zone_key",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "GG",
+          "matched_field": "name",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "SGG",
+          "matched_field": "zone_key",
+          "matched_value": "SGG"
+        },
+        {
+          "zone_name": "SGG",
+          "matched_field": "name",
+          "matched_value": "SGG"
+        },
+        {
+          "zone_name": "ゴッドゲーム(GG)",
+          "matched_field": "alias",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "スーパーゴッドゲーム (SGG)",
+          "matched_field": "alias",
+          "matched_value": "SGG"
+        }
+      ],
+      "matched_hints": [],
+      "n_findings_total": 20,
+      "findings_detail": [
+        "[GG終了後] : G-ZONE（5G 間の引き戻し状態）",
+        "[黄7連続GG当選率] 連続回数=3連: 0.004",
+        "[黄7連続GG当選率] 連続回数=4連: 0.203",
+        "[黄7連続GG当選率] 連続回数=5連以上: 1",
+        "[青7連続GG当選率] 設定=1・連続回数=3連: 0.012",
+        "[青7連続GG当選率] 設定=2・連続回数=3連: 0.102",
+        "[青7連続GG当選率] 設定=1・連続回数=4連: 0.332",
+        "[青7連続GG当選率] 設定=2・連続回数=4連: 0.5",
+        "[青7連続GG当選率] 設定=1・連続回数=5連以上: 1",
+        "[青7連続GG当選率] 設定=2・連続回数=5連以上: 1",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.01: 0.25",
+        "[[小役契機] GG当選時のループストック振り分け] group=超天国滞在時・ループ率=0.01: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=SP役契機・ループ率=0.01: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.25: 0.25",
+        "[[小役契機] GG当選時のループストック振り分け] group=超天国滞在時・ループ率=0.25: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=SP役契機・ループ率=0.25: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.5: 0.469",
+        "[[小役契機] GG当選時のループストック振り分け] group=超天国滞在時・ループ率=0.5: 0.75",
+        "[[小役契機] GG当選時のループストック振り分け] group=SP役契機・ループ率=0.5: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.8: 0.031"
+      ],
+      "case": "S1_substring_matching"
+    },
+    {
+      "query": "青7が連続したときのGG当選率は？",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [
+        {
+          "metric_key": "ガイアステージ中の小役履歴・GG当選率",
+          "dim_key": "group",
+          "dim_value": "青7",
+          "fact_id": 228,
+          "display_raw": "0.059"
+        },
+        {
+          "metric_key": "ガイアステージ中の小役履歴・GG当選率",
+          "dim_key": "group",
+          "dim_value": "青7",
+          "fact_id": 230,
+          "display_raw": "0.059"
+        },
+        {
+          "metric_key": "ガイアステージ中の小役履歴・GG当選率",
+          "dim_key": "group",
+          "dim_value": "青7",
+          "fact_id": 232,
+          "display_raw": "0.25"
+        },
+        {
+          "metric_key": "ガイアステージ中の小役履歴・GG当選率",
+          "dim_key": "group",
+          "dim_value": "青7",
+          "fact_id": 234,
+          "display_raw": "0.75"
+        },
+        {
+          "metric_key": "ガイアステージ中の小役履歴・GG当選率",
+          "dim_key": "group",
+          "dim_value": "青7",
+          "fact_id": 236,
+          "display_raw": "1"
+        },
+        {
+          "metric_key": "状況",
+          "dim_key": "項目",
+          "dim_value": "当選率",
+          "fact_id": 387,
+          "display_raw": "特殊抽選当選時の恩恵"
+        }
+      ],
+      "matched_zones": [
+        {
+          "zone_name": "GG",
+          "matched_field": "zone_key",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "GG",
+          "matched_field": "name",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "ゴッドゲーム(GG)",
+          "matched_field": "alias",
+          "matched_value": "GG"
+        }
+      ],
+      "matched_hints": [],
+      "n_findings_total": 20,
+      "findings_detail": [
+        "[GG終了後] : G-ZONE（5G 間の引き戻し状態）",
+        "[黄7連続GG当選率] 連続回数=3連: 0.004",
+        "[黄7連続GG当選率] 連続回数=4連: 0.203",
+        "[黄7連続GG当選率] 連続回数=5連以上: 1",
+        "[青7連続GG当選率] 設定=1・連続回数=3連: 0.012",
+        "[青7連続GG当選率] 設定=2・連続回数=3連: 0.102",
+        "[青7連続GG当選率] 設定=1・連続回数=4連: 0.332",
+        "[青7連続GG当選率] 設定=2・連続回数=4連: 0.5",
+        "[青7連続GG当選率] 設定=1・連続回数=5連以上: 1",
+        "[青7連続GG当選率] 設定=2・連続回数=5連以上: 1",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.01: 0.25",
+        "[[小役契機] GG当選時のループストック振り分け] group=超天国滞在時・ループ率=0.01: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=SP役契機・ループ率=0.01: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.25: 0.25",
+        "[[小役契機] GG当選時のループストック振り分け] group=超天国滞在時・ループ率=0.25: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=SP役契機・ループ率=0.25: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.5: 0.469",
+        "[[小役契機] GG当選時のループストック振り分け] group=超天国滞在時・ループ率=0.5: 0.75",
+        "[[小役契機] GG当選時のループストック振り分け] group=SP役契機・ループ率=0.5: -",
+        "[[小役契機] GG当選時のループストック振り分け] group=天国滞在時・ループ率=0.8: 0.031"
+      ],
+      "case": "S1_substring_matching"
+    },
+    {
+      "query": "Z-ZONEって何？",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [],
+      "matched_zones": [
+        {
+          "zone_name": "Z-ZONE",
+          "matched_field": "zone_key",
+          "matched_value": "Z-ZONE"
+        },
+        {
+          "zone_name": "Z-ZONE",
+          "matched_field": "name",
+          "matched_value": "Z-ZONE"
+        }
+      ],
+      "matched_hints": [],
+      "n_findings_total": 19,
+      "findings_detail": [
+        "[Z-ZONE昇格率] 設定=1: 0.012",
+        "[Z-ZONE昇格率] 設定=2: 0.01",
+        "[Z-ZONE昇格率] 設定=3: 0.042",
+        "[Z-ZONE昇格率] 設定=4: 0.01",
+        "[Z-ZONE昇格率] 設定=5: 0.116",
+        "[Z-ZONE昇格率] 設定=6: 0.01",
+        "[Z-ZONE昇格率 (非ガイアステージ)] 設定=1: 1.2%",
+        "[Z-ZONE昇格率 (非ガイアステージ)] 設定=2: 1.0%",
+        "[Z-ZONE昇格率 (非ガイアステージ)] 設定=3: 4.2%",
+        "[Z-ZONE昇格率 (非ガイアステージ)] 設定=4: 1.0%",
+        "[Z-ZONE昇格率 (非ガイアステージ)] 設定=5: 11.6%",
+        "[Z-ZONE昇格率 (非ガイアステージ)] 設定=6: 1.0%",
+        "[GGストックあり時のZ-ZONE当選率] 役=上段青7: 0.1%",
+        "[GGストックあり時のZ-ZONE当選率] 役=中段青7: 4.0%",
+        "[GGストックあり時のZ-ZONE当選率] 役=赤7フェイク: 0.1%",
+        "[GGストックあり時のZ-ZONE当選率] 役=右上がり黄7: 18.0%",
+        "[GGストックあり時のZ-ZONE当選率] 役=中段黄7: 25.0%",
+        "[GGストックあり時のZ-ZONE当選率] 役=SP役: 30.0%",
+        "[ゾーン/Z-ZONE] 突入契機: ガイアステージ中のGG当選時の一部など; 継続ゲーム数: 5G+a; 純増: 約7枚/G; 消化中の抽選: GGストック抽選、Z-GAMEへの移行; 滞在中の黄7確率: 1/1.4 (フルナビ); 備考: 一度も黄7が成立しなければ特殊抽選が発生; Z-ZONE/Z-GAME解説: ガイアステージ経由で移行するGGの上乗せゾーン。"
+      ],
+      "case": "S1_substring_matching"
+    },
+    {
+      "query": "GG準備中とは何ですか",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [],
+      "matched_zones": [
+        {
+          "zone_name": "GG",
+          "matched_field": "zone_key",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "GG",
+          "matched_field": "name",
+          "matched_value": "GG"
+        },
+        {
+          "zone_name": "ゴッドゲーム(GG)",
+          "matched_field": "alias",
+          "matched_value": "GG"
+        }
+      ],
+      "matched_hints": [],
+      "n_findings_total": 20,
+      "findings_detail": [
+        "[[GG準備中] GGストック当選率] group=低確A・役=ハズレ: -",
+        "[[GG準備中] GGストック当選率] group=低確B・役=ハズレ: -",
+        "[[GG準備中] GGストック当選率] group=通常・役=ハズレ: 2.7%",
+        "[[GG準備中] GGストック当選率] group=天国準備・役=ハズレ: 2.7%",
+        "[[GG準備中] GGストック当選率] group=天国・役=ハズレ: 12.7%",
+        "[[GG準備中] GGストック当選率] group=低確A・役=中段青7: -",
+        "[[GG準備中] GGストック当選率] group=低確B・役=中段青7: -",
+        "[[GG準備中] GGストック当選率] group=通常・役=中段青7: 18.8%",
+        "[[GG準備中] GGストック当選率] group=天国準備・役=中段青7: 18.8%",
+        "[[GG準備中] GGストック当選率] group=天国・役=中段青7: 50.0%",
+        "[[GG準備中] GGストック当選率] group=低確A・役=右上がり黄7: -",
+        "[[GG準備中] GGストック当選率] group=低確B・役=右上がり黄7: -",
+        "[[GG準備中] GGストック当選率] group=通常・役=右上がり黄7: 33.2%",
+        "[[GG準備中] GGストック当選率] group=天国準備・役=右上がり黄7: 33.2%",
+        "[[GG準備中] GGストック当選率] group=天国・役=右上がり黄7: 66.8%",
+        "[[GG準備中] GGストック当選率] group=低確A・役=中段黄7: 50.0%",
+        "[[GG準備中] GGストック当選率] group=低確B・役=中段黄7: 50.0%",
+        "[[GG準備中] GGストック当選率] group=通常・役=中段黄7: 50.0%",
+        "[[GG準備中] GGストック当選率] group=天国準備・役=中段黄7: 50.0%",
+        "[[GG準備中] GGストック当選率] group=天国・役=中段黄7: 85.9%"
+      ],
+      "case": "S1_substring_matching"
+    },
+    {
+      "query": "引き戻しについて教えて",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [],
+      "matched_zones": [],
+      "matched_hints": [],
+      "n_findings_total": 0,
+      "findings_detail": [],
+      "case": "NO_MATCH"
+    },
+    {
+      "query": "小役確率について教えて",
+      "setting_numbers": [],
+      "mentions_payout": false,
+      "mentions_hit_rate": false,
+      "mentions_ceiling": false,
+      "matched_metric_fact_dims": [],
+      "matched_zones": [],
+      "matched_hints": [],
+      "n_findings_total": 13,
+      "findings_detail": [
+        "[小役確率] 役=ハズレ: 1/5.2",
+        "[小役確率] 役=押し順黃7: 1/1.7",
+        "[小役確率] 役=上段青7: 1/7.9",
+        "[小役確率] 役=中段青7: 1/109.2",
+        "[小役確率] 役=下段黄7: 1/18.4",
+        "[小役確率] 役=右上がり黄7: 1/186.2",
+        "[小役確率] 役=中段黄7: 1/963.8",
+        "[小役確率] 役=共通黄7: 1/1524.1",
+        "[小役確率] 項目=ガイアベル: 1/37.6",
+        "[小役確率] 項目=赤7フェイク: 1/936.2",
+        "[小役確率] 項目=赤7揃い: 1/6900",
+        "[小役確率] 項目=SP役: 1/65536",
+        "[小役確率] 項目=GOD揃い: 1/16384"
+      ],
+      "case": "NO_MATCH"
+    }
+  ]
+}

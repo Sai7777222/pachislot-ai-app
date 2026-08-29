@@ -1,0 +1,804 @@
+[
+  {
+    "id": "FZ-K01",
+    "stage": "stage9_known_failure",
+    "label": "Q6_GG_SGG",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "chunk_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GGとSGGは継続の仕組みが違うよ。GGはGG当選時にループストックが付くんだけど、SGGは継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+    "latency_sec": 10.61965298652649
+  },
+  {
+    "id": "FZ-K02",
+    "stage": "stage9_known_failure",
+    "label": "SGG_GG準備中",
+    "prompt": "SGGの仕組みを分かりやすく説明して",
+    "chunk_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わる仕組みなんだ。継続契機ごとにゲーム数の振り分けがあるんだけど、5の倍数セットでは押し順黄7が100Gになる確率が0.795ってなってるよ。",
+    "latency_sec": 6.159381866455078
+  },
+  {
+    "id": "FZ-K03",
+    "stage": "stage9_known_failure",
+    "label": "ガイアベル",
+    "prompt": "ガイアベルとは何か説明して",
+    "chunk_titles": [
+      "小役の停止例一覧",
+      "モードごとの違い",
+      "補足解説",
+      "天国モード解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "ガイアベルは、1/37.6の確率で成立する小役だよ。成立すると1枚の払い出しになるんだ。",
+    "latency_sec": 2.768467426300049
+  },
+  {
+    "id": "FZ-K04",
+    "stage": "stage9_known_failure",
+    "label": "SU4",
+    "prompt": "SU4について教えて",
+    "chunk_titles": [
+      "炎・戦車解説"
+    ],
+    "structured_source_count": 0,
+    "is_empty": false,
+    "response": "SU4は発生した時点でレア役以上濃厚なんだ。SU4自体は確定役(赤7揃いorGOD)成立の大チャンスなんだ。",
+    "latency_sec": 3.2449088096618652
+  },
+  {
+    "id": "FZ-K05",
+    "stage": "stage9_known_failure",
+    "label": "GG当選",
+    "prompt": "GG当選とSGG当選の違いを教えて",
+    "chunk_titles": [
+      "青7連続時GG当選率",
+      "「SGG当選」について"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "登録データにSGG当選の情報は見つからないんだ。",
+    "latency_sec": 1.6770832538604736
+  },
+  {
+    "id": "FZ-K06",
+    "stage": "stage9_known_failure",
+    "label": "loop_gg_stock",
+    "prompt": "ループストックとGGストックの違いを教えて",
+    "chunk_titles": [
+      "高ループストック解説",
+      "表モード概要",
+      "Z-ZONE解説",
+      "効果"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "ループストックはGG当選時に抽選されるもので、GG継続中はGGストックの有無が示唆されるんだ。ループストックは成立役を参照してZ-ZONEを抽選するんだけど、GGストックはGG当選時に抽選されて、GG継続中に示唆されるんだ。",
+    "latency_sec": 5.789204359054565
+  },
+  {
+    "id": "FZ-K07",
+    "stage": "stage9_known_failure",
+    "label": "AT-F",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにその情報は見つからないんだ。",
+    "latency_sec": 1.0642340183258057
+  },
+  {
+    "id": "FZ-K08",
+    "stage": "stage9_known_failure",
+    "label": "RT-A_RT-B",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにRT-AとRT-Bの違いについての情報は見つかりませんでした。",
+    "latency_sec": 1.5047965049743652
+  },
+  {
+    "id": "P02",
+    "stage": "stage14_rag50_mandatory",
+    "label": "",
+    "prompt": "ボーナス確率について教えて",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにその情報は見つからないみたいだよ。",
+    "latency_sec": 1.1605417728424072
+  },
+  {
+    "id": "P04",
+    "stage": "stage14_rag50_mandatory",
+    "label": "",
+    "prompt": "最低設定と最高設定の機械割の差を教えて",
+    "chunk_titles": [],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "最低設定（設定1）の機械割は97.2%、最高設定（設定6）の機械割は114.6%なので、差は17.4%になります。",
+    "latency_sec": 3.395764112472534
+  },
+  {
+    "id": "LC-08",
+    "stage": "stage14_rag50_mandatory",
+    "label": "",
+    "prompt": "AT-Fの性能と終了後の状態を教えて",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにその情報は見つからないんだ。",
+    "latency_sec": 1.2950642108917236
+  },
+  {
+    "id": "Q6",
+    "stage": "stage14_rag50_mandatory",
+    "label": "",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "chunk_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GGとSGGは継続の仕組みが違うよ。GGはGG当選時にループストックが付くんだけど、SGGは継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+    "latency_sec": 39.87989640235901
+  },
+  {
+    "id": "Q11",
+    "stage": "stage14_rag50_mandatory",
+    "label": "",
+    "prompt": "天井とヤメ時を合わせて初心者向けに説明して",
+    "chunk_titles": [
+      "天井突入条件",
+      "天井突入条件（設定変更時）",
+      "天井恩恵",
+      "天井恩恵詳細",
+      "「ヤメ」について"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "天井は最大1480Gまでで、その中で510G、1000G、1480Gのどれかになる確率は15.2%、20.3%、64.5%だよ。天井到達時にループストックが0.01、0.25、0.5、0.8のどれかになる確率は16.7%ずつで、残りの33.2%は1%ループ+Z-ZONEになるんだ。Z-ZONEは天井到達時の約3回に1回で獲得できる恩恵があるよ。ただし、ヤメ時の情報は登録データにないから、そこは不明なんだ。",
+    "latency_sec": 57.70951771736145
+  },
+  {
+    "id": "Q15",
+    "stage": "stage14_rag50_mandatory",
+    "label": "",
+    "prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+    "chunk_titles": [
+      "機種概要"
+    ],
+    "structured_source_count": 0,
+    "is_empty": false,
+    "response": "ミリオンゴッドは、圧倒的な出玉感と洗練されたゲーム性が特徴のパチスロだよ。登録データには具体的な遊び方の説明はなかったけど、まずはその魅力を楽しむのがおすすめだね。",
+    "latency_sec": 16.999568462371826
+  },
+  {
+    "id": "Q17",
+    "stage": "stage14_rag50_mandatory",
+    "label": "",
+    "prompt": "ミリオンゴッドの遊び方を少し詳しく説明して",
+    "chunk_titles": [
+      "機種概要"
+    ],
+    "structured_source_count": 0,
+    "is_empty": false,
+    "response": "ミリオンゴッドの遊び方は、まずリールが止まるまで待って、小役が揃ったらその役の払い出しを受け取るところから始まります。その後、ボーナス確定役が揃うとボーナスへ突入します。ボーナス中は高確率状態が続き、ボーナス終了後も一定期間は高確率が継続するので、ボーナス後の期待値も高いです。",
+    "latency_sec": 31.011433601379395
+  },
+  {
+    "id": "AD-04",
+    "stage": "stage14_rag50_mandatory",
+    "label": "",
+    "prompt": "ヤメ時はいつがいい？",
+    "chunk_titles": [],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GG終了後…G-ZONE終了後、32G消化がいいみたいだよ。",
+    "latency_sec": 8.535408735275269
+  },
+  {
+    "id": "FZ-M01",
+    "stage": "stage9_fz_mandatory",
+    "label": "",
+    "prompt": "天国ロングとは何か説明して",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにありません。",
+    "latency_sec": 3.8151116371154785
+  },
+  {
+    "id": "FZ-M02",
+    "stage": "stage9_fz_mandatory",
+    "label": "",
+    "prompt": "天国について教えて",
+    "chunk_titles": [
+      "天国モード解説",
+      "裏天国解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "天国へ移行すると、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も66.8%と大幅にアップするよ。ループ率も75%と高いんだ。",
+    "latency_sec": 23.003525972366333
+  },
+  {
+    "id": "FZ-M03",
+    "stage": "stage9_fz_mandatory",
+    "label": "",
+    "prompt": "GG継続の条件は？",
+    "chunk_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】",
+      "継続期待度補足",
+      "天井突入条件",
+      "天井突入条件（設定変更時）"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GG継続の条件は、ハズレ、上段青7、赤7フェイク、押し順黄7、ガイアベル、下段黄7、右上がり黄7、GOD揃い、赤7揃い、継続ストックの10パターンがあるよ。それぞれの確率は、5の倍数以外のセットだと0.83〜0.883、0.114〜0.136、0.034〜0.078、0.011〜0.051の範囲にあるんだ。5の倍数セットだと押し順黄7は0.795、0.136、0.034、0.034になるよ。",
+    "latency_sec": 86.77367806434631
+  },
+  {
+    "id": "GTP-01",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "天国ロングとは何か説明して",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにありません。",
+    "latency_sec": 0.6347825527191162
+  },
+  {
+    "id": "GTP-02",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにその情報は見つからないんだ。",
+    "latency_sec": 8.311131238937378
+  },
+  {
+    "id": "GTP-03",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにRT-AとRT-Bの違いについての情報は見つかりませんでした。",
+    "latency_sec": 5.431568145751953
+  },
+  {
+    "id": "GTP-04",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "GGプラスとは何か説明して",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにGGプラスについての情報は見つからないんだ。適当に説明すると誤った情報を流すことになるから、わからないままにしておくね。",
+    "latency_sec": 13.557350397109985
+  },
+  {
+    "id": "GTP-05",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "SGG-EXとは何か説明して",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにその情報は見つからないんだ。",
+    "latency_sec": 4.768917083740234
+  },
+  {
+    "id": "GTP-06",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "ガイアステージMAXについて教えて",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにガイアステージMAXの情報は見つからないんだ。",
+    "latency_sec": 8.216384410858154
+  },
+  {
+    "id": "GTP-07",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "Z-ZONE極について教えて",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにZ-ZONE極の情報は見つからないんだ。",
+    "latency_sec": 4.599738121032715
+  },
+  {
+    "id": "GTP-08",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "確定役ネオとは何か説明して",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにありません。",
+    "latency_sec": 4.107348442077637
+  },
+  {
+    "id": "GTP-09",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "天国準備中ロングとは何か説明して",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにその情報は見つからないんだ。適当に説明すると誤った情報を伝えることになるから、わからないままにしておくね。",
+    "latency_sec": 11.352754354476929
+  },
+  {
+    "id": "GTP-10",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "ガイアベルSPとは何か説明して",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにありません。",
+    "latency_sec": 4.084423065185547
+  },
+  {
+    "id": "GTP-11",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "モードαとモードβの違いを簡単に教えて",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにモードαとモードβの違いについての情報は見つからないんだ。",
+    "latency_sec": 9.051270484924316
+  },
+  {
+    "id": "GTP-12",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "裏ZONEについて教えて",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データに裏ZONEの情報は見つからないんだ。",
+    "latency_sec": 4.674387454986572
+  },
+  {
+    "id": "GTP-13",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "継続ロングとは何ですか",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データに継続ロングについての情報は見つかりませんでした。",
+    "latency_sec": 8.834832191467285
+  },
+  {
+    "id": "GTP-14",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "終了ショートとは何ですか",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データに終了ショートについての情報は見つかりませんでした。",
+    "latency_sec": 5.306302785873413
+  },
+  {
+    "id": "GTP-15",
+    "stage": "stage_gt_phantom",
+    "label": "",
+    "prompt": "PGGロングとは何ですか",
+    "chunk_titles": [],
+    "structured_source_count": 0,
+    "is_empty": true,
+    "response": "登録データにありません。",
+    "latency_sec": 4.401580333709717
+  },
+  {
+    "id": "GTR-01",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "GGについて教えて",
+    "chunk_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GG中は、SP役契機なら50%でループストックが確定するよ。",
+    "latency_sec": 9.547121286392212
+  },
+  {
+    "id": "GTR-02",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "SGGについて教えて",
+    "chunk_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "SGGは10〜100Gの範囲でゲーム数が決まるよ。純増は7枚/Gで、継続率は75%以上なんだ。",
+    "latency_sec": 19.17177152633667
+  },
+  {
+    "id": "GTR-03",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "ゼウスモードとは何ですか",
+    "chunk_titles": [
+      "G-ZONE解説",
+      "ステージ変化解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "ゼウスモードは、GG連チャン時に一部の状況で突入するゾーンです。突入すると表モードが超高確に固定され、GG中は独自のループ率で継続抽選が行われます。GG中にストックを獲得すればほぼ継続濃厚で、ストックなしでも約50%で継続します。",
+    "latency_sec": 28.145308256149292
+  },
+  {
+    "id": "GTR-04",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "ガイアステージについて教えて",
+    "chunk_titles": [
+      "Z-ZONE昇格に関する解説",
+      "ガイアナビの解説",
+      "モードごとの違い",
+      "補足解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "ガイアステージは、ガイアナビ(右ナビ)発生でガイアモードに滞在している状態から移行するステージだよ。規定回数到達時にガイアモードに応じてガイアステージ移行を抽選するんだ。",
+    "latency_sec": 29.83391809463501
+  },
+  {
+    "id": "GTR-05",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "PGGとは何ですか",
+    "chunk_titles": [
+      "演出恩恵"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "PGGはループストックがある状態での突入演出のことですね。",
+    "latency_sec": 4.631612777709961
+  },
+  {
+    "id": "GTR-06",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "Z-ZONEって何？",
+    "chunk_titles": [
+      "Z-ZONE昇格に関する解説",
+      "Z-ZONE解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GG当選時に抽選されるゾーンで、GGストックがある状態で成立役によってZ-ZONE当選率が変わるんだ。",
+    "latency_sec": 12.475914239883423
+  },
+  {
+    "id": "GTR-07",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "設定6の初当り確率は？",
+    "chunk_titles": [
+      "天井突入条件（設定変更時）",
+      "効果",
+      "小役確率補足"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "設定6の初当り確率は1/295だよ。",
+    "latency_sec": 8.88201904296875
+  },
+  {
+    "id": "GTR-08",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "天井は何ゲームですか",
+    "chunk_titles": [
+      "天井突入条件",
+      "天井突入条件（設定変更時）",
+      "天井恩恵",
+      "天井恩恵詳細",
+      "天井解説",
+      "前兆ゲーム数解説",
+      "保障ゲーム解説",
+      "最終ゲーム解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "天井は510G、1000G、1480Gの3種類があります。それぞれの確率は15.2%、20.3%、64.5%です。",
+    "latency_sec": 18.814990043640137
+  },
+  {
+    "id": "GTR-09",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "機械割について教えて",
+    "chunk_titles": [],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "設定1〜6の機械割は、97.2%〜114.6%だよ。",
+    "latency_sec": 12.363555192947388
+  },
+  {
+    "id": "GTR-10",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "設定3の機械割は？",
+    "chunk_titles": [
+      "天井突入条件（設定変更時）",
+      "「機械割」について"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "設定3の機械割は102.1%だよ。",
+    "latency_sec": 4.8755106925964355
+  },
+  {
+    "id": "GTR-11",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "chunk_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GGとSGGは継続の仕組みが違うよ。GGはGG当選時にループストックが付くんだけど、SGGは継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+    "latency_sec": 39.59371304512024
+  },
+  {
+    "id": "GTR-12",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "GGとPGGの違いを教えて",
+    "chunk_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "演出恩恵"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GGはGG4セット以上で期待枚数3,000枚超える状態のことだよ。PGGはGG当選時にループストックが発生する状態で、ループ率は0.01だと0.25、0.25だと0.469、0.5だと0.75になるんだ。",
+    "latency_sec": 31.26401948928833
+  },
+  {
+    "id": "GTR-13",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "ガイアステージとZ-ZONEの違いを教えて",
+    "chunk_titles": [
+      "Z-ZONE昇格に関する解説",
+      "ガイアナビの解説",
+      "モードごとの違い",
+      "補足解説",
+      "Z-ZONE解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "ガイアステージはガイアベル(ガイアナビ)規定回数到達時に移行抽選されるステージで、低確、通常、天国の3種類があるよ。移行率はモードによって10.2%〜66.8%まで変わるんだ。Z-ZONEはGG当選時に抽選されるステージで、昇格率は設定3・5が優遇されていて、特に設定5は11.6%と高いんだ。",
+    "latency_sec": 44.55207371711731
+  },
+  {
+    "id": "GTR-14",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "ゼウスモードとガイアステージの関係を教えて",
+    "chunk_titles": [
+      "G-ZONE解説",
+      "ステージ変化解説",
+      "Z-ZONE昇格に関する解説",
+      "ガイアナビの解説",
+      "モードごとの違い",
+      "補足解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "ガイアステージ中にGG当選すると、その時点でZ-ZONEへの昇格抽選があるんだ。昇格率は設定によって変わるんだけど、特に設定5だと昇格率が11.6%と高いんだよ。",
+    "latency_sec": 27.433468103408813
+  },
+  {
+    "id": "GTR-15",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "GG準備中とは何ですか",
+    "chunk_titles": [
+      "準備中解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GG準備中は、GG中の前段階で、GG準備中開始から「×・?・?」が出るまでの間が対象になります。全体的にストック当選率はGG中より高いです。",
+    "latency_sec": 18.452807903289795
+  },
+  {
+    "id": "GTR-16",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "GG中の状態について教えて",
+    "chunk_titles": [
+      "GG中解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GG中の状態では、役によってGGストック当選率が変わるよ。ハズレ役だと0.2〜0.4%、中段青7役だと1.2〜50.0%、右上がり黄7役だと1.2〜15.2%、中段黄7役だと10.2〜50.0%になるんだ。ただし、SP役は状況を問わず50%でストックを獲得するよ。",
+    "latency_sec": 38.96032238006592
+  },
+  {
+    "id": "GTR-17",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "ガイアナビの規定回数振り分けを教えて",
+    "chunk_titles": [
+      "ガイアナビの解説",
+      "ガイアナビ解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "ガイアナビの規定回数振り分けは、低確・通常・天国・設定変更・有利区間移行の4つのグループがあるよ。それぞれのグループごとに1回〜5回までの振り分けがあるんだ。",
+    "latency_sec": 22.60305619239807
+  },
+  {
+    "id": "GTR-18",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "ガイアステージ終了抽選について教えて",
+    "chunk_titles": [],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "ガイアステージ終了抽選(保障ゲーム消化後)の確率は、ハズレが0.129、押し順黄7こぼしが0.129、その他が1だよ。",
+    "latency_sec": 15.985908269882202
+  },
+  {
+    "id": "GTR-19",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "青7連続時のGG当選率は？",
+    "chunk_titles": [
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "青7連続時GG当選率",
+      "小役履歴補足",
+      "表モード概要",
+      "天国モード解説",
+      "「連続時」について"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "青7連続時のGG当選率は、設定1だと3連で0.012、4連で0.332、5連以上だと1になるよ。設定2だと3連で0.102、4連で0.5、5連以上だと1になるんだ。",
+    "latency_sec": 25.572916507720947
+  },
+  {
+    "id": "GTR-20",
+    "stage": "stage_gt_real",
+    "label": "",
+    "prompt": "初当りについて教えて",
+    "chunk_titles": [
+      "効果"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "初当り確率は、設定1が1/533、設定2が1/420、設定3が1/496、設定4が1/338、設定5が1/455、設定6が1/295だよ。初当り種別はGOD揃いがPGG、赤7揃いがSGG、奇数揃いがGGになるんだ。",
+    "latency_sec": 29.94170641899109
+  },
+  {
+    "id": "GTC-01",
+    "stage": "stage_gt_close_concept",
+    "label": "",
+    "prompt": "SGGの仕組みを分かりやすく説明して",
+    "chunk_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わる仕組みなんだ。継続契機ごとにゲーム数の振り分けがあるんだけど、5の倍数セットでは押し順黄7が100Gになる確率が0.795ってなってるよ。",
+    "latency_sec": 26.707945346832275
+  },
+  {
+    "id": "GTC-02",
+    "stage": "stage_gt_close_concept",
+    "label": "",
+    "prompt": "PGGについて教えて",
+    "chunk_titles": [
+      "演出恩恵"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "PGGはループストックありで突入すると、擬似遊技と実遊技のどちらでも恩恵があるよ。",
+    "latency_sec": 10.132127285003662
+  },
+  {
+    "id": "GTC-03",
+    "stage": "stage_gt_close_concept",
+    "label": "",
+    "prompt": "GG準備中とGG中の違いを教えて",
+    "chunk_titles": [
+      "準備中解説",
+      "GG中解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "GG準備中は、ハズレ役だと2.7〜12.7%、中段青7だと18.8〜50.0%、右上がり黄7だと33.2〜66.8%、中段黄7だと50.0〜85.9%でストック当選するよ。GG中はSP役が50%でストック当選するんだ。",
+    "latency_sec": 30.72475790977478
+  },
+  {
+    "id": "GTC-04",
+    "stage": "stage_gt_close_concept",
+    "label": "",
+    "prompt": "天国と天国準備の違いを教えて",
+    "chunk_titles": [
+      "天国モード解説",
+      "裏天国解説",
+      "「天国準備」について"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "登録データに「天国準備」についての情報は見つからないんだ。",
+    "latency_sec": 8.459834337234497
+  },
+  {
+    "id": "GTC-05",
+    "stage": "stage_gt_close_concept",
+    "label": "",
+    "prompt": "ガイアステージとガイアナビの違いを教えて",
+    "chunk_titles": [
+      "Z-ZONE昇格に関する解説",
+      "ガイアナビの解説",
+      "モードごとの違い",
+      "補足解説",
+      "ガイアナビ解説"
+    ],
+    "structured_source_count": 1,
+    "is_empty": false,
+    "response": "ガイアステージはガイアベル規定回数到達時に抽選されるモードで、低確、通常、天国の3種類があるよ。ガイアナビはガイアステージ移行のチャンスを示す右ナビのことだね。",
+    "latency_sec": 22.625751972198486
+  }
+]

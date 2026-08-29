@@ -1,0 +1,28 @@
+{
+  "phase": "Phase4FZ", "section": "Section6-8 (entity binding architecture)",
+  "candidate_selected": "SF-A (Exact/Boundary Binding)",
+  "candidate_sf_b_considered": "SF-B (Parent-aware Binding)は不採用。metric_facts/zone/hintのスキーマにparent-child関係を表す明示的フィールドが存在しないことをSection4監査で確認済みであり、推測でparent化することはSection7で明示的に禁止されているため、適用対象がない。",
+  "design": {
+    "principle": "chunkのtitleと同様、metric_key(例: 「[GG中] GGストック当選率」)を概念の一意識別子として扱い、Phase4FX/FYで既に検証済みのquery entity抽出(extract_query_entities)とtitle_match_score()をそのまま再利用してmetric_keyとの一致を判定する(新しい辞書・新しいregexは導入しない)。",
+    "two_criteria_per_fact": [
+      "(a) metric_key一致: いずれかのquery entityがtitle_match_score()でfact.metric_keyと一致(境界安全、Phase4FX/FYの既存関数を無変更のまま再利用)",
+      "(b) dimension値一致: いずれかのdims値が新設の_value_matches_query_with_boundary()で生クエリ文字列と境界安全に一致(役名・項目名等、metric_keyに現れない具体的entity識別子[例: ガイアベル]を救済するため)"
+    ],
+    "why_two_criteria": "Section4の監査で、metric_keyだけでは正当なdimension値ベースのentity(例: 「小役確率」テーブルのdims={項目:ガイアベル})を排除してしまうことが判明(既存integration testの回帰で実証)。一方、dims値のみを無条件に使うと「天国」「継続」「終了」等、複数の異なるmetric_keyで使い回される汎用stateラベルが漏れる。両方を独立した境界安全な条件として使うことで、両方の正当なケースを救いつつ漏れを防ぐ。"
+  },
+  "new_function": {
+    "name": "_value_matches_query_with_boundary(value, query)",
+    "file": "src/pachislot_ai/rag/structured_lookup.py",
+    "purpose": "既存title_match_score()のASCII単語境界チェックだけでは「天国」と「天国ロング」、「SGG」と「SGG-EX」のような漢字・カタカナ・ハイフンを含む複合語衝突を防げないことがSection4監査中に判明したため、対称的な境界チェック(前後の文字が漢字/カタカナ/ハイフン/ASCII英数字でなければ安全)を持つ専用関数を新設した。",
+    "why_not_modify_title_match_score": "Section3で明示的に凍結されているchunk entity-attribution semantics(title_match_score含む)を変更しないため。title_match_score()自体は無変更のまま、metric_key照合にのみ再利用し、dims値/zone名の照合には別の新関数を使う設計とした。",
+    "scope": "structured_lookup.py内でのみ使用。chunkのretrieval/entity_attributionには一切影響しない。"
+  },
+  "applied_to": ["metric_facts の汎用dims値マッチング", "zone(zone_key/name/aliases)マッチング"],
+  "not_applied_to": {
+    "hints_trigger_pattern": "Section4監査で、hint.trigger_patternが4件の必須ケース(天国ロング/AT-F/RT-A・RT-B/GG継続)のいずれの誤帰属にも関与していないことを確認したため、スコープ外として無変更のまま維持した(Section3の新しい研究を広げない方針に従う)。"
+  },
+  "manual_dictionary_used": false,
+  "giant_regex_used": false,
+  "known_probe_hack_used": false,
+  "boundary_principle_alignment_with_fy": "FYのtitle_match_score()と同じ『前後の文字が単語継続を示す文字でなければ安全』という原則を踏襲しつつ、ASCII専用だったFYの実装ではカバーできない日本語スクリプト(漢字/カタカナ)の複合語衝突に対応する拡張を行った(FY自体は変更していない)。"
+}

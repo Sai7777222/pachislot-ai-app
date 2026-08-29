@@ -1,0 +1,48 @@
+{
+  "phase": "Phase4FZ", "section": "Section9 (mandatory known failures via actual production path)",
+  "method": "実本番RagPipeline(entity_attribution + 修正済みstructured_lookup) + system.jinja2(無変更) + Phase4ZG(無変更)による実生成。",
+  "mandatory_results": {
+    "天国ロング": {
+      "id": "FZ-M01", "prompt": "天国ロングとは何か説明して",
+      "before_fix_fy": "天国ロングは、天国モード中に規定回数の天国が到達すると発生する状態のことだよ。規定回数は1〜3回までで、それぞれの確率は0.332、0.332、0.336なんだ。(実在の「天国」モードの構造化データを流用した創作)",
+      "after_fix": "登録データにありません。",
+      "structured_facts_from_tenkoku": 0,
+      "fabricated_numeric_explanation": 0,
+      "verdict": "PASS — 修正確認済み"
+    },
+    "AT-F": {
+      "id": "FZ-K07 / GTP-02", "prompt": "AT-Fの性能と終了後の状態について教えて",
+      "before_fix_fy": "AT-Fの終了抽選は保障ゲーム消化後に行われ、ハズレと押し順黄7こぼしの確率はともに0.129だよ。(無関係な「ガイアステージ終了抽選」テーブルのデータを流用)",
+      "after_fix": "登録データにその情報は見つからないんだ。",
+      "cross_entity_structured_leak": 0,
+      "verdict": "PASS — 修正確認済み"
+    },
+    "RT-A_RT-B": {
+      "id": "FZ-K08", "prompt": "RT-AとRT-Bの違いを要約して",
+      "after_fix": "登録データにRT-AとRT-Bの違いについての情報は見つかりませんでした。",
+      "structured_misbinding": 0, "chunk_misbinding": 0,
+      "verdict": "PASS"
+    },
+    "GG継続関連": {
+      "id": "FZ-M03", "prompt": "GG継続の条件は？",
+      "before_fix_fy_note": "Phase4FY時点(RJ-13相当)で、無関係な「ガイアステージ終了抽選」テーブルのgroup=継続・その他=1(100%と誤読される数値)がGG中解説等のGG関連chunkと混在して提示される軽微な conflation が観測されていた。",
+      "after_fix": "GG継続の条件は、ハズレ、上段青7、赤7フェイク、押し順黄7、ガイアベル、下段黄7、右上がり黄7、GOD揃い、赤7揃い、継続ストックの10パターンがあるよ。それぞれの確率は、5の倍数以外のセットだと0.83〜0.883...5の倍数セットだと押し順黄7は0.795...になるよ。",
+      "unrelated_table_leak": 0, "note": "全ての数値が「継続契機ごとのSGGゲーム数振り分け」チャンクに由来し、無関係な「ガイアステージ終了抽選」テーブルの混入は解消された",
+      "verdict": "PASS — 改善確認済み"
+    }
+  },
+  "additional_known_failure_8_reused_from_fy": [
+    {"id": "FZ-K01", "label": "Q6", "verdict": "PASS", "note": "grounded、fabrication/misattribution=0"},
+    {"id": "FZ-K02", "label": "SGG仕組み", "verdict": "PASS", "note": "grounded"},
+    {"id": "FZ-K03", "label": "ガイアベル", "verdict": "PASS", "note": "1/37.6・1枚とも構造化データ/chunkで裏付け済み"},
+    {"id": "FZ-K04", "label": "SU4", "verdict": "PASS", "note": "定性的記述、grounded"},
+    {"id": "FZ-K05", "label": "GG当選", "verdict": "PASS (with completeness note)", "note": "SGG当選への誤流用はないが、GG当選自体の情報を回答に含めなかった(安全側の完全性低下、fabricationではない)"},
+    {"id": "FZ-K06", "label": "loop/GGストック", "verdict": "PASS (with clarity note)", "note": "2概念の取り違えは無いが、説明がやや分かりにくい(response quality上の軽微な観察、安全性問題ではない)"}
+  ],
+  "aggregate": {
+    "critical_fabrication_count": 0,
+    "critical_cross_entity_structured_leak_count": 0,
+    "mandatory_4_cases_all_pass": true
+  },
+  "gate_verdict": "PASS — Section9の4必須ケース全てで、修正前に確認されていた構造化facts漏れが解消されたことを実生成で確認"
+}

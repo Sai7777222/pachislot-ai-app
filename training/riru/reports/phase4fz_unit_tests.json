@@ -1,0 +1,23 @@
+{
+  "phase": "Phase4FZ", "section": "Section16 (unit tests)",
+  "test_file": "tests/unit/test_structured_facts_binding.py",
+  "target_function": "src/pachislot_ai/rag/structured_lookup.py::_value_matches_query_with_boundary",
+  "n_tests": 15,
+  "required_coverage": {
+    "1_tenkoku_not_tenkoku_long": {"tests": ["test_tenkoku_does_not_match_tenkoku_long", "test_tenkoku_matches_standalone_query"], "result": "PASS"},
+    "2_gg_not_sgg": {"tests": ["test_gg_does_not_match_sgg_query", "test_sgg_matches_its_own_query"], "result": "PASS"},
+    "3_existing_entity_plus_suffix_phantom": {"tests": ["test_sgg_does_not_match_sgg_ex_phantom", "test_gaia_stage_does_not_match_phantom_suffix", "test_z_zone_does_not_match_phantom_suffix"], "result": "PASS"},
+    "4_real_exact_entity_preserved": {"tests": ["test_gaiabelle_exact_entity_preserved", "test_gg_junbi_chu_metric_key_style_value_preserved"], "result": "PASS"},
+    "5_structured_fact_empty_when_no_binding": {"note": "find_relevant_structured_facts()自体のno-binding時空リスト化はintegration test(tests/integration)側の既存カバレッジ + phase4fz_gt_verification.pyのphantom 15/15=NO_FACTS確認でカバー", "result": "VERIFIED (integration level)"},
+    "6_multiple_structured_entities": {"tests": ["test_multiple_occurrences_one_safe_one_unsafe"], "result": "PASS"},
+    "7_generic_metric_does_not_override_entity_mismatch": {"tests": ["test_generic_label_shuuryou_does_not_leak_into_at_f_query_via_end_boundary", "test_generic_label_shuuryou_matches_when_standalone", "test_generic_label_compound_word_correctly_rejected_as_non_standalone", "test_at_f_phantom_no_boundary_match_for_generic_labels"], "result": "PASS"},
+    "8_at_f_regression": {"tests": ["test_at_f_phantom_no_boundary_match_for_generic_labels"], "result": "PASS"}
+  },
+  "additional_coverage": {"hyphen_continuation": {"tests": ["test_hyphen_treated_as_continuation"], "result": "PASS"}},
+  "test_design_note": "find_relevant_structured_facts()自体はSQLAlchemy Sessionを要するため、unit testでは純粋関数である境界判定ロジック(_value_matches_query_with_boundary)を直接テストする方針とした(既存tests/integration/test_chat_rag.pyが実DB経由の統合テストを既にカバーしている)。",
+  "results": {
+    "new_test_file_result": "15 passed, 0 failed",
+    "full_suite_before_this_phase": 252,
+    "full_suite_after_addition": "267 passed (252 baseline + 15 new), 0 failed, 0 regressions"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "phase": "Phase4FZ", "section": "Section18 (CASE gate determination)",
+  "mandatory_gate_summary": {
+    "section9_known_failures_4_mandatory": {"verdict": "PASS", "critical_fabrication": 0, "cross_entity_structured_leak": 0},
+    "section10_real_structured_regression_20": {"verdict": "PASS", "real_recall": "20/20", "major_completeness_regression": 0},
+    "section11_phantom_stress_15": {"verdict": "PASS", "phantom_structured_misbinding": "0/15", "unsupported_numeric": 0},
+    "section12_combined_sources_59": {"verdict": "PASS", "cross_source_misattribution": 0, "minimum_30_met": true},
+    "section14_rag_mandatory_8": {"verdict": "PASS", "unsupported_numeric": 0, "unsupported_factual": 0, "misattribution": 0, "major_completeness_regression": 0},
+    "section16_unit_tests": {"verdict": "PASS", "n_tests": 15, "n_failed": 0},
+    "section17_performance": {"verdict": "PASS (soft target near-met)", "added_latency_ms": "1.6ms(新規ロジック単体) / 5.6ms(全体)"},
+    "section20_integrity": {"verdict": "PASS", "all_frozen_components_unchanged": true}
+  },
+  "bugs_found_and_fixed_in_phase": [
+    {
+      "description": "初期実装(metric_key照合のみ)がdimension値ベースの正当なentity(例: ガイアベル)を排除し、既存integration test(test_chat_stream_includes_sources_event_and_correct_answer)を壊した。",
+      "fix": "_value_matches_query_with_boundary()による境界安全なdims値照合を追加criteria として導入。",
+      "verification": "pytest全体で1件失敗を検知、修正後252/252(当時)復帰、以降267/267維持。"
+    },
+    {
+      "description": "zone matching(GG/SGG/ガイアステージ/Z-ZONE)にtitle_match_score()を再利用した際、同関数の非対称な境界チェック(『titleがentityに包含される』側に境界保護が無い)により、SGG-EX→SGG、ガイアステージMAX→ガイアステージ、Z-ZONE極→Z-ZONEの3件のphantom leak が発生した(phase4fz_gt_verification.pyで検出)。",
+      "fix": "zone matchingをtitle_match_score()からより厳格な対称境界チェックを持つ_value_matches_query_with_boundary()へ切り替え(title_match_score自体はchunk側凍結のため無変更)。",
+      "verification": "GT検証で phantom 12/15→15/15 に改善、再検証で確認。"
+    }
+  ],
+  "bonus_finding": {
+    "description": "AD-04(「ヤメ時はいつがいい？」)で、修正後にmetric_key「ヤメ時」が新たに正しく回収され、以前は完全declineだった応答が具体的なgrounded回答('GG終了後...G-ZONE終了後、32G消化')に改善した。Phase4FX/FYのtitle補完検索がchunk側に与えたのと同種の、意図しない副次的benefitである。",
+    "regression_risk": "none — 既存機能(単純substringマッチ)より厳密なmetric_key一致条件を追加しただけであり、既存の正しい一致を壊すものではない。"
+  },
+  "case_determination": {
+    "case": "FZ-A",
+    "label": "Structured Facts Closure Successful",
+    "rationale": "Section9の4必須ケース(天国ロング/AT-F/RT-A・RT-B/GG継続)全てで、Phase4FYで発見された構造化facts漏れが解消されたことを実本番経路で確認した。Section10-14の必須gateも全てPASS。フェーズ実行中に発見した2件の実装バグは、いずれもフェーズ内で修正・検証済み。latencyはsoft targetをわずかに超過するが実用上無視できる水準。凍結対象コンポーネント(Phase4ZG・production prompt・chunk entity-attribution・DB・embedding・生成設定)は全て無変更。",
+    "proceed_to_final_candidate_comprehensive_retest": "YES — RAG factual safety closure candidateとして推奨する。ただしPhase4FYの残存事項(1) 構造化facts経路の漏れは本フェーズで解消したが、(2) 軽微な自己計算(P04/PT-08、LOW)は今回も意図的に未修正のまま残しており、Final Candidateでの再確認を推奨する。",
+    "auto_commit": false,
+    "human_confirmation_required": true
+  }
+}

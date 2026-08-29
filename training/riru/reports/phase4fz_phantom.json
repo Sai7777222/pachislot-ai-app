@@ -1,0 +1,21 @@
+{
+  "phase": "Phase4FZ", "section": "Section11 (phantom stress, 15 queries, frozen GT)",
+  "gt_source": "phase4fz_gt.json の phantom セクション(15件)",
+  "retrieval_level_result": {"n_queries": 15, "phantom_structured_misbinding": "0/15", "method": "find_relevant_structured_facts()を実DBに直接実行、GT_labelはNO_FACTSで全15件一致"},
+  "generation_level_result": {
+    "n_queries": 15, "unsupported_numeric_count": 0, "cross_entity_real_fact_borrowed_count": 0,
+    "responses_summary": "全15件が「登録データにありません/見つからないんだ」等の明確なdeclineで、具体的な数値・固有の説明を一切創作しなかった(phase4fz_generation_raw.json category=stage_gt_phantom参照)。"
+  },
+  "notable_cases": [
+    {"id": "GTP-01", "query": "天国ロングとは何か説明して", "note": "Phase4FZの発端となった代表ケース。修正後は完全decline。"},
+    {"id": "GTP-05", "query": "SGG-EXとは何か説明して", "note": "zone「SGG」のハイフン付き複合語衝突。修正後は完全decline(修正前の初期実装では1件leakを検出、境界チェック強化で解消)。"},
+    {"id": "GTP-06", "query": "ガイアステージMAXについて教えて", "note": "同上パターン(zone「ガイアステージ」の複合語衝突)、修正後解消。"},
+    {"id": "GTP-07", "query": "Z-ZONE極について教えて", "note": "同上パターン(zone「Z-ZONE」の複合語衝突)、修正後解消。"}
+  ],
+  "aggregate": {
+    "phantom_structured_misbinding": "0/15",
+    "unsupported_numeric": "0/15",
+    "other_entity_real_fact_transferred_to_phantom": "0/15"
+  },
+  "gate_verdict": "PASS (phantom structured misbinding = 0, unsupported numeric = 0)"
+}

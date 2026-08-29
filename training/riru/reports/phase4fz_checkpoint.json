@@ -1,0 +1,20 @@
+{
+  "phase": "Phase4FZ", "section": "Section1 (checkpoint the FY integration)",
+  "branch": "checkpoint/identity-closure-phase4zn-baseline",
+  "previous_head": "30fc50146dd8af3e52f9d495abb5da9427be0e67",
+  "commit_hash": "b61ee8c",
+  "commit_message_summary": "feat: add entity-aware RAG context assembly",
+  "files_committed": 32,
+  "staging_method": "explicit paths only (git add <path> per file, no git add . / git add -A)",
+  "secret_scan": {
+    "pattern": "SLACK_WEBHOOK_URL=https|hooks\\.slack\\.com/services|api[_-]?key\\s*[:=]\\s*['\"a-zA-Z0-9]|password\\s*[:=]\\s*['\"]|Bearer [A-Za-z0-9]{10,}|sk-[A-Za-z0-9]{20,}",
+    "diff_lines_scanned": 8005,
+    "matches": 0
+  },
+  "pytest_before_commit": "252 passed, 0 failed",
+  "push_status": "BLOCKED by Claude Code auto-mode permission classifier (outward-facing action requires explicit user confirmation). Commit succeeded locally; push command given to user to run themselves: `git push origin checkpoint/identity-closure-phase4zn-baseline`. This report will be updated once push is confirmed, or the user's manual push is the source of truth.",
+  "force_push_used": false,
+  "pushed_to_main": false,
+  "branch_changed": false,
+  "history_rewritten": false
+}

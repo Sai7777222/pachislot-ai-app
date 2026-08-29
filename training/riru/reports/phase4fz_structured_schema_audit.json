@@ -1,0 +1,36 @@
+{
+  "phase": "Phase4FZ", "section": "Section4 (structured facts schema audit)",
+  "module_audited": "src/pachislot_ai/rag/structured_lookup.py::find_relevant_structured_facts (read-only, unchanged)",
+  "query_parsing": "自然言語解析は一切行わない。query文字列に対する素朴なPython substring test(`in`演算子)のみ。正規化(NFKC等)・トークン化・助詞境界処理は一切ない。",
+  "where_like_conditions": "SQL側のWHERE/LIKEによる絞り込みは無い。mrepo.get_metric_facts/get_zones/get_hintsはmachine_idのみでSQLフィルタし、機種内の全行をPython側に取得した上で、Pythonループ内でqueryとの文字列包含判定を行う。",
+  "returned_rows_structure": {
+    "metric_facts": {"total_rows_this_machine": 570, "unique_metric_keys": 136, "dimensions_json_keys_observed": ["group", "役", "設定", "ゲーム数", "規定回数", "ガイアモード", "ループ率", "液晶出目", "初当り種別", "パターン", "ループストック", "移行先", "項目", "状態", "ステージ", "出目・パターン", "タイミング", "セクション", "NO.", "前兆", "連続回数", "出目"]},
+    "zones": {"total_rows": 8, "fields": ["zone_key", "name", "aliases(json list)"], "examples": [{"zone_key": "GG", "name": "GG", "aliases": ["ゴッドゲーム(GG)"]}, {"zone_key": "SGG", "name": "SGG", "aliases": ["スーパーゴッドゲーム (SGG)"]}]},
+    "hints": {"total_rows": 90, "fields": ["trigger_pattern", "hint_category"]}
+  },
+  "root_cause_of_group_dimension_leak": {
+    "finding": "`group`はmetric_facts.dimensions_jsonの22キー中の1つに過ぎず、その値(天国/通常/低確/継続/終了/LV1-3/黄7/青7等)は**136種類ある異なるmetric_key(概念固有のテーブル)の間で使い回される汎用的な状態・カテゴリラベル**である。metric_keyは概念を一意に識別できる(chunkのtitleに相当する)が、`group`の値はそうではない。",
+    "example": "『天国』というgroup値は、『ガイアナビ規定回数振り分け』『ガイアナビ規定回数到達時のガイアステージ移行率』『[GG準備中] GGストック当選率』『[GG中] GGストック当選率』という4つの全く異なるmetric_keyテーブルの行すべてに登場する。",
+    "implication": "queryのどこかに『天国』という2文字が(たとえ『天国ロング』のような架空語の一部としてでも)含まれていれば、これら4テーブル・計20行が無条件にfindingsへ混入する。metric_key(概念識別子)側の一致は一切確認されない。"
+  },
+  "root_cause_of_at_f_leak": {
+    "finding": "AT-Fクエリの場合、実際にはentity名『AT-F』自体は一切マッチに関与していない。クエリ文字列『AT-Fの性能と終了後の状態について教えて』に含まれる『終了後』というフレーズの中の『終了』という2文字が、『ガイアステージ終了抽選(保障ゲーム消化後)』テーブルのgroup値『終了』と偶然substring一致しただけである。",
+    "implication": "これは『AT-F』というentityとは無関係な、日本語の一般的な単語の偶然の部分文字列一致であり、entity-bindingの問題である以前に、group値という汎用ラベルをクエリ全文に対して無条件にsubstring検索していること自体が根本原因。"
+  },
+  "root_cause_of_gg_continuation_leak": {
+    "finding": "『GG継続の条件は？』は2つの独立した一致を含む: (1) zone側は『GG』が正しく(意味的に妥当な形で)一致している(zone_key/name/aliasに『GG』が明示的に存在するため、これは適切なentity一致)。(2) metric_facts側は『継続』というgroup値が『ガイアステージ終了抽選』テーブルの行にsubstring一致しており、これはSection天国/AT-Fと同じ根本原因(汎用stateラベルの無条件substring一致)。",
+    "implication": "zone一致(GG)は妥当だが、それとgroup一致(継続、無関係テーブル由来)が同じfindings配列に混在し、モデル側から見て区別がつかない。"
+  },
+  "zone_matching_boundary_risk": {
+    "finding": "zone一致も同じ`in`演算子によるsubstring testであり、Phase4FX/FYがchunkのtitle一致で修正した『GGがSGGに部分文字列衝突する』問題と全く同じ脆弱性を(現状は未対策のまま)抱えている。例: query『SGGについて教えて』に対し、zone『GG』(zone_key='GG')も`'GG' in 'SGGについて教えて'`でTrueとなり一致してしまう可能性がある(本phase4fz_root_cause.jsonの実測データで確認要)。",
+    "note": "ただし今回の4件の必須ケースではこの特定のGG/SGG衝突は直接は再現していない(『GG継続』はGG単独クエリのため)。別途Section6の設計でこの既知パターンへの一般対策を含める。"
+  },
+  "case_classification_summary": {
+    "S1_substring_matching": "天国ロング, 天国, AT-F, GG継続 の全4件のmandatoryケースがS1(汎用stateラベルの無条件substring一致)に分類される。実在entityクエリ10件中5件もS1に分類され(SGGの仕組み、GGとSGGの違い、青7連続GG当選率、Z-ZONEって何、GG準備中とは)、これらは概ね妥当な一致(entity名自体がgroup値やzone名と一致するケース)だが、一致の根拠が『entity名としての一致』か『汎用ラベルとしての偶然一致』かをコードは区別していない。",
+    "S2_normalization": "観測されず(NFKC正規化の要不要が問題になるケースは今回確認されなかった)。",
+    "S3_missing_entity_metadata": "metric_factsにはentity/concept名を表す専用フィールドが無い。唯一の概念識別子はmetric_key文字列そのものであり、構造化されたentity/labelフィールドとしては存在しない(zoneにはzone_key/nameがあるが、metric_factsやhintには相当するものがない)。",
+    "S4_query_tokenization": "未実施(substring testのみ)。",
+    "S5_generic_metric_fallback": "該当(group値が汎用fallbackとして機能してしまっている)。",
+    "S6_mixed": "実在entityクエリの一部(設定6の初当り確率、天井は何ゲーム、ガイアベルとは)は設定番号キーワードや天井キーワードなど別の一致ロジック(Section1/2の専用分岐)経由でヒットしており、S1のgroup値leak問題とは別系統。"
+  }
+}

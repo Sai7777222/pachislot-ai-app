@@ -1,0 +1,32 @@
+{
+  "phase": "Phase4FZ", "section": "Section20 (end-of-phase integrity checks)",
+  "pytest_final_run": {"result": "267 passed, 0 failed", "note": "252(FY baseline) + 15(Section16新規) = 267"},
+  "phase4zg_adapter_hash": {
+    "sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "matches_all_prior_phases": true,
+    "verdict": "UNCHANGED"
+  },
+  "production_prompt_unchanged": {"system.jinja2": "無変更", "rag_context.jinja2": "無変更", "verdict": "UNCHANGED"},
+  "chunk_entity_attribution_unchanged": {
+    "files_checked": ["src/pachislot_ai/rag/entity_attribution.py", "src/pachislot_ai/rag/pipeline.py", "src/pachislot_ai/rag/retriever.py", "src/pachislot_ai/rag/vector_store.py"],
+    "git_status_since_fy_commit_b61ee8c": "変更なし(git status --porcelainで確認、差分ゼロ)",
+    "verdict": "UNCHANGED — Phase4FZはこれら4ファイルに一切触れていない"
+  },
+  "title_supplemental_retrieval_semantics_unchanged": true,
+  "db_embedding_generation_config_unchanged": {
+    "vector_db_contents": "変更なし(ingest/upsert等は一切実行していない)",
+    "embedding_model": "変更なし",
+    "generation_config": "変更なし"
+  },
+  "no_training_performed": true,
+  "no_gguf_no_quantization": true,
+  "identity_status": "CLOSED (Phase4ZM時点、本フェーズで一切触れていない)",
+  "production_code_committed_this_phase": false,
+  "note_on_commit": "Section21の指示通り、src/pachislot_ai/rag/structured_lookup.py の変更およびtests/unit/test_structured_facts_binding.pyはcommitしていない。CASE判定後、人間の確認を経てcommitする想定。",
+  "modified_uncommitted_files_this_phase": [
+    "src/pachislot_ai/rag/structured_lookup.py (modified — Section6-8のentity-binding修正)",
+    "tests/unit/test_structured_facts_binding.py (new — Section16)"
+  ],
+  "note_on_fy_commit": "Phase4FYの変更(entity_attribution.py等)はSection1の指示通り本フェーズ冒頭でcommit(b61ee8c)済み。pushはユーザーへ依頼中(許可システムによりブロック)。",
+  "overall_verdict": "PASS — 全ての凍結対象コンポーネント(Phase4ZG・production prompt・chunk entity-attribution・DB・embedding・生成設定)が無変更であることを確認。structured_lookup.pyの変更のみがcommit保留中。"
+}

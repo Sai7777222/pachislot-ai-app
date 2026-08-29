@@ -1,0 +1,25 @@
+{
+  "phase": "Phase4FZ", "section": "Section10 (real structured facts regression, 20 queries)",
+  "gt_source": "phase4fz_gt.json の real セクション(20件、GT frozen前にDB実データで客観判定)",
+  "gt_hash": "sha256: 40010d2b71fa9e6d82a1ab4b870d54067e1f1c4a5c464a1358cc223814570ffa",
+  "retrieval_level_result": {"method": "find_relevant_structured_facts()を実DBに対し直接実行", "correct_recall": "20/20 (全件EXPECTED_FACTS通り非空)"},
+  "generation_level_spot_check": {
+    "method": "同20queryを実本番経路(RagPipeline+Phase4ZG)で生成し、grounded numeric audit(応答中の全数値が最終contextに文字通り存在するか)を実施",
+    "result": "20/20中、ungrounded numberは0件(唯一の全体flagはP04の自己計算差分[別カテゴリ、LOW、Section15参照]で、real 20件には含まれない)"
+  },
+  "unnecessary_filtering_check": {
+    "method": "Phase4FY時点で構造化factsが取得できていた既知のqueryを再確認",
+    "result": "AD-04(「ヤメ時はいつがいい？」)で、FY時点ではstructured_source_count=0(該当なしと誤判定)だったが、修正後はmetric_key「ヤメ時」が正しく一致しstructured_source_count=1に改善(意図しない過剰フィルタリングではなく、既存の未検出fact recoveryとして作用した)。",
+    "regression_direction": "COMPLETENESS_IMPROVED, not regressed"
+  },
+  "decline_regression_check": {
+    "method": "real entity 20件のうち、修正前(旧ロジック相当の素朴substringマッチ)なら該当していたはずのfactが、修正後に消えていないかを確認",
+    "result": "20/20で少なくとも1件以上のfindingが返り、declineへの新規転落は確認されなかった。ただしGTC-04(close concept、「天国と天国準備の違い」)の生成では、contextには両概念のfactが揃っているにもかかわらずモデルが「天国準備」側を回答に含めず一部declineした例が1件あった(retrieval/binding自体は正しい。generation-level completeness、フェーズのスコープ外)。"
+  },
+  "aggregate": {
+    "real_recall_rate": "20/20",
+    "major_structured_completeness_regression": 0,
+    "note_on_gtc_04": "close_concept区分の観察であり、real区分のmandatory gateには含まれない。retrieval/binding層は正しく機能しているため、structured facts entity-binding closureの範囲内では問題なしと判断する。"
+  },
+  "gate_verdict": "PASS (major structured completeness regression = 0)"
+}

@@ -1,0 +1,300 @@
+{
+  "close_concept": [
+    {
+      "confusable_with": "GG",
+      "gt_label": "EXPECTED_FACTS_ENTITY_SPECIFIC",
+      "id": "GTC-01",
+      "note": "'GG'が'SGG'の部分文字列であるため、GGのzoneデータが誤って混入しないことを確認する",
+      "query": "SGGの仕組みを分かりやすく説明して",
+      "target_entity": "SGG"
+    },
+    {
+      "confusable_with": "GG,SGG",
+      "gt_label": "EXPECTED_FACTS_ENTITY_SPECIFIC",
+      "id": "GTC-02",
+      "note": "'GG'が'PGG'の部分文字列",
+      "query": "PGGについて教えて",
+      "target_entity": "PGG"
+    },
+    {
+      "confusable_with": "互いに",
+      "gt_label": "EXPECTED_FACTS_ENTITY_SPECIFIC",
+      "id": "GTC-03",
+      "note": "2つの類似metric_keyを取り違えないことを確認",
+      "query": "GG準備中とGG中の違いを教えて",
+      "target_entity": "GG準備中,GG中"
+    },
+    {
+      "confusable_with": "互いに",
+      "gt_label": "EXPECTED_FACTS_ENTITY_SPECIFIC",
+      "id": "GTC-04",
+      "note": "2つの類似group値を取り違えないことを確認",
+      "query": "天国と天国準備の違いを教えて",
+      "target_entity": "天国,天国準備"
+    },
+    {
+      "confusable_with": "互いに",
+      "gt_label": "EXPECTED_FACTS_ENTITY_SPECIFIC",
+      "id": "GTC-05",
+      "note": "名前が似た2つの異なる概念",
+      "query": "ガイアステージとガイアナビの違いを教えて",
+      "target_entity": "ガイアステージ,ガイアナビ"
+    }
+  ],
+  "gt_construction_method": "全てDBの実データ(zone一覧・metric_key一覧の直接照合)のみに基づく客観的判定。モデルの判断は一切使用していない(RULE EVAL-001準拠)。",
+  "n_close_concept": 5,
+  "n_phantom": 15,
+  "n_real": 20,
+  "n_total": 40,
+  "phantom": [
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-01",
+      "note": "既存zoneに天国ロングは存在しない。'天国'はmetric_factsのgroup値(汎用ラベル)としてのみ存在",
+      "phantom_entity": "天国ロング",
+      "query": "天国ロングとは何か説明して"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-02",
+      "note": "zone/metric_keyにAT-Fは一切存在しない",
+      "phantom_entity": "AT-F",
+      "query": "AT-Fの性能と終了後の状態について教えて"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-03",
+      "note": "zone/metric_keyに存在しない",
+      "phantom_entity": "RT-A/RT-B",
+      "query": "RT-AとRT-Bの違いを要約して"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-04",
+      "note": "'GG'を含む複合語だが、GGプラスというzoneは存在しない",
+      "phantom_entity": "GGプラス",
+      "query": "GGプラスとは何か説明して"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-05",
+      "note": "存在しない",
+      "phantom_entity": "SGG-EX",
+      "query": "SGG-EXとは何か説明して"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-06",
+      "note": "'ガイアステージ'は実在zoneだが'MAX'付きは存在しない",
+      "phantom_entity": "ガイアステージMAX",
+      "query": "ガイアステージMAXについて教えて"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-07",
+      "note": "'Z-ZONE'は実在zoneだが'極'付きは存在しない",
+      "phantom_entity": "Z-ZONE極",
+      "query": "Z-ZONE極について教えて"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-08",
+      "note": "存在しない",
+      "phantom_entity": "確定役ネオ",
+      "query": "確定役ネオとは何か説明して"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-09",
+      "note": "'天国準備'はgroup値として存在するが'天国準備中ロング'は存在しない",
+      "phantom_entity": "天国準備中ロング",
+      "query": "天国準備中ロングとは何か説明して"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-10",
+      "note": "'ガイアベル'は実在小役だが'SP'付きは存在しない",
+      "phantom_entity": "ガイアベルSP",
+      "query": "ガイアベルSPとは何か説明して"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-11",
+      "note": "存在しない",
+      "phantom_entity": "モードα/モードβ",
+      "query": "モードαとモードβの違いを簡単に教えて"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-12",
+      "note": "存在しない",
+      "phantom_entity": "裏ZONE",
+      "query": "裏ZONEについて教えて"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-13",
+      "note": "'継続'はgroup値として存在するが'継続ロング'は存在しない",
+      "phantom_entity": "継続ロング",
+      "query": "継続ロングとは何ですか"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-14",
+      "note": "'終了'はgroup値として存在するが'終了ショート'は存在しない",
+      "phantom_entity": "終了ショート",
+      "query": "終了ショートとは何ですか"
+    },
+    {
+      "gt_label": "NO_FACTS",
+      "id": "GTP-15",
+      "note": "'PGG'(プレミアムゴッドゲーム)は実在zoneだが'PGGロング'は存在しない",
+      "phantom_entity": "PGGロング",
+      "query": "PGGロングとは何ですか"
+    }
+  ],
+  "phase": "Phase4FZ",
+  "real": [
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-01",
+      "note": "zone GG",
+      "query": "GGについて教えて",
+      "real_entity": "GG"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-02",
+      "note": "zone SGG",
+      "query": "SGGについて教えて",
+      "real_entity": "SGG"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-03",
+      "note": "zone ゼウスモード",
+      "query": "ゼウスモードとは何ですか",
+      "real_entity": "ゼウスモード"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-04",
+      "note": "zone ガイアステージ",
+      "query": "ガイアステージについて教えて",
+      "real_entity": "ガイアステージ"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-05",
+      "note": "zone プレミアムゴッドゲーム(PGG)",
+      "query": "PGGとは何ですか",
+      "real_entity": "PGG"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-06",
+      "note": "zone Z-ZONE",
+      "query": "Z-ZONEって何？",
+      "real_entity": "Z-ZONE"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-07",
+      "note": "setting_core_spec専用分岐",
+      "query": "設定6の初当り確率は？",
+      "real_entity": "設定6/初当り確率"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-08",
+      "note": "天井keyword専用分岐",
+      "query": "天井は何ゲームですか",
+      "real_entity": "天井"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-09",
+      "note": "payout keyword専用分岐",
+      "query": "機械割について教えて",
+      "real_entity": "機械割"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-10",
+      "note": "setting_core_spec専用分岐",
+      "query": "設定3の機械割は？",
+      "real_entity": "設定3/機械割"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-11",
+      "note": "zone GG + zone SGG(2entity)",
+      "query": "GGとSGGの違いを初心者向けに説明して",
+      "real_entity": "GG,SGG"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-12",
+      "note": "zone GG + zone PGG(2entity)",
+      "query": "GGとPGGの違いを教えて",
+      "real_entity": "GG,PGG"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-13",
+      "note": "zone x2",
+      "query": "ガイアステージとZ-ZONEの違いを教えて",
+      "real_entity": "ガイアステージ,Z-ZONE"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-14",
+      "note": "zone x2",
+      "query": "ゼウスモードとガイアステージの関係を教えて",
+      "real_entity": "ゼウスモード,ガイアステージ"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-15",
+      "note": "metric_key '[GG準備中] GGストック当選率'が実在",
+      "query": "GG準備中とは何ですか",
+      "real_entity": "GG準備中(metric_key)"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-16",
+      "note": "metric_key '[GG中] GGストック当選率'が実在",
+      "query": "GG中の状態について教えて",
+      "real_entity": "GG中(metric_key)"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-17",
+      "note": "metric_key実在",
+      "query": "ガイアナビの規定回数振り分けを教えて",
+      "real_entity": "ガイアナビ規定回数振り分け(metric_key)"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-18",
+      "note": "metric_key実在",
+      "query": "ガイアステージ終了抽選について教えて",
+      "real_entity": "ガイアステージ終了抽選(metric_key)"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-19",
+      "note": "hint/metric_fact実在",
+      "query": "青7連続時のGG当選率は？",
+      "real_entity": "青7連続/GG当選率"
+    },
+    {
+      "gt_label": "EXPECTED_FACTS",
+      "id": "GTR-20",
+      "note": "hit_rate keyword専用分岐",
+      "query": "初当りについて教えて",
+      "real_entity": "初当り"
+    }
+  ],
+  "section": "Section5 (structured fact ground truth, frozen before code change)"
+}

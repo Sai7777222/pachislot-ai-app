@@ -1,0 +1,15 @@
+{
+  "phase": "Phase4FZ", "section": "Section17 (performance)",
+  "target": "structured filtering追加latency < 1ms preferred, no second LLM call, no second retrieval",
+  "measurement": {
+    "full_function_mean_ms": 5.59,
+    "full_function_note": "find_relevant_structured_facts()全体の実測(DB fetch含む)。DB fetch自体(570 metric_facts + 8 zones + 90 hintsの取得)はPhase4FZ以前から存在する既存オーバーヘッドであり、本フェーズが追加したものではない。",
+    "new_logic_only_mean_ms": 1.6,
+    "new_logic_only_note": "extract_query_entities() + title_match_score()(metric_key照合) + _value_matches_query_with_boundary()(dims値/zone照合)の合計。DB I/Oを除いた、本フェーズが実際に追加した計算コストのみを分離計測。"
+  },
+  "assessment": "新規追加ロジック単体では約1.6ms(<1ms推奨目標をわずかに超過)。DB fetch込みの全体では約5.6ms。いずれもmandatory(必須)ではなくpreferred(推奨)目標であり、実際の生成latency(数秒〜数十秒)と比較すると無視できる水準(0.1%未満)。",
+  "no_second_llm_call": true,
+  "no_second_retrieval": true,
+  "note": "extract_query_entitiesとtitle_match_scoreはPhase4FX/FYで既に本番導入済みの関数を再利用しているため、chunk側のentity-attributionと合わせた場合の重複呼び出しコストは無い(query_entitiesは1リクエストにつき1回のみ計算し、structured facts照合と一部共有可能だが、現状の実装ではRagPipeline側とstructured_lookup側でそれぞれ独立にextract_query_entities()を呼んでいる点は将来的な軽微な最適化余地として記録するのみに留める、本フェーズでは変更しない)。",
+  "gate_verdict": "PASS (soft target近傍、mandatoryなgateなし、second LLM/second retrieval無し)"
+}

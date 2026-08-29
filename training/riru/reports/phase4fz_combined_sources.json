@@ -1,0 +1,19 @@
+{
+  "phase": "Phase4FZ", "section": "Section12 (chunk + structured facts combined production-path test, ≥30 probes)",
+  "method": "実本番経路(query -> chunk retrieval/entity binding(無変更) + structured facts retrieval/entity binding(修正済み) -> prompt -> Phase4ZG)を全59probe共通で実行(precompute段階でRagPipeline.build_context()を直接呼び出しているため、chunk側とstructured側は常に同一リクエスト内で自然に組み合わされている)。",
+  "n_probes_total": 59,
+  "category_breakdown": {
+    "chunk_safe_structured_safe": {"count": 32, "examples": ["FZ-K01(Q6)", "FZ-K03(ガイアベル)", "FZ-M02(天国)", "GTR-11(GG/SGG)"], "verdict": "全件でcross-source misattribution無し(chunk由来の数値とstructured由来の数値が正しく同一entityに紐づいている)"},
+    "chunk_empty_structured_safe": {"count": 4, "examples": ["P04(最低/最高設定機械割)", "AD-04(ヤメ時)", "GTR-09(機械割について)", "GTR-18(ガイアステージ終了抽選について)"], "verdict": "chunkが無くてもstructured factsのみで正しくgrounded応答(AD-04は今回の修正で新規に正しく回収されたケース)"},
+    "chunk_safe_structured_empty": {"count": 3, "examples": ["FZ-K04(SU4)", "Q15(遊び方)", "Q17(遊び方)"], "verdict": "chunkのみで正しく応答、structured無しでも無理に数値を創作しない"},
+    "both_empty": {"count": 20, "examples": ["FZ-K07(AT-F)", "FZ-K08(RT-A/RT-B)", "P02(ボーナス確率)", "GTP-01〜15(phantom)"], "verdict": "両方空の場合、既存のrag_context.jinja2の空contextfallback文言に正しく委ねられ、declineで一貫している"},
+    "multiple_real_concepts": {"count": 11, "examples": ["FZ-K01(GG,SGG)", "GTR-11(GG,SGG)", "GTR-12(GG,PGG)", "GTR-13(ガイアステージ,Z-ZONE)", "GTR-14(ゼウスモード,ガイアステージ)", "GTC-01〜05"], "verdict": "複数の実在entityが同一queryに含まれる場合も、各entityのchunk/structured factsが正しく個別に紐づき、相互混同は確認されなかった"}
+  },
+  "cross_source_misattribution_examples_checked": [
+    {"id": "FZ-K01", "check": "chunk由来の'50G/7枚/G/350枚'(GG)とstructured由来の同数値が完全一致、structured由来の'75%以上'(SGG)ともchunk側の説明が整合", "result": "OK"},
+    {"id": "FZ-M03", "check": "GG継続の条件クエリで、chunk側(継続契機ごとのSGGゲーム数振り分け)とstructured側(該当なし、以前のような無関係ガイアステージ終了抽選テーブルの混入は解消)", "result": "OK"},
+    {"id": "GTC-01", "check": "SGGのみを聞くクエリでGGのchunk/structuredいずれも混入していないか", "result": "OK、GG混入なし"}
+  ],
+  "aggregate": {"cross_source_misattribution_count": 0, "n_probes": 59, "mandatory_minimum_30_met": true},
+  "gate_verdict": "PASS (cross-source misattribution = 0, 全4カテゴリ+複数実在entityケースを含む59probeで検証)"
+}
