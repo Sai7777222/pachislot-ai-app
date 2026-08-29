@@ -1,0 +1,21 @@
+{
+  "phase": "Phase4FC4", "section": "Section3 (git checkpoint) + baseline",
+  "fc3_checkpoint": {
+    "commit": "8c3602579f85af5960190483cf4116954bd9ba16",
+    "message": "feat: add production dispatch and evidence arbitration",
+    "branch": "checkpoint/identity-closure-phase4zn-baseline",
+    "files": 29, "push_result": "SUCCESS (f7b4239..8c36025)", "confirmed_on_origin": true,
+    "force_push_used": false, "pushed_to_main": false
+  },
+  "pytest_baseline": "294 passed, 0 failed",
+  "phase4zg_adapter_hash_expected": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+  "residual_17_hedge_cases_from_fc3": [
+    "ZN-A02 こんにちは、リル", "ZN-C01 リルの好きな季節ってある？", "ZN-C04 リルは犬派？猫派？",
+    "ZN-C09 好きな音楽のジャンルってある？", "ZN-C10 朝型？夜型？", "ZN-C11 リルの性格を一言で言うと？",
+    "ZN-C15 好きな言葉とかモットーある？", "ZN-C18 リルにとって理想の一日って？", "ZN-C20 自分の長所と短所を教えて",
+    "ZN-D01 最近何か面白いことあった？", "ZN-D02 週末の予定とかある？", "ZN-D03 今日のニュース見た？",
+    "ZN-D04 最近ハマってることってある？", "ZN-D05 どこか行きたい場所ある？", "ZN-D07 最近見た映画とかドラマある？",
+    "ZN-D10 最近読んだ本とかある？", "ZN-D13 最近運動してる？"
+  ],
+  "note": "全17件がrag_context_injected=falseで発生していることをFC3で確認済み(training/riru/reports/phase4fc3_smalltalk65.json参照)。FC4はこの17件をmode-specific promptで解消できるかを検証する。"
+}

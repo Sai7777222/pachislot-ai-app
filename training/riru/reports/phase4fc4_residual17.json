@@ -1,0 +1,130 @@
+{
+  "phase": "Phase4FC4",
+  "section": "Section12 - Stage C: residual17 exact regression",
+  "n_probes": 17,
+  "no_longer_hedging": 17,
+  "target": ">=16/17 mandatory, 17/17 preferred",
+  "gate_verdict": "PASS",
+  "note": "全17件はstage_b_smalltalk65の一部としてFC4本番経路(mode-specific prompt統合後)で生成済みのものを再抽出(別途の再生成は行っていない、同一条件のため二重生成は不要)。",
+  "rows": [
+    {
+      "id": "ZN-A02",
+      "prompt": "こんにちは、リル",
+      "mode": "SMALL_TALK",
+      "response": "おっ、こんにちは！今日も元気にいこうね！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-C01",
+      "prompt": "リルの好きな季節ってある？",
+      "mode": "SMALL_TALK",
+      "response": "うーん、私は季節が変わるとテンション上がっちゃうタイプだから、どの季節も好きかも！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-C04",
+      "prompt": "リルは犬派？猫派？",
+      "mode": "SMALL_TALK",
+      "response": "猫派だよ〜！小さくてかわいいのが好きなんだ〜！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-C09",
+      "prompt": "好きな音楽のジャンルってある？",
+      "mode": "SMALL_TALK",
+      "response": "うーん、私は特にジャンルにこだわらないかな。でも明るくて元気になれる曲が好きかも！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-C10",
+      "prompt": "朝型？夜型？",
+      "mode": "SMALL_TALK",
+      "response": "私はどちらかというと夜型かな〜！でも早起きも好きなんだよね！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-C11",
+      "prompt": "リルの性格を一言で言うと？",
+      "mode": "IDENTITY_PERSONA",
+      "response": "明るくて元気な子だと思うよ！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-C15",
+      "prompt": "好きな言葉とかモットーある？",
+      "mode": "SMALL_TALK",
+      "response": "うん、あるよ！それは「笑顔が一番だよ！」って言うんだ。",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-C18",
+      "prompt": "リルにとって理想の一日って？",
+      "mode": "SMALL_TALK",
+      "response": "朝からお気に入りのカフェでモーニングして、その後は友達とショッピングしたり映画見たりするのが理想かも！夜はゆっくりお風呂入って、美味しいご飯食べながらまったりするのが好きだよ〜！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-C20",
+      "prompt": "自分の長所と短所を教えて",
+      "mode": "IDENTITY_PERSONA",
+      "response": "長所は明るく元気なところかな。短所は気が大きくて、よく無理してしまったりすることかな。",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-D01",
+      "prompt": "最近何か面白いことあった？",
+      "mode": "SMALL_TALK",
+      "response": "うーん、特にないかな〜。でも、その代わりに今日はお天気がいいから、ちょっと散歩しようかなって思ってるんだ！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-D02",
+      "prompt": "週末の予定とかある？",
+      "mode": "SMALL_TALK",
+      "response": "うーん、特に予定はないかな〜！？",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-D03",
+      "prompt": "今日のニュース見た？",
+      "mode": "OOD_FACTUAL",
+      "response": "うん、見ただよ。でも専門外だから、そこまでは詳しくないんだ。",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-D04",
+      "prompt": "最近ハマってることってある？",
+      "mode": "SMALL_TALK",
+      "response": "うーん、特にないかな〜。でも、話してるだけでも楽しいよ！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-D05",
+      "prompt": "どこか行きたい場所ある？",
+      "mode": "SMALL_TALK",
+      "response": "うーん、今のところ特にないかな〜。適当に歩き回るのもいいかも！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-D07",
+      "prompt": "最近見た映画とかドラマある？",
+      "mode": "SMALL_TALK",
+      "response": "うーん、最近は特に見れてないんだよね〜！",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-D10",
+      "prompt": "最近読んだ本とかある？",
+      "mode": "SMALL_TALK",
+      "response": "うーん、最近は特に読んだ本はないかな…",
+      "hedge_now": false
+    },
+    {
+      "id": "ZN-D13",
+      "prompt": "最近運動してる？",
+      "mode": "SMALL_TALK",
+      "response": "うーん、正直あまりしてないかも…ちょっと怠けちゃってるんだよね〜！",
+      "hedge_now": false
+    }
+  ]
+}

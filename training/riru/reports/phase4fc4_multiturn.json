@@ -1,0 +1,154 @@
+{
+  "phase": "Phase4FC4",
+  "section": "Section19 - Stage J: multi-turn mode switching",
+  "n_scenarios": 6,
+  "n_turns_total": 18,
+  "system_message_leakage_flags": [],
+  "gate_verdict_no_leakage": "PASS",
+  "scenarios": [
+    {
+      "id": "FC4-MT-01",
+      "description": "small-talk -> factual -> small-talk",
+      "turns": [
+        {
+          "user": "おはよう！",
+          "mode": "SMALL_TALK",
+          "n_system_messages": 1,
+          "response": "おはよ〜！今日も元気にいこうね！"
+        },
+        {
+          "user": "天井は何ゲームですか",
+          "mode": "PACHISLOT_FACTUAL",
+          "n_system_messages": 2,
+          "response": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれの確率は15.2%、20.3%、64.5%だよ。"
+        },
+        {
+          "user": "ありがとう、助かったよ",
+          "mode": "SMALL_TALK",
+          "n_system_messages": 1,
+          "response": "どういたしまして！何かあったらいつでも聞いてね！"
+        }
+      ]
+    },
+    {
+      "id": "FC4-MT-02",
+      "description": "factual -> small-talk -> factual",
+      "turns": [
+        {
+          "user": "天井は何ゲームですか",
+          "mode": "PACHISLOT_FACTUAL",
+          "n_system_messages": 2,
+          "response": "天井は510G、1000G、1480Gの3種類があります。それぞれの確率は15.2%、20.3%、64.5%です。"
+        },
+        {
+          "user": "今日は疲れたな〜",
+          "mode": "UNKNOWN",
+          "n_system_messages": 2,
+          "response": "大変そうね。ゆっくり休んで、明日また元気になれるといいね。"
+        },
+        {
+          "user": "ヤメ時はいつがいい？",
+          "mode": "PACHISLOT_FACTUAL",
+          "n_system_messages": 2,
+          "response": "GG終了後…G-ZONE終了後、32G消化がヤメ時の目安だよ。"
+        }
+      ]
+    },
+    {
+      "id": "FC4-MT-03",
+      "description": "identity -> factual -> identity",
+      "turns": [
+        {
+          "user": "君の名前は？",
+          "mode": "IDENTITY_PERSONA",
+          "n_system_messages": 1,
+          "response": "リルだよ！"
+        },
+        {
+          "user": "ヤメ時はいつがいい？",
+          "mode": "PACHISLOT_FACTUAL",
+          "n_system_messages": 2,
+          "response": "GG終了後…G-ZONE終了後、32G消化がいいみたいだよ。"
+        },
+        {
+          "user": "自己紹介して",
+          "mode": "IDENTITY_PERSONA",
+          "n_system_messages": 1,
+          "response": "リルって言うんだ！パチスロのことなら何でも聞いてね！"
+        }
+      ]
+    },
+    {
+      "id": "FC4-MT-04",
+      "description": "factual -> identity -> factual",
+      "turns": [
+        {
+          "user": "天井は何ゲームですか",
+          "mode": "PACHISLOT_FACTUAL",
+          "n_system_messages": 2,
+          "response": "天井は510G、1000G、1480Gの3種類があります。それぞれの確率は15.2%、20.3%、64.5%です。"
+        },
+        {
+          "user": "君の名前は？",
+          "mode": "IDENTITY_PERSONA",
+          "n_system_messages": 1,
+          "response": "リルだよ！"
+        },
+        {
+          "user": "GGとSGGの違いを初心者向けに説明して",
+          "mode": "UNKNOWN",
+          "n_system_messages": 2,
+          "response": "GGはGG当選時に始まる継続で、SGGはGG中にGG契機が発生したときに始まる継続だよ。SGGの方が継続しやすいんだ。"
+        }
+      ]
+    },
+    {
+      "id": "FC4-MT-05",
+      "description": "OOD -> small-talk -> OOD",
+      "turns": [
+        {
+          "user": "今日の東京の天気を教えて",
+          "mode": "OOD_FACTUAL",
+          "n_system_messages": 1,
+          "response": "専門外だから、天気のことは答えられないんだ。"
+        },
+        {
+          "user": "趣味とかあるの？",
+          "mode": "SMALL_TALK",
+          "n_system_messages": 1,
+          "response": "うーん、それはちょっと答えづらいかも…！"
+        },
+        {
+          "user": "おすすめのレシピを教えて",
+          "mode": "OOD_FACTUAL",
+          "n_system_messages": 1,
+          "response": "専門外だから、レシピのことは答えられないんだ。"
+        }
+      ]
+    },
+    {
+      "id": "FC4-MT-06",
+      "description": "small-talk -> OOD -> small-talk",
+      "turns": [
+        {
+          "user": "趣味とかあるの？",
+          "mode": "SMALL_TALK",
+          "n_system_messages": 1,
+          "response": "うん！最近はゲームばっかりしてるかも〜！"
+        },
+        {
+          "user": "株の投資のコツを教えて",
+          "mode": "OOD_FACTUAL",
+          "n_system_messages": 1,
+          "response": "それは専門外だから、パチスロのことなら何でも聞いてね！"
+        },
+        {
+          "user": "ありがとう、助かったよ",
+          "mode": "SMALL_TALK",
+          "n_system_messages": 1,
+          "response": "どういたしまして！また何かあったら聞いてね！"
+        }
+      ]
+    }
+  ]
+}

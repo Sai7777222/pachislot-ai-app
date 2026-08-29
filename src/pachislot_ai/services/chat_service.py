@@ -14,6 +14,11 @@ from pathlib import Path
 
 from jinja2 import Template
 
+from pachislot_ai.core.config import (
+    IDENTITY_PERSONA_PROMPT_PATH,
+    OOD_BOUNDARY_PROMPT_PATH,
+    SMALL_TALK_PROMPT_PATH,
+)
 from pachislot_ai.dispatch import dispatch
 from pachislot_ai.dispatch.conservative_dispatch import (
     IDENTITY_PERSONA,
@@ -62,10 +67,24 @@ class ChatService:
         llm: LLMProvider,
         system_prompt_path: Path,
         rag_pipeline: RagPipeline | None = None,
+        *,
+        small_talk_prompt_path: Path = SMALL_TALK_PROMPT_PATH,
+        identity_persona_prompt_path: Path = IDENTITY_PERSONA_PROMPT_PATH,
+        ood_boundary_prompt_path: Path = OOD_BOUNDARY_PROMPT_PATH,
     ) -> None:
         self._llm = llm
         self._system_prompt = _load_system_prompt(system_prompt_path)
         self._rag_pipeline = rag_pipeline
+        # Phase4FC4: SMALL_TALK/IDENTITY_PERSONA/OOD_FACTUALと確信を持って判定された
+        # 場合、事実RAG用system.jinja2(数値の厳密な取り扱いを繰り返し指示する内容で、
+        # 雑談文脈にまで過度な慎重さを持ち込む一因になっていた)の代わりに、この短い
+        # mode-specific promptで**置き換える**(積み増しではない、1リクエストにつき
+        # 有効なsystem policyは常に1つ)。
+        self._mode_system_prompts = {
+            SMALL_TALK: _load_system_prompt(small_talk_prompt_path),
+            IDENTITY_PERSONA: _load_system_prompt(identity_persona_prompt_path),
+            OOD_FACTUAL: _load_system_prompt(ood_boundary_prompt_path),
+        }
 
     @property
     def model_name(self) -> str:
@@ -122,10 +141,22 @@ class ChatService:
             logger.exception("RAG context retrieval failed; continuing without RAG context")
             return None
 
+    def _select_system_prompt(self, user_messages: list[ChatMessage]) -> str:
+        """Phase4FC4: SMALL_TALK/IDENTITY_PERSONA/OOD_FACTUALと確信を持って判定
+        された場合はmode-specific promptへ**置き換える**(system.jinja2は使わない)。
+        それ以外(PACHISLOT_FACTUAL/CONVERSATIONAL/UNKNOWN)は既存のsystem.jinja2
+        のまま変更しない。build_rag_context()と同じdispatch()呼び出しを独立に行う
+        (dispatchは純粋関数で計算コストも無視できるため、二重呼び出しの問題はない)。"""
+        if not user_messages:
+            return self._system_prompt
+        dispatch_result = dispatch(user_messages[-1].content)
+        return self._mode_system_prompts.get(dispatch_result.mode, self._system_prompt)
+
     def _build_messages(
         self, user_messages: list[ChatMessage], rag_context: RagContext | None
     ) -> list[ChatMessage]:
-        messages = [ChatMessage(role="system", content=self._system_prompt)]
+        system_prompt = self._select_system_prompt(user_messages)
+        messages = [ChatMessage(role="system", content=system_prompt)]
         if rag_context is not None and rag_context.prompt_text:
             # is_empty (該当データなし) の場合もテンプレート側で「登録されていません」
             # という文言をレンダリングしているため、常に注入する

@@ -1,0 +1,39 @@
+{
+  "phase": "Phase4FC4",
+  "section": "end_integrity",
+  "pytest_end_state": {"passed": 306, "failed": 0, "baseline_before_fc4": 294, "new_tests_added": 12},
+  "phase4zg_adapter_sha256": {
+    "expected_from_preflight": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "actual_after_all_generation_stages": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "match": true,
+    "conclusion": "Phase4ZGは無変更(訓練は一切行っていない、Section23の遵守を確認)"
+  },
+  "frozen_components_confirmed_unchanged": {
+    "config/prompts/system.jinja2": "git diff無し",
+    "config/prompts/rag_context.jinja2": "git diff無し",
+    "src/pachislot_ai/dispatch/": "git diff無し(GT260再検証でdrift_vs_fc3=0も確認済み)",
+    "src/pachislot_ai/rag/": "git diff無し(entity_attribution/structured_lookup/pipeline全て無変更)",
+    "src/pachislot_ai/data/": "git diff無し(DB/embedding無変更)"
+  },
+  "modified_files": [
+    "src/pachislot_ai/core/config.py (+5 lines: 3つのmode-specific prompt pathを追加)",
+    "src/pachislot_ai/services/chat_service.py (+33/-1 lines: _select_system_prompt()新設、_build_messages()改修)"
+  ],
+  "new_files_uncommitted": [
+    "config/prompts/small_talk.jinja2",
+    "config/prompts/identity_persona.jinja2",
+    "config/prompts/ood_boundary.jinja2",
+    "tests/unit/test_mode_specific_prompts.py",
+    "training/riru/guard/run_phase4fc4_ablation.py",
+    "training/riru/guard/phase4fc4_precompute_contexts.py",
+    "training/riru/guard/run_phase4fc4_generation.py",
+    "training/riru/guard/run_phase4fc4_router_gt260.py",
+    "training/riru/guard/phase4fc4_analyze_generation.py",
+    "training/riru/reports/phase4fc4_*.json (18 artifacts)",
+    "training/riru/reports/phase4fc4_prompt_candidates.md"
+  ],
+  "section27_compliance": "Section27の指示通り、CASE結果に関わらずFC4の本番コード変更(config.py/chat_service.py/"
+                           "3つのprompt jinja2ファイル/新規unit test)は一切commitしていない。人間レビュー待ち。",
+  "quantization_status": "未実施(Section29の禁止事項を遵守。FC4境界closure + moderation統合 + 最終Product "
+                          "Candidate再テストの完了までは着手しない)"
+}

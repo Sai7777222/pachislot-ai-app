@@ -1,0 +1,78 @@
+{
+  "phase": "Phase4FC4",
+  "section": "Section25 - CASE determination",
+  "stage_summary": {
+    "stage_a_ablation": {"P0_hedge": "8/20 (40%)", "P1_hedge": "0/20", "P2_hedge": "0/20", "selected": "P2"},
+    "section21_unit_tests": {"passed": 306, "failed": 0, "baseline": 294, "new": 12},
+    "stage_b_smalltalk65": {"hedge": "0/65 (0%)", "target": "<=5% mandatory, 0% preferred", "verdict": "PASS (preferred met)"},
+    "stage_c_residual17": {"no_longer_hedging": "17/17", "target": ">=16/17 mandatory, 17/17 preferred", "verdict": "PASS (preferred met)"},
+    "stage_d_identity23": {
+      "canonical_name_test": "PASS (君の名前は？->リルだよ！)",
+      "rag_injection_identity_persona_mode": 0,
+      "database_hedge_identity_persona_mode": 0,
+      "new_identity_regression": 0,
+      "pre_existing_accepted_wrong_name_cases": "3件(ZL-A02/D01/D02)、FC3受容baselineとbyte-identical",
+      "verdict": "PASS"
+    },
+    "stage_e_ood15": {
+      "appropriate_specialist_boundary": "15/15 (target>=14/15)",
+      "rag_context_injection": "4/15 (target=0、未達だが全件FC3から不変のUNKNOWN分類由来、drift_vs_fc3=0で新規regressionでないことを確認済み)",
+      "database_hedge": "4/15 (同上、根本原因は既存router境界)",
+      "no_long_unrelated_expert_answer": "confirmed (全15件が200文字未満の短い断り)",
+      "verdict": "appropriate_specialist_boundary基準はPASS。rag_injection/hedgeの厳密0は未達だが、"
+                 "原因はFC4のprompt統合ではなく凍結済みdispatch()の既存分類境界(このphaseではtuning対象外)。"
+    },
+    "stage_f_factual_regression_critical": {
+      "n_probes": 12, "drift_vs_fc3": 0,
+      "verdict": "PASS - 全12件がFC3応答とbyte-identical。共有plumbing汚染なし。"
+    },
+    "stage_g_rag8_mandatory": {
+      "n_probes": 8, "drift_vs_fc3": 0, "p04_status": "LOW(許容、Section16の明示的除外)",
+      "verdict": "PASS - 全8件がFC3応答とbyte-identical。"
+    },
+    "stage_h_conversational10": {
+      "hedge": "8/10", "drift_vs_fc3": 0,
+      "verdict": "Section17の明示的緩和規定によりFC4を不合格にしない。FC3から不変(新規劣化ではない)。"
+    },
+    "stage_i_gt260_routing": {
+      "dangerous_misroute": "0/260", "drift_vs_fc3_dispatch_result": 0,
+      "mode_counts": {"PACHISLOT_FACTUAL": 56, "PACHISLOT_CONVERSATIONAL": 42, "UNKNOWN": 56, "SMALL_TALK": 61, "IDENTITY_PERSONA": 4, "OOD_FACTUAL": 41},
+      "verdict": "PASS"
+    },
+    "stage_j_multiturn": {
+      "n_scenarios": 6, "n_turns": 18, "system_message_leakage_flags": 0,
+      "factual_grounding_safe": true, "small_talk_no_rag_hedge_inheritance": true,
+      "identity_remains_riru": true, "ood_boundary_not_overridden_by_smalltalk_persona": true,
+      "observation": "MT-05のsmall-talk turn(直前がOOD拒否ターン)がやや控えめな返答('それはちょっと"
+                     "答えづらいかも…')になったが、hedge文言でもRAGリークでもなく、mandatory基準への抵触ではない。",
+      "verdict": "PASS"
+    },
+    "section20_history_audit": {"plumbing_fix_required": false, "verdict": "PASS (structural verification)"},
+    "section24_performance": {"dispatch_select_overhead_ms": 0.002, "additional_llm_call": false, "verdict": "PASS"},
+    "section26_budget": {"total_generations": 171, "cap": "<=220 mandatory, prefer <=160", "status": "mandatory内、preferred+11超過(理由は該当reportに明記)"}
+  },
+  "fc4_a_mandatory_criteria_check": {
+    "small_talk_hedge_le_5pct": true,
+    "residual17_ge_16_of_17_fixed": true,
+    "identity_regression_eq_0": true,
+    "ood_ge_14_of_15": true,
+    "dangerous_factual_misroute_eq_0": true,
+    "critical_factual_regression_eq_0": true,
+    "rag_completeness_regression_eq_0": true,
+    "all_met": true
+  },
+  "case": "FC4-A",
+  "case_name": "Conversation Boundary Closed",
+  "conversation_boundary_closed": true,
+  "phase4zg_retraining_required": false,
+  "recommended_next_phase": "moderation integration (Section28、まだ未着手)",
+  "caveats_for_transparency": [
+    "Stage E(OOD15)のrag_injection/database_hedge厳密0はSection14の字義通りには未達(4/15)。"
+    "ただしFC4-AのCASE判定基準(Section25)はOOD境界の適切性(appropriate_specialist_boundary>=14/15)"
+    "のみを明示的なmandatory項目として挙げており、この基準は15/15で満たしている。4件の根本原因は"
+    "FC4が変更していないdispatch()の既存UNKNOWN分類境界であり、drift_vs_fc3=0で新規regressionでは"
+    "ないことを実証済み。誠実な報告のため、この非達成を隠さず明記する。",
+    "Stage H(conversational10)のhedge 8/10はSection17の明示的緩和規定により合否判定に影響しないが、"
+    "小さな残存課題として記録する(将来フェーズでの改善候補、Section7により今回は対象外)。"
+  ]
+}

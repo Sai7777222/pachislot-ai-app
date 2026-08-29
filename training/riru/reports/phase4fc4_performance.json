@@ -1,0 +1,35 @@
+{
+  "phase": "Phase4FC4",
+  "section": "Section24 - performance",
+  "dispatch_and_prompt_selection_overhead": {
+    "method": "microbenchmark: 2000 iterations x 5 representative queries, .venv (CPU)",
+    "dispatch_only_ms_per_call": 0.00116,
+    "select_system_prompt_ms_per_call_incl_its_own_dispatch_call": 0.00179,
+    "select_system_prompt_overhead_beyond_dispatch_ms_per_call": 0.00063,
+    "conclusion": "無視できるレベル(マイクロ秒オーダー)。追加LLM呼び出しなし。build_rag_context()と"
+                  "_select_system_prompt()がdispatch()をそれぞれ独立に呼ぶ二重呼び出しも、"
+                  "1リクエストあたり計0.002ms未満で無視できる。"
+  },
+  "generation_latency": {
+    "n_generations": 151,
+    "avg_latency_sec": 12.2,
+    "min_latency_sec": 0.37,
+    "max_latency_sec": 151.1,
+    "note": "GPU生成時間はmode/RAGコンテキスト長/実際の応答長に依存する(small-talkは短時間、"
+            "長い構造化データを含むfactual RAGコンテキストは前処理コストが大きい)。"
+            "mode-specific prompt選択自体による生成時間への影響はない(promptの選択は生成前の"
+            "一度きりの文字列比較のみ)。"
+  },
+  "no_additional_llm_call": true,
+  "total_generation_count_this_phase": {
+    "stage_a_ablation": 20,
+    "stage_b_to_j_production_path": 151,
+    "grand_total": 171,
+    "budget": "<=220 mandatory, prefer <=160",
+    "status": "mandatory cap内(171<=220)。preferred cap(160)はやや超過(+11)しているが、"
+              "既存の凍結済みprobeセット(FC3のstage_c_identity23/stage_h_known_failure12/"
+              "stage_i_rag8/stage_e_conversational10をそのまま再利用)を用いた単一パス実行であり、"
+              "繰り返しのtuning loopは一切行っていない。Section19の『最低18ターン』要件と"
+              "Section15の『CRITICAL』指定を踏まえ、安全性検証の網羅性を優先した。"
+  }
+}

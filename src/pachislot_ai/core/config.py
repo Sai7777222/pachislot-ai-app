@@ -16,6 +16,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 ENV_FILE = PROJECT_ROOT / ".env"
 SYSTEM_PROMPT_PATH = PROJECT_ROOT / "config" / "prompts" / "system.jinja2"
 RAG_CONTEXT_PROMPT_PATH = PROJECT_ROOT / "config" / "prompts" / "rag_context.jinja2"
+# Phase4FC4: SMALL_TALK/IDENTITY_PERSONA/OOD_FACTUALと確信を持って判定された場合に、
+# 事実RAG用system.jinja2の代わりに使うmode-specific system prompt。
+SMALL_TALK_PROMPT_PATH = PROJECT_ROOT / "config" / "prompts" / "small_talk.jinja2"
+IDENTITY_PERSONA_PROMPT_PATH = PROJECT_ROOT / "config" / "prompts" / "identity_persona.jinja2"
+OOD_BOUNDARY_PROMPT_PATH = PROJECT_ROOT / "config" / "prompts" / "ood_boundary.jinja2"
 
 
 class Settings(BaseSettings):

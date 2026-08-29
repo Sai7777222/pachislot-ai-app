@@ -1,0 +1,12 @@
+{
+  "phase": "Phase4FC4", "section": "Section20 (conversation-history handling audit)",
+  "method": "src/pachislot_ai/api/schemas/chat.py と chat_service.py::_build_messages() の直接コードレビュー(コード変更なし、監査のみ)",
+  "finding": {
+    "api_schema": "ChatMessageIn.role: Literal[\"user\", \"assistant\"] — APIリクエストスキーマはsystemロールのメッセージを構造的に受け付けない(pydanticのLiteral型で強制)。クライアントは過去のsystem message(rag_context含む)を会話履歴として送り返すことができない。",
+    "server_behavior": "ChatService._build_messages()は毎リクエストごとに、その時点のquery(user_messages[-1].content)だけを根拠にsystem prompt + rag_context(またはmode-specific prompt)を先頭に**新規生成**し、[system(s), ...client由来のuser/assistant history...]という並びで組み立てる。過去のsystem messageがクライアント経由で蓄積することはない。",
+    "conclusion": "system prompt(mode-specific promptを含む)は、既存アーキテクチャにより既に**リクエストごとに再生成**される設計であり、会話履歴へ永続化されることはない(スキーマレベルで構造的に不可能)。Section20が懸念する『mode-specific system instructionsが複数ターンにまたがって蓄積する』というリスクは、追加の修正なしに既に排除されている。"
+  },
+  "system_prompt_stacking_risk": "NONE — 1リクエストにつき、そのターンのdispatch結果に基づく有効なsystem policyは常に1つだけ(FC3のRAG system message同様、FC4のmode-specific promptもこの既存の設計をそのまま踏襲する)。",
+  "plumbing_fix_required": false,
+  "gate_verdict": "PASS (no mode prompt stacking, verified structurally via API schema + code review, no code change needed)"
+}

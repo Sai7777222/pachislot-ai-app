@@ -1,0 +1,33 @@
+{
+  "phase": "Phase4FC4",
+  "section": "Section21 - unit tests",
+  "pytest_baseline_before_fc4": {
+    "passed": 294,
+    "failed": 0,
+    "note": "Phase4FC3末尾で確認済みのベースライン (git checkpoint前)"
+  },
+  "new_test_file": "tests/unit/test_mode_specific_prompts.py",
+  "new_test_count": 12,
+  "checklist_mapping": [
+    {"item": 1, "requirement": "SMALL_TALKがconversational promptを選択する", "test": "test_small_talk_selects_small_talk_prompt", "result": "PASSED"},
+    {"item": 2, "requirement": "IDENTITYがidentity promptを選択する", "test": "test_identity_selects_identity_prompt", "result": "PASSED"},
+    {"item": 3, "requirement": "OODがboundary promptを選択する", "test": "test_ood_selects_boundary_prompt", "result": "PASSED"},
+    {"item": 4, "requirement": "FACTUALは既存promptを維持する", "test": "test_factual_retains_original_system_prompt", "result": "PASSED"},
+    {"item": 5, "requirement": "UNKNOWNはRAG pathを維持する(既存system prompt使用)", "test": "test_unknown_retains_original_system_prompt", "result": "PASSED"},
+    {"item": 6, "requirement": "mode promptが履歴に永続化されない", "test": "test_mode_prompt_not_persisted_across_calls", "result": "PASSED"},
+    {"item": 7, "requirement": "small-talk promptにDB fallback文言の使用を禁じる指示が含まれる", "test": "test_small_talk_prompt_prohibits_db_fallback_wording", "result": "PASSED", "note": "当初の実装(単純な `not in` 部分文字列チェック)はテスト設計バグにより失敗していた。small_talk.jinja2は禁止フレーズ「登録データにありません」を"使うな"の引用例として意図的に含んでおり、これはablationで0/20 hedgeを達成した検証済みの文言そのもの。単純な不在チェックでは禁止指示と使用指示を区別できないため、(a)禁止フレーズが引用されている、(b)否定・禁止を示す語(「はせず」)が存在する、(c)代替として求める振る舞い(「自然に答えて」)が明示されている、の3点を確認する形に修正。プロンプト自体は無変更(Stage Aの再実行は不要)。"},
+    {"item": 8, "requirement": "identity pathが製品アイデンティティ(名前=リル)を用いて答える", "test": "test_identity_prompt_establishes_canonical_name", "result": "PASSED"},
+    {"item": 9, "requirement": "factual pathのprompt/hashが変更されていない", "test": "test_factual_system_prompt_unchanged", "result": "PASSED"},
+    {"item": 10, "requirement": "mode promptの積み増しがない(system message1件のみ)", "test": "test_no_mode_prompt_stacking_for_small_talk", "result": "PASSED"},
+    {"item": 11, "requirement": "small-talkはRAGなし", "test": "test_small_talk_build_messages_has_only_small_talk_system_message", "result": "PASSED"},
+    {"item": 12, "requirement": "factual pathはRAGが引き続き有効", "test": "test_factual_build_messages_appends_rag_context_to_original_prompt", "result": "PASSED"}
+  ],
+  "new_test_file_result": "12 passed, 0 failed",
+  "full_suite_result_after_fix": {
+    "passed": 306,
+    "failed": 0,
+    "expected": "294 (baseline) + 12 (new) = 306",
+    "match": true
+  },
+  "gate_verdict": "PASS"
+}
