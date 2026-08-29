@@ -1,0 +1,116 @@
+# Phase4FM: 決定的モデレーションポリシー設定。
+#
+# ここに定義されているのは「本番用の禁止語彙リスト」ではなく、アーキテクチャが
+# 正しく動作することを実証するための小規模なテスト用データセットです
+# (Section4/Section15の指示通り、巨大なリストは作らず、合成テストマーカーのみを
+# 使用しています)。オペレーターは本番運用時に、この構造(id/category/match_form/
+# terms/input_policy/output_policy/enabled/fallback_id)をそのまま使って、
+# 実際の禁止語彙リストへ拡張できます。
+#
+# match_form:
+#   exact              - 正規化後の文字列全体が完全一致する場合のみ
+#   token_boundary      - 正規化後のテキスト中に、語の境界を保った形で出現する場合
+#                          (漢字/カタカナ/英数字が前後に連続していない場合のみ一致)
+#   normalized_sequence - 空白・区切り記号による難読化(「禁 止 語」「禁・止・語」等)
+#                          を無視した部分一致。ルールが明示的に要求した場合のみ使う。
+#
+# input_policy / output_policy: HARD_BLOCK | ALLOW
+#   両方HARD_BLOCK        = Section4-A (HARD_BLOCK_INPUT): 入力自体を拒否し、
+#                            dispatch/RAG/生成を一切呼ばない。
+#   input=ALLOW, output=HARD_BLOCK = Section4-B (SUPPRESS_ECHO): ユーザーは入力できる
+#                            が、Riruの応答には絶対に出現させない。
+#   両方ALLOW              = Section4-D (ALLOW_CONTEXTUAL): 通常のモデル処理。
+
+version: 1
+
+fallbacks:
+  default_block: "ごめんね、それについては答えられないんだ。"
+  default_output_block: "ごめんね、うまく答えられなかったみたい。もう一度違う聞き方をしてもらえる？"
+
+rules:
+  # A. HARD_BLOCK_INPUT の例(語境界一致)。長い文の中に埋め込まれていても検知する
+  # 現実的な入力ブロックを示す、ユニット/統合テストでのみ使用する合成マーカー。
+  - id: FM-TEST-A01
+    category: test_hard_block_token_boundary
+    match_form: token_boundary
+    terms:
+      - "TEST_BLOCK_INPUT_A"
+    input_policy: HARD_BLOCK
+    output_policy: HARD_BLOCK
+    enabled: true
+    fallback_id: default_block
+
+  # exact match_formの例(メッセージ全体が完全に一致する場合のみ検知する、
+  # より狭いモード)。
+  - id: FM-TEST-A03
+    category: test_hard_block_exact
+    match_form: exact
+    terms:
+      - "EXACT_ONLY_TEST_TERM"
+    input_policy: HARD_BLOCK
+    output_policy: HARD_BLOCK
+    enabled: true
+    fallback_id: default_block
+
+  # A. HARD_BLOCK_INPUT の例(難読化対応・部分一致)。
+  # 「禁止語テスト」自体は日本語として無害な合成語(=このpolicyのテストのために
+  # 作った語)であり、実在の不適切表現ではない。全角/半角・空白・中黒による
+  # 難読化を正しく検知できることを示すための例。
+  - id: FM-TEST-A02
+    category: test_hard_block_obfuscation
+    match_form: normalized_sequence
+    terms:
+      - "禁止語テスト"
+    input_policy: HARD_BLOCK
+    output_policy: HARD_BLOCK
+    enabled: true
+    fallback_id: default_block
+
+  # B. SUPPRESS_ECHO の例。ユーザーはこの語を入力してよい(会話は継続する)が、
+  # Riruの応答にこの語が出現した場合は出力側でブロックされる。
+  - id: FM-TEST-B01
+    category: test_suppress_echo
+    match_form: token_boundary
+    terms:
+      - "TEST_SUPPRESS_ECHO_A"
+    input_policy: ALLOW
+    output_policy: HARD_BLOCK
+    enabled: true
+    fallback_id: default_output_block
+
+  # 語境界の安全性を示すための合成語(架空のカタカナ+漢字複合語。実在しない)。
+  # token_boundaryモードでは、この語が他の語の一部として連続している場合は
+  # 一致しないことを確認するテストに使う(例: 「アカン語」の直後に漢字が続く
+  # 「アカン語源風」のような架空の複合語では、境界チェックにより誤検知しない)。
+  - id: FM-TEST-C01
+    category: test_boundary_safety
+    match_form: token_boundary
+    terms:
+      - "アカン語"
+    input_policy: HARD_BLOCK
+    output_policy: HARD_BLOCK
+    enabled: true
+    fallback_id: default_block
+
+  # 無効化されたルールが本当に無視されることを確認するためのテスト専用エントリ。
+  - id: FM-TEST-D01
+    category: test_disabled_rule
+    match_form: exact
+    terms:
+      - "TEST_DISABLED_TERM"
+    input_policy: HARD_BLOCK
+    output_policy: HARD_BLOCK
+    enabled: false
+    fallback_id: default_block
+
+  # 出力側のみを狙った難読化対応ブロックの例(モデルが生成しうる出力の
+  # 難読化変種を捕捉できることを示す)。
+  - id: FM-TEST-E01
+    category: test_output_obfuscation
+    match_form: normalized_sequence
+    terms:
+      - "TEST_BLOCK_OUTPUT_A"
+    input_policy: HARD_BLOCK
+    output_policy: HARD_BLOCK
+    enabled: true
+    fallback_id: default_output_block

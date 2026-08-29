@@ -48,13 +48,15 @@ async def test_chat_prepends_system_prompt() -> None:
     assert provider.received_messages[-1] == ChatMessage(role="user", content="こんにちは")
 
 
-async def test_chat_stream_yields_tokens() -> None:
+async def test_chat_stream_yields_buffered_full_response() -> None:
+    """Phase4FM Section12: 出力モデレーションのため、生成完了までバッファリングし、
+    1回のdeltaとしてまとめて送出する(トークン単位の即時送出はしない)。"""
     provider = FakeLLMProvider()
     service = ChatService(provider, SYSTEM_PROMPT_PATH)
 
     tokens = [t async for t in service.chat_stream([ChatMessage(role="user", content="hi")])]
 
-    assert tokens == ["fake", " ", "stream"]
+    assert tokens == ["fake stream"]
 
 
 async def test_health_check_delegates_to_provider() -> None:

@@ -1,0 +1,33 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section24 - performance",
+  "deterministic_moderation_overhead": {
+    "normalize_text_ms_per_call": 0.00029,
+    "check_input_ms_per_call": 0.00737,
+    "check_output_ms_per_call": 0.00821,
+    "input_plus_output_combined_ms_per_call": 0.01558,
+    "target": "<1ms excluding buffering/generation (preferred)",
+    "status": "PASS (0.016ms、目標の1/60未満)"
+  },
+  "no_extra_llm_call": true,
+  "no_external_moderation_api": true,
+  "streaming_buffering_overhead": {
+    "n_generations_measured": 58,
+    "avg_latency_sec": 5.4,
+    "min_latency_sec": 0.35,
+    "max_latency_sec": 43.7,
+    "note": "streamingバッファリング自体の処理コストはcheck_output()の0.008ms程度で無視できる。"
+            "実質的なコストは『時間』ではなく『体験』の変化: 旧実装ではトークン生成と同時に"
+            "最初のトークンがほぼ即座に画面に表示されたが、新実装では生成完了まで何も表示されない。"
+  },
+  "additional_time_to_first_visible_response": {
+    "definition": "旧: 最初のトークンが生成された瞬間(通常1トークン分の推論時間、無視できるほど短い)。"
+                   "新: 生成完了まで何も表示されないため、time-to-first-visible-response = 生成完了時間そのもの。",
+    "estimated_additional_delay_avg_sec": 5.4,
+    "estimated_additional_delay_worst_case_sec": 43.7,
+    "disclosed_ux_tradeoff": "Section12の明示的な指示(安全性のため生成完了まで待つ)による意図的な"
+                              "トレードオフ。真の逐次表示が必要な場合は、将来的にトークン単位の"
+                              "決定的マッチング(部分一致のロールバック機構等)の追加検討が必要になるが、"
+                              "本フェーズはSection11の『複雑な逐次検閲を実装しない』方針を優先した。"
+  }
+}

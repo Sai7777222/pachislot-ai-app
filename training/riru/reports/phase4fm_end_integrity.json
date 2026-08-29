@@ -1,0 +1,39 @@
+{
+  "phase": "Phase4FM",
+  "section": "end_integrity",
+  "pytest_end_state": {"passed": 346, "failed": 0, "baseline_before_fm": 306, "new_tests_added": 40},
+  "phase4zg_adapter_sha256": {
+    "expected": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "actual_after_all_generation_stages": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "match": true,
+    "conclusion": "Phase4ZGは無変更(訓練は一切行っていない)"
+  },
+  "frozen_components_confirmed_unchanged": {
+    "config/prompts/ (system.jinja2/small_talk.jinja2/identity_persona.jinja2/ood_boundary.jinja2/rag_context.jinja2)": "git diff無し",
+    "src/pachislot_ai/dispatch/": "git diff無し(GT260再検証でdrift_vs_fc4=0も確認済み)",
+    "src/pachislot_ai/rag/": "git diff無し(entity_attribution/structured_lookup/evidence_arbitration/pipeline全て無変更)",
+    "src/pachislot_ai/data/": "git diff無し(DB/embedding無変更)"
+  },
+  "modified_files": [
+    "src/pachislot_ai/core/config.py (+2 lines: MODERATION_POLICY_PATH追加)",
+    "src/pachislot_ai/services/chat_service.py (check_input()/check_output()新設、chat()/chat_stream()へのモデレーション統合、chat_stream()のasync generator化+バッファリング)",
+    "src/pachislot_ai/api/routes/chat.py (post_chat_stream()でRAG検索より前段の入力チェックを追加)",
+    "tests/unit/test_chat_service.py (streamingバッファリング方針変更に伴うtest_chat_stream_yields_tokensの更新)"
+  ],
+  "new_files_uncommitted": [
+    "src/pachislot_ai/moderation/ (__init__.py, normalize.py, policy.py, matcher.py, engine.py)",
+    "config/moderation.yaml",
+    "tests/unit/test_moderation.py",
+    "tests/unit/test_chat_service_moderation.py",
+    "tests/integration/test_moderation_integration.py",
+    "training/riru/guard/phase4fm_precompute_contexts.py",
+    "training/riru/guard/run_phase4fm_generation.py",
+    "training/riru/guard/run_phase4fm_router_gt260.py",
+    "training/riru/reports/phase4fm_*.json / phase4fm_*.md (16 artifacts)"
+  ],
+  "section29_compliance": "Section29の指示通り、CASE結果に関わらずFMの本番コード変更"
+                           "(moderationモジュール本体/config.py/chat_service.py/chat.py/config/moderation.yaml/"
+                           "新規test)は一切commitしていない。人間レビュー待ち。",
+  "quantization_status": "未実施(継続してSection29の前提条件[FC4境界closure完了/モデレーション統合完了/"
+                          "最終Product Candidate再テスト]の最後の1つが未完了)"
+}

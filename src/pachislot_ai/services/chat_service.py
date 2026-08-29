@@ -16,6 +16,7 @@ from jinja2 import Template
 
 from pachislot_ai.core.config import (
     IDENTITY_PERSONA_PROMPT_PATH,
+    MODERATION_POLICY_PATH,
     OOD_BOUNDARY_PROMPT_PATH,
     SMALL_TALK_PROMPT_PATH,
 )
@@ -26,6 +27,7 @@ from pachislot_ai.dispatch.conservative_dispatch import (
     SMALL_TALK,
 )
 from pachislot_ai.llm.base import ChatCompletionResult, ChatMessage, LLMProvider
+from pachislot_ai.moderation import ModerationEngine, ModerationResult
 from pachislot_ai.rag.context_builder import RagContext
 from pachislot_ai.rag.pipeline import RagPipeline
 
@@ -71,10 +73,14 @@ class ChatService:
         small_talk_prompt_path: Path = SMALL_TALK_PROMPT_PATH,
         identity_persona_prompt_path: Path = IDENTITY_PERSONA_PROMPT_PATH,
         ood_boundary_prompt_path: Path = OOD_BOUNDARY_PROMPT_PATH,
+        moderation_policy_path: Path = MODERATION_POLICY_PATH,
     ) -> None:
         self._llm = llm
         self._system_prompt = _load_system_prompt(system_prompt_path)
         self._rag_pipeline = rag_pipeline
+        # Phase4FM: 決定的モデレーション層。RAG/dispatch/生成より前の入力チェックと、
+        # 生成後・ユーザー表示前の出力チェックの両方に、同一エンジンを使う。
+        self._moderation = ModerationEngine.from_yaml(moderation_policy_path)
         # Phase4FC4: SMALL_TALK/IDENTITY_PERSONA/OOD_FACTUALと確信を持って判定された
         # 場合、事実RAG用system.jinja2(数値の厳密な取り扱いを繰り返し指示する内容で、
         # 雑談文脈にまで過度な慎重さを持ち込む一因になっていた)の代わりに、この短い
@@ -98,6 +104,18 @@ class ChatService:
     @property
     def rag_enabled(self) -> bool:
         return self._rag_pipeline is not None
+
+    def check_input(self, user_messages: list[ChatMessage]) -> ModerationResult:
+        """Section9: dispatch/RAG/生成より前に呼ぶ、入力側モデレーション判定。
+        API層(/v1/chat/stream)がRAG検索より前に単独で呼べるよう公開している
+        (build_rag_context()と同じ設計方針)。"""
+        if not user_messages:
+            return self._moderation.check_input("")
+        return self._moderation.check_input(user_messages[-1].content)
+
+    def check_output(self, text: str) -> ModerationResult:
+        """Section11: 生成後・ユーザー表示前に呼ぶ、出力側モデレーション判定。"""
+        return self._moderation.check_output(text)
 
     def build_rag_context(
         self, user_messages: list[ChatMessage], machine_id: str | None
@@ -174,20 +192,38 @@ class ChatService:
         temperature: float | None = None,
         rag_context: RagContext | None | object = _NOT_GIVEN,
     ) -> ChatAnswer:
+        # Section9: HARD_BLOCK_INPUT対象なら、dispatch/RAG/生成を一切呼ばずに
+        # 安全な代替応答を即座に返す。
+        input_mod = self.check_input(user_messages)
+        if not input_mod.allowed:
+            return ChatAnswer(
+                content=input_mod.safe_response or "",
+                prompt_tokens=None,
+                completion_tokens=None,
+                sources=_sources_dict(None),
+            )
+
         if rag_context is _NOT_GIVEN:
             rag_context = self.build_rag_context(user_messages, machine_id)
         messages = self._build_messages(user_messages, rag_context)  # type: ignore[arg-type]
         result: ChatCompletionResult = await self._llm.chat(
             messages, max_tokens=max_tokens, temperature=temperature
         )
+
+        # Section11: 生成後・ユーザー表示前の出力チェック。ブロックされた場合、
+        # ユーザーに見えるcontentのみを安全な代替文へ差し替える(sources/使用量は
+        # 検索メタデータであり、禁止表現そのものではないためそのまま保持する)。
+        output_mod = self.check_output(result.content)
+        final_content = output_mod.safe_response if not output_mod.allowed else result.content
+
         return ChatAnswer(
-            content=result.content,
+            content=final_content or "",
             prompt_tokens=result.prompt_tokens,
             completion_tokens=result.completion_tokens,
             sources=_sources_dict(rag_context),  # type: ignore[arg-type]
         )
 
-    def chat_stream(
+    async def chat_stream(
         self,
         user_messages: list[ChatMessage],
         *,
@@ -196,10 +232,27 @@ class ChatService:
         temperature: float | None = None,
         rag_context: RagContext | None | object = _NOT_GIVEN,
     ) -> AsyncIterator[str]:
+        # Section9: 入力ブロック時はdispatch/RAG/生成を一切呼ばない。
+        input_mod = self.check_input(user_messages)
+        if not input_mod.allowed:
+            yield input_mod.safe_response or ""
+            return
+
         if rag_context is _NOT_GIVEN:
             rag_context = self.build_rag_context(user_messages, machine_id)
         messages = self._build_messages(user_messages, rag_context)  # type: ignore[arg-type]
-        return self._llm.chat_stream(messages, max_tokens=max_tokens, temperature=temperature)
+
+        # Section12: streamingは現状トークン即時送出のため、生成後チェックだけでは
+        # 既に禁止表現がクライアントへ届いてしまう恐れがある。このPhaseでは
+        # 「生成が完了するまでバッファリングし、モデレーション判定後に送出する」
+        # 方針を採用する(複雑な逐次検閲は行わない、Section12の明示的な指示通り)。
+        buffer: list[str] = []
+        async for delta in self._llm.chat_stream(messages, max_tokens=max_tokens, temperature=temperature):
+            buffer.append(delta)
+        full_text = "".join(buffer)
+
+        output_mod = self.check_output(full_text)
+        yield output_mod.safe_response if not output_mod.allowed else full_text
 
     async def health_check(self) -> bool:
         return await self._llm.health_check()

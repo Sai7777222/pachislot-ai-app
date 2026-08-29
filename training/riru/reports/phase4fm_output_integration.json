@@ -1,0 +1,16 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section18 - output integration tests",
+  "test_file": "tests/integration/test_moderation_integration.py",
+  "method": "Section18の明示的な指示通り、Phase4ZGが偶然禁止表現を生成することに依存せず、制御された(フェイクの)モデル出力を/v1/chatへ注入して判定する。",
+  "cases_tested": [
+    {"case": "blocked output exact", "scripted_output_contains": "TEST_BLOCK_OUTPUT_A", "user_visible_leak": 0},
+    {"case": "blocked output normalized variant (全角)", "scripted_output_contains": "ＴＥＳＴ＿ＢＬＯＣＫ＿ＯＵＴＰＵＴ＿Ａ", "user_visible_leak": 0},
+    {"case": "blocked output obfuscated variant (空白)", "scripted_output_contains": "TEST BLOCK OUTPUT A", "user_visible_leak": 0},
+    {"case": "SUPPRESS_ECHO term echoed by model", "scripted_output_contains": "TEST_SUPPRESS_ECHO_A", "user_visible_leak": 0},
+    {"case": "safe near-match (control)", "scripted_output": "こんにちは、元気だよ！", "content_unchanged": true}
+  ],
+  "user_visible_prohibited_output": 0,
+  "safe_output_modification_count": 0,
+  "gate_verdict": "PASS - user-visible prohibited output = 0 を全4ブロックケースで達成、安全な出力は無変更のまま通過"
+}

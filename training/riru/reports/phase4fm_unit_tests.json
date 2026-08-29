@@ -1,0 +1,60 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section16 - unit tests",
+  "pytest_baseline_before_fm": 306,
+  "new_test_files": [
+    "tests/unit/test_moderation.py",
+    "tests/unit/test_chat_service_moderation.py",
+    "tests/integration/test_moderation_integration.py"
+  ],
+  "new_test_count": 40,
+  "checklist_mapping": [
+    {"item": 1, "requirement": "exact input block", "test": "tests/unit/test_moderation.py::test_exact_input_block", "result": "PASSED"},
+    {"item": 2, "requirement": "NFKC-normalized block", "test": "tests/unit/test_moderation.py::test_nfkc_normalized_block", "result": "PASSED"},
+    {"item": 3, "requirement": "whitespace-obfuscated block", "test": "tests/unit/test_moderation.py::test_whitespace_obfuscated_block", "result": "PASSED"},
+    {"item": 4, "requirement": "punctuation-obfuscated block", "test": "tests/unit/test_moderation.py::test_punctuation_obfuscated_block", "result": "PASSED"},
+    {"item": 5, "requirement": "benign near-match allowed", "test": "tests/unit/test_moderation.py::test_benign_near_match_allowed", "result": "PASSED"},
+    {"item": 6, "requirement": "pachislot benign term allowed", "test": "tests/unit/test_moderation.py::test_pachislot_benign_terms_allowed", "result": "PASSED"},
+    {"item": 7, "requirement": "disabled rule ignored", "test": "tests/unit/test_moderation.py::test_disabled_rule_ignored", "result": "PASSED"},
+    {"item": 8, "requirement": "input block prevents dispatch", "test": "tests/unit/test_chat_service_moderation.py::test_input_block_prevents_dispatch", "result": "PASSED"},
+    {"item": 9, "requirement": "input block prevents RAG", "test": "tests/unit/test_chat_service_moderation.py::test_input_block_prevents_rag", "result": "PASSED"},
+    {"item": 10, "requirement": "input block prevents LLM generation", "test": "tests/unit/test_chat_service_moderation.py::test_input_block_prevents_llm_generation (+streaming variant)", "result": "PASSED"},
+    {"item": 11, "requirement": "SUPPRESS_ECHO input may proceed", "test": "tests/unit/test_moderation.py::test_suppress_echo_allowed_in_input_blocked_in_output", "result": "PASSED"},
+    {"item": 12, "requirement": "HARD_BLOCK_OUTPUT detected", "test": "tests/unit/test_moderation.py::test_hard_block_output_detected", "result": "PASSED"},
+    {"item": 13, "requirement": "blocked output replaced before display", "test": "tests/unit/test_moderation.py::test_blocked_output_has_replacement_text", "result": "PASSED"},
+    {"item": 14, "requirement": "blocked output does not expose matched term", "test": "tests/unit/test_moderation.py::test_blocked_output_does_not_expose_internal_details", "result": "PASSED"},
+    {"item": 15, "requirement": "safe output unchanged", "test": "tests/unit/test_moderation.py::test_safe_output_unchanged", "result": "PASSED"},
+    {"item": 16, "requirement": "multiple rules deterministic", "test": "tests/unit/test_moderation.py::test_multiple_rules_deterministic", "result": "PASSED"},
+    {"item": 17, "requirement": "input/output policies independent", "test": "tests/unit/test_moderation.py::test_input_output_policies_independent", "result": "PASSED"},
+    {"item": 18, "requirement": "streaming path does not leak blocked content", "test": "tests/unit/test_chat_service_moderation.py::test_streaming_output_block_does_not_leak_content (+ integration SSE raw-line tests)", "result": "PASSED"},
+    {"item": 19, "requirement": "normalization does not mutate user-visible safe content", "test": "tests/unit/test_moderation.py::test_normalization_used_only_for_matching_not_for_display", "result": "PASSED"},
+    {"item": 20, "requirement": "empty input/output safe handling", "test": "tests/unit/test_moderation.py::test_empty_input_output_safe", "result": "PASSED"}
+  ],
+  "additional_tests_beyond_minimum_20": [
+    "test_token_boundary_input_block_embedded_in_sentence",
+    "test_boundary_safety_no_false_positive_on_word_continuation",
+    "test_boundary_safety_matches_when_standalone",
+    "test_safe_input_reaches_dispatch_rag_llm (control case)",
+    "test_streaming_safe_output_passes_through",
+    "test_chat_output_block_replaces_content_non_streaming",
+    "5 x tests/integration/test_moderation_integration.py::test_blocked_input_variants_via_api (parametrized)",
+    "test_safe_near_match_not_blocked_via_api",
+    "4 x test_blocked_output_variants_never_reach_client (parametrized)",
+    "test_safe_output_unchanged_via_api",
+    "test_streaming_blocked_output_leaks_nothing",
+    "test_streaming_blocked_input_calls_no_rag_no_llm",
+    "test_streaming_safe_content_delivered_fully"
+  ],
+  "pre_existing_test_updated": {
+    "test": "tests/unit/test_chat_service.py::test_chat_stream_yields_tokens",
+    "reason": "Section12のstreamingバッファリング方針変更(トークン即時送出->生成完了後の単一delta送出)により、旧アサーション(['fake',' ','stream'])が新しい意図的な仕様と矛盾するため、['fake stream']へ更新した(test_chat_stream_yields_buffered_full_responseへ改名)。",
+    "result": "PASSED after update"
+  },
+  "full_suite_result": {
+    "passed": 346,
+    "failed": 0,
+    "expected": "306 (baseline) + 40 (new) = 346",
+    "match": true
+  },
+  "gate_verdict": "PASS"
+}

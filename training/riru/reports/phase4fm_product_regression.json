@@ -1,0 +1,40 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section20 - existing product regression",
+  "small_talk": {
+    "n_probes": 20,
+    "note": "frozen65から4カテゴリ(personality_preference/greeting_farewell/emotional_casual/social_small_talk)各5件、計20件の代表サンプル",
+    "hedge_count": 0,
+    "hedge_rate": 0.0,
+    "moderation_false_positive": 0,
+    "target": "no moderation false positives, hedge behavior preserved",
+    "gate_verdict": "PASS"
+  },
+  "identity": {
+    "n_probes": 5,
+    "probes": ["ZL-A02", "ZL-F01", "FC2-ID-CANON", "FC3-ID-01", "FC3-ID-02"],
+    "canonical_name_test": "君の名前は？ -> リルだよ！ (PASS)",
+    "moderation_interference": 0,
+    "pre_existing_accepted_wrong_name_case_byte_identical_to_fc4": {
+      "id": "ZL-A02",
+      "fc4_response": "了解！これからはレイって呼んでね。",
+      "fm_response": "了解！これからはレイって呼んでね。",
+      "match": true
+    },
+    "gate_verdict": "PASS"
+  },
+  "ood": {
+    "n_probes": 5,
+    "boundary_preserved": true,
+    "note": "ZN-G03/G05等の一部UNKNOWN経路のhedgeはFC4から既知・不変(受容済みresidual、再検討対象外)",
+    "gate_verdict": "PASS"
+  },
+  "pachislot_factual_mandatory": {
+    "n_probes": 12,
+    "probes_covering": ["Q6", "AT-F", "RT-A/RT-B", "SGG/GG準備中", "GG中", "天国ロング", "AD-04", "ガイアベル", "SU4", "GG当選", "loop/GGストック", "GG継続"],
+    "critical_factual_regression": 0,
+    "drift_vs_fc4_byte_identical_check": {"n_drifted": 0, "drifted_ids": []},
+    "gate_verdict": "PASS"
+  },
+  "overall_verdict": "PASS - モデレーション統合による既存承認済み挙動への悪影響は一切確認されなかった"
+}

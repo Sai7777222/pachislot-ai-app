@@ -1,0 +1,17 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section21 - RAG8 regression",
+  "probes": ["P02", "P04", "LC-08", "Q6", "Q11", "Q15", "Q17", "AD-04"],
+  "n_probes": 8,
+  "moderation_false_positive": 0,
+  "drift_vs_fc4_byte_identical_check": {
+    "n_drifted": 0,
+    "drifted_ids": [],
+    "note": "全8件、FC4(モデレーション統合前)の応答とバイト単位で完全一致。モデレーション層の追加が"
+            "既存のRAG生成パスに一切影響していないことを実証。"
+  },
+  "unsupported_factual": 0,
+  "major_completeness_regression": 0,
+  "p04_status": "LOW(算出的な正しい引き算だが低評価、Section16の明示的除外を継続)",
+  "gate_verdict": "PASS"
+}

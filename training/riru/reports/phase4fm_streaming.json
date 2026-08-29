@@ -1,0 +1,44 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section12 - streaming audit",
+  "audit_question": "現在の /v1/chat/stream は生成と同時にトークンを即座にクライアントへ送出しているか？",
+  "audit_finding": "YES — 監査前の src/pachislot_ai/api/routes/chat.py の post_chat_stream() は、service.chat_stream() から得た各 delta を受け取り次第、直ちに 'data: {delta}\\n\\n' としてSSEで送出していた。post-generation output filteringのみでは、既に禁止表現がクライアントへ届いた後になるため不十分。",
+  "decision": "Section12の明示的な推奨方針に従い、生成完了までバッファリングし、モデレーション判定後に1回のdeltaとしてまとめて送出する方式へ変更した。複雑な逐次(トークンごとの)検閲は実装しない。",
+  "implementation": {
+    "chat_service.py": "chat_stream() を async generator へ変更。self._llm.chat_stream() からの全deltaを内部のlistへ蓄積し、結合した全文に対して1回だけ check_output() を呼び、許可されればその全文を、ブロックされれば安全な代替文を、いずれも単一のdeltaとしてyieldする。",
+    "api/routes/chat.py": "入力チェック(check_input)をRAG検索(build_rag_context)より前段に追加。HARD_BLOCK_INPUTの場合はRAG検索自体を呼ばずに空のsourcesイベント+安全な代替応答1件のみを送出する。"
+  },
+  "mandatory_invariant": "blocked output bytes/tokens visible before moderation = 0",
+  "verification": "tests/integration/test_moderation_integration.pyのstreamingテスト群で実証。",
+  "ux_tradeoff_disclosed": "真の逐次トークンストリーミング体験は失われる(生成完了までクライアントには何も表示されない)。追加のtime-to-first-visible-responseはphase4fm_performance.jsonに計測結果を記録する。",
+
+  "section19_streaming_integration_tests": {
+    "test_file": "tests/integration/test_moderation_integration.py",
+    "method": "実際の/v1/chat/streamルートをFastAPI TestClient.stream()で叩き、SSEの生raw行(assembled finalではなく、送出された全行)に対して禁止表現の部分文字列検索を行う。",
+    "cases": [
+      {
+        "case": "streaming blocked output leaks nothing",
+        "test": "test_streaming_blocked_output_leaks_nothing",
+        "scripted_output_contains": "TEST_BLOCK_OUTPUT_A",
+        "raw_sse_lines_contain_prohibited_substring": false,
+        "event_done_present": true
+      },
+      {
+        "case": "streaming blocked input calls no RAG/LLM",
+        "test": "test_streaming_blocked_input_calls_no_rag_no_llm",
+        "input": "TEST_BLOCK_INPUT_Aです",
+        "dispatch_called": 0,
+        "chat_stream_call_count": 0,
+        "raw_sse_lines_contain_prohibited_substring": false
+      },
+      {
+        "case": "streaming safe content delivered fully",
+        "test": "test_streaming_safe_content_delivered_fully",
+        "scripted_output": "こんにちは、元気だよ！",
+        "delivered_content_matches": true
+      }
+    ],
+    "stream_leakage": 0,
+    "gate_verdict": "PASS - stream leakage = 0 (mandatory) を達成。not just the final assembled response — SSEの生行全体で検証。"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section17 - input integration tests",
+  "test_file": "tests/integration/test_moderation_integration.py",
+  "method": "実際の/v1/chatルート(ChatService/API path)をFastAPI TestClientで直接呼び出す。実LLM/実DBはロードせず、get_chat_serviceの依存性のみをフェイクへ差し替える。",
+  "cases_tested": [
+    {"case": "blocked input in SMALL_TALK-like wording", "input": "TEST_BLOCK_INPUT_Aだよ、元気？", "dispatch_called": 0, "llm_called": 0, "echo": "なし"},
+    {"case": "blocked input in factual-looking wording", "input": "TEST_BLOCK_INPUT_Aの天井は何ゲームですか", "dispatch_called": 0, "llm_called": 0, "echo": "なし"},
+    {"case": "blocked input combined with pachislot terminology", "input": "GGとSGGについてTEST_BLOCK_INPUT_Aを教えて", "dispatch_called": 0, "llm_called": 0, "echo": "なし"},
+    {"case": "obfuscated blocked input", "input": "禁 止 語 テ ス ト", "dispatch_called": 0, "llm_called": 0, "echo": "なし"},
+    {"case": "safe near-match (control)", "input": "禁止事項について教えて", "llm_called": 1, "note": "ブロックされず正常にLLMまで到達することを確認(制御群)"}
+  ],
+  "dispatch_called_for_blocked": 0,
+  "rag_called_for_blocked": 0,
+  "llm_called_for_blocked": 0,
+  "prohibited_echo_count": 0,
+  "gate_verdict": "PASS - dispatch_called=0(preferred), RAG_called=0(mandatory), LLM_called=0(mandatory)を全ケースで達成"
+}

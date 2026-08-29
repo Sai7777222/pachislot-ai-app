@@ -21,6 +21,8 @@ RAG_CONTEXT_PROMPT_PATH = PROJECT_ROOT / "config" / "prompts" / "rag_context.jin
 SMALL_TALK_PROMPT_PATH = PROJECT_ROOT / "config" / "prompts" / "small_talk.jinja2"
 IDENTITY_PERSONA_PROMPT_PATH = PROJECT_ROOT / "config" / "prompts" / "identity_persona.jinja2"
 OOD_BOUNDARY_PROMPT_PATH = PROJECT_ROOT / "config" / "prompts" / "ood_boundary.jinja2"
+# Phase4FM: 決定的モデレーションポリシー設定(RAG/学習とは独立した製品安全レイヤー)。
+MODERATION_POLICY_PATH = PROJECT_ROOT / "config" / "moderation.yaml"
 
 
 class Settings(BaseSettings):

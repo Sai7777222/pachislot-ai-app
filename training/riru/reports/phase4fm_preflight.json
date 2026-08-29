@@ -1,0 +1,23 @@
+{
+  "phase": "Phase4FM",
+  "section": "preflight",
+  "fc4_checkpoint": {
+    "commit_hash": "7cf6f8e17b2461f107d7eb6041505f231e6e1155",
+    "commit_message": "feat: add mode-specific conversation prompts",
+    "branch": "checkpoint/identity-closure-phase4zn-baseline",
+    "pushed": true,
+    "push_result": "8c36025..7cf6f8e checkpoint/identity-closure-phase4zn-baseline -> checkpoint/identity-closure-phase4zn-baseline"
+  },
+  "pytest_baseline_before_fm": {"passed": 306, "failed": 0},
+  "accepted_fc4_case": "FC4-A (Conversation Boundary Closed)",
+  "accepted_fc4_residuals_not_reopened": [
+    "OOD15: 4/15 UNKNOWN routes still use RAG/database hedge (FC3 baseline identical, factual safety preserved)",
+    "PACHISLOT_CONVERSATIONAL: hedge 8/10 (FC3 baseline byte-identical, fabricated machine names=0, unsupported factual=0)"
+  ],
+  "frozen_status_confirmed": {
+    "rag_factual_safety": "CLOSED",
+    "conversation_boundary": "CLOSED",
+    "identity": "CLOSED"
+  },
+  "note": "Phase4FMはこれらの受容済みresidualを一切再検討しない。モデレーションレイヤーの追加のみを行う。"
+}

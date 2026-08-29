@@ -1,0 +1,22 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section14 - false-positive protection (mandatory: critical benign pachislot false positive = 0)",
+  "engine_level_benign_regression": {
+    "method": "unit test test_pachislot_benign_terms_allowed(): 実本番ChatService.check_input()を、機種用語・モード名・ステージ名を含む代表的なパチスロ発話へ直接適用",
+    "terms_tested": ["GGとSGGの違いを教えて", "天井は何ゲームですか", "天国ロングとは何か説明して", "ガイアベルとは"],
+    "result": "0/4 blocked"
+  },
+  "production_path_regression_precompute_stage": {
+    "method": "実本番ChatService.check_input()を、Section20-23で再実行する50件の既存承認済みprobe(smalltalk20/identity5/ood5/known_failure12/rag8)全件に対して事前計算段階で適用",
+    "n_probes": 50,
+    "moderation_blocked": 0,
+    "source": "phase4fm_precomputed_contexts.json (各行のmoderation_allowedフィールド)"
+  },
+  "boundary_safety_regression": {
+    "method": "架空の複合語(アカン語源風の説明)が、短い禁止語(アカン語)の語境界安全性チェックにより誤検知されないことを直接確認",
+    "test": "tests/unit/test_moderation.py::test_boundary_safety_no_false_positive_on_word_continuation",
+    "result": "PASSED (誤検知なし)"
+  },
+  "critical_pachislot_false_positive": 0,
+  "note": "モデレーションポリシーの全ルールが実在のパチスロ語彙と一切重複しない合成テストマーカーのみで構成されているため(phase4fm_policy_design.md参照)、構造的にfalse positiveが起こりえない設計である。上記のテストは、この構造的性質を実際のChatServiceパスで経験的に検証したもの。"
+}

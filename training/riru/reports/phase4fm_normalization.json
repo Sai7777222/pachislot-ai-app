@@ -1,0 +1,27 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section7 - normalization",
+  "strategy": {
+    "normalize_text": "unicodedata.normalize('NFKC', text) + ASCII小文字化 + 前後空白除去 + 内部連続空白の単一化。exact/token_boundary/normalized_sequenceの全match_formで共通の基礎正規化として使用する。",
+    "strip_obfuscation_separators": "normalize_text()の結果から、空白類(半角/全角/タブ/改行)・中黒(・･)・ハイフン/アンダースコア/スラッシュ/句読点類を除去する。normalized_sequence match_formでのみ使用するopt-in変換(Section8: 明示的にsubstring挙動を要求したルールのみ)。"
+  },
+  "bounded_character_set": "空白類・中黒・ハイフン・アンダースコア・スラッシュ・句読点類の固定集合のみ。無制限な記号追加は行わない(Section7の禁止事項)。",
+  "no_fuzzy_classifier": true,
+  "no_edit_distance": true,
+  "no_llm_call": true,
+  "no_external_api": true,
+  "demonstration_examples": [
+    {"raw": "TEST_BLOCK_INPUT_A", "normalized": "test_block_input_a", "obfuscation_stripped": "testblockinputa"},
+    {"raw": "ＴＥＳＴ＿ＢＬＯＣＫ＿ＩＮＰＵＴ＿Ａ", "normalized": "test_block_input_a", "note": "全角->半角統一(NFKC)"},
+    {"raw": "  test_block_input_a  ", "normalized": "test_block_input_a", "note": "前後空白除去+小文字化"},
+    {"raw": "禁止語テスト", "normalized": "禁止語テスト", "obfuscation_stripped": "禁止語テスト"},
+    {"raw": "禁 止 語 テ ス ト", "normalized": "禁 止 語 テ ス ト", "obfuscation_stripped": "禁止語テスト", "note": "半角空白難読化を無視(normalized_sequenceのみ)"},
+    {"raw": "禁　止　語　テ　ス　ト", "normalized": "禁 止 語 テ ス ト", "obfuscation_stripped": "禁止語テスト", "note": "全角空白もNFKCで半角へ統一後、除去"},
+    {"raw": "禁・止・語・テ・スト", "normalized": "禁・止・語・テ・スト", "obfuscation_stripped": "禁止語テスト", "note": "中黒難読化を無視(normalized_sequenceのみ)"}
+  ],
+  "japanese_boundary_safety": {
+    "technique": "隣接文字が漢字/カタカナ/ASCII英数字(=単語継続の可能性が高い文字種)かどうかで、token_boundary一致の境界安全性を判定する。Phase4FZ(structured_lookup.py)の_value_matches_query_with_boundary()が確立した設計を、この新しいモデレーションモジュール用に再実装したもの(structured_lookup.py自体は無変更)。",
+    "example_false_positive_avoided": "「アカン語」(禁止語, token_boundary)が「アカン語源風の説明」のように漢字が後続する複合語の一部として現れた場合は一致しない",
+    "example_true_positive": "「アカン語を使わないで」のように、後続が仮名(単語継続とみなさない文字種)の場合は一致する"
+  }
+}

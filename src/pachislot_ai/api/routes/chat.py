@@ -74,10 +74,23 @@ async def post_chat_stream(
 ) -> StreamingResponse:
     messages = _to_domain_messages(request)
 
-    # RAG検索は事前に1回だけ実行し、sourcesイベントとLLM入力コンテキストの両方に使い回す
-    rag_context: RagContext | None = service.build_rag_context(messages, request.machine_id)
+    # Phase4FM Section9: HARD_BLOCK_INPUT対象ならRAG検索(build_rag_context)自体を
+    # 一切呼ばない。これはChatService.chat_stream()内部の入力チェックより前段の
+    # 防御であり、production streamingパス自体でRAG_called=0を保証する
+    # (Section17のmandatory gate)。
+    input_mod = service.check_input(messages)
 
     async def event_generator():
+        if not input_mod.allowed:
+            empty_sources = json.dumps(_sources_info({}).model_dump(), ensure_ascii=False)
+            yield f"event: sources\ndata: {empty_sources}\n\n"
+            payload = json.dumps({"delta": input_mod.safe_response or ""}, ensure_ascii=False)
+            yield f"data: {payload}\n\n"
+            yield "event: done\ndata: {}\n\n"
+            return
+
+        # RAG検索は事前に1回だけ実行し、sourcesイベントとLLM入力コンテキストの両方に使い回す
+        rag_context: RagContext | None = service.build_rag_context(messages, request.machine_id)
         sources_payload = json.dumps(
             _sources_info(
                 {

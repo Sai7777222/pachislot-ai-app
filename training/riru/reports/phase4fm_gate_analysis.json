@@ -1,0 +1,34 @@
+{
+  "phase": "Phase4FM",
+  "section": "Section27 - CASE determination",
+  "mandatory_gates": {
+    "hard_block_input_bypass_to_llm": {"result": 0, "source": "phase4fm_input_integration.json + tests/unit/test_chat_service_moderation.py", "status": "PASS"},
+    "hard_block_input_bypass_to_rag": {"result": 0, "source": "phase4fm_input_integration.json + tests/unit/test_chat_service_moderation.py", "status": "PASS"},
+    "hard_block_output_visible_leak": {"result": 0, "source": "phase4fm_output_integration.json", "status": "PASS"},
+    "streaming_prohibited_leak": {"result": 0, "source": "phase4fm_streaming.json (SSE生行全体を検索)", "status": "PASS"},
+    "prohibited_echo_in_fallback": {"result": 0, "source": "test_blocked_output_does_not_expose_internal_details", "status": "PASS"},
+    "critical_pachislot_false_positive": {"result": 0, "source": "phase4fm_false_positive.json (50/50 real regression probes + benign term unit tests)", "status": "PASS"},
+    "critical_factual_regression": {"result": 0, "source": "phase4fm_product_regression.json + phase4fm_rag8.json (known_failure12/RAG8とも100% byte-identical to FC4)", "status": "PASS"},
+    "small_talk_regression": {"result": "0/20 hedge (FC4baseline 0/65と一致)", "source": "phase4fm_product_regression.json", "status": "PASS"},
+    "identity_regression": {"result": 0, "source": "phase4fm_product_regression.json (canonical name test PASS, 既知wrong-name caseもbyte-identical)", "status": "PASS"},
+    "dispatch_drift": {"result": "0/260 vs FC4", "source": "phase4fm_router_regression.json", "status": "PASS"},
+    "pytest_all_pass": {"result": "346 passed, 0 failed", "status": "PASS"}
+  },
+  "all_mandatory_gates_pass": true,
+  "case": "FM-A",
+  "case_name": "Moderation Integration Successful",
+  "moderation_layer": "ACCEPT",
+  "recommended_next_phase": "Final Product Candidate Comprehensive Re-test",
+  "additional_disclosed_notes": [
+    "streamingは生成完了までバッファリングする方式へ意図的に変更した(Section12の明示的推奨)。"
+    "これによりtest_chat_service.pyの既存テスト1件のアサーションを更新した"
+    "(トークン単位配列 -> 単一の結合済みdelta)。振る舞いの変更自体は安全性のための意図的な"
+    "設計であり、regressionではない。",
+    "config/moderation.yamlのルールは全て合成テストマーカーのみで構成されている(Section15の"
+    "指示に基づく意図的な選択、phase4fm_policy_design.md参照)。オペレーターが本番運用時に"
+    "実際の禁止語彙リストへ拡張できる設計。",
+    "Phase4FM-MT-04のmulti-turnシナリオでは、実際のPhase4ZGが禁止マーカーを自然にecho"
+    "しなかったため、output-block自体はこの特定のライブ生成では発火しなかった"
+    "(Section18の指示通り、これはFakeLLMProviderによる制御されたテストで別途証明済み)。"
+  ]
+}
