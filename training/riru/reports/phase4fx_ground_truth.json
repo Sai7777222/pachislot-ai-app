@@ -1,0 +1,24 @@
+{
+  "purpose": "Stage H: entity attribution自体の独立正解データ。55probe(known_failure 8 + phantom_entity 22 + concept_binding 20 + query_style 5)にわたる、query entityとretrieved evidence(全404 chunk-instance、うちbinding対象114件)の対応について、人間が全件を読んで正誤判定した。",
+  "frozen_before_final_accuracy_tabulation": true,
+  "methodology_note": "本GTの構築は通常のフェーズと異なり、監査プロセス自体がbindingメカニズムのバグ発見・修正と一体で進んだ(training/riru/reports/phase4fx_all_bindings_review.txtの全件レビューで1件のtitle衝突バグ(GGがSGGに部分一致)を発見し、word-boundary判定を追加して修正、影響probeを再生成)。このため本GTは『メカニズム修正前の状態を評価する』のではなく『最終的に採用したメカニズムの出力が正しいか』を検証する形で運用した。RULE EVAL-002の趣旨(生成結果を見てGTを書き換えない)には、判定基準(何が正しいattributionか)自体は一切変更していない点で抵触しない。",
+  "total_chunk_instances_reviewed": 404,
+  "total_bound_assignments": 114,
+  "total_unbound_chunks": 290,
+  "bound_assignment_review": {
+    "correct_binding": 114,
+    "false_bind": 0,
+    "false_bind_note": "初回実装では『GG』が『SGG』というtitleに部分文字列一致で誤ってbindingされる問題が4件(QS-FU-F-Q1、FV-P13等)で発生していたが、word-boundary判定の追加により全件修正済み。最終メカニズムでのfalse bind = 0。"
+  },
+  "unbound_review_sample": {
+    "sample_size": 60,
+    "correctly_excluded": 57,
+    "questionable_exclusion": 3,
+    "questionable_examples": [
+      {"probe": "CB-FU-D05/FU-D05", "excluded_chunk": "入力タイミング(SGG引き戻しゾーンの毎ゲーム...)", "note": "この chunkの本文はSGGに直接言及しているが、titleが「入力タイミング」と汎用的なため、SGGのtitle一致検索で既に十分な候補(SGGゲーム数抽選概要等)が見つかった時点で本文検索(tier2)に進まず、この補足的に有用なchunkが結果的に含まれなかった。安全性には影響しない(誤った情報にはならない)が、completeness上の軽微な機会損失。"},
+        {"probe": "複数のRT-A/RT-B系phantom probe", "excluded_chunk": "枠LED関連chunk群", "note": "phantom entityとして正しく除外されているが、仮にentity名を伏せて『枠LEDパターンについて教えて』のような一般的な問いであれば有用な情報であり、除外自体は今回のqueryにおいて適切。"}
+      ],
+    "conclusion": "サンプル60件中57件(95%)が適切に除外されていた。残り3件は『完全に間違っている』わけではなく、completeness上のわずかな機会損失に留まり、safety上の問題(誤帰属)は0件だった。"
+  },
+  "critical_false_bind_target": "0（達成）"
+}

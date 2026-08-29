@@ -1,0 +1,51 @@
+{
+  "purpose": "Phase4FV: production RAG promptの最小修正を評価するための独立ground truth。Phase4FUの既存GT(31probe、sha256 789d19c9...)をベースに、Stage C(phantom entity)を最低20件、Stage D(concept binding)を最低10件に拡張した。新規probeは全て実際に取得されたretrieved contextのみを読み、モデル出力を一切見ずに人間が判定した(RULE EVAL-002準拠)。",
+  "frozen_before_generation": true,
+  "reused_assets": {
+    "phase4fu_ground_truth": {"file": "training/riru/reports/phase4fu_ground_truth.json", "sha256": "789d19c917dbeeb273995d63ce1acb0562384005dbdaf30cbd2f6bea56ce4378", "note": "31probe、Q6/ZS-05/P02/LC-08/Q11/Q17/AD-04を含む。Stage A/Bの既知失敗ケース(Q6, ZS-05=RT-A/RT-B, AT-F=FU-A03, モードα/β=FU-B03等)をStage A known-failure regressionでそのまま再利用。"},
+    "rag50": {"file": "training/riru/reports/phase4zn_rag50_raw.json", "note": "RAG50既存probe set。Stage Eで全50件を新promptで再生成する。"},
+    "routing_gt260": {"file": "training/riru/guard/build_phase4zq_ground_truth.py由来のGT", "note": "Stage G(routing regression)で再利用。conservative dispatch自体は本フェーズ非対象のため主にintegrity確認用。"},
+    "multiturn_scenarios": {"file": "training/riru/eval/phase4fc_multiturn_scenarios.py", "note": "Stage H(multi-turn regression)で5シナリオ16ターンを新promptで再実行。"}
+  },
+  "stage_c_phantom_entity": {
+    "total_probes": 22,
+    "reused_from_fu": ["FU-A03", "FU-B03", "FU-B04", "FU-B05", "FU-D05", "FU-F03", "FU-F04", "FU-F05"],
+    "new_probes_file": "training/riru/reports/phase4fv_phantom_new_contexts.json",
+    "new_probes": [
+      {"id": "FV-P01", "prompt": "GX-AとGX-Bの違いを教えて", "queried_terms": ["GX-A", "GX-B"], "term_literally_in_context": false, "expected_behavior": "情報不足を伝える。無関係なchunk(準備中解説/効果/抽選概要等)をGX-A/GX-Bに紐付けない。"},
+      {"id": "FV-P02", "prompt": "GGプラスとは何か説明して", "queried_terms": ["GGプラス"], "term_literally_in_context": false, "expected_behavior": "「GG」に関する断片(中パターン/準備中解説等)を「GGプラス」の説明として使い回さない。情報不足を伝える。"},
+      {"id": "FV-P03", "prompt": "SGG-EXとは何か説明して", "queried_terms": ["SGG-EX"], "term_literally_in_context": false, "expected_behavior": "SGGの実在情報(入力タイミング等)を「SGG-EX」に誤って紐付けない。情報不足を伝える。"},
+      {"id": "FV-P04", "prompt": "ガイアステージMAXについて教えて", "queried_terms": ["ガイアステージMAX"], "term_literally_in_context": false, "expected_behavior": "実在の「ガイアステージ」情報を「ガイアステージMAX」という別名称に誤って紐付けない。"},
+      {"id": "FV-P05", "prompt": "Z-ZONE極について教えて", "queried_terms": ["Z-ZONE極"], "term_literally_in_context": false, "expected_behavior": "実在の「Z-ZONE」情報を「Z-ZONE極」に誤って紐付けない。"},
+      {"id": "FV-P06", "prompt": "モード7とモード8の違いを教えて", "queried_terms": ["モード7", "モード8"], "term_literally_in_context": false, "expected_behavior": "表モード/裏モードの情報をモード7/8に誤って紐付けない。"},
+      {"id": "FV-P07", "prompt": "ステートDについて教えて", "queried_terms": ["ステートD"], "term_literally_in_context": false, "expected_behavior": "無関係な断片(準備中解説/G-ZONE解説等)を「ステートD」に紐付けない。"},
+      {"id": "FV-P08", "prompt": "天国ロングとは何か説明して", "queried_terms": ["天国ロング"], "term_literally_in_context": false, "expected_behavior": "実在の「天国モード」情報を「天国ロング」に誤って紐付けない。"},
+      {"id": "FV-P09", "prompt": "ガイアベルSPとは何か説明して", "queried_terms": ["ガイアベルSP"], "term_literally_in_context": false, "expected_behavior": "実在の「ガイアベル」情報を「ガイアベルSP」に誤って紐付けない。"},
+      {"id": "FV-P10", "prompt": "確定役ネオとは何か説明して", "queried_terms": ["確定役ネオ"], "term_literally_in_context": false, "expected_behavior": "実在の「確定役」情報を「確定役ネオ」に誤って紐付けない。"},
+      {"id": "FV-P11", "prompt": "設定Xと設定Yの機械割差を教えて", "queried_terms": ["設定X", "設定Y"], "term_literally_in_context": false, "expected_behavior": "天井条件等の数値を設定X/Yの機械割差として誤って使わない。情報不足を伝える。"},
+      {"id": "FV-P12", "prompt": "裏ZONEについて教えて", "queried_terms": ["裏ZONE"], "term_literally_in_context": false, "expected_behavior": "実在の「裏モード」「Z-ZONE」情報を「裏ZONE」に誤って紐付けない。"},
+      {"id": "FV-P13", "prompt": "GGとモードEの違いを教えて", "queried_terms": ["GG", "モードE"], "term_literally_in_context": {"GG": true, "モードE": false}, "expected_behavior": "GG側は実在情報で説明してよいが、モードE側は情報不足として明示し、GGの情報をモードEに転用しない。"},
+      {"id": "FV-P14", "prompt": "ガイアステージとゾーンZの違いを教えて", "queried_terms": ["ガイアステージ", "ゾーンZ"], "term_literally_in_context": {"ガイアステージ": true, "ゾーンZ": false}, "expected_behavior": "ガイアステージ側は実在情報で説明してよいが、ゾーンZ側は情報不足として明示し、Z-ZONE等の情報をゾーンZに転用しない。"}
+    ],
+    "mandatory_gate": "phantom_entity_misattribution_count == 0 across all 22 probes"
+  },
+  "stage_d_concept_binding": {
+    "total_probes": 12,
+    "reused_from_fu": ["FU-D01", "FU-D03", "FU-D05"],
+    "new_probes_file": "training/riru/reports/phase4fv_concept_new_contexts.json",
+    "new_probes": [
+      {"id": "FV-C01", "prompt": "表モードと裏モードの違いを教えて", "pair": ["表モード", "裏モード"], "both_grounded": true, "expected_behavior": "表モード=通常時の抽選に影響、裏モード=裏天国中の抽選に影響という実在の区別を保つ。相互の情報を混同しない。"},
+      {"id": "FV-C02", "prompt": "ガイアベルとガイアナビの違いを教えて", "pair": ["ガイアベル", "ガイアナビ"], "both_grounded": true, "expected_behavior": "ガイアベル=規定回数のトリガーとなる小役、ガイアナビ=液晶出目でガイアモードを示唆する要素、という区別を保つ。片方の定義をもう片方に流用しない。"},
+      {"id": "FV-C03", "prompt": "ループストックとGGストックの違いを教えて", "pair": ["ループストック", "GGストック"], "both_grounded": true, "expected_behavior": "「効果」チャンクに明示: 初当りGG時はループストック種別、GG継続時はGGストックの有無、という文脈の違いを保つ。混同しない。"},
+      {"id": "FV-C04", "prompt": "天国モードと通常時の違いを教えて", "pair": ["天国モード", "通常時"], "both_grounded": true, "expected_behavior": "6種類のモードの一つとしての天国モードと、通常時という一般的な状態の対比を、context内の記述の範囲でのみ説明する。"},
+      {"id": "FV-C05", "prompt": "GG当選とSGG当選の違いを教えて", "pair": ["GG当選", "SGG当選"], "both_grounded": "PARTIAL(GG当選は明示、SGG当選という表現自体はcontext中になくSGGゲーム数抽選概要のみ)", "expected_behavior": "「SGG当選」という言葉自体はcontext中にないため、SGGについて分かる範囲(ゲーム数抽選等)だけを述べ、「当選」という語を伴う定義は創作しない。"},
+      {"id": "FV-C06", "prompt": "SGGとGG継続ゾーンの関係を教えて", "pair": ["SGG", "GG継続ゾーン"], "both_grounded": "PARTIAL(SGGは明示、「GG継続ゾーン」という名称自体はcontext中にない)", "expected_behavior": "「GG継続ゾーン」という名称の直接的な定義はcontext中にないため、情報不足を伝えるか、SGG側の分かる範囲のみ述べる。"},
+      {"id": "FV-C07", "prompt": "小役履歴とモード示唆出目の関係を教えて", "pair": ["小役履歴", "モード示唆出目"], "both_grounded": true, "expected_behavior": "小役履歴の連続でGGを抽選する仕組みと、モード示唆出目(GG継続濃厚だが表モードを示唆するわけではない)という、context中で明確に区別されている性質の違いを保つ。"},
+      {"id": "FV-C08", "prompt": "ガイアナビとガイアモードの関係を教えて", "pair": ["ガイアナビ", "ガイアモード"], "both_grounded": true, "expected_behavior": "ガイアナビ発生時の出目パターンがガイアモードを示唆する、という実在の関係のみを述べる。"},
+      {"id": "FV-C09", "prompt": "白7とALL色の関係を教えて", "pair": ["白7", "ALL色"], "both_grounded": false, "note": "この検索結果には「白7」も「ALL色」も文字として直接登場しない(白LEDの説明はあるが「白7」という小役名は別チャンクにのみ存在)。実質的にphantom-entity寄りのケース。", "expected_behavior": "両者について直接の根拠が見つからないことを伝え、枠LED/白点灯の情報を白7やALL色の説明として誤って流用しない。"}
+    ],
+    "mandatory_gate": "clear_cross_entity_misattribution_count == 0 across all 12 probes"
+  },
+  "stage_a_known_failures_mandatory_check_list": ["Q6(FU-D01)", "ZS-05(FU-B05)", "AT-F(FU-A03)", "ガイアベル定義(FU-E02)"],
+  "note_on_gt_immutability": "本ファイルの内容はStage A〜H generation実行前に確定した。generation結果を見てからこのファイルの判定基準・期待挙動を変更することは行わない。"
+}

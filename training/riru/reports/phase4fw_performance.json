@@ -1,0 +1,18 @@
+{
+  "purpose": "Section16: production導入を想定した性能・コスト測定。",
+  "measurements": {
+    "deterministic_verifier_latency": "実測ほぼ0秒/claim(純Python、GPU不要、entity grounding + evidence binding + numeric/symbol exact matchのみ)。129 claim全件の処理は1秒未満で完了。",
+    "claim_extraction_latency_E1_deterministic": "ほぼ0秒(句読点分割のみ、GPU不要)。",
+    "claim_extraction_latency_E2_model": "平均6.22秒/response(24件サンプル、Phase4ZG、greedy、max_new_tokens=400)。",
+    "model_verifier_latency": "平均7.01秒/response(54件、Phase4ZG、greedy、max_new_tokens=600、1回のcallでresponseの全claimをまとめて判定)。",
+    "v3_regeneration_latency": "既存のgeneration(max_new_tokens=300)と同等、実測で1回あたり数秒〜10秒程度(既存フェーズの計測と同水準)。",
+    "total_added_latency_estimate_full_pipeline": "E2抽出(約6秒) + model verifier(約7秒) ≒ 13秒/response。deterministic verifierのみなら実質0秒。",
+    "gpu_memory_impact": "既存のPhase4ZG生成と同一モデル・同一メモリフットプリント(追加ロード不要、同一プロセス内で再利用可能)。追加のGPUメモリオーバーヘッドは実質なし。",
+    "new_generation_count_this_phase": 82
+  },
+  "product_fit_assessment": {
+    "concern": "Section16で明示された『リルは軽量・高速な専門AIを目標としているため、毎回答で重いsecond full-generationを当然の前提にしない』という要件に対し、E2+model verifierを組み合わせたhybrid構成は約13秒の追加レイテンシを要する。これは通常の1回answerのgeneration時間(既存フェーズ実測で数秒〜十数秒)にほぼ匹敵する規模であり、体感応答速度を大きく損なう。",
+    "deterministic_only_option": "deterministic verifier単独なら追加レイテンシは実質ゼロだが、Stage D/Eの評価で示した通り、単独では既知failureの一部(SGG/GG準備中混同等)を見逃す、または誤検出率が高い(GT構築上の欠陥を補正しても一定のFPは残る可能性が高い)。",
+    "conclusion": "現時点の実装(E2+model verifier)はレイテンシ面でproduct要件に適合しない。deterministic-onlyは高速だが精度面で不十分。速度と精度を両立する経路は本フェーズでは見つからなかった。"
+  }
+}

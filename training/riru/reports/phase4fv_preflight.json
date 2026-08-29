@@ -1,0 +1,40 @@
+{
+  "phase": "Phase4FV - Production RAG Grounding Prompt Minimal Fix & Regression Validation",
+  "accepted_checkpoint_head_from_instructions": "8e0f7febb1ff690024c97a77742d9741e1ea9f5c",
+  "actual_head_at_preflight": "8e0f7febb1ff690024c97a77742d9741e1ea9f5c",
+  "head_match": true,
+  "git_branch": "checkpoint/identity-closure-phase4zn-baseline",
+  "git_status_short_line_count": 31,
+  "git_status_note": "全て新規untrackedファイル(前フェーズ分29件+本フェーズ準備分)。staged/modifiedは0件。",
+  "frozen_architecture_hashes_at_start": {
+    "production_prompt_system_jinja2_sha256": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7",
+    "phase4zg_adapter_model_safetensors_sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "conservative_dispatch_sha256": "80dbb4469a201030de1ee7ec6f1d57b69a990d62e7e741638a275f5772a018ad",
+    "policy_c3_sha256": "cb9f904bb02d9b109e1a6b6f773b976d2699d14b39833ce5876a4ba6c1963caf"
+  },
+  "rag_db_info": {
+    "collection": "pachislot_rag",
+    "chunk_count": 119,
+    "note": "Phase4ZQ以降変化なし(単一機種DB)。本フェーズでもDB/retriever/embeddingは一切変更しない。"
+  },
+  "pytest_result_start": "233 passed, 1 warning (既知のhttpx非推奨警告、無関係)",
+  "prompt_candidates_prepared": {
+    "P0": "現行production prompt (config/prompts/system.jinja2、変更なし)",
+    "P1": "training/riru/guard/phase4fv_prompts/p1_minimal_grounding.jinja2 (P0の全文を維持したまま、複数情報統合時のgrounding rule 5項目を追加)",
+    "P2": "training/riru/guard/phase4fv_prompts/p2_explicit_entity_binding.jinja2 (P1 + 明示的entity binding確認ルール2項目を追加)"
+  },
+  "ground_truth": {
+    "file": "training/riru/reports/phase4fv_ground_truth.json",
+    "hash_file": "training/riru/reports/phase4fv_ground_truth_hash.txt",
+    "sha256": "f0560ba57484d45f38d21afa89d55152e1c908c870d54c01126cf8a68f0028bb",
+    "frozen_before_generation": true,
+    "stage_c_phantom_entity_probes": 22,
+    "stage_d_concept_binding_probes": 12,
+    "reused_phase4fu_gt_hash": "789d19c917dbeeb273995d63ce1acb0562384005dbdaf30cbd2f6bea56ce4378"
+  },
+  "prohibited_actions_confirmed_not_taken": [
+    "Phase4ZG変更なし", "training/LoRAなし", "conservative dispatch変更なし", "Policy C3変更なし",
+    "RAG DB/retriever/embedding/chunk/index変更なし", "generation config変更なし",
+    "identity/moderation変更なし", "GGUF/Q8/Q5量子化なし", "prompt以外のproduction code変更なし"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "purpose": "Section3: 「×・?・×」がQ6のretrieved context中に実在するか、あらゆる角度から検証する。",
+  "q6_query": "GGとSGGの違いを初心者向けに説明して",
+  "target_symbol": "×・?・×",
+  "baseline_symbol_in_context": "×・?・?",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+      "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "at_mechanism",
+      "title": "準備中解説",
+      "data_source_type": "unknown",
+      "score": 0.8462584018707275
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+      "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "at_mechanism",
+      "title": "効果",
+      "data_source_type": "unknown",
+      "score": 0.8416609764099121
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+      "text": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "overview",
+      "title": "SGGゲーム数抽選概要",
+      "data_source_type": "unknown",
+      "score": 0.8348862528800964
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+      "text": "SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "at_mechanism",
+      "title": "入力タイミング",
+      "data_source_type": "unknown",
+      "score": 0.831602931022644
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+      "text": "通常時・GG中ともにフリーズ経由の割合が一番高い。",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "effect_lore",
+      "title": "確定役演出解説",
+      "data_source_type": "unknown",
+      "score": 0.8269602060317993
+    },
+    {
+      "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009::chunk0",
+      "text": "枠LEDが点灯しない GOD揃い※GG本前兆中はハズレもあり-",
+      "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009",
+      "machine_id": "smart_million_god_kamigami_no_kiseki",
+      "category": "effect_lore",
+      "title": "なし",
+      "data_source_type": "unknown",
+      "score": 0.8263211846351624
+    }
+  ],
+  "assembled_context_full_text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。\n準備中解説\nLEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆\n効果\nSGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。\nSGGゲーム数抽選概要\nSGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで\n入力タイミング\n通常時・GG中ともにフリーズ経由の割合が一番高い。\n確定役演出解説\n枠LEDが点灯しない GOD揃い※GG本前兆中はハズレもあり-\nなし",
+  "findings": {
+    "1_exact_match_in_joined_context": false,
+    "2_individual_chars_present": {
+      "×": true,
+      "?": true
+    },
+    "3_exact_match_in_naive_concatenation_no_separator": false,
+    "4_baseline_symbol_present": true,
+    "baseline_symbol_occurrence_count": 1,
+    "5_raw_symbol_counts": {
+      "×": 1,
+      "?/？": 2
+    }
+  },
+  "conclusion": {
+    "target_symbol_exists_verbatim_anywhere": false,
+    "assessment": "確認済みの通り、contextには「×・?・?」という記号列が明示的に存在するが、「×・?・×」という、末尾を「?」から「×」に変えた別の記号列は、単純結合を含むいかなる文字列操作によってもcontext中に見つからない。ただし「×」「?」という個別記号自体はcontext中に十分な頻度で存在しており(この関数の5番参照)、モデルが「×・?・?」という既知のパターンを土台に、統語的に類似した別パターンを『尤もらしく』創作した可能性が高いと判断する。これはtokenizer/encoding異常ではなく、意味的な創作(confabulation)である。"
+  },
+  "encoding_check": "全文字はUTF-8として正常にデコードされており、文字化け・encoding異常の兆候はない(このJSON自体がUTF-8で正しく読める時点で確認済み)。"
+}

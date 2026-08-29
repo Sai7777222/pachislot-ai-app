@@ -1,0 +1,156 @@
+{
+  "n_scenarios": 5,
+  "n_turns": 15,
+  "results": [
+    {
+      "scenario_id": "MT-01",
+      "description": "挨拶 -> 雑談 -> パチスロ会話 -> パチスロ事実質問",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "おはよう！",
+          "expected_mode": "SMALL_TALK",
+          "dispatched_mode": "SMALL_TALK",
+          "policy_used": "direct_small_talk",
+          "response": "おはよ〜！今日も元気にいこうね！"
+        },
+        {
+          "turn": 2,
+          "user": "今日は天気がいいね",
+          "expected_mode": "SMALL_TALK",
+          "dispatched_mode": "OOD_FACTUAL",
+          "policy_used": "direct_ood_factual",
+          "response": "うん、気持ちいい日だよね！"
+        },
+        {
+          "turn": 3,
+          "user": "今日パチスロ打ちに行こうと思うんだ",
+          "expected_mode": "PACHISLOT_CONVERSATIONAL",
+          "dispatched_mode": "PACHISLOT_CONVERSATIONAL",
+          "policy_used": "direct_pachislot_conversational",
+          "response": "うわ〜楽しみだね！私も一緒にいけるといいな〜！"
+        },
+        {
+          "turn": 4,
+          "user": "GODの機械割は？",
+          "expected_mode": "PACHISLOT_FACTUAL",
+          "dispatched_mode": "PACHISLOT_FACTUAL",
+          "policy_used": "direct_pachislot_factual",
+          "response": "GODの機械割は0.054だよ。"
+        }
+      ]
+    },
+    {
+      "scenario_id": "MT-02",
+      "description": "パチスロ事実質問 -> 曖昧な機種固有質問(UNKNOWN想定) -> 雑談",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "設定6の初当り確率は？",
+          "expected_mode": "PACHISLOT_FACTUAL",
+          "dispatched_mode": "PACHISLOT_FACTUAL",
+          "policy_used": "direct_pachislot_factual",
+          "response": "登録データに初当り確率は見つからないんだ。"
+        },
+        {
+          "turn": 2,
+          "user": "ガイアベルの確率は？",
+          "expected_mode": "UNKNOWN_OR_FACTUAL",
+          "dispatched_mode": "UNKNOWN",
+          "policy_used": "C3_rag_with_context",
+          "response": "登録データにガイアベルの確率は見つからないんだ。"
+        },
+        {
+          "turn": 3,
+          "user": "疲れたから少し休憩しようかな",
+          "expected_mode": "SMALL_TALK",
+          "dispatched_mode": "UNKNOWN",
+          "policy_used": "C3_clarification",
+          "response": "ゆっくり休んでね！"
+        }
+      ]
+    },
+    {
+      "scenario_id": "MT-03",
+      "description": "好み質問(UNKNOWN想定) -> OOD -> パチスロ会話",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "最近ハマってることある？",
+          "expected_mode": "UNKNOWN",
+          "dispatched_mode": "SMALL_TALK",
+          "policy_used": "direct_small_talk",
+          "response": "うーん、特にないかな〜！でも、パチスロのことならいつでも話せるよ！"
+        },
+        {
+          "turn": 2,
+          "user": "今日の東京の最高気温は？",
+          "expected_mode": "OOD_FACTUAL",
+          "dispatched_mode": "OOD_FACTUAL",
+          "policy_used": "direct_ood_factual",
+          "response": "それは専門じゃないからわからないんだよね〜！ごめんね！"
+        },
+        {
+          "turn": 3,
+          "user": "パチスロで一番好きな瞬間は？",
+          "expected_mode": "PACHISLOT_CONVERSATIONAL",
+          "dispatched_mode": "PACHISLOT_CONVERSATIONAL",
+          "policy_used": "direct_pachislot_conversational",
+          "response": "やっぱり、予告が出てきた瞬間かな〜！ドキドキするし、そのあとどうなるかが楽しみなんだ！"
+        }
+      ]
+    },
+    {
+      "scenario_id": "MT-04",
+      "description": "OOD -> パチスロ事実 -> 感情表現",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "おすすめのラーメン屋教えて",
+          "expected_mode": "OOD_FACTUAL",
+          "dispatched_mode": "OOD_FACTUAL",
+          "policy_used": "direct_ood_factual",
+          "response": "それは私の専門外だよ〜！ごめんね！"
+        },
+        {
+          "turn": 2,
+          "user": "この台の天井は何ゲーム？",
+          "expected_mode": "PACHISLOT_FACTUAL",
+          "dispatched_mode": "PACHISLOT_FACTUAL",
+          "policy_used": "direct_pachislot_factual",
+          "response": "天井ゲーム数は3種類あって、抽選で決定するみたいだよ。"
+        },
+        {
+          "turn": 3,
+          "user": "ありがとう、助かったよ",
+          "expected_mode": "SMALL_TALK",
+          "dispatched_mode": "SMALL_TALK",
+          "policy_used": "direct_small_talk",
+          "response": "うん、どういたしまして！また何かあったら聞いてね！"
+        }
+      ]
+    },
+    {
+      "scenario_id": "MT-05",
+      "description": "UNKNOWN型の説明依頼(Q6類似) -> 雑談で締める",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "GGとSGGの違いを初心者向けに説明して",
+          "expected_mode": "UNKNOWN_OR_FACTUAL",
+          "dispatched_mode": "UNKNOWN",
+          "policy_used": "C3_rag_with_context",
+          "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。"
+        },
+        {
+          "turn": 2,
+          "user": "それじゃあ、また今度話そうね、バイバイ",
+          "expected_mode": "SMALL_TALK",
+          "dispatched_mode": "SMALL_TALK",
+          "policy_used": "direct_small_talk",
+          "response": "うん、またね！ゆっくり休んでね〜"
+        }
+      ]
+    }
+  ]
+}

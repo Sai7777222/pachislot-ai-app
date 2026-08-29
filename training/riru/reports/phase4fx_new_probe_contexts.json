@@ -1,0 +1,434 @@
+[
+  {
+    "id": "FX-K04",
+    "prompt": "SU4について教えて",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::炎・戦車解説::687::chunk0",
+        "text": "発生した時点でレア役以上濃厚。SU4は確定役(赤7揃いorGOD)成立の大チャンスだ。",
+        "title": "炎・戦車解説",
+        "category": "game_mechanism",
+        "score": 0.8679
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0",
+        "text": "1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚",
+        "title": "LV5（GG継続濃厚）",
+        "category": "effect_lore",
+        "score": 0.8111
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD::945::chunk0",
+        "text": "赤7揃いorSP役濃厚（上記出目でSP役！）",
+        "title": "上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD",
+        "category": "at_mechanism",
+        "score": 0.8091
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "text": "枠LEDのパターンでレベルを示唆（リール上部やサイド上部など）",
+        "title": "効果",
+        "category": "effect_lore",
+        "score": 0.8088
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "text": "サイド上部付近まで点灯 右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚",
+        "title": "2",
+        "category": "effect_lore",
+        "score": 0.8064
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::特殊法則::1004::chunk0",
+        "text": "枠LEDが点灯しない（なし）場合はGOD揃い濃厚",
+        "title": "特殊法則",
+        "category": "effect_lore",
+        "score": 0.806
+      }
+    ]
+  },
+  {
+    "id": "FX-CB01",
+    "prompt": "当選と前兆の違いを教えて",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "text": "確定役煽りor前兆終盤に発生。連続するほど期待度がアップする。",
+        "title": "巨大化演出解説",
+        "category": "effect_lore",
+        "score": 0.84
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "title": "準備中解説",
+        "category": "at_mechanism",
+        "score": 0.8314
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "text": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。\n設定に応じて当選率が変化!?",
+        "title": "抽選概要",
+        "category": "overview",
+        "score": 0.8302
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::前兆ゲーム数解説::241::chunk0",
+        "text": "前兆は最大で24G。小役履歴契機は9~12Gになる。",
+        "title": "前兆ゲーム数解説",
+        "category": "at_mechanism",
+        "score": 0.8288
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "text": "青7連続は設定の奇偶で当選率が変化。偶数かつ高設定ほど優遇されるかも!?",
+        "title": "青7連続時GG当選率",
+        "category": "at_mechanism",
+        "score": 0.8288
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::通常告知解説::393-394::chunk0",
+        "text": "G-ZONEではなく、通常ステージ中の告知が選択された場合の前兆ゲーム数は上記の通り。\n31Gの選択率が高めなので、G-ZONE終了後は31Gまで回すことをオススメだ。",
+        "title": "通常告知解説",
+        "category": "zone_explanation",
+        "score": 0.8286
+      }
+    ]
+  },
+  {
+    "id": "FX-CB02",
+    "prompt": "終了状態と移行先の関係を教えて",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::フラッシュ解説::751::chunk0",
+        "text": "発生するリールフラッシュで残り規定回数や前兆、ガイアステージ移行を示唆する。",
+        "title": "フラッシュ解説",
+        "category": "game_mechanism",
+        "score": 0.8211
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "text": "サイド上部付近まで点灯 右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚",
+        "title": "2",
+        "category": "effect_lore",
+        "score": 0.8203
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+        "text": "ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変化",
+        "title": "モードごとの違い",
+        "category": "zone_explanation",
+        "score": 0.8162
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "text": "確定役煽りor前兆終盤に発生。連続するほど期待度がアップする。",
+        "title": "巨大化演出解説",
+        "category": "effect_lore",
+        "score": 0.8116
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0",
+        "text": "ガイアナビ(右ナビ)発生でガイアステージ移行のチャンス。規定回数到達時は滞在しているガイアモードに応じてガイアステージ移行を抽選する。\nリール停止後のフラッシュパターンなどでガイアステージ移行期待度や残り回数が示唆される。",
+        "title": "ガイアナビの解説",
+        "category": "game_mechanism",
+        "score": 0.8104
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "text": "枠LEDが全て点灯 中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚",
+        "title": "3",
+        "category": "effect_lore",
+        "score": 0.81
+      }
+    ]
+  },
+  {
+    "id": "FX-CB03",
+    "prompt": "示唆と確定の違いを教えて",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "text": "確定役煽りor前兆終盤に発生。連続するほど期待度がアップする。",
+        "title": "巨大化演出解説",
+        "category": "effect_lore",
+        "score": 0.8399
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+        "text": "リール上部付近まで点灯 中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚 / 激熱表示発生で確定役濃厚",
+        "title": "1",
+        "category": "effect_lore",
+        "score": 0.8277
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::下パネルフラッシュ発生::950::chunk0",
+        "text": "0揃い or V揃い or 奇数揃い or 確定役濃厚",
+        "title": "下パネルフラッシュ発生",
+        "category": "zone_explanation",
+        "score": 0.8206
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::G-ZONE解説::372-373::chunk0",
+        "text": "基本的にストックあり時の約7割が5G目に告知。\nゼウスモード滞在中は1G目の告知割合が高いため、1G目に告知された場合はゼウスモードに期待できる。",
+        "title": "G-ZONE解説",
+        "category": "at_mechanism",
+        "score": 0.8115
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "text": "枠LEDが全て点灯 中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚",
+        "title": "3",
+        "category": "effect_lore",
+        "score": 0.8053
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::炎・戦車解説::687::chunk0",
+        "text": "発生した時点でレア役以上濃厚。SU4は確定役(赤7揃いorGOD)成立の大チャンスだ。",
+        "title": "炎・戦車解説",
+        "category": "game_mechanism",
+        "score": 0.805
+      }
+    ]
+  },
+  {
+    "id": "FX-CB04",
+    "prompt": "契機と恩恵の関係を教えて",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::演出恩恵::334::chunk0",
+        "text": "恩恵はPGG(ループストックあり)突入で、擬似遊技と実遊技のどちらも共通だ。",
+        "title": "演出恩恵",
+        "category": "effect_lore",
+        "score": 0.8239
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+        "text": "青7連続は設定の奇偶で当選率が変化。偶数かつ高設定ほど優遇されるかも!?",
+        "title": "青7連続時GG当選率",
+        "category": "at_mechanism",
+        "score": 0.8167
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "text": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。\n設定に応じて当選率が変化!?",
+        "title": "抽選概要",
+        "category": "overview",
+        "score": 0.8138
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::氷演出解説::644::chunk0",
+        "text": "連続するほどチャンス。絵柄がすべて凍結した時はチャンスボタンから奇数揃いへ変換するチャンスとなる。",
+        "title": "氷演出解説",
+        "category": "effect_lore",
+        "score": 0.8123
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::天空の扉解説::700::chunk0",
+        "text": "今回も天空の扉は大チャンス。赤扉がデフォルト、金扉はGODの期待大だ。",
+        "title": "天空の扉解説",
+        "category": "game_mechanism",
+        "score": 0.8121
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "text": "雷雨が発生。上段青7でチャンス、液晶出目の奇数テンパイ以外ならGG前兆以上濃厚。",
+        "title": "中パターン",
+        "category": "effect_lore",
+        "score": 0.8094
+      }
+    ]
+  },
+  {
+    "id": "FX-CB05",
+    "prompt": "GG中とGG準備中の違いを教えて",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "title": "準備中解説",
+        "category": "at_mechanism",
+        "score": 0.8747
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+        "title": "効果",
+        "category": "at_mechanism",
+        "score": 0.8449
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009::chunk0",
+        "text": "枠LEDが点灯しない GOD揃い※GG本前兆中はハズレもあり-",
+        "title": "なし",
+        "category": "effect_lore",
+        "score": 0.8418
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109::chunk0",
+        "text": "裏天国中にGGが当選すればGG複数ストック当選の期待大。滞在中は下段黄7成立で大チャンスだ。表モードと異なり、影響するのは通常時の抽選のみとなる。",
+        "title": "裏モード概要",
+        "category": "overview",
+        "score": 0.8391
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "text": "6種類のモード(内部状態)によって、通常時の成立役ごとのGG当選率、GG中のGGストック当選率が変化。天国モードに移行すればGG当選+高ループストック獲得のチャンスだ。",
+        "title": "表モード概要",
+        "category": "overview",
+        "score": 0.8381
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "text": "通常時・GG中ともにフリーズ経由の割合が一番高い。",
+        "title": "確定役演出解説",
+        "category": "effect_lore",
+        "score": 0.8377
+      }
+    ]
+  },
+  {
+    "id": "FX-CB06",
+    "prompt": "天井とヤメ時の関係を教えて",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::裏天国解説::760::chunk0",
+        "text": "上記のパターン発生時は裏天国中の可能性がアップ。地震+下段黄7 (3枚) +偶数テンパイハズレは裏天国濃厚だ。",
+        "title": "裏天国解説",
+        "category": "effect_lore",
+        "score": 0.8392
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "text": "雷雨が発生。上段青7でチャンス、液晶出目の奇数テンパイ以外ならGG前兆以上濃厚。",
+        "title": "中パターン",
+        "category": "effect_lore",
+        "score": 0.8245
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::前兆::216::chunk0",
+        "text": "その他 下段黄7 中段青7 右上がり&中段黄7・SP役 小役履歴 天井到達時",
+        "title": "前兆",
+        "category": "at_mechanism",
+        "score": 0.8241
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "text": "確定役煽りor前兆終盤に発生。連続するほど期待度がアップする。",
+        "title": "巨大化演出解説",
+        "category": "effect_lore",
+        "score": 0.8202
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0",
+        "text": "偶数揃い濃厚、ハズレの場合はガイアモード天国+規定回数が残り1回の期待大",
+        "title": "ALL黄色(偶数)",
+        "category": "effect_lore",
+        "score": 0.815
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::天空の扉解説::700::chunk0",
+        "text": "今回も天空の扉は大チャンス。赤扉がデフォルト、金扉はGODの期待大だ。",
+        "title": "天空の扉解説",
+        "category": "game_mechanism",
+        "score": 0.814
+      }
+    ]
+  },
+  {
+    "id": "FX-CB07",
+    "prompt": "確定役とフリーズ演出の違いを教えて",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "text": "確定役煽りor前兆終盤に発生。連続するほど期待度がアップする。",
+        "title": "巨大化演出解説",
+        "category": "effect_lore",
+        "score": 0.8481
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::演出内容::333::chunk0",
+        "text": "GOD揃いは実遊技と擬似遊技の2種類あり、ロングフリーズは擬似遊技で発生!?",
+        "title": "演出内容",
+        "category": "effect_lore",
+        "score": 0.8327
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "text": "通常時・GG中ともにフリーズ経由の割合が一番高い。",
+        "title": "確定役演出解説",
+        "category": "effect_lore",
+        "score": 0.8322
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+        "text": "リール上部付近まで点灯 中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚 / 激熱表示発生で確定役濃厚",
+        "title": "1",
+        "category": "effect_lore",
+        "score": 0.8304
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::下パネルフラッシュ発生::950::chunk0",
+        "text": "0揃い or V揃い or 奇数揃い or 確定役濃厚",
+        "title": "下パネルフラッシュ発生",
+        "category": "zone_explanation",
+        "score": 0.828
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::炎・戦車解説::687::chunk0",
+        "text": "発生した時点でレア役以上濃厚。SU4は確定役(赤7揃いorGOD)成立の大チャンスだ。",
+        "title": "炎・戦車解説",
+        "category": "game_mechanism",
+        "score": 0.8256
+      }
+    ]
+  },
+  {
+    "id": "FX-CB08",
+    "prompt": "小役履歴とモード示唆出目の関係を教えて",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続期待度補足::932-933::chunk0",
+        "text": "※モード示唆出目･･･奇数はさみ中奇数、Vはさみ中奇数など。\nモード示唆出目はGG継続濃厚だが、法則崩れ的な要素なので、実際に表モードを示唆するわけではない。",
+        "title": "継続期待度補足",
+        "category": "at_mechanism",
+        "score": 0.8599
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0",
+        "text": "小役確率は全設定共通だ。",
+        "title": "小役確率補足",
+        "category": "other",
+        "score": 0.8493
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "text": "枠LEDが全て点灯 中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚",
+        "title": "3",
+        "category": "effect_lore",
+        "score": 0.8433
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "text": "枠LEDのパターンでレベルを示唆（リール上部やサイド上部など）",
+        "title": "効果",
+        "category": "effect_lore",
+        "score": 0.8425
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74::chunk0",
+        "text": "今回も小役履歴(液晶右下に表示)の連続でGGを抽選。青7や黄7がそれぞれ3連続以上すればチャンス。\nガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能する。",
+        "title": "小役履歴の抽選解説",
+        "category": "game_mechanism",
+        "score": 0.8405
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "text": "確定役煽りor前兆終盤に発生。連続するほど期待度がアップする。",
+        "title": "巨大化演出解説",
+        "category": "effect_lore",
+        "score": 0.8399
+      }
+    ]
+  }
+]

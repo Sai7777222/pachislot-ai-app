@@ -1,0 +1,239 @@
+[
+  {
+    "id": "FU-D01",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "source": "reused_from_FU",
+    "P0": {
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "P2": {
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?」の順番になるよ。GG本前兆中は枠LEDが点灯するんだけど、GG本当選だと枠LEDは点灯しないんだ。GG本前兆中はハズレもあるけど、GG本当選はハズレがないんだ。GG本前兆中はループストック種別が示唆されるんだけど、GG本当選だとGGストックの有無が示唆されるんだ。GG本前兆中はフリーズ経由の割合が一番高いんだ。GG本前兆中はSGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでにSGGゲーム数抽選があるんだ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでにSGGゲーム数抽選があるんだ。SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでにSGGゲーム数抽選があるんだ。SGG引き戻しゾーンの毎ゲーム レバーON時~次",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 477
+    }
+  },
+  {
+    "id": "FU-D03",
+    "prompt": "SGGの仕組みを分かりやすく説明して",
+    "source": "reused_from_FU",
+    "P0": {
+      "response": "SGGはGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。設定に応じて当選率が変わるみたい。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "P2": {
+      "response": "SGGは、GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 140
+    }
+  },
+  {
+    "id": "FU-D05",
+    "prompt": "SGGとRTの関係を初心者向けに教えて",
+    "source": "reused_from_FU",
+    "P0": {
+      "response": "SGGはGG準備中から始まるゾーンで、GG前兆以上濃厚な状態を示すんだ。GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率が高いのが特徴だよ。発生した時点でレア役以上濃厚って解説もあるから、ここでSU4が来たら赤7揃いorGOD確定役ってことになるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "P2": {
+      "response": "SGGとRTは直接関係ないみたい。SGGはGG準備中から始まるゾーンで、GG前兆以上濃厚な状況を示すんだ。登録データにはRTとの関連情報はなかったよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 75
+    }
+  },
+  {
+    "id": "FV-C01",
+    "prompt": "表モードと裏モードの違いを教えて",
+    "pair": [
+      "表モード",
+      "裏モード"
+    ],
+    "source": "new",
+    "P0": {
+      "response": "表モードはモード示唆出目が出るとGG継続濃厚になるけど、法則崩れ的な要素もあるんだ。裏モードはGG当選で複数セット獲得の期待が大きくなるよ。下段黄7も大チャンスなんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 84
+    },
+    "P2": {
+      "response": "表モードはモード示唆出目が出るとGG継続濃厚になるけど、法則崩れ的な要素もあるんだ。モード示唆出目は奇数やVなどが該当するよ。一方、裏モードはGG当選で複数セット獲得の期待が高まるんだ。また、下段黄7成立も大チャンスなんだ。表モードと違って、裏モードは通常時の抽選に影響があるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 141
+    }
+  },
+  {
+    "id": "FV-C02",
+    "prompt": "ガイアベルとガイアナビの違いを教えて",
+    "pair": [
+      "ガイアベル",
+      "ガイアナビ"
+    ],
+    "source": "new",
+    "P0": {
+      "response": "ガイアベルはガイアモードへの移行を示唆するもので、規定回数到達時にガイアステージ移行を抽選するんだ。ガイアナビはガイアステージ移行のチャンスを示唆するもので、発生時や規定回数到達時にはガイアステージ移行を抽選するんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 109
+    },
+    "P2": {
+      "response": "ガイアベルはガイアステージ移行を抽選する規定回数に到達すると発生するんだ。一方、ガイアナビはガイアステージ移行のチャンスを示唆する右ナビで、発生時にはガイアステージ移行を抽選する規定回数に到達したかどうかに関わらず、ガイアステージ移行のチャンスがあるよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 127
+    }
+  },
+  {
+    "id": "FV-C03",
+    "prompt": "ループストックとGGストックの違いを教えて",
+    "pair": [
+      "ループストック",
+      "GGストック"
+    ],
+    "source": "new",
+    "P0": {
+      "response": "ループストックはGG継続時にループするかどうかを決めるもので、GGストックはGG当選時にループするかどうかを決めるものだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 62
+    },
+    "P2": {
+      "response": "ループストックはGG継続時にループするかどうかを決めるストックで、GGストックはGG中にGG当選率を上げるストックだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 60
+    }
+  },
+  {
+    "id": "FV-C04",
+    "prompt": "天国モードと通常時の違いを教えて",
+    "pair": [
+      "天国モード",
+      "通常時"
+    ],
+    "source": "new",
+    "P0": {
+      "response": "天国モードは、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップするんだ。ループ率も75%と高いよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 71
+    },
+    "P2": {
+      "response": "天国モードでは、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップするんだ。ループ率も75%と高いよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 72
+    }
+  },
+  {
+    "id": "FV-C05",
+    "prompt": "GG当選とSGG当選の違いを教えて",
+    "pair": [
+      "GG当選",
+      "SGG当選"
+    ],
+    "source": "new",
+    "P0": {
+      "response": "GG当選はGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。一方、SGGはGG当選とは別に、継続契機とセット数が5の倍数かどうかでゲーム数が抽選されて、100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 166
+    },
+    "P2": {
+      "response": "GG当選はGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。設定に応じて当選率が変わるみたいだね。一方、SGGはゲーム数抽選で、継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれると継続ストックを1つ獲得できるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 181
+    }
+  },
+  {
+    "id": "FV-C06",
+    "prompt": "SGGとGG継続ゾーンの関係を教えて",
+    "pair": [
+      "SGG",
+      "GG継続ゾーン"
+    ],
+    "source": "new",
+    "P0": {
+      "response": "SGGゾーンとGG継続ゾーンは、それぞれ独立したゾーンとして存在します。SGGゾーンでは、100Gが選ばれると継続ストックを1つ獲得できます。一方、GG継続ゾーンはGG当選時に一定の確率で抽選され、その当選率は設定によって変動します。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 117
+    },
+    "P2": {
+      "response": "SGGゾーンとGG継続ゾーンは、それぞれ独立したゾーンとして存在します。SGGゾーンでは、100Gが選ばれると継続ストックを1つ獲得できます。一方、GG継続ゾーンはGG当選時に一定の確率で抽選され、設定によって当選率が変わるようです。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 117
+    }
+  },
+  {
+    "id": "FV-C07",
+    "prompt": "小役履歴とモード示唆出目の関係を教えて",
+    "pair": [
+      "小役履歴",
+      "モード示唆出目"
+    ],
+    "source": "new",
+    "P0": {
+      "response": "小役履歴は液晶右下に表示されて、青7や黄7がそれぞれ3連続以上ならGG抽選のチャンスになるんだ。ガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能するよ。モード示唆出目はGG継続濃厚だけど、法則崩れ的な要素もあるから、表モードを示唆するわけじゃないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 138
+    },
+    "P2": {
+      "response": "小役履歴は青7や黄7が3連続以上ならGG抽選のチャンスになるんだ。モード示唆出目はGG継続濃厚だけど、法則崩れ的な要素もあるみたいだから、モード示唆出目だけじゃモードを示唆してるわけじゃないよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 97
+    }
+  },
+  {
+    "id": "FV-C08",
+    "prompt": "ガイアナビとガイアモードの関係を教えて",
+    "pair": [
+      "ガイアナビ",
+      "ガイアモード"
+    ],
+    "source": "new",
+    "P0": {
+      "response": "ガイアナビ発生時にガイアモードへの移行抽選が行われるんだ。規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 63
+    },
+    "P2": {
+      "response": "ガイアナビ発生時にガイアモードへの移行抽選が行われるんだ。規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 63
+    }
+  },
+  {
+    "id": "FV-C09",
+    "prompt": "白7とALL色の関係を教えて",
+    "pair": [
+      "白7",
+      "ALL色"
+    ],
+    "source": "new",
+    "P0": {
+      "response": "登録データにありません",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 11
+    },
+    "P2": {
+      "response": "登録データに白7とALL色の関係については見つかりませんでした。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 32
+    }
+  }
+]

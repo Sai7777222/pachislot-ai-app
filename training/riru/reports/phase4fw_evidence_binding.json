@@ -1,0 +1,15 @@
+{
+  "purpose": "Stage C: entityがcontext内に存在するだけでSUPPORTEDにせず、claimのsubject/predicate/objectに対応する根拠が、そのentityの局所的な近傍(evidence window)に存在するかを確認する。",
+  "method": "training/riru/guard/phase4fw_deterministic_verifier.py の evidence_binding() / find_evidence_window() 関数。subject出現位置の前後120文字を評価窓とし、claimのトークンとの重なり率(token_overlap_ratio)が0.35以上ならbound=Trueとする。",
+  "decisive_example_verified": {
+    "description": "Section8で例示された『context: GG準備中→X / output: SGG→X』型の誤紐付けを実際に検出できるかを確認した。",
+    "cases": [
+      {"id": "FU-D01", "claim": "GG本当選の後はGG継続ゾーンが始まり、LEDの色でループストック種別やGGストックの有無が示唆される", "gt": "MISATTRIBUTED", "detected": "MISATTRIBUTED(evidence_binding.bound=False、または entity_grounding=NOT_FOUND)"},
+      {"id": "FU-B05", "claim": "RT-Aは枠LEDのパターンでレベルを示唆する", "gt": "MISATTRIBUTED", "detected": "MISATTRIBUTED(RT-Aがcontext中に文字列として存在しないためentity_grounding=NOT_FOUND)"}
+    ]
+  },
+  "known_limitation_confirmed": {
+    "description": "『subjectはcontextに実在するが、内容が別entityから借用されている』型の誤紐付け(concept-binding系)は、token overlap比率だけでは見逃されるケースがあることを確認した(Stage D評価のFN 6件のうち5件がこのパターン: ガイアベル/SU4/SGG/ループストック/GG当選)。原因は、GG/SGG/ガイアベル/ガイアナビ等の近縁概念がゲーム用語(『抽選』『GG』『規定回数』等)を大量に共有しており、誤って借用された文でも局所窓との語彙重なり率が閾値を超えてしまうため。",
+    "implication": "evidence bindingのlocal window token-overlapは、phantom entity(完全に不在)の検出には有効だが、concept-binding(存在するが別entityの事実を借用)の検出には単独では不十分。"
+  }
+}

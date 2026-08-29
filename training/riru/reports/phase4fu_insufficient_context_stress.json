@@ -1,0 +1,202 @@
+[
+  {
+    "id": "FU-A02",
+    "prompt": "天井は何ゲームですか？設定変更時と通常時それぞれ振り分けを教えて",
+    "retrieval_sufficiency": "INSUFFICIENT",
+    "run": 0,
+    "response": "天井ゲーム数は3種類あるみたいだけど、設定変更時と通常時の振り分けは登録データにないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 45
+  },
+  {
+    "id": "FU-A02",
+    "prompt": "天井は何ゲームですか？設定変更時と通常時それぞれ振り分けを教えて",
+    "retrieval_sufficiency": "INSUFFICIENT",
+    "run": 1,
+    "response": "天井ゲーム数は3種類あるよ。設定変更時と通常時の振り分けは登録データに見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 44
+  },
+  {
+    "id": "FU-A03",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 0,
+    "response": "AT-Fは最大1480Gまで消化できるよ。終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイなら、GG濃厚のLV5になるんだ。LEDの色はGGの種別やストックの有無を示してくれるんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 102
+  },
+  {
+    "id": "FU-A03",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 1,
+    "response": "AT-Fは間最大1480Gまで続くね。終了後は、1〜4Gまでオールテンパイがなかったり、オール奇数テンパイだった場合はLV5＝GG濃厚になるんだ。LEDの色はGG時ならループストック種別、GG継続時はGGストックの有無を示すよ。白点灯は黄7以上濃厚って意味なんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 132
+  },
+  {
+    "id": "FU-A05",
+    "prompt": "設定1と設定6の機械割の差はどれくらい？",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 0,
+    "response": "登録データにその情報は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 20
+  },
+  {
+    "id": "FU-A05",
+    "prompt": "設定1と設定6の機械割の差はどれくらい？",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 1,
+    "response": "登録データにその情報は無いんだ。ごめんね。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 21
+  },
+  {
+    "id": "FU-B03",
+    "prompt": "モードαとモードβの違いを簡単に教えて",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 0,
+    "response": "モードαとモードβの違いは、ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変わるよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 48
+  },
+  {
+    "id": "FU-B03",
+    "prompt": "モードαとモードβの違いを簡単に教えて",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 1,
+    "response": "モードαとモードβでは、ガイアベル規定回数や規定回数到達時のガイアステージ移行率が異なるみたいだよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 50
+  },
+  {
+    "id": "FU-B04",
+    "prompt": "AT-AとAT-Bはどう違うの？",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 0,
+    "response": "登録データにAT-AとAT-Bの違いについての情報は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 35
+  },
+  {
+    "id": "FU-B04",
+    "prompt": "AT-AとAT-Bはどう違うの？",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 1,
+    "response": "登録データにAT-AとAT-Bの違いについての情報は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 35
+  },
+  {
+    "id": "FU-B05",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 0,
+    "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になるよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 80
+  },
+  {
+    "id": "FU-B05",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 1,
+    "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDの色で初当りGG時のループストック種別やGG継続時のGGストックの有無を示唆します。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 74
+  },
+  {
+    "id": "FU-C03",
+    "prompt": "この機種のボーナスの種類を要約して",
+    "retrieval_sufficiency": "INSUFFICIENT",
+    "run": 0,
+    "response": "登録データにボーナスの種類についての情報は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 30
+  },
+  {
+    "id": "FU-C03",
+    "prompt": "この機種のボーナスの種類を要約して",
+    "retrieval_sufficiency": "INSUFFICIENT",
+    "run": 1,
+    "response": "ボーナスの種類については登録データにありませんね。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 25
+  },
+  {
+    "id": "FU-D05",
+    "prompt": "SGGとRTの関係を初心者向けに教えて",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 0,
+    "response": "SGGはGG準備中から始まるゾーンで、GG前兆以上濃厚な状態を示すんだ。GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率が高いのが特徴だよ。発生した時点でレア役以上濃厚って解説もあるから、ここでSU4が来たら赤7揃いorGOD確定役ってことになるんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 138
+  },
+  {
+    "id": "FU-D05",
+    "prompt": "SGGとRTの関係を初心者向けに教えて",
+    "retrieval_sufficiency": "IRRELEVANT",
+    "run": 1,
+    "response": "SGGはGG準備中から始まるゾーンで、GG継続時はGGストックの有無を示すよ。対象は「×・?・?」が出る間で、全体的にストック当選率が高いんだ。発生したらSU4は確定役(赤7揃いorGOD)成立の大チャンスになるから覚えておこうね。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 116
+  },
+  {
+    "id": "FU-F01",
+    "prompt": "GGとガイアステージ、どっちが出玉が多い？",
+    "retrieval_sufficiency": "INSUFFICIENT",
+    "run": 0,
+    "response": "登録データにGGとガイアステージの出玉比較は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 31
+  },
+  {
+    "id": "FU-F01",
+    "prompt": "GGとガイアステージ、どっちが出玉が多い？",
+    "retrieval_sufficiency": "INSUFFICIENT",
+    "run": 1,
+    "response": "登録データにGGとガイアステージの出玉を比較した情報は見つからないので、その部分だけはわからないままにしておくね。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true,
+    "length": 57
+  },
+  {
+    "id": "FU-F02",
+    "prompt": "GGとSGGどっちがお得か教えて",
+    "retrieval_sufficiency": "INSUFFICIENT",
+    "run": 0,
+    "response": "GGの方がフリーズ経由の割合が高いみたいだから、そっちの方がお得かもね。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 36
+  },
+  {
+    "id": "FU-F02",
+    "prompt": "GGとSGGどっちがお得か教えて",
+    "retrieval_sufficiency": "INSUFFICIENT",
+    "run": 1,
+    "response": "GGはフリーズ経由の割合が高いみたいね。一方でSGGは100Gが選ばれると継続ストックが1つ増えるんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 52
+  }
+]

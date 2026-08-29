@@ -1,0 +1,4 @@
+sha256: dc14a7b84b113b980ad02967e7cca33d3a3328e95571a08e9b06dc6ff7d8e4cf
+file: training/riru/reports/phase4fx_ground_truth.json
+frozen_before_final_accuracy_tabulation: true
+total_chunk_instances: 404

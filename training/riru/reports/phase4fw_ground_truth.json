@@ -1,0 +1,1079 @@
+{
+  "purpose": "Phase4FW: 生成後回答のretrieved contextに対するgrounded claim verificationの実現可能性を診断するための独立ground truth。84件の既存応答(Phase4FU/4FVで既に生成済み、モデル出力を再利用)をatomic claimへ人間が分解し、SUPPORTED/UNSUPPORTED/MISATTRIBUTED/AMBIGUOUS/NON_FACTUALを付与した。verifierの出力を見てからこのGTを変更することはしていない(RULE EVAL-002準拠)。",
+  "frozen_before_verifier_construction": true,
+  "total_responses": 84,
+  "total_atomic_claims": 129,
+  "claims_by_response": {
+    "FU-D01": [
+      {
+        "text": "GGはGG準備中から始まってGG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進む",
+        "subject": "GG",
+        "status": "UNSUPPORTED",
+        "claim_type": "STATE",
+        "note": "「GG本前兆」の反復や「GG本当選」という段階遷移フローはcontext中に存在しない創作。"
+      },
+      {
+        "text": "GG本前兆は「×・?・?」の順番",
+        "subject": "GG本前兆",
+        "status": "SUPPORTED",
+        "claim_type": "SYMBOL",
+        "note": "実在する記述(GG準備中開始から「×・?・?」が出るまでの間)のほぼ正しい言い換え。"
+      },
+      {
+        "text": "GG本当選は「×・?・×」の順番になる",
+        "subject": "GG本当選",
+        "status": "UNSUPPORTED",
+        "claim_type": "SYMBOL",
+        "note": "Phase4FU Section3で確定済み: 「×・?・×」はcontext中に一切存在しない完全な創作記号列。"
+      },
+      {
+        "text": "GG本当選の後はGG継続ゾーンが始まり、LEDの色でループストック種別やGGストックの有無が示唆される",
+        "subject": "GG継続ゾーン",
+        "status": "MISATTRIBUTED",
+        "claim_type": "RELATION",
+        "note": "「効果」チャンク(GG継続ゾーンという名称とは無関係な一般的LED示唆の説明)を、架空の「GG継続ゾーン」という段階に誤って紐付け。"
+      },
+      {
+        "text": "SGGはGG本前兆の後にSGGゾーンが始まる",
+        "subject": "SGG",
+        "status": "UNSUPPORTED",
+        "claim_type": "RELATION",
+        "note": "GGとSGGの時系列的な前後関係はcontext中に一切記述がない創作。"
+      },
+      {
+        "text": "SGGゾーンでは継続契機とセット数が5の倍数かどうかでゲーム数が変わる",
+        "subject": "SGG",
+        "status": "SUPPORTED",
+        "claim_type": "CONDITION",
+        "note": ""
+      },
+      {
+        "text": "100Gが選ばれると継続ストックが1つ増える",
+        "subject": "SGG",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "context中のSGGゲーム数抽選概要と完全一致。"
+      }
+    ],
+    "FU-B05": [
+      {
+        "text": "RT-Aは枠LEDのパターンでレベルを示唆する",
+        "subject": "RT-A",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「効果」チャンク(枠LED全般の説明、RT-Aという名称は一切登場しない)をRT-Aに誤って紐付け。RT-Aという名称自体がcontext中に存在しない。"
+      },
+      {
+        "text": "RT-Bは枠LEDが全て点灯すると中段黄7・赤7フェイク・SP役・赤7揃い・GOD揃い赤7が濃厚になる",
+        "subject": "RT-B",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「3」チャンク(全点灯パターンの説明、RT-Bという名称は一切登場しない)をRT-Bに誤って紐付け。"
+      }
+    ],
+    "FU-A03": [
+      {
+        "text": "AT-Fは最大1480Gまで消化できる",
+        "subject": "AT-F",
+        "status": "MISATTRIBUTED",
+        "claim_type": "NUMBER",
+        "note": "「天井突入条件」チャンク(AT間最大1480G消化、AT-Fという名称は一切登場しない)をAT-Fに誤って紐付け。"
+      },
+      {
+        "text": "終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイならGG濃厚のLV5になる",
+        "subject": "AT-F終了後",
+        "status": "MISATTRIBUTED",
+        "claim_type": "STATE",
+        "note": "「LV5（GG継続濃厚）」チャンク(AT-Fと無関係)をAT-Fの「終了後の状態」として誤って紐付け。"
+      },
+      {
+        "text": "LEDの色はGGの種別やストックの有無を示してくれる",
+        "subject": "AT-F",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「効果」チャンク(一般的なLED示唆の説明)をAT-Fに誤って紐付け。"
+      }
+    ],
+    "FU-E02": [
+      {
+        "text": "ガイアベルはガイアモード中の規定回数到達時に抽選されるモードである",
+        "subject": "ガイアベル",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ENTITY",
+        "note": "context中の「小役の停止例一覧」チャンクにガイアベルは1枚役の小役と明記されているが、「モード」であるかのように誤って性質付け。"
+      },
+      {
+        "text": "規定回数到達時はガイアモードに応じてガイアステージ移行を抽選する",
+        "subject": "規定回数到達時",
+        "status": "SUPPORTED",
+        "claim_type": "RELATION",
+        "note": "「補足解説」チャンクと整合。ただしこの文の主語が「ガイアベル」自身であるかのように読める点は曖昧。"
+      }
+    ],
+    "FU-B03": [
+      {
+        "text": "モードαとモードβの違いは、ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変わること",
+        "subject": "モードα/モードβ",
+        "status": "MISATTRIBUTED",
+        "claim_type": "COMPARISON",
+        "note": "「モードごとの違い」チャンク(実在するモード全般の記述で「モードα」「モードβ」という名称は一切登場しない)を、存在しない固有名詞に誤って紐付け。"
+      }
+    ],
+    "FU-B04": [
+      {
+        "text": "登録データにAT-AとAT-Bの違いについての情報は見つからない",
+        "subject": "AT-A/AT-B",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "正しい情報不足申告。「AT-A」「AT-B」はcontext中に一切登場しない。"
+      }
+    ],
+    "FU-D05": [
+      {
+        "text": "SGGはGG準備中から始まるゾーンで、GG前兆以上濃厚な状態を示す",
+        "subject": "SGG",
+        "status": "MISATTRIBUTED",
+        "claim_type": "STATE",
+        "note": "「準備中解説」チャンクはGG準備中についての記述であり、SGGについての記述ではない。SGGとGG準備中を混同。"
+      },
+      {
+        "text": "GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率が高い",
+        "subject": "GG準備中",
+        "status": "SUPPORTED",
+        "claim_type": "SYMBOL",
+        "note": "context中の記述と一致。ただし主語がSGGであるかのように読める文脈で使われている点は問題。"
+      },
+      {
+        "text": "発生した時点でレア役以上濃厚なので、ここでSU4が来たら赤7揃いorGOD確定役ということになる",
+        "subject": "SU4",
+        "status": "MISATTRIBUTED",
+        "claim_type": "RELATION",
+        "note": "「炎・戦車解説」チャンク(SGGと無関係な演出)をSGGの文脈に紐付け。"
+      },
+      {
+        "text": "SGGとRTの関係",
+        "subject": "RT",
+        "status": "UNSUPPORTED",
+        "claim_type": "RELATION",
+        "note": "クエリで問われた「RT」については応答内で一切言及がなく、silent-dropping(不足の明示なし)。"
+      }
+    ],
+    "FU-F03": [
+      {
+        "text": "RT-CとRT-Dの違いは枠LEDのパターンでレベルを示唆するところ",
+        "subject": "RT-C/RT-D",
+        "status": "MISATTRIBUTED",
+        "claim_type": "COMPARISON",
+        "note": "RT-C/RT-Dという名称はcontext中に一切登場しない。"
+      },
+      {
+        "text": "RT-Cは1~4Gまでオールテンパイなしまたはオール奇数テンパイならLV5＝GG濃厚というパターンがある",
+        "subject": "RT-C",
+        "status": "MISATTRIBUTED",
+        "claim_type": "STATE",
+        "note": "「LV5（GG継続濃厚）」チャンクをRT-Cに誤って紐付け。"
+      },
+      {
+        "text": "RT-Dはサイド上部付近まで点灯すると右上がり黄7・中段黄7・赤7揃い・GOD揃い赤7が止まれば赤7揃い濃厚になる",
+        "subject": "RT-D",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「2」チャンク(LED点灯パターン)をRT-Dに誤って紐付け。"
+      }
+    ],
+    "FU-F04": [
+      {
+        "text": "登録データにCZ-AとCZ-Bの違いについての情報は見つからない",
+        "subject": "CZ-A/CZ-B",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "正しい情報不足申告。"
+      }
+    ],
+    "FU-F05": [
+      {
+        "text": "モードγとモードδの出玉性能については登録データに明確な比較情報がない",
+        "subject": "モードγ/モードδ",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "正しい情報不足申告。"
+      }
+    ],
+    "FV-P01": [
+      {
+        "text": "登録データにGX-AとGX-Bの違いについての情報は見つからない",
+        "subject": "GX-A/GX-B",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "正しい情報不足申告。"
+      }
+    ],
+    "FV-P02": [
+      {
+        "text": "GGプラスはGG当選時に一定の確率でZ-ZONEを抽選する状態",
+        "subject": "GGプラス",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ENTITY",
+        "note": "「抽選概要」チャンク(GG全般の説明)を架空の「GGプラス」に誤って紐付け。"
+      },
+      {
+        "text": "成立役ごとの抽選だけでなく小役履歴の抽選も優遇される",
+        "subject": "GGプラス",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「特徴」チャンク(ガイアステージについての記述)をGGプラスに誤って紐付け。"
+      }
+    ],
+    "FV-P03": [
+      {
+        "text": "SGG-EXはGG準備中開始から「×・?・?」が出るまでの間が対象のゾーン",
+        "subject": "SGG-EX",
+        "status": "MISATTRIBUTED",
+        "claim_type": "SYMBOL",
+        "note": "GG準備中の記述を架空の「SGG-EX」に誤って紐付け。"
+      }
+    ],
+    "FV-P04": [
+      {
+        "text": "ガイアステージMAXはガイアベルの規定回数が3回以下になり規定回数到達時のガイアステージ当選率も大幅アップ",
+        "subject": "ガイアステージMAX",
+        "status": "MISATTRIBUTED",
+        "claim_type": "NUMBER",
+        "note": "「天国モード解説」チャンクを架空の「ガイアステージMAX」に誤って紐付け(数値の誤紐付けを含む)。"
+      },
+      {
+        "text": "ループ率も75%と高い",
+        "subject": "ガイアステージMAX",
+        "status": "MISATTRIBUTED",
+        "claim_type": "NUMBER",
+        "note": "同上。"
+      }
+    ],
+    "FV-P05": [
+      {
+        "text": "Z-ZONE極については登録データにない",
+        "subject": "Z-ZONE極",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "正しい情報不足申告。"
+      }
+    ],
+    "FV-P06": [
+      {
+        "text": "登録データにモード7とモード8の違いについての情報は見つからない",
+        "subject": "モード7/モード8",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "正しい情報不足申告。"
+      }
+    ],
+    "FV-P07": [
+      {
+        "text": "登録データにステートDの情報は見つからない",
+        "subject": "ステートD",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "正しい情報不足申告。"
+      }
+    ],
+    "FV-P08": [
+      {
+        "text": "天国モード中、ループ率が75%と高い",
+        "subject": "天国ロング",
+        "status": "MISATTRIBUTED",
+        "claim_type": "NUMBER",
+        "note": "質問は「天国ロング」についてだが、応答は「天国モード」の実在情報にすり替えて回答しており、「天国ロング」という名称自体への直接回答を避けている点は不誠実。"
+      },
+      {
+        "text": "規定回数が3回以下になるとガイアステージ当選率も大幅にアップする",
+        "subject": "天国ロング",
+        "status": "MISATTRIBUTED",
+        "claim_type": "NUMBER",
+        "note": "同上。"
+      }
+    ],
+    "FV-P09": [
+      {
+        "text": "ガイアベルSPはガイアベル規定回数到達時に抽選されるモードの一つ",
+        "subject": "ガイアベルSP",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ENTITY",
+        "note": "架空の「ガイアベルSP」に実在情報を誤って紐付け、かつガイアベル自体の性質(小役)も誤って「モード」と記述。"
+      }
+    ],
+    "FV-P10": [
+      {
+        "text": "確定役ネオは巨大化演出や炎・戦車演出、激熱表示などで示唆される演出群",
+        "subject": "確定役ネオ",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ENTITY",
+        "note": "実在する複数の演出情報を、架空の「確定役ネオ」という統合概念に誤って紐付け。"
+      }
+    ],
+    "FV-P11": [
+      {
+        "text": "登録データに機械割の差は見つからない",
+        "subject": "設定X/設定Y",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "正しい情報不足申告。"
+      }
+    ],
+    "FV-P12": [
+      {
+        "text": "裏天国中のGG当選で複数セット獲得の期待大、裏天国中の下段黄7は大チャンス",
+        "subject": "裏ZONE",
+        "status": "MISATTRIBUTED",
+        "claim_type": "STATE",
+        "note": "「裏モードのポイント」チャンク(裏天国についての記述)を架空の「裏ZONE」に誤って紐付け。"
+      }
+    ],
+    "FV-P13": [
+      {
+        "text": "GGはGG当選時に一定の確率で抽選されるもので設定に応じて当選率が変わる",
+        "subject": "GG",
+        "status": "SUPPORTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "実在のGGについての正しい記述。"
+      },
+      {
+        "text": "モードEはGG中のGGストック当選率が変わる内部状態の一つ",
+        "subject": "モードE",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ENTITY",
+        "note": "「表モード概要」チャンク(実在の表モード全般の説明)を架空の「モードE」に誤って紐付け。"
+      }
+    ],
+    "FV-P14": [
+      {
+        "text": "ガイアステージはGGを抽選するステージで成立役や小役履歴でもGGが抽選される",
+        "subject": "ガイアステージ",
+        "status": "SUPPORTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "実在のガイアステージについて正しい記述。"
+      },
+      {
+        "text": "ゾーンZはGG当選時にZ-ZONEへ移行するチャンスがある状態",
+        "subject": "ゾーンZ",
+        "status": "AMBIGUOUS",
+        "claim_type": "ENTITY",
+        "note": "「ゾーンZ」は「Z-ZONE」の言い換えである可能性が高く(語順を変えただけ)、厳密な意味でのphantom entityかどうか判断が分かれる境界例。仮に同一視するなら正しいが、別概念だと解釈されるなら誤紐付け。"
+      }
+    ],
+    "FU-D03": [
+      {
+        "text": "SGGはGG準備中開始から「×・?・?」が出るまでの間が対象で全体的にストック当選率はGG中より高い",
+        "subject": "SGG",
+        "status": "MISATTRIBUTED",
+        "claim_type": "SYMBOL",
+        "note": "「準備中解説」チャンクはGG準備中についての記述であり、SGGについての記述ではない。SGGとGG準備中を混同。"
+      },
+      {
+        "text": "GG当選契機は不問でGG当選時に一定の確率でZ-ZONEを抽選する",
+        "subject": "SGG",
+        "status": "MISATTRIBUTED",
+        "claim_type": "RELATION",
+        "note": "「抽選概要」チャンクはGG全般とZ-ZONEの関係についての記述であり、SGG固有の仕組みではない。"
+      },
+      {
+        "text": "設定に応じて当選率が変わる",
+        "subject": "SGG",
+        "status": "MISATTRIBUTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "同上、GG全般の話をSGGの話として誤って提示。"
+      },
+      {
+        "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆する",
+        "subject": "SGG",
+        "status": "MISATTRIBUTED",
+        "claim_type": "RELATION",
+        "note": "「効果」チャンク(GG全般の説明)をSGGの仕組みとして誤って紐付け。"
+      }
+    ],
+    "FV-C01": [
+      {
+        "text": "表モードはモード示唆出目が出るとGG継続濃厚になるけど法則崩れ的な要素もある",
+        "subject": "表モード",
+        "status": "SUPPORTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「継続期待度補足」チャンクと一致。"
+      },
+      {
+        "text": "裏モードはGG当選で複数セット獲得の期待が大きくなる",
+        "subject": "裏モード",
+        "status": "SUPPORTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「裏モード概要」チャンクと一致。"
+      },
+      {
+        "text": "下段黄7も大チャンス",
+        "subject": "裏モード",
+        "status": "SUPPORTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「裏モードのポイント」チャンクと一致。"
+      }
+    ],
+    "FV-C02": [
+      {
+        "text": "ガイアベルはガイアモードへの移行を示唆するもので規定回数到達時にガイアステージ移行を抽選する",
+        "subject": "ガイアベル",
+        "status": "AMBIGUOUS",
+        "claim_type": "RELATION",
+        "note": "ガイアベルは実際には1枚役の小役であり、「示唆するもの」「抽選する」の主体であるかのような能動的な記述は不正確な擬人化(ガイアベル自体が抽選するのではなく、ガイアベルの成立回数がトリガーになる)。厳密には軽微な因果関係の誤り。"
+      },
+      {
+        "text": "ガイアナビはガイアステージ移行のチャンスを示唆するもので発生時や規定回数到達時にはガイアステージ移行を抽選する",
+        "subject": "ガイアナビ",
+        "status": "SUPPORTED",
+        "claim_type": "RELATION",
+        "note": "「ガイアナビの解説」チャンクとおおむね一致。"
+      }
+    ],
+    "FV-C03": [
+      {
+        "text": "ループストックはGG継続時にループするかどうかを決めるもの",
+        "subject": "ループストック",
+        "status": "MISATTRIBUTED",
+        "claim_type": "RELATION",
+        "note": "「効果」チャンクの実際の記述は逆: 初当りGG時にループストック種別が示唆され、GG継続時にはGGストックの有無が示唆される。本claimは関係を反転させている。"
+      },
+      {
+        "text": "GGストックはGG当選時にループするかどうかを決めるもの",
+        "subject": "GGストック",
+        "status": "MISATTRIBUTED",
+        "claim_type": "RELATION",
+        "note": "同上、関係が反転している。正しくはGG継続時にGGストックの有無が示唆される。"
+      }
+    ],
+    "FV-C04": [
+      {
+        "text": "天国モードはガイアベルの規定回数が3回以下になり規定回数到達時のガイアステージ当選率も大幅アップ",
+        "subject": "天国モード",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "「天国モード解説」チャンクと一致。"
+      },
+      {
+        "text": "ループ率も75%と高い",
+        "subject": "天国モード",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "同上。"
+      },
+      {
+        "text": "通常時との違い",
+        "subject": "通常時",
+        "status": "UNSUPPORTED",
+        "claim_type": "COMPARISON",
+        "note": "「通常時」については応答内で一切具体的言及がなく、比較質問に対し片側(天国モード)のみで応答している。"
+      }
+    ],
+    "FV-C05": [
+      {
+        "text": "GG当選はGG準備中開始から「×・?・?」が出るまでの間が対象",
+        "subject": "GG当選",
+        "status": "MISATTRIBUTED",
+        "claim_type": "SYMBOL",
+        "note": "GG準備中の記述を「GG当選」という別の言い方に誤って紐付け(GGとGG準備中の混同)。"
+      },
+      {
+        "text": "GG当選契機は不問でGG当選時に一定の確率でZ-ZONEを抽選する",
+        "subject": "GG当選",
+        "status": "SUPPORTED",
+        "claim_type": "RELATION",
+        "note": "「抽選概要」チャンクと一致。"
+      },
+      {
+        "text": "SGGはGG当選とは別に継続契機とセット数が5の倍数かどうかでゲーム数が抽選され100Gが選ばれた場合は継続ストックを1つ獲得できる",
+        "subject": "SGG",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "「SGGゲーム数抽選概要」チャンクと一致。"
+      },
+      {
+        "text": "SGG当選",
+        "subject": "SGG当選",
+        "status": "AMBIGUOUS",
+        "claim_type": "ENTITY",
+        "note": "クエリで問われた「SGG当選」という語自体はcontext中に存在せず、応答も明示的な「当選」の定義を避けて「SGG」全般の話にすり替えている。"
+      }
+    ],
+    "FV-C06": [
+      {
+        "text": "SGGゾーンとGG継続ゾーンはそれぞれ独立したゾーンとして存在する",
+        "subject": "SGG/GG継続ゾーン",
+        "status": "UNSUPPORTED",
+        "claim_type": "RELATION",
+        "note": "「GG継続ゾーン」という名称自体context中に存在せず、両者の独立性についての記述もcontext中にない完全な創作的関係付け。"
+      },
+      {
+        "text": "SGGゾーンでは100Gが選ばれると継続ストックを1つ獲得できる",
+        "subject": "SGG",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "「SGGゲーム数抽選概要」チャンクと一致。"
+      },
+      {
+        "text": "GG継続ゾーンはGG当選時に一定の確率で抽選されその当選率は設定によって変動する",
+        "subject": "GG継続ゾーン",
+        "status": "MISATTRIBUTED",
+        "claim_type": "RELATION",
+        "note": "「抽選概要」チャンク(GG全般とZ-ZONEの関係)を、架空の「GG継続ゾーン」という名称に誤って紐付け。"
+      }
+    ],
+    "FV-C07": [
+      {
+        "text": "小役履歴は液晶右下に表示されて青7や黄7がそれぞれ3連続以上ならGG抽選のチャンスになる",
+        "subject": "小役履歴",
+        "status": "SUPPORTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「小役履歴の抽選解説」チャンクと一致。"
+      },
+      {
+        "text": "ガイアナビ時は白7が表示され青7・黄7両方の代用として機能する",
+        "subject": "小役履歴",
+        "status": "SUPPORTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "同上。"
+      },
+      {
+        "text": "モード示唆出目はGG継続濃厚だが法則崩れ的な要素もあるので表モードを示唆するわけではない",
+        "subject": "モード示唆出目",
+        "status": "SUPPORTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「継続期待度補足」チャンクと一致。"
+      }
+    ],
+    "FV-C08": [
+      {
+        "text": "ガイアナビ発生時にガイアモードへの移行抽選が行われる",
+        "subject": "ガイアナビ",
+        "status": "SUPPORTED",
+        "claim_type": "RELATION",
+        "note": "「ガイアナビ解説」チャンクとおおむね一致(厳密にはガイアモードを示唆する、が正確な文言)。"
+      },
+      {
+        "text": "規定回数到達時はガイアモードに応じてガイアステージ移行を抽選する",
+        "subject": "ガイアモード",
+        "status": "SUPPORTED",
+        "claim_type": "RELATION",
+        "note": "「補足解説」チャンクと一致。"
+      }
+    ],
+    "FV-C09": [
+      {
+        "text": "登録データにありません",
+        "subject": "白7/ALL色",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "この検索結果には「白7」も「ALL色」も直接登場しないため、情報不足の申告は妥当。"
+      }
+    ],
+    "Q11": [
+      {
+        "text": "天井は510G、1000G、1480Gの3パターンでそれぞれ15.2%、20.3%、64.5%の確率で振り分けられる",
+        "subject": "天井",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "構造化データと完全一致。"
+      },
+      {
+        "text": "天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンでそれぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられる",
+        "subject": "ループストック振り分け",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "構造化データと完全一致(33.2%を含む)。"
+      },
+      {
+        "text": "ループストックの数値はLEDの色で示唆される",
+        "subject": "ループストック",
+        "status": "SUPPORTED",
+        "claim_type": "ATTRIBUTE",
+        "note": "「効果」チャンクと整合。"
+      }
+    ],
+    "P02": [
+      {
+        "text": "ボーナス確率は設定が上がると優遇されていく。設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280",
+        "subject": "ボーナス確率",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "構造化データと完全一致。"
+      }
+    ],
+    "AD-04": [
+      {
+        "text": "登録データにその情報はなかった",
+        "subject": "ヤメ時",
+        "status": "NON_FACTUAL",
+        "claim_type": "OTHER",
+        "note": "正しい情報不足申告。contextにヤメ時関連情報は存在しない。"
+      }
+    ],
+    "LC-08": [
+      {
+        "text": "AT-Fの純増は2.5枚/G",
+        "subject": "AT-F",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "構造化データと完全一致(このprobe固有の静的contextには実在する)。"
+      },
+      {
+        "text": "終了後はRT-Cに移行する",
+        "subject": "AT-F",
+        "status": "SUPPORTED",
+        "claim_type": "ENTITY",
+        "note": "同上。"
+      },
+      {
+        "text": "RT-Cの継続G数は45G",
+        "subject": "RT-C",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "同上。"
+      },
+      {
+        "text": "RT-Cの中抽選確率は28%",
+        "subject": "RT-C",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "同上。"
+      }
+    ],
+    "Q1": [
+      {
+        "text": "設定6の機械割は114.6%",
+        "subject": "設定6",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "構造化データと完全一致。"
+      }
+    ],
+    "Q2": [
+      {
+        "text": "設定6の初当り確率は1/295",
+        "subject": "設定6",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "構造化データと完全一致。"
+      }
+    ],
+    "Q3": [
+      {
+        "text": "天井ゲーム数は510G、1000G、1480Gの3種類でそれぞれ15.2%、20.3%、64.5%で決まる",
+        "subject": "天井",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "構造化データと完全一致。"
+      }
+    ],
+    "Q4": [
+      {
+        "text": "ガイアベルの確率は1/37.6",
+        "subject": "ガイアベル",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "構造化データと完全一致。"
+      }
+    ],
+    "Q5": [
+      {
+        "text": "Z-ZONEはガイアステージ中のGG当選時に一部で抽選されるゾーン",
+        "subject": "Z-ZONE",
+        "status": "SUPPORTED",
+        "claim_type": "ENTITY",
+        "note": "構造化データの突入契機記述と一致。"
+      },
+      {
+        "text": "継続ゲーム数は5G+aで純増は約7枚/G",
+        "subject": "Z-ZONE",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "構造化データと一致。"
+      },
+      {
+        "text": "滞在中に黄7が成立しなければ特殊抽選が発生する",
+        "subject": "Z-ZONE",
+        "status": "SUPPORTED",
+        "claim_type": "CONDITION",
+        "note": "構造化データの備考と一致。"
+      }
+    ],
+    "Q6": [
+      {
+        "text": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーン",
+        "subject": "GG(RAG50固有)",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "このprobe固有の静的context(Phase4FU/FVの生RAG検索Q6とは別の合成テスト用context)と一致。"
+      },
+      {
+        "text": "SGGはゲーム数10〜100G、純増7枚/G、継続率75%以上で100Gが選ばれると継続ストック1つ獲得できる",
+        "subject": "SGG(RAG50固有)",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "同上。"
+      }
+    ],
+    "Q7": [
+      {
+        "text": "登録データにヤメ時の情報は見つかりませんでした。",
+        "subject": "Q7",
+        "status": "SUPPORTED",
+        "claim_type": "OTHER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "Q8": [
+      {
+        "text": "ガイアステージは、ガイアナビ発生時に一部の状況で突入するんだ。保障ゲーム数は9Gで、消滅中は高確率でGGを抽選するよ。奇数揃いだとGG当選濃厚で、0揃いだとZ-ZONEに昇格することもあるんだ。",
+        "subject": "Q8",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "Q9": [
+      {
+        "text": "設定1の初当り確率は1/533で、機械割は97.2%だよ。設定6だと初当り確率は1/295、機械割は114.6%になるんだ。",
+        "subject": "Q9",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "Q10": [
+      {
+        "text": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+        "subject": "Q10",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "Q12": [
+      {
+        "text": "登録データにその情報は見つからないので、正直に伝えるね。",
+        "subject": "Q12",
+        "status": "SUPPORTED",
+        "claim_type": "OTHER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "Q13": [
+      {
+        "text": "登録データにありません。",
+        "subject": "Q13",
+        "status": "SUPPORTED",
+        "claim_type": "OTHER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "Q14": [
+      {
+        "text": "登録データにRT機能の情報は見つかりませんでした。",
+        "subject": "Q14",
+        "status": "SUPPORTED",
+        "claim_type": "OTHER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "Q15": [
+      {
+        "text": "基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+        "subject": "Q15",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "Q16": [
+      {
+        "text": "基本的には全リールフリー打ちでOKだよ。",
+        "subject": "Q16",
+        "status": "SUPPORTED",
+        "claim_type": "OTHER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "Q17": [
+      {
+        "text": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+        "subject": "Q17",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "P01": [
+      {
+        "text": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだ。それぞれの確率は18%・27%・55%だよ。",
+        "subject": "P01",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "P03": [
+      {
+        "text": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+        "subject": "P03",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "P04": [
+      {
+        "text": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+        "subject": "P04",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "P05": [
+      {
+        "text": "AT終了後は10GのRTが付くよ。モードも継続するんだ。",
+        "subject": "P05",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "P06": [
+      {
+        "text": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。",
+        "subject": "P06",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "P07": [
+      {
+        "text": "モードは5種類あって、それぞれ滞在率が違うんだ。最高モードだけ移行率が優遇されてるよ。",
+        "subject": "P07",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "P08": [
+      {
+        "text": "天井到達時はAT確定とゾーンκ突入が確定し、平均300枚の上乗せがあるよ。",
+        "subject": "P08",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "P09": [
+      {
+        "text": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+        "subject": "P09",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "P10": [
+      {
+        "text": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+        "subject": "P10",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-01": [
+      {
+        "text": "設定1は1/399、設定5は1/319だよ。",
+        "subject": "PT-01",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-02": [
+      {
+        "text": "モードαとモードγの滞在率の差は25%だよ。",
+        "subject": "PT-02",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-03": [
+      {
+        "text": "ゾーンWの継続率は55%で、ゾーンVの継続率は30%だから、継続率の差は25ポイントなんだ。",
+        "subject": "PT-03",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-04": [
+      {
+        "text": "設定2と設定4の機械割の差は7.5%だよ。",
+        "subject": "PT-04",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-05": [
+      {
+        "text": "AT-AとAT-Bの純増の差は2.5枚/Gだよ。",
+        "subject": "PT-05",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-06": [
+      {
+        "text": "設定1は1/410、設定6は1/280だよ。差は130回転分なんだ。",
+        "subject": "PT-06",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-07": [
+      {
+        "text": "モードβの滞在率は30%、モードδの滞在率は10%だよ。差は20%なんだ。",
+        "subject": "PT-07",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-08": [
+      {
+        "text": "設定3の機械割は100.2%、設定5は108.9%だよ。設定差は8.7%なんだ。",
+        "subject": "PT-08",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-09": [
+      {
+        "text": "ゾーンXの獲得枚数は1回あたり220枚、ゾーンZは1回あたり340枚だよ。差は120枚になるんだ。",
+        "subject": "PT-09",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-10": [
+      {
+        "text": "RT-Aは40G、RT-Bは70Gで、その差は30Gだよ。",
+        "subject": "PT-10",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-11": [
+      {
+        "text": "設定1と設定6の機械割の差は14.5%だよ",
+        "subject": "PT-11",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-12": [
+      {
+        "text": "モードαとモードγの滞在率の最大最小差は35%だよ。",
+        "subject": "PT-12",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-13": [
+      {
+        "text": "ゾーンXとゾーンZの獲得枚数の差は220枚だよ",
+        "subject": "PT-13",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-14": [
+      {
+        "text": "設定1から設定6に上がると、初当り確率は150回転分改善するよ。",
+        "subject": "PT-14",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-15": [
+      {
+        "text": "モードαからモードδへ移行すると、上乗せ期待枚数は150枚増加するよ。",
+        "subject": "PT-15",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-16": [
+      {
+        "text": "AT-AからAT-Cに変わると、純増は2.5枚/G増加するよ。",
+        "subject": "PT-16",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-17": [
+      {
+        "text": "設定6から設定1に下がると、機械割は18.0%減少するよ。",
+        "subject": "PT-17",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-18": [
+      {
+        "text": "ゾーンZからゾーンXに変わると、継続率は35%減少するよ。",
+        "subject": "PT-18",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-19": [
+      {
+        "text": "設定1の初当り確率は1/420で、設定6は1/290だから、設定差は130回転分優遇されているんだ。",
+        "subject": "PT-19",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-20": [
+      {
+        "text": "モードαとモードβの上乗せ確率の差は15ポイントだよ。",
+        "subject": "PT-20",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ],
+    "PT-21": [
+      {
+        "text": "RT-BとRT-Cの中抽選確率の差は16ポイントだよ。",
+        "subject": "PT-21",
+        "status": "SUPPORTED",
+        "claim_type": "NUMBER",
+        "note": "RAG50は過去複数フェーズ(Phase4ZN/ZS/ZT/FC/FV)で反復的に捏造なしと監査済みの基準セット。本フェーズでは応答全体を1claimとして扱い、Stage C以降のverifier評価(特にFalse Positive測定)に用いる。"
+      }
+    ]
+  }
+}

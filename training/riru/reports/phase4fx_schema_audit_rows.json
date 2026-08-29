@@ -1,0 +1,835 @@
+[
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::Z-ZONE昇格に関する解説::43-44::chunk0",
+    "title": "Z-ZONE昇格に関する解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::ユニバプレート補足::52::chunk0",
+    "title": "ユニバプレート補足",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::青7連続時GG当選率::53::chunk0",
+    "title": "青7連続時GG当選率",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::天井突入条件::56::chunk0",
+    "title": "天井突入条件",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::天井突入条件（設定変更時）::57::chunk0",
+    "title": "天井突入条件（設定変更時）",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::天井恩恵::58::chunk0",
+    "title": "天井恩恵",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::天井恩恵詳細::59-60::chunk0",
+    "title": "天井恩恵詳細",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::strategy::打ち方(小役狙い)::62::chunk0",
+    "title": "打ち方(小役狙い)",
+    "category": "strategy",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::小役の停止例一覧::63::chunk0",
+    "title": "小役の停止例一覧",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0",
+    "title": "ガイアナビの解説",
+    "category": "game_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74::chunk0",
+    "title": "小役履歴の抽選解説",
+    "category": "game_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::小役履歴補足::84::chunk0",
+    "title": "小役履歴補足",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::白7に関する特典::85::chunk0",
+    "title": "白7に関する特典",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::白7に関する特典補足::86::chunk0",
+    "title": "白7に関する特典補足",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0",
+    "title": "小役確率補足",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+    "title": "表モード概要",
+    "category": "overview",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::裏モードのポイント（テーブル）::105-108::chunk0",
+    "title": "裏モードのポイント（テーブル）",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109::chunk0",
+    "title": "裏モード概要",
+    "category": "overview",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+    "title": "モードごとの違い",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118::chunk0",
+    "title": "補足解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0",
+    "title": "天国モード解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::4::184::chunk0",
+    "title": "4",
+    "category": "other",
+    "classification": "UNATTRIBUTABLE",
+    "reason": "titleが純粋な数字/記号のみで、隣接recordとの明確な位置関係も薄く、本文を読まないと対象が特定できない"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::SP役補足::193::chunk0",
+    "title": "SP役補足",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::履歴契機解説::213::chunk0",
+    "title": "履歴契機解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::前兆::216::chunk0",
+    "title": "前兆",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::2G::217::chunk0",
+    "title": "2G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::3G::218::chunk0",
+    "title": "3G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::4G::219::chunk0",
+    "title": "4G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::5G::220::chunk0",
+    "title": "5G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::6G::221::chunk0",
+    "title": "6G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::7G::222::chunk0",
+    "title": "7G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::8G::223::chunk0",
+    "title": "8G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::9G::224::chunk0",
+    "title": "9G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::10G::225::chunk0",
+    "title": "10G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::11G::226::chunk0",
+    "title": "11G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::12G::227::chunk0",
+    "title": "12G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::13G::228::chunk0",
+    "title": "13G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::14G::229::chunk0",
+    "title": "14G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::15G::230::chunk0",
+    "title": "15G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::16G::231::chunk0",
+    "title": "16G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::17G::232::chunk0",
+    "title": "17G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::18G::233::chunk0",
+    "title": "18G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::19G::234::chunk0",
+    "title": "19G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::20G::235::chunk0",
+    "title": "20G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::21G::236::chunk0",
+    "title": "21G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::22G::237::chunk0",
+    "title": "22G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::23G::238::chunk0",
+    "title": "23G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::24G::239::chunk0",
+    "title": "24G",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_WEAK",
+    "reason": "doc_id位置が「前兆ゲーム数解説」の直前に連続しており、位置関係からの推論でのみ復元可能(title単体では確率テーブルの行番号としか分からない)"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::前兆ゲーム数解説::241::chunk0",
+    "title": "前兆ゲーム数解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::昇格解説::251::chunk0",
+    "title": "昇格解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::特徴::255-256::chunk0",
+    "title": "特徴",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ中解説::286::chunk0",
+    "title": "ステージ中解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::保障ゲーム解説::297-298::chunk0",
+    "title": "保障ゲーム解説",
+    "category": "game_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+    "title": "抽選概要",
+    "category": "overview",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::終了抽選の解説::312-314::chunk0",
+    "title": "終了抽選の解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::天井解説::329-330::chunk0",
+    "title": "天井解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::演出内容::333::chunk0",
+    "title": "演出内容",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::演出恩恵::334::chunk0",
+    "title": "演出恩恵",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+    "title": "準備中解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::GG中解説::363::chunk0",
+    "title": "GG中解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::G-ZONE解説::372-373::chunk0",
+    "title": "G-ZONE解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::通常告知解説::393-394::chunk0",
+    "title": "通常告知解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::Z-ZONE解説::404-405::chunk0",
+    "title": "Z-ZONE解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::ステージ法則解説::423::chunk0",
+    "title": "ステージ法則解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::ストック解説::439::chunk0",
+    "title": "ストック解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::引き戻し解説::445-446::chunk0",
+    "title": "引き戻し解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+    "title": "SGGゲーム数抽選概要",
+    "category": "overview",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】::452-464::chunk0",
+    "title": "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続契機ごとのSGGゲーム数振り分け【5の倍数セット】::472::chunk0",
+    "title": "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::高ループストック解説::489-490::chunk0",
+    "title": "高ループストック解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::特殊抽選解説::518::chunk0",
+    "title": "特殊抽選解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+    "title": "確定役演出解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::ステージ補足解説::571::chunk0",
+    "title": "ステージ補足解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::テンパイ数字解説::595::chunk0",
+    "title": "テンパイ数字解説",
+    "category": "game_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0",
+    "title": "ALL黄色(偶数)",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+    "title": "巨大化演出解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::消灯演出解説::624::chunk0",
+    "title": "消灯演出解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::心臓演出解説::635::chunk0",
+    "title": "心臓演出解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::氷演出解説::644::chunk0",
+    "title": "氷演出解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::雷演出解説::652::chunk0",
+    "title": "雷演出解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::竜巻発展解説::662-663::chunk0",
+    "title": "竜巻発展解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::炎・戦車解説::687::chunk0",
+    "title": "炎・戦車解説",
+    "category": "game_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::天空の扉解説::700::chunk0",
+    "title": "天空の扉解説",
+    "category": "game_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741::chunk0",
+    "title": "ガイアナビ解説",
+    "category": "game_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::フラッシュ解説::751::chunk0",
+    "title": "フラッシュ解説",
+    "category": "game_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::裏天国解説::760::chunk0",
+    "title": "裏天国解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::弱パターン::796::chunk0",
+    "title": "弱パターン",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+    "title": "中パターン",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::強パターン::798::chunk0",
+    "title": "強パターン",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::オーロラ解説::803::chunk0",
+    "title": "オーロラ解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::満月解説::814::chunk0",
+    "title": "満月解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::出目示唆解説::825::chunk0",
+    "title": "出目示唆解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::ステージ変化解説::836-837::chunk0",
+    "title": "ステージ変化解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::ワープ解説::850::chunk0",
+    "title": "ワープ解説",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::ステージ開始解説::875::chunk0",
+    "title": "ステージ開始解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::楽曲解説::890::chunk0",
+    "title": "楽曲解説",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::アメグレ解説::900::chunk0",
+    "title": "アメグレ解説",
+    "category": "game_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::LV5（GG継続濃厚）::919::chunk0",
+    "title": "LV5（GG継続濃厚）",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::演出シナリオ補足::920::chunk0",
+    "title": "演出シナリオ補足",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続期待度補足::932-933::chunk0",
+    "title": "継続期待度補足",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::最終ゲーム解説::940::chunk0",
+    "title": "最終ゲーム解説",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD::945::chunk0",
+    "title": "上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::下パネルフラッシュ発生::950::chunk0",
+    "title": "下パネルフラッシュ発生",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+    "title": "効果",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::黄・緑::963::chunk0",
+    "title": "黄・緑",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+    "title": "入力タイミング",
+    "category": "at_mechanism",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::入力タイミング::994::chunk0",
+    "title": "入力タイミング",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::白::998::chunk0",
+    "title": "白",
+    "category": "zone_explanation",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+    "title": "効果",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::特殊法則::1004::chunk0",
+    "title": "特殊法則",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::レベル::1005::chunk0",
+    "title": "レベル",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "titleのみでは汎用的すぎる(例:「効果」は複数category・複数箇所に重複して存在)が、category+本文内容から対象を特定可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+    "title": "1",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "同一doc_id帯(1003-1009)の「効果」「レベル」「特殊法則」chunkが直接の親情報を提供しており、category+隣接record位置から復元可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+    "title": "2",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "同一doc_id帯(1003-1009)の「効果」「レベル」「特殊法則」chunkが直接の親情報を提供しており、category+隣接record位置から復元可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+    "title": "3",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "同一doc_id帯(1003-1009)の「効果」「レベル」「特殊法則」chunkが直接の親情報を提供しており、category+隣接record位置から復元可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::なし::1009::chunk0",
+    "title": "なし",
+    "category": "effect_lore",
+    "classification": "ATTRIBUTABLE_PARENT",
+    "reason": "同一doc_id帯(1003-1009)の「効果」「レベル」「特殊法則」chunkが直接の親情報を提供しており、category+隣接record位置から復元可能"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::連チャン数別のBGM変化::1020::chunk0",
+    "title": "連チャン数別のBGM変化",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::連チャン数補足::1021::chunk0",
+    "title": "連チャン数補足",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::other::裏ボタン機能::1022::chunk0",
+    "title": "裏ボタン機能",
+    "category": "other",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  },
+  {
+    "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::機種概要::chunk0",
+    "title": "機種概要",
+    "category": "overview",
+    "classification": "ATTRIBUTABLE_EXACT",
+    "reason": "titleそのものが対象concept/entityを明確に一意に名指ししている"
+  }
+]

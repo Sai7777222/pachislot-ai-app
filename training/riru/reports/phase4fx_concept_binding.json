@@ -1,0 +1,481 @@
+[
+  {
+    "id": "CB-FU-D01",
+    "category": "concept_binding",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "A0": {
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 245,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "GGは青7連続時に当選率が変わるゾーンで、偶数設定かつ高設定ほど優遇される可能性があるよ。GG中はSP役が50%でストックを獲得できるんだ。LV5は1〜4Gまでオールテンパイなしやオール奇数テンパイだとGG濃厚になるんだ。\n\n一方、SGGはゲーム数抽選で5の倍数かどうかで抽選値が変わるゾーンなんだ。100Gが選ばれると継続ストックが1つ増えるんだ。継続契機ごとのゲーム数振り分けもあって、5の倍数セットと5の倍数以外のセットで違うんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 219,
+      "latency_sec": 12.32
+    }
+  },
+  {
+    "id": "CB-FU-D03",
+    "category": "concept_binding",
+    "prompt": "SGGの仕組みを分かりやすく説明して",
+    "query_entities": [
+      "SGG"
+    ],
+    "A0": {
+      "response": "SGGはGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。設定に応じて当選率が変わるみたい。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 156,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わる仕組みなんだ。継続契機が5の倍数じゃないセットの場合、ハズレだと100Gが選ばれる確率は0.83で、継続ストックを1つ獲得できるんだ。5の倍数セットの押し順黄7は、100Gが選ばれる確率が0.795になるよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 136,
+      "latency_sec": 8.4
+    }
+  },
+  {
+    "id": "CB-FU-D05",
+    "category": "concept_binding",
+    "prompt": "SGGとRTの関係を初心者向けに教えて",
+    "query_entities": [
+      "SGG",
+      "RT"
+    ],
+    "A0": {
+      "response": "SGGはGG準備中から始まるゾーンで、GG前兆以上濃厚な状態を示すんだ。GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率が高いのが特徴だよ。発生した時点でレア役以上濃厚って解説もあるから、ここでSU4が来たら赤7揃いorGOD確定役ってことになるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 138,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "SGGは継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。5の倍数以外のセットだと、ハズレや上段青7、押し順黄7などが0.83〜0.883の確率で0ゲームになるよ。5の倍数セットだと押し順黄7が0.795の確率で0ゲームになるんだ。RTについては登録データに情報がないから、今回は答えられないね。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 153,
+      "latency_sec": 7.18
+    }
+  },
+  {
+    "id": "FV-C01",
+    "category": "concept_binding",
+    "prompt": "表モードと裏モードの違いを教えて",
+    "query_entities": [
+      "表モード",
+      "裏モード"
+    ],
+    "A0": {
+      "response": "表モードはモード示唆出目が出るとGG継続濃厚になるけど、法則崩れ的な要素もあるんだ。裏モードはGG当選で複数セット獲得の期待が大きくなるよ。下段黄7も大チャンスなんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 84,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "表モードは6種類のモード(内部状態)によって、通常時の成立役ごとのGG当選率、GG中のGGストック当選率が変わるんだ。天国モードに移行すればGG当選+高ループストック獲得のチャンスがあるよ。一方、裏モードは裏天国中にGG当選すればGG複数ストック当選の期待大なんだ。滞在中は下段黄7成立で大チャンスになるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 155,
+      "latency_sec": 8.08
+    }
+  },
+  {
+    "id": "FV-C02",
+    "category": "concept_binding",
+    "prompt": "ガイアベルとガイアナビの違いを教えて",
+    "query_entities": [
+      "ガイアベル",
+      "ガイアナビ"
+    ],
+    "A0": {
+      "response": "ガイアベルはガイアモードへの移行を示唆するもので、規定回数到達時にガイアステージ移行を抽選するんだ。ガイアナビはガイアステージ移行のチャンスを示唆するもので、発生時や規定回数到達時にはガイアステージ移行を抽選するんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 109,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "ガイアベルはガイアモード中、規定回数到達時にガイアステージ移行を抽選する役で、ガイアナビはガイアステージ移行のチャンスを示唆する役だよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 68,
+      "latency_sec": 4.31
+    }
+  },
+  {
+    "id": "FV-C03",
+    "category": "concept_binding",
+    "prompt": "ループストックとGGストックの違いを教えて",
+    "query_entities": [
+      "ループストック",
+      "GGストック"
+    ],
+    "A0": {
+      "response": "ループストックはGG継続時にループするかどうかを決めるもので、GGストックはGG当選時にループするかどうかを決めるものだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 62,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "ループストックは5の倍数回目のセットで抽選され、一度当選したらその抽選自体がなくなるんだ。一方、GGストックはGG中に抽選されて、当選するとZ-ZONEに移行するよ。LEDの色でループストックの種別とGGストックの有無が示唆されるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 118,
+      "latency_sec": 6.25
+    }
+  },
+  {
+    "id": "FV-C04",
+    "category": "concept_binding",
+    "prompt": "天国モードと通常時の違いを教えて",
+    "query_entities": [
+      "天国モード",
+      "通常時"
+    ],
+    "A0": {
+      "response": "天国モードは、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップするんだ。ループ率も75%と高いよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 71,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "天国モードでは、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップするよ。ループ率も75%と高いんだ。通常時は6種類のモード(内部状態)によって、成立役ごとのGG当選率、GG中のGGストック当選率が変わるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 126,
+      "latency_sec": 7.07
+    }
+  },
+  {
+    "id": "FV-C05",
+    "category": "concept_binding",
+    "prompt": "GG当選とSGG当選の違いを教えて",
+    "query_entities": [
+      "GG当選",
+      "SGG当選"
+    ],
+    "A0": {
+      "response": "GG当選はGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。一方、SGGはGG当選とは別に、継続契機とセット数が5の倍数かどうかでゲーム数が抽選されて、100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 166,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "GG当選は青7連続時に設定の奇偶で当選率が変わるみたいだよ。偶数設定かつ高設定ほど優遇される可能性があるみたい。SGG当選については登録データに情報がないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 80,
+      "latency_sec": 3.96
+    }
+  },
+  {
+    "id": "FV-C06",
+    "category": "concept_binding",
+    "prompt": "SGGとGG継続ゾーンの関係を教えて",
+    "query_entities": [
+      "SGG",
+      "GG継続ゾーン"
+    ],
+    "A0": {
+      "response": "SGGゾーンとGG継続ゾーンは、それぞれ独立したゾーンとして存在します。SGGゾーンでは、100Gが選ばれると継続ストックを1つ獲得できます。一方、GG継続ゾーンはGG当選時に一定の確率で抽選され、その当選率は設定によって変動します。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 117,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "SGGのゲーム数振り分けは、5の倍数セットと非5の倍数セットで異なるみたいだよ。でも、GG継続ゾーンについての情報は登録データに見つからなかったんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 75,
+      "latency_sec": 4.36
+    }
+  },
+  {
+    "id": "FV-C07",
+    "category": "concept_binding",
+    "prompt": "小役履歴とモード示唆出目の関係を教えて",
+    "query_entities": [
+      "小役履歴",
+      "モード示唆出目"
+    ],
+    "A0": {
+      "response": "小役履歴は液晶右下に表示されて、青7や黄7がそれぞれ3連続以上ならGG抽選のチャンスになるんだ。ガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能するよ。モード示唆出目はGG継続濃厚だけど、法則崩れ的な要素もあるから、表モードを示唆するわけじゃないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 138,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "小役履歴は青7や黄7が3連続以上だとGG抽選になるんだ。青7連続は設定の奇偶で当選率が変わるよ。モード示唆出目は奇数やVが出るとGG継続濃厚だけど、法則崩れ的な要素もあるみたいだから、表モードを示唆するわけじゃないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 110,
+      "latency_sec": 5.03
+    }
+  },
+  {
+    "id": "FV-C08",
+    "category": "concept_binding",
+    "prompt": "ガイアナビとガイアモードの関係を教えて",
+    "query_entities": [
+      "ガイアナビ",
+      "ガイアモード"
+    ],
+    "A0": {
+      "response": "ガイアナビ発生時にガイアモードへの移行抽選が行われるんだ。規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 63,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "ガイアナビ発生時にガイアモードが示唆されるんだ。ガイアモードは低確、通常、天国の3種類があって、それぞれのモードに応じてガイアベル規定回数到達時にガイアステージ移行を抽選するんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 90,
+      "latency_sec": 3.99
+    }
+  },
+  {
+    "id": "FV-C09",
+    "category": "concept_binding",
+    "prompt": "白7とALL色の関係を教えて",
+    "query_entities": [
+      "白7",
+      "ALL色"
+    ],
+    "A0": {
+      "response": "登録データにありません",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 11,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "登録データにALL色についての情報は見つからなかったよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 28,
+      "latency_sec": 1.16
+    }
+  },
+  {
+    "id": "FX-CB01",
+    "category": "concept_binding",
+    "prompt": "当選と前兆の違いを教えて",
+    "query_entities": [
+      "当選",
+      "前兆"
+    ],
+    "A0": {
+      "response": "当選はGG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。設定に応じて当選率が変わるみたい。前兆は最大24Gで、小役履歴契機は9~12Gになるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 83,
+      "latency_sec": null,
+      "source": "new"
+    },
+    "A2": {
+      "response": "当選はGG当選や青7連続などの状況を指すんだ。前兆は下段黄7や中段青7、右上がり&中段黄7・SP役などが契機になるよ。前兆は最大24Gまであるんだけど、小役履歴契機は9~12Gになるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 94,
+      "latency_sec": 5.53
+    }
+  },
+  {
+    "id": "FX-CB02",
+    "category": "concept_binding",
+    "prompt": "終了状態と移行先の関係を教えて",
+    "query_entities": [
+      "終了状態",
+      "移行先"
+    ],
+    "A0": {
+      "response": "ガイアステージ移行のチャンスがあるガイアナビ(右ナビ)発生時、規定回数到達時は滞在しているガイアモードに応じてガイアステージ移行を抽選するんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 72,
+      "latency_sec": null,
+      "source": "new"
+    },
+    "A2": {
+      "response": "登録データに終了状態と移行先の関係についての情報は見つからないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 34,
+      "latency_sec": 1.61
+    }
+  },
+  {
+    "id": "FX-CB03",
+    "category": "concept_binding",
+    "prompt": "示唆と確定の違いを教えて",
+    "query_entities": [
+      "示唆",
+      "確定"
+    ],
+    "A0": {
+      "response": "示唆は、例えばリール上部付近まで点灯したり、枠LEDが全て点灯したりといった演出があるよ。これは、赤7揃い濃厚とか、GOD揃い濃厚といった感じで、濃厚だけどまだ確定じゃない状態なんだ。一方、確定は、激熱表示発生で確定役濃厚だったり、SU4は確定役(赤7揃いorGOD)成立の大チャンスだったりするんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 151,
+      "latency_sec": null,
+      "source": "new"
+    },
+    "A2": {
+      "response": "示唆は0テンパイがZ-ZONEのチャンスってことだよ。一方、確定役演出はフリーズ経由の割合が高いって解説があるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 58,
+      "latency_sec": 3.14
+    }
+  },
+  {
+    "id": "FX-CB04",
+    "category": "concept_binding",
+    "prompt": "契機と恩恵の関係を教えて",
+    "query_entities": [
+      "契機",
+      "恩恵"
+    ],
+    "A0": {
+      "response": "契機は青7連続で、恩恵はPGG(ループストックあり)突入だよ。擬似遊技と実遊技のどちらも共通なんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 50,
+      "latency_sec": null,
+      "source": "new"
+    },
+    "A2": {
+      "response": "契機は、ハズレ、上段青7、押し順黄7、下段黄7、右上がり黄7、GOD揃い、赤7揃い、継続ストックがあるよ。それぞれの契機ごとにSGGゲーム数の振り分けが決まってるんだ。恩恵は、GGに当選するとループストックを抽選できるんだ。ループストックの継続率は1%・25%・50%・80%が16.7%ずつ、残りの33.2%は1%ループ+Z-ZONEを獲得できる。天井到達時の約3回に1回でZ-ZONEを獲得できる恩恵があるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 208,
+      "latency_sec": 11.72
+    }
+  },
+  {
+    "id": "FX-CB05",
+    "category": "concept_binding",
+    "prompt": "GG中とGG準備中の違いを教えて",
+    "query_entities": [
+      "GG中",
+      "GG準備中"
+    ],
+    "A0": {
+      "response": "GG準備中はGG開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。登録データにはGG準備中の詳細な数字は載ってないけど、GG中より当選しやすくなるってことだけは分かってるよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 107,
+      "latency_sec": null,
+      "source": "new"
+    },
+    "A2": {
+      "response": "GG中はSP役が50%でストックを獲得するんだ。一方、GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 73,
+      "latency_sec": 4.31
+    }
+  },
+  {
+    "id": "FX-CB06",
+    "category": "concept_binding",
+    "prompt": "天井とヤメ時の関係を教えて",
+    "query_entities": [
+      "天井",
+      "ヤメ時"
+    ],
+    "A0": {
+      "response": "登録データに天井とヤメ時の直接的な関係は見つからないよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 28,
+      "latency_sec": null,
+      "source": "new"
+    },
+    "A2": {
+      "response": "天井の情報は登録されているけど、ヤメ時の情報は登録されてないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 33,
+      "latency_sec": 1.59
+    }
+  },
+  {
+    "id": "FX-CB07",
+    "category": "concept_binding",
+    "prompt": "確定役とフリーズ演出の違いを教えて",
+    "query_entities": [
+      "確定役",
+      "フリーズ演出"
+    ],
+    "A0": {
+      "response": "確定役演出は、リール上部付近まで点灯したり、激熱表示が発生すると濃厚になるよ。一方、フリーズ演出は、下パネルフラッシュ発生時に0揃いやV揃い、奇数揃い、確定役濃厚と見られるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 89,
+      "latency_sec": null,
+      "source": "new"
+    },
+    "A2": {
+      "response": "確定役はフリーズ経由の割合が高いって解説にあるよ。フリーズ演出については登録データに情報がないみたいだね。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 53,
+      "latency_sec": 2.74
+    }
+  },
+  {
+    "id": "FX-CB08",
+    "category": "concept_binding",
+    "prompt": "小役履歴とモード示唆出目の関係を教えて",
+    "query_entities": [
+      "小役履歴",
+      "モード示唆出目"
+    ],
+    "A0": {
+      "response": "小役履歴は液晶右下に表示されて、青7や黄7がそれぞれ3連続以上ならGG抽選のチャンスになるんだ。ガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能するよ。モード示唆出目はGG継続濃厚だけど、法則崩れ的な要素もあるから、表モードを示唆するわけじゃないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 138,
+      "latency_sec": null,
+      "source": "new"
+    },
+    "A2": {
+      "response": "小役履歴は青7や黄7が3連続以上だとGG抽選になるんだ。青7連続は設定の奇偶で当選率が変わるよ。モード示唆出目は奇数やVが出るとGG継続濃厚だけど、法則崩れ的な要素もあるみたいだから、表モードを示唆するわけじゃないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 110,
+      "latency_sec": 5.48
+    }
+  }
+]

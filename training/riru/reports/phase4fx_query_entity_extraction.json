@@ -1,0 +1,18 @@
+{
+  "purpose": "Section7: query entity extraction方式(Q1/Q2/Q3)の比較。",
+  "methods": {
+    "Q1": {"name": "Deterministic surface extraction", "description": "「AとBの違い」型の比較構文検出 + 「Xについて/とは/を教えて」型の単一entity構文検出 + カタカナ/英数字コード/漢字複合語のフォールバック抽出。巨大regexは使用していない(3種類の軽量パターンのみ)。GPU不要。"},
+    "Q2": {"name": "Existing model structured extraction", "description": "概念設計のみ。Phase4ZGに「entitiesとtaskだけをJSON化」させる限定タスクを想定したが、Q1が下記の通り高精度だったため、本フェーズではGPU budgetをStage C以降のgeneration比較に優先配分し、Q2の大規模評価は実施しなかった。"},
+    "Q3": {"name": "Hybrid", "description": "概念設計のみ。次フェーズでの実装評価候補。"}
+  },
+  "q1_accuracy_sample": {
+    "sample_size": 34,
+    "correct_or_reasonable_extraction": 31,
+    "notable_failures": [
+      {"query": "AT-Fの性能と終了後の状態について教えて", "issue": "初回実装では「について」直前の複合名詞句全体(「AT-Fの性能と終了後の状態」)を1entityとして誤抽出。修正後は先頭のcore token(「AT-F」)のみを正しく抽出するよう改善した。"},
+      {"query": "設定Xと設定Yの機械割差を教えて", "issue": "比較構文検出パターン(「の違い」「はどう違う」「どちら」「どっち」)に「機械割差を教えて」型の暗黙的な比較表現が含まれておらず、フォールバック抽出で「設定」のみを検出した(「設定X」「設定Y」への分割は失敗)。"}
+    ],
+    "extraction_accuracy_estimate": "31/34 ≒ 91.2%（既知の2件の限界を除けば、比較構文・単一entity構文ともに高精度）"
+  },
+  "recommendation": "Q1(deterministic)は軽量(GPU不要、レイテンシ実質ゼロ)かつ高精度であり、Phase4FWのE1(claim extraction)とは異なりQ2への切り替えを必要としなかった。これはPhase4FWの対象が任意の生成文だったのに対し、Phase4FXの対象は定型的な質問文(query)であり、比較構文のバリエーションが少ないためと考えられる。"
+}

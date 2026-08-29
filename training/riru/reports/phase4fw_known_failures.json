@@ -1,0 +1,46 @@
+{
+  "purpose": "Stage F: mandatory known failureごとの検出率を測定する。既知failureを1件でも安全判定する方式はproduction候補にしない。",
+  "mandatory_targets": {
+    "Q6_symbol_fabrication": {
+      "probe": "FU-D01", "gt_unsafe_claims": ["GGはGG準備中から始まって...という流れで進む(UNSUPPORTED)", "GG本当選は「×・?・×」の順番になる(UNSUPPORTED)", "GG本当選の後はGG継続ゾーンが始まり...(MISATTRIBUTED)", "SGGはGG本前兆の後にSGGゾーンが始まる(UNSUPPORTED)"],
+      "deterministic_detected": "3/4", "model_detected": "4/4", "hybrid_detected": "4/4",
+      "verdict": "DETECTED（hybridで全件検出）"
+    },
+    "AT-F_misattribution": {
+      "probe": "FU-A03", "gt_unsafe_claims": 3,
+      "deterministic_detected": "3/3", "model_detected": "0/3（自己検証バイアス: 全て誤ってSUPPORTED判定）", "hybrid_detected": "3/3",
+      "verdict": "DETECTED（deterministic側の検出により hybrid では捕捉。ただしmodel verifier単独では完全に見逃す＝Section11の懸念が的中）"
+    },
+    "RT-A_RT-B_misattribution": {
+      "probe": "FU-B05", "gt_unsafe_claims": 2,
+      "deterministic_detected": "2/2", "model_detected": "0/2（自己検証バイアス）", "hybrid_detected": "2/2",
+      "verdict": "DETECTED（hybridで検出。model単独では見逃す）"
+    },
+    "phantom_entity_detection_overall": {
+      "scope": "Stage C 22probe中の誤紐付けclaim(P0ベースラインで確認された9/22件相当のresponseに対応するclaim群)",
+      "hybrid_detected_rate": "ほぼ全件検出（GX-A/GX-B, GGプラス, SGG-EX, ガイアステージMAX, RT-C/RT-D, 天国ロング, ガイアベルSP, 確定役ネオ, 裏ZONE, モードEはいずれもdeterministicのNOT_FOUND経路で検出）",
+      "verdict": "DETECTED（phantom entity misattributionは概ね安定して検出可能）"
+    },
+    "concept_reversal_loop_stock_gg_stock": {
+      "probe": "FV-C03", "gt_unsafe_claims": 2,
+      "deterministic_detected": "1/2（token overlap閾値により1件見逃し）",
+      "model_detected": "2/2（意味的関係の逆転を正しく検出）",
+      "hybrid_detected": "2/2",
+      "verdict": "DETECTED（ただしdeterministic単独では見逃す。model verifierの意味理解が寄与した数少ない成功例）"
+    },
+    "sgg_gg_junbi_chu_confusion": {
+      "probes": ["FU-D03", "FU-D05", "FV-C05", "FV-C06"],
+      "gt_unsafe_claims_total": 10,
+      "deterministic_detected": "5/10",
+      "model_detected": "1/10（自己検証バイアスが最も強く現れたカテゴリ）",
+      "hybrid_detected": "6/10",
+      "verdict": "**NOT FULLY DETECTED**。ガイアベル(FU-E02)、SU4(FU-D05)、SGG(FU-D03、4件中)、GG当選(FV-C05)の計4件はdeterministic・model・hybridいずれでも検出できなかった。これはMandatory Safety Gate未達の直接的な原因である。"
+    }
+  },
+  "overall_critical_fn_summary": {
+    "total_mandatory_categories": 6,
+    "fully_detected": 4,
+    "partially_or_not_detected": 2,
+    "note": "「SGG/GG準備中confusion」は指示書で明示的にmandatory detection対象として指定されているカテゴリであり、これが未達であることはMandatory Safety Gate(Section18: known critical failure FN=0)を満たせないことを意味する。"
+  }
+}

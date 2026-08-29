@@ -1,0 +1,21 @@
+{
+  "purpose": "Stage A: 既存RAG records/chunksを監査し、現行schema(title/category/doc_id等)だけでentity attributionがどこまで可能か確認する。新しいDBやdictionaryは作らない。",
+  "sample_size_note": "指示書は最低200 recordsのsamplingを求めているが、実際の本番vector DBは1機種分・119チャンクのみで構成されており(Phase4ZQ以降繰り返し確認済み)、200件のsampleを取ることは物理的に不可能である。そのため本監査では現存する119チャンク全件を対象とした(200件のご指示に対しては未達だが、DBの実サイズがそれを下回るため全数調査で代替する)。",
+  "total_chunks_audited": 119,
+  "available_schema_fields": ["chunk_id", "text", "doc_id", "machine_id", "category", "title",
+    "source_url", "source_label", "data_source_type", "score", "review_status", "chunk_count",
+    "chunk_index", "updated_at", "retrieved_at"],
+  "note_on_schema": "『entity』『concept』専用のフィールドは存在しないが、titleフィールドが実質的にその役割を果たしていることが判明した。doc_idは`machine_id::category::title::record_range`という構造を持ち、title自体がXLSX由来の行見出しになっている。",
+  "classification": {
+    "ATTRIBUTABLE_EXACT": {"count": 80, "percentage": "67.2%", "definition": "titleそのものが対象concept/entityを明確に一意に名指ししている(例: 「Z-ZONE昇格に関する解説」「SGGゲーム数抽選概要」「ガイアナビの解説」「GG中解説」「準備中解説」「天国モード解説」)"},
+    "ATTRIBUTABLE_PARENT": {"count": 15, "percentage": "12.6%", "definition": "titleのみでは汎用的すぎる、または複数箇所に重複して存在するが、category+同一doc_id帯の隣接recordから対象を特定可能(例: 「効果」は2箇所に存在するが、category(at_mechanism vs effect_lore)で区別可能。LED点灯パターンの「1」「2」「3」「なし」は隣接する「レベル」「特殊法則」chunkから復元可能)"},
+    "ATTRIBUTABLE_WEAK": {"count": 23, "percentage": "19.3%", "definition": "titleが「2G」〜「24G」のような純粋な連番のみで、doc_id位置が「前兆ゲーム数解説」(doc_id 241)の直前に連続しているという位置関係からの推論でのみ復元可能"},
+    "UNATTRIBUTABLE": {"count": 1, "percentage": "0.8%", "definition": "titleが純粋な数字のみで、隣接recordとの明確な位置関係も薄く、本文を読まないと対象が特定できない(該当: doc_id=184「4」、category=other、孤立した数値テーブル行)"}
+  },
+  "decisive_discovery": {
+    "description": "本Stageの監査中、production DBには「GG中解説」(GG中の状態を専門に説明するchunk)と「引き戻し解説」(SGGの実体である引き戻しゾーンを説明するchunk)という、極めて明確にtitle付けされたchunkが既に存在することを発見した。しかし、これらは過去の全フェーズ(Phase4ZS〜FW)を通じて、embeddingベースのtop-6検索で一度も上位に浮上したことがない。",
+    "empirical_verification": "実際に「SGGとは何か教えて」「GG中とはどんな状態か教えて」というqueryでembedding検索を実行したところ、「引き戻し解説」「GG中解説」はいずれもtop-6に含まれず(スコア上位はより一般的な「準備中解説」「効果」等)、代わりにtitleベースの完全一致検索を行うと確実に発見できることを確認した(training/riru/guard/phase4fx_entity_attribution.pyのfind_title_matched_chunks()で実証)。",
+    "implication": "GG/SGG/GG準備中の混同問題の一部は、モデルの生成能力の限界ではなく、embedding検索が正しくtitle付けされた情報を単に見逃しているという、より単純で対処しやすい原因に起因している可能性が高い。"
+  },
+  "conclusion": "現行schemaは新しいDB移行やdictionary追加なしに、大部分(約80%、EXACT+PARENT)のchunkについてentity attributionを可能にする。残りの約20%(WEAK)も位置関係推論で対応可能。真に対応不可能なのは119件中1件のみ(0.8%)であり、CASE FX-C(schema不十分)には該当しない。"
+}

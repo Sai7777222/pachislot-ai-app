@@ -1,0 +1,21 @@
+{
+  "phase": "Phase4FW - Product-side Grounded Claim Verification Feasibility",
+  "git_branch": "checkpoint/identity-closure-phase4zn-baseline",
+  "head_at_preflight": "8e0f7febb1ff690024c97a77742d9741e1ea9f5c",
+  "git_status_short_line_count_at_preflight": 56,
+  "frozen_architecture_hashes_at_start": {
+    "production_prompt_system_jinja2_sha256": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7",
+    "phase4zg_adapter_sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "conservative_dispatch_sha256": "80dbb4469a201030de1ee7ec6f1d57b69a990d62e7e741638a275f5772a018ad",
+    "policy_c3_sha256": "cb9f904bb02d9b109e1a6b6f773b976d2699d14b39833ce5876a4ba6c1963caf"
+  },
+  "pytest_result_start": "233 passed, 1 warning (既知のhttpx非推奨警告、無関係)",
+  "reuse_strategy": "Phase4FU/4FVで既に生成済みの応答(84件: known_failure 4 + phantom_entity 20 + concept_binding 10 + rag50 50)を最大限再利用し、新規generationはclaim抽出(E2)・model verifier・V3 regenerationサンプルのみに限定する方針とした。",
+  "prohibited_actions_confirmed_not_taken": [
+    "Phase4ZG変更なし", "training/LoRAなし", "production RAG prompt変更なし",
+    "conservative dispatch変更なし", "Policy C3変更なし", "RAG DB/retriever/embedding変更なし",
+    "generation config変更なし", "identity変更なし", "GGUF/Q8/Q5量子化なし",
+    "production pipelineへの統合なし", "git commit/push なし",
+    "new base model/retraining/external LLM・API/giant entity dictionary/giant regex/RAG DB変更/embedding変更/second retrieval systemのいずれも実装せず"
+  ]
+}

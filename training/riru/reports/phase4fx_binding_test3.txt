@@ -1,0 +1,13 @@
+=== SU4について教えて -> entities: ['SU4'] ===
+  SU4: [('炎・戦車解説', 'title_match')]
+  UNBOUND: []
+
+=== RT-CとRT-Dの違いを教えて -> entities: ['RT-C', 'RT-D'] ===
+  RT-C: []
+  RT-D: []
+  UNBOUND: []
+
+=== 設定Xと設定Yの機械割差を教えて -> entities: ['設定'] ===
+  設定: [('天井突入条件（設定変更時）', 'title_match')]
+  UNBOUND: []
+

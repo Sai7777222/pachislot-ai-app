@@ -1,0 +1,37 @@
+=== GGとSGGの違いを初心者向けに説明して -> entities: ['GG', 'SGG'] ===
+  GG: [('青7連続時GG当選率', 'title_match'), ('GG中解説', 'title_match')]
+  SGG: [('SGGゲーム数抽選概要', 'title_match'), ('継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】', 'title_match'), ('継続契機ごとのSGGゲーム数振り分け【5の倍数セット】', 'title_match')]
+  UNBOUND: []
+
+=== AT-Fの性能と終了後の状態について教えて -> entities: ['AT-F'] ===
+  AT-F: []
+  UNBOUND: []
+
+=== ガイアベルとは何か説明して -> entities: ['ガイアベル'] ===
+  ガイアベル: [('小役の停止例一覧', 'title_match'), ('モードごとの違い', 'title_match'), ('補足解説', 'title_match'), ('天国モード解説', 'title_match')]
+  UNBOUND: []
+
+=== ループストックとGGストックの違いを教えて -> entities: ['ループストック', 'GGストック'] ===
+  ループストック: [('高ループストック解説', 'title_match')]
+  GGストック: [('表モード概要', 'title_match'), ('Z-ZONE解説', 'title_match'), ('効果', 'title_match')]
+  UNBOUND: []
+
+=== RT-AとRT-Bの違いを要約して -> entities: ['RT-A', 'RT-B'] ===
+  RT-A: []
+  RT-B: []
+  UNBOUND: []
+
+=== SU4について教えて -> entities: ['SU4'] ===
+  SU4: [('4', 'title_match')]
+  UNBOUND: []
+
+=== GG当選とSGG当選の違いを教えて -> entities: ['GG当選', 'SGG当選'] ===
+  GG当選: [('青7連続時GG当選率', 'title_match')]
+  SGG当選: []
+  UNBOUND: []
+
+=== モードαとモードβの違いを簡単に教えて -> entities: ['モードα', 'モードβ'] ===
+  モードα: []
+  モードβ: []
+  UNBOUND: []
+

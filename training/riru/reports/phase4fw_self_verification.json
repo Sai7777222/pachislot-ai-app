@@ -1,0 +1,57 @@
+{
+  "critical_ids_checked": [
+    "FU-D01",
+    "FU-A03",
+    "FU-B05",
+    "FV-C03"
+  ],
+  "n_known_unsafe_claims_checked": 11,
+  "n_self_verification_failures": 4,
+  "failures": [
+    {
+      "id": "FU-B05",
+      "claim_idx": 0,
+      "subject": "RT-A",
+      "claim_text": "RT-Aは枠LEDのパターンでレベルを示唆する",
+      "gt_status": "MISATTRIBUTED",
+      "predicted_status": "SUPPORTED",
+      "predicted_evidence": "[効果] 枠LEDのパターンでレベルを示唆（リール上部やサイド上部など）",
+      "predicted_reason": "claimの内容と一致",
+      "eval_bucket": "FN"
+    },
+    {
+      "id": "FU-A03",
+      "claim_idx": 0,
+      "subject": "AT-F",
+      "claim_text": "AT-Fは最大1480Gまで消化できる",
+      "gt_status": "MISATTRIBUTED",
+      "predicted_status": "SUPPORTED",
+      "predicted_evidence": "[天井突入条件] AT間最大1480G消化。",
+      "predicted_reason": "検索結果に一致",
+      "eval_bucket": "FN"
+    },
+    {
+      "id": "FU-A03",
+      "claim_idx": 1,
+      "subject": "AT-F終了後",
+      "claim_text": "終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイならGG濃厚のLV5になる",
+      "gt_status": "MISATTRIBUTED",
+      "predicted_status": "SUPPORTED",
+      "predicted_evidence": "[LV5（GG継続濃厚）] 1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚",
+      "predicted_reason": "検索結果に一致",
+      "eval_bucket": "FN"
+    },
+    {
+      "id": "FU-A03",
+      "claim_idx": 2,
+      "subject": "AT-F",
+      "claim_text": "LEDの色はGGの種別やストックの有無を示してくれる",
+      "gt_status": "MISATTRIBUTED",
+      "predicted_status": "SUPPORTED",
+      "predicted_evidence": "[効果] LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+      "predicted_reason": "検索結果に一致",
+      "eval_bucket": "FN"
+    }
+  ],
+  "verdict": "UNRELIABLE_ON_SOME_CASES"
+}

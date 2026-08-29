@@ -1,0 +1,16 @@
+{
+  "purpose": "Stage: retrieved chunkごとの所属entity/concept推定方式。",
+  "priority_order_used": [
+    "1. title(そのまま、正規化のみ) — 主要な情報源",
+    "2. title照合0件の場合、本文(text)中にentity文字列が存在するchunkを次点で探索(tier2)",
+    "3. modelによる構造的ラベリングは本フェーズでは未使用(1-2で十分な精度が得られたため)"
+  ],
+  "no_dictionary_used": true,
+  "no_model_assisted_labeling_used": true,
+  "sample_output_format": {"chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::GG中解説::363::chunk0", "entity": "GG中解説", "confidence_source": "title"},
+  "decisive_examples": [
+    {"chunk_title": "GG中解説", "query": "GG中とはどんな状態か教えて", "note": "titleが完全一致。embedding top-6には一度も含まれなかったが、title照合で確実に発見できた。"},
+    {"chunk_title": "小役の停止例一覧", "query": "ガイアベルとは何か説明して", "note": "titleにはガイアベルという文字列は無いが、本文に「ガイアベル (1枚)」という記述がありtier2(本文一致)で発見。これによりガイアベルが1枚役の小役であるという正しい分類がcontextに含まれるようになった。"}
+  ],
+  "retrieval_score_usage": "attribution判定には一切使用していない(instructionの明示的要求通り)。"
+}

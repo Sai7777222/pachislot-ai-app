@@ -1,0 +1,65 @@
+{
+  "note": "dispatch()自体は本フェーズ非対象(変更なし)。productionRAGprompt変更がPolicyC3のrag_with_context経路にのみ影響することをStage Fの生成結果と合わせて確認する。small-talk/OOD/conversational/clarify用promptファイルは一切変更していない(ファイルhashで確認済み)。",
+  "dispatch_trace": [
+    {
+      "id": "FU-A02",
+      "prompt": "天井は何ゲームですか？設定変更時と通常時それぞれ振り分けを教えて",
+      "dispatched_mode": "PACHISLOT_FACTUAL",
+      "confident": true
+    },
+    {
+      "id": "FU-A03",
+      "prompt": "AT-Fの性能と終了後の状態について教えて",
+      "dispatched_mode": "UNKNOWN",
+      "confident": false
+    },
+    {
+      "id": "FU-A05",
+      "prompt": "設定1と設定6の機械割の差はどれくらい？",
+      "dispatched_mode": "PACHISLOT_FACTUAL",
+      "confident": true
+    },
+    {
+      "id": "FU-B03",
+      "prompt": "モードαとモードβの違いを簡単に教えて",
+      "dispatched_mode": "UNKNOWN",
+      "confident": false
+    },
+    {
+      "id": "FU-B04",
+      "prompt": "AT-AとAT-Bはどう違うの？",
+      "dispatched_mode": "UNKNOWN",
+      "confident": false
+    },
+    {
+      "id": "FU-B05",
+      "prompt": "RT-AとRT-Bの違いを要約して",
+      "dispatched_mode": "UNKNOWN",
+      "confident": false
+    },
+    {
+      "id": "FU-C03",
+      "prompt": "この機種のボーナスの種類を要約して",
+      "dispatched_mode": "PACHISLOT_CONVERSATIONAL",
+      "confident": true
+    },
+    {
+      "id": "FU-D05",
+      "prompt": "SGGとRTの関係を初心者向けに教えて",
+      "dispatched_mode": "UNKNOWN",
+      "confident": false
+    },
+    {
+      "id": "FU-F01",
+      "prompt": "GGとガイアステージ、どっちが出玉が多い？",
+      "dispatched_mode": "PACHISLOT_CONVERSATIONAL",
+      "confident": true
+    },
+    {
+      "id": "FU-F02",
+      "prompt": "GGとSGGどっちがお得か教えて",
+      "dispatched_mode": "UNKNOWN",
+      "confident": false
+    }
+  ]
+}

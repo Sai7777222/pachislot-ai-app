@@ -1,0 +1,22 @@
+{
+  "purpose": "Section6: atomic claim extraction方式(E1/E2/E3)の比較。目的はclaim構造化のみで、事実判定は行わない。",
+  "methods": {
+    "E1": {"name": "Deterministic extraction", "description": "句読点・接続詞・対比マーカー(「一方」「それに対して」「逆に」)による文/節分割。巨大regexは使用していない。GPU不要、レイテンシほぼゼロ。"},
+    "E2": {"name": "Existing model structured extraction", "description": "Phase4ZG(既存モデル)に「回答文をatomic claim(subject/predicate)へ分解するだけ」の限定タスクを実行させる。temperature=0、新しい外部LLMは使用していない。"},
+    "E3": {"name": "Hybrid", "description": "E1のdeterministic segmentationを高速な事前分割として使い、対比マーカーを含まない/E1の節数が1でsubjectが複数の可能性がある応答にのみE2を適用する、という設計を想定。本フェーズでは概念設計に留め、全84件への追加generationは行っていない(GPU budget節約のため)。"}
+  },
+  "comparison_sample": "known_failure(4件)+phantom_entity(8件)+concept_binding(6件)+rag50(6件) = 24probe",
+  "results": {
+    "E1_parse_success_rate": "24/24 (100%, そもそもJSON parseの概念がない単純split)",
+    "E2_parse_success_rate": "24/24 (100%)",
+    "E2_avg_latency_sec": 6.22,
+    "claim_count_comparison": {
+      "E2_finer_than_E1": "14/24 probe (58.3%)",
+      "E1_finer_than_E2": "0/24 probe",
+      "equal": "10/24 probe"
+    },
+    "key_finding": "E1(deterministic)は「一方」「それに対して」等の明示的な対比マーカーがない比較文(例: 「RT-Aは...で、RT-Bは...だよ」のような単純な「て、」区切り)を1つの巨大claimとして扱ってしまい、subject単位の分解に失敗するケースが複数確認された(FU-B05, FU-B03, FV-C03, FV-C06等)。これらはまさに本プロジェクトが最も検出したい「誤紐付け」が起きやすい文型であり、E1単独では見逃しリスクが高い。E2は同じ入力に対して一貫してsubject単位への正しい分解に成功した(FU-B05: RT-A/RT-Bへの正しい分割等)。",
+    "e2_over_segmentation_note": "一方でE2は、構造化データを列挙しただけの単純な応答(例: Q11の天井・ループストック振り分け)を過剰に細分化する傾向がある(3claim→11claim)。誤りではないが、production実装では冗長なclaimの統合(reconciliation)が必要になる可能性がある。"
+  },
+  "recommendation": "E2(既存モデルによる構造化抽出)を主要な抽出方式として採用する。E1は、GPU呼び出しを避けたい場合の高速フォールバック(特に単一事実型の短い応答)として補助的に使うことができるが、比較・対比を含む応答には単独で使用しない。E3(ハイブリッド)は本フェーズでは概念設計のみで、次フェーズでの実装評価候補とする。"
+}

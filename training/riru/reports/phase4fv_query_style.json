@@ -1,0 +1,106 @@
+[
+  {
+    "phrasing": "GGとSGGの違いを初心者向けに説明して(=Q6)",
+    "P0_reused_from_FU": null,
+    "P1": {
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選の流れになるんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、GG継続ゾーンはGG本前兆とは違う演出になるんだ。GG継続ゾーンは「×・?・×」の順番で、GG本当選の後は「×・?・?」の順番になるんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 467
+    },
+    "P2": {
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?」の順番になるよ。GG本前兆中は枠LEDが点灯するんだけど、GG本当選だと枠LEDは点灯しないんだ。GG本前兆中はハズレもあるけど、GG本当選はハズレがないんだ。GG本前兆中はループストック種別が示唆されるんだけど、GG本当選だとGGストックの有無が示唆されるんだ。GG本前兆中はフリーズ経由の割合が一番高いんだ。GG本前兆中はSGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでにSGGゲーム数抽選があるんだ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでにSGGゲーム数抽選があるんだ。SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでにSGGゲーム数抽選があるんだ。SGG引き戻しゾーンの毎ゲーム レバーON時~次",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 477
+    }
+  },
+  {
+    "phrasing": "GGについて教えて",
+    "P0_reused_from_FU": {
+      "phrasing": "GGについて教えて",
+      "response": "GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆するよ。通常時・GG中ともにフリーズ経由の割合が一番高いみたい。GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選するんだ。設定に応じて当選率が変化する可能性があるみたい。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 183
+    },
+    "P1": {
+      "response": "GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いみたい。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。抽選概要はGG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選するみたい。設定に応じて当選率が変わるみたいだけど、数字はまだ登録されてないよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 176
+    },
+    "P2": {
+      "response": "GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いよ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してるみたい。抽選概要はGG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。設定に応じて当選率が変化してるみたいだけど、数字はまだ登録されてないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 168
+    }
+  },
+  {
+    "phrasing": "SGGについて教えて",
+    "P0_reused_from_FU": {
+      "phrasing": "SGGについて教えて",
+      "response": "SGGは、GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆するよ。GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選するんだけど、設定に応じて当選率が変化するみたい。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 156
+    },
+    "P1": {
+      "response": "SGGは、GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆するよ。GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選するんだけど、設定に応じて当選率が変化するみたい。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 156
+    },
+    "P2": {
+      "response": "SGGは、GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるよ。また、GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選するんだ。設定に応じて当選率が変化するみたいだね。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 162
+    }
+  },
+  {
+    "phrasing": "GGとSGGの違いは？",
+    "P0_reused_from_FU": {
+      "phrasing": "GGとSGGの違いは？",
+      "response": "GGとSGGの違いは、GG当選契機とセット数が5の倍数かどうかで抽選値が変わるところだよ。100Gが選ばれると、継続ストックを1つ獲得できるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 73
+    },
+    "P1": {
+      "response": "GGとSGGは、GG当選契機が異なるのが主な違いみたいだよ。GGはGG当選契機不問で、SGGは継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 76
+    },
+    "P2": {
+      "response": "GGとSGGは、GG当選契機が異なるのが主な違いみたいだよ。GGはGG当選契機不問で、SGGは継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 76
+    }
+  },
+  {
+    "phrasing": "GGとSGGを要約して",
+    "P0_reused_from_FU": {
+      "phrasing": "GGとSGGを要約して",
+      "response": "GGはGG準備中に「×・?・?」が出るまでが対象で、全体的にストック当選率が高い。フリーズ経由の割合が一番高い。保障ゲーム数が残り3G以下だと成立役に応じて3G加算されるが、ガイアステージ中の黄7とSP役は保障ゲーム数は獲得しない。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆する。入力タイミングはSGG引き戻しゾーンの毎ゲームレバーON時~次ゲームBETまで。SGGのゲーム数は継続契機とセット数が5の倍数かどうかで抽選値が変わる。100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 263
+    },
+    "P1": {
+      "response": "GGはGG準備中に「×・?・?」が出るまでが対象で、全体的にストック当選率が高い。SGGは引き戻しゾーンの毎ゲームでLEDの色でループストック種別やGGストックの有無を示唆する。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 89
+    },
+    "P2": {
+      "response": "GGはGG準備中に「×・?・?」が出るまでが対象で、全体的にストック当選率が高い。SGGは引き戻しゾーンの毎ゲームでLEDの色でループストック種別やGGストックの有無を示唆する。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 89
+    }
+  }
+]

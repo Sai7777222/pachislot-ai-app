@@ -1,0 +1,19 @@
+{
+  "purpose": "Stage H: entity attribution自体の精度を、generation結果とは独立に測定する。",
+  "gt_reference": "training/riru/reports/phase4fx_ground_truth.json (sha256: dc14a7b84b113b980ad02967e7cca33d3a3328e95571a08e9b06dc6ff7d8e4cf)",
+  "measurements": {
+    "attribution_accuracy": "404/404 chunk instances classified consistently with human review (100%)",
+    "query_entity_binding_accuracy": "114/114 bound assignments correct (100%、word-boundary修正後)",
+    "false_bind_count": 0,
+    "false_bind_count_before_fix": 4,
+    "missed_bind_rate_sample": "3/60 (5.0%、いずれもsafety上の問題ではなくcompleteness上の軽微な機会損失)",
+    "ambiguous_rate": "1/74probe (FV-P14の「ゾーンZ」がZ-ZONEの言い換えである可能性があり、厳密なphantom entityかどうか判断が分かれる境界例として記録)"
+  },
+  "critical_false_bind_zero_target": "達成（最終メカニズムでfalse bind = 0）",
+  "iteration_history": [
+    {"issue": "「Xについて」構文で複合語entityの接尾辞が欠落(例: 「GGプラス」→「GG」に誤って切り詰め)", "impact": "6probeでphantom entity検出が機能しなかった", "fix": "助詞(の/と)の直前までを切り出す方式に変更、助詞を挟まない複合語はそのまま1entityとする"},
+    {"issue": "entity『GG』が『SGG』というtitleに部分文字列一致で誤ってbinding", "impact": "4probeでSGG固有の情報がGGのcontextに混入", "fix": "ASCII英数字の単語境界チェックを追加(entity dictionaryなし)"},
+    {"issue": "RAG50の【関連する解説文章】をentity一致で絞り込んだ結果、絞り込みすぎて回答の完全性が損なわれる(P04/LC-08/Q15/Q17)", "impact": "mandatory probe 4/8でcompleteness regression", "fix": "絞り込み後に残る項目が元の50%未満になる場合は絞り込みを行わず全体を保持するフォールバックを追加"}
+  ],
+  "note": "上記3件はいずれもgeneration前(またはgeneration結果の安全性判定とは独立な、bindingロジック自体の論理的誤り)の段階で発見・修正しており、GTの正解ラベル自体(何が正しいattributionか)は一度も変更していない。"
+}

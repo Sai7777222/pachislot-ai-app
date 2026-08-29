@@ -1,0 +1,45 @@
+{
+  "phase": "Phase4FU - Multi-Context Grounded Synthesis Root-Cause Diagnostic",
+  "preflight_timestamp_context": "実行直後にgit statusで確認(2026-08-29相当のセッション内)",
+  "git_branch": "checkpoint/identity-closure-phase4zn-baseline",
+  "git_head_at_preflight": "8e0f7febb1ff690024c97a77742d9741e1ea9f5c",
+  "git_status_short_line_count_before_phase": 9,
+  "git_status_short_line_count_after_gt_freeze": 16,
+  "git_status_note": "全て新規untrackedファイル(training/riru/eval/phase4fu_*.py, training/riru/guard/phase4fu_*.py, training/riru/reports/phase4fu_*)。staged/modifiedは0件。git add/commit/pushは一切実行していない(本フェーズの絶対禁止事項に準拠)。",
+  "frozen_architecture_hashes": {
+    "phase4zg_adapter_sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "phase4zg_adapter_status": "MATCH（Phase4FCから不変）",
+    "conservative_dispatch_sha256": "80dbb4469a201030de1ee7ec6f1d57b69a990d62e7e741638a275f5772a018ad",
+    "conservative_dispatch_status": "MATCH（Phase4ZRから不変）",
+    "policy_c3_sha256": "cb9f904bb02d9b109e1a6b6f773b976d2699d14b39833ce5876a4ba6c1963caf",
+    "policy_c3_status": "MATCH（Phase4ZTから不変）"
+  },
+  "production_prompt_file": "config/prompts/system.jinja2",
+  "production_prompt_status": "本フェーズでは一切編集していない(Stage Dの診断用「最小grounding prompt」は別ファイルとして新規作成し、比較にのみ使用)",
+  "rag_db_retriever_embedding_status": "read-onlyでのみ使用。変更なし。",
+  "pytest_result_start": "233 passed, 1 warning (既知のhttpx非推奨警告、無関係)",
+  "prohibited_actions_confirmed_not_taken": [
+    "training/LoRA実行なし",
+    "Phase4ZGアダプタ変更なし",
+    "conservative dispatch変更なし",
+    "Policy C3変更なし",
+    "RAG DB/retriever/embedding変更なし",
+    "本番prompt(config/prompts/system.jinja2)変更なし",
+    "generation config変更なし",
+    "identity/moderationコンポーネント変更なし",
+    "GGUF/Q8/Q5量子化なし",
+    "git commit/push なし"
+  ],
+  "section3_forensic_result_summary": "Q6の「×・?・×」はcontext中に完全一致でも単純結合でも一切存在しない。実在するのは「×・?・?」のみ(1回)。個別記号「×」(1回)「?」(2回)は存在するが、新しい記号列の構築は意味的な創作(confabulation)と判定。CASE FU-N(捏造ではなかった)は棄却。",
+  "section4_gt_result_summary": {
+    "total_probes": 31,
+    "ground_truth_file": "training/riru/reports/phase4fu_ground_truth.json",
+    "ground_truth_hash_file": "training/riru/reports/phase4fu_ground_truth_hash.txt",
+    "sha256": "789d19c917dbeeb273995d63ce1acb0562384005dbdaf30cbd2f6bea56ce4378",
+    "frozen_before_generation": true,
+    "annotation_method": "実際に取得されたretrieved contextのみを読み、モデル出力を一切見ずに人間が判定(RULE EVAL-002準拠)",
+    "retrieval_sufficiency_distribution": {
+      "SUFFICIENT": 9, "PARTIAL": 9, "INSUFFICIENT": 4, "IRRELEVANT": 9
+    }
+  }
+}

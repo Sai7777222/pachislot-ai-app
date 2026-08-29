@@ -1,0 +1,50 @@
+[
+  {
+    "candidate": "P1",
+    "seed": 1,
+    "response": "GGとSGGは、どちらもリーチ中に当選役が決まるゾーンなんだけど、GGの方がループストックの種別を示唆してくれるLEDが点灯するんだ。SGGはその代わりに、ゲーム数抽選の時に5の倍数かどうかで抽選値が変わるって特徴があるよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 112
+  },
+  {
+    "candidate": "P1",
+    "seed": 2,
+    "response": "GGとSGGは両方とも継続ゾーンだけど、SGGはGGの中でもさらにゲーム数が伸びるゾーンなんだ。SGGのゲーム数は5の倍数で変わる抽選があるから、100Gだと継続ストックを1つ獲得できるんだよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 97
+  },
+  {
+    "candidate": "P1",
+    "seed": 3,
+    "response": "GGとSGGは両方とも特別な状態だけど、GGはGG準備中に始まるんだよ。GGはGG準備中開始から「×・?・?」が出るまでの間が対象になるんだ。GGのストック当選率はGG中よりも高いって言われてるよ。SGGはGGとは違う特別なゾーンなんだ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれたときは継続ストックを1つもらえるんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 186
+  },
+  {
+    "candidate": "P2",
+    "seed": 1,
+    "response": "GGとSGGは、どちらもリーチ中に当選役が決まるゾーンだよ。GGはリーチ中に「×・?・?」が出るまでが対象で、GG中よりストック当選率が高いんだ。SGGは、ゲーム数抽選が行われるゾーンで、セット数が5の倍数だと抽選値が変わるみたい。100Gだと継続ストックが1つ増えるんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 137
+  },
+  {
+    "candidate": "P2",
+    "seed": 2,
+    "response": "GGとSGGは両方とも継続ゾーンだけど、SGGはGGのゲーム数が100Gになる時に1つのストックがもらえるよ。また、SGGのゲーム数は継続契機とセット数が5の倍数かどうかで変わるんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 92
+  },
+  {
+    "candidate": "P2",
+    "seed": 3,
+    "response": "GGとSGGは両方とも特別な状態だけど、GGはGG準備中に始まるんだよ。GGはGG準備中よりも当選率が高いみたい。LEDの色がループストック種別やGGストックの有無を教えてくれるんだ。SGGはゲーム数抽選があるんだけど、100Gが選ばれると継続ストックを1つ獲得できるんだ。入力タイミングはSGG引き戻しゾーンの毎ゲームのレバーON時から次ゲームBETまでだよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false,
+    "length": 181
+  }
+]

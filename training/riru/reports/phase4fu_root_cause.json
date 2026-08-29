@@ -1,0 +1,50 @@
+{
+  "case": "FU-H",
+  "case_name": "Mixed Cause（複合要因）",
+  "summary": "単一の支配的原因は存在しない。証拠は3つの独立した実験(Stage D/E/F)によって、query-style(質問の言い回し)とprompt(grounding指示)がほぼ同格の主要因であり、context assembly(構造)は特定の捏造サブタイプにのみ有効な部分的緩和策、adapter(Phase4ZG)は原因ではなくBase Qwenの自然なhedge行動を抑制した副作用要因、という4層構造の複合原因であることを強く支持している。",
+  "ruled_out": {
+    "FU-N": "棄却。Section3の完全forensic分解により、「×・?・×」はcontext中に検証可能な形で一切存在しないことを確定済み(verbatim一致なし、単純結合一致なし)。個別記号「×」「?」は存在するが新規記号列の構築は意味的創作である。",
+    "FU-A": "棄却(主要因としては)。Stage Aの相関分析で、検索十分性と捏造発生率に強い相関が見られなかった(INSUFFICIENT区分の発生率25.0%は、PARTIAL/IRRELEVANT区分の55.6%より低い)。SUFFICIENT区分でも1件(ガイアベル)発生している。"
+  },
+  "primary_causes_co_dominant": [
+    {
+      "code": "FU-F",
+      "name": "Query-style / synthesis-pressure dominant",
+      "evidence": "Stage F(query_style)で、全く同一の事実・同一context・同一adapter・同一prompt条件下で、5つの言い回しのうち「GGとSGGの違いを初心者向けに説明して」という言い回しの時だけ「×・?・×」という記号捏造と「GG本前兆→GG本前兆→GG本前兆→GG本当選」という段階遷移フローの創作が発生した。他4つの言い回し(「GGについて教えて」「SGGについて教えて」「GGとSGGの違いは？」「GGとSGGを要約して」)ではこの特定の捏造は一度も発生しなかった。",
+      "mechanism": "「初心者向けに説明して」という指示が、対比構造(GG本前兆 vs GG本当選、対になる記号パターン)を完成させるべきという合成圧力を生み、実際にはデータが支持しない対称的な構造を創作させていると考えられる。",
+      "artifact": "training/riru/reports/phase4fu_query_style.json"
+    },
+    {
+      "code": "FU-C",
+      "name": "Prompt / grounding-instruction dominant",
+      "evidence": "Stage D(prompt_attribution)で、同一context・同一adapter・同一query-style条件下でも、本番prompt(config/prompts/system.jinja2)を診断用の明示的な反推測・反誤紐付け指示を含む最小grounding promptに差し替えるだけで、Q6(FU-D01)は「×・?・×」を発生させなくなり、RT-A/RT-B(FU-B05)とAT-F(FU-A03)は誤紐付けから正しい情報不足申告に転換し、ガイアベル(FU-E02)の定義的誤り(モードと誤称)も修正された。",
+      "mechanism": "本番promptには一般的な「登録データにない場合はそう伝える」という指示はあるが、「複数の断片を統合する際に新しい対比構造を付け加えない」「無関係な断片を問い合わせられた固有名詞に紐付けない」という、複数context統合時に特化した反創作指示が欠けている。",
+      "artifact": "training/riru/reports/phase4fu_prompt_attribution.json"
+    }
+  ],
+  "contributing_factor_subtype_specific": {
+    "code": "FU-B",
+    "name": "Context assembly / ordering (部分的・サブタイプ限定)",
+    "evidence": "Stage C(context_structure)で、実在エンティティに対する物語的脚色型捏造(FU-D01/Q6)は、entity-groupedによる並べ替え(C3)で「×・?・×」の発生を防げた。しかし完全に架空の固有名詞に対する誤紐付け型捏造(FU-B05/RT-A・RT-B)は、C1〜C5のいずれの構造化条件を試しても解消されなかった。",
+    "conclusion": "context構造の調整は「実在エンティティの物語的脚色」サブタイプには有効な緩和策になりうるが、「完全に架空の固有名詞への誤紐付け」サブタイプには無力である。単独の解決策にはなり得ない。"
+  },
+  "contributing_factor_substrate": {
+    "codes": ["FU-D", "FU-E"],
+    "name": "Adapter/Base相互作用（原因ではなく安全動作の抑制）",
+    "evidence": "Stage E(adapter_attribution)で、Phase4ZGアダプタは6probe全てで一貫して確信的・非hedge的に誤紐付け/捏造を行った(hedgeなし率100%)。一方Base Qwen2.5は結果が二極化した: Q6(FU-D01)とSGG/RT(FU-D05)ではPhase4ZGよりもさらに悪質な捏造(架空の英語略称「Great Game」「Super Great Game」等の創作、パラメトリック知識からの一般論への逸脱)を見せたが、モードα/β(FU-B03)とRT-C/RT-D(FU-F03)では明示的に「情報が含まれていません」「教えていただけますか」と正しく情報不足を申告し、AT-F(FU-A03)でも「登録データベース内に該当する情報が見つかりませんでした」と明示的に断った上で「類推できる範囲」であることを明示して回答した。",
+    "mechanism": "Phase4ZGは、Phase4ZN〜ZPで意図的に排除した『hedge intrusion』(小雑談での不要な断り文句)の反動として、RAG事実確認クエリにおいても本来必要なhedge/clarification-seeking行動まで一緒に抑制してしまった可能性が高い。Base Qwenは(捏造の質・量ともに不安定ではあるが)一部のケースで自発的に『分からないので聞き返す』『断った上で類推と明示する』という、Phase4ZGが失っている安全弁を保持していた。",
+    "conclusion": "アダプタは捏造そのものの『原因』ではない(Base単体でも同等以上に悪質な捏造を起こす)。しかし、アダプタの性格・口調の学習は、Baseが時折発揮する適切な留保・確認要求の動作を体系的に抑制しており、これは意図しない副作用として今後のペルソナ再学習で考慮すべき点である。",
+    "artifact": "training/riru/reports/phase4fu_adapter_attribution.json"
+  },
+  "phantom_entity_misattribution_pattern": {
+    "description": "実在しない固有名詞ペア(X-A/X-B型)を問うクエリ8件中5件(AT-F, モードα/β, RT-A/B, RT-C/D)で、無関係な実在チャンクをその固有名詞の説明であるかのように誤紐付けした。残り3件(AT-A/AT-B, CZ-A/CZ-B, モードγ/δ)は正しく情報不足を申告しており、発生は非決定的だが高頻度(統計的にはStage E/Gで再現性を確認済み: 同一probeへの複数回のgreedy/sampling再試行でも挙動は一貫していた)。"
+  },
+  "sgg_gg_junbi_chu_conflation_pattern": {
+    "description": "SGGについて問われる際、GG準備中固有の記述(「×・?・?」を含む)がSGGの定義であるかのように誤って紐付けられる現象が3つのprobe(FU-D01, FU-D03, FU-D05)で再現された。SUFFICIENT/PARTIALいずれの検索十分性でも発生しており、これは検索の量ではなく、近縁だが別個であるべきエンティティ(GG/GG準備中/SGG)をモデルが明確に区別できていないことを示唆する。"
+  },
+  "recommended_next_phase_direction": {
+    "primary_recommendation": "Stage D/Fの証拠に基づき、product層での2つの並行対策を次フェーズで検証すべき: (1) 本番RAG prompt(config/prompts/system.jinja2)に、複数context統合時の反創作・反誤紐付け専用の明示的指示(本フェーズのphase4fu_minimal_grounding_prompt.txtがベースになりうる)を追加するA/Bテスト。(2) 「初心者向けに説明して」のような複数断片統合を要求する質問スタイルに対して、生成後に自己検証(self-critique)ステップを挟む、または回答をより保守的な断片列挙形式に制約するUXレベルの対策の検討。",
+    "secondary_recommendation": "Phase4ZGの再学習は本フェーズの結果からは正当化されない(FU-Dは主要因ではない)。ただし、将来的にペルソナ再学習を行う場合は、『hedge intrusion除去』と『事実確認での適切な留保』を両立させる訓練データ設計(小雑談ではhedgeなし、事実確認では不確実性の明示、を文脈で切り替えられるようにする)を検討課題として記録しておく。",
+    "explicitly_not_recommended": "GGUF/Q8/Q5量子化の実施(引き続き保留)。単一のcontext構造変更のみでの解決(FU-Bはサブタイプ限定的効果しかないため不十分)。"
+  }
+}

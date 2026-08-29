@@ -1,0 +1,36 @@
+{
+  "purpose": "Section5 RAG Critical Gate『fabricated factual claim = 0』の監査。Phase4ZS/ZTの既存監査は『unsupported numeric』(数値)に限定されており、数値を伴わない構造的・関係的な捏造は対象外だった。本フェーズはこのgapを埋める。",
+  "trigger": "phase4fc_multiturn_results.json のMT-05 turn1(「GGとSGGの違いを初心者向けに説明して」)で、Policy C3がRAG経路へ正しくcontextを注入したにもかかわらず、応答が明らかにcontextにない具体的な記号列を作出しているのを発見した。",
+  "finding_1_mt05_q6": {
+    "probe": "MT-05 turn1 / Phase4ZS Q6と同一query",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+    "actual_retrieved_context": "[準備中解説] GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。\n[効果] LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆\n[SGGゲーム数抽選概要] SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。100Gが選ばれた場合は継続ストックを1つ獲得できる。\n[入力タイミング] SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで\n[確定役演出解説] 通常時・GG中ともにフリーズ経由の割合が一番高い。\n[なし] 枠LEDが点灯しない GOD揃い※GG本前兆中はハズレもあり-",
+    "assessment": "捏造を確認。contextは『GG準備中開始から「×・?・?」が出るまでの間』としか述べていないが、応答は「GG本前兆は「×・?・?」の順番、GG本当選は「×・?・×」の順番」という、context中に一切存在しない対比構造と記号列(「×・?・×」)を新規に作出している。また「GG本前兆→GG本前兆→GG本前兆→GG本当選」という段階進行の物語も、contextには存在しない。",
+    "reproducibility": "Phase4ZS/ZTの複数箇所(phase4zs_q6_reproduction.jsonのgreedy[0]含む)で同一query・同一context・greedy decodingの下、byte-for-byte同一の応答が確認された。100%再現する、モデルの決定的な挙動である。",
+    "why_not_caught_earlier": "Phase4ZS/ZTのStage F/自動監査は『unsupported numeric』(パーセント・分数等の数値パターン)のみを対象としており、この応答には該当する数値パターンが一切ない(「100G」等のゲーム数はcontext中に実在する)ため、既存の自動監査を素通りしていた。CASE ZS-D(『実contextがあればfabricationはほぼ発生しない』)という結論自体は、その評価対象(numeric限定)においては正しいが、fabricationという現象全体をカバーしていなかった。"
+  },
+  "finding_2_zs05_rt_ab": {
+    "probe": "ZS-05 (Phase4ZS diagnostic probe)",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるよ。",
+    "actual_retrieved_context_summary": "取得された6件のchunkの中に「RT-A」「RT-B」という語は一切出現しない(LED点灯パターン・天井突入条件・レベル関連の一般的な情報のみ)。",
+    "assessment": "重大な捏造。retrievalが該当する情報を一切見つけられなかったにもかかわらず、応答は無関係なLED点灯パターン情報を「RT-A」「RT-B」という、ユーザーが尋ねた(おそらく実在しない、または未収録の)区分に恣意的に割り当てて回答した。同じ状況の類似probe(ZS-04「AT-AとAT-Bはどう違うの？」)では『登録データに情報は見つからないんだ』と正しく回答を保留しており、モデルの挙動が状況によって一貫しないことを示す。"
+  },
+  "counter_examples_well_grounded": [
+    {"probe": "ZS-13", "prompt": "枠LED点灯パターンをまとめて教えて",
+     "assessment": "応答の全ての主張がcontextと正確に一致。fabricationなし、優れた要約。"},
+    {"probe": "ZS-06", "prompt": "銀河系ボーナスとガイアナビの関係を説明して",
+     "assessment": "応答はcontextとほぼ一致(白7がガイアナビ時に青7/黄7の代用になる、という主張はcontextとほぼ逐語一致)。fabricationなし。"},
+    {"probe": "ZS-04", "prompt": "AT-AとAT-Bはどう違うの？",
+     "assessment": "情報が見つからないことを正直に回答。理想的な挙動。"},
+    {"probe": "RAG50 (50probe全件)", "assessment": "Phase4ZO/ZT時点の監査で、直接的な事実質問(機械割・確率・天井等)に対してはfabrication/unsupported numericとも0件。"}
+  ],
+  "pattern_characterization": {
+    "risk_concentration": "捏造は『直接的な単一事実の問い合わせ』(例: GODの機械割は？)ではほぼ発生せず、『比較・要約・初心者向け説明』のような、複数のcontext断片を統合・関連付けて語る必要がある質問スタイルに集中している(Phase4ZSのcategory F/G/H相当)。",
+    "mechanism_1_narrative_embellishment": "関連するcontextが実在する場合でも、複数の断片を滑らかな物語として繋ぐ過程で、context中に存在しない具体的な接続情報(記号列・段階構造等)を創作することがある(MT-05/Q6のケース)。",
+    "mechanism_2_irrelevant_context_relabeling": "問い合わせた特定の名称(RT-A/RT-B等)にretrievalが全くヒットしなかった場合、無関係なcontext断片をその名称に誤って割り当てて回答することがある(ZS-05のケース)。同種の状況でも、確実に情報がないと正直に答える場合もある(ZS-04)ため、挙動は非決定的。",
+    "not_affected": "直接的で narrow な事実質問(RAG50が代表)は、既存の複数フェーズの監査を通じて一貫してfabrication=0を維持している。"
+  },
+  "gate_impact": "Section5 Critical Gate『fabricated factual claim = 0』は達成されていない。少なくとも2件の明確な捏造(MT-05/Q6、ZS-05)を確認した。"
+}

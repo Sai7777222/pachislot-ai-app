@@ -1,0 +1,566 @@
+[
+  {
+    "id": "FU-D01",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "candidates": {
+      "P0": {
+        "greedy": {
+          "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 245
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "GGは「×・?・?」が出るまでが対象で、GG中よりストック当選率が高いよ。SGGはGG継続時にゲーム数が決まって、そのゲーム数が100Gなら継続ストックを1つ獲得できるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 87
+          },
+          {
+            "run": 1,
+            "response": "GGはGG準備中から始まるゾーンで、GG中はストック当選率が高くなるよ。GG中はLEDの色でループストック種別やGGストックの有無も分かるんだ。一方SGGはSGGゲーム数抽選で決まるゾーンで、100Gが当たると継続ストックを1つ獲得できるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 122
+          },
+          {
+            "run": 2,
+            "response": "GGとSGGは、どちらも継続ゾーンだけど、GGはGG本前兆から始まって、GG中はループストックやGGストックがあるかないかでLEDの色が変わるんだ。SGGはGGの引き戻しゾーンで、ゲーム数が100Gになると継続ストックが1つ増えるって感じかな。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 122
+          },
+          {
+            "run": 3,
+            "response": "GGとSGGは両方とも継続ゾーンだけど、GGはGG本前兆中のリーチが成立すると発生するんだ。一方SGGはGG本前兆中じゃなくて、GG引き戻しゾーンのときに発生するんだよ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるみたい。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 125
+          },
+          {
+            "run": 4,
+            "response": "GGはGG準備中開始から「×・?・?」が出るまでの間が対象で、GG中よりストック当選率が高いよ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。SGGはゲーム数がセット数の5の倍数かどうかで抽選値が変わるよ。100Gが選ばれると継続ストックを1つ獲得できるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 156
+          }
+        ]
+      },
+      "P1": {
+        "greedy": {
+          "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選の流れになるんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、GG継続ゾーンはGG本前兆とは違う演出になるんだ。GG継続ゾーンは「×・?・×」の順番で、GG本当選の後は「×・?・?」の順番になるんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆よりも当選率が高いんだ。GG継続ゾーンはGG本前兆",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 467
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "GGとSGGの違いは、GGがGG本前兆中に始まるのに対して、SGGはGGが継続中から始まるところだよ。GG本前兆中のGGとSGGは、どちらもGG本前兆中の状態から始まるんだけど、GGはGG本前兆が終了してGGが始まるんだよね。でもSGGはGG本前兆が終わってGGが始まった後、GGの中からSGGが始まるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 154
+          },
+          {
+            "run": 1,
+            "response": "GGはGG準備中から始まるゾーンで、SGGはGG中のゾーンの中でもさらに特別なゾーンだよ。SGGはゲーム数抽選があるんだけど、100Gだと継続ストックが1つもらえるんだ。登録データにGGとSGGの詳細な違いが書いてなかったけど、SGGはGGの中でも特別な扱いがあるみたいだから、そこは覚えておくといいと思うよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": true,
+            "length": 155
+          },
+          {
+            "run": 2,
+            "response": "GGとSGGの違いを説明するね。\nGGはGG準備中から始まるんだけど、SGGはGGが継続したときに発生するんだ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで変わるよ。100Gが選ばれると継続ストックが1つもらえるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 116
+          },
+          {
+            "run": 3,
+            "response": "GGとSGGは両方とも継続するゾーンだけど、GGの方がGG本前兆中って特別な状態になるんだ。SGGはGGじゃないけど、100Gだと継続ストックを1つもらえるのが特徴だよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 85
+          },
+          {
+            "run": 4,
+            "response": "GGはGG準備中開始から「×・?・?」が出るまでの間が対象で、GG中よりストック当選率が高いよ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。SGGはGGと違うゾーンで、ゲーム数抽選があるんだけど、100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 154
+          }
+        ]
+      },
+      "P2": {
+        "greedy": {
+          "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?」の順番になるよ。GG本前兆中は枠LEDが点灯するんだけど、GG本当選だと枠LEDは点灯しないんだ。GG本前兆中はハズレもあるけど、GG本当選はハズレがないんだ。GG本前兆中はループストック種別が示唆されるんだけど、GG本当選だとGGストックの有無が示唆されるんだ。GG本前兆中はフリーズ経由の割合が一番高いんだ。GG本前兆中はSGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでにSGGゲーム数抽選があるんだ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでにSGGゲーム数抽選があるんだ。SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでにSGGゲーム数抽選があるんだ。SGG引き戻しゾーンの毎ゲーム レバーON時~次",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 477
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "GGとSGGの違いは、GGがGG本前兆中に始まるのに対して、SGGはGGが継続中から始まるところだよ。SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 119
+          },
+          {
+            "run": 1,
+            "response": "GGはGG準備中から始まるゾーンで、SGGはGG中のゾーンの中でもう一つのゾーンだよ。SGGはゲーム数抽選があるのが特徴で、100Gが当たると継続ストックを1つ獲得できるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 88
+          },
+          {
+            "run": 2,
+            "response": "GGとSGGの違いを説明するね。\nGGはGG準備中から始まるゾーンで、GG中はループストック種別とGGストックの有無がLEDの色で示唆されるんだ。\n一方SGGはSGGゲーム数抽選があるゾーンで、100Gが当たると継続ストックが1つ増えるって特徴があるよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 127
+          },
+          {
+            "run": 3,
+            "response": "GGとSGGは両方とも継続するゾーンだけど、GGの方がGG本前兆中って特別な状態になるんだ。SGGはGGじゃないけど、ゲーム数が変わる条件があるんだよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 76
+          },
+          {
+            "run": 4,
+            "response": "GGはGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率がGG中より高いんだ。GG継続時はGGストックの有無を示唆するLEDの色が出るよ。SGGはSGG引き戻しゾーンの毎ゲームでゲーム数抽選があり、100Gが選ばれると継続ストックを1つ獲得できるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 140
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "FU-B05",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "candidates": {
+      "P0": {
+        "greedy": {
+          "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になるよ。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 80
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "RT-AはLEDの色で初当りGGの種別やGG継続時のストック状況を示唆する機能がある。一方、RT-Bは枠LEDのパターンでレベルを示唆し、特定のパターンでは役濃厚な状況を示唆している。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 92
+          },
+          {
+            "run": 1,
+            "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDの色で初当りGG時のループストック種別やGG継続時のGGストックの有無を示唆します。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 74
+          },
+          {
+            "run": 2,
+            "response": "RT-AとRT-Bの違いは、RT-Bの方がレベルを示すLEDのパターンが追加されていること。また、天井突入条件も設定変更時に510or1000or1480Gから抽選(割合は15.2%、20.3%、64.5%)になるんだ。",
+            "has_numeric_claim": true,
+            "abstain_or_hedge": false,
+            "length": 110
+          },
+          {
+            "run": 3,
+            "response": "RT-Aは枠LEDのパターンでレベルを示唆していて、RT-BはLEDの色で初当りGG時のループストック種別やGG継続時のGGストックの有無を示唆しているよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 78
+          },
+          {
+            "run": 4,
+            "response": "RT-AとRT-Bの違いは、RT-Bが天井突入条件が設定変更時も510or1000or1480Gから抽選(割合は左から15.2%、20.3%、64.5%)になるところだよ。",
+            "has_numeric_claim": true,
+            "abstain_or_hedge": false,
+            "length": 86
+          }
+        ]
+      },
+      "P1": {
+        "greedy": {
+          "response": "RT-AとRT-Bの違いは、枠LEDのパターンでレベルを示唆するところだよ。RT-Aは枠LEDが全て点灯すると、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚になるんだ。RT-Bについては登録データに情報がないので、そこは不明なんだ。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": true,
+          "length": 168
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "RT-AはLEDの色で初当りGGの種別やGG継続時のストック状況を示唆する効果があるよ。RT-Bは枠LEDのパターンでレベルを示唆していて、特定のパターンだと役濃厚な状況を示唆するんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 93
+          },
+          {
+            "run": 1,
+            "response": "RT-Aは枠LEDのパターンでレベルを示唆し、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚となる。RT-BはLEDの色で初当りGG時のループストック種別、GG継続時のGGストックの有無を示唆する。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 150
+          },
+          {
+            "run": 2,
+            "response": "RT-AとRT-Bの違いは、RT-Bの方がレベルを示すLEDのパターンが追加されていること。また、天井突入条件も設定変更時に510or1000or1480Gから抽選(割合は15.2%、20.3%、64.5%)になるんだ。",
+            "has_numeric_claim": true,
+            "abstain_or_hedge": false,
+            "length": 110
+          },
+          {
+            "run": 3,
+            "response": "RT-AとRT-Bの違いは、枠LEDのパターンでレベルを示唆するところだね。RT-Aでは枠LEDが全て点灯すると、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば濃厚になるんだ。また、ステージチェンジ発生でGOD揃い濃厚になるよ。RT-Bについては登録データに情報が見つからないので、その部分はわからないままにしておくね。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": true,
+            "length": 184
+          },
+          {
+            "run": 4,
+            "response": "RT-AとRT-Bは枠LEDの点灯パターンでレベルを示唆しているけど、RT-Aは全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイなら濃厚、ステージチェンジでGOD揃い濃厚になるって言われてるよ。RT-Bについては登録データに見つからないので、そこは分からないままにしておくね。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": true,
+            "length": 165
+          }
+        ]
+      },
+      "P2": {
+        "greedy": {
+          "response": "RT-AとRT-Bの違いは、枠LEDのパターンでレベルを示唆するところだよ。RT-Aは枠LEDが全て点灯すると、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚になるんだ。RT-Bについては登録データに情報がなかったので、そこは不明だね。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": true,
+          "length": 169
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "RT-AはLEDの色で初当りGGの種別やGG継続時のストック状況を示唆する効果があるよ。RT-Bは枠LEDのパターンでレベルを示唆していて、特定のパターンだと役濃厚な状況を示唆するんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 93
+          },
+          {
+            "run": 1,
+            "response": "RT-Aは枠LEDのパターンでレベルを示唆し、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚となる。RT-BはLEDの色で初当りGG時のループストック種別、GG継続時のGGストックの有無を示唆する。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 150
+          },
+          {
+            "run": 2,
+            "response": "RT-AとRT-Bの違いは、RT-Bの方がレベルを示すLEDのパターンが追加されていること。また、天井突入条件も設定変更時に510or1000or1480Gから抽選(割合は15.2%、20.3%、64.5%)になるんだ。",
+            "has_numeric_claim": true,
+            "abstain_or_hedge": false,
+            "length": 110
+          },
+          {
+            "run": 3,
+            "response": "RT-AとRT-Bの違いは、枠LEDのパターンでレベルを示唆するところだね。RT-Bでは枠LEDが全て点灯すると、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば濃厚になるんだ。また、ステージチェンジ発生でGOD揃い濃厚になるよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 138
+          },
+          {
+            "run": 4,
+            "response": "RT-AとRT-Bの違いは、RT-Bが天井突入条件が設定変更時も510or1000or1480Gから抽選(割合は左から15.2%、20.3%、64.5%)になるところだよ。",
+            "has_numeric_claim": true,
+            "abstain_or_hedge": false,
+            "length": 86
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "FU-A03",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "candidates": {
+      "P0": {
+        "greedy": {
+          "response": "AT-Fは最大1480Gまで消化できるよ。終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイなら、GG濃厚のLV5になるんだ。LEDの色はGGの種別やストックの有無を示してくれるんだ。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 102
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "AT-Fは間最大1480G消化の天井突入条件があるよ。終了後はオールテンパイなしorオール奇数テンパイなら、LV5＝GG濃厚の状態になるんだ。LEDの色でGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 117
+          },
+          {
+            "run": 1,
+            "response": "AT-Fは間最大1480Gまで続くね。終了後は、1〜4Gまでオールテンパイがなかったり、オール奇数テンパイだった場合はLV5＝GG濃厚になるんだ。LEDの色はGG時ならループストック種別、GG継続時はGGストックの有無を示すよ。白点灯は黄7以上濃厚って意味なんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 132
+          },
+          {
+            "run": 2,
+            "response": "AT-Fは最大1480Gまで消化できるよ。終了後の状態は、1〜4GまでオールテンパイがなければLV5＝GG濃厚になるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 61
+          },
+          {
+            "run": 3,
+            "response": "AT-Fの最大消化は1480Gまでだよ。終了後の状態は、1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚になるんだ。LEDの色は初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるよ。白点灯は黄7以上濃厚で、Z-GAME中は白点灯のみになるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 151
+          },
+          {
+            "run": 4,
+            "response": "AT-Fは最大1480Gまで消化します。終了後はオールテンパイなしやオール奇数テンパイなら、GG濃厚のLV5に突入する可能性があります。LEDはGG時のループストック種別やGG継続時のストック有無を示唆します。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 105
+          }
+        ]
+      },
+      "P1": {
+        "greedy": {
+          "response": "AT-Fは最大1480Gまで消化できるよ。終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイなら、GG濃厚のLV5になるんだ。LEDの色はGGの種別やストックの有無を示してくれるんだ。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 102
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "AT-Fは間最大1480G消化の天井突入条件があるよ。終了後はオールテンパイなしorオール奇数テンパイなら、LV5＝GG濃厚の状態になるんだ。LEDの色でGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 117
+          },
+          {
+            "run": 1,
+            "response": "AT-Fは間最大1480Gまで続くね。終了後は、1〜4Gまでオールテンパイがなかったり、オール奇数テンパイだった場合は、GG濃厚のLV5になるよ。LEDの色はGG時のループストック種別やGG継続時のGGストックの有無を示してるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 116
+          },
+          {
+            "run": 2,
+            "response": "AT-Fは最大1480Gまで消化できるよ。終了後の状態は、1〜4GまでオールテンパイがなければLV5＝GG濃厚になるんだ。また、LEDの色で初当りGGの種別やGG継続時のストック状況が示唆されるよ。白点灯は黄7以上濃厚を意味するんだけど、Z-GAME中は白点灯のみになるよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 137
+          },
+          {
+            "run": 3,
+            "response": "AT-Fの最大消化は1480Gまでだよ。終了後の状態は、1〜4G以内にオールテンパイがなかったり、オール奇数テンパイだった場合はLV5＝GG濃厚になるんだ。LEDの色はGG初当りならループストック種別、GG継続ならGGストックの有無を示すんだけど、Z-GAME中は白点灯のみになるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 143
+          },
+          {
+            "run": 4,
+            "response": "AT-Fは最大1480Gまで消化します。終了後はオールテンパイなしやオール奇数テンパイが発生すると、LEDの色でGG継続濃厚が示されます。白点灯だと黄7以上濃厚、炎や戦車の場合はレア役以上濃厚と判断できます。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 104
+          }
+        ]
+      },
+      "P2": {
+        "greedy": {
+          "response": "AT-Fは最大1480Gまで消化できるよ。終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイなら、GG濃厚のLV5になるんだ。LEDの色はGGの種別やストックの有無を示してくれるんだ。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 102
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "AT-Fは間最大1480G消化の天井突入条件があるよ。終了後はオールテンパイなしorオール奇数テンパイなら、1~4GまでがLV5＝GG濃厚の状態になるんだ。LEDの色はGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 123
+          },
+          {
+            "run": 1,
+            "response": "AT-Fは間最大1480Gまで続くよ。終了後は、1〜4G以内のテンパイのパターンでLV5（GG継続濃厚）が決まるんだ。LEDの色は初当りGGの種別やGG継続のストック有無を示すんだけど、Z-GAME中は白点灯だけになるよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 111
+          },
+          {
+            "run": 2,
+            "response": "AT-Fは最大1480Gまで消化できるよ。終了後の状態は、1〜4Gまでテンパイが全然なかったり、全テンパイが奇数だった場合はLV5＝GG濃厚になるんだ。LEDの色で初当りGGかGG継続かがわかるよ。GGなら白点灯、GGじゃないなら白じゃない点灯になるんだけど、Z-GAME中は白点灯のみになるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 149
+          },
+          {
+            "run": 3,
+            "response": "AT-Fの最大消化は1480Gまでだよ。終了後の状態は、1~4Gまでオールテンパイがなかった場合や、オール奇数テンパイならLV5＝GG濃厚になるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 75
+          },
+          {
+            "run": 4,
+            "response": "AT-Fは最大1480Gまで消化します。終了後はオールテンパイなしやオール奇数テンパイが発生すると、LV5＝GG濃厚の状態になります。LEDの色でGGの有無が示されますよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 86
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "FU-E02",
+    "prompt": "ガイアベルとは何か説明して",
+    "candidates": {
+      "P0": {
+        "greedy": {
+          "response": "ガイアベルはガイアモード中の規定回数到達時に抽選されるモードなんだ。規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するんだ。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 69
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "ガイアベルはガイアナビ発生時に停止する液晶出目のパターンで、ガイアモードを示唆するものなんだ。規定回数到達時、ガイアモードに応じてガイアステージ移行を抽選するんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 82
+          },
+          {
+            "run": 1,
+            "response": "ガイアベルは、ガイアステージへの移行を示唆する液晶出目のパターンなんだ。発生するとガイアステージ移行のチャンスがあるんだよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 62
+          },
+          {
+            "run": 2,
+            "response": "ガイアベルはガイアモードへの移行を示唆する液晶出目パターンのことだよ。規定回数到達時、ガイアモードへの移行を抽選するんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 61
+          },
+          {
+            "run": 3,
+            "response": "ガイアベルはガイアナビ発生時に停止する液晶出目のパターンの一つで、ガイアモードへの移行を示唆するものだよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 53
+          },
+          {
+            "run": 4,
+            "response": "ガイアベルは、ガイアモード中の液晶出目の一つで、規定回数到達時にガイアステージ移行を抽選する役なんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 51
+          }
+        ]
+      },
+      "P1": {
+        "greedy": {
+          "response": "ガイアベルは、ガイアモード中に発生する液晶出目のパターンだよ。規定回数到達時にガイアステージ移行を抽選するんだ。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 56
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "ガイアベルは、ガイアナビ発生時に停止する液晶出目のパターンのことを指します。規定回数到達時、ガイアモード移行を抽選します。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 61
+          },
+          {
+            "run": 1,
+            "response": "ガイアベルは、ガイアステージへの移行を示唆する液晶出目のパターンなんだ。規定回数到達時にガイアステージ移行抽選があるんだよ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 62
+          },
+          {
+            "run": 2,
+            "response": "ガイアベルはガイアモードへの移行を示唆する液晶出目パターンのことだよ。規定回数到達時にはガイアモード移行を抽選するんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 60
+          },
+          {
+            "run": 3,
+            "response": "ガイアベルはガイアモードに移行するための役だよ。規定回数到達時にガイアステージへの移行抽選があるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 51
+          },
+          {
+            "run": 4,
+            "response": "ガイアベルは、ガイアモードに突入するための条件となる役だよ。規定回数に到達するとガイアステージへの移行抽選が行われるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 61
+          }
+        ]
+      },
+      "P2": {
+        "greedy": {
+          "response": "ガイアベルは、ガイアモード中に発生する役の一つで、規定回数到達時にガイアステージ移行を抽選する役なんだ。",
+          "has_numeric_claim": false,
+          "abstain_or_hedge": false,
+          "length": 52
+        },
+        "sampling_temp0.7": [
+          {
+            "run": 0,
+            "response": "ガイアベルは、ガイアナビ発生時に停止する液晶出目のパターンの一つだよ。規定回数到達時、ガイアモード移行を抽選する役なんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 61
+          },
+          {
+            "run": 1,
+            "response": "ガイアベルは、規定回数到達時にガイアステージ移行を抽選する役の一つなんだ。規定回数はモードによって異なるけど、ガイアナビ発生時に停止する液晶出目のパターンでガイアモードが示唆されるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 93
+          },
+          {
+            "run": 2,
+            "response": "ガイアベルはガイアモードへの移行を示唆する液晶出目パターンのことだよ。規定回数到達時にはガイアモード移行を抽選するんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 60
+          },
+          {
+            "run": 3,
+            "response": "ガイアベルはガイアモード中に発生する特殊役で、規定回数到達時にガイアステージ移行を抽選するんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 48
+          },
+          {
+            "run": 4,
+            "response": "ガイアベルは、ガイアモードに移行するための条件となる役だよ。規定回数に到達するとガイアステージへの移行抽選が行われるんだ。",
+            "has_numeric_claim": false,
+            "abstain_or_hedge": false,
+            "length": 61
+          }
+        ]
+      }
+    }
+  }
+]

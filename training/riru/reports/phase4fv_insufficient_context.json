@@ -1,0 +1,162 @@
+[
+  {
+    "id": "FU-A02",
+    "prompt": "天井は何ゲームですか？設定変更時と通常時それぞれ振り分けを教えて",
+    "run": 0,
+    "response": "天井ゲーム数は3種類あるみたいだけど、設定変更時と通常時の振り分けについては登録データに情報がなかったんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-A02",
+    "prompt": "天井は何ゲームですか？設定変更時と通常時それぞれ振り分けを教えて",
+    "run": 1,
+    "response": "天井ゲーム数は3種類あるよ。設定変更時と通常時の振り分けは登録データに見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-A03",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "run": 0,
+    "response": "AT-Fは最大1480Gまで消化できるよ。終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイなら、GG濃厚のLV5になるんだ。LEDの色はGGの種別やストックの有無を示してくれるんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false
+  },
+  {
+    "id": "FU-A03",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "run": 1,
+    "response": "AT-Fは間最大1480Gまで続くよ。終了後は、1〜4G以内のテンパイのパターンでLV5（GG継続濃厚）が決まるんだ。LEDの色は初当りGGの種別やGG継続のストック有無を示すんだけど、Z-GAME中は白点灯だけになるよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false
+  },
+  {
+    "id": "FU-A05",
+    "prompt": "設定1と設定6の機械割の差はどれくらい？",
+    "run": 0,
+    "response": "登録データに設定1と設定6の機械割の差は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-A05",
+    "prompt": "設定1と設定6の機械割の差はどれくらい？",
+    "run": 1,
+    "response": "登録データに設定1と設定6の機械割の差についての情報は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-B03",
+    "prompt": "モードαとモードβの違いを簡単に教えて",
+    "run": 0,
+    "response": "登録データにモードαとモードβの違いについての情報は見つかりませんでした。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-B03",
+    "prompt": "モードαとモードβの違いを簡単に教えて",
+    "run": 1,
+    "response": "モードαとモードβについては、登録データに違いの情報が見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-B04",
+    "prompt": "AT-AとAT-Bはどう違うの？",
+    "run": 0,
+    "response": "登録データにAT-AとAT-Bの違いについての情報は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-B04",
+    "prompt": "AT-AとAT-Bはどう違うの？",
+    "run": 1,
+    "response": "登録データにAT-AとAT-Bの違いについての情報は見つからないみたい。それぞれの違いについて具体的に説明できなくてごめんね。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-B05",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "run": 0,
+    "response": "RT-AとRT-Bの違いは、枠LEDのパターンでレベルを示唆するところだよ。RT-Aは枠LEDが全て点灯すると、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚になるんだ。RT-Bについては登録データに情報がなかったので、そこは不明だね。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-B05",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "run": 1,
+    "response": "RT-Aは枠LEDのパターンでレベルを示唆し、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚となる。RT-BはLEDの色で初当りGG時のループストック種別、GG継続時のGGストックの有無を示唆する。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false
+  },
+  {
+    "id": "FU-C03",
+    "prompt": "この機種のボーナスの種類を要約して",
+    "run": 0,
+    "response": "登録データにボーナスの種類については見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-C03",
+    "prompt": "この機種のボーナスの種類を要約して",
+    "run": 1,
+    "response": "登録データにボーナスの種類についての情報は見つからないみたいだね。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-D05",
+    "prompt": "SGGとRTの関係を初心者向けに教えて",
+    "run": 0,
+    "response": "SGGとRTは直接関係ないみたい。SGGはGG準備中から始まるゾーンで、GG前兆以上濃厚な状況を示すんだ。登録データにはRTとの関連情報はなかったよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-D05",
+    "prompt": "SGGとRTの関係を初心者向けに教えて",
+    "run": 1,
+    "response": "SGGはGG準備中から始まるゾーンで、GG前兆以上の濃厚な状況が続くよ。GG準備中は「×・?・?」が出る間が対象で、GG中より当選率が高いんだ。ここで雷雨が発生すると液晶出目の奇数テンパイ以外ならGG前兆以上濃厚になるから、チャンスだね。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false
+  },
+  {
+    "id": "FU-F01",
+    "prompt": "GGとガイアステージ、どっちが出玉が多い？",
+    "run": 0,
+    "response": "登録データにGGとガイアステージの出玉を直接比較できる情報は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-F01",
+    "prompt": "GGとガイアステージ、どっちが出玉が多い？",
+    "run": 1,
+    "response": "登録データにGGとガイアステージの出玉を直接比較した情報は見つからないんだ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  },
+  {
+    "id": "FU-F02",
+    "prompt": "GGとSGGどっちがお得か教えて",
+    "run": 0,
+    "response": "GG準備中の方が全体的にストック当選率が高いみたいだよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": false
+  },
+  {
+    "id": "FU-F02",
+    "prompt": "GGとSGGどっちがお得か教えて",
+    "run": 1,
+    "response": "GGはフリーズ経由の割合が高いみたいね。SGGはゲーム数が100Gだと継続ストックを1つゲットできるんだ。登録データに両者の比較はなかったけど、どちらも期待値の高い演出なんだよ。",
+    "has_numeric_claim": false,
+    "abstain_or_hedge": true
+  }
+]

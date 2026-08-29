@@ -1,0 +1,16 @@
+{
+  "pytest_end": "233 passed, 1 warning (pre-existing httpx deprecation, unrelated)",
+  "pytest_unchanged_from_freeze": true,
+  "zg_adapter_hash_at_end": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+  "zg_adapter_hash_matches_freeze": true,
+  "git": {
+    "branch": "checkpoint/identity-closure-phase4zn-baseline",
+    "head": "8e0f7febb1ff690024c97a77742d9741e1ea9f5c",
+    "commits_made_during_evaluation": 0,
+    "note": "No commits/pushes were made after the checkpoint (Section2: Final Candidate freeze -- no patching during evaluation). New evaluation artifacts (phase4fc_*.json/.md, phase4fc_*.py, multiturn results) remain untracked; not included in this phase's checkpoint since they document the evaluation itself, produced after the freeze point."
+  },
+  "no_training_confirmation": "No training performed.",
+  "conservative_dispatch_policy_c3_unchanged": "Unmodified throughout evaluation (Section2 freeze).",
+  "production_prompt_rag_db_retriever_embedding_generation_config_unchanged": true,
+  "status": "COMPLETE"
+}

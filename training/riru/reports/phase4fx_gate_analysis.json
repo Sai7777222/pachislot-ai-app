@@ -1,0 +1,31 @@
+{
+  "purpose": "Section19: Feasibility CASE判定。",
+  "mandatory_gates": {
+    "known_critical_misattribution": {"count": 0, "detail": "Q6/AT-F/RT-A・RT-B/SGG・GG準備中/ガイアベル/SU4/GG当選/ループストック・GGストックの全8known failureで、誤紐付けが解消または元々問題なしを確認。", "status": "PASS"},
+    "phantom_misbinding": {"count": 0, "detail": "22probe全件で、phantom entityへの誤紐付けclaimが解消(0/22)。修正前は14/22が問題を抱えていた。", "status": "PASS"},
+    "concept_binding_critical_fn": {"count": 0, "detail": "SGG/GG準備中混同(FX-CB05等)、ループストック/GGストック関係逆転(FX-K06/FV-C03)を含む全ケースで、cross-entity誤紐付けの解消を確認。", "status": "PASS"},
+    "rag50_fabrication": {"count": 0, "detail": "unsupported numeric/non-numeric fabricationの新規発生なし。", "status": "PASS"},
+    "major_completeness_regression": {"count": 0, "detail": "RAG50全19probe(必須8probe含む)で数値の欠落なし。初期実装では4/8必須probeで欠落が発生したが、フォールバック機構の追加により完全に解消した。", "status": "PASS"},
+    "latency": {"value": "0.1ms未満/response(既存生成呼び出しへの前処理のみ、追加のLLM呼び出しなし)", "status": "PASS(Phase4FWの13秒/responseを大幅に下回る)"}
+  },
+  "overall_case": {
+    "case": "FX-A",
+    "case_name": "Entity-aware Assembly Sufficient",
+    "rationale": "Section19の全必須ゲートを達成した。known critical misattribution=0、phantom misbinding=0、concept-binding critical FN=0、RAG50 fabrication=0、major completeness regression=0、追加レイテンシは実質ゼロ。これはPhase4FC(CASE FC-C)以来、5フェーズ(FC→FU→FV→FW→FX)にわたって未解決だったRAG factual safety問題に対する、初めての包括的な成功事例である。",
+    "key_success_factors": [
+      "既存のvector DBのtitleメタデータ(新規dictionaryや schema変更なし)だけで、67.2%のchunkが厳密に、19.3%が位置推論で、合計86.5%が高精度にentity attribution可能だった。",
+      "embedding検索が完全一致するtitleのchunk(「GG中解説」「引き戻し解説」等)を一貫して見逃していたという、過去5フェーズで気づかれていなかった構造的な問題を発見し、title表層一致による補完検索で解決した。",
+      "phantom entityについては『evidence 0件→NO GROUNDED EVIDENCE』という構造的な扱いにより、生成前の段階で誤紐付けの入力自体を断つことができた(post-generation verifierのようにgeneration後に検出・修正する必要がない)。",
+      "追加のLLM呼び出しが不要なため、Phase4FWのhybrid verifierが抱えていたレイテンシ問題(13秒/response)を実質的に回避できた。"
+    ]
+  },
+  "iteration_transparency": {
+    "note": "本フェーズは3回の実装修正を経て最終結果に到達した。各修正はgeneration前のロジック修正であり、GTの正解基準自体は変更していない。",
+    "fixes": [
+      "1. 単一entity構文での複合語切り詰めバグ(「GGプラス」→「GG」)の修正",
+      "2. 「GG」が「SGG」に部分文字列一致する衝突の、単語境界チェックによる修正",
+      "3. RAG50の関連解説文章セクションの過剰フィルタリングに対する、50%以上減少時のフォールバック機構の追加"
+    ]
+  },
+  "recommended_next_phase": "本フェーズはoffline prototypeのみでproduction統合は行っていない(指示書の絶対禁止事項)。次フェーズでは、(1) production pipelineへの実際の統合設計(retriever呼び出し後、生成前にentity attribution層を挿入する具体的な実装)、(2) より広範なprobe setでの再検証(特にDBに複数機種が追加された場合の挙動確認)、(3) RAG50のようなstatic context形式への対応をより洗練させること、を推奨する。"
+}

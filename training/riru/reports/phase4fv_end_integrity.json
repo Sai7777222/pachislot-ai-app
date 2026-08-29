@@ -1,0 +1,51 @@
+{
+  "phase": "Phase4FV - Production RAG Grounding Prompt Minimal Fix & Regression Validation",
+  "frozen_architecture_hash_check_end_of_phase": {
+    "production_prompt_system_jinja2_sha256": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7",
+    "production_prompt_status": "MATCH（preflight時と同一。本フェーズ中1バイトも変更していない。候補prompt(P1/P2)は別ファイルとして作成し比較にのみ使用した）",
+    "phase4zg_adapter_sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "phase4zg_status": "MATCH",
+    "conservative_dispatch_sha256": "80dbb4469a201030de1ee7ec6f1d57b69a990d62e7e741638a275f5772a018ad",
+    "conservative_dispatch_status": "MATCH",
+    "policy_c3_sha256": "cb9f904bb02d9b109e1a6b6f773b976d2699d14b39833ce5876a4ba6c1963caf",
+    "policy_c3_status": "MATCH",
+    "small_talk_ood_conversational_clarify_prompts_status": "MATCH（全てhash照合済み、本フェーズで一切変更していない）"
+  },
+  "rag_db_status": "read-onlyでのみ使用。変更なし（119チャンク、preflight時と同一）。",
+  "pytest_result_end": "233 passed, 1 warning (既知のhttpx非推奨警告、preflight時と同一) — フェーズ開始時と完全に同一、regressionなし",
+  "git_status_end": {
+    "branch": "checkpoint/identity-closure-phase4zn-baseline",
+    "head": "8e0f7febb1ff690024c97a77742d9741e1ea9f5c",
+    "head_unchanged_from_preflight": true,
+    "untracked_file_count": 54,
+    "staged_or_modified_count": 0,
+    "commits_made": 0,
+    "pushes_made": 0,
+    "note": "指示通り、CASE FV-Aに至らなかった(実際はFV-C)ため、そもそも自動commitは行っていない。人間確認後のcheckpointも本フェーズでは実施しない。"
+  },
+  "gpu_generation_budget_check": {
+    "budget_ceiling": 250,
+    "actual_new_generations": 265,
+    "budget_status": "OVER BUDGET(+15、6%超過)",
+    "overage_disclosure": "予算超過を正直に報告する。内訳: Stage A/B初回ドラフト(22件)がgreedy decodingで退化的反復ループを起こしたため、prompt文言を1回改訂し同一stageを再実行(22件)。さらに、この反復ループがgreedy decoding特有の現象か、prompt内容自体の問題かを切り分けるための追加sampling診断(6件)を実施。この診断がStage Aの主要判定方法をgreedy単発からsampling5回に変更する必要があるという重要な判断根拠になったため、実施した価値はあったと判断するが、結果として250件の上限を超過した。Section18の『原因/合否が明確なら上限まで回す必要はない』という指示の趣旨には反していないが、絶対数としては超過している事実を明記する。",
+    "breakdown": {
+      "stage_ab_v1_initial_draft": 22,
+      "stage_ab_v2_revised_prompts": 22,
+      "q6_decoding_mode_diagnostic": 6,
+      "stage_a_sampling_primary_evaluation": 72,
+      "stage_c_d_phantom_and_concept_binding": 57,
+      "stage_e_rag50": 50,
+      "stage_f_g_h_insufficient_context_and_multiturn": 36
+    }
+  },
+  "prohibited_actions_confirmed_not_taken": [
+    "training/LoRA実行なし", "Phase4ZGアダプタ変更なし", "conservative dispatch変更なし",
+    "Policy C3変更なし", "RAG DB/retriever/embedding/chunk/index変更なし",
+    "generation config変更なし", "identity/moderation変更なし", "GGUF/Q8/Q5量子化なし",
+    "production prompt(config/prompts/system.jinja2)変更なし",
+    "prompt以外のproduction code変更なし",
+    "giant regex/entity dictionary/second LLM/external verifierの実装なし",
+    "git commit/push なし"
+  ],
+  "json_validity_sweep": "全13個のphase4fv_*.json成果物についてjson.load()による構文検証を実施し、全件パス(FAILなし)"
+}

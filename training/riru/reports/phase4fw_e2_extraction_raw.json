@@ -1,0 +1,538 @@
+[
+  {
+    "id": "FU-D01",
+    "raw_output": "[\n    {\"subject\": \"GG\", \"predicate\": \"GG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進む\"},\n    {\"subject\": \"GG本前兆\", \"predicate\": \"「×・?・?」の順番で進む\"},\n    {\"subject\": \"GG本当選\", \"predicate\": \"「×・?・×」の順番で進む\"},\n    {\"subject\": \"GG本当選の後\", \"predicate\": \"GG継続ゾーンが始まる\"},\n    {\"subject\": \"GG継続ゾーン\", \"predicate\": \"LEDの色でループストック種別やGGストックの有無が示唆される\"},\n    {\"subject\": \"SGG\", \"predicate\": \"GG本前兆の後にSGGゾーンが始まる\"},\n    {\"subject\": \"SGGゾーン\", \"predicate\": \"継続契機とセット数が5の倍数かどうかでゲーム数が変わる\"},\n    {\"subject\": \"100G\", \"predicate\": \"継続ストックが1つ増える\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "GG",
+        "predicate": "GG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進む"
+      },
+      {
+        "subject": "GG本前兆",
+        "predicate": "「×・?・?」の順番で進む"
+      },
+      {
+        "subject": "GG本当選",
+        "predicate": "「×・?・×」の順番で進む"
+      },
+      {
+        "subject": "GG本当選の後",
+        "predicate": "GG継続ゾーンが始まる"
+      },
+      {
+        "subject": "GG継続ゾーン",
+        "predicate": "LEDの色でループストック種別やGGストックの有無が示唆される"
+      },
+      {
+        "subject": "SGG",
+        "predicate": "GG本前兆の後にSGGゾーンが始まる"
+      },
+      {
+        "subject": "SGGゾーン",
+        "predicate": "継続契機とセット数が5の倍数かどうかでゲーム数が変わる"
+      },
+      {
+        "subject": "100G",
+        "predicate": "継続ストックが1つ増える"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 15.2951078414917
+  },
+  {
+    "id": "FU-B05",
+    "raw_output": "[\n    {\"subject\": \"RT-A\", \"predicate\": \"枠LEDのパターンでレベルを示唆する\"},\n    {\"subject\": \"RT-B\", \"predicate\": \"枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になる\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "RT-A",
+        "predicate": "枠LEDのパターンでレベルを示唆する"
+      },
+      {
+        "subject": "RT-B",
+        "predicate": "枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になる"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 5.003675222396851
+  },
+  {
+    "id": "FU-A03",
+    "raw_output": "[\n    {\"subject\": \"AT-F\", \"predicate\": \"最大1480Gまで消化できる\"},\n    {\"subject\": \"終了後1〜4Gまでオールテンパイでない場合\", \"predicate\": \"GG濃厚のLV5になる\"},\n    {\"subject\": \"終了後1〜4Gまでオール奇数テンパイの場合\", \"predicate\": \"GG濃厚のLV5になる\"},\n    {\"subject\": \"LEDの色\", \"predicate\": \"GGの種別やストックの有無を示す\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "AT-F",
+        "predicate": "最大1480Gまで消化できる"
+      },
+      {
+        "subject": "終了後1〜4Gまでオールテンパイでない場合",
+        "predicate": "GG濃厚のLV5になる"
+      },
+      {
+        "subject": "終了後1〜4Gまでオール奇数テンパイの場合",
+        "predicate": "GG濃厚のLV5になる"
+      },
+      {
+        "subject": "LEDの色",
+        "predicate": "GGの種別やストックの有無を示す"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 7.317646265029907
+  },
+  {
+    "id": "FU-E02",
+    "raw_output": "[{\"subject\": \"ガイアベル\", \"predicate\": \"ガイアモード中の規定回数到達時に抽選されるモードだ\"}, {\"subject\": \"規定回数到達時\", \"predicate\": \"ガイアモードに応じてガイアステージ移行を抽選する\"}]",
+    "parsed_claims": [
+      {
+        "subject": "ガイアベル",
+        "predicate": "ガイアモード中の規定回数到達時に抽選されるモードだ"
+      },
+      {
+        "subject": "規定回数到達時",
+        "predicate": "ガイアモードに応じてガイアステージ移行を抽選する"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.275297403335571
+  },
+  {
+    "id": "FV-P02",
+    "raw_output": "[{\"subject\": \"GGプラス\", \"predicate\": \"GG当選時に一定の確率でZ-ZONEを抽選する状態\"}, {\"subject\": \"GGプラス\", \"predicate\": \"成立役ごとの抽選だけでなく、小役履歴の抽選も優遇される\"}]",
+    "parsed_claims": [
+      {
+        "subject": "GGプラス",
+        "predicate": "GG当選時に一定の確率でZ-ZONEを抽選する状態"
+      },
+      {
+        "subject": "GGプラス",
+        "predicate": "成立役ごとの抽選だけでなく、小役履歴の抽選も優遇される"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.241933584213257
+  },
+  {
+    "id": "FV-P04",
+    "raw_output": "[\n    {\"subject\": \"ガイアステージMAX\", \"predicate\": \"ガイアベルの規定回数が3回以下になる\"},\n    {\"subject\": \"ガイアステージMAX\", \"predicate\": \"規定回数到達時のガイアステージ当選率が大幅にアップする\"},\n    {\"subject\": \"ループ率\", \"predicate\": \"75%\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "ガイアステージMAX",
+        "predicate": "ガイアベルの規定回数が3回以下になる"
+      },
+      {
+        "subject": "ガイアステージMAX",
+        "predicate": "規定回数到達時のガイアステージ当選率が大幅にアップする"
+      },
+      {
+        "subject": "ループ率",
+        "predicate": "75%"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 5.430876016616821
+  },
+  {
+    "id": "FV-P09",
+    "raw_output": "[{\"subject\": \"ガイアベルSP\", \"predicate\": \"ガイアベル規定回数到達時に抽選されるモードの一つ\"}]",
+    "parsed_claims": [
+      {
+        "subject": "ガイアベルSP",
+        "predicate": "ガイアベル規定回数到達時に抽選されるモードの一つ"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.178436756134033
+  },
+  {
+    "id": "FV-P13",
+    "raw_output": "[\n    {\"subject\": \"GG\", \"predicate\": \"内部状態の一つとして扱われている\"},\n    {\"subject\": \"モードE\", \"predicate\": \"内部状態の一つとして扱われている\"},\n    {\"subject\": \"GG\", \"predicate\": \"GG当選時に一定の確率で抽選されるもの\"},\n    {\"subject\": \"GG\", \"predicate\": \"設定に応じて当選率が変わる\"},\n    {\"subject\": \"モードE\", \"predicate\": \"GG中のGGストック当選率が変わる内部状態\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "GG",
+        "predicate": "内部状態の一つとして扱われている"
+      },
+      {
+        "subject": "モードE",
+        "predicate": "内部状態の一つとして扱われている"
+      },
+      {
+        "subject": "GG",
+        "predicate": "GG当選時に一定の確率で抽選されるもの"
+      },
+      {
+        "subject": "GG",
+        "predicate": "設定に応じて当選率が変わる"
+      },
+      {
+        "subject": "モードE",
+        "predicate": "GG中のGGストック当選率が変わる内部状態"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 7.936202526092529
+  },
+  {
+    "id": "FU-B03",
+    "raw_output": "[{\"subject\": \"モードαとモードβの違い\", \"predicate\": \"ガイアベル規定回数が変わる\"} , {\"subject\": \"モードαとモードβの違い\", \"predicate\": \"規定回数到達時のガイアステージ移行率が変わる\"}]",
+    "parsed_claims": [
+      {
+        "subject": "モードαとモードβの違い",
+        "predicate": "ガイアベル規定回数が変わる"
+      },
+      {
+        "subject": "モードαとモードβの違い",
+        "predicate": "規定回数到達時のガイアステージ移行率が変わる"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.243364095687866
+  },
+  {
+    "id": "FU-F03",
+    "raw_output": "[\n    {\"subject\": \"RT-CとRT-Dの違い\", \"predicate\": \"枠LEDのパターンでレベルを示唆する\"},\n    {\"subject\": \"RT-C\", \"predicate\": \"1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚\"},\n    {\"subject\": \"RT-D\", \"predicate\": \"サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "RT-CとRT-Dの違い",
+        "predicate": "枠LEDのパターンでレベルを示唆する"
+      },
+      {
+        "subject": "RT-C",
+        "predicate": "1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚"
+      },
+      {
+        "subject": "RT-D",
+        "predicate": "サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 8.2019944190979
+  },
+  {
+    "id": "FU-D05",
+    "raw_output": "[\n    {\"subject\": \"SGG\", \"predicate\": \"GG準備中から始まるゾーンで、GG前兆以上濃厚な状態を示す\"},\n    {\"subject\": \"GG準備中\", \"predicate\": \"「×・?・?」が出るまでの間が対象\"},\n    {\"subject\": \"GG準備中\", \"predicate\": \"全体的にストック当選率が高い\"},\n    {\"subject\": \"SGG発生時\", \"predicate\": \"レア役以上濃厚\"},\n    {\"subject\": \"SGG発生時とSU4同時発生\", \"predicate\": \"赤7揃いorGOD確定役\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "SGG",
+        "predicate": "GG準備中から始まるゾーンで、GG前兆以上濃厚な状態を示す"
+      },
+      {
+        "subject": "GG準備中",
+        "predicate": "「×・?・?」が出るまでの間が対象"
+      },
+      {
+        "subject": "GG準備中",
+        "predicate": "全体的にストック当選率が高い"
+      },
+      {
+        "subject": "SGG発生時",
+        "predicate": "レア役以上濃厚"
+      },
+      {
+        "subject": "SGG発生時とSU4同時発生",
+        "predicate": "赤7揃いorGOD確定役"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 9.198405027389526
+  },
+  {
+    "id": "FV-P01",
+    "raw_output": "[{\"subject\": \"登録データ\", \"predicate\": \"GX-AとGX-Bの違いについての情報が見つからない\"}]",
+    "parsed_claims": [
+      {
+        "subject": "登録データ",
+        "predicate": "GX-AとGX-Bの違いについての情報が見つからない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 1.8541874885559082
+  },
+  {
+    "id": "FV-C01",
+    "raw_output": "[\n    {\"subject\": \"表モード\", \"predicate\": \"モード示唆出目が出るとGG継続濃厚になる\"},\n    {\"subject\": \"表モード\", \"predicate\": \"法則崩れ的な要素がある\"},\n    {\"subject\": \"裏モード\", \"predicate\": \"GG当選で複数セット獲得の期待が大きくなる\"},\n    {\"subject\": \"下段黄7\", \"predicate\": \"大チャンス\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "表モード",
+        "predicate": "モード示唆出目が出るとGG継続濃厚になる"
+      },
+      {
+        "subject": "表モード",
+        "predicate": "法則崩れ的な要素がある"
+      },
+      {
+        "subject": "裏モード",
+        "predicate": "GG当選で複数セット獲得の期待が大きくなる"
+      },
+      {
+        "subject": "下段黄7",
+        "predicate": "大チャンス"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 6.065698146820068
+  },
+  {
+    "id": "FV-C03",
+    "raw_output": "[{\"subject\": \"ループストック\", \"predicate\": \"GG継続時にループするかどうかを決めるものだ\"}, {\"subject\": \"GGストック\", \"predicate\": \"GG当選時にループするかどうかを決めるものだ\"}]",
+    "parsed_claims": [
+      {
+        "subject": "ループストック",
+        "predicate": "GG継続時にループするかどうかを決めるものだ"
+      },
+      {
+        "subject": "GGストック",
+        "predicate": "GG当選時にループするかどうかを決めるものだ"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 3.523533821105957
+  },
+  {
+    "id": "FV-C06",
+    "raw_output": "[\n    {\"subject\": \"SGGゾーン\", \"predicate\": \"独立したゾーンとして存在する\"},\n    {\"subject\": \"GG継続ゾーン\", \"predicate\": \"独立したゾーンとして存在する\"},\n    {\"subject\": \"SGGゾーン\", \"predicate\": \"100Gが選ばれると継続ストックを1つ獲得できる\"},\n    {\"subject\": \"GG継続ゾーン\", \"predicate\": \"GG当選時に一定の確率で抽選される\"},\n    {\"subject\": \"GG継続ゾーンの当選率\", \"predicate\": \"設定によって変動する\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "SGGゾーン",
+        "predicate": "独立したゾーンとして存在する"
+      },
+      {
+        "subject": "GG継続ゾーン",
+        "predicate": "独立したゾーンとして存在する"
+      },
+      {
+        "subject": "SGGゾーン",
+        "predicate": "100Gが選ばれると継続ストックを1つ獲得できる"
+      },
+      {
+        "subject": "GG継続ゾーン",
+        "predicate": "GG当選時に一定の確率で抽選される"
+      },
+      {
+        "subject": "GG継続ゾーンの当選率",
+        "predicate": "設定によって変動する"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 8.689980506896973
+  },
+  {
+    "id": "FU-D03",
+    "raw_output": "[\n    {\"subject\": \"SGG\", \"predicate\": \"GG準備中開始から「×・?・?」が出るまでの間が対象\"},\n    {\"subject\": \"全体的なストック当選率\", \"predicate\": \"GG中より高い\"},\n    {\"subject\": \"GG当選契機\", \"predicate\": \"不問\"},\n    {\"subject\": \"GG当選時\", \"predicate\": \"一定の確率でZ-ZONEを抽選\"},\n    {\"subject\": \"当選率\", \"predicate\": \"設定に応じて変わる\"},\n    {\"subject\": \"LEDの色\", \"predicate\": \"初当りGG時はループストック種別を示唆\"},\n    {\"subject\": \"LEDの色\", \"predicate\": \"GG継続時はGGストックの有無を示唆\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "SGG",
+        "predicate": "GG準備中開始から「×・?・?」が出るまでの間が対象"
+      },
+      {
+        "subject": "全体的なストック当選率",
+        "predicate": "GG中より高い"
+      },
+      {
+        "subject": "GG当選契機",
+        "predicate": "不問"
+      },
+      {
+        "subject": "GG当選時",
+        "predicate": "一定の確率でZ-ZONEを抽選"
+      },
+      {
+        "subject": "当選率",
+        "predicate": "設定に応じて変わる"
+      },
+      {
+        "subject": "LEDの色",
+        "predicate": "初当りGG時はループストック種別を示唆"
+      },
+      {
+        "subject": "LEDの色",
+        "predicate": "GG継続時はGGストックの有無を示唆"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 11.045257091522217
+  },
+  {
+    "id": "FV-C08",
+    "raw_output": "[\n    {\"subject\": \"ガイアナビ発生時\", \"predicate\": \"ガイアモードへの移行抽選が行われる\"},\n    {\"subject\": \"規定回数到達時\", \"predicate\": \"ガイアモードに応じてガイアステージ移行を抽選する\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "ガイアナビ発生時",
+        "predicate": "ガイアモードへの移行抽選が行われる"
+      },
+      {
+        "subject": "規定回数到達時",
+        "predicate": "ガイアモードに応じてガイアステージ移行を抽選する"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.121406316757202
+  },
+  {
+    "id": "FV-C09",
+    "raw_output": "[{\"subject\": \"登録データ\", \"predicate\": \"ありません\"}]",
+    "parsed_claims": [
+      {
+        "subject": "登録データ",
+        "predicate": "ありません"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 1.0672848224639893
+  },
+  {
+    "id": "P02",
+    "raw_output": "[\n    {\"subject\": \"ボーナス確率\", \"predicate\": \"設定が上がると優遇されていく\"},\n    {\"subject\": \"設定1\", \"predicate\": \"1/450\"},\n    {\"subject\": \"設定2\", \"predicate\": \"1/410\"},\n    {\"subject\": \"設定3\", \"predicate\": \"1/370\"},\n    {\"subject\": \"設定4\", \"predicate\": \"1/320\"},\n    {\"subject\": \"設定5\", \"predicate\": \"1/280\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "ボーナス確率",
+        "predicate": "設定が上がると優遇されていく"
+      },
+      {
+        "subject": "設定1",
+        "predicate": "1/450"
+      },
+      {
+        "subject": "設定2",
+        "predicate": "1/410"
+      },
+      {
+        "subject": "設定3",
+        "predicate": "1/370"
+      },
+      {
+        "subject": "設定4",
+        "predicate": "1/320"
+      },
+      {
+        "subject": "設定5",
+        "predicate": "1/280"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 7.1025519371032715
+  },
+  {
+    "id": "P04",
+    "raw_output": "[\n    {\"subject\": \"最低設定(設定1)\", \"predicate\": \"96.8%\"},\n    {\"subject\": \"最高設定(設定6)\", \"predicate\": \"113.5%\"},\n    {\"subject\": \"差\", \"predicate\": \"16.7%\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "最低設定(設定1)",
+        "predicate": "96.8%"
+      },
+      {
+        "subject": "最高設定(設定6)",
+        "predicate": "113.5%"
+      },
+      {
+        "subject": "差",
+        "predicate": "16.7%"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 3.818178415298462
+  },
+  {
+    "id": "LC-08",
+    "raw_output": "[{\"subject\": \"AT-Fの純増\", \"predicate\": \"2.5枚/G\"}, {\"subject\": \"終了後のモード\", \"predicate\": \"RT-C\"}, {\"subject\": \"RT-Cの継続G数\", \"predicate\": \"45G\"}, {\"subject\": \"RT-Cの中抽選確率\", \"predicate\": \"28%\"}, {\"subject\": \"RT-Cの終了後\", \"predicate\": \"未定\"}]",
+    "parsed_claims": [
+      {
+        "subject": "AT-Fの純増",
+        "predicate": "2.5枚/G"
+      },
+      {
+        "subject": "終了後のモード",
+        "predicate": "RT-C"
+      },
+      {
+        "subject": "RT-Cの継続G数",
+        "predicate": "45G"
+      },
+      {
+        "subject": "RT-Cの中抽選確率",
+        "predicate": "28%"
+      },
+      {
+        "subject": "RT-Cの終了後",
+        "predicate": "未定"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 5.966748237609863
+  },
+  {
+    "id": "Q11",
+    "raw_output": "[\n    {\"subject\": \"天井\", \"predicate\": \"510G、1000G、1480Gの3パターン\"},\n    {\"subject\": \"510G\", \"predicate\": \"15.2%の確率\"},\n    {\"subject\": \"1000G\", \"predicate\": \"20.3%の確率\"},\n    {\"subject\": \"1480G\", \"predicate\": \"64.5%の確率\"},\n    {\"subject\": \"天井到達時\", \"predicate\": \"ループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターン\"},\n    {\"subject\": \"0.01\", \"predicate\": \"16.7%の確率\"},\n    {\"subject\": \"0.25\", \"predicate\": \"16.7%の確率\"},\n    {\"subject\": \"0.5\", \"predicate\": \"16.7%の確率\"},\n    {\"subject\": \"0.8\", \"predicate\": \"16.7%の確率\"},\n    {\"subject\": \"1%+Z-ZONE\", \"predicate\": \"33.2%の確率\"},\n    {\"subject\": \"ループストックの数値\", \"predicate\": \"LEDの色で示唆される\"}\n]",
+    "parsed_claims": [
+      {
+        "subject": "天井",
+        "predicate": "510G、1000G、1480Gの3パターン"
+      },
+      {
+        "subject": "510G",
+        "predicate": "15.2%の確率"
+      },
+      {
+        "subject": "1000G",
+        "predicate": "20.3%の確率"
+      },
+      {
+        "subject": "1480G",
+        "predicate": "64.5%の確率"
+      },
+      {
+        "subject": "天井到達時",
+        "predicate": "ループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターン"
+      },
+      {
+        "subject": "0.01",
+        "predicate": "16.7%の確率"
+      },
+      {
+        "subject": "0.25",
+        "predicate": "16.7%の確率"
+      },
+      {
+        "subject": "0.5",
+        "predicate": "16.7%の確率"
+      },
+      {
+        "subject": "0.8",
+        "predicate": "16.7%の確率"
+      },
+      {
+        "subject": "1%+Z-ZONE",
+        "predicate": "33.2%の確率"
+      },
+      {
+        "subject": "ループストックの数値",
+        "predicate": "LEDの色で示唆される"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 19.541603326797485
+  },
+  {
+    "id": "Q1",
+    "raw_output": "[{\"subject\": \"設定6の機械割\", \"predicate\": \"114.6%\"}]",
+    "parsed_claims": [
+      {
+        "subject": "設定6の機械割",
+        "predicate": "114.6%"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 1.5584540367126465
+  },
+  {
+    "id": "Q4",
+    "raw_output": "[{\"subject\": \"ガイアベルの確率\", \"predicate\": \"1/37.6\"}]",
+    "parsed_claims": [
+      {
+        "subject": "ガイアベルの確率",
+        "predicate": "1/37.6"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 1.5994904041290283
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "purpose": "Stage A最終成果物。84件の応答から抽出・人間annotationしたatomic claim(129件)の一覧。実際のverifier評価(Stage D/E)はこのclaim集合を用いた。",
+  "note": "抽出方式の比較はphase4fw_extraction_comparison.jsonを参照。最終的なclaim分解はGT構築時(build_phase4fw_ground_truth.py)に人間が確定させたものであり、E1/E2の生出力をそのまま採用したわけではないが、E2の分解パターン(比較文のsubject単位分割)を強く参考にしている。",
+  "source_file": "training/riru/reports/phase4fw_ground_truth.json",
+  "total_responses": 84,
+  "total_atomic_claims": 129,
+  "responses_by_category": {"known_failure": 4, "phantom_entity": 20, "concept_binding": 10, "rag50": 50},
+  "claims_by_status": {"SUPPORTED": 78, "MISATTRIBUTED": 32, "NON_FACTUAL": 10, "UNSUPPORTED": 6, "AMBIGUOUS": 3},
+  "claims_by_type": {"NUMBER": 58, "OTHER": 15, "RELATION": 16, "ATTRIBUTE": 15, "ENTITY": 9, "SYMBOL": 6, "STATE": 5, "COMPARISON": 3, "CONDITION": 2}
+}

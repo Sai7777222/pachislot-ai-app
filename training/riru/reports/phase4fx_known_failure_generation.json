@@ -1,0 +1,246 @@
+[
+  {
+    "id": "FX-K01",
+    "category": "known_failure",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "A0": {
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 245,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A1": {
+      "response": "GGとSGGは両方とも継続役だけど、GGは青7連続時に当選率が変わるんだ。偶数設定で高設定だと優遇される可能性があるよ。GG中はSP役が50%でストックをゲットできるんだ。一方、SGGはゲーム数抽選の仕方がちょっと違うんだ。セット数が5の倍数かどうかで抽選値が変わるんだ。5の倍数じゃないときは、継続契機ごとに振り分けがあるんだけど、押し順黄7以外はハズレの確率が高いんだ。5の倍数のセットでは押し順黄7が継続ストックを獲得できる確率が少し高いんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 225,
+      "latency_sec": 11.01
+    },
+    "A2": {
+      "response": "GGは青7連続時に当選率が変わるゾーンで、偶数設定かつ高設定ほど優遇される可能性があるよ。GG中はSP役が50%でストックを獲得できるんだ。LV5は1〜4Gまでオールテンパイなしやオール奇数テンパイだとGG濃厚になるんだ。\n\n一方、SGGはゲーム数抽選で5の倍数かどうかで抽選値が変わるゾーンなんだ。100Gが選ばれると継続ストックが1つ増えるんだ。継続契機ごとのゲーム数振り分けもあって、5の倍数セットと5の倍数以外のセットで違うんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 219,
+      "latency_sec": 10.33
+    }
+  },
+  {
+    "id": "FX-K02",
+    "category": "known_failure",
+    "prompt": "SGGの仕組みを分かりやすく説明して",
+    "query_entities": [
+      "SGG"
+    ],
+    "A0": {
+      "response": "SGGはGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。設定に応じて当選率が変わるみたい。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 156,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A1": {
+      "response": "SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。5の倍数以外のセットだと、ハズレ 0.83 0.114 0.034 0.011 0.011、上段青7 0.83 0.114 0.034 0.011 0.011、赤7フェイク 0.883 0.078 0.023 0.008 0.008、押し順黄7 0.83 0.114 0.034 0.011 0.011、ガイアベル 0.883 0.078 0.023 0.008 0.008、下段黄7 0.83 0.114 0.034 0.011 0.011、右上がり黄7 - 0.695 0.203 0.051 0.051、GOD揃い 0.883 0.078 0.023 0.008 0.008、赤7揃い 0.883 0.078 0.023 0.008 0.008、継続ストック 0.8",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 371,
+      "latency_sec": 26.85
+    },
+    "A2": {
+      "response": "SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わる仕組みなんだ。継続契機が5の倍数じゃないセットの場合、ハズレだと100Gが選ばれる確率は0.83で、継続ストックを1つ獲得できるんだ。5の倍数セットの押し順黄7は、100Gが選ばれる確率が0.795になるよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 136,
+      "latency_sec": 8.58
+    }
+  },
+  {
+    "id": "FX-K03",
+    "category": "known_failure",
+    "prompt": "ガイアベルとは何か説明して",
+    "query_entities": [
+      "ガイアベル"
+    ],
+    "A0": {
+      "response": "ガイアベルはガイアモード中の規定回数到達時に抽選されるモードなんだ。規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 69,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A1": {
+      "response": "ガイアベルは、ガイアモード中に発生する役で、規定回数到達時にガイアステージ移行を抽選する役なんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 49,
+      "latency_sec": 3.11
+    },
+    "A2": {
+      "response": "ガイアベルは、低確、通常、天国の3種類のモードがあるよ。モードによってガイアベル規定回数や規定回数到達時のガイアステージ移行率が変わるんだ。規定回数到達時は抽選されてガイアステージに移行するんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 98,
+      "latency_sec": 5.16
+    }
+  },
+  {
+    "id": "FX-K04",
+    "category": "known_failure",
+    "prompt": "SU4について教えて",
+    "query_entities": [
+      "SU4"
+    ],
+    "A0": {
+      "response": "SU4は発生した時点でレア役以上濃厚なんだ。SU4成立の大チャンスってことだね。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 40,
+      "latency_sec": null,
+      "source": "new"
+    },
+    "A1": {
+      "response": "SU4は発生した時点でレア役以上濃厚なんだ。赤7揃いかGODが確定役になる大チャンスなんだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 47,
+      "latency_sec": 2.87
+    },
+    "A2": {
+      "response": "SU4は発生した時点でレア役以上濃厚なんだ。SU4は確定役(赤7揃いorGOD)成立の大チャンスなんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 52,
+      "latency_sec": 3.04
+    }
+  },
+  {
+    "id": "FX-K05",
+    "category": "known_failure",
+    "prompt": "GG当選とSGG当選の違いを教えて",
+    "query_entities": [
+      "GG当選",
+      "SGG当選"
+    ],
+    "A0": {
+      "response": "GG当選はGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。一方、SGGはGG当選とは別に、継続契機とセット数が5の倍数かどうかでゲーム数が抽選されて、100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 166,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A1": {
+      "response": "GG当選は、GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。設定に応じて当選率が変わるみたいだね。\n一方、SGG当選については登録データに情報が見つからないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 143,
+      "latency_sec": 8.39
+    },
+    "A2": {
+      "response": "GG当選は青7連続時に設定の奇偶で当選率が変わるみたいだよ。偶数設定かつ高設定ほど優遇される可能性があるみたい。SGG当選については登録データに情報がないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 80,
+      "latency_sec": 4.13
+    }
+  },
+  {
+    "id": "FX-K06",
+    "category": "known_failure",
+    "prompt": "ループストックとGGストックの違いを教えて",
+    "query_entities": [
+      "ループストック",
+      "GGストック"
+    ],
+    "A0": {
+      "response": "ループストックはGG継続時にループするかどうかを決めるもので、GGストックはGG当選時にループするかどうかを決めるものだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 62,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A1": {
+      "response": "ループストックは5の倍数回目のセットで抽選され、一度当選したらその抽選自体は終わるよ。GGストックはGG中の役成立時に抽選されて、GG継続時にZ-ZONEへ移行する可能性があるんだ。LEDの色でループストックの種別やGGストックの有無が示唆されるよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 125,
+      "latency_sec": 6.62
+    },
+    "A2": {
+      "response": "ループストックは5の倍数回目のセットで抽選され、一度当選したらその抽選自体がなくなるんだ。一方、GGストックはGG中に抽選されて、当選するとZ-ZONEに移行するよ。LEDの色でループストックの種別とGGストックの有無が示唆されるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 118,
+      "latency_sec": 5.98
+    }
+  },
+  {
+    "id": "FX-K07",
+    "category": "known_failure",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "query_entities": [
+      "AT-F"
+    ],
+    "A0": {
+      "response": "AT-Fは最大1480Gまで消化できるよ。終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイなら、GG濃厚のLV5になるんだ。LEDの色はGGの種別やストックの有無を示してくれるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 102,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A1": {
+      "response": "AT-Fの性能や終了後の状態については、登録データに直接の情報が見つからないんだ。登録情報だけだと、天井突入条件やGG継続濃厚の条件くらいしかわからないかな。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 79,
+      "latency_sec": 3.99
+    },
+    "A2": {
+      "response": "登録データにその情報は見つからないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 20,
+      "latency_sec": 1.04
+    }
+  },
+  {
+    "id": "FX-K08",
+    "category": "known_failure",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "query_entities": [
+      "RT-A",
+      "RT-B"
+    ],
+    "A0": {
+      "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になるよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 80,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A1": {
+      "response": "登録データにRT-AとRT-Bの違いについての情報は見つからないみたいだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 38,
+      "latency_sec": 1.87
+    },
+    "A2": {
+      "response": "登録データにRT-AとRT-Bの違いについての情報は見つからないみたいだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 38,
+      "latency_sec": 1.93
+    }
+  }
+]

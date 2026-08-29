@@ -1,0 +1,120 @@
+[
+  {
+    "id": "QS-D01",
+    "category": "query_style",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "A0": {
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 245,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "GGは青7連続時に当選率が変わるゾーンで、偶数設定かつ高設定ほど優遇される可能性があるよ。GG中はSP役が50%でストックを獲得できるんだ。LV5は1〜4Gまでオールテンパイなしやオール奇数テンパイだとGG濃厚になるんだ。\n\n一方、SGGはゲーム数抽選で5の倍数かどうかで抽選値が変わるゾーンなんだ。100Gが選ばれると継続ストックが1つ増えるんだ。継続契機ごとのゲーム数振り分けもあって、5の倍数セットと5の倍数以外のセットで違うんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 219,
+      "latency_sec": 12.69
+    }
+  },
+  {
+    "id": "QS-FU-F-Q1",
+    "category": "query_style",
+    "prompt": "GGについて教えて",
+    "query_entities": [
+      "GG"
+    ],
+    "A0": {
+      "response": "GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆するよ。通常時・GG中ともにフリーズ経由の割合が一番高いみたい。GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選するんだ。設定に応じて当選率が変化する可能性があるみたい。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 183,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "青7連続時は設定の奇偶で当選率が変わるみたいだよ。偶数設定かつ高設定ほど優遇される可能性があるみたい。GG中のSP役は状況に関わらず50%でストックを獲得できるんだって。LV5は1〜4Gまでオールテンパイなし or オール奇数テンパイならGG濃厚になるんだよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 130,
+      "latency_sec": 5.8
+    }
+  },
+  {
+    "id": "QS-FU-F-Q2",
+    "category": "query_style",
+    "prompt": "SGGについて教えて",
+    "query_entities": [
+      "SGG"
+    ],
+    "A0": {
+      "response": "SGGは、GG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆するよ。GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選するんだけど、設定に応じて当選率が変化するみたい。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 156,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。セット数が5の倍数じゃない場合、押し順黄7のSGG振り分けは0.83 0.114 0.034 0.011 0.011になるよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 102,
+      "latency_sec": 6.39
+    }
+  },
+  {
+    "id": "QS-FU-F-Q3",
+    "category": "query_style",
+    "prompt": "GGとSGGの違いは？",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "A0": {
+      "response": "GGとSGGの違いは、GG当選契機とセット数が5の倍数かどうかで抽選値が変わるところだよ。100Gが選ばれると、継続ストックを1つ獲得できるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 73,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "GGは青7連続時に当選率が変わるみたいだよ。偶数設定で高設定ほど優遇される可能性があるみたい。GG中はSP役が50%でストックを獲得できるんだって。LV5は1〜4Gまでオールテンパイなし or オール奇数テンパイならGG濃厚になるんだよ。\n\n一方、SGGはゲーム数抽選のときに継続契機とセット数が5の倍数かどうかで抽選値が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。5の倍数以外のセットだと、ハズレや上段青7、押し順黄7などの契機ごとにゲーム数振り分けが決まってるんだ。5の倍数セットだと押し順黄7以外の契機は少し違う振り分けになるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 278,
+      "latency_sec": 15.04
+    }
+  },
+  {
+    "id": "QS-FU-F-Q4",
+    "category": "query_style",
+    "prompt": "GGとSGGを要約して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "A0": {
+      "response": "GGはGG準備中に「×・?・?」が出るまでが対象で、全体的にストック当選率が高い。フリーズ経由の割合が一番高い。保障ゲーム数が残り3G以下だと成立役に応じて3G加算されるが、ガイアステージ中の黄7とSP役は保障ゲーム数は獲得しない。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆する。入力タイミングはSGG引き戻しゾーンの毎ゲームレバーON時~次ゲームBETまで。SGGのゲーム数は継続契機とセット数が5の倍数かどうかで抽選値が変わる。100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 263,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "GGは青7連続時の当選率が設定の奇偶で変わるみたい。SGGはゲーム数抽選で、セット数が5の倍数かどうかで振り分けが変わるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 63,
+      "latency_sec": 4.03
+    }
+  }
+]

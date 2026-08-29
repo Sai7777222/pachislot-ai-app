@@ -1,0 +1,632 @@
+[
+  {
+    "id": "FV-C01",
+    "prompt": "表モードと裏モードの違いを教えて",
+    "pair": [
+      "表モード",
+      "裏モード"
+    ],
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続期待度補足::932-933::chunk0",
+        "text": "※モード示唆出目･･･奇数はさみ中奇数、Vはさみ中奇数など。\nモード示唆出目はGG継続濃厚だが、法則崩れ的な要素なので、実際に表モードを示唆するわけではない。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続期待度補足::932-933",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "継続期待度補足",
+        "data_source_type": "unknown",
+        "score": 0.8323
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109::chunk0",
+        "text": "裏天国中にGGが当選すればGG複数ストック当選の期待大。滞在中は下段黄7成立で大チャンスだ。表モードと異なり、影響するのは通常時の抽選のみとなる。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "裏モード概要",
+        "data_source_type": "unknown",
+        "score": 0.8253
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "text": "枠LEDのパターンでレベルを示唆（リール上部やサイド上部など）",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "効果",
+        "data_source_type": "unknown",
+        "score": 0.8208
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::裏モードのポイント（テーブル）::105-108::chunk0",
+        "text": "裏モードのポイント\n裏天国中のGG当選で複数セット獲得の期待大\n裏天国中の下段黄7は大チャンス!\nアルテミスの矢演出で青7を否定すればチャンス",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::裏モードのポイント（テーブル）::105-108",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "裏モードのポイント（テーブル）",
+        "data_source_type": "unknown",
+        "score": 0.8204
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::SP役補足::193::chunk0",
+        "text": "SP役契機だった場合、滞在している表モード不問で80%ループが選択される。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::SP役補足::193",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "SP役補足",
+        "data_source_type": "unknown",
+        "score": 0.8122
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "text": "枠LEDが全て点灯 中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "3",
+        "data_source_type": "unknown",
+        "score": 0.8068
+      }
+    ]
+  },
+  {
+    "id": "FV-C02",
+    "prompt": "ガイアベルとガイアナビの違いを教えて",
+    "pair": [
+      "ガイアベル",
+      "ガイアナビ"
+    ],
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118::chunk0",
+        "text": "低確、通常、天国の3種類があり、モードに応じてガイアベル規定回数到達時にガイアステージ移行を抽選。\nこのガイアモードはガイアベル(ガイヤナビ経由)規定回数到達時に抽選される(周期抽選)。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "補足解説",
+        "data_source_type": "unknown",
+        "score": 0.8427
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116::chunk0",
+        "text": "ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変化",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::モードごとの違い::116",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "モードごとの違い",
+        "data_source_type": "unknown",
+        "score": 0.8419
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0",
+        "text": "天国へ移行すればガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップ。ループ率も75%と高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "天国モード解説",
+        "data_source_type": "unknown",
+        "score": 0.8414
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741::chunk0",
+        "text": "ガイアナビ発生時に停止する液晶出目のパターンでガイアモードを示唆。\n天国中はガイアナビ規定回数到達時のガイアモード移行率が大幅にアップする。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "game_mechanism",
+        "title": "ガイアナビ解説",
+        "data_source_type": "unknown",
+        "score": 0.8338
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0",
+        "text": "ガイアナビ(右ナビ)発生でガイアステージ移行のチャンス。規定回数到達時は滞在しているガイアモードに応じてガイアステージ移行を抽選する。\nリール停止後のフラッシュパターンなどでガイアステージ移行期待度や残り回数が示唆される。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "game_mechanism",
+        "title": "ガイアナビの解説",
+        "data_source_type": "unknown",
+        "score": 0.8302
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74::chunk0",
+        "text": "今回も小役履歴(液晶右下に表示)の連続でGGを抽選。青7や黄7がそれぞれ3連続以上すればチャンス。\nガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能する。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "game_mechanism",
+        "title": "小役履歴の抽選解説",
+        "data_source_type": "unknown",
+        "score": 0.8252
+      }
+    ]
+  },
+  {
+    "id": "FV-C03",
+    "prompt": "ループストックとGGストックの違いを教えて",
+    "pair": [
+      "ループストック",
+      "GGストック"
+    ],
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "効果",
+        "data_source_type": "unknown",
+        "score": 0.8868
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::other::白7に関する特典::85::chunk0",
+        "text": "[白7が3個以上あると80%のループストック] 履歴が途切れずに白7が3個以上でGGに当選した場合は80%のループストックを獲得する。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::other::白7に関する特典::85",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "other",
+        "title": "白7に関する特典",
+        "data_source_type": "unknown",
+        "score": 0.8607
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::other::天井恩恵::58::chunk0",
+        "text": "GGに当選かつ振り分けでループストックを抽選。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::other::天井恩恵::58",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "other",
+        "title": "天井恩恵",
+        "data_source_type": "unknown",
+        "score": 0.8606
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "text": "6種類のモード(内部状態)によって、通常時の成立役ごとのGG当選率、GG中のGGストック当選率が変化。天国モードに移行すればGG当選+高ループストック獲得のチャンスだ。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "表モード概要",
+        "data_source_type": "unknown",
+        "score": 0.8546
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::黄・緑::963::chunk0",
+        "text": "ストックがあった場合はループストック25%or80%濃厚(※) / ループストック50%以上濃厚",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::黄・緑::963",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "黄・緑",
+        "data_source_type": "unknown",
+        "score": 0.8497
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "準備中解説",
+        "data_source_type": "unknown",
+        "score": 0.8478
+      }
+    ]
+  },
+  {
+    "id": "FV-C04",
+    "prompt": "天国モードと通常時の違いを教えて",
+    "pair": [
+      "天国モード",
+      "通常時"
+    ],
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "text": "6種類のモード(内部状態)によって、通常時の成立役ごとのGG当選率、GG中のGGストック当選率が変化。天国モードに移行すればGG当選+高ループストック獲得のチャンスだ。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "表モード概要",
+        "data_source_type": "unknown",
+        "score": 0.8549
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605::chunk0",
+        "text": "偶数揃い濃厚、ハズレの場合はガイアモード天国+規定回数が残り1回の期待大",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::ALL黄色(偶数)::605",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "ALL黄色(偶数)",
+        "data_source_type": "unknown",
+        "score": 0.8406
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741::chunk0",
+        "text": "ガイアナビ発生時に停止する液晶出目のパターンでガイアモードを示唆。\n天国中はガイアナビ規定回数到達時のガイアモード移行率が大幅にアップする。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "game_mechanism",
+        "title": "ガイアナビ解説",
+        "data_source_type": "unknown",
+        "score": 0.8403
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::裏天国解説::760::chunk0",
+        "text": "上記のパターン発生時は裏天国中の可能性がアップ。地震+下段黄7 (3枚) +偶数テンパイハズレは裏天国濃厚だ。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::裏天国解説::760",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "裏天国解説",
+        "data_source_type": "unknown",
+        "score": 0.8363
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118::chunk0",
+        "text": "低確、通常、天国の3種類があり、モードに応じてガイアベル規定回数到達時にガイアステージ移行を抽選。\nこのガイアモードはガイアベル(ガイヤナビ経由)規定回数到達時に抽選される(周期抽選)。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "補足解説",
+        "data_source_type": "unknown",
+        "score": 0.835
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0",
+        "text": "天国へ移行すればガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップ。ループ率も75%と高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "天国モード解説",
+        "data_source_type": "unknown",
+        "score": 0.8347
+      }
+    ]
+  },
+  {
+    "id": "FV-C05",
+    "prompt": "GG当選とSGG当選の違いを教えて",
+    "pair": [
+      "GG当選",
+      "SGG当選"
+    ],
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "準備中解説",
+        "data_source_type": "unknown",
+        "score": 0.8791
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "text": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。\n設定に応じて当選率が変化!?",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8639
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104::chunk0",
+        "text": "6種類のモード(内部状態)によって、通常時の成立役ごとのGG当選率、GG中のGGストック当選率が変化。天国モードに移行すればGG当選+高ループストック獲得のチャンスだ。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::表モード概要::104",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "表モード概要",
+        "data_source_type": "unknown",
+        "score": 0.8523
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "text": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "SGGゲーム数抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8486
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::other::天井恩恵::58::chunk0",
+        "text": "GGに当選かつ振り分けでループストックを抽選。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::other::天井恩恵::58",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "other",
+        "title": "天井恩恵",
+        "data_source_type": "unknown",
+        "score": 0.8466
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109::chunk0",
+        "text": "裏天国中にGGが当選すればGG複数ストック当選の期待大。滞在中は下段黄7成立で大チャンスだ。表モードと異なり、影響するのは通常時の抽選のみとなる。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "裏モード概要",
+        "data_source_type": "unknown",
+        "score": 0.8425
+      }
+    ]
+  },
+  {
+    "id": "FV-C06",
+    "prompt": "SGGとGG継続ゾーンの関係を教えて",
+    "pair": [
+      "SGG",
+      "GG継続ゾーン"
+    ],
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "text": "SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "入力タイミング",
+        "data_source_type": "unknown",
+        "score": 0.8661
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "text": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "SGGゲーム数抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8631
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "効果",
+        "data_source_type": "unknown",
+        "score": 0.8547
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "text": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。\n設定に応じて当選率が変化!?",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8543
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::満月解説::814::chunk0",
+        "text": "4G連続すればZ-ZONE (0揃い)濃厚。右上がり黄7or中段黄7成立のチャンスでもある。右上がり黄7or中段黄7以外で発生すれば継続のチャンス。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::満月解説::814",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "満月解説",
+        "data_source_type": "unknown",
+        "score": 0.8532
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "準備中解説",
+        "data_source_type": "unknown",
+        "score": 0.8511
+      }
+    ]
+  },
+  {
+    "id": "FV-C07",
+    "prompt": "小役履歴とモード示唆出目の関係を教えて",
+    "pair": [
+      "小役履歴",
+      "モード示唆出目"
+    ],
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続期待度補足::932-933::chunk0",
+        "text": "※モード示唆出目･･･奇数はさみ中奇数、Vはさみ中奇数など。\nモード示唆出目はGG継続濃厚だが、法則崩れ的な要素なので、実際に表モードを示唆するわけではない。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続期待度補足::932-933",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "継続期待度補足",
+        "data_source_type": "unknown",
+        "score": 0.8599
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102::chunk0",
+        "text": "小役確率は全設定共通だ。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::other::小役確率補足::102",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "other",
+        "title": "小役確率補足",
+        "data_source_type": "unknown",
+        "score": 0.8493
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "text": "枠LEDが全て点灯 中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "3",
+        "data_source_type": "unknown",
+        "score": 0.8433
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003::chunk0",
+        "text": "枠LEDのパターンでレベルを示唆（リール上部やサイド上部など）",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::効果::1003",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "効果",
+        "data_source_type": "unknown",
+        "score": 0.8425
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74::chunk0",
+        "text": "今回も小役履歴(液晶右下に表示)の連続でGGを抽選。青7や黄7がそれぞれ3連続以上すればチャンス。\nガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能する。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "game_mechanism",
+        "title": "小役履歴の抽選解説",
+        "data_source_type": "unknown",
+        "score": 0.8405
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619::chunk0",
+        "text": "確定役煽りor前兆終盤に発生。連続するほど期待度がアップする。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::巨大化演出解説::619",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "巨大化演出解説",
+        "data_source_type": "unknown",
+        "score": 0.8399
+      }
+    ]
+  },
+  {
+    "id": "FV-C08",
+    "prompt": "ガイアナビとガイアモードの関係を教えて",
+    "pair": [
+      "ガイアナビ",
+      "ガイアモード"
+    ],
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741::chunk0",
+        "text": "ガイアナビ発生時に停止する液晶出目のパターンでガイアモードを示唆。\n天国中はガイアナビ規定回数到達時のガイアモード移行率が大幅にアップする。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビ解説::740-741",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "game_mechanism",
+        "title": "ガイアナビ解説",
+        "data_source_type": "unknown",
+        "score": 0.8731
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72::chunk0",
+        "text": "ガイアナビ(右ナビ)発生でガイアステージ移行のチャンス。規定回数到達時は滞在しているガイアモードに応じてガイアステージ移行を抽選する。\nリール停止後のフラッシュパターンなどでガイアステージ移行期待度や残り回数が示唆される。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::ガイアナビの解説::71-72",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "game_mechanism",
+        "title": "ガイアナビの解説",
+        "data_source_type": "unknown",
+        "score": 0.8659
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118::chunk0",
+        "text": "低確、通常、天国の3種類があり、モードに応じてガイアベル規定回数到達時にガイアステージ移行を抽選。\nこのガイアモードはガイアベル(ガイヤナビ経由)規定回数到達時に抽選される(周期抽選)。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::補足解説::117-118",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "補足解説",
+        "data_source_type": "unknown",
+        "score": 0.8547
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74::chunk0",
+        "text": "今回も小役履歴(液晶右下に表示)の連続でGGを抽選。青7や黄7がそれぞれ3連続以上すればチャンス。\nガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能する。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::小役履歴の抽選解説::73-74",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "game_mechanism",
+        "title": "小役履歴の抽選解説",
+        "data_source_type": "unknown",
+        "score": 0.8511
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::特徴::255-256::chunk0",
+        "text": "ガイアナビを契機に移行するGGの超高確率状態。成立役ごとの抽選だけでなく、小役履歴の抽選も優遇される。\nGG当選時はZ-ZONE突入のチャンスだ (0揃いでZ-ZONE突入)",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::特徴::255-256",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "特徴",
+        "data_source_type": "unknown",
+        "score": 0.8479
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149::chunk0",
+        "text": "天国へ移行すればガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップ。ループ率も75%と高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::天国モード解説::149",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "天国モード解説",
+        "data_source_type": "unknown",
+        "score": 0.8335
+      }
+    ]
+  },
+  {
+    "id": "FV-C09",
+    "prompt": "白7とALL色の関係を教えて",
+    "pair": [
+      "白7",
+      "ALL色"
+    ],
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008::chunk0",
+        "text": "枠LEDが全て点灯 中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::3::1008",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "3",
+        "data_source_type": "unknown",
+        "score": 0.8559
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007::chunk0",
+        "text": "サイド上部付近まで点灯 右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::2::1007",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "2",
+        "data_source_type": "unknown",
+        "score": 0.851
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD::945::chunk0",
+        "text": "赤7揃いorSP役濃厚（上記出目でSP役！）",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD::945",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD",
+        "data_source_type": "unknown",
+        "score": 0.8438
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::白::998::chunk0",
+        "text": "黄7以上濃厚※Z-GAME中は白点灯のみ",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::zone_explanation::白::998",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "zone_explanation",
+        "title": "白",
+        "data_source_type": "unknown",
+        "score": 0.8371
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】::452-464::chunk0",
+        "text": "ハズレ 0.83 0.114 0.034 0.011 0.011\n上段青7 0.83 0.114 0.034 0.011 0.011\n赤7フェイク 0.883 0.078 0.023 0.008 0.008\n押し順黄7 0.83 0.114 0.034 0.011 0.011\nガイアベル 0.883 0.078 0.023 0.008 0.008\n下段黄7 0.83 0.114 0.034 0.011 0.011\n右上がり黄7 - 0.695 0.203 0.051 0.051\nGOD揃い 0.883 0.078 0.023 0.008 0.008\n赤7揃い 0.883 0.078 0.023 0.008 0.008\n継続ストック 0.883 0.078 0.023 0.008 0.008",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】::452-464",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+        "data_source_type": "unknown",
+        "score": 0.835
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006::chunk0",
+        "text": "リール上部付近まで点灯 中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚 / 激熱表示発生で確定役濃厚",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::1::1006",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "1",
+        "data_source_type": "unknown",
+        "score": 0.8326
+      }
+    ]
+  }
+]

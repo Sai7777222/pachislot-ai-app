@@ -1,0 +1,22 @@
+{
+  "purpose": "Stage B: query entity × retrieved evidence entityの対応表。全55probe(known_failure 8 + phantom_entity 22 + concept_binding 20 + query_style 5)分をtraining/riru/reports/phase4fx_all_bindings_review.txtに集約済み。本ファイルはその要約統計。",
+  "total_probes_with_binding": 55,
+  "total_bound_chunk_entity_assignments": 114,
+  "total_unbound_embedding_chunks": 290,
+  "decisive_examples": {
+    "Q6_GG_SGG": {
+      "query": "GGとSGGの違いを初心者向けに説明して",
+      "binding": {"GG": ["青7連続時GG当選率", "GG中解説"], "SGG": ["SGGゲーム数抽選概要", "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】", "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"]},
+      "note": "GG準備中chunk(「準備中解説」)はGG/SGGいずれにもbindingされずUNBOUNDとなり、A2では除外される。これによりQ6の核心的な捏造(「×・?・×」記号)が完全に解消された。"
+    },
+    "phantom_entities": {
+      "example": "RT-A/RT-B、AT-F等の完全に架空の固有名詞は、query entity側もevidence側も0件のbindingとなり、context中に「NO GROUNDED EVIDENCE」として明示される。"
+    }
+  },
+  "false_bind_investigation": {
+    "description": "監査中、entity『GG』が『SGG』を含むtitle(例:「SGGゲーム数抽選概要」)に部分文字列一致で誤ってbindingされる問題を発見した(比較query「GGとSGGの違い」では長さ優先ロジックで回避できていたが、単一entity query「GGについて教えて」では回避できていなかった)。",
+    "fix_applied": "title_match_score()に単語境界チェック(ASCII英数字の連続判定のみ、entity dictionaryなしで実現)を追加し、「GG」が「SGG」の内部に一致しないよう修正。修正後、影響を受けた8probeを再生成し、誤bindingが解消されたことを確認した。",
+    "final_false_bind_count": 0,
+    "note": "本fixはgeneration前のbinding設計段階の修正であり、生成結果を見てからGTを書き換えたものではない(RULE EVAL-002準拠: 修正対象はbindingロジック自体であり、正解ラベルではない)。"
+  }
+}

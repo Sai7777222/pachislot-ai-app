@@ -1,0 +1,274 @@
+[
+  {
+    "id": "FU-F-Q1",
+    "category": "query_style_variant",
+    "prompt": "GGについて教えて",
+    "source": "Stage-F",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "準備中解説",
+        "data_source_type": "unknown",
+        "score": 0.8603
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "効果",
+        "data_source_type": "unknown",
+        "score": 0.8517
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "text": "通常時・GG中ともにフリーズ経由の割合が一番高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "確定役演出解説",
+        "data_source_type": "unknown",
+        "score": 0.8508
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "text": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。\n設定に応じて当選率が変化!?",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8505
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "text": "雷雨が発生。上段青7でチャンス、液晶出目の奇数テンパイ以外ならGG前兆以上濃厚。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "中パターン",
+        "data_source_type": "unknown",
+        "score": 0.845
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109::chunk0",
+        "text": "裏天国中にGGが当選すればGG複数ストック当選の期待大。滞在中は下段黄7成立で大チャンスだ。表モードと異なり、影響するのは通常時の抽選のみとなる。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::裏モード概要::109",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "裏モード概要",
+        "data_source_type": "unknown",
+        "score": 0.842
+      }
+    ]
+  },
+  {
+    "id": "FU-F-Q2",
+    "category": "query_style_variant",
+    "prompt": "SGGについて教えて",
+    "source": "Stage-F",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "text": "SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "入力タイミング",
+        "data_source_type": "unknown",
+        "score": 0.8465
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "text": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "SGGゲーム数抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8426
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "準備中解説",
+        "data_source_type": "unknown",
+        "score": 0.8367
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "効果",
+        "data_source_type": "unknown",
+        "score": 0.8267
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "text": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。\n設定に応じて当選率が変化!?",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8237
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797::chunk0",
+        "text": "雷雨が発生。上段青7でチャンス、液晶出目の奇数テンパイ以外ならGG前兆以上濃厚。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::中パターン::797",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "中パターン",
+        "data_source_type": "unknown",
+        "score": 0.8237
+      }
+    ]
+  },
+  {
+    "id": "FU-F-Q3",
+    "category": "query_style_variant",
+    "prompt": "GGとSGGの違いは？",
+    "source": "Stage-F",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "text": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "SGGゲーム数抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8349
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "準備中解説",
+        "data_source_type": "unknown",
+        "score": 0.8347
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "効果",
+        "data_source_type": "unknown",
+        "score": 0.8227
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "text": "SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "入力タイミング",
+        "data_source_type": "unknown",
+        "score": 0.8145
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302::chunk0",
+        "text": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。\n設定に応じて当選率が変化!?",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::抽選概要::301-302",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8122
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "text": "通常時・GG中ともにフリーズ経由の割合が一番高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "確定役演出解説",
+        "data_source_type": "unknown",
+        "score": 0.8114
+      }
+    ]
+  },
+  {
+    "id": "FU-F-Q4",
+    "category": "query_style_variant",
+    "prompt": "GGとSGGを要約して",
+    "source": "Stage-F",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448::chunk0",
+        "text": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。\n100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::overview::SGGゲーム数抽選概要::447-448",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "overview",
+        "title": "SGGゲーム数抽選概要",
+        "data_source_type": "unknown",
+        "score": 0.8465
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354::chunk0",
+        "text": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::準備中解説::354",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "準備中解説",
+        "data_source_type": "unknown",
+        "score": 0.8427
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546::chunk0",
+        "text": "通常時・GG中ともにフリーズ経由の割合が一番高い。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::effect_lore::確定役演出解説::546",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "effect_lore",
+        "title": "確定役演出解説",
+        "data_source_type": "unknown",
+        "score": 0.8353
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::保障ゲーム解説::297-298::chunk0",
+        "text": "保障ゲーム数が残り3G以下(初期の保障ゲーム数は9G)の状態では、成立役に応じて保障ゲーム数が3G加算される(当該ゲーム数含め4G)。\nガイアステージ中の中段黄7とSP役はGG濃厚なので、保障ゲーム数は獲得しない。",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::game_mechanism::保障ゲーム解説::297-298",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "game_mechanism",
+        "title": "保障ゲーム解説",
+        "data_source_type": "unknown",
+        "score": 0.8334
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957::chunk0",
+        "text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::効果::957",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "効果",
+        "data_source_type": "unknown",
+        "score": 0.8321
+      },
+      {
+        "chunk_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981::chunk0",
+        "text": "SGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまで",
+        "doc_id": "smart_million_god_kamigami_no_kiseki::at_mechanism::入力タイミング::981",
+        "machine_id": "smart_million_god_kamigami_no_kiseki",
+        "category": "at_mechanism",
+        "title": "入力タイミング",
+        "data_source_type": "unknown",
+        "score": 0.8319
+      }
+    ]
+  }
+]

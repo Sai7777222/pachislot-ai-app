@@ -1,0 +1,17 @@
+{
+  "purpose": "Section18: 性能測定。Phase4FWのhybrid verifier方式(約13秒/response追加)と比較する。",
+  "measurements": {
+    "query_entity_extraction_latency": "0.1ms未満/query(純Python、GPU不要)",
+    "chunk_attribution_latency": "全119チャンクの事前attribution計算は1秒未満(1回だけ、DBが更新されない限り再計算不要)",
+    "context_assembly_latency": "entity extraction+binding+context組み立てを合わせて平均0.09ms/query(100回試行の実測平均)",
+    "model_assisted_attribution_latency": "本フェーズでは未使用(不要だった)",
+    "total_added_latency": "0.1ms未満。既存の1回のgeneration呼び出しに渡すcontextの中身を変えるだけであり、Phase4FWのような追加のLLM呼び出し(claim抽出+verifier、計13秒)は一切発生しない。"
+  },
+  "comparison_to_phase4fw": {
+    "phase4fw_hybrid_verifier_latency": "約13秒/response(claim抽出6.2秒+verifier7.0秒、既存生成に加えて追加で必要)",
+    "phase4fx_latency": "0.1ms未満/response(既存の1回のgeneration呼び出しの前処理のみ)",
+    "conclusion": "Phase4FXのentity-aware context assemblyは、Phase4FWで問題となった『毎回答13秒追加』を実質的にゼロコストで回避している。これはSection18の要求(sub-second〜low-second)を大幅に上回って達成している。"
+  },
+  "gpu_memory_impact": "追加のGPUメモリロードなし。既存のPhase4ZGプロセスの入力contextを変更するだけ。",
+  "new_generation_count_total": 100
+}

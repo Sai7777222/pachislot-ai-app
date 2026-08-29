@@ -1,0 +1,11 @@
+{
+  "purpose": "Stage B: 各claimのsubjectがretrieved context内に存在するかを判定(EXACT/NORMALIZED/NOT_FOUND/AMBIGUOUS)。固有名詞dictionaryは使用せず、NFKC正規化のみ許可。",
+  "method": "training/riru/guard/phase4fw_deterministic_verifier.py の entity_grounding() 関数。retrieval scoreは一切使用していない。",
+  "distribution_across_129_claims": {"EXACT": 50, "NORMALIZED": 0, "NOT_FOUND": 79, "AMBIGUOUS_gt": 3},
+  "caveat": "この分布はGT作成時にsubjectフィールドとして記述した文字列の厳密さに影響される(例: 「GG本前兆」のように解説的なラベルを使った場合、context中の正確な引用と一致しないことがある)。そのためentity_groundingの生数値単体を『検出精度』として過大評価すべきではなく、下流のdeterministic_verify()全体の精度(phase4fw_deterministic_verifier.jsonのprecision/recall)を主要な評価指標とする。",
+  "grounding_vs_gt_status_crosstab": {
+    "EXACT_x_MISATTRIBUTED": 10, "EXACT_x_SUPPORTED": 36, "EXACT_x_UNSUPPORTED": 3, "EXACT_x_AMBIGUOUS": 1,
+    "NOT_FOUND_x_MISATTRIBUTED": 22, "NOT_FOUND_x_SUPPORTED": 42, "NOT_FOUND_x_NON_FACTUAL": 10, "NOT_FOUND_x_UNSUPPORTED": 3, "NOT_FOUND_x_AMBIGUOUS": 2
+  },
+  "key_finding": "NOT_FOUND判定になったclaimの多く(42件)はGT上SUPPORTED(=正しく情報不足を申告したclaim、またはsubjectの記述が厳密な文字列一致をしない場合)であり、単純な『subjectがcontextに文字列として存在しない』というシグナルだけでは安全/危険を判別できない。これがdeterministic_verify()でNOT_FOUND時にhedge語の有無を追加チェックする理由である。"
+}

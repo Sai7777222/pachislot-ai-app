@@ -1,0 +1,129 @@
+{
+  "purpose": "Stage B: Stage Bで生成された全31probeの応答を、phase4fu_ground_truth.jsonの人間annotationと突き合わせ、atomic claimごとにSUPPORTED_EXACT/SUPPORTED_PARAPHRASE/SUPPORTED_INFERENCE/UNSUPPORTED/MISATTRIBUTED/AMBIGUOUSに分類した。分類はモデル出力を読んだ後に行った(Stage Bの生成自体はGT作成後に実行、GTはモデル出力を見ずに作成済み: RULE EVAL-002準拠)。",
+  "source_generations_file": "training/riru/reports/phase4fu_stage_b_base_generations.json",
+  "classification_definitions": {
+    "SUPPORTED_EXACT": "contextの文言とほぼ一致する形で正しく引用",
+    "SUPPORTED_PARAPHRASE": "contextの内容を正しく言い換え",
+    "SUPPORTED_INFERENCE": "contextから妥当に推論可能(過度な飛躍なし)",
+    "UNSUPPORTED": "context中に根拠が存在しない新規の主張・数値・記号列・関係性の創作",
+    "MISATTRIBUTED": "実在する情報を、context中に存在しない別の固有名詞・エンティティに誤って紐付け",
+    "AMBIGUOUS": "解釈次第で判断が分かれる境界的なケース"
+  },
+  "clean_probes_no_issue": [
+    "FU-A01", "FU-A02", "FU-A04", "FU-A05", "FU-B04", "FU-C01", "FU-C02", "FU-C03",
+    "FU-C04", "FU-C05", "FU-D02", "FU-D04", "FU-E03", "FU-E04", "FU-E05",
+    "FU-F01", "FU-F04", "FU-F05"
+  ],
+  "clean_probes_count": 18,
+  "flagged_probes": [
+    {
+      "id": "FU-D01", "category": "beginner_explanation", "note": "Q6(必須probe)。既知の中心的捏造の再現。",
+      "claims": [
+        {"claim": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進む", "classification": "UNSUPPORTED", "detail": "「GG本前兆」の反復や「GG本当選」という段階遷移フローはcontext中に存在しない完全な創作。"},
+        {"claim": "GG本前兆は「×・?・?」の順番", "classification": "SUPPORTED_PARAPHRASE", "detail": "実在する記述(GG準備中開始から「×・?・?」が出るまでの間)のほぼ正しい言い換え。ただし「GG本前兆」という主体への紐付けはcontext上不明確。"},
+        {"claim": "GG本当選は「×・?・×」の順番になる", "classification": "UNSUPPORTED", "detail": "Section3で確定済み: 「×・?・×」はcontext中に一切存在しない完全な創作記号列(Phase4FCの発見の再現)。"},
+        {"claim": "SGGはGG本前兆の後にSGGゾーンが始まる", "classification": "UNSUPPORTED", "detail": "GGとSGGの時系列的な前後関係はcontext中に一切記述がない創作。"},
+        {"claim": "100Gが選ばれると継続ストックが1つ増える", "classification": "SUPPORTED_EXACT", "detail": "context中のSGGゲーム数抽選概要と完全一致。"}
+      ]
+    },
+    {
+      "id": "FU-B02", "category": "comparison",
+      "claims": [
+        {"claim": "GGはGG本前兆中に当たる", "classification": "UNSUPPORTED", "detail": "「GG本前兆中」という語自体はcontext中に存在するが(「なし」チャンクの「※GG本前兆中はハズレもあり」)、それを根拠に「GGはGG本前兆中に当たる」という定義的関係を構築するのは創作。"},
+        {"claim": "SGGはGG本前兆中じゃない時に当たる", "classification": "UNSUPPORTED", "detail": "GG本前兆中と対比する形でSGGの成立条件を定義する記述はcontext中に存在しない。"}
+      ]
+    },
+    {
+      "id": "FU-A03", "category": "single_factual", "note": "「AT-F」という名称はDBに一切存在しない(IRRELEVANT)。",
+      "claims": [
+        {"claim": "AT-Fは最大1480Gまで消化できる", "classification": "MISATTRIBUTED", "detail": "「AT間最大1480G消化」という一般的な天井条件を、存在しない固有名詞「AT-F」に誤って紐付け。"},
+        {"claim": "終了後は1〜4Gまでオールテンパイがなければ...LV5になる", "classification": "MISATTRIBUTED", "detail": "「LV5（GG継続濃厚）」チャンク(AT-Fと無関係)をAT-Fの「終了後の状態」として誤って紐付け。"}
+      ]
+    },
+    {
+      "id": "FU-B03", "category": "comparison", "note": "「モードα」「モードβ」という名称はDBに存在しない(IRRELEVANT)。",
+      "claims": [
+        {"claim": "モードαとモードβの違いは、ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変わる", "classification": "MISATTRIBUTED", "detail": "「モードごとの違い」チャンク(実在するモード全般についての記述で、α/βという名称とは無関係)を、存在しない固有名詞に誤って紐付け。"}
+      ]
+    },
+    {
+      "id": "FU-B05", "category": "comparison", "note": "ZS-05(必須probe)。「RT-A」「RT-B」という名称はDBに存在しない(IRRELEVANT)。既知の誤紐付けの確認された再現。",
+      "claims": [
+        {"claim": "RT-Aは枠LEDのパターンでレベルを示唆", "classification": "MISATTRIBUTED", "detail": "「効果」チャンク(枠LED全般の説明)をRT-Aに誤って紐付け。"},
+        {"claim": "RT-Bは枠LEDが全て点灯すると...濃厚になる", "classification": "MISATTRIBUTED", "detail": "「3」チャンク(全点灯パターンの説明)をRT-Bに誤って紐付け。"}
+      ]
+    },
+    {
+      "id": "FU-D03", "category": "beginner_explanation",
+      "claims": [
+        {"claim": "SGGはGG準備中開始から「×・?・?」が出るまでの間が対象", "classification": "MISATTRIBUTED", "detail": "「準備中解説」チャンクはGG準備中についての記述であり、SGGについての記述ではない。SGGとGG準備中を混同。"},
+        {"claim": "GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選する(SGGの仕組みとして)", "classification": "MISATTRIBUTED", "detail": "「抽選概要」チャンクはGG全般とZ-ZONEの関係についての記述であり、SGG固有の仕組みではない。"}
+      ]
+    },
+    {
+      "id": "FU-D05", "category": "beginner_explanation", "note": "「RT」という語はDBに一切存在しない。",
+      "claims": [
+        {"claim": "SGGはGG準備中から始まるゾーン", "classification": "MISATTRIBUTED", "detail": "FU-D03と同種のSGG/GG準備中混同。"},
+        {"claim": "SU4が来たら赤7揃いorGOD確定役(SGGとの関連として言及)", "classification": "MISATTRIBUTED", "detail": "「炎・戦車解説」チャンク(SGGと無関係な演出)をSGGの文脈に紐付け。"},
+        {"claim": "「RT」についての言及", "classification": "MISSING_NOT_ADDRESSED", "detail": "クエリで問われた「RT」については一切言及せず、silent-dropping(不足の明示なし)。B04(AT-A/AT-B)のような明示的な情報不足申告がされなかった。"}
+      ]
+    },
+    {
+      "id": "FU-E01", "category": "multi_entity_relation", "note": "「銀河系ボーナス」という名称はDBに存在しない。",
+      "claims": [
+        {"claim": "「銀河系ボーナス」についての言及", "classification": "MISSING_NOT_ADDRESSED", "detail": "クエリで問われた「銀河系ボーナス」について一切触れず、ガイアナビの情報のみで回答。情報不足の明示なし。"}
+      ]
+    },
+    {
+      "id": "FU-E02", "category": "multi_entity_relation", "note": "SUFFICIENT context下でも発生した定義的誤り。",
+      "claims": [
+        {"claim": "ガイアベルはガイアモード中の規定回数到達時に抽選される「モード」", "classification": "MISATTRIBUTED", "detail": "context中の「小役の停止例一覧」チャンクにガイアベルは1枚役の小役と明記されているが、応答はガイアベルを「モード」であるかのように誤って性質付けている。"}
+      ]
+    },
+    {
+      "id": "FU-F02", "category": "insufficient_context_comparison",
+      "claims": [
+        {"claim": "GGの方がフリーズ経由の割合が高いから、そっちの方がお得", "classification": "UNSUPPORTED", "detail": "「フリーズ経由の割合が高い」という事実(確定役演出解説、実在)から「お得さ」という無関係な経済的価値判断を導出。SUPPORTED_INFERENCEの範囲を超えたUNSUPPORTED_CONCLUSION。"}
+      ]
+    },
+    {
+      "id": "FU-F03", "category": "insufficient_context_comparison", "note": "「RT-C」「RT-D」という名称はDBに存在しない。",
+      "claims": [
+        {"claim": "RT-Cは1~4Gまでオールテンパイなし...LV5＝GG濃厚", "classification": "MISATTRIBUTED", "detail": "「LV5（GG継続濃厚）」チャンクをRT-Cに誤って紐付け。"},
+        {"claim": "RT-Dはサイド上部付近まで点灯すると...赤7揃い濃厚", "classification": "MISATTRIBUTED", "detail": "「2」チャンク(LED点灯パターン)をRT-Dに誤って紐付け。"}
+      ]
+    },
+    {
+      "id": "FU-D06", "category": "beginner_explanation", "note": "Q17(必須probe)。捏造ではないが検索結果の活用ミス。",
+      "claims": [
+        {"claim": "ミリオンゴッドの遊び方について、まずはリール上部付近まで点灯した状態で...", "classification": "AMBIGUOUS", "detail": "context中に実際に取得されていた「打ち方(小役狙い): 基本的には全リールフリー打ちでOK」という、質問により直接的に関連するチャンクを使わず、関連性の薄い演出チャンクを「遊び方」として提示。捏造ではないが、topical framingの誤り(retrieval-utilization issue)。"}
+      ]
+    }
+  ],
+  "flagged_probes_count": 13,
+  "tally": {
+    "total_probes": 31,
+    "clean": 18,
+    "flagged_with_at_least_one_issue": 13,
+    "misattributed_entity_count": 8,
+    "unsupported_symbol_or_flow_invention_count": 1,
+    "unsupported_relational_claim_count": 2,
+    "unsupported_inference_conclusion_count": 1,
+    "silent_topic_dropping_count": 2,
+    "retrieval_utilization_error_count": 1
+  },
+  "key_pattern_1_phantom_entity_misattribution": {
+    "description": "存在しない固有名詞ペア(X-A/X-B型)を問うクエリのうち、8件中5件(AT-F, モードα/β, RT-A/B, RT-C/D)でMISATTRIBUTEDが発生。残り3件(AT-A/AT-B, CZ-A/CZ-B, モードγ/δ)は正しく情報不足を申告。",
+    "probes_misattributed": ["FU-A03", "FU-B03", "FU-B05", "FU-F03"],
+    "probes_correctly_declined": ["FU-B04", "FU-F04", "FU-F05"]
+  },
+  "key_pattern_2_sgg_gg_junbi_chu_conflation": {
+    "description": "SGGについて問われた際に、GG準備中固有の記述(「×・?・?」を含む)をSGGの定義であるかのように誤って紐付ける現象が複数probeで再現された。SUFFICIENT/PARTIALないずれの検索十分性でも発生しており、検索の量ではなくエンティティ識別の問題である可能性が高い。",
+    "probes": ["FU-D01", "FU-D03", "FU-D05"]
+  },
+  "key_pattern_3_query_style_trigger": {
+    "description": "Stage Fで確認: 全く同じ事実・同じcontextでも「初心者向けに説明して」という言い回しの時だけ「×・?・×」という記号捏造とGG本前兆→GG本当選という段階遷移フローの創作が発生した。他4つの言い回し(「〜について教えて」単独x2、「違いは？」、「要約して」)ではこの特定の捏造は一切発生しなかった。",
+    "trigger_phrasing": "GGとSGGの違いを初心者向けに説明して",
+    "clean_phrasings": ["GGについて教えて", "SGGについて教えて", "GGとSGGの違いは？", "GGとSGGを要約して"]
+  }
+}

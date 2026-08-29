@@ -1,0 +1,5 @@
+sha256: f0560ba57484d45f38d21afa89d55152e1c908c870d54c01126cf8a68f0028bb
+file: training/riru/reports/phase4fv_ground_truth.json
+frozen_before_generation: true
+stage_c_probes: 22
+stage_d_probes: 12

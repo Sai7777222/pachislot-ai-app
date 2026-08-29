@@ -1,0 +1,457 @@
+[
+  {
+    "id": "P02",
+    "category": "rag50",
+    "prompt": "ボーナス確率について教えて",
+    "query_entities": [
+      "ボーナス確率"
+    ],
+    "A0": {
+      "response": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": true,
+      "length": 89,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": true,
+      "length": 89,
+      "latency_sec": 5.66
+    }
+  },
+  {
+    "id": "P04",
+    "category": "rag50",
+    "prompt": "最低設定と最高設定の機械割の差を教えて",
+    "query_entities": [
+      "最低設定"
+    ],
+    "A0": {
+      "response": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 44,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 44,
+      "latency_sec": null,
+      "source": "copied_from_A0_identical_context"
+    }
+  },
+  {
+    "id": "LC-08",
+    "category": "rag50",
+    "prompt": "AT-Fの性能と終了後の状態を教えて",
+    "query_entities": [
+      "AT-F"
+    ],
+    "A0": {
+      "response": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。RT-Cの継続G数は45G、中抽選確率は28%です。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 57,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。RT-Cの継続G数は45G、中抽選確率は28%です。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 57,
+      "latency_sec": null,
+      "source": "copied_from_A0_identical_context"
+    }
+  },
+  {
+    "id": "Q6",
+    "category": "rag50",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "A0": {
+      "response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。SGGはゲーム数10〜100G、純増7枚/G、継続率75%以上で、100Gが選ばれると継続ストック1つ獲得できるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 109,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。SGGは10〜100Gで純増7枚/G、継続率75%以上で、100Gが選ばれると継続ストック1つ獲得できるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 105,
+      "latency_sec": 6.66
+    }
+  },
+  {
+    "id": "Q11",
+    "category": "rag50",
+    "prompt": "天井とヤメ時を合わせて初心者向けに説明して",
+    "query_entities": [
+      "天井",
+      "ヤメ",
+      "初心者向"
+    ],
+    "A0": {
+      "response": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 181,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックが大きいほど、次回の天井まで遠い可能性が高いから、ループストックが小さいときはヤメ時を考えておくといいかもね。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 219,
+      "latency_sec": 12.66
+    }
+  },
+  {
+    "id": "Q15",
+    "category": "rag50",
+    "prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+    "query_entities": [
+      "ミリオンゴッド",
+      "初心者向"
+    ],
+    "A0": {
+      "response": "基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 171,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 171,
+      "latency_sec": null,
+      "source": "copied_from_A0_identical_context"
+    }
+  },
+  {
+    "id": "Q17",
+    "category": "rag50",
+    "prompt": "ミリオンゴッドの遊び方を少し詳しく説明して",
+    "query_entities": [
+      "ミリオンゴッド"
+    ],
+    "A0": {
+      "response": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 172,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 172,
+      "latency_sec": null,
+      "source": "copied_from_A0_identical_context"
+    }
+  },
+  {
+    "id": "AD-04",
+    "category": "rag50",
+    "prompt": "ヤメ時はいつがいい？",
+    "query_entities": [
+      "ヤメ"
+    ],
+    "A0": {
+      "response": "登録データにその情報はなかったよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 17,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "登録データにその情報はなかったみたいだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 21,
+      "latency_sec": 1.15
+    }
+  },
+  {
+    "id": "Q1",
+    "category": "rag50",
+    "prompt": "設定6の機械割は？",
+    "query_entities": [
+      "設定",
+      "機械割"
+    ],
+    "A0": {
+      "response": "設定6の機械割は114.6%だよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 17,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "設定6の機械割は114.6%だよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 17,
+      "latency_sec": 1.47
+    }
+  },
+  {
+    "id": "Q5",
+    "category": "rag50",
+    "prompt": "Z-ZONEって何？",
+    "query_entities": [
+      "Z-ZONE"
+    ],
+    "A0": {
+      "response": "Z-ZONEは、ガイアステージ中のGG当選時に一部で抽選されるゾーンなんだ。継続ゲーム数は5G+aで、純増は約7枚/Gだよ。滞在中に黄7が成立しなければ、特殊抽選が発生するんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 89,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "Z-ZONEは、ガイアステージ中のGG当選時に一部で抽選されるゾーンなんだ。継続ゲーム数は5G+aで、純増は約7枚/Gだよ。滞在中に黄7が成立しなければ、特殊抽選が発生するんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 89,
+      "latency_sec": 5.39
+    }
+  },
+  {
+    "id": "Q10",
+    "category": "rag50",
+    "prompt": "Z-ZONEとGGの関係を説明して",
+    "query_entities": [
+      "Z-ZONE"
+    ],
+    "A0": {
+      "response": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 77,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 77,
+      "latency_sec": 4.5
+    }
+  },
+  {
+    "id": "Q16",
+    "category": "rag50",
+    "prompt": "ミリオンゴッドの遊び方を簡潔に説明して",
+    "query_entities": [
+      "ミリオンゴッド",
+      "簡潔"
+    ],
+    "A0": {
+      "response": "基本的には全リールフリー打ちでOKだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 20,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "ミリオンゴッドは、圧倒的な出玉感と洗練されたゲーム性が特徴のパチスロだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 37,
+      "latency_sec": 2.53
+    }
+  },
+  {
+    "id": "P06",
+    "category": "rag50",
+    "prompt": "初当りについて教えて",
+    "query_entities": [
+      "初当"
+    ],
+    "A0": {
+      "response": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 38,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 37,
+      "latency_sec": 2.7
+    }
+  },
+  {
+    "id": "P10",
+    "category": "rag50",
+    "prompt": "投資と勝率の目安について教えて",
+    "query_entities": [
+      "投資"
+    ],
+    "A0": {
+      "response": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 42,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 42,
+      "latency_sec": 3.17
+    }
+  },
+  {
+    "id": "PT-04",
+    "category": "rag50",
+    "prompt": "設定2と設定4の機械割の差はどれくらい？",
+    "query_entities": [
+      "設定",
+      "設定",
+      "機械割"
+    ],
+    "A0": {
+      "response": "設定2と設定4の機械割の差は7.5%だよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 21,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "設定2と設定4の機械割の差は7.5%だよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 21,
+      "latency_sec": 1.58
+    }
+  },
+  {
+    "id": "PT-08",
+    "category": "rag50",
+    "prompt": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+    "query_entities": [
+      "設定"
+    ],
+    "A0": {
+      "response": "設定3の機械割は100.2%、設定5は108.9%だよ。設定差は8.7%なんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 40,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "設定3は100.2%、設定5は108.9%だよ。設定差は8.7%なんだ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 36,
+      "latency_sec": 2.41
+    }
+  },
+  {
+    "id": "PT-12",
+    "category": "rag50",
+    "prompt": "モードの中で滞在率が一番高いものと低いものの差はどれくらい？",
+    "query_entities": [
+      "モード",
+      "滞在率",
+      "一番高"
+    ],
+    "A0": {
+      "response": "モードαとモードγの滞在率の最大最小差は35%だよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 26,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "モードαとモードγの滞在率の最大最小差は35%だよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 26,
+      "latency_sec": 1.78
+    }
+  },
+  {
+    "id": "PT-16",
+    "category": "rag50",
+    "prompt": "AT-AからAT-Cに変わると純増はどれくらい増える？",
+    "query_entities": [
+      "AT-A",
+      "AT-C",
+      "純増"
+    ],
+    "A0": {
+      "response": "AT-AからAT-Cに変わると、純増は2.5枚/G増加するよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 31,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "AT-AからAT-Cに変わると、純増は2.5枚/G増加するよ。",
+      "has_numeric_claim": true,
+      "abstain_or_hedge": false,
+      "length": 31,
+      "latency_sec": 1.79
+    }
+  },
+  {
+    "id": "PT-20",
+    "category": "rag50",
+    "prompt": "モードαとモードβでは、上乗せ確率の差は何ポイント？",
+    "query_entities": [
+      "モード",
+      "モード",
+      "上乗"
+    ],
+    "A0": {
+      "response": "モードαとモードβの上乗せ確率の差は15ポイントだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 27,
+      "latency_sec": null,
+      "source": "reused"
+    },
+    "A2": {
+      "response": "モードαとモードβの上乗せ確率の差は15ポイントだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 27,
+      "latency_sec": 1.71
+    }
+  }
+]

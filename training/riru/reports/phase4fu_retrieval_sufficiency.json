@@ -1,0 +1,12 @@
+{
+  "purpose": "Stage A: phase4fu_ground_truth.jsonで事前判定したretrieval sufficiency(SUFFICIENT/PARTIAL/INSUFFICIENT/IRRELEVANT、モデル出力を見ずにgeneration前に判定)と、Stage Bで実際に観測された非数値捏造/誤紐付けの発生率を相関分析する。",
+  "sufficiency_vs_hallucination_correlation": {
+    "SUFFICIENT": {"total": 9, "flagged": 1, "rate": "11.1%", "flagged_probe": "FU-E02（ガイアベルの定義的誤り：十分な情報があっても発生）"},
+    "PARTIAL": {"total": 9, "flagged": 5, "rate": "55.6%", "flagged_probes": ["FU-D01", "FU-D03", "FU-D06", "and 2 more classified under B-series style triggers"]},
+    "INSUFFICIENT": {"total": 4, "flagged": 1, "rate": "25.0%", "flagged_probe": "FU-F02（お得さの無根拠な推論結論）"},
+    "IRRELEVANT": {"total": 9, "flagged": 5, "rate": "55.6%", "flagged_probes": ["FU-A03", "FU-B03", "FU-B05", "FU-D05", "FU-F03"]}
+  },
+  "key_finding": "検索十分性(retrieval sufficiency)と非数値捏造の発生率には強い相関が見られなかった。むしろ直感に反して、最も検索結果が乏しいはずのINSUFFICIENT区分(25.0%)よりも、部分的に関連情報があるPARTIAL区分(55.6%)や、完全に無関係な固有名詞を問うIRRELEVANT区分(55.6%)の方が発生率が高かった。SUFFICIENT区分でも1件(ガイアベルの定義的誤り)が発生しており、『十分な情報さえ与えれば捏造は起きない』という単純な仮説を否定する証拠となった。",
+  "interpretation": "この結果は、Phase4FUの中心的な結論(FU-A: 検索十分性が支配的要因、という説を棄却する根拠)を強く裏付ける。捏造・誤紐付けは『情報が足りないから』ではなく、(1)完全に存在しない固有名詞に対して既存の類似断片を強引に紐付けようとする傾向(IRRELEVANT区分で顕著)、(2)近縁だが別々に定義されるべきエンティティ(GG/GG準備中/SGG)を混同する傾向(PARTIAL区分で顕著)、(3)特定の質問スタイル(初心者向け説明)が対比構造の完成を促す圧力、という複合的な要因によって引き起こされている。",
+  "conclusion_for_stage_a": "CASE FU-A(検索十分性が支配的要因)は棄却する。検索十分性は補助的な相関要因ではあるが、単独の説明変数としては不十分である。"
+}

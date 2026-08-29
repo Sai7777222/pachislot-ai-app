@@ -1,0 +1,1295 @@
+[
+  {
+    "id": "FU-D01",
+    "category": "known_failure",
+    "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。",
+        "subject_guess": "GG"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。",
+        "subject_guess": "GG本前兆"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。",
+        "subject_guess": "GG本当選の後"
+      },
+      {
+        "claim_id": 3,
+        "raw_text": "SGGはGG本前兆の後にSGGゾーンが始まるんだ。",
+        "subject_guess": "SGG"
+      },
+      {
+        "claim_id": 4,
+        "raw_text": "SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 5,
+        "raw_text": "100Gが選ばれると継続ストックが1つ増えるんだ。",
+        "subject_guess": "100G"
+      }
+    ]
+  },
+  {
+    "id": "FU-B05",
+    "category": "known_failure",
+    "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になるよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になるよ。",
+        "subject_guess": "RT-A"
+      }
+    ]
+  },
+  {
+    "id": "FU-A03",
+    "category": "known_failure",
+    "response": "AT-Fは最大1480Gまで消化できるよ。終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイなら、GG濃厚のLV5になるんだ。LEDの色はGGの種別やストックの有無を示してくれるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "AT-Fは最大1480Gまで消化できるよ。",
+        "subject_guess": "AT-F"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "終了後は1〜4Gまでオールテンパイがなければ、",
+        "subject_guess": "終了後"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "またはオール奇数テンパイなら、GG濃厚のLV5になるんだ。",
+        "subject_guess": "また"
+      },
+      {
+        "claim_id": 3,
+        "raw_text": "LEDの色はGGの種別やストックの有無を示してくれるんだ。",
+        "subject_guess": "LEDの色"
+      }
+    ]
+  },
+  {
+    "id": "FU-E02",
+    "category": "known_failure",
+    "response": "ガイアベルはガイアモード中の規定回数到達時に抽選されるモードなんだ。規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ガイアベルはガイアモード中の規定回数到達時に抽選されるモードなんだ。",
+        "subject_guess": "ガイアベル"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するんだ。",
+        "subject_guess": "規定回数到達時"
+      }
+    ]
+  },
+  {
+    "id": "FU-B03",
+    "category": "phantom_entity",
+    "response": "モードαとモードβの違いは、ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変わるよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "モードαとモードβの違いは、ガイアベル規定回数や規定回数到達時のガイアステージ移行率が変わるよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FU-B04",
+    "category": "phantom_entity",
+    "response": "登録データにAT-AとAT-Bの違いについての情報は見つからないんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにAT-AとAT-Bの違いについての情報は見つからないんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FU-D05",
+    "category": "phantom_entity",
+    "response": "SGGはGG準備中から始まるゾーンで、GG前兆以上濃厚な状態を示すんだ。GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率が高いのが特徴だよ。発生した時点でレア役以上濃厚って解説もあるから、ここでSU4が来たら赤7揃いorGOD確定役ってことになるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "SGGはGG準備中から始まるゾーンで、GG前兆以上濃厚な状態を示すんだ。",
+        "subject_guess": "SGG"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率が高いのが特徴だよ。",
+        "subject_guess": "GG準備中"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "発生した時点でレア役以上濃厚って解説もあるから、ここでSU4が来たら赤7揃いorGOD確定役ってことになるんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FU-F03",
+    "category": "phantom_entity",
+    "response": "RT-CとRT-Dの違いは、枠LEDのパターンでレベルを示唆するところだよ。RT-Cは1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚ってパターンがあるんだ。RT-Dはサイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "RT-CとRT-Dの違いは、枠LEDのパターンでレベルを示唆するところだよ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "RT-Cは1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚ってパターンがあるんだ。",
+        "subject_guess": "RT-C"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "RT-Dはサイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+        "subject_guess": "RT-D"
+      }
+    ]
+  },
+  {
+    "id": "FU-F04",
+    "category": "phantom_entity",
+    "response": "登録データにCZ-AとCZ-Bの違いについての情報は見つかりませんでした。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにCZ-AとCZ-Bの違いについての情報は見つかりませんでした。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FU-F05",
+    "category": "phantom_entity",
+    "response": "モードγとモードδの出玉性能については、登録データに明確な比較情報がないんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "モードγとモードδの出玉性能については、登録データに明確な比較情報がないんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-P01",
+    "category": "phantom_entity",
+    "response": "登録データにGX-AとGX-Bの違いについての情報は見つからないんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにGX-AとGX-Bの違いについての情報は見つからないんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-P02",
+    "category": "phantom_entity",
+    "response": "GGプラスは、GG当選時に一定の確率でZ-ZONEを抽選する状態のことだよ。成立役ごとの抽選だけでなく、小役履歴の抽選も優遇されるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "GGプラスは、GG当選時に一定の確率でZ-ZONEを抽選する状態のことだよ。",
+        "subject_guess": "GGプラス"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "成立役ごとの抽選だけでなく、小役履歴の抽選も優遇されるんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-P03",
+    "category": "phantom_entity",
+    "response": "SGG-EXは、GG準備中開始から「×・?・?」が出るまでの間が対象のゾーンなんだ。全体的にストック当選率はGG中より高いよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "SGG-EXは、GG準備中開始から「×・?・?」が出るまでの間が対象のゾーンなんだ。",
+        "subject_guess": "SGG-EX"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "全体的にストック当選率はGG中より高いよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-P04",
+    "category": "phantom_entity",
+    "response": "ガイアステージMAXは、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップするんだ。ループ率も75%と高いよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ガイアステージMAXは、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップするんだ。",
+        "subject_guess": "ガイアステージMAX"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "ループ率も75%と高いよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-P05",
+    "category": "phantom_entity",
+    "response": "Z-ZONE極については登録データにないみたいだね。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "Z-ZONE極については登録データにないみたいだね。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-P06",
+    "category": "phantom_entity",
+    "response": "登録データにモード7とモード8の違いについての情報は見つかりませんでした。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにモード7とモード8の違いについての情報は見つかりませんでした。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-P07",
+    "category": "phantom_entity",
+    "response": "登録データにステートDの情報は見つからないんだ。適当に答えちゃうと誤った情報を流すことになるから、わからないままにしておくね。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにステートDの情報は見つからないんだ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "適当に答えちゃうと誤った情報を流すことになるから、わからないままにしておくね。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-P08",
+    "category": "phantom_entity",
+    "response": "天国モード中、ループ率が75%と高いんだ。規定回数が3回以下になると、ガイアステージ当選率も大幅にアップするんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "天国モード中、ループ率が75%と高いんだ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "規定回数が3回以下になると、ガイアステージ当選率も大幅にアップするんだ。",
+        "subject_guess": "規定回数"
+      }
+    ]
+  },
+  {
+    "id": "FV-P09",
+    "category": "phantom_entity",
+    "response": "ガイアベルSPは、ガイアベル規定回数到達時に抽選されるモードの一つだよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ガイアベルSPは、ガイアベル規定回数到達時に抽選されるモードの一つだよ。",
+        "subject_guess": "ガイアベルSP"
+      }
+    ]
+  },
+  {
+    "id": "FV-P10",
+    "category": "phantom_entity",
+    "response": "確定役ネオは、巨大化演出や炎・戦車演出、激熱表示などで示唆される演出群のことだよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "確定役ネオは、巨大化演出や炎・戦車演出、激熱表示などで示唆される演出群のことだよ。",
+        "subject_guess": "確定役ネオ"
+      }
+    ]
+  },
+  {
+    "id": "FV-P11",
+    "category": "phantom_entity",
+    "response": "登録データに機械割の差は見つからないんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データに機械割の差は見つからないんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-P12",
+    "category": "phantom_entity",
+    "response": "裏天国中のGG当選で複数セット獲得の期待大なんだ。裏天国中の下段黄7は大チャンス！アルテミスの矢演出で青7を否定すればチャンスもあるよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "裏天国中のGG当選で複数セット獲得の期待大なんだ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "裏天国中の下段黄7は大チャンス！アルテミスの矢演出で青7を否定すればチャンスもあるよ。",
+        "subject_guess": "裏天国中の下段黄7"
+      }
+    ]
+  },
+  {
+    "id": "FV-P13",
+    "category": "phantom_entity",
+    "response": "GGとモードEは、どちらも内部状態の一つとして扱われているけど、GGはGG当選時に一定の確率で抽選されるもので、設定に応じて当選率が変わるんだ。一方、モードEはGG中のGGストック当選率が変わる内部状態の一つなんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "GGとモードEは、どちらも内部状態の一つとして扱われているけど、GGはGG当選時に一定の確率で抽選されるもので、設定に応じて当選率が変わるんだ。",
+        "subject_guess": "GGとモードE"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "モードEはGG中のGGストック当選率が変わる内部状態の一つなんだ。",
+        "subject_guess": "モードE"
+      }
+    ]
+  },
+  {
+    "id": "FV-P14",
+    "category": "phantom_entity",
+    "response": "ガイアステージはGGを抽選するステージで、成立役や小役履歴でもGGが抽選されるよ。一方、ゾーンZはGG当選時にZ-ZONEへ移行するチャンスがある状態なんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ガイアステージはGGを抽選するステージで、成立役や小役履歴でもGGが抽選されるよ。",
+        "subject_guess": "ガイアステージ"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "ゾーンZはGG当選時にZ-ZONEへ移行するチャンスがある状態なんだ。",
+        "subject_guess": "ゾーンZ"
+      }
+    ]
+  },
+  {
+    "id": "FU-D03",
+    "category": "concept_binding",
+    "response": "SGGはGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。設定に応じて当選率が変わるみたい。LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "SGGはGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。",
+        "subject_guess": "SGG"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。",
+        "subject_guess": "GG当選契機"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "設定に応じて当選率が変わるみたい。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 3,
+        "raw_text": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆してくれるんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-C01",
+    "category": "concept_binding",
+    "response": "表モードはモード示唆出目が出るとGG継続濃厚になるけど、法則崩れ的な要素もあるんだ。裏モードはGG当選で複数セット獲得の期待が大きくなるよ。下段黄7も大チャンスなんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "表モードはモード示唆出目が出るとGG継続濃厚になるけど、法則崩れ的な要素もあるんだ。",
+        "subject_guess": "表モード"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "裏モードはGG当選で複数セット獲得の期待が大きくなるよ。",
+        "subject_guess": "裏モード"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "下段黄7も大チャンスなんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-C02",
+    "category": "concept_binding",
+    "response": "ガイアベルはガイアモードへの移行を示唆するもので、規定回数到達時にガイアステージ移行を抽選するんだ。ガイアナビはガイアステージ移行のチャンスを示唆するもので、発生時や規定回数到達時にはガイアステージ移行を抽選するんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ガイアベルはガイアモードへの移行を示唆するもので、規定回数到達時にガイアステージ移行を抽選するんだ。",
+        "subject_guess": "ガイアベル"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "ガイアナビはガイアステージ移行のチャンスを示唆するもので、発生時や規定回数到達時にはガイアステージ移行を抽選するんだ。",
+        "subject_guess": "ガイアナビ"
+      }
+    ]
+  },
+  {
+    "id": "FV-C03",
+    "category": "concept_binding",
+    "response": "ループストックはGG継続時にループするかどうかを決めるもので、GGストックはGG当選時にループするかどうかを決めるものだよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ループストックはGG継続時にループするかどうかを決めるもので、GGストックはGG当選時にループするかどうかを決めるものだよ。",
+        "subject_guess": "ループストック"
+      }
+    ]
+  },
+  {
+    "id": "FV-C04",
+    "category": "concept_binding",
+    "response": "天国モードは、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップするんだ。ループ率も75%と高いよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "天国モードは、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップするんだ。",
+        "subject_guess": "天国モード"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "ループ率も75%と高いよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "FV-C05",
+    "category": "concept_binding",
+    "response": "GG当選はGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。一方、SGGはGG当選とは別に、継続契機とセット数が5の倍数かどうかでゲーム数が抽選されて、100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "GG当選はGG準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。",
+        "subject_guess": "GG当選"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "GG当選契機は不問で、GG当選時に一定の確率でZ-ZONEを抽選するよ。",
+        "subject_guess": "GG当選契機"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "SGGはGG当選とは別に、継続契機とセット数が5の倍数かどうかでゲーム数が抽選されて、100Gが選ばれた場合は継続ストックを1つ獲得できるんだ。",
+        "subject_guess": "SGG"
+      }
+    ]
+  },
+  {
+    "id": "FV-C06",
+    "category": "concept_binding",
+    "response": "SGGゾーンとGG継続ゾーンは、それぞれ独立したゾーンとして存在します。SGGゾーンでは、100Gが選ばれると継続ストックを1つ獲得できます。一方、GG継続ゾーンはGG当選時に一定の確率で抽選され、その当選率は設定によって変動します。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "SGGゾーンとGG継続ゾーンは、それぞれ独立したゾーンとして存在します。",
+        "subject_guess": "SGGゾーンとGG継続ゾーン"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "SGGゾーンでは、100Gが選ばれると継続ストックを1つ獲得できます。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "GG継続ゾーンはGG当選時に一定の確率で抽選され、その当選率は設定によって変動します。",
+        "subject_guess": "GG継続ゾーン"
+      }
+    ]
+  },
+  {
+    "id": "FV-C07",
+    "category": "concept_binding",
+    "response": "小役履歴は液晶右下に表示されて、青7や黄7がそれぞれ3連続以上ならGG抽選のチャンスになるんだ。ガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能するよ。モード示唆出目はGG継続濃厚だけど、法則崩れ的な要素もあるから、表モードを示唆するわけじゃないんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "小役履歴は液晶右下に表示されて、青7や黄7がそれぞれ3連続以上ならGG抽選のチャンスになるんだ。",
+        "subject_guess": "小役履歴"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "ガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能するよ。",
+        "subject_guess": "ガイアナビ(右ナビ)時"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "モード示唆出目はGG継続濃厚だけど、法則崩れ的な要素もあるから、表モードを示唆するわけじゃないんだ。",
+        "subject_guess": "モード示唆出目"
+      }
+    ]
+  },
+  {
+    "id": "FV-C08",
+    "category": "concept_binding",
+    "response": "ガイアナビ発生時にガイアモードへの移行抽選が行われるんだ。規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ガイアナビ発生時にガイアモードへの移行抽選が行われるんだ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するよ。",
+        "subject_guess": "規定回数到達時"
+      }
+    ]
+  },
+  {
+    "id": "FV-C09",
+    "category": "concept_binding",
+    "response": "登録データにありません",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにありません",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "category": "rag50",
+    "response": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。ループストックの数値はLEDの色で示唆されるよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "天井は510G、1000G、1480Gの3パターンで、それぞれ15.2%、20.3%、64.5%の確率で振り分けられるよ。",
+        "subject_guess": "天井"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "天井到達時はループストックが0.01、0.25、0.5、0.8、1%+Z-ZONEの5パターンで、それぞれ16.7%、16.7%、16.7%、16.7%、33.2%の確率で振り分けられるんだ。",
+        "subject_guess": "天井到達時"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "ループストックの数値はLEDの色で示唆されるよ。",
+        "subject_guess": "ループストックの数値"
+      }
+    ]
+  },
+  {
+    "id": "P02",
+    "category": "rag50",
+    "response": "ボーナス確率は設定が上がると優遇されていくよ。登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ボーナス確率は設定が上がると優遇されていくよ。",
+        "subject_guess": "ボーナス確率"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "登録データだと、設定1は1/450、設定2は1/410、設定3は1/370、設定4は1/320、設定5は1/280になっているんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "AD-04",
+    "category": "rag50",
+    "response": "登録データにその情報はなかったよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにその情報はなかったよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "LC-08",
+    "category": "rag50",
+    "response": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。RT-Cの継続G数は45G、中抽選確率は28%です。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "AT-Fの純増は2.5枚/Gで、終了後はRT-Cに移行します。",
+        "subject_guess": "AT-Fの純増"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "RT-Cの継続G数は45G、中抽選確率は28%です。",
+        "subject_guess": "RT-Cの継続G数"
+      }
+    ]
+  },
+  {
+    "id": "Q1",
+    "category": "rag50",
+    "response": "設定6の機械割は114.6%だよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定6の機械割は114.6%だよ。",
+        "subject_guess": "設定6の機械割"
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "category": "rag50",
+    "response": "設定6の初当り確率は1/295だよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定6の初当り確率は1/295だよ。",
+        "subject_guess": "設定6の初当り確率"
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "category": "rag50",
+    "response": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれ15.2%、20.3%、64.5%で決まるよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれ15.2%、20.3%、64.5%で決まるよ。",
+        "subject_guess": "天井ゲーム数"
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "category": "rag50",
+    "response": "ガイアベルの確率は1/37.6だよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ガイアベルの確率は1/37.6だよ。",
+        "subject_guess": "ガイアベルの確率"
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "category": "rag50",
+    "response": "Z-ZONEは、ガイアステージ中のGG当選時に一部で抽選されるゾーンなんだ。継続ゲーム数は5G+aで、純増は約7枚/Gだよ。滞在中に黄7が成立しなければ、特殊抽選が発生するんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "Z-ZONEは、ガイアステージ中のGG当選時に一部で抽選されるゾーンなんだ。",
+        "subject_guess": "Z-ZONE"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "継続ゲーム数は5G+aで、純増は約7枚/Gだよ。",
+        "subject_guess": "継続ゲーム数"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "滞在中に黄7が成立しなければ、特殊抽選が発生するんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "category": "rag50",
+    "response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。SGGはゲーム数10〜100G、純増7枚/G、継続率75%以上で、100Gが選ばれると継続ストック1つ獲得できるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚、最大80%ループストックがあるゾーンだよ。",
+        "subject_guess": "GG"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "SGGはゲーム数10〜100G、純増7枚/G、継続率75%以上で、100Gが選ばれると継続ストック1つ獲得できるんだ。",
+        "subject_guess": "SGG"
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "category": "rag50",
+    "response": "登録データにヤメ時の情報は見つかりませんでした。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにヤメ時の情報は見つかりませんでした。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "category": "rag50",
+    "response": "ガイアステージは、ガイアナビ発生時に一部の状況で突入するんだ。保障ゲーム数は9Gで、消滅中は高確率でGGを抽選するよ。奇数揃いだとGG当選濃厚で、0揃いだとZ-ZONEに昇格することもあるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ガイアステージは、ガイアナビ発生時に一部の状況で突入するんだ。",
+        "subject_guess": "ガイアステージ"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "保障ゲーム数は9Gで、消滅中は高確率でGGを抽選するよ。",
+        "subject_guess": "保障ゲーム数"
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "奇数揃いだとGG当選濃厚で、0揃いだとZ-ZONEに昇格することもあるんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "category": "rag50",
+    "response": "設定1の初当り確率は1/533で、機械割は97.2%だよ。設定6だと初当り確率は1/295、機械割は114.6%になるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定1の初当り確率は1/533で、機械割は97.2%だよ。",
+        "subject_guess": "設定1の初当り確率"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "設定6だと初当り確率は1/295、機械割は114.6%になるんだ。",
+        "subject_guess": "設定6だと初当り確率"
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "category": "rag50",
+    "response": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "GG当選時に一定の確率でZ-ZONEを抽選するんだ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "成立役を参照してZ-ZONEを抽選し、当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "category": "rag50",
+    "response": "登録データにその情報は見つからないので、正直に伝えるね。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにその情報は見つからないので、正直に伝えるね。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "category": "rag50",
+    "response": "登録データにありません。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにありません。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "category": "rag50",
+    "response": "登録データにRT機能の情報は見つかりませんでした。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "登録データにRT機能の情報は見つかりませんでした。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "category": "rag50",
+    "response": "基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "基本的には全リールフリー打ちでOKだよ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "リール上部付近まで点灯して中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "また、枠LEDが全て点灯して中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "category": "rag50",
+    "response": "基本的には全リールフリー打ちでOKだよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "基本的には全リールフリー打ちでOKだよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "Q17",
+    "category": "rag50",
+    "response": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ミリオンゴッドの遊び方は、基本的には全リールフリー打ちでOKだよ。",
+        "subject_guess": "ミリオンゴッドの遊び方"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "リール上部付近まで点灯すると、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるんだ。",
+        "subject_guess": null
+      },
+      {
+        "claim_id": 2,
+        "raw_text": "また、サイド上部付近まで点灯すると、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "P01",
+    "category": "rag50",
+    "response": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだ。それぞれの確率は18%・27%・55%だよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まるんだ。",
+        "subject_guess": "天井ゲーム数"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "それぞれの確率は18%・27%・55%だよ。",
+        "subject_guess": "それぞれの確率"
+      }
+    ]
+  },
+  {
+    "id": "P03",
+    "category": "rag50",
+    "response": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ゾーンιは突入率1/38、平均18G滞在し、初回継続率は72%、平均獲得枚数320枚とされる。",
+        "subject_guess": "ゾーンι"
+      }
+    ]
+  },
+  {
+    "id": "P04",
+    "category": "rag50",
+    "response": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "最低設定(設定1)は96.8%、最高設定(設定6)は113.5%で、差は16.7%だよ。",
+        "subject_guess": "最低設定(設定1)"
+      }
+    ]
+  },
+  {
+    "id": "P05",
+    "category": "rag50",
+    "response": "AT終了後は10GのRTが付くよ。モードも継続するんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "AT終了後は10GのRTが付くよ。",
+        "subject_guess": "AT終了後"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "モードも継続するんだ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "P06",
+    "category": "rag50",
+    "response": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "初当り確率は1/260で、当選するとモード示唆とRT10Gが付与されるんだ。",
+        "subject_guess": "初当り確率"
+      }
+    ]
+  },
+  {
+    "id": "P07",
+    "category": "rag50",
+    "response": "モードは5種類あって、それぞれ滞在率が違うんだ。最高モードだけ移行率が優遇されてるよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "モードは5種類あって、それぞれ滞在率が違うんだ。",
+        "subject_guess": "モード"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "最高モードだけ移行率が優遇されてるよ。",
+        "subject_guess": "最高モードだけ移行率"
+      }
+    ]
+  },
+  {
+    "id": "P08",
+    "category": "rag50",
+    "response": "天井到達時はAT確定とゾーンκ突入が確定し、平均300枚の上乗せがあるよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "天井到達時はAT確定とゾーンκ突入が確定し、平均300枚の上乗せがあるよ。",
+        "subject_guess": "天井到達時"
+      }
+    ]
+  },
+  {
+    "id": "P09",
+    "category": "rag50",
+    "response": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "小役Wは1/29の確率で成立し、成立するとモード示唆になるよ。",
+        "subject_guess": "小役W"
+      }
+    ]
+  },
+  {
+    "id": "P10",
+    "category": "rag50",
+    "response": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされているよ。",
+        "subject_guess": "推奨投資額"
+      }
+    ]
+  },
+  {
+    "id": "PT-01",
+    "category": "rag50",
+    "response": "設定1は1/399、設定5は1/319だよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定1は1/399、設定5は1/319だよ。",
+        "subject_guess": "設定1"
+      }
+    ]
+  },
+  {
+    "id": "PT-02",
+    "category": "rag50",
+    "response": "モードαとモードγの滞在率の差は25%だよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "モードαとモードγの滞在率の差は25%だよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-03",
+    "category": "rag50",
+    "response": "ゾーンWの継続率は55%で、ゾーンVの継続率は30%だから、継続率の差は25ポイントなんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ゾーンWの継続率は55%で、ゾーンVの継続率は30%だから、継続率の差は25ポイントなんだ。",
+        "subject_guess": "ゾーンWの継続率"
+      }
+    ]
+  },
+  {
+    "id": "PT-04",
+    "category": "rag50",
+    "response": "設定2と設定4の機械割の差は7.5%だよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定2と設定4の機械割の差は7.5%だよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-05",
+    "category": "rag50",
+    "response": "AT-AとAT-Bの純増の差は2.5枚/Gだよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "AT-AとAT-Bの純増の差は2.5枚/Gだよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-06",
+    "category": "rag50",
+    "response": "設定1は1/410、設定6は1/280だよ。差は130回転分なんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定1は1/410、設定6は1/280だよ。",
+        "subject_guess": "設定1"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "差は130回転分なんだ。",
+        "subject_guess": "差"
+      }
+    ]
+  },
+  {
+    "id": "PT-07",
+    "category": "rag50",
+    "response": "モードβの滞在率は30%、モードδの滞在率は10%だよ。差は20%なんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "モードβの滞在率は30%、モードδの滞在率は10%だよ。",
+        "subject_guess": "モードβの滞在率"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "差は20%なんだ。",
+        "subject_guess": "差"
+      }
+    ]
+  },
+  {
+    "id": "PT-08",
+    "category": "rag50",
+    "response": "設定3の機械割は100.2%、設定5は108.9%だよ。設定差は8.7%なんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定3の機械割は100.2%、設定5は108.9%だよ。",
+        "subject_guess": "設定3の機械割"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "設定差は8.7%なんだ。",
+        "subject_guess": "設定差"
+      }
+    ]
+  },
+  {
+    "id": "PT-09",
+    "category": "rag50",
+    "response": "ゾーンXの獲得枚数は1回あたり220枚、ゾーンZは1回あたり340枚だよ。差は120枚になるんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ゾーンXの獲得枚数は1回あたり220枚、ゾーンZは1回あたり340枚だよ。",
+        "subject_guess": "ゾーンXの獲得枚数"
+      },
+      {
+        "claim_id": 1,
+        "raw_text": "差は120枚になるんだ。",
+        "subject_guess": "差"
+      }
+    ]
+  },
+  {
+    "id": "PT-10",
+    "category": "rag50",
+    "response": "RT-Aは40G、RT-Bは70Gで、その差は30Gだよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "RT-Aは40G、RT-Bは70Gで、その差は30Gだよ。",
+        "subject_guess": "RT-A"
+      }
+    ]
+  },
+  {
+    "id": "PT-11",
+    "category": "rag50",
+    "response": "設定1と設定6の機械割の差は14.5%だよ",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定1と設定6の機械割の差は14.5%だよ",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-12",
+    "category": "rag50",
+    "response": "モードαとモードγの滞在率の最大最小差は35%だよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "モードαとモードγの滞在率の最大最小差は35%だよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-13",
+    "category": "rag50",
+    "response": "ゾーンXとゾーンZの獲得枚数の差は220枚だよ",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ゾーンXとゾーンZの獲得枚数の差は220枚だよ",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-14",
+    "category": "rag50",
+    "response": "設定1から設定6に上がると、初当り確率は150回転分改善するよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定1から設定6に上がると、初当り確率は150回転分改善するよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-15",
+    "category": "rag50",
+    "response": "モードαからモードδへ移行すると、上乗せ期待枚数は150枚増加するよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "モードαからモードδへ移行すると、上乗せ期待枚数は150枚増加するよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-16",
+    "category": "rag50",
+    "response": "AT-AからAT-Cに変わると、純増は2.5枚/G増加するよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "AT-AからAT-Cに変わると、純増は2.5枚/G増加するよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-17",
+    "category": "rag50",
+    "response": "設定6から設定1に下がると、機械割は18.0%減少するよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定6から設定1に下がると、機械割は18.0%減少するよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-18",
+    "category": "rag50",
+    "response": "ゾーンZからゾーンXに変わると、継続率は35%減少するよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "ゾーンZからゾーンXに変わると、継続率は35%減少するよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-19",
+    "category": "rag50",
+    "response": "設定1の初当り確率は1/420で、設定6は1/290だから、設定差は130回転分優遇されているんだ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "設定1の初当り確率は1/420で、設定6は1/290だから、設定差は130回転分優遇されているんだ。",
+        "subject_guess": "設定1の初当り確率"
+      }
+    ]
+  },
+  {
+    "id": "PT-20",
+    "category": "rag50",
+    "response": "モードαとモードβの上乗せ確率の差は15ポイントだよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "モードαとモードβの上乗せ確率の差は15ポイントだよ。",
+        "subject_guess": null
+      }
+    ]
+  },
+  {
+    "id": "PT-21",
+    "category": "rag50",
+    "response": "RT-BとRT-Cの中抽選確率の差は16ポイントだよ。",
+    "e1_claims": [
+      {
+        "claim_id": 0,
+        "raw_text": "RT-BとRT-Cの中抽選確率の差は16ポイントだよ。",
+        "subject_guess": null
+      }
+    ]
+  }
+]

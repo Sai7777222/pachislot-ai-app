@@ -1,0 +1,5 @@
+sha256: fc5ebb86a074035018d92d7b6a4ffd255b9ba2034fcb5ab988450fb94480dc80
+file: training/riru/reports/phase4fw_ground_truth.json
+frozen_before_verifier_construction: true
+total_responses: 84
+total_claims: 129

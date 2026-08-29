@@ -1,0 +1,182 @@
+[
+  {
+    "id": "FU-D01",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "production_prompt_result": {
+      "response": "GGはGG準備中から始まって、GG本前兆→GG本前兆→GG本前兆→GG本当選という流れで進むんだ。GG本前兆は「×・?・?」の順番で、GG本当選は「×・?・×」の順番になるよ。GG本当選の後はGG継続ゾーンが始まるんだけど、そのゾーン中はLEDの色でループストック種別やGGストックの有無が示唆されるんだ。一方、SGGはGG本前兆の後にSGGゾーンが始まるんだ。SGGゾーンでは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるんだ。100Gが選ばれると継続ストックが1つ増えるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "minimal_prompt_result": {
+      "response": "GGは準備中開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率が高いよ。SGGはゲーム数抽選があるんだけど、100Gが選ばれると継続ストックを1つ獲得できるんだ。入力タイミングはSGG引き戻しゾーンの毎ゲーム レバーON時~次ゲームBETまでだよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 133
+    }
+  },
+  {
+    "id": "FU-B05",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "production_prompt_result": {
+      "response": "RT-Aは枠LEDのパターンでレベルを示唆し、RT-Bは枠LEDが全て点灯すると中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が濃厚になるよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "minimal_prompt_result": {
+      "response": "RT-AとRT-Bの違いについては登録データに情報が見つかりませんでした。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 37
+    }
+  },
+  {
+    "id": "FU-A01",
+    "prompt": "ボーナス確率は設定によってどう変わりますか？",
+    "production_prompt_result": {
+      "response": "登録データにボーナス確率の設定差は見つかりませんでした。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true
+    },
+    "minimal_prompt_result": {
+      "response": "GG当選率は設定に応じて変化するみたいだけど、具体的な数字は登録データに情報が見つからないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 48
+    }
+  },
+  {
+    "id": "FU-A02",
+    "prompt": "天井は何ゲームですか？設定変更時と通常時それぞれ振り分けを教えて",
+    "production_prompt_result": {
+      "response": "天井ゲーム数は3種類あるみたいだけど、設定変更時と通常時の振り分けは登録データにないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true
+    },
+    "minimal_prompt_result": {
+      "response": "天井ゲーム数は3種類あるけど、設定変更時と通常時の振り分けは登録データに情報が見つからなかったよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 49
+    }
+  },
+  {
+    "id": "FU-A03",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "production_prompt_result": {
+      "response": "AT-Fは最大1480Gまで消化できるよ。終了後は1〜4Gまでオールテンパイがなければ、またはオール奇数テンパイなら、GG濃厚のLV5になるんだ。LEDの色はGGの種別やストックの有無を示してくれるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "minimal_prompt_result": {
+      "response": "AT-Fの性能と終了後の状態については登録データに情報が見つかりませんでした。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 39
+    }
+  },
+  {
+    "id": "FU-A04",
+    "prompt": "ALL色(判別)について教えて",
+    "production_prompt_result": {
+      "response": "ALL色(判別)については登録データにありません。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true
+    },
+    "minimal_prompt_result": {
+      "response": "ALL色(判別)については登録データに情報が見つかりませんでした。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 33
+    }
+  },
+  {
+    "id": "FU-C01",
+    "prompt": "モードの種類を要約して",
+    "production_prompt_result": {
+      "response": "モードは6種類あって、それぞれのモードによってGG当選率やGG中のGGストック当選率が変わるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "minimal_prompt_result": {
+      "response": "モードは6種類あって、それぞれでGG当選率やGG中のGGストック当選率が変わるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 42
+    }
+  },
+  {
+    "id": "FU-C02",
+    "prompt": "枠LED点灯パターンをまとめて教えて",
+    "production_prompt_result": {
+      "response": "枠LEDが全て点灯している場合は、中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚になるよ。また、ステージチェンジ発生でGOD揃い濃厚になるんだ。点灯しない場合はGOD揃い濃厚なんだ。サイド上部付近まで点灯している場合は、右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚になるよ。ステージチェンジ発生でGOD揃い濃厚になるんだ。リール上部付近まで点灯している場合は、中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚になるよ。激熱表示発生で確定役濃厚になるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "minimal_prompt_result": {
+      "response": "枠LEDが全て点灯なら中段黄7、赤7フェイク(斜め)、SP役、赤7揃い、GOD揃い赤7が中段以外に平行テンパイすれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚\n枠LEDがサイド上部付近まで点灯なら右上がり黄7、中段黄7、赤7揃い、GOD揃い赤7が止まれば赤7揃い濃厚 / ステージチェンジ発生でGOD揃い濃厚\n枠LEDがリール上部付近まで点灯なら中段青7、右上がり黄7、中段黄7、赤7フェイク(順押し平行)、赤7揃い、GOD揃い赤7が斜めテンパイすれば赤7揃い濃厚 / 激熱表示発生で確定役濃厚\n枠LEDが点灯しない場合はGOD揃い濃厚\nという感じだよ！",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 283
+    }
+  },
+  {
+    "id": "FU-D02",
+    "prompt": "ガイアステージとZ-ZONEの違いを初心者向けに説明して",
+    "production_prompt_result": {
+      "response": "ガイアステージはGG当選時の抽選で、成立役ごとにGGを抽選するんだ。成立役とは別に青7・黄7の小役履歴でもGGが抽選されるよ。一方、Z-ZONEはGG当選時、前兆ゲーム数が決まったタイミングで抽選されるんだ。成立役ごとの抽選だけでなく、小役履歴の抽選も優遇されるんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "minimal_prompt_result": {
+      "response": "ガイアステージはGG当選時の抽選で、成立役ごとや小役履歴でもGGが抽選される優遇状態なんだ。一方、Z-ZONEはGG当選時に一定の確率で抽選され、成立役ごとの抽選だけでなく小役履歴の抽選も優遇される超高確率状態なんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 109
+    }
+  },
+  {
+    "id": "FU-E02",
+    "prompt": "ガイアベルとは何か説明して",
+    "production_prompt_result": {
+      "response": "ガイアベルはガイアモード中の規定回数到達時に抽選されるモードなんだ。規定回数到達時はガイアモードに応じてガイアステージ移行を抽選するんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false
+    },
+    "minimal_prompt_result": {
+      "response": "ガイアベルはガイアモードへの移行を示唆する役の一つで、規定回数到達時にガイアステージ移行を抽選する。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": false,
+      "length": 50
+    }
+  },
+  {
+    "id": "FU-E04",
+    "prompt": "GG中とGG準備中の違いを教えて",
+    "production_prompt_result": {
+      "response": "GG準備中はGG開始から「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。登録データにはGG準備中の詳細な数字は載ってないけど、GG中より当選しやすくなるってことだけは分かってるよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true
+    },
+    "minimal_prompt_result": {
+      "response": "GG準備中は「×・?・?」が出るまでの間が対象で、GG中より当選率が高いみたい。GG中の詳細な当選率は登録データに情報が見つからないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 69
+    }
+  },
+  {
+    "id": "FU-F01",
+    "prompt": "GGとガイアステージ、どっちが出玉が多い？",
+    "production_prompt_result": {
+      "response": "登録データにGGとガイアステージの出玉比較は見つからないんだ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true
+    },
+    "minimal_prompt_result": {
+      "response": "登録データにはGGとガイアステージの出玉比較の情報が見つからなかったよ。",
+      "has_numeric_claim": false,
+      "abstain_or_hedge": true,
+      "length": 36
+    }
+  }
+]

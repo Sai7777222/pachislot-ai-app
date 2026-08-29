@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "FU-D01",
+    "n_claims": 7,
+    "raw_output": "[\n    {\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"GG準備中からGG本当選までの流れが[検索結果]にはない\"},\n    {\"claim_index\": 1, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"GG本前兆の順番が[検索結果]にはない\"},\n    {\"claim_index\": 2, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"GG本当選の順番が[検索結果]にはない\"},\n    {\"claim_index\": 3, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"GG本当選の後がGG継続ゾーンという記述がない\"},\n    {\"claim_index\": 4, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"SGGゾーンの開始タイミングが[検索結果]にはない\"},\n    {\"claim_index\": 5, \"status\": \"SUPPORTED\", \"evidence\": \"継続契機とセット数が5の倍数かどうかで抽選値が変化\", \"reason\": \"一致\"},\n    {\"claim_index\": 6, \"status\": \"SUPPORTED\", \"evidence\": \"100Gが選ばれた場合は継続ストックを1つ獲得できる\", \"reason\": \"一致\"}\n]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "GG準備中からGG本当選までの流れが[検索結果]にはない"
+      },
+      {
+        "claim_index": 1,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "GG本前兆の順番が[検索結果]にはない"
+      },
+      {
+        "claim_index": 2,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "GG本当選の順番が[検索結果]にはない"
+      },
+      {
+        "claim_index": 3,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "GG本当選の後がGG継続ゾーンという記述がない"
+      },
+      {
+        "claim_index": 4,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "SGGゾーンの開始タイミングが[検索結果]にはない"
+      },
+      {
+        "claim_index": 5,
+        "status": "SUPPORTED",
+        "evidence": "継続契機とセット数が5の倍数かどうかで抽選値が変化",
+        "reason": "一致"
+      },
+      {
+        "claim_index": 6,
+        "status": "SUPPORTED",
+        "evidence": "100Gが選ばれた場合は継続ストックを1つ獲得できる",
+        "reason": "一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 23.167769193649292
+  },
+  {
+    "id": "FU-B05",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"[効果] 枠LEDのパターンでレベルを示唆（リール上部やサイド上部など）\", \"reason\": \"claimの内容と一致\"}, {\"claim_index\": 1, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"claimのsubjectが検索結果に登場していない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "[効果] 枠LEDのパターンでレベルを示唆（リール上部やサイド上部など）",
+        "reason": "claimの内容と一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "claimのsubjectが検索結果に登場していない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 5.86522364616394
+  },
+  {
+    "id": "FU-A03",
+    "n_claims": 3,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"[天井突入条件] AT間最大1480G消化。\", \"reason\": \"検索結果に一致\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"[LV5（GG継続濃厚）] 1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚\", \"reason\": \"検索結果に一致\"}, {\"claim_index\": 2, \"status\": \"SUPPORTED\", \"evidence\": \"[効果] LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆\", \"reason\": \"検索結果に一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "[天井突入条件] AT間最大1480G消化。",
+        "reason": "検索結果に一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "[LV5（GG継続濃厚）] 1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚",
+        "reason": "検索結果に一致"
+      },
+      {
+        "claim_index": 2,
+        "status": "SUPPORTED",
+        "evidence": "[効果] LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+        "reason": "検索結果に一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 11.169747352600098
+  },
+  {
+    "id": "FU-E02",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"このガイアモードはガイアベル(ガイヤナビ経由)規定回数到達時に抽選される(周期抽選)。\", \"reason\": \"検索結果に該当する記述がある\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"規定回数到達時は滞在しているガイアモードに応じてガイアステージ移行を抽選する。\", \"reason\": \"検索結果に該当する記述がある\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "このガイアモードはガイアベル(ガイヤナビ経由)規定回数到達時に抽選される(周期抽選)。",
+        "reason": "検索結果に該当する記述がある"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "規定回数到達時は滞在しているガイアモードに応じてガイアステージ移行を抽選する。",
+        "reason": "検索結果に該当する記述がある"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 8.925333023071289
+  },
+  {
+    "id": "FU-B03",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"claimのsubjectが検索結果に登場していない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "claimのsubjectが検索結果に登場していない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.646512269973755
+  },
+  {
+    "id": "FU-B04",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データにAT-AとAT-Bの違いについての情報がない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データにAT-AとAT-Bの違いについての情報がない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.645826816558838
+  },
+  {
+    "id": "FU-D05",
+    "n_claims": 4,
+    "raw_output": "[\n    {\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"claimのsubjectが[検索結果]に登場していない\"},\n    {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。\", \"reason\": \"登録情報と一致\"},\n    {\"claim_index\": 2, \"status\": \"SUPPORTED\", \"evidence\": \"発生した時点でレア役以上濃厚。SU4は確定役(赤7揃いorGOD)成立の大チャンスだ。\", \"reason\": \"登録情報と一致\"},\n    {\"claim_index\": 3, \"status\": \"UNSUPPORTED\", \"evidence\": \"\", \"reason\": \"登録情報に該当する記述がない\"}\n]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "claimのsubjectが[検索結果]に登場していない"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "reason": "登録情報と一致"
+      },
+      {
+        "claim_index": 2,
+        "status": "SUPPORTED",
+        "evidence": "発生した時点でレア役以上濃厚。SU4は確定役(赤7揃いorGOD)成立の大チャンスだ。",
+        "reason": "登録情報と一致"
+      },
+      {
+        "claim_index": 3,
+        "status": "UNSUPPORTED",
+        "evidence": "",
+        "reason": "登録情報に該当する記述がない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 14.28708553314209
+  },
+  {
+    "id": "FU-F03",
+    "n_claims": 3,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"RT-CとRT-Dの違いが枠LEDのパターンでレベルを示唆するところであるというclaimは検索結果に登場していない\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚\", \"reason\": \"検索結果に該当する記述があった\"}, {\"claim_index\": 2, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"RT-Dのサイド上部付近まで点灯したときの状況が検索結果には登場していない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "RT-CとRT-Dの違いが枠LEDのパターンでレベルを示唆するところであるというclaimは検索結果に登場していない"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "1~4Gまでオールテンパイなし or オール奇数テンパイならLV5＝GG濃厚",
+        "reason": "検索結果に該当する記述があった"
+      },
+      {
+        "claim_index": 2,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "RT-Dのサイド上部付近まで点灯したときの状況が検索結果には登場していない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 10.674466133117676
+  },
+  {
+    "id": "FU-F04",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データにCZ-AとCZ-Bの違いについての情報は見つからない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データにCZ-AとCZ-Bの違いについての情報は見つからない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 3.000864267349243
+  },
+  {
+    "id": "FU-F05",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データに明確な比較情報がない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データに明確な比較情報がない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.400665044784546
+  },
+  {
+    "id": "FV-P01",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データにGX-AとGX-Bの違いについての情報がない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データにGX-AとGX-Bの違いについての情報がない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.6712522506713867
+  },
+  {
+    "id": "FV-P02",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"GG当選時に一定の確率でZ-ZONEを抽選。\", \"reason\": \"検索結果に一致\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"成立役ごとの抽選だけでなく、小役履歴の抽選も優遇される。\", \"reason\": \"検索結果に一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "GG当選時に一定の確率でZ-ZONEを抽選。",
+        "reason": "検索結果に一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "成立役ごとの抽選だけでなく、小役履歴の抽選も優遇される。",
+        "reason": "検索結果に一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 6.222434997558594
+  },
+  {
+    "id": "FV-P03",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"claimのsubjectが検索結果に登場していない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "claimのsubjectが検索結果に登場していない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.549750328063965
+  },
+  {
+    "id": "FV-P04",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"天国へ移行すればガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップ。\", \"reason\": \"claimの内容と一致\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"ループ率も75%と高い。\", \"reason\": \"claimの内容と一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "天国へ移行すればガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップ。",
+        "reason": "claimの内容と一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "ループ率も75%と高い。",
+        "reason": "claimの内容と一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 7.336063861846924
+  },
+  {
+    "id": "FV-P05",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データに該当情報なし\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データに該当情報なし"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.1851067543029785
+  },
+  {
+    "id": "FV-P06",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データにモード7とモード8の違いについての情報がない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データにモード7とモード8の違いについての情報がない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.7598090171813965
+  },
+  {
+    "id": "FV-P07",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データにステートDの情報は見つからない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データにステートDの情報は見つからない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.4728474617004395
+  },
+  {
+    "id": "FV-P08",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"ループ率も75%と高い。\", \"reason\": \"ループ率75%と一致\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"規定回数到達時のガイアステージ当選率も大幅にアップ。\", \"reason\": \"規定回数以下で当選率アップと一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "ループ率も75%と高い。",
+        "reason": "ループ率75%と一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "規定回数到達時のガイアステージ当選率も大幅にアップ。",
+        "reason": "規定回数以下で当選率アップと一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 6.273486614227295
+  },
+  {
+    "id": "FV-P09",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"claimのsubject(ガイアベルSP)は[検索結果]に登場するが、claimの内容(ガイアベル規定回数到達時に抽選されるモードの一つ)と[検索結果]の記述が一致していない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "claimのsubject(ガイアベルSP)は[検索結果]に登場するが、claimの内容(ガイアベル規定回数到達時に抽選されるモードの一つ)と[検索結果]の記述が一致していない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 5.608240365982056
+  },
+  {
+    "id": "FV-P10",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"claimのsubjectが[検索結果]に登場していない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "claimのsubjectが[検索結果]に登場していない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.8692612648010254
+  },
+  {
+    "id": "FV-P11",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"UNSUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データに機械割の差は見つからないという情報がない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "UNSUPPORTED",
+        "evidence": "",
+        "reason": "登録データに機械割の差は見つからないという情報がない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.846303939819336
+  },
+  {
+    "id": "FV-P12",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"裏天国中のGG当選で複数セット獲得の期待大\\n裏天国中の下段黄7は大チャンス!\", \"reason\": \"裏天国中のGG当選で複数セット獲得の期待大、裏天国中の下段黄7は大チャンスと記載あり\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "裏天国中のGG当選で複数セット獲得の期待大\n裏天国中の下段黄7は大チャンス!",
+        "reason": "裏天国中のGG当選で複数セット獲得の期待大、裏天国中の下段黄7は大チャンスと記載あり"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 5.290414333343506
+  },
+  {
+    "id": "FV-P13",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"GG当選時に一定の確率でZ-ZONEを抽選。設定に応じて当選率が変化!?\", \"reason\": \"検索結果に一致\"}, {\"claim_index\": 1, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"モードEという名前が検索結果にない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "GG当選時に一定の確率でZ-ZONEを抽選。設定に応じて当選率が変化!?",
+        "reason": "検索結果に一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "モードEという名前が検索結果にない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 6.402978181838989
+  },
+  {
+    "id": "FV-P14",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"ガイアステージ中は表モード不問で、成立役に応じてGGを抽選。さらに、成立役とは別に青7・黄7の小役履歴でもGGが抽選される。\", \"reason\": \"検索結果に該当する記述あり\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"GG当選時はZ-ZONE突入のチャンスだ (0揃いでZ-ZONE突入)\", \"reason\": \"検索結果に該当する記述あり\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "ガイアステージ中は表モード不問で、成立役に応じてGGを抽選。さらに、成立役とは別に青7・黄7の小役履歴でもGGが抽選される。",
+        "reason": "検索結果に該当する記述あり"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "GG当選時はZ-ZONE突入のチャンスだ (0揃いでZ-ZONE突入)",
+        "reason": "検索結果に該当する記述あり"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 9.634434938430786
+  },
+  {
+    "id": "FU-D03",
+    "n_claims": 4,
+    "raw_output": "[\n    {\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。\", \"reason\": \"検索結果に完全一致\"},\n    {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。\", \"reason\": \"検索結果に完全一致\"},\n    {\"claim_index\": 2, \"status\": \"SUPPORTED\", \"evidence\": \"設定に応じて当選率が変化!?\", \"reason\": \"検索結果に完全一致\"},\n    {\"claim_index\": 3, \"status\": \"SUPPORTED\", \"evidence\": \"LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆\", \"reason\": \"検索結果に完全一致\"}\n]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "GG準備中開始から「×・?・?」が出るまでの間が対象。全体的にストック当選率はGG中より高い。",
+        "reason": "検索結果に完全一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。",
+        "reason": "検索結果に完全一致"
+      },
+      {
+        "claim_index": 2,
+        "status": "SUPPORTED",
+        "evidence": "設定に応じて当選率が変化!?",
+        "reason": "検索結果に完全一致"
+      },
+      {
+        "claim_index": 3,
+        "status": "SUPPORTED",
+        "evidence": "LEDの色で初当りGG時はループストック種別、GG継続時はGGストックの有無を示唆",
+        "reason": "検索結果に完全一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 14.710952997207642
+  },
+  {
+    "id": "FV-C01",
+    "n_claims": 3,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"モード示唆出目はGG継続濃厚だが、法則崩れ的な要素なので、実際に表モードを示唆するわけではない。\", \"reason\": \"モード示唆出目が出るとGG継続濃厚になるけど法則崩れ的な要素もある\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"裏天国中のGG当選で複数セット獲得の期待大\", \"reason\": \"GG当選で複数セット獲得の期待が大きくなる\"}, {\"claim_index\": 2, \"status\": \"SUPPORTED\", \"evidence\": \"裏天国中の下段黄7は大チャンス!\", \"reason\": \"下段黄7も大チャンス\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "モード示唆出目はGG継続濃厚だが、法則崩れ的な要素なので、実際に表モードを示唆するわけではない。",
+        "reason": "モード示唆出目が出るとGG継続濃厚になるけど法則崩れ的な要素もある"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "裏天国中のGG当選で複数セット獲得の期待大",
+        "reason": "GG当選で複数セット獲得の期待が大きくなる"
+      },
+      {
+        "claim_index": 2,
+        "status": "SUPPORTED",
+        "evidence": "裏天国中の下段黄7は大チャンス!",
+        "reason": "下段黄7も大チャンス"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 10.977311611175537
+  },
+  {
+    "id": "FV-C02",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"claimの内容と[検索結果]の記述が一致していない\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"ガイアナビ発生でガイアステージ移行のチャンス。規定回数到達時は滞在しているガイアモードに応じてガイアステージ移行を抽選する。\", \"reason\": \"claimの内容と[検索結果]の記述が一致している\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "claimの内容と[検索結果]の記述が一致していない"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "ガイアナビ発生でガイアステージ移行のチャンス。規定回数到達時は滞在しているガイアモードに応じてガイアステージ移行を抽選する。",
+        "reason": "claimの内容と[検索結果]の記述が一致している"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 8.17348051071167
+  },
+  {
+    "id": "FV-C03",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"ループストックはGG継続時にループするかどうかを決めるものという記述がない\"}, {\"claim_index\": 1, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"GGストックはGG当選時にループするかどうかを決めるものという記述がない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "ループストックはGG継続時にループするかどうかを決めるものという記述がない"
+      },
+      {
+        "claim_index": 1,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "GGストックはGG当選時にループするかどうかを決めるものという記述がない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 6.252930641174316
+  },
+  {
+    "id": "FV-C04",
+    "n_claims": 3,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"天国へ移行すればガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップ。\", \"reason\": \"検索結果に完全一致\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"ループ率も75%と高い。\", \"reason\": \"検索結果に完全一致\"}, {\"claim_index\": 2, \"status\": \"UNSUPPORTED\", \"evidence\": \"\", \"reason\": \"検索結果に該当情報なし\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "天国へ移行すればガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップ。",
+        "reason": "検索結果に完全一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "ループ率も75%と高い。",
+        "reason": "検索結果に完全一致"
+      },
+      {
+        "claim_index": 2,
+        "status": "UNSUPPORTED",
+        "evidence": "",
+        "reason": "検索結果に該当情報なし"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 9.232617855072021
+  },
+  {
+    "id": "FV-C05",
+    "n_claims": 4,
+    "raw_output": "[\n    {\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"GG準備中開始から「×・?・?」が出るまでの間が対象\", \"reason\": \"一致\"},\n    {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選\", \"reason\": \"一致\"},\n    {\"claim_index\": 2, \"status\": \"SUPPORTED\", \"evidence\": \"SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。100Gが選ばれた場合は継続ストックを1つ獲得できる\", \"reason\": \"一致\"},\n    {\"claim_index\": 3, \"status\": \"UNSUPPORTED\", \"evidence\": \"\", \"reason\": \"SGG当選というclaim自体が検索結果にない\"}\n]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "GG準備中開始から「×・?・?」が出るまでの間が対象",
+        "reason": "一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選",
+        "reason": "一致"
+      },
+      {
+        "claim_index": 2,
+        "status": "SUPPORTED",
+        "evidence": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。100Gが選ばれた場合は継続ストックを1つ獲得できる",
+        "reason": "一致"
+      },
+      {
+        "claim_index": 3,
+        "status": "UNSUPPORTED",
+        "evidence": "",
+        "reason": "SGG当選というclaim自体が検索結果にない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 13.399315595626831
+  },
+  {
+    "id": "FV-C06",
+    "n_claims": 3,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"subjectが登場していない\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。100Gが選ばれた場合は継続ストックを1つ獲得できる。\", \"reason\": \"登録されている\"}, {\"claim_index\": 2, \"status\": \"SUPPORTED\", \"evidence\": \"GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。設定に応じて当選率が変化!?\", \"reason\": \"登録されている\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "subjectが登場していない"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変化。100Gが選ばれた場合は継続ストックを1つ獲得できる。",
+        "reason": "登録されている"
+      },
+      {
+        "claim_index": 2,
+        "status": "SUPPORTED",
+        "evidence": "GG当選契機不問で、GG当選時に一定の確率でZ-ZONEを抽選。設定に応じて当選率が変化!?",
+        "reason": "登録されている"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 11.032541513442993
+  },
+  {
+    "id": "FV-C07",
+    "n_claims": 3,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"小役履歴(液晶右下に表示)の連続でGGを抽選。青7や黄7がそれぞれ3連続以上すればチャンス。\", \"reason\": \"claimの内容と一致\"}, {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"ガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能する。\", \"reason\": \"claimの内容と一致\"}, {\"claim_index\": 2, \"status\": \"SUPPORTED\", \"evidence\": \"モード示唆出目はGG継続濃厚だが、法則崩れ的な要素なので、実際に表モードを示唆するわけではない。\", \"reason\": \"claimの内容と一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "小役履歴(液晶右下に表示)の連続でGGを抽選。青7や黄7がそれぞれ3連続以上すればチャンス。",
+        "reason": "claimの内容と一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "ガイアナビ(右ナビ)時は白7が表示されて、青7・黄7両方の代用として機能する。",
+        "reason": "claimの内容と一致"
+      },
+      {
+        "claim_index": 2,
+        "status": "SUPPORTED",
+        "evidence": "モード示唆出目はGG継続濃厚だが、法則崩れ的な要素なので、実際に表モードを示唆するわけではない。",
+        "reason": "claimの内容と一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 12.03227949142456
+  },
+  {
+    "id": "FV-C08",
+    "n_claims": 2,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"ガイアナビ発生時に停止する液晶出目のパターンでガイアモードを示唆。\", \"reason\": \"ガイアナビ発生時にガイアモードへの移行抽選が行われる\"},\n{\"claim_index\": 1, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"ガイアモードの説明はあったが、規定回数到達時でのガイアステージ移行抽選はガイアモードに応じて行われるという記述はなかった\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "ガイアナビ発生時に停止する液晶出目のパターンでガイアモードを示唆。",
+        "reason": "ガイアナビ発生時にガイアモードへの移行抽選が行われる"
+      },
+      {
+        "claim_index": 1,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "ガイアモードの説明はあったが、規定回数到達時でのガイアステージ移行抽選はガイアモードに応じて行われるという記述はなかった"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 10.044089317321777
+  },
+  {
+    "id": "FV-C09",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データに該当情報なし\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データに該当情報なし"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 5.000685214996338
+  },
+  {
+    "id": "Q11",
+    "n_claims": 3,
+    "raw_output": "[\n    {\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"ゲーム数=510G: 15.2%\\nゲーム数=1000G: 20.3%\\nゲーム数=1480G: 64.5%\", \"reason\": \"数字と確率が一致\"},\n    {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"ループストック=0.01: 16.7%\\nループストック=0.25: 16.7%\\nループストック=0.5: 16.7%\\nループストック=0.8: 16.7%\\nループストック=1%+Z-ZONE: 33.2%\", \"reason\": \"数字と確率が一致\"},\n    {\"claim_index\": 2, \"status\": \"UNSUPPORTED\", \"evidence\": \"\", \"reason\": \"該当する記述なし\"}\n]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "ゲーム数=510G: 15.2%\nゲーム数=1000G: 20.3%\nゲーム数=1480G: 64.5%",
+        "reason": "数字と確率が一致"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "ループストック=0.01: 16.7%\nループストック=0.25: 16.7%\nループストック=0.5: 16.7%\nループストック=0.8: 16.7%\nループストック=1%+Z-ZONE: 33.2%",
+        "reason": "数字と確率が一致"
+      },
+      {
+        "claim_index": 2,
+        "status": "UNSUPPORTED",
+        "evidence": "",
+        "reason": "該当する記述なし"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 36.67256760597229
+  },
+  {
+    "id": "AD-04",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"UNSUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データにその情報はなかったという内容が検索結果にはない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "UNSUPPORTED",
+        "evidence": "",
+        "reason": "登録データにその情報はなかったという内容が検索結果にはない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.970583915710449
+  },
+  {
+    "id": "Q1",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"設定6: 機械割 114.6%\", \"reason\": \"claimの数値と一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "設定6: 機械割 114.6%",
+        "reason": "claimの数値と一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.803645610809326
+  },
+  {
+    "id": "Q3",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"天井ゲーム数は3種類あって、抽選で決定。また、天井到達時はループストック抽選がおこなわれ、約33%でZ-ZONEが付与される。\", \"reason\": \"天井ゲーム数の種類と確率が一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "天井ゲーム数は3種類あって、抽選で決定。また、天井到達時はループストック抽選がおこなわれ、約33%でZ-ZONEが付与される。",
+        "reason": "天井ゲーム数の種類と確率が一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 7.455335378646851
+  },
+  {
+    "id": "Q5",
+    "n_claims": 3,
+    "raw_output": "[\n    {\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"ガイアステージ中のGG当選時の一部など\", \"reason\": \"検索結果に該当箇所あり\"},\n    {\"claim_index\": 1, \"status\": \"SUPPORTED\", \"evidence\": \"継続ゲーム数: 5G+a; 純増: 約7枚/G\", \"reason\": \"検索結果に該当箇所あり\"},\n    {\"claim_index\": 2, \"status\": \"SUPPORTED\", \"evidence\": \"一度も黄7が成立しなければ特殊抽選が発生\", \"reason\": \"検索結果に該当箇所あり\"}\n]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "ガイアステージ中のGG当選時の一部など",
+        "reason": "検索結果に該当箇所あり"
+      },
+      {
+        "claim_index": 1,
+        "status": "SUPPORTED",
+        "evidence": "継続ゲーム数: 5G+a; 純増: 約7枚/G",
+        "reason": "検索結果に該当箇所あり"
+      },
+      {
+        "claim_index": 2,
+        "status": "SUPPORTED",
+        "evidence": "一度も黄7が成立しなければ特殊抽選が発生",
+        "reason": "検索結果に該当箇所あり"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 12.392025470733643
+  },
+  {
+    "id": "Q7",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データにヤメ時の情報は見つからない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データにヤメ時の情報は見つからない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.932939052581787
+  },
+  {
+    "id": "Q9",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"設定1: 初当り確率 1/533\\n設定1: 機械割 97.2%\\n設定6: 初当り確率 1/295\\n設定6: 機械割 114.6%\", \"reason\": \"数値が一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "設定1: 初当り確率 1/533\n設定1: 機械割 97.2%\n設定6: 初当り確率 1/295\n設定6: 機械割 114.6%",
+        "reason": "数値が一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 9.295275688171387
+  },
+  {
+    "id": "Q12",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データにその情報は見つからない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データにその情報は見つからない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.669081211090088
+  },
+  {
+    "id": "Q14",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"\", \"reason\": \"登録データにRT機能の情報がない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "",
+        "reason": "登録データにRT機能の情報がない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.362126588821411
+  },
+  {
+    "id": "Q16",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"基本的には全リールフリー打ちでOKだ。\", \"reason\": \"\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "基本的には全リールフリー打ちでOKだ。",
+        "reason": ""
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.856553792953491
+  },
+  {
+    "id": "P01",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まる。\", \"reason\": \"天井ゲーム数の種類と確率が一致している\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "天井ゲーム数は450G・750G・1300Gの3種類から抽選で決まる。",
+        "reason": "天井ゲーム数の種類と確率が一致している"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.774072170257568
+  },
+  {
+    "id": "P04",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"設定1は96.8%、設定6は113.5%で、差は16.7%となる。\", \"reason\": \"\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "設定1は96.8%、設定6は113.5%で、差は16.7%となる。",
+        "reason": ""
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 3.94397234916687
+  },
+  {
+    "id": "P06",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"MISATTRIBUTED\", \"evidence\": \"\", \"reason\": \"subjectが検索結果に登場していない\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "MISATTRIBUTED",
+        "evidence": "",
+        "reason": "subjectが検索結果に登場していない"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.8690268993377686
+  },
+  {
+    "id": "P08",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"天井到達でAT確定に加えゾーンκへの突入も確定し、平均300枚が上乗せされる。\", \"reason\": \"claimの内容と一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "天井到達でAT確定に加えゾーンκへの突入も確定し、平均300枚が上乗せされる。",
+        "reason": "claimの内容と一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.542384386062622
+  },
+  {
+    "id": "P10",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされている。\", \"reason\": \"\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "推奨投資額は2000枚、回収の目安は初当り2回分、勝率の目安は45%とされている。",
+        "reason": ""
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.585127830505371
+  },
+  {
+    "id": "PT-02",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"[モード差/滞在率差] αとγ: 25%\", \"reason\": \"数字が一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "[モード差/滞在率差] αとγ: 25%",
+        "reason": "数字が一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 3.1635894775390625
+  },
+  {
+    "id": "PT-04",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"設定2と設定4: 7.5%\", \"reason\": \"数字が一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "設定2と設定4: 7.5%",
+        "reason": "数字が一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 2.8590240478515625
+  },
+  {
+    "id": "PT-06",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"設定1: 1/410\\n設定6: 1/280\\n設定1と設定6: 130回転分\", \"reason\": \"数字と差が一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "設定1: 1/410\n設定6: 1/280\n設定1と設定6: 130回転分",
+        "reason": "数字と差が一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.369541168212891
+  },
+  {
+    "id": "PT-08",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"設定3: 100.2%\\n設定5: 108.9%\\n設定3と設定5: 8.7%\", \"reason\": \"数字が一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "設定3: 100.2%\n設定5: 108.9%\n設定3と設定5: 8.7%",
+        "reason": "数字が一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 4.589668035507202
+  },
+  {
+    "id": "PT-10",
+    "n_claims": 1,
+    "raw_output": "[{\"claim_index\": 0, \"status\": \"SUPPORTED\", \"evidence\": \"[RT-A/継続G数] 共通: 40G\\n[RT-B/継続G数] 共通: 70G\\n[RT差/継続G数差] AとB: 30G\", \"reason\": \"数字が一致\"}]",
+    "parsed": [
+      {
+        "claim_index": 0,
+        "status": "SUPPORTED",
+        "evidence": "[RT-A/継続G数] 共通: 40G\n[RT-B/継続G数] 共通: 70G\n[RT差/継続G数差] AとB: 30G",
+        "reason": "数字が一致"
+      }
+    ],
+    "parse_success": true,
+    "latency_sec": 5.652491807937622
+  }
+]

@@ -1,0 +1,93 @@
+{
+  "purpose": "Section16のCASE FV-A/B/C/D/U gate判定。全stage(A〜H)の結果を集約する。",
+  "candidates_tested": {
+    "P0": "現行production prompt(config/prompts/system.jinja2、本フェーズ中不変)",
+    "P1": "training/riru/guard/phase4fv_prompts/p1_minimal_grounding.jinja2(2回改訂、最終版を採用)",
+    "P2": "training/riru/guard/phase4fv_prompts/p2_explicit_entity_binding.jinja2(2回改訂、最終版を採用。全stageでP1を上回ったため主候補として全regressionを実施)"
+  },
+  "candidate_iteration_note": "P1/P2は初回ドラフトでgreedy decoding時に退化的反復ループ(同じ句の無限反復)を引き起こすことが判明したため、既存grounding rule群への統合位置を見直し1回改訂した。改訂後もQ6(FU-D01)ではgreedy decoding時に反復ループが残存することを確認済み(phase4fv_known_failures.json/phase4fv_multiturn.json)。本フェーズはSection6の候補上限(P0-P2、P3以降禁止)を厳守し、これ以上のprompt再設計は行っていない。",
+
+  "stage_a_known_failures": {
+    "evaluation_method": "greedy 1回 + sampling(temp0.7) 5回、計4probe。samplingを実運用に近い主要評価とした(理由: greedyでP1/P2に退化的反復ループが確認されたため)。",
+    "results": {
+      "Q6_FU-D01": {"P0_symbol_fabrication_rate": "0/5(sampling)、ただしgreedyでは再現", "P1_symbol_fabrication_rate": "0/5(sampling)、greedyでは反復ループ+別の不支持記号", "P2_symbol_fabrication_rate": "0/5(sampling)、greedyでは反復ループ+別の不支持記号", "verdict": "greedy条件下ではP1/P2いずれも未解決(むしろ生成品質が劣化)。sampling条件下では元々の記号捏造もP0含め非決定的だった。"},
+      "ZS-05_FU-B05_RT-A-RT-B": {"P0_misattribution_rate": "5/5(hedgeなし)", "P1_misattribution_rate": "5/5(RT-Aは常に誤紐付け、RT-Bのみ2/5でhedge)", "P2_misattribution_rate": "5/5(RT-Aは常に誤紐付け、hedgeは0/5)", "verdict": "未解決。P1でわずかな部分改善があったが、P2では逆にhedgeが消失した。"},
+      "AT-F_FU-A03": {"P0_misattribution_rate": "5/5", "P1_misattribution_rate": "5/5(変化なし)", "P2_misattribution_rate": "5/5(変化なし)", "verdict": "完全に未解決。追加指示は本probeに一切効果がなかった。"},
+      "gaiabell_FU-E02": {"P0_wrong_rate": "5/5(「モード」「液晶出目パターン」等、誤った分類)", "P1_wrong_rate": "3/5", "P2_wrong_rate": "2/5", "verdict": "部分改善。P2が最も良いが0/5には遠い。"}
+    },
+    "mandatory_gate_known_failures_zero": "FAIL(4probe中4probeでP2でも何らかの誤りが残存)"
+  },
+
+  "stage_b_query_style": {
+    "result": "5つの言い回しのうち「初心者向けに説明して」の場合のみ、P1/P2いずれもgreedy条件下で記号捏造(または類似の不支持記号)と反復ループを発生させた。他4言い回しでは0/4(P1もP2も、Phase4FUのP0結果と一致)。",
+    "verdict": "Phase4FUで発見された「query-style/synthesis-pressure」トリガーは、promptを変更しても解消されない。"
+  },
+
+  "stage_c_phantom_entity": {
+    "total_probes": 22,
+    "P0_misattribution_count": "14/22 (63.6%)",
+    "P2_misattribution_count": "9/22 (40.9%)",
+    "improvement": "P2は複数のphantom-entity probe(モードα/β、SGG-EX、ガイアステージMAX、RT-C/RT-D、GGとモードE)で誤紐付けを情報不足申告に転換した。",
+    "remaining_failures": "AT-F、RT-A/RT-B(部分)、GGプラス、天国ロング、ガイアベルSP、確定役ネオ、裏ZONEは依然として誤紐付けが残存。",
+    "mandatory_gate_phantom_zero": "FAIL(9/22で誤紐付けが残存)"
+  },
+
+  "stage_d_concept_binding": {
+    "total_probes": 12,
+    "P0_cross_entity_misattribution_count": "5/12",
+    "P2_cross_entity_misattribution_count": "5/12(変化なし)",
+    "key_finding": "実在する2つのエンティティ間の関係精度(GG/SGG/GG準備中の混同、ループストック/GGストックの関係逆転、「GG継続ゾーン」という架空の合成概念の創作)は、追加のgrounding ruleでは一切改善しなかった。phantom-entity対策(存在しない名称への言及を避ける)と、concept-binding対策(実在する近縁概念同士の関係を正確に保つ)は別のスキルであり、本フェーズのprompt追加は前者にのみ部分的に効いた。",
+    "mandatory_gate_cross_entity_zero": "FAIL(5/12で変化なし)"
+  },
+
+  "stage_e_rag50": {
+    "total_probes": 50,
+    "unsupported_numeric_new": 0,
+    "unsupported_non_numeric_factual_claim_new": 0,
+    "misattribution_new": 0,
+    "major_completeness_regression_count": 3,
+    "major_completeness_regression_probes": {
+      "Q11": "「Z-ZONE付与5パターンのうち33.2%」という値がP2では脱落し、全パターンが16.7%であるかのように誤って単純化された(正確性の劣化でもある)。",
+      "LC-08": "「RT-Cの継続G数45G」「継続時確率28%」がP2では脱落した。",
+      "P04": "「設定1=96.8%」「設定6=113.5%」の個別数値がP2では脱落し、差分16.7%のみが残った。"
+    },
+    "mandatory_gate_rag50_zero_regression": "FAIL(必須8probe中3probeで具体的completeness regressionを確認)"
+  },
+
+  "stage_f_insufficient_context": {
+    "total_probes": 20,
+    "note": "Phase4FUの10probe(INSUFFICIENT/IRRELEVANT区分)を再利用し、P2でgreedy+sampling各1回ずつ実施。",
+    "improvement_probes": ["FU-B03(モードα/β): 0/2→2/2 hedge", "FU-B05(RT-A/RT-B): 0/2→1/2 hedge", "FU-D05(SGGとRT): 0/2→1/2 hedge", "FU-F02(GGとSGGどっちがお得): 0/2→1/2 hedge"],
+    "unchanged_probes": ["FU-A03(AT-F): 0/2 hedge、変化なし"],
+    "verdict": "部分改善はあるが「登録データにありません」を機械的に連発しているわけではなく、自然な不足表現になっている点は良好。ただしAT-Fは未解決のまま。"
+  },
+
+  "stage_g_routing_boundary": {
+    "dispatch_hash_unchanged": true,
+    "policy_c3_hash_unchanged": true,
+    "small_talk_ood_conversational_clarify_prompt_hashes_unchanged": true,
+    "note": "conservative dispatch自体・Policy C3自体・他モードprompt(small_talk/ood/conversational/clarify)は本フェーズで一切変更していない(ファイルhash照合済み)。production RAG promptの変更が影響するのはPACHISLOT_FACTUAL経路とPolicy C3のrag_with_context経路のみで、これはStage F/Hで確認済み。dangerous misroute/contextless strict-RAGの数はdispatch自体が不変のためPhase4ZR/ZTの既存結果(0/260)から変化しない。",
+    "verdict": "routing/boundary層への影響なし(想定通り)"
+  },
+
+  "stage_h_multiturn": {
+    "scenarios": 5,
+    "turns": 16,
+    "mt05_turn1_q6_result": "greedy decoding下でP2は依然として不支持記号(「×・?」という、実在の「×・?・?」とも元の捏造「×・?・×」とも異なる、さらに別の不支持バリアント)を含み、かつP0の元の応答にはなかった深刻な退化的反復ループを新たに発生させた。これはStage A/Bで確認済みの現象の、実運用パイプライン(dispatch→PolicyC3→P2プロンプト)上での確認である。",
+    "mt02_result": "変化なし(P0と同一の適切な情報不足申告)。",
+    "verdict": "multi-turn regressionはFAIL。特にMT-05はP0からの明確な悪化(捏造は残存し、かつ新たな生成品質劣化が追加された)。"
+  },
+
+  "overall_case": {
+    "case": "FV-C",
+    "case_name": "Safety Still Fails（Prompt-only対策不足）",
+    "rationale": "Section16の必須ゲート(known failures=0、phantom misattribution=0、cross-entity misattribution=0、RAG50 unsupported=0、RAG50 major completeness regression=0、multi-turn unsupported synthesis=0)のうち、達成できたのはunsupported numeric/non-numeric factual claim(新規)=0とmisattribution(新規)=0のみで、他はすべてFAILした。特に、RAG50のcompleteness regression(3/8必須probe)は、CASE FV-Bの典型パターン(安全性は改善したが完全性が悪化)にも該当する要素を含むが、安全性自体が未解決(known failures/phantom entity/concept bindingの複数ゲートが依然FAIL)であるため、主要因はFV-Cと判定する。",
+    "product_side_recommendation": "prompt-only対策では限界がある。次フェーズでは、生成後に検索結果と照合する軽量な事実検証パス(self-critique/entailment check)、またはphantom-entity検出のための軽量な文字列一致チェック(質問中の固有名詞がcontext中に文字として存在するかを機械的に確認し、存在しない場合は生成前にclarificationへ強制分岐する)といった、product-side grounded synthesis constraintの検討を推奨する。"
+  },
+
+  "prompt_accept_reject": {
+    "P0_status": "維持(config/prompts/system.jinja2は本フェーズ中一切変更していない)",
+    "P1_status": "REJECT",
+    "P2_status": "REJECT(P1よりは改善幅が大きかったが、必須ゲートを満たさないため本番反映不可)"
+  }
+}

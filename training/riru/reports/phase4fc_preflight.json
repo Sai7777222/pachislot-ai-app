@@ -1,0 +1,32 @@
+{
+  "checkpoint": {
+    "branch": "checkpoint/identity-closure-phase4zn-baseline",
+    "previous_head": "e1b21f3e264a5c173f7f0e60e3b13508415d9a6b",
+    "checkpoint_commit": "8e0f7febb1ff690024c97a77742d9741e1ea9f5c",
+    "commit_message": "checkpoint: freeze final candidate architecture",
+    "push_result": "success (origin/checkpoint/identity-closure-phase4zn-baseline, no force)",
+    "staged_file_count": 138,
+    "staged_diff_stat": "138 files changed, 64759 insertions(+)",
+    "staging_method": "explicit paths/globs scoped to each phase4z[o-t]_ prefix, never `git add .`/`git add -A`",
+    "secrets_check": "git diff --cached scanned for SLACK_WEBHOOK_URL/hooks.slack.com/api_key/password/Bearer patterns -- 0 matches",
+    "excluded_confirmed": ["LoRA adapters (all training/riru/lora-riru-qwen-*/, already gitignored)",
+      "training/riru/reports/_* debug dumps (already gitignored)", "merged models", "venvs"]
+  },
+  "final_candidate_freeze": {
+    "zg_adapter_hash": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "conservative_dispatch_hash": "80dbb4469a201030de1ee7ec6f1d57b69a990d62e7e741638a275f5772a018ad",
+    "policy_c3_hash": "cb9f904bb02d9b109e1a6b6f773b976d2699d14b39833ce5876a4ba6c1963caf",
+    "pytest_at_freeze": "233 passed, 1 warning",
+    "working_tree_clean": true,
+    "frozen_components": ["Phase4ZG adapter", "conservative dispatch (phase4zr_conservative_dispatch.py)",
+      "Policy C3 (phase4zt_policy_c.py)", "production RAG prompt (config/prompts/system.jinja2)",
+      "RAG DB", "retriever", "embedding", "generation config"],
+    "freeze_policy": "No patching during evaluation. Any issue found is recorded as FAIL with root cause noted; fixed in a separate future phase, not in-place."
+  },
+  "accepted_architecture_summary": {
+    "phase4zg": "canonical model, read-only",
+    "phase4zm": "identity research formally CLOSED; residual risks accepted, not gates",
+    "phase4zr": "conservative dispatch: 4 confident modes + UNKNOWN fallback",
+    "phase4zt": "Policy C3 for UNKNOWN: lexical-overlap-based RAG-vs-clarification routing"
+  }
+}

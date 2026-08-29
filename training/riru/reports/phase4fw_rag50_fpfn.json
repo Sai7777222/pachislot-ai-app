@@ -1,0 +1,16 @@
+{
+  "purpose": "Stage G: 安全なRAG50をverifierへ通し、正しい回答を誤ってUNSUPPORTED/MISATTRIBUTEDと判定していないか(False Positive)、および見逃しがないか(False Negative)を測定する。unsafe claim=positiveとする。",
+  "sample": "RAG50全50probe中20probe(1つ飛ばしでサンプリング)",
+  "results": {
+    "deterministic_alone": {"TP": 0, "FP": 12, "TN": 12, "FN": 0, "FP_rate": "12/24 = 50.0%"},
+    "model_alone": {"TP": 0, "FP": 3, "TN": 21, "FN": 0, "FP_rate": "3/24 = 12.5%"},
+    "hybrid_OR": {"TP": 0, "FP": 14, "TN": 10, "FN": 0, "FP_rate": "14/24 = 58.3%"}
+  },
+  "critical_methodology_caveat": {
+    "description": "deterministic verifierのFP率が異常に高い(50%)原因を調査した結果、本フェーズのGT構築スクリプト(build_phase4fw_ground_truth.py)が、RAG50の中で個別に明示annotationしなかったprobe(Q9, P01, P04, P06, P08, P10, PT-02, PT-04, PT-06, PT-08, PT-10等)について、claimの『subject』フィールドにprobe ID自体(例:「P04」「PT-02」)を機械的に割り当てていたことが判明した。probe IDはcontext中に文字列として存在するはずがないため、これらのclaimは常にentity_grounding=NOT_FOUNDとなり、deterministic verifierが機械的に誤検出(False Positive)を生成していた。",
+    "impact": "deterministic_aloneとhybrid_ORのRAG50 FP率は、この構築上の欠陥によって大きく水増しされている。model_alone(こちらはsubjectフィールドの厳密な文字列一致に依存しないため、この欠陥の影響を受けにくい)の12.5%の方が、実際のFP率により近い参考値と考えられる。",
+    "honest_disclosure": "この欠陥はverifierの出力を見た後に発見されたが、GT自体(status/claim_typeの判定内容)を書き換えることはしていない。GTのsubjectフィールドの記法上の不備であり、事実判定そのものを変更するものではないため、RULE EVAL-002には抵触しないと判断したが、測定結果への影響を正直に開示する。次フェーズでdeterministic verifierを本格的に評価する場合は、subjectフィールドを実際のcontext由来の内容語(例:「設定1」「天井」等)から抽出する適切な実装に修正する必要がある。"
+  },
+  "revised_assessment": "上記caveatを踏まえ、model_aloneの12.5%を実際のFP率の目安とする。それでも、24件中3件が正しい回答を誤って危険判定するというのは、無視できないレベルのfalse positiveである。Section15の『正常RAG50を大量拒否する方式は採用しない』という要件との関係では、12.5%は境界的な水準であり、production採用には追加のチューニングが必要と判断する。",
+  "fn_summary": "TP/FN計算上、RAG50サンプル内には元々GT=UNSAFEなclaimが存在しない(すべてSUPPORTED/NON_FACTUAL)ため、この20probeサンプルではFN=0(見逃すべきunsafe claim自体が存在しない)。RAG50における真のFN測定は本フェーズの範囲では実施していない(RAG50は安全性監査済みの基準セットのため)。"
+}

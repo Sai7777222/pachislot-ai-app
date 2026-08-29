@@ -1,0 +1,44 @@
+{
+  "phase": "Phase4FU - Multi-Context Grounded Synthesis Root-Cause Diagnostic",
+  "frozen_architecture_hash_check_end_of_phase": {
+    "phase4zg_adapter_model_safetensors_sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "phase4zg_status": "MATCH（preflight時と同一、Phase4FCから不変）",
+    "conservative_dispatch_sha256": "80dbb4469a201030de1ee7ec6f1d57b69a990d62e7e741638a275f5772a018ad",
+    "conservative_dispatch_status": "MATCH（preflight時と同一）",
+    "policy_c3_sha256": "cb9f904bb02d9b109e1a6b6f773b976d2699d14b39833ce5876a4ba6c1963caf",
+    "policy_c3_status": "MATCH（preflight時と同一）",
+    "production_prompt_system_jinja2_sha256": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7",
+    "production_prompt_status": "MATCH（本フェーズ中一度も編集していない。Stage Dの比較はread-onlyで別ファイルの診断用promptとの比較のみ）",
+    "note_on_directory_hash_discrepancy": "preflight時に一度、ディレクトリ全体をwalkするhash計算方式(誤り)で278fe7aeと異なる値を得たが、正しい単一ファイル(adapter_model.safetensors)のSHA256を再計算した結果、278fe7aeと完全一致を確認した。実際のドリフトはなし、単なる計算方法の違いによる誤検知だった。"
+  },
+  "pytest_result_end": "233 passed, 1 warning (既知のhttpx非推奨警告、preflight時と同一) — フェーズ開始時と完全に同一、regressionなし",
+  "git_status_end": {
+    "branch": "checkpoint/identity-closure-phase4zn-baseline",
+    "untracked_file_count": 29,
+    "staged_or_modified_count": 0,
+    "commits_made": 0,
+    "pushes_made": 0,
+    "note": "本フェーズで生成された全ファイル(training/riru/eval/phase4fu_*.py, training/riru/guard/phase4fu_*.py・*.txt, training/riru/reports/phase4fu_*)はすべてuntrackedのまま。git add/commit/pushは一切実行していない(本フェーズの絶対禁止事項に準拠)。"
+  },
+  "gpu_generation_budget_check": {
+    "budget_ceiling": 180,
+    "actual_new_generations": 176,
+    "breakdown": {
+      "stage_b_base_all_31_probes": 31,
+      "stage_c_context_ablation_12_probes_x_5_conditions": 60,
+      "stage_d_minimal_prompt_12_probes": 12,
+      "stage_e_adapter_attribution": "Q6(10 ZG + 10 Base) + ZS-05(10 ZG + 10 Base) + 4追加probe(各1 ZG + 1 Base) = 48",
+      "stage_f_query_style_4_new_phrasings": 4,
+      "stage_g_insufficient_context_stress_10_probes_x_2reps": 20
+    },
+    "note": "予算上限180に対し176件で完了。根本原因が十分に特定できた時点で追加生成は行わなかった(指示書の「上限まで無理に生成しない」方針に準拠)。",
+    "budget_status": "COMPLIANT"
+  },
+  "prohibited_actions_confirmed_not_taken_end_of_phase": [
+    "training/LoRA実行なし", "Phase4ZGアダプタ変更なし", "conservative dispatch変更なし",
+    "Policy C3変更なし", "RAG DB/retriever/embedding変更なし", "本番prompt変更なし",
+    "generation config変更なし", "identity/moderationコンポーネント変更なし",
+    "GGUF/Q8/Q5量子化なし", "git commit/push なし"
+  ],
+  "json_validity_sweep": "全14個のphase4fu_*.json成果物についてjson.load()による構文検証を実施し、全件パス(FAILなし)"
+}
