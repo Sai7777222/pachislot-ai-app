@@ -1,0 +1,24 @@
+{
+  "phase": "Phase4FC3", "section": "Section20/29 (end-of-phase integrity)",
+  "pytest_start": "267 passed", "pytest_end": "294 passed (267 + 27 new dispatch/arbitration tests)",
+  "hash_recheck": {
+    "phase4zg_adapter": {"value": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc", "unchanged": true},
+    "entity_attribution_py": {"value": "84c3c3d35e5f6e3f7bad9353909438870d1d0e6871e66c873d933e5bda369f52", "unchanged": true, "note": "FY entity binding — 完全に無変更"},
+    "structured_lookup_py": {"value": "25f95444116b0fb47b161c63c2c68d9de98c27214236110fd58d816dda672f77", "unchanged": true, "note": "FZ structured binding — 完全に無変更"},
+    "system_jinja2": {"value": "e859e2aa443160f8b4e8c897f2d9af1e7d310599047ce484864b578984ebddd7", "unchanged": true}
+  },
+  "no_training": true, "no_gguf_started": true, "no_quantization_started": true,
+  "moderation_untouched": true,
+  "production_code_changes_this_phase": [
+    "src/pachislot_ai/dispatch/__init__.py (new)",
+    "src/pachislot_ai/dispatch/conservative_dispatch.py (new)",
+    "src/pachislot_ai/rag/evidence_arbitration.py (new)",
+    "src/pachislot_ai/rag/pipeline.py (modified — 1 call to arbitrate() added)",
+    "src/pachislot_ai/services/chat_service.py (modified — dispatch gating in build_rag_context())",
+    "tests/unit/test_conservative_dispatch.py (new, 21 tests)",
+    "tests/integration/test_dispatch_integration.py (new, 5 tests)"
+  ],
+  "production_code_committed_this_phase": false,
+  "note_on_commit": "Section29の指示通り、production code変更(dispatch/evidence_arbitration/pipeline.py/chat_service.py/新規テスト)は未commit。CASE判定後、人間の確認を経てcommitする想定。Phase4FC2の診断成果物のみ、checkpoint commit `f7b4239`としてcommit・push済み(production codeは含まない)。",
+  "overall_verdict": "PASS — 全ての凍結対象コンポーネント(Phase4ZG・system.jinja2・FY entity binding・FZ structured binding)が完全に無変更であることを確認。"
+}

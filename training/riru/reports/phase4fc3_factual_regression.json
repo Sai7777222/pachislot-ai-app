@@ -1,0 +1,23 @@
+{
+  "phase": "Phase4FC3", "section": "Section21 (Stage H: RAG factual regression, 12 mandatory known cases)",
+  "n_probes": 12,
+  "results": {
+    "Q6": {"response": "GGとSGGは継続の仕組みが違うよ。...", "verdict": "PASS"},
+    "AT-F": {"response": "登録データにその情報は見つからないんだ。", "verdict": "PASS"},
+    "RT-A/RT-B": {"response": "登録データにRT-AとRT-Bの違いについての情報は見つかりませんでした。", "verdict": "PASS"},
+    "SGG/GG準備中(仕組み)": {"response": "SGGは、継続契機とセット数が5の倍数かどうかで...", "verdict": "PASS"},
+    "GG中": {"response": "GG中は、役によってGGストック当選率が変わる状態なんだ。...", "verdict": "PASS"},
+    "ガイアベル": {"response": "ガイアベルは、1/37.6の確率で成立する小役だよ。成立すると1枚の払い出しになるんだ。", "verdict": "PASS"},
+    "SU4": {"response": "SU4は発生した時点でレア役以上濃厚なんだ。...", "verdict": "PASS"},
+    "GG当選/SGG当選": {"response": "登録データにSGG当選の情報は見つからないんだ。", "verdict": "PASS"},
+    "loop/GG stock": {"response": "ループストックはGG当選時に抽選されるもので、...", "verdict": "PASS"},
+    "天国ロング": {"response": "登録データにありません。", "verdict": "PASS"},
+    "GG継続": {"response": "GG継続の条件は、ハズレ、上段青7、赤7フェイク、押し順黄7、...", "verdict": "PASS"},
+    "AD-04(ヤメ時)": {"response": "GG終了後…G-ZONE終了後、32G消化がいいみたいだよ。", "verdict": "PASS"}
+  },
+  "aggregate": {
+    "critical_unsupported_factual": 0, "chunk_misattribution": 0, "structured_misattribution": 0, "phantom_fabrication": 0
+  },
+  "comparison_to_prior_phases": "全12件でPhase4FY/FZ/FC2時点の検証済み挙動が完全に維持されていることを確認。dispatch/evidence-arbitration統合による回帰は一切無い。",
+  "gate_verdict": "PASS (critical unsupported factual=0, chunk misattribution=0, structured misattribution=0, phantom fabrication=0 — mandatory即FAIL条件に該当なし)"
+}

@@ -14,9 +14,20 @@ from pathlib import Path
 
 from jinja2 import Template
 
+from pachislot_ai.dispatch import dispatch
+from pachislot_ai.dispatch.conservative_dispatch import (
+    IDENTITY_PERSONA,
+    OOD_FACTUAL,
+    SMALL_TALK,
+)
 from pachislot_ai.llm.base import ChatCompletionResult, ChatMessage, LLMProvider
 from pachislot_ai.rag.context_builder import RagContext
 from pachislot_ai.rag.pipeline import RagPipeline
+
+# Phase4FC3: これらのモードはRAG context system messageを一切注入しない
+# (雑談・自己紹介・専門外の質問に「登録データにありません」という不自然な
+# 断り書きが混入するのを防ぐ、FC2 Gate H/Kで確認された regression の修正)。
+_NO_RAG_CONTEXT_MODES = frozenset({SMALL_TALK, IDENTITY_PERSONA, OOD_FACTUAL})
 
 logger = logging.getLogger(__name__)
 
@@ -80,6 +91,31 @@ class ChatService:
         if self._rag_pipeline is None or not user_messages:
             return None
         query = user_messages[-1].content
+
+        # Phase4FC3 Section2/6-11: production dispatch。SMALL_TALK/IDENTITY_PERSONA/
+        # OOD_FACTUALと**確信を持って**判定された場合のみretrieval自体を行わず
+        # RAG contextをNoneのまま返す(「登録データにありません」が雑談・自己紹介に
+        # 混入する既存アーキテクチャギャップを解消する、FC2 Gate H/Kで確認済みの
+        # regression修正)。PACHISLOT_FACTUAL/PACHISLOT_CONVERSATIONALは既存のRAG
+        # pipelineへそのまま委譲する(entity-aware chunk binding・structured facts
+        # binding・title補完検索、いずれも無変更)。
+        #
+        # UNKNOWN(確信が持てない発話)は、必ずRAG pipelineを通す(＝空contextでも
+        # 明示的なfallback文言を注入する、既存の安全側デフォルトを維持する)。
+        # これは意図的な設計判断: 「GGプラスとは何か説明して」等のphantomなパチスロ
+        # 固有名詞クエリは、GENERAL_PACHISLOT_TERMSのような一般語彙に一致しないため
+        # dispatch()の結果はUNKNOWNになる。ここでcontextの注入を省略すると、
+        # Phase4ZGが「検索結果:該当なし」という明示的signalを失い、自身の内部知識
+        # から自信満々に架空の説明を創作してしまうことをablation testで実証した
+        # (「GGプラス」で確認: contextありなら正しくdecline、contextを完全に
+        # 省略すると具体的な架空説明を生成した)。したがってUNKNOWN + is_empty を
+        # small-talk同様に「contextを省略してよい」ケースとして扱ってはならない
+        # (Section11の『obvious non-RAG conversation』はSMALL_TALK/IDENTITY_PERSONA/
+        # OOD_FACTUALのような確信の持てるケースのみを指すと解釈する)。
+        dispatch_result = dispatch(query)
+        if dispatch_result.mode in _NO_RAG_CONTEXT_MODES:
+            return None
+
         try:
             return self._rag_pipeline.build_context(query, machine_id=machine_id)
         except Exception:  # noqa: BLE001 - RAG障害でチャット自体は継続させる

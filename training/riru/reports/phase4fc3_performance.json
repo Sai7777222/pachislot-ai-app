@@ -1,0 +1,10 @@
+{
+  "phase": "Phase4FC3", "section": "Section25 (performance)",
+  "target": "<2ms dispatch overhead preferred, evidence arbitration negligible, no LLM classifier",
+  "measured": {"dispatch_mean_ms": 0.0049, "dispatch_max_ms": 0.0139, "arbitrate_mean_ms": 0.00032, "arbitrate_max_ms": 0.0015},
+  "total_added_overhead_ms": "~0.006ms (dispatch + arbitration combined), far under the <2ms preferred target",
+  "no_llm_classifier_used": true,
+  "no_additional_generation_call": true,
+  "no_new_optimization_performed": true,
+  "gate_verdict": "PASS (well under <2ms target, no LLM classifier, no additional generation call)"
+}

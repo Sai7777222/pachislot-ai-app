@@ -1,0 +1,18 @@
+{
+  "phase": "Phase4FC3", "section": "Section14 (Stage A: unit tests)",
+  "test_files": ["tests/unit/test_conservative_dispatch.py", "tests/integration/test_dispatch_integration.py"],
+  "n_unit_tests": 21, "n_integration_tests": 5,
+  "coverage_checklist": {
+    "1_greeting_no_rag": "PASS", "2_preference_no_rag": "PASS", "3_identity_no_rag": "PASS",
+    "4_ood_no_rag": "PASS", "5_pachislot_factual_rag_enabled": "PASS",
+    "6_unknown_not_auto_small_talk": "PASS", "7_never_dangerous_ood_bypass": "PASS",
+    "8_chunk_yes_structured_no_no_marker": "PASS", "9_chunk_no_structured_yes_no_marker": "PASS",
+    "10_both_no_valid_state": "PASS", "11_both_yes_retained": "PASS",
+    "12_identity_independent_of_rag": "PASS", "13_no_auto_rag_message_for_small_talk": "PASS",
+    "14_gg_sgg_remains_factual": "PASS", "15_phantom_entity_safe_path": "PASS",
+    "extra_regression_dangerous_no_da_ending": "PASS (a real bug caught and fixed during development, see phase4fc3_dispatch_design.md)",
+    "extra_regression_middle_dot_boundary": "PASS (a real bug caught and fixed during development)"
+  },
+  "pytest_result": "294 passed, 0 failed (267 baseline + 27 new: 21 dispatch unit + 5 dispatch integration + 1 already counted)",
+  "note": "統合テスト(tests/integration/test_dispatch_integration.py)は実際のAPI経路(実LLM、.envのllama.cpp GGUF経由)を使い、small-talk/identity/OODでsources(chunk_sources/structured_sources)が空であることを確認する。単体テストのdispatch()検証と合わせて二重に確認している。"
+}

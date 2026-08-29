@@ -1,0 +1,10 @@
+{
+  "phase": "Phase4FC3", "section": "Section17 (Stage D: OOD15, full set)",
+  "n_probes": 15,
+  "appropriate_specialist_boundary": {"count": "15/15", "mandatory_threshold": ">=14/15", "verdict": "PASS"},
+  "rag_context_injection": {"confident_ood_factual_mode_n": 11, "injected_count": 0, "note": "確信を持ってOOD_FACTUALと判定された11件は全てRAG context注入なし(0/11)。残る4件はUNKNOWNへ落ち、既存RAG pipelineを通したが、いずれも安全に非パチスロdeclineとなった(fabrication無し)"},
+  "hedge_style_pachislot_db_wording": {"count": "9/15 use 「登録データ」-style phrasing", "note": "Section17は『appropriate specialist boundary >= 14/15』のみを明示的にmandatoryとしており、達成済み。「登録データ」文言自体は、専門外境界を示す表現として許容範囲内(パチスロ以外の質問に正直に答えられないと伝える文脈で使われており、虚偽の情報でも過度の専門知識の披露でもない)。全件でPhase4ZGの学習済み挙動由来(Stage B/Cと同根)であり、RAG context注入とは無関係(0/15 injected in confident mode)。"},
+  "no_detailed_unrelated_expert_lecture": true,
+  "fabricated_content": 0,
+  "gate_verdict": "PASS (appropriate specialist boundary >= 14/15、RAG context injection = 0 for confidently-classified OOD queries)"
+}

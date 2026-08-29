@@ -1,0 +1,20 @@
+{
+  "phase": "Phase4FC3", "section": "Section24 (Stage K: context injection audit)",
+  "n_generated_cases_audited": 170,
+  "fields_recorded_per_case": ["mode", "retrieval_called", "rag_context_injected", "chunk_evidence", "structured_evidence", "combined_evidence", "response"],
+  "invariant_checks": {
+    "SMALL_TALK_plus_rag_context_injected": {"expected": 0, "actual": 0, "verdict": "PASS"},
+    "IDENTITY_PERSONA_plus_rag_context_injected": {"expected": 0, "actual": 0, "verdict": "PASS"},
+    "OOD_FACTUAL_plus_rag_context_injected": {"expected": 0, "actual": 0, "verdict": "PASS"},
+    "combined_evidence_gt_0_and_global_no_evidence_marker": {
+      "expected": 0,
+      "actual": 0,
+      "method": "phase4fc2_production_gt.json 102クエリ全件に対し実本番経路(chunk selection + structured lookup + arbitration)を実行し、最終的に矛盾するno-evidenceマーカーが残っていないかを機械的に検証(phase4fc3_evidence_arbitration.json参照)",
+      "verdict": "PASS"
+    }
+  },
+  "aggregate_across_170_generated_cases": {
+    "small_talk_injected_violations": 0, "identity_injected_violations": 0, "ood_injected_violations": 0
+  },
+  "gate_verdict": "PASS (全invariant、0件の違反)"
+}

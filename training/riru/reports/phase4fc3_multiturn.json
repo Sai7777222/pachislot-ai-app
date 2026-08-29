@@ -1,0 +1,19 @@
+{
+  "phase": "Phase4FC3", "section": "Section23 (Stage J: multi-turn with boundary transitions)",
+  "n_scenarios": 5, "n_turns": 10,
+  "scenarios": [
+    {"id": "FC3-MT-01", "transition": "small-talk -> pachislot factual", "result": "小談義turn(hedgeなし) -> 天井質問がgrounded応答。前turnの雑談contextが後続の事実回答に混入しなかった"},
+    {"id": "FC3-MT-02", "transition": "pachislot factual -> small-talk", "result": "Q6 grounded応答 -> 感謝の雑談へ自然に移行(hedgeなし)"},
+    {"id": "FC3-MT-03", "transition": "OOD -> pachislot factual", "result": "天気質問を正しくdecline -> 天井質問がgrounded応答。前turnのOOD文脈が後続の事実回答に混入しなかった"},
+    {"id": "FC3-MT-04", "transition": "identity -> factual", "result": "「君の名前は？」に「私はリルだよ！」-> ヤメ時質問がgrounded応答"},
+    {"id": "FC3-MT-05", "transition": "factual -> identity", "result": "天井質問grounded応答 -> 「君の名前は？」に「私はパチスロ専門のAIアシスタントだよ！」(canonical名リルの明示的言及は今回無いが、誤った名前を主張してもいない。軽微な一貫性の観察として記録)"}
+  ],
+  "aggregate": {
+    "critical_factual_cross_turn_misattribution": 0,
+    "mode_leakage_between_turns": 0,
+    "previous_rag_context_forces_later_small_talk_hedge": 0,
+    "note": "全5シナリオでdispatchは各turnのuser発話のみに基づいて独立に判定されており(既存ChatServiceの設計通り)、前turnのmode/contextが後続turnのdispatch判定やRAG context注入へ意図せず影響することはなかった。"
+  },
+  "minor_observation": "FC3-MT-05で、前turnが事実応答(grounded RAG)だった直後の「君の名前は？」で、canonical名「リル」を明示的に名乗らなかった(ただし誤った名前も主張していない)。軽微な一貫性のばらつきとして記録するが、critical mandatoryなgate違反ではない。",
+  "gate_verdict": "PASS (critical_factual_cross_turn_misattribution=0)"
+}

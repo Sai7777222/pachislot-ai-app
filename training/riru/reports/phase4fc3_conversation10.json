@@ -1,0 +1,10 @@
+{
+  "phase": "Phase4FC3", "section": "Section18 (Stage E: pachislot conversational 10, full set)",
+  "n_probes": 10,
+  "fabricated_machine_names": 0,
+  "fabricated_numbers_or_features": 0,
+  "mode_distribution": {"PACHISLOT_CONVERSATIONAL": 8, "UNKNOWN": 2},
+  "note_on_hedge_pattern": "8/10がPACHISLOT_CONVERSATIONALと判定され、Section9/10の設計方針通り既存RAG pipelineへ委譲された。これらのうち8件中複数(F01/F03/F04/F06/F07/F08/F09/F10)が『登録データに...情報は見つからない』という応答になったが、これは(a) fabrication無し(機種名・数値を創作していない)、(b) query自体が特定の機種の実践結果・個人的な好みについてであり、実DBにそもそも該当データが存在しない、という正しい安全側の反映である。Section10は将来的にpurely conversationalとfactual-requiringを区別する余地を示唆しているが、本フェーズはこの区別を実装せず、安全側(常にRAG経由)を維持した(詳細はphase4fc3_dispatch_design.md Section5参照)。",
+  "no_unnecessary_strict_rag_decline_mandatory": "明示的なmandatory数値目標はSection18に無いため、fabricated_machine_names=0(達成)を主要gateとする",
+  "gate_verdict": "PASS (fabricated_machine_names=0)。hedgeパターンの多さは既知の設計トレードオフとして開示。"
+}

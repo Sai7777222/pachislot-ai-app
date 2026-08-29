@@ -1,0 +1,16 @@
+{
+  "phase": "Phase4FC3", "section": "Section22 (Stage I: RAG8 mandatory)",
+  "results": {
+    "P02": {"response": "登録データにその情報は見つからないみたいだよ。", "verdict": "PASS"},
+    "P04": {"response": "最低設定（設定1）の機械割は97.2%、最高設定（設定6）の機械割は114.6%なので、差は17.4%になります。", "verdict": "PASS (LOW arithmetic, grounded operands, correct subtraction, not a factual error)"},
+    "LC-08": {"response": "登録データにその情報は見つからないんだ。", "verdict": "PASS"},
+    "Q6": {"response": "GGとSGGは継続の仕組みが違うよ。...", "verdict": "PASS"},
+    "Q11": {"response": "天井は最大1480Gまでで...15.2%、20.3%、64.5%...", "verdict": "PASS"},
+    "Q15": {"response": "ミリオンゴッドは、圧倒的な出玉感と洗練されたゲーム性が特徴のパチスロだよ。...", "verdict": "PASS"},
+    "Q17": {"response": "ミリオンゴッドの遊び方は、まずリールが止まるまで待って...", "verdict": "PASS"},
+    "AD-04": {"response": "GG終了後…G-ZONE終了後、32G消化がいいみたいだよ。", "verdict": "PASS"}
+  },
+  "aggregate": {"unsupported_factual": 0, "major_completeness_regression": 0},
+  "p04_arithmetic_note": "P04は今回もgrounded operands(97.2%/114.6%)から正確な差分(17.4%)を自己計算しているが、Section22の指示通り、単に正しい引き算を行ったことだけを理由に自動FAILとはしない(factual errorを含まないため)。",
+  "gate_verdict": "PASS (unsupported_factual=0, major_completeness_regression=0)"
+}

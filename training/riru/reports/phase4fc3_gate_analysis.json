@@ -1,0 +1,37 @@
+{
+  "phase": "Phase4FC3", "section": "Section27 (final CASE determination)",
+  "mandatory_gate_summary": {
+    "small_talk_hedge_le_5pct": {"actual": "26.2% (17/65)", "verdict": "FAIL (numerically)", "root_cause_attribution": "100%(17/17)の残存hedgeがrag_context_injected=falseで発生 — アーキテクチャ由来ではなくPhase4ZG自身の学習済み挙動と実証済み"},
+    "identity_rag_regression_eq_0": {"actual": 0, "verdict": "PASS", "note": "IDENTITY_PERSONA modeでのRAG context注入は0/7、FC2で発見した「君の名前は？」regressionは修正確認済み"},
+    "ood_ge_14_of_15": {"actual": "15/15", "verdict": "PASS"},
+    "fabricated_machine_names_eq_0": {"actual": 0, "verdict": "PASS"},
+    "dangerous_factual_misroute_eq_0": {"actual": "0/260 (GT260) + 0 across all other testing", "verdict": "PASS", "note": "開発中に1件のdangerous misroute候補(「GG中はどんな状態なの？」のSMALL_TALK誤分類)を発見・即座に修正・回帰テスト追加済み"},
+    "contradictory_no_evidence_eq_0": {"actual": "0/102 (systematic check)", "verdict": "PASS", "note": "mandatory case 1(天井/ヤメ時)は完全修正。mandatory case 2(天国/天国準備)は複合語境界安全性による既知の限界として残存するが、矛盾状態ではなく安全側declineのまま(fabricationなし)"},
+    "critical_factual_regression_eq_0": {"actual": 0, "verdict": "PASS", "note": "既知失敗12件+RAG8件、全てPhase4FY/FZ/FC2の検証済み挙動を維持"}
+  },
+  "architecture_validation_summary": {
+    "description": "本フェーズがSection2で明示的にスコープとした『dispatch/context gating統合』および『evidence arbitration』は、いずれも完全に実装・検証済みであり、意図通り機能している。",
+    "evidence": [
+      "170件の生成全てで、SMALL_TALK/IDENTITY_PERSONA/OOD_FACTUALと確信を持って判定されたケースのRAG context注入は0件(Stage K監査)",
+      "GT260全件で危険な事実クエリの誤ルーティングは0件(開発中に発見した1件の潜在的危険パターンは修正済み)",
+      "evidence arbitrationにより、mandatory case(天井とヤメ時)の矛盾する完全declineを解消し、grounded な正しい回答へ改善したことを実証",
+      "12件の既知失敗ケース・RAG8件、全てcritical regression無し",
+      "pytest 267→294(0 regression)、Phase4ZG/entity_attribution.py/structured_lookup.py/system.jinja2、全hash不変"
+    ]
+  },
+  "residual_finding": {
+    "description": "small-talk hedge率(26.2%)がmandatory閾値(<=5%)を満たさない。",
+    "decisive_evidence": "残存する17件のhedge全て(100%)が、RAG context system messageが一切注入されていない状態(rag_context_injected=false)で発生していることを機械的に確認した。これはFC2で発見・本フェーズで修正した『RAG context注入アーキテクチャ』の問題とは完全に独立しており、Phase4ZGモデル自身が個人的な好み・性格・日常についての質問に対し『登録データにない』という定型文で応答する、学習済みの挙動パターンである。",
+    "scope_classification": "Section26により本フェーズでのPhase4ZG retrain/変更は明示的に禁止されているため、この問題は本フェーズのスコープ外である。",
+    "before_after": "FC2時点60.0%(39/65、アーキテクチャ由来の混入込み) → FC3実装後26.2%(17/65、100%がモデル自身の学習済み挙動由来)。アーキテクチャ由来のhedgeは0%まで低減したことを定量的に実証した。"
+  },
+  "case_determination": {
+    "case": "FC3-C",
+    "label": "Boundary Still Polluted (literal reading of the mandatory numeric gate)",
+    "important_qualification": "この判定はSection14の『small-talk hedge <=5%』という厳密な数値基準に照らした、文字通りの判定である。しかし本フェーズが実際に対象とした問題(RAG context injectionアーキテクチャによる雑談・自己紹介への汚染)は、ablation testによる因果関係の実証を含む厳密な検証により、完全に解消されたことを確認している(アーキテクチャ由来hedge=0/65)。残存する26.2%は、Section26で変更を明示的に禁止されているPhase4ZG自身の学習済み挙動に起因する、別種の問題である。したがって『FC3-C = dispatch統合が失敗した』という解釈は正確ではなく、『dispatch統合は成功したが、その成功だけでは満たせない、より深い層の問題が新たに定量化・特定された』という解釈が正確である。",
+    "quantization_allowed": false,
+    "recommended_next_step": "(a) 人間が、残存する26.2%のhedgeをPhase4ZGの既知の限界として受容する(identity guardの6件の受容済みリスクと同様の扱い)か、(b) 将来的にPhase4ZGの追加学習(小談義・自己紹介質問への応答パターン改善)を検討する別フェーズを起こすか、を判断すること。(b)を選ぶ場合はidentity研究再開に相当するため、Section26の制約を明示的に解除する必要がある。いずれの場合も、dispatch/evidence-arbitrationの実装自体はレビュー後にcommitして良い状態にあると判断する。",
+    "human_confirmation_required": true,
+    "auto_commit": false
+  }
+}

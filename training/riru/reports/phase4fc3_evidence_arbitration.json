@@ -1,0 +1,24 @@
+{
+  "phase": "Phase4FC3", "section": "Section20 (Stage G: evidence arbitration)",
+  "n_probes": 27,
+  "categories_covered": {"chunk_only": 5, "structured_only": 6, "both": 5, "phantom_neither": 8, "mandatory_cases": 2, "chunk_and_structured": 1},
+  "mandatory_case_1": {
+    "prompt": "天井とヤメ時の関係を教えて", "id": "FX-CB06",
+    "before_fc3": "登録データに「ヤメ時」についての情報は見つからないんだ。(実在するstructured dataが矛盾するchunk側マーカーにより無視されていた)",
+    "after_fc3": "天井到達後は、ループストックの継続率が...GG終了後はG-ZONE終了後、32G消化がヤメ時になるんだ。",
+    "verdict": "PASS — evidence arbitrationにより完全に修正されたことを確認"
+  },
+  "mandatory_case_2": {
+    "prompt": "天国と天国準備の違いを教えて", "id": "PG-CP06",
+    "before_fc3": "登録データに「天国準備」についての情報は見つからないんだ。",
+    "after_fc3": "登録データに「天国準備」についての情報は見つからないんだ。(変化なし)",
+    "root_cause": "実DBのラベルが「天国準備滞在時」のように、entity名に別の語が直接融合した複合語であるため、境界安全チェック(複合語誤衝突防止、Section26でFZロジック変更禁止のため維持)が単体一致とみなさない。安全側(decline)のまま、fabricationではない。",
+    "verdict": "PARTIAL — 既知の制約として文書化。安全性への影響なし。"
+  },
+  "systematic_check": {
+    "method": "phase4fc2_production_gt.json の102クエリ全件に対し、実本番経路のchunk selection + structured lookup + arbitrationを実行し、最終的に矛盾するno-evidenceマーカー(=structured側に実データがあるentityのマーカーが除去されずに残るケース)が無いかを機械的に検証した",
+    "n_checked": 102, "arbitration_fired_count": 7, "remaining_contradictions": 0
+  },
+  "aggregate": {"contradictory_no_evidence_marker": 0, "false_decline_caused_by_source_disagreement": "0 confirmed via systematic check (compound-suffix limitation is a separate, documented, non-contradiction case)"},
+  "gate_verdict": "PASS (contradictory no-evidence marker = 0 across systematic 102-query check; the one known limitation is a compound-word-safety trade-off, not a contradiction bug, and remains safely declining)"
+}

@@ -1,0 +1,7 @@
+{
+  "phase": "Phase4FC3", "section": "Section29 (preflight)",
+  "pytest_baseline": null,
+  "phase4zg_adapter_hash_expected": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+  "fy_fz_commit_status": {"fy": "b61ee8cfdc28c969ded576bf128bab3ac84a5ef0 (pushed)", "fz": "616405054c9a55cf1871cd2bb04bab7b0cca1ca0 (pushed)"},
+  "note": "FC2's diagnostic artifacts (phase4fc2_*.json/.md, guard scripts) remain uncommitted per FC2's own instruction (evaluation-only phase, no commit). This phase (FC3) will checkpoint them alongside its own new production code before human review, per Section29."
+}

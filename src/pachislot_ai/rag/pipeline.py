@@ -15,6 +15,7 @@ from pachislot_ai.data.models.structured import Machine
 from pachislot_ai.data.repositories import machine_repository as mrepo
 from pachislot_ai.rag.context_builder import RagContext, build_rag_context
 from pachislot_ai.rag.entity_attribution import select_grounded_chunks
+from pachislot_ai.rag.evidence_arbitration import arbitrate
 from pachislot_ai.rag.retriever import Retriever
 from pachislot_ai.rag.structured_lookup import find_relevant_structured_facts
 
@@ -88,6 +89,11 @@ class RagPipeline:
         if chunks:
             all_chunks = self._retriever.get_all_chunks(machine_id=effective_machine_id)
             chunks = select_grounded_chunks(query, chunks, all_chunks)
+
+        # evidence arbitration (Phase4FC3): chunk側のno-evidence合成マーカーが、
+        # 独立したstructured facts側の実データと矛盾しないようにする。
+        # entity_attribution.py・structured_lookup.py 双方の内部ロジックは無変更。
+        chunks = arbitrate(chunks, structured_findings)
 
         context = build_rag_context(
             self._template_path,

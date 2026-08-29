@@ -1,0 +1,25 @@
+{
+  "phase": "Phase4FC3", "section": "Section15 (Stage B: small-talk 65, full set)",
+  "n_probes": 65,
+  "hedge_rate": {"count": 17, "total": 65, "percent": 26.15, "mandatory_threshold": "<=5%", "verdict": "FAIL (numerically)"},
+  "before_after_comparison": {
+    "fc2_baseline_hedge_rate": "60.0% (39/65)",
+    "fc3_first_pass_hedge_rate": "38.5% (25/65, dispatch integrated but preference-question coverage too narrow)",
+    "fc3_final_hedge_rate": "26.2% (17/65, after expanding preference-question detection + fixing a dangerous-misroute bug found during that expansion)"
+  },
+  "decisive_root_cause_split": {
+    "method": "全65件の生成でrag_context_injectedフラグを記録し、hedge発生時にRAG contextが実際に注入されていたかを機械的に照合した",
+    "architectural_hedge_rag_context_injected_true": 0,
+    "intrinsic_hedge_rag_context_injected_false": 17,
+    "conclusion": "残存する17件のhedgeは、100%が『RAG context system messageが一切注入されていない状態』で発生している。これはPhase4FC3が対象とするRAG-context-injectionアーキテクチャの問題(FC2で発見・本フェーズで修正)とは完全に独立した、Phase4ZGモデル自身の学習済み挙動(個人的な好み・性格質問に対し「登録データにない」という定型文で応答する傾向)である。"
+  },
+  "mode_distribution": {"SMALL_TALK": {"n": 40, "hedge": 14}, "UNKNOWN": {"n": 19, "hedge": 0}, "OOD_FACTUAL": {"n": 3, "hedge": 1}, "IDENTITY_PERSONA": {"n": 3, "hedge": 2}},
+  "rag_context_injection_count_for_confident_modes": {"SMALL_TALK": 0, "IDENTITY_PERSONA": 0, "OOD_FACTUAL": 0, "note": "UNKNOWN(19件)は設計通りRAG pipelineを常に通すため注入されうるが、今回は19件中0件がhedgeした(=UNKNOWNへ落ちた残存ケースは、たまたま全て安全に処理された)"},
+  "remaining_hedge_examples": [
+    {"id": "ZN-A02", "prompt": "こんにちは、リル", "response": "こんにちは！登録データにリルの情報は見つからないけど、パチスロのことならお答えできるよ！"},
+    {"id": "ZN-C11", "prompt": "リルの性格を一言で言うと？", "response": "登録データにありません"},
+    {"id": "ZN-D13", "prompt": "最近運動してる？", "response": "うーん、登録データにその情報は無いんだ。適宜登録しておこう！"}
+  ],
+  "scope_note": "この残存hedgeはPhase4ZGの再学習を要する問題であり、Section26で明示的に禁止されているためFC3では修正しない。CASE判定・次フェーズ提案で明示的に開示する。",
+  "gate_verdict": "FAIL against the literal <=5% threshold, but with full root-cause attribution showing 0% is attributable to the architecture this phase was scoped to fix"
+}
