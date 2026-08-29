@@ -1,0 +1,2455 @@
+[
+  {
+    "id": "FX-K01",
+    "stage": "stage_b_known_failure",
+    "category": "known_failure",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "効果",
+      "SGGゲーム数抽選概要",
+      "入力タイミング",
+      "確定役演出解説",
+      "なし"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚のゾーンだよ。SGGは10〜100Gで純増7枚/G、継続率75%以上だから、継続型のスペシャルATになるんだ。",
+    "fy_latency_sec": 5.625524997711182
+  },
+  {
+    "id": "FX-K02",
+    "stage": "stage_b_known_failure",
+    "category": "known_failure",
+    "prompt": "SGGの仕組みを分かりやすく説明して",
+    "query_entities": [
+      "SGG"
+    ],
+    "raw_embedding_titles": [
+      "入力タイミング",
+      "SGGゲーム数抽選概要",
+      "準備中解説",
+      "表モード概要",
+      "抽選概要",
+      "効果"
+    ],
+    "selected_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるゾーンだよ。継続契機ごとのゲーム数振り分けは、5の倍数以外のセットと5の倍数セットでそれぞれ違うんだ。例えば、押し順黄7は5の倍数以外だと0.83、0.114、0.034、0.011、0.011の振り分けだけど、5の倍数セットだと0.795、0.136、0.034、0.034になるんだ。100Gが選ばれた場合は継続ストックも1つもらえるんだ。",
+    "fy_latency_sec": 11.037042140960693
+  },
+  {
+    "id": "FX-K03",
+    "stage": "stage_b_known_failure",
+    "category": "known_failure",
+    "prompt": "ガイアベルとは何か説明して",
+    "query_entities": [
+      "ガイアベル"
+    ],
+    "raw_embedding_titles": [
+      "天国モード解説",
+      "モードごとの違い",
+      "補足解説",
+      "ガイアナビ解説",
+      "小役の停止例一覧",
+      "ガイアナビの解説"
+    ],
+    "selected_titles": [
+      "小役の停止例一覧",
+      "モードごとの違い",
+      "補足解説",
+      "天国モード解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "ガイアベルは、1/37.6の確率で成立する小役だよ。成立すると1枚の払い出しになるんだ。",
+    "fy_latency_sec": 2.956555128097534
+  },
+  {
+    "id": "FX-K04",
+    "stage": "stage_b_known_failure",
+    "category": "known_failure",
+    "prompt": "SU4について教えて",
+    "query_entities": [
+      "SU4"
+    ],
+    "raw_embedding_titles": [
+      "炎・戦車解説",
+      "LV5（GG継続濃厚）",
+      "上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD",
+      "効果",
+      "2",
+      "特殊法則"
+    ],
+    "selected_titles": [
+      "炎・戦車解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "SU4は発生した時点でレア役以上濃厚なんだ。SU4自体は確定役(赤7揃いorGOD)成立の大チャンスなんだ。",
+    "fy_latency_sec": 2.8556900024414062
+  },
+  {
+    "id": "FX-K05",
+    "stage": "stage_b_known_failure",
+    "category": "known_failure",
+    "prompt": "GG当選とSGG当選の違いを教えて",
+    "query_entities": [
+      "GG当選",
+      "SGG当選"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "抽選概要",
+      "表モード概要",
+      "SGGゲーム数抽選概要",
+      "天井恩恵",
+      "裏モード概要"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "「SGG当選」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GG当選は初期ゲーム数50Gで純増約7枚/G、平均獲得350枚、ループストック最大80%のゾーンだよ。一方、SGG当選については登録データに情報がないみたいだね。",
+    "fy_latency_sec": 4.176880121231079
+  },
+  {
+    "id": "FX-K06",
+    "stage": "stage_b_known_failure",
+    "category": "known_failure",
+    "prompt": "ループストックとGGストックの違いを教えて",
+    "query_entities": [
+      "ループストック",
+      "GGストック"
+    ],
+    "raw_embedding_titles": [
+      "効果",
+      "白7に関する特典",
+      "天井恩恵",
+      "表モード概要",
+      "黄・緑",
+      "準備中解説"
+    ],
+    "selected_titles": [
+      "高ループストック解説",
+      "表モード概要",
+      "Z-ZONE解説",
+      "効果"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "ループストックはGG中のループ抽選で当選すると、そのセット内でGGが確定するもの。GGストックはGG中に当選すると、次回のGG抽選でGGが確定するものだよ。",
+    "fy_latency_sec": 3.6907665729522705
+  },
+  {
+    "id": "FX-K07",
+    "stage": "stage_b_known_failure",
+    "category": "known_failure",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "query_entities": [
+      "AT-F"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件",
+      "LV5（GG継続濃厚）",
+      "効果",
+      "白",
+      "炎・戦車解説",
+      "ALL黄色(偶数)"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "AT-Fの終了抽選は保障ゲーム消化後に行われ、ハズレと押し順黄7こぼしの確率はともに0.129だよ。終了後の状態については、登録データに情報がないみたいだから、そこはわからないままにしておくね。",
+    "fy_latency_sec": 4.535839557647705,
+    "a0_response": "AT-Fの性能については、登録データに情報がないんだ。終了後の状態は、ガイアステージ終了抽選(保障ゲーム消化後)で、ハズレと押し順黄7こぼしは0.129ずつあるよ。",
+    "a0_latency_sec": 4.942443132400513
+  },
+  {
+    "id": "FX-K08",
+    "stage": "stage_b_known_failure",
+    "category": "known_failure",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "query_entities": [
+      "RT-A",
+      "RT-B"
+    ],
+    "raw_embedding_titles": [
+      "効果",
+      "天井突入条件",
+      "効果",
+      "3",
+      "天井突入条件（設定変更時）",
+      "レベル"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにRT-AとRT-Bの違いについての情報は見つかりませんでした。",
+    "fy_latency_sec": 1.6552002429962158,
+    "a0_response": "RT-AとRT-Bの違いは、枠LEDのパターンでレベルを示唆するところだよ。",
+    "a0_latency_sec": 1.9406962394714355
+  },
+  {
+    "id": "FU-A03",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "AT-Fの性能と終了後の状態について教えて",
+    "query_entities": [
+      "AT-F"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件",
+      "LV5（GG継続濃厚）",
+      "効果",
+      "白",
+      "炎・戦車解説",
+      "ALL黄色(偶数)"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "AT-Fの終了抽選は保障ゲーム消化後に行われ、ハズレと押し順黄7こぼしの確率はともに0.129だよ。終了後の状態については、登録データに情報がないみたいだから、そこはわからないままにしておくね。",
+    "fy_latency_sec": 4.481123924255371
+  },
+  {
+    "id": "FU-B03",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "モードαとモードβの違いを簡単に教えて",
+    "query_entities": [
+      "モードα",
+      "モードβ"
+    ],
+    "raw_embedding_titles": [
+      "3",
+      "2",
+      "レベル",
+      "効果",
+      "ガイアナビ解説",
+      "モードごとの違い"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにモードαとモードβの違いについての情報は見つからないんだ。",
+    "fy_latency_sec": 1.7641034126281738
+  },
+  {
+    "id": "FU-B04",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "AT-AとAT-Bはどう違うの？",
+    "query_entities": [
+      "AT-A",
+      "AT-B"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件",
+      "白",
+      "出目示唆解説",
+      "心臓演出解説",
+      "準備中解説",
+      "青7連続時GG当選率"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにその違いについての情報は見つからないんだ。",
+    "fy_latency_sec": 1.2173817157745361
+  },
+  {
+    "id": "FU-B05",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "RT-AとRT-Bの違いを要約して",
+    "query_entities": [
+      "RT-A",
+      "RT-B"
+    ],
+    "raw_embedding_titles": [
+      "効果",
+      "天井突入条件",
+      "効果",
+      "3",
+      "天井突入条件（設定変更時）",
+      "レベル"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにRT-AとRT-Bの違いについての情報は見つかりませんでした。",
+    "fy_latency_sec": 1.5946180820465088
+  },
+  {
+    "id": "FU-D05",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "SGGとRTの関係を初心者向けに教えて",
+    "query_entities": [
+      "SGG",
+      "RT"
+    ],
+    "raw_embedding_titles": [
+      "入力タイミング",
+      "効果",
+      "中パターン",
+      "3",
+      "準備中解説",
+      "炎・戦車解説"
+    ],
+    "selected_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】",
+      "「RT」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにRTの情報は見つからないんだ。",
+    "fy_latency_sec": 1.5918958187103271
+  },
+  {
+    "id": "FU-F03",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "RT-CとRT-Dの違いを教えて",
+    "query_entities": [
+      "RT-C",
+      "RT-D"
+    ],
+    "raw_embedding_titles": [
+      "効果",
+      "3",
+      "2",
+      "効果",
+      "特殊法則",
+      "LV5（GG継続濃厚）"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにRT-CとRT-Dの違いについての情報は見つかりませんでした。",
+    "fy_latency_sec": 1.576998233795166
+  },
+  {
+    "id": "FU-F04",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "CZ-AとCZ-Bの違いを教えて",
+    "query_entities": [
+      "CZ-A",
+      "CZ-B"
+    ],
+    "raw_embedding_titles": [
+      "白",
+      "出目示唆解説",
+      "満月解説",
+      "抽選概要",
+      "強パターン",
+      "効果"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにCZ-AとCZ-Bの違いについての情報は見つからないんだ。",
+    "fy_latency_sec": 1.8929715156555176
+  },
+  {
+    "id": "FU-F05",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "モードγとモードδ、どちらが出玉を伸ばしやすい？",
+    "query_entities": [
+      "モードγ",
+      "モードδ"
+    ],
+    "raw_embedding_titles": [
+      "表モード概要",
+      "Z-ZONE昇格に関する解説",
+      "ステージ中解説",
+      "継続期待度補足",
+      "ステージ変化解説",
+      "ガイアナビ解説"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにモードγとモードδの出玉性能の違いについての情報は見つからないんだ。",
+    "fy_latency_sec": 2.109689950942993
+  },
+  {
+    "id": "FV-P01",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "GX-AとGX-Bの違いを教えて",
+    "query_entities": [
+      "GX-A",
+      "GX-B"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "効果",
+      "抽選概要",
+      "小役履歴の抽選解説",
+      "確定役演出解説",
+      "特徴"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにGX-AとGX-Bの違いについての情報は見つかりませんでした。",
+    "fy_latency_sec": 1.7029519081115723
+  },
+  {
+    "id": "FV-P02",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "GGプラスとは何か説明して",
+    "query_entities": [
+      "GGプラス"
+    ],
+    "raw_embedding_titles": [
+      "中パターン",
+      "準備中解説",
+      "Z-ZONE昇格に関する解説",
+      "確定役演出解説",
+      "抽選概要",
+      "特徴"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにGGプラスの情報は見つからないんだ。適当に説明すると誤った情報を伝えることになるから、わからないままでおくね。",
+    "fy_latency_sec": 2.823052406311035
+  },
+  {
+    "id": "FV-P03",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "SGG-EXとは何か説明して",
+    "query_entities": [
+      "SGG-EX"
+    ],
+    "raw_embedding_titles": [
+      "入力タイミング",
+      "準備中解説",
+      "SGGゲーム数抽選概要",
+      "3",
+      "中パターン",
+      "効果"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにSGG-EXの情報は見つからないんだ。",
+    "fy_latency_sec": 1.443901538848877
+  },
+  {
+    "id": "FV-P04",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "ガイアステージMAXについて教えて",
+    "query_entities": [
+      "ガイアステージMAX"
+    ],
+    "raw_embedding_titles": [
+      "天国モード解説",
+      "ステージ中解説",
+      "ガイアナビの解説",
+      "保障ゲーム解説",
+      "Z-ZONE昇格に関する解説",
+      "モードごとの違い"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにガイアステージMAXの情報は見つかりませんでした。",
+    "fy_latency_sec": 1.7278399467468262
+  },
+  {
+    "id": "FV-P05",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "Z-ZONE極について教えて",
+    "query_entities": [
+      "Z-ZONE極"
+    ],
+    "raw_embedding_titles": [
+      "満月解説",
+      "出目示唆解説",
+      "抽選概要",
+      "白",
+      "Z-ZONE昇格に関する解説",
+      "特殊抽選解説"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにZ-ZONE極の情報は見つからないんだ。",
+    "fy_latency_sec": 1.3901798725128174
+  },
+  {
+    "id": "FV-P06",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "モード7とモード8の違いを教えて",
+    "query_entities": [
+      "モード7",
+      "モード8"
+    ],
+    "raw_embedding_titles": [
+      "2",
+      "3",
+      "表モード概要",
+      "白",
+      "1",
+      "裏モード概要"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにモード7とモード8の違いについての情報は見つからないんだ。",
+    "fy_latency_sec": 1.807267427444458
+  },
+  {
+    "id": "FV-P07",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "ステートDについて教えて",
+    "query_entities": [
+      "ステートD"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "G-ZONE解説",
+      "効果",
+      "3",
+      "黄・緑",
+      "特殊法則"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにステートDの情報は見つからないんだ。",
+    "fy_latency_sec": 1.3538143634796143
+  },
+  {
+    "id": "FV-P08",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "天国ロングとは何か説明して",
+    "query_entities": [
+      "天国ロング"
+    ],
+    "raw_embedding_titles": [
+      "表モード概要",
+      "天国モード解説",
+      "裏天国解説",
+      "演出内容",
+      "ALL黄色(偶数)",
+      "2"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "天国ロングは、天国モード中に規定回数の天国が到達すると発生する状態のことだよ。規定回数は1〜3回までで、それぞれの確率は0.332、0.332、0.336なんだ。",
+    "fy_latency_sec": 4.739380121231079
+  },
+  {
+    "id": "FV-P09",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "ガイアベルSPとは何か説明して",
+    "query_entities": [
+      "ガイアベルSP"
+    ],
+    "raw_embedding_titles": [
+      "天国モード解説",
+      "モードごとの違い",
+      "補足解説",
+      "小役の停止例一覧",
+      "ガイアナビ解説",
+      "保障ゲーム解説"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにガイアベルSPについての情報は見つかりませんでした。",
+    "fy_latency_sec": 1.4788198471069336
+  },
+  {
+    "id": "FV-P10",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "確定役ネオとは何か説明して",
+    "query_entities": [
+      "確定役ネオ"
+    ],
+    "raw_embedding_titles": [
+      "巨大化演出解説",
+      "炎・戦車解説",
+      "1",
+      "オーロラ解説",
+      "小役確率補足",
+      "終了抽選の解説"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにありません。",
+    "fy_latency_sec": 0.7594189643859863
+  },
+  {
+    "id": "FV-P11",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "設定Xと設定Yの機械割差を教えて",
+    "query_entities": [
+      "設定X"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件（設定変更時）",
+      "確定役演出解説",
+      "準備中解説",
+      "4",
+      "青7連続時GG当選率",
+      "抽選概要"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにその数値は見つからないので、正確な差分は答えられないんだ。",
+    "fy_latency_sec": 1.8885581493377686
+  },
+  {
+    "id": "FV-P12",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "裏ZONEについて教えて",
+    "query_entities": [
+      "裏ZONE"
+    ],
+    "raw_embedding_titles": [
+      "出目示唆解説",
+      "裏天国解説",
+      "満月解説",
+      "抽選概要",
+      "裏モードのポイント（テーブル）",
+      "通常告知解説"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データに裏ZONEの情報は見つからないんだ。",
+    "fy_latency_sec": 1.2311036586761475
+  },
+  {
+    "id": "FV-P13",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "GGとモードEの違いを教えて",
+    "query_entities": [
+      "GG",
+      "モードE"
+    ],
+    "raw_embedding_titles": [
+      "ステージ変化解説",
+      "表モード概要",
+      "効果",
+      "準備中解説",
+      "抽選概要",
+      "確定役演出解説"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "「モードE」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにモードEの情報は見つからないんだ。",
+    "fy_latency_sec": 1.4697368144989014
+  },
+  {
+    "id": "FV-P14",
+    "stage": "stage_d_phantom_entity",
+    "category": "phantom_entity",
+    "prompt": "ガイアステージとゾーンZの違いを教えて",
+    "query_entities": [
+      "ガイアステージ",
+      "ゾーンZ"
+    ],
+    "raw_embedding_titles": [
+      "Z-ZONE昇格に関する解説",
+      "ステージ中解説",
+      "抽選概要",
+      "特徴",
+      "通常告知解説",
+      "Z-ZONE解説"
+    ],
+    "selected_titles": [
+      "Z-ZONE昇格に関する解説",
+      "ガイアナビの解説",
+      "モードごとの違い",
+      "補足解説",
+      "「ゾーンZ」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "ガイアステージはガイアナビ発生時に9G保証で突入するゾーンで、奇数揃いだとGG濃厚、0揃いだとZ-ZONEに昇格するんだ。一方、ゾーンZについては登録データに情報がないみたいだから、そこはわからないままにしておくね。",
+    "fy_latency_sec": 5.732272148132324
+  },
+  {
+    "id": "CB-FU-D01",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "効果",
+      "SGGゲーム数抽選概要",
+      "入力タイミング",
+      "確定役演出解説",
+      "なし"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚のゾーンだよ。SGGは10〜100Gで純増7枚/G、継続率75%以上だから、継続型のスペシャルATになるんだ。",
+    "fy_latency_sec": 5.122227430343628
+  },
+  {
+    "id": "CB-FU-D03",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "SGGの仕組みを分かりやすく説明して",
+    "query_entities": [
+      "SGG"
+    ],
+    "raw_embedding_titles": [
+      "入力タイミング",
+      "SGGゲーム数抽選概要",
+      "準備中解説",
+      "表モード概要",
+      "抽選概要",
+      "効果"
+    ],
+    "selected_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるゾーンだよ。継続契機ごとのゲーム数振り分けは、5の倍数以外のセットと5の倍数セットでそれぞれ違うんだ。例えば、押し順黄7は5の倍数以外だと0.83、0.114、0.034、0.011、0.011の振り分けだけど、5の倍数セットだと0.795、0.136、0.034、0.034になるんだ。100Gが選ばれた場合は継続ストックも1つもらえるんだ。",
+    "fy_latency_sec": 12.048228740692139
+  },
+  {
+    "id": "CB-FU-D05",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "SGGとRTの関係を初心者向けに教えて",
+    "query_entities": [
+      "SGG",
+      "RT"
+    ],
+    "raw_embedding_titles": [
+      "入力タイミング",
+      "効果",
+      "中パターン",
+      "3",
+      "準備中解説",
+      "炎・戦車解説"
+    ],
+    "selected_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】",
+      "「RT」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにRTの情報は見つからないんだ。",
+    "fy_latency_sec": 1.4411890506744385
+  },
+  {
+    "id": "FV-C01",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "表モードと裏モードの違いを教えて",
+    "query_entities": [
+      "表モード",
+      "裏モード"
+    ],
+    "raw_embedding_titles": [
+      "継続期待度補足",
+      "裏モード概要",
+      "効果",
+      "裏モードのポイント（テーブル）",
+      "SP役補足",
+      "3"
+    ],
+    "selected_titles": [
+      "表モード概要",
+      "裏モードのポイント（テーブル）",
+      "裏モード概要"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "表モードは6種類のモード(内部状態)によって、通常時の成立役ごとのGG当選率、GG中のGGストック当選率が変わるんだ。裏モードは裏天国中にGG当選すればGG複数ストック当選の期待大。滞在中は下段黄7成立で大チャンスになるよ。",
+    "fy_latency_sec": 4.911159038543701
+  },
+  {
+    "id": "FV-C02",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "ガイアベルとガイアナビの違いを教えて",
+    "query_entities": [
+      "ガイアベル",
+      "ガイアナビ"
+    ],
+    "raw_embedding_titles": [
+      "補足解説",
+      "モードごとの違い",
+      "天国モード解説",
+      "ガイアナビ解説",
+      "ガイアナビの解説",
+      "小役履歴の抽選解説"
+    ],
+    "selected_titles": [
+      "小役の停止例一覧",
+      "モードごとの違い",
+      "補足解説",
+      "天国モード解説",
+      "ガイアナビの解説",
+      "ガイアナビ解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "ガイアベルは小役の一種で、確率は1/37.6だよ。ガイアナビはガイアステージ移行のチャンスを示す右ナビのことなんだ。",
+    "fy_latency_sec": 3.5136430263519287
+  },
+  {
+    "id": "FV-C03",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "ループストックとGGストックの違いを教えて",
+    "query_entities": [
+      "ループストック",
+      "GGストック"
+    ],
+    "raw_embedding_titles": [
+      "効果",
+      "白7に関する特典",
+      "天井恩恵",
+      "表モード概要",
+      "黄・緑",
+      "準備中解説"
+    ],
+    "selected_titles": [
+      "高ループストック解説",
+      "表モード概要",
+      "Z-ZONE解説",
+      "効果"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "ループストックはGG中のループ抽選で当選すると、そのセット内でGGが確定するもの。GGストックはGG中に当選すると、次回のGG抽選でGGが確定するものだよ。",
+    "fy_latency_sec": 3.6851258277893066
+  },
+  {
+    "id": "FV-C04",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "天国モードと通常時の違いを教えて",
+    "query_entities": [
+      "天国モード",
+      "通常時"
+    ],
+    "raw_embedding_titles": [
+      "表モード概要",
+      "ALL黄色(偶数)",
+      "ガイアナビ解説",
+      "裏天国解説",
+      "補足解説",
+      "天国モード解説"
+    ],
+    "selected_titles": [
+      "天国モード解説",
+      "表モード概要",
+      "裏モード概要",
+      "確定役演出解説",
+      "アメグレ解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "天国モードでは、ガイアベルの規定回数が3回以下になるうえ、規定回数到達時のガイアステージ当選率も大幅にアップするよ。ループ率も75%と高いんだ。",
+    "fy_latency_sec": 6.068774223327637
+  },
+  {
+    "id": "FV-C05",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "GG当選とSGG当選の違いを教えて",
+    "query_entities": [
+      "GG当選",
+      "SGG当選"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "抽選概要",
+      "表モード概要",
+      "SGGゲーム数抽選概要",
+      "天井恩恵",
+      "裏モード概要"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "「SGG当選」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GG当選は初期ゲーム数50Gで純増約7枚/G、平均獲得350枚、ループストック最大80%のゾーンだよ。一方、SGG当選については登録データに情報がないみたいだね。",
+    "fy_latency_sec": 3.820719003677368
+  },
+  {
+    "id": "FV-C06",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "SGGとGG継続ゾーンの関係を教えて",
+    "query_entities": [
+      "SGG",
+      "GG継続ゾーン"
+    ],
+    "raw_embedding_titles": [
+      "入力タイミング",
+      "SGGゲーム数抽選概要",
+      "効果",
+      "抽選概要",
+      "満月解説",
+      "準備中解説"
+    ],
+    "selected_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】",
+      "「GG継続ゾーン」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにGG継続ゾーンの情報は見つからないんだ。",
+    "fy_latency_sec": 3.030056953430176
+  },
+  {
+    "id": "FV-C07",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "小役履歴とモード示唆出目の関係を教えて",
+    "query_entities": [
+      "小役履歴",
+      "モード示唆出目"
+    ],
+    "raw_embedding_titles": [
+      "継続期待度補足",
+      "小役確率補足",
+      "3",
+      "効果",
+      "小役履歴の抽選解説",
+      "巨大化演出解説"
+    ],
+    "selected_titles": [
+      "小役履歴の抽選解説",
+      "小役履歴補足",
+      "継続期待度補足"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "小役履歴は青7や黄7が3連続以上だとGG抽選になるよ。モード示唆出目は、奇数はさみ中奇数、Vはさみ中奇数などがあるんだけど、これはGG継続濃厚の示唆だけど、法則崩れ的な要素もあるから、表モードを示唆しているわけじゃないんだ。",
+    "fy_latency_sec": 5.0454466342926025
+  },
+  {
+    "id": "FV-C08",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "ガイアナビとガイアモードの関係を教えて",
+    "query_entities": [
+      "ガイアナビ",
+      "ガイアモード"
+    ],
+    "raw_embedding_titles": [
+      "ガイアナビ解説",
+      "ガイアナビの解説",
+      "補足解説",
+      "小役履歴の抽選解説",
+      "特徴",
+      "天国モード解説"
+    ],
+    "selected_titles": [
+      "ガイアナビの解説",
+      "補足解説",
+      "ALL黄色(偶数)",
+      "ガイアナビ解説",
+      "「ガイアナビ」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "ガイアナビ発生時にガイアモードが示唆されるよ。規定回数到達時はガイアステージ移行を抽選するんだ。",
+    "fy_latency_sec": 2.3033909797668457
+  },
+  {
+    "id": "FV-C09",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "白7とALL色の関係を教えて",
+    "query_entities": [
+      "白7",
+      "ALL色"
+    ],
+    "raw_embedding_titles": [
+      "3",
+      "2",
+      "上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD",
+      "白",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "1"
+    ],
+    "selected_titles": [
+      "白7に関する特典",
+      "白7に関する特典補足",
+      "「ALL色」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにALL色についての情報は見つからないんだ。",
+    "fy_latency_sec": 1.1168105602264404
+  },
+  {
+    "id": "FX-CB01",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "当選と前兆の違いを教えて",
+    "query_entities": [
+      "当選",
+      "前兆"
+    ],
+    "raw_embedding_titles": [
+      "巨大化演出解説",
+      "準備中解説",
+      "抽選概要",
+      "前兆ゲーム数解説",
+      "青7連続時GG当選率",
+      "通常告知解説"
+    ],
+    "selected_titles": [
+      "Z-ZONE昇格に関する解説",
+      "青7連続時GG当選率",
+      "天井恩恵",
+      "小役履歴補足",
+      "前兆",
+      "前兆ゲーム数解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "当選と前兆は、それぞれの役割が違うよ。当選はGG当選のこと。前兆はGG当選後に始まる状態で、最大24Gまであるんだ。",
+    "fy_latency_sec": 2.8763492107391357
+  },
+  {
+    "id": "FX-CB02",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "終了状態と移行先の関係を教えて",
+    "query_entities": [
+      "終了状態",
+      "移行先"
+    ],
+    "raw_embedding_titles": [
+      "フラッシュ解説",
+      "2",
+      "モードごとの違い",
+      "巨大化演出解説",
+      "ガイアナビの解説",
+      "3"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "終了状態は、ハズレ(0.129)、押し順黄7こぼし(0.129)、その他(-)があるよ。",
+    "fy_latency_sec": 2.3699238300323486
+  },
+  {
+    "id": "FX-CB03",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "示唆と確定の違いを教えて",
+    "query_entities": [
+      "示唆",
+      "確定"
+    ],
+    "raw_embedding_titles": [
+      "巨大化演出解説",
+      "1",
+      "下パネルフラッシュ発生",
+      "G-ZONE解説",
+      "3",
+      "炎・戦車解説"
+    ],
+    "selected_titles": [
+      "出目示唆解説",
+      "確定役演出解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "示唆は0テンパイがZ-ZONEのチャンスってこと。確定はフリーズ経由の割合が一番高いってことだよ。",
+    "fy_latency_sec": 2.499067783355713
+  },
+  {
+    "id": "FX-CB04",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "契機と恩恵の関係を教えて",
+    "query_entities": [
+      "契機",
+      "恩恵"
+    ],
+    "raw_embedding_titles": [
+      "演出恩恵",
+      "青7連続時GG当選率",
+      "抽選概要",
+      "氷演出解説",
+      "天空の扉解説",
+      "中パターン"
+    ],
+    "selected_titles": [
+      "履歴契機解説",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】",
+      "天井恩恵",
+      "天井恩恵詳細",
+      "演出恩恵"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "契機と恩恵の関係は、GGに当選かつ振り分けでループストックを抽選する形になっているんだ。ループストックの継続率割合は1%・25%・50%・80%が16.7%ずつ、残りの33.2%は1%ループ+Z-ZONEを獲得なんだ。天井到達時の約3回に1回でZ-ZONEを獲得できる恩恵があるよ。",
+    "fy_latency_sec": 7.424601316452026
+  },
+  {
+    "id": "FX-CB05",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "GG中とGG準備中の違いを教えて",
+    "query_entities": [
+      "GG中",
+      "GG準備中"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "効果",
+      "なし",
+      "裏モード概要",
+      "表モード概要",
+      "確定役演出解説"
+    ],
+    "selected_titles": [
+      "GG中解説",
+      "準備中解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GG中は残り5セット以上なら、示唆の確率は0.564〜0.7まであるよ。純増は約7枚/Gで、平均獲得は350枚だね。ループストックは最大80%まであるんだ。一方、GG準備中は「×・?・?」が出るまでの間が対象で、全体的にストック当選率はGG中より高いんだ。",
+    "fy_latency_sec": 6.595902919769287
+  },
+  {
+    "id": "FX-CB06",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "天井とヤメ時の関係を教えて",
+    "query_entities": [
+      "天井",
+      "ヤメ時"
+    ],
+    "raw_embedding_titles": [
+      "裏天国解説",
+      "中パターン",
+      "前兆",
+      "巨大化演出解説",
+      "ALL黄色(偶数)",
+      "天空の扉解説"
+    ],
+    "selected_titles": [
+      "天井突入条件",
+      "天井突入条件（設定変更時）",
+      "天井恩恵",
+      "天井恩恵詳細",
+      "「ヤメ時」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データに「ヤメ時」についての情報は見つからないんだ。",
+    "fy_latency_sec": 1.8251142501831055
+  },
+  {
+    "id": "FX-CB07",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "確定役とフリーズ演出の違いを教えて",
+    "query_entities": [
+      "確定役",
+      "フリーズ演出"
+    ],
+    "raw_embedding_titles": [
+      "巨大化演出解説",
+      "演出内容",
+      "確定役演出解説",
+      "1",
+      "下パネルフラッシュ発生",
+      "炎・戦車解説"
+    ],
+    "selected_titles": [
+      "確定役演出解説",
+      "「フリーズ演出」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "確定役演出は、通常時・GG中ともにフリーズ経由の割合が一番高いよ。ただし、フリーズ演出については登録データに情報がないんだ。",
+    "fy_latency_sec": 2.9784018993377686
+  },
+  {
+    "id": "FX-CB08",
+    "stage": "stage_e_concept_binding",
+    "category": "concept_binding",
+    "prompt": "小役履歴とモード示唆出目の関係を教えて",
+    "query_entities": [
+      "小役履歴",
+      "モード示唆出目"
+    ],
+    "raw_embedding_titles": [
+      "継続期待度補足",
+      "小役確率補足",
+      "3",
+      "効果",
+      "小役履歴の抽選解説",
+      "巨大化演出解説"
+    ],
+    "selected_titles": [
+      "小役履歴の抽選解説",
+      "小役履歴補足",
+      "継続期待度補足"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "小役履歴は青7や黄7が3連続以上だとGG抽選になるよ。モード示唆出目は、奇数はさみ中奇数、Vはさみ中奇数などがあるんだけど、これはGG継続濃厚の示唆だけど、法則崩れ的な要素もあるから、表モードを示唆しているわけじゃないんだ。",
+    "fy_latency_sec": 5.742994546890259
+  },
+  {
+    "id": "QS-D01",
+    "stage": "stage_c_query_style",
+    "category": "query_style",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "効果",
+      "SGGゲーム数抽選概要",
+      "入力タイミング",
+      "確定役演出解説",
+      "なし"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚のゾーンだよ。SGGは10〜100Gで純増7枚/G、継続率75%以上だから、継続型のスペシャルATになるんだ。",
+    "fy_latency_sec": 4.867755174636841
+  },
+  {
+    "id": "QS-FU-F-Q1",
+    "stage": "stage_c_query_style",
+    "category": "query_style",
+    "prompt": "GGについて教えて",
+    "query_entities": [
+      "GG"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "効果",
+      "確定役演出解説",
+      "抽選概要",
+      "中パターン",
+      "裏モード概要"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GGは初期ゲーム数50Gで純増約7枚/G、平均獲得350枚のゾーンだよ。ループストックは最大80%まであるんだ。",
+    "fy_latency_sec": 2.6666698455810547
+  },
+  {
+    "id": "QS-FU-F-Q2",
+    "stage": "stage_c_query_style",
+    "category": "query_style",
+    "prompt": "SGGについて教えて",
+    "query_entities": [
+      "SGG"
+    ],
+    "raw_embedding_titles": [
+      "入力タイミング",
+      "SGGゲーム数抽選概要",
+      "準備中解説",
+      "効果",
+      "抽選概要",
+      "中パターン"
+    ],
+    "selected_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "SGGは10〜100Gのゲーム数で、純増7枚/G、継続率75%以上の継続型ATなんだ。100Gが選ばれると継続ストックも1つもらえるよ。",
+    "fy_latency_sec": 3.600515604019165
+  },
+  {
+    "id": "QS-FU-F-Q3",
+    "stage": "stage_c_query_style",
+    "category": "query_style",
+    "prompt": "GGとSGGの違いは？",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "raw_embedding_titles": [
+      "SGGゲーム数抽選概要",
+      "準備中解説",
+      "効果",
+      "入力タイミング",
+      "抽選概要",
+      "確定役演出解説"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GGは初期ゲーム数50G、純増7枚/G、平均獲得350枚、最大80%のループストックがあるゾーンだよ。一方、SGGはゲーム数10~100G、純増7枚/G、継続率75%以上（継続型のスペシャルAT）のゾーンなんだ。",
+    "fy_latency_sec": 5.437767505645752
+  },
+  {
+    "id": "QS-FU-F-Q4",
+    "stage": "stage_c_query_style",
+    "category": "query_style",
+    "prompt": "GGとSGGを要約して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "raw_embedding_titles": [
+      "SGGゲーム数抽選概要",
+      "準備中解説",
+      "確定役演出解説",
+      "保障ゲーム解説",
+      "効果",
+      "入力タイミング"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GGは初期ゲーム数50G、純増7枚/G、平均獲得350枚、最大80%ストックあり。SGGは10~100G、純増7枚/G、継続率75%以上。",
+    "fy_latency_sec": 3.7277040481567383
+  },
+  {
+    "id": "P02",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "ボーナス確率について教えて",
+    "query_entities": [
+      "ボーナス確率"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件（設定変更時）",
+      "抽選概要",
+      "確定役演出解説",
+      "4",
+      "青7連続時GG当選率",
+      "小役確率補足"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにその情報は見つからないみたいだよ。",
+    "fy_latency_sec": 1.274496078491211,
+    "a0_response": "登録データにボーナス確率の情報は見つからないんだ。",
+    "a0_latency_sec": 1.375697135925293
+  },
+  {
+    "id": "P04",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "最低設定と最高設定の機械割の差を教えて",
+    "query_entities": [
+      "最低設定"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件（設定変更時）",
+      "確定役演出解説",
+      "小役確率補足",
+      "青7連続時GG当選率",
+      "4",
+      "LV5（GG継続濃厚）"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "最低設定（設定1）の機械割は97.2%、最高設定（設定6）の機械割は114.6%なので、差は17.4%になります。",
+    "fy_latency_sec": 3.129737377166748
+  },
+  {
+    "id": "LC-08",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "AT-Fの性能と終了後の状態を教えて",
+    "query_entities": [
+      "AT-F"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件",
+      "LV5（GG継続濃厚）",
+      "白",
+      "効果",
+      "3",
+      "中パターン"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "AT-Fの終了抽選は保障ゲーム消化後に行われ、ハズレと押し順黄7こぼしの確率はともに0.129だよ。終了後の状態については、登録データに情報がないみたいだね。",
+    "fy_latency_sec": 3.9515678882598877,
+    "a0_response": "AT-Fの性能については登録データにありません。終了後の状態は、保障ゲーム消化後は終了抽選でハズレ0.129、押し順黄7こぼし0.129、その他-となっています。",
+    "a0_latency_sec": 4.043667793273926
+  },
+  {
+    "id": "Q6",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "GGとSGGの違いを初心者向けに説明して",
+    "query_entities": [
+      "GG",
+      "SGG"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "効果",
+      "SGGゲーム数抽選概要",
+      "入力タイミング",
+      "確定役演出解説",
+      "なし"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚のゾーンだよ。SGGは10〜100Gで純増7枚/G、継続率75%以上だから、継続型のスペシャルATになるんだ。",
+    "fy_latency_sec": 4.556556463241577
+  },
+  {
+    "id": "Q11",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "天井とヤメ時を合わせて初心者向けに説明して",
+    "query_entities": [
+      "天井",
+      "ヤメ",
+      "初心者向"
+    ],
+    "raw_embedding_titles": [
+      "裏天国解説",
+      "前兆",
+      "効果",
+      "中パターン",
+      "3",
+      "効果"
+    ],
+    "selected_titles": [
+      "天井突入条件",
+      "天井突入条件（設定変更時）",
+      "天井恩恵",
+      "天井恩恵詳細",
+      "「ヤメ」について",
+      "「初心者向」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "天井は510G、1000G、1480Gのどれかから抽選されて、それぞれの確率は15.2%、20.3%、64.5%だよ。天井到達時にループストックが0.01、0.25、0.5、0.8のどれか16.7%ずつ、1%ループ+Z-ZONEが33.2%で抽選されるんだ。Z-ZONEは天井到達時の約3回に1回で獲得できるから、天井到達時にループストックが0.01以下ならヤメ時になることが多いかな。",
+    "fy_latency_sec": 10.37957215309143
+  },
+  {
+    "id": "Q15",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "ミリオンゴッドの遊び方を初心者向けにやさしく説明して",
+    "query_entities": [
+      "ミリオンゴッド",
+      "初心者向"
+    ],
+    "raw_embedding_titles": [
+      "機種概要",
+      "2",
+      "打ち方(小役狙い)",
+      "入力タイミング",
+      "1",
+      "3"
+    ],
+    "selected_titles": [
+      "機種概要",
+      "「初心者向」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにその情報は見つからないんだ。適当に説明すると誤った情報を伝えてしまうから、わからないままにしておくね。",
+    "fy_latency_sec": 2.6103928089141846
+  },
+  {
+    "id": "Q17",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "ミリオンゴッドの遊び方を少し詳しく説明して",
+    "query_entities": [
+      "ミリオンゴッド"
+    ],
+    "raw_embedding_titles": [
+      "機種概要",
+      "2",
+      "入力タイミング",
+      "演出恩恵",
+      "1",
+      "打ち方(小役狙い)"
+    ],
+    "selected_titles": [
+      "機種概要"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "ミリオンゴッドの遊び方は、まずリールが止まるまで待って、小役が揃ったらその役の払い出しを受け取るところから始まります。その後、ボーナス確定役が揃うとボーナスへ突入します。ボーナス中は高確率状態が続き、ボーナス終了後も一定期間は高確率が継続するので、ボーナス後の期待値も高いです。",
+    "fy_latency_sec": 6.192481517791748
+  },
+  {
+    "id": "AD-04",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "ヤメ時はいつがいい？",
+    "query_entities": [
+      "ヤメ"
+    ],
+    "raw_embedding_titles": [
+      "ALL黄色(偶数)",
+      "巨大化演出解説",
+      "入力タイミング",
+      "準備中解説",
+      "白7に関する特典補足",
+      "白"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにその情報は見つからないんだ。適切な情報を得られなかったらごめんね。",
+    "fy_latency_sec": 1.8051960468292236,
+    "a0_response": "登録データにヤメ時の情報は見つからないんだ。適切な情報を元に答えるためには、もう少し具体的な状況を教えてもらえると嬉しいな。",
+    "a0_latency_sec": 2.7224247455596924
+  },
+  {
+    "id": "Q1",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "設定6の機械割は？",
+    "query_entities": [
+      "設定",
+      "機械割"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件（設定変更時）",
+      "Z-ZONE昇格に関する解説",
+      "青7連続時GG当選率",
+      "3",
+      "白",
+      "2"
+    ],
+    "selected_titles": [
+      "天井突入条件（設定変更時）",
+      "「機械割」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "設定6の機械割は114.6%だよ。",
+    "fy_latency_sec": 1.2458970546722412
+  },
+  {
+    "id": "Q5",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "Z-ZONEって何？",
+    "query_entities": [
+      "Z-ZONE"
+    ],
+    "raw_embedding_titles": [
+      "出目示唆解説",
+      "満月解説",
+      "抽選概要",
+      "特殊抽選解説",
+      "入力タイミング",
+      "昇格解説"
+    ],
+    "selected_titles": [
+      "Z-ZONE昇格に関する解説",
+      "Z-ZONE解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "Z-ZONEは、GG当選時に抽選されるゾーンなんだ。継続ゲーム数は5G+aで、純増は約7枚/Gだよ。滞在中は黄7が1/1.4で成立するんだ。",
+    "fy_latency_sec": 3.9268746376037598
+  },
+  {
+    "id": "Q10",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "Z-ZONEとGGの関係を説明して",
+    "query_entities": [
+      "Z-ZONE",
+      "GG"
+    ],
+    "raw_embedding_titles": [
+      "抽選概要",
+      "昇格解説",
+      "Z-ZONE解説",
+      "Z-ZONE昇格に関する解説",
+      "特徴",
+      "出目示唆解説"
+    ],
+    "selected_titles": [
+      "Z-ZONE昇格に関する解説",
+      "Z-ZONE解説",
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GG当選時にZ-ZONEへの昇格を抽選するんだ。GGストックがある場合は、成立役を参照してZ-ZONEを抽選。当選した場合はGG告知時に0が揃ってZ-ZONEへ移行するんだ。",
+    "fy_latency_sec": 3.9348244667053223
+  },
+  {
+    "id": "Q16",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "ミリオンゴッドの遊び方を簡潔に説明して",
+    "query_entities": [
+      "ミリオンゴッド",
+      "簡潔"
+    ],
+    "raw_embedding_titles": [
+      "機種概要",
+      "2",
+      "打ち方(小役狙い)",
+      "演出恩恵",
+      "1",
+      "入力タイミング"
+    ],
+    "selected_titles": [
+      "機種概要",
+      "「簡潔」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにその情報は見つからないんだ。適当に説明すると誤った情報を伝えてしまうから、わからないままにしておくね。",
+    "fy_latency_sec": 2.4566099643707275
+  },
+  {
+    "id": "P06",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "初当りについて教えて",
+    "query_entities": [
+      "初当り"
+    ],
+    "raw_embedding_titles": [
+      "打ち方(小役狙い)",
+      "青7連続時GG当選率",
+      "ALL黄色(偶数)",
+      "中パターン",
+      "巨大化演出解説",
+      "白7に関する特典補足"
+    ],
+    "selected_titles": [
+      "効果"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "初当り確率は、設定1が1/533、設定2が1/420、設定3が1/496、設定4が1/338、設定5が1/455、設定6が1/295だよ。",
+    "fy_latency_sec": 4.289451360702515
+  },
+  {
+    "id": "P10",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "投資と勝率の目安について教えて",
+    "query_entities": [
+      "投資"
+    ],
+    "raw_embedding_titles": [
+      "4",
+      "天井突入条件（設定変更時）",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "巨大化演出解説",
+      "確定役演出解説",
+      "ALL黄色(偶数)"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにその情報は見つからないんだ。適当な数字を出さないようにするね。",
+    "fy_latency_sec": 1.7015745639801025,
+    "a0_response": "登録データにその情報は見つからないので、正直に言うと分からないんだ。",
+    "a0_latency_sec": 1.7887966632843018
+  },
+  {
+    "id": "PT-04",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "設定2と設定4の機械割の差はどれくらい？",
+    "query_entities": [
+      "設定",
+      "設定",
+      "機械割"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件（設定変更時）",
+      "青7連続時GG当選率",
+      "Z-ZONE昇格に関する解説",
+      "テンパイ数字解説",
+      "G-ZONE解説",
+      "炎・戦車解説"
+    ],
+    "selected_titles": [
+      "天井突入条件（設定変更時）",
+      "「機械割」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "設定2の機械割は99.1%、設定4は106.9%だよ。",
+    "fy_latency_sec": 1.8814711570739746
+  },
+  {
+    "id": "PT-08",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "設定3と設定5の機械割は？それぞれの数値と差を教えて",
+    "query_entities": [
+      "設定3"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件（設定変更時）",
+      "Z-ZONE昇格に関する解説",
+      "4",
+      "LV5（GG継続濃厚）",
+      "テンパイ数字解説",
+      "青7連続時GG当選率"
+    ],
+    "selected_titles": [
+      "Z-ZONE昇格に関する解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "設定3の機械割は102.1%、設定5は111.7%だね。差は9.6%になるよ。",
+    "fy_latency_sec": 2.4043755531311035
+  },
+  {
+    "id": "PT-12",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "モードの中で滞在率が一番高いものと低いものの差はどれくらい？",
+    "query_entities": [
+      "モード",
+      "滞在率",
+      "一番高"
+    ],
+    "raw_embedding_titles": [
+      "確定役演出解説",
+      "SP役補足",
+      "G-ZONE解説",
+      "裏モード概要",
+      "表モード概要",
+      "Z-ZONE昇格に関する解説"
+    ],
+    "selected_titles": [
+      "表モード概要",
+      "裏モードのポイント（テーブル）",
+      "裏モード概要",
+      "モードごとの違い",
+      "確定役演出解説",
+      "「滞在率」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データに滞在率の差は見つからないんだ。",
+    "fy_latency_sec": 1.3103952407836914
+  },
+  {
+    "id": "PT-16",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "AT-AからAT-Cに変わると純増はどれくらい増える？",
+    "query_entities": [
+      "AT-A",
+      "AT-C",
+      "純増"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件",
+      "LV5（GG継続濃厚）",
+      "天井突入条件（設定変更時）",
+      "4",
+      "ステージ開始解説",
+      "ステージ法則解説"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにその情報は見つからないんだ。",
+    "fy_latency_sec": 1.0101711750030518,
+    "a0_response": "登録データにその情報は見つからないんだ。",
+    "a0_latency_sec": 1.0588781833648682
+  },
+  {
+    "id": "PT-20",
+    "stage": "stage_f_rag50",
+    "category": "rag50",
+    "prompt": "モードαとモードβでは、上乗せ確率の差は何ポイント？",
+    "query_entities": [
+      "モード",
+      "モード",
+      "上乗"
+    ],
+    "raw_embedding_titles": [
+      "表モード概要",
+      "Z-ZONE昇格に関する解説",
+      "抽選概要",
+      "モードごとの違い",
+      "特徴",
+      "ガイアナビの解説"
+    ],
+    "selected_titles": [
+      "表モード概要",
+      "裏モードのポイント（テーブル）",
+      "裏モード概要",
+      "モードごとの違い",
+      "「上乗」について"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにモードαとモードβの上乗せ確率の差は見つからないんだ。",
+    "fy_latency_sec": 3.3205060958862305
+  },
+  {
+    "id": "RJ-01",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "GG中とはどんな状態か教えて",
+    "query_entities": [
+      "GG中"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "裏モード概要",
+      "効果",
+      "なし",
+      "表モード概要",
+      "中パターン"
+    ],
+    "selected_titles": [
+      "GG中解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GG中は初期ゲーム数50G/セットで、純増約7枚/G、平均獲得350枚、ループストック最大80%のゾーンなんだ。",
+    "fy_latency_sec": 3.3524117469787598
+  },
+  {
+    "id": "RJ-02",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "GG中の状態について",
+    "query_entities": [
+      "GG中"
+    ],
+    "raw_embedding_titles": [
+      "裏モード概要",
+      "準備中解説",
+      "なし",
+      "効果",
+      "中パターン",
+      "特徴"
+    ],
+    "selected_titles": [
+      "GG中解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GG中は残り5セット以上ある状態だと、アメイジンググレイスの恩恵があるよ。示唆の確率は0.555〜0.7まであるんだ。",
+    "fy_latency_sec": 3.325380563735962
+  },
+  {
+    "id": "RJ-03",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "GGゲーム中はどんな感じ？",
+    "query_entities": [
+      "GG",
+      "ゲーム"
+    ],
+    "raw_embedding_titles": [
+      "裏モード概要",
+      "準備中解説",
+      "特徴",
+      "中パターン",
+      "表モード概要",
+      "抽選概要"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "前兆ゲーム数解説",
+      "保障ゲーム解説",
+      "最終ゲーム解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GG中はSP役が50%でストックを獲得できるんだ。",
+    "fy_latency_sec": 1.5287771224975586
+  },
+  {
+    "id": "RJ-04",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "引き戻しについて教えて",
+    "query_entities": [
+      "引き戻し"
+    ],
+    "raw_embedding_titles": [
+      "引き戻し解説",
+      "入力タイミング",
+      "ALL黄色(偶数)",
+      "黄・緑",
+      "終了抽選の解説",
+      "裏天国解説"
+    ],
+    "selected_titles": [
+      "引き戻し解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "引き戻しゾーン中は毎ゲーム、最低でも34.4%で継続に当選するよ。全役で継続を抽選するんだ。",
+    "fy_latency_sec": 2.855346441268921
+  },
+  {
+    "id": "RJ-05",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "引き戻しとは何ですか",
+    "query_entities": [
+      "引き戻し"
+    ],
+    "raw_embedding_titles": [
+      "引き戻し解説",
+      "入力タイミング",
+      "黄・緑",
+      "竜巻発展解説",
+      "下パネルフラッシュ発生",
+      "4"
+    ],
+    "selected_titles": [
+      "引き戻し解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "引き戻しゾーン中は毎ゲーム、最低でも34.4%で継続に当選するよ。引き戻しゾーン中は全役で継続を抽選するんだ。",
+    "fy_latency_sec": 3.2576804161071777
+  },
+  {
+    "id": "RJ-06",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "SGGゲーム数の振り分けを教えて",
+    "query_entities": [
+      "SGGゲーム数"
+    ],
+    "raw_embedding_titles": [
+      "入力タイミング",
+      "SGGゲーム数抽選概要",
+      "通常告知解説",
+      "保障ゲーム解説",
+      "準備中解説",
+      "ALL黄色(偶数)"
+    ],
+    "selected_titles": [
+      "SGGゲーム数抽選概要",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "SGGのゲーム数は、継続契機とセット数が5の倍数かどうかで抽選値が変わるよ。5の倍数以外のセットだと、ハズレ0.83、上段青70.83、赤7フェイク0.883、押し順黄70.83、ガイアベル0.883、下段黄70.83、右上がり黄70.695、GOD揃い0.883、赤7揃い0.883、継続ストック0.883になるんだ。100Gが選ばれた場合は継続ストックを1つ獲得できるよ。",
+    "fy_latency_sec": 11.108156681060791
+  },
+  {
+    "id": "RJ-07",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "青7が連続したときのGG当選率は？",
+    "query_entities": [
+      "連続",
+      "GG",
+      "当選率"
+    ],
+    "raw_embedding_titles": [
+      "小役履歴補足",
+      "青7連続時GG当選率",
+      "小役履歴の抽選解説",
+      "履歴契機解説",
+      "準備中解説",
+      "白7に関する特典"
+    ],
+    "selected_titles": [
+      "小役履歴の抽選解説",
+      "履歴契機解説",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "青7連続時GG当選率",
+      "小役履歴補足",
+      "表モード概要",
+      "天国モード解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "青7が連続したときのGG当選率は、1回連続なら0.059、2連続も0.059、3連続だと0.25、4連続なら0.75、5連以上は1になるよ。",
+    "fy_latency_sec": 4.331521034240723
+  },
+  {
+    "id": "RJ-08",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "天井ゲーム数を教えて",
+    "query_entities": [
+      "天井ゲーム数"
+    ],
+    "raw_embedding_titles": [
+      "天井解説",
+      "通常告知解説",
+      "裏天国解説",
+      "ALL黄色(偶数)",
+      "LV5（GG継続濃厚）",
+      "前兆"
+    ],
+    "selected_titles": [
+      "天井解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "天井ゲーム数は510G、1000G、1480Gの3種類があるよ。",
+    "fy_latency_sec": 1.9400060176849365
+  },
+  {
+    "id": "RJ-09",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "天井は何ゲームですか",
+    "query_entities": [
+      "天井",
+      "ゲーム"
+    ],
+    "raw_embedding_titles": [
+      "天井解説",
+      "裏天国解説",
+      "前兆",
+      "中パターン",
+      "裏モードのポイント（テーブル）",
+      "表モード概要"
+    ],
+    "selected_titles": [
+      "天井突入条件",
+      "天井突入条件（設定変更時）",
+      "天井恩恵",
+      "天井恩恵詳細",
+      "天井解説",
+      "前兆ゲーム数解説",
+      "保障ゲーム解説",
+      "最終ゲーム解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "天井ゲーム数は510G、1000G、1480Gの3種類で、それぞれの確率は15.2%、20.3%、64.5%です。",
+    "fy_latency_sec": 3.493427276611328
+  },
+  {
+    "id": "RJ-10",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "ヤメ時の目安を教えて",
+    "query_entities": [
+      "ヤメ時"
+    ],
+    "raw_embedding_titles": [
+      "巨大化演出解説",
+      "ALL黄色(偶数)",
+      "入力タイミング",
+      "中パターン",
+      "白7に関する特典補足",
+      "1"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データにその情報は見つからないんだ。",
+    "fy_latency_sec": 0.8651552200317383,
+    "a0_response": "登録データにヤメ時の目安は見つからないんだ。適切な情報を提供できなくてごめんね。",
+    "a0_latency_sec": 1.9249505996704102
+  },
+  {
+    "id": "RJ-11",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "設定判別の要素を教えて",
+    "query_entities": [
+      "設定判別"
+    ],
+    "raw_embedding_titles": [
+      "レベル",
+      "3",
+      "効果",
+      "1",
+      "2",
+      "青7連続時GG当選率"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": true,
+    "a0_is_empty": false,
+    "fy_response": "登録データに設定判別の要素は登録されていないみたいだよ。",
+    "fy_latency_sec": 1.2691974639892578,
+    "a0_response": "枠LEDの点灯パターンでレベルを示唆しているよ。点灯範囲によって1〜3のレベルが決まるんだ。",
+    "a0_latency_sec": 2.313878059387207
+  },
+  {
+    "id": "RJ-12",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "LV5について教えて",
+    "query_entities": [
+      "LV5"
+    ],
+    "raw_embedding_titles": [
+      "LV5（GG継続濃厚）",
+      "効果",
+      "3",
+      "1",
+      "中パターン",
+      "4"
+    ],
+    "selected_titles": [
+      "LV5（GG継続濃厚）"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "LV5は1~4Gまでオールテンパイなし or オール奇数テンパイならGG継続濃厚の状態なんだ。",
+    "fy_latency_sec": 2.100141763687134
+  },
+  {
+    "id": "RJ-13",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "GG継続の条件は？",
+    "query_entities": [
+      "GG",
+      "継続",
+      "条件"
+    ],
+    "raw_embedding_titles": [
+      "SGGゲーム数抽選概要",
+      "準備中解説",
+      "特徴",
+      "保障ゲーム解説",
+      "効果",
+      "抽選概要"
+    ],
+    "selected_titles": [
+      "青7連続時GG当選率",
+      "GG中解説",
+      "LV5（GG継続濃厚）",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】",
+      "継続期待度補足",
+      "天井突入条件",
+      "天井突入条件（設定変更時）"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GG継続の条件は、ハズレ、押し順黄7、その他が100%、上段青7、赤7フェイク、ガイアベル、下段黄7、GOD揃い、赤7揃い、継続ストックが88.3%、右上がり黄7が69.5%だよ。",
+    "fy_latency_sec": 7.258493423461914
+  },
+  {
+    "id": "RJ-14",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "Z-ZONE昇格率について教えて",
+    "query_entities": [
+      "Z-ZONE昇格率"
+    ],
+    "raw_embedding_titles": [
+      "Z-ZONE昇格に関する解説",
+      "抽選概要",
+      "昇格解説",
+      "天井恩恵詳細",
+      "満月解説",
+      "特殊抽選解説"
+    ],
+    "selected_titles": [],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "登録データにZ-ZONE昇格率の情報は見つからないんだ。",
+    "fy_latency_sec": 1.2378180027008057,
+    "a0_response": "GG当選時にZ-ZONEへの昇格を抽選するんだけど、設定3・5が優遇されていて、特に設定5は昇格率がズバ抜けて高いんだ。",
+    "a0_latency_sec": 3.041719913482666
+  },
+  {
+    "id": "RJ-15",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "初当りの契機を教えて",
+    "query_entities": [
+      "初当り"
+    ],
+    "raw_embedding_titles": [
+      "中パターン",
+      "抽選概要",
+      "青7連続時GG当選率",
+      "前兆ゲーム数解説",
+      "巨大化演出解説",
+      "裏天国解説"
+    ],
+    "selected_titles": [
+      "効果"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "初当り確率は、設定1が1/533、設定2が1/420、設定3が1/496、設定4が1/338、設定5が1/455、設定6が1/295だよ。",
+    "fy_latency_sec": 4.231104135513306
+  },
+  {
+    "id": "RJ-16",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "小役確率について教えて",
+    "query_entities": [
+      "小役確率"
+    ],
+    "raw_embedding_titles": [
+      "小役確率補足",
+      "前兆ゲーム数解説",
+      "巨大化演出解説",
+      "天井突入条件（設定変更時）",
+      "抽選概要",
+      "青7連続時GG当選率"
+    ],
+    "selected_titles": [
+      "小役確率補足"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "小役確率は全設定共通なんだ。",
+    "fy_latency_sec": 0.7806859016418457
+  },
+  {
+    "id": "RJ-17",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "設定変更時の挙動を教えて",
+    "query_entities": [
+      "設定変更時"
+    ],
+    "raw_embedding_titles": [
+      "天井突入条件（設定変更時）",
+      "心臓演出解説",
+      "2",
+      "1",
+      "モードごとの違い",
+      "3"
+    ],
+    "selected_titles": [
+      "天井突入条件（設定変更時）"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "設定変更時は510or1000or1480Gから抽選(割合は左から15.2%、20.3%、64.5%)だよ。",
+    "fy_latency_sec": 2.993825912475586
+  },
+  {
+    "id": "RJ-18",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "ミリオンゴッドの機種の特徴を教えて",
+    "query_entities": [
+      "ミリオンゴッド"
+    ],
+    "raw_embedding_titles": [
+      "機種概要",
+      "効果",
+      "3",
+      "2",
+      "効果",
+      "中パターン"
+    ],
+    "selected_titles": [
+      "機種概要"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "ミリオンゴッドシリーズがついにスマスロで登場したんだ。圧倒的な出玉感と洗練されたゲーム性が特徴なんだ。",
+    "fy_latency_sec": 2.2682154178619385
+  },
+  {
+    "id": "RJ-19",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "GG準備中とは何ですか",
+    "query_entities": [
+      "GG準備中"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "なし",
+      "昇格解説",
+      "特徴",
+      "Z-ZONE昇格に関する解説",
+      "裏モード概要"
+    ],
+    "selected_titles": [
+      "準備中解説"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GG準備中は、GGが準備されている状態から「×・?・?」が出るまでの間のことです。この期間は、GG中のストック当選率よりも高い傾向があります。",
+    "fy_latency_sec": 2.829300880432129
+  },
+  {
+    "id": "RJ-20",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "継続契機について教えて",
+    "query_entities": [
+      "継続契機"
+    ],
+    "raw_embedding_titles": [
+      "SGGゲーム数抽選概要",
+      "満月解説",
+      "巨大化演出解説",
+      "ALL黄色(偶数)",
+      "抽選概要",
+      "白7に関する特典補足"
+    ],
+    "selected_titles": [
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+      "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "継続契機ごとのSGGゲーム数振り分けは、ハズレが0.83、押し順黄7が0.83、その他が1というふうになっているよ。",
+    "fy_latency_sec": 3.0791451930999756
+  },
+  {
+    "id": "RJ-21",
+    "stage": "stage_j_retrieval_recall",
+    "category": "retrieval_recall",
+    "prompt": "GGストックの仕組みを教えて",
+    "query_entities": [
+      "GGストック"
+    ],
+    "raw_embedding_titles": [
+      "準備中解説",
+      "表モード概要",
+      "Z-ZONE解説",
+      "効果",
+      "裏モード概要",
+      "天井恩恵"
+    ],
+    "selected_titles": [
+      "表モード概要",
+      "Z-ZONE解説",
+      "効果"
+    ],
+    "fy_is_empty": false,
+    "a0_is_empty": false,
+    "fy_response": "GGストックがあると、成立役を参照してZ-ZONEを抽選するんだ。当選するとGG告知時に0が揃ってZ-ZONEへ移行するよ。",
+    "fy_latency_sec": 2.840090751647949
+  }
+]

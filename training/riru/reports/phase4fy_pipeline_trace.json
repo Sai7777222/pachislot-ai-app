@@ -1,0 +1,96 @@
+{
+  "phase": "Phase4FY",
+  "section": "Section6/29 (pipeline insertion point trace)",
+  "entry_point": "ChatService.chat() / ChatService.chat_stream() -> ChatService.build_rag_context() -> RagPipeline.build_context()",
+  "flow": [
+    {
+      "step": 1,
+      "name": "base_retrieval",
+      "file": "src/pachislot_ai/rag/pipeline.py",
+      "function": "RagPipeline.build_context",
+      "call": "self._retriever.search(query, machine_id=machine_id, top_k=self._top_k)",
+      "changed": false,
+      "note": "既存embedding検索。変更なし。"
+    },
+    {
+      "step": 2,
+      "name": "effective_machine_id_resolution",
+      "file": "src/pachislot_ai/rag/pipeline.py",
+      "changed": false,
+      "note": "トップchunkのmachine_id、または単一機種DBならその機種。変更なし。"
+    },
+    {
+      "step": 3,
+      "name": "structured_facts_lookup",
+      "file": "src/pachislot_ai/rag/structured_lookup.py",
+      "function": "find_relevant_structured_facts",
+      "changed": false,
+      "note": "SQLベースの構造化データ検索。entity-attributionとは完全に独立。変更なし。"
+    },
+    {
+      "step": 4,
+      "name": "chunk_refinement",
+      "file": "src/pachislot_ai/rag/pipeline.py",
+      "call": "self._retriever.search(query, machine_id=effective_machine_id, top_k=self._top_k)",
+      "changed": false,
+      "note": "機種確定後の再検索(他機種ノイズ削減)。変更なし。"
+    },
+    {
+      "step": 5,
+      "name": "title_supplemental_retrieval + entity_attribution + query_entity_binding",
+      "file": "src/pachislot_ai/rag/entity_attribution.py",
+      "function": "select_grounded_chunks",
+      "changed": true,
+      "new_this_phase": true,
+      "call": "chunks = select_grounded_chunks(query, chunks, all_chunks)",
+      "inputs": {
+        "query": "str",
+        "embedding_chunks": "list[RetrievedChunk] (step4の出力)",
+        "all_chunks": "list[RetrievedChunk] (self._retriever.get_all_chunks(machine_id=effective_machine_id) — title補完検索用)"
+      },
+      "sub_steps": [
+        "extract_query_entities(query) — 助詞境界による決定的抽出、辞書なし",
+        "bind_entities_to_evidence() — entity毎にtitle補完検索+embedding結果を統合、長いentity優先で処理",
+        "title_match_score() — NFKC正規化 + ASCII単語境界チェックによるGG/SGG等の衝突防止",
+        "query-boundなchunkのみ収集(UNBOUNDは除外)",
+        "2entity以上でevidence 0件のentityがある場合のみ_no_evidence_chunk()を追加",
+        "retention比率によるfallbackは行わない(意図的。理由はモジュール内コメント参照)"
+      ],
+      "guarded_by": "if chunks: (embedding_chunksが空なら何もしない、早期return)"
+    },
+    {
+      "step": 6,
+      "name": "production_prompt_rendering",
+      "file": "src/pachislot_ai/rag/context_builder.py",
+      "function": "build_rag_context",
+      "template": "config/prompts/rag_context.jinja2",
+      "changed": false,
+      "note": "テンプレート自体は無変更。入力となるchunksがstep5で絞り込まれたものに置き換わる。chunksが空でも既存のfallback文言(該当データなし)をテンプレート側が自動的にレンダリングする。"
+    },
+    {
+      "step": 7,
+      "name": "message_assembly",
+      "file": "src/pachislot_ai/services/chat_service.py",
+      "function": "ChatService._build_messages",
+      "changed": false,
+      "note": "[system.jinja2(無変更), rag_context.prompt_text(step6の出力), ...user_messages]。"
+    },
+    {
+      "step": 8,
+      "name": "generation",
+      "file": "src/pachislot_ai/llm/*",
+      "changed": false,
+      "note": "Phase4ZG(または設定されたLLMProvider)。無変更。"
+    }
+  ],
+  "never_before": "dispatch/Policy C3相当のロジックは現在の本番コードに実装されていないため、'それより前'という制約は自明に満たされる(training/riru/guard内の診断ハーネスにのみ存在する概念)。",
+  "never_after": "generation(step8)より後に本フェーズのロジックが実行されることはない(entity_attributionはstep5、genはstep8で完全に分離)。",
+  "debug_trace_availability": {
+    "query_entities": "extract_query_entities(query) で取得可能(通常は本番レスポンスに含めない)",
+    "chunk_ids": "RetrievedChunk.chunk_id",
+    "attributed_entities": "bind_entities_to_evidence()の戻り値(dict[entity, list[chunk]])",
+    "bound_excluded_chunks": "同上 + 'UNBOUND'キー",
+    "fallback_triggered_flag": "N/A — retention比率fallbackは実装から削除済みのため該当フラグは存在しない。no-evidence合成チャンクの追加有無で代替可能(chunk_id prefix '__no_evidence__::' で判定可能)",
+    "default_state": "OFF — 上記トレース情報は現時点でproduction responseやログへ一切出力していない。将来的に必要になれば、ChatServiceの呼び出し元がRagContextから独立に取得できる設計であり、ユーザー向け応答やsecrets/PIIには一切影響しない。"
+  }
+}

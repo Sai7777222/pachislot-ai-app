@@ -14,6 +14,7 @@ from pachislot_ai.data.db import open_session
 from pachislot_ai.data.models.structured import Machine
 from pachislot_ai.data.repositories import machine_repository as mrepo
 from pachislot_ai.rag.context_builder import RagContext, build_rag_context
+from pachislot_ai.rag.entity_attribution import select_grounded_chunks
 from pachislot_ai.rag.retriever import Retriever
 from pachislot_ai.rag.structured_lookup import find_relevant_structured_facts
 
@@ -79,6 +80,14 @@ class RagPipeline:
                 )
                 if refined:
                     chunks = refined
+
+        # entity-aware context assembly (Phase4FX/4FY): query entityとretrieved chunkを
+        # titleメタデータでbindingし、query-boundなchunkのみに絞り込む。他機種混入や
+        # クロスエンティティ誤帰属を防ぐため、all_chunksは常にeffective_machine_idで
+        # スコープする(新しい検索器・新しいembeddingは使わない)。
+        if chunks:
+            all_chunks = self._retriever.get_all_chunks(machine_id=effective_machine_id)
+            chunks = select_grounded_chunks(query, chunks, all_chunks)
 
         context = build_rag_context(
             self._template_path,

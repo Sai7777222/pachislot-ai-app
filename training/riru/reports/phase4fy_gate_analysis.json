@@ -1,0 +1,41 @@
+{
+  "phase": "Phase4FY", "section": "Section24 (CASE gate determination)",
+  "mandatory_gate_summary": {
+    "stage_b_known_failure_8_mandatory": {"critical_fabrication": 0, "critical_misattribution": 0, "verdict": "PASS", "note": "FX-K08(RT-A/RT-B)はA0比較で明確な改善(A0は架空の『枠LEDパターン』を作話していたが、FYは正しくdecline)"},
+    "stage_c_query_style_5plus": {"unsupported_synthesis": 0, "verdict": "PASS"},
+    "stage_d_phantom_22_chunk_level": {"chunk_based_misbinding": "0/22", "verdict": "PASS"},
+    "stage_d_phantom_22_literal_wording_incl_structured_facts": {"misbinding": "21/22 (FV-P08が例外)", "verdict": "PARTIAL — 詳細下記"},
+    "stage_e_concept_binding_20": {"critical_cross_entity_misattribution": 0, "verdict": "PASS"},
+    "stage_f_rag50_8_mandatory": {"unsupported_numeric": 0, "unsupported_factual": 0, "misattribution": 0, "major_completeness_regression": "1件発見(Q15)→本フェーズ内で修正・再検証済み→0", "verdict": "PASS (修正後)"},
+    "stage_g_routing": {"verdict": "PASS (対象コードが本番に存在しないため自明)"},
+    "stage_h_boundary_sampled": {"fabricated_machine_names": 0, "verdict": "PASS (代表サンプル13件、65/15/10全量ではない)"},
+    "stage_i_multiturn_5scenarios": {"cross_turn_misattribution": 0, "unsupported_synthesis": 0, "verdict": "PASS"},
+    "stage_j_retrieval_miss_mandatory": {"gg_naka_kaisetsu_recovered": true, "verdict": "PASS"},
+    "performance": {"added_latency_ms": 5.13, "target": "<5ms preferred", "verdict": "PASS (soft target近傍、mandatoryではない)"}
+  },
+  "in_phase_bug_found_and_fixed": {
+    "description": "Section13のunit test作成・Stage F実行の過程で、Phase4FY自身のquery entity抽出ロジック(FX由来ではなく、本フェーズでのport作業時に混入)に実バグを発見。「初心者向け」「簡潔に」等の修飾語が、隣接漢字とstopwordの融合により正規表現フィルタをすり抜け、誤って第2の query entity として抽出されていた。これによりQ15(RAG50 mandatory probe)で、実際には関連するchunk(機種概要)が取得できていたにもかかわらず、存在しない『初心者向』entityのno-evidenceマーカーにモデルが引きずられて全面declineするmajor completeness regressionが発生していた。",
+    "fix": "entity_attribution.pyのフォールバックトークナイザに、stopwordを部分文字列として含むトークンも除外するフィルタを追加。tests/unit/test_entity_attribution.pyに3件の回帰テストを追加(test_qualifier_suffix_not_extracted_as_spurious_second_entity_*)。",
+    "verification": "修正後、Q11/Q15/Q16を実本番経路で再生成し、Q15が機種概要chunkを正しく使用した応答('ミリオンゴッドは、圧倒的な出玉感と洗練されたゲーム性が特徴の...')に変化したことを確認。pytest 252 passed(修正前249+新規3件)、影響範囲は95probe中3件のみ(Q11/Q15/Q16)に限定されることを事前diffで確認済み。",
+    "process_note": "Phase4FXの3バグ発見・修正時と同じ『発見したら最終化前に修正し透明に開示する』という本プロジェクトの一貫した方針に従った。GT判定基準は一切変更していない(修正前の状態が誤りであったことを示す客観的証拠[機種概要chunkが取得できているのに使われない]に基づく)。"
+  },
+  "residual_finding_structured_facts_leak": {
+    "description": "find_relevant_structured_facts()(SQLベースの構造化データ検索、Phase4FYのentity-attributionの対象外、一切変更していない既存サブシステム)が、phantom entity(実在しない固有名詞)を含むクエリに対しても、部分文字列一致等により無関係だが実在する構造化データを混入させることがある。確認された最も明確な例はFV-P08(『天国ロングとは何か説明して』)で、実在の『天国モード』に関するガイアナビ規定回数データが混入し、モデルがそれを使って架空の『天国ロング』概念を具体的な数値付きで説明してしまった。同様のパターンがFX-K07/LC-08(AT-F)、RJ-13/RJ-20(GG継続関連クエリで無関係テーブルの数値が混入)でも複数回観測された。",
+    "scope_assessment": "Phase4FX/4FYのentity-attributionは一貫してVector DBのchunkのみを対象として設計・検証されてきた(Phase4FXのオフラインプロトタイプ自体、構造化facts検索を一度もテストしていない)。この構造化facts経路の脆弱性はPhase4FY開始前から存在していた既存の限界であり、Phase4FYが新たに引き起こしたregressionではない(A0/FYで同一のstructured_findingsが使われることをコードレベルで確認済み)。しかし、実本番経路を通した統合テストによって初めて具体的に顕在化した、正真正銘の実在リスクである。",
+    "severity": "MEDIUM — 発生頻度は限定的(22件のphantom probe中1件で明確な創作、他数件で軽微な数値混入)だが、実在しない対象について具体的で説得力のある(しかし誤った)数値付き説明を生成しうるという点で、Phase4FX/FYが解決を目指してきた問題の核心(存在しない/無関係な対象への実データの誤帰属)に触れている。",
+    "recommended_next_step": "本フェーズのスコープ外(Section3『新しい研究はしない』により、本フェーズ内でこの経路への対策を新設することは意図的に見送った)。将来的な別フェーズで、find_relevant_structured_facts()の呼び出し結果にも同様のentity-binding的な絞り込みを適用するか、少なくとも構造化factsの出典ラベル(参照した検索条件)をtraceに残す設計変更を検討することを提案する。"
+  },
+  "residual_finding_minor_arithmetic": {
+    "description": "P04・PT-08(・おそらくPT-04)で、モデルがgroundedな2つの数値から差分を自ら計算して提示している(例: 114.6%-97.2%=17.4%)。システムプロンプトの明示的指示『計算し直したり丸めたりしないでください』への軽微な逸脱。今回確認した範囲では計算結果はすべて正確だった。",
+    "severity": "LOW — 入力値はgrounded、計算も単純な引き算で今回は全て正確。Phase4FYのスコープ(entity-attribution)とは無関係な、モデル自身の既存の応答生成傾向(訓練時からの性質、Phase4ZG無変更)であり、本フェーズが新たに引き起こしたものではない。"
+  },
+  "case_determination": {
+    "case": "FY-A",
+    "label": "Integration Successful (with 2 documented residual findings, both pre-existing / outside this phase's specific chunk-based scope, neither newly introduced by this integration)",
+    "rationale": "Phase4FYが明示的に対象としたスコープ(chunk-based entity-aware context assembly の本番統合)については、全ての必須gate(Stage B/C/D[chunk-level]/E/F[修正後]/G/H[サンプル]/I/J)がPASSしている。本フェーズ実行中に発見した唯一の実regression(Q15のentity抽出バグ)は本フェーズ内で修正・検証済み。残る2つの発見(構造化facts経路の漏れ、軽微な自己計算)はいずれも(a)Phase4FYが変更していない既存サブシステムに起因し、(b)A0比較でPhase4FY導入前から存在していたことを確認済みであり、(c)Phase4FYの新規regressionではない。ただし(a)は実在しない対象について具体的な誤情報を生成しうる中程度のリスクであり、production採用の可否を判断する人間には必ず開示されるべき情報である。",
+    "proceed_to_final_candidate_comprehensive_retest": "推奨するが、構造化facts経路の残存リスクを明示的に開示した上で、人間の判断を仰ぐことを条件とする(Section27の指示通り、本フェーズはこの判断を代行しない)。",
+    "auto_commit": false,
+    "human_confirmation_required": true,
+    "explicit_reminder": "CASE FY-A であっても、Section27の指示によりPhase4FYはsrc/pachislot_ai/rag/の変更を一切commitしていない。commitするかどうか、また構造化facts経路の残存リスクを許容するか追加対応するかは、人間が本レポートを確認した上で判断すること。"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "phase": "Phase4FY",
+  "section": "Section13 (Stage A: unit tests)",
+  "test_file": "tests/unit/test_entity_attribution.py",
+  "target_module": "src/pachislot_ai/rag/entity_attribution.py",
+  "required_coverage": {
+    "known_bug_1_compound_entity_truncation": {
+      "description": "「GGプラス」が「GG」に切り詰められないことを確認",
+      "tests": [
+        "test_compound_entity_not_truncated_gg_plus",
+        "test_compound_entity_not_truncated_gaia_stage_max",
+        "test_compound_entity_not_truncated_neo",
+        "test_compound_entity_with_genuine_particle_boundary_still_splits"
+      ],
+      "result": "PASS"
+    },
+    "known_bug_2_gg_sgg_substring_collision": {
+      "description": "「GG」が「SGG」titleに誤ってbindingされないことを確認",
+      "tests": [
+        "test_gg_does_not_match_sgg_title",
+        "test_sgg_matches_its_own_title",
+        "test_gg_matches_gg_naka_kaisetsu",
+        "test_binding_comparison_query_no_cross_contamination",
+        "test_binding_single_entity_query_no_cross_contamination"
+      ],
+      "result": "PASS"
+    },
+    "known_bug_3_production_integration_over_filtering_reverted_by_stale_fallback": {
+      "description": "Phase4FY統合時に発見・修正したretention-ratio fallbackの誤適用バグの回帰テスト。 6件中1件だけが真に関連する場合に、絞り込み前の6件へ fallbackしてはならないことを確認。",
+      "tests": [
+        "test_select_grounded_chunks_narrows_to_relevant_subset_no_incorrect_fallback"
+      ],
+      "result": "PASS"
+    },
+    "phantom_entity": {
+      "tests": [
+        "test_phantom_entity_returns_empty_no_evidence_borrowed"
+      ],
+      "result": "PASS"
+    },
+    "exact_title_match": {
+      "tests": [
+        "test_exact_title_match_scores_highest"
+      ],
+      "result": "PASS"
+    },
+    "multiple_entities": {
+      "tests": [
+        "test_multi_entity_one_phantom_one_real_gets_no_evidence_marker"
+      ],
+      "result": "PASS"
+    },
+    "no_evidence_marker": {
+      "tests": [
+        "test_multi_entity_one_phantom_one_real_gets_no_evidence_marker"
+      ],
+      "result": "PASS"
+    },
+    "duplicate_chunks": {
+      "tests": [
+        "test_duplicate_chunks_deduplicated_in_selection"
+      ],
+      "result": "PASS"
+    },
+    "bound_unbound_separation": {
+      "tests": [
+        "test_unbound_chunks_separated_from_bound"
+      ],
+      "result": "PASS"
+    },
+    "empty_input_edge_case": {
+      "tests": [
+        "test_no_embedding_chunks_returns_empty_unchanged"
+      ],
+      "result": "PASS"
+    }
+  },
+  "note_on_section13_fallback_threshold_item": "Section13の仕様文書はFXのfallback閾値ロジックのテストを想定していたが、Phase4FY統合作業中にこのfallbackをchunkベースの選別に適用すること自体がバグであることが判明したため、テストの目的を「閾値fallbackが正しく動作することを確認」から「閾値fallbackが存在しないことを回帰テストで保証する」に変更した。この変更はentity_attribution.pyのdocstringも同様に修正済み(古い記述が実装と矛盾していたのを発見し同時修正)。",
+  "results": {
+    "new_test_file_result": "16 passed, 0 failed",
+    "full_unit_suite_before_this_phase": 233,
+    "full_project_suite_after_addition": "249 passed (233 baseline + 16 new), 0 failed, 0 regressions",
+    "regression_detected": false
+  },
+  "commands_run": [
+    ".venv/Scripts/python.exe -m pytest tests/unit/test_entity_attribution.py -v",
+    ".venv/Scripts/python.exe -m pytest tests/unit -q",
+    ".venv/Scripts/python.exe -m pytest -q"
+  ]
+}

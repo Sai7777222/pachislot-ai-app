@@ -1,0 +1,169 @@
+[
+  {
+    "id": "BD-ST-01",
+    "category": "small_talk",
+    "prompt": "おはよう！",
+    "query_entities": [
+      "おはよう!"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "おはようございます！登録データに該当する情報は見つかりませんでした。",
+    "latency_sec": 1.4048035144805908
+  },
+  {
+    "id": "BD-ST-02",
+    "category": "small_talk",
+    "prompt": "今日は天気がいいね",
+    "query_entities": [
+      "今日",
+      "天気"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "そうですね！気持ちいい日和だよ〜",
+    "latency_sec": 0.7671329975128174
+  },
+  {
+    "id": "BD-ST-03",
+    "category": "small_talk",
+    "prompt": "ありがとう、助かったよ",
+    "query_entities": [
+      "ありがとう、助かったよ"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "どういたしまして！また何かあったら聞いてね！",
+    "latency_sec": 0.9493310451507568
+  },
+  {
+    "id": "BD-ST-04",
+    "category": "small_talk",
+    "prompt": "疲れたから少し休憩しようかな",
+    "query_entities": [
+      "休憩"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "ゆっくり休んで、また元気になったら頑張ろうね！",
+    "latency_sec": 0.9274673461914062
+  },
+  {
+    "id": "BD-ST-05",
+    "category": "small_talk",
+    "prompt": "最近ハマってることある？",
+    "query_entities": [
+      "最近",
+      "ハマ"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "登録データにその情報は見つからないんだ。適当に答えちゃうと誤った情報を流すことになるから、わからないままにしておくね。",
+    "latency_sec": 2.161968946456909
+  },
+  {
+    "id": "BD-ST-06",
+    "category": "small_talk",
+    "prompt": "それじゃあ、また今度話そうね、バイバイ",
+    "query_entities": [
+      "今度話",
+      "バイバイ"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "うん、またね！",
+    "latency_sec": 0.6257317066192627
+  },
+  {
+    "id": "BD-OOD-01",
+    "category": "ood",
+    "prompt": "今日の東京の最高気温は？",
+    "query_entities": [
+      "今日",
+      "東京",
+      "最高気温"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "登録データにありません。",
+    "latency_sec": 0.5184755325317383
+  },
+  {
+    "id": "BD-OOD-02",
+    "category": "ood",
+    "prompt": "おすすめのラーメン屋教えて",
+    "query_entities": [
+      "ラーメン",
+      "屋教"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "登録データにありません。パチスロ以外の質問は適当に答えられないよ。",
+    "latency_sec": 1.5194625854492188
+  },
+  {
+    "id": "BD-OOD-03",
+    "category": "ood",
+    "prompt": "円安はいつまで続きますか",
+    "query_entities": [
+      "円安"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "登録データにその情報はありません。円安の予想については、私は答えられません。",
+    "latency_sec": 1.2944042682647705
+  },
+  {
+    "id": "BD-OOD-04",
+    "category": "ood",
+    "prompt": "次のオリンピックはどこで開催されますか",
+    "query_entities": [
+      "オリンピック",
+      "開催"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "登録データにありません。パチスロ以外の質問は答えられないままにしておくね。",
+    "latency_sec": 1.6711065769195557
+  },
+  {
+    "id": "BD-CONV-01",
+    "category": "pachislot_conversational",
+    "prompt": "今日パチスロ打ちに行こうと思うんだ",
+    "query_entities": [
+      "今日",
+      "パチスロ"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "うん、楽しんでね！",
+    "latency_sec": 0.5922682285308838
+  },
+  {
+    "id": "BD-CONV-02",
+    "category": "pachislot_conversational",
+    "prompt": "パチスロで一番好きな瞬間は？",
+    "query_entities": [
+      "パチスロ",
+      "一番好",
+      "瞬間"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "登録データにありません。",
+    "latency_sec": 0.5778355598449707
+  },
+  {
+    "id": "BD-CONV-03",
+    "category": "pachislot_conversational",
+    "prompt": "スロット初めてでちょっと緊張してる",
+    "query_entities": [
+      "スロット",
+      "緊張"
+    ],
+    "fy_is_empty": true,
+    "selected_titles": [],
+    "response": "緊張する気持ち、よくわかるよ！でも大丈夫、ゆっくり楽しんでいこうね。",
+    "latency_sec": 1.408191442489624
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "phase": "Phase4FY", "section": "Section23 (performance)",
+  "target": "pre-generation added latency < 5ms preferred (offline Phase4FX measured <0.1ms; no second LLM call in production)",
+  "measurement_method": "isolated microbenchmark of retriever.get_all_chunks() + select_grounded_chunks() against the real production VectorStore/Chroma collection, 5 representative queries, excluding LLM generation time entirely",
+  "results_ms": {
+    "get_all_chunks_mean_ms": 4.92,
+    "select_grounded_chunks_mean_ms": 0.21,
+    "total_added_latency_mean_ms": 5.13,
+    "per_query": [
+      {"query": "GGとSGGの違いを初心者向けに説明して", "get_all_chunks_ms": 5.75, "select_ms": 0.30},
+      {"query": "AT-Fの性能と終了後の状態について教えて", "get_all_chunks_ms": 4.62, "select_ms": 0.31},
+      {"query": "天井は何ゲームですか", "get_all_chunks_ms": 4.69, "select_ms": 0.16},
+      {"query": "GG中とはどんな状態か教えて", "get_all_chunks_ms": 4.56, "select_ms": 0.12},
+      {"query": "ボーナス確率について教えて", "get_all_chunks_ms": 4.97, "select_ms": 0.14}
+    ]
+  },
+  "assessment": "5.13ms measured vs <5ms preferred target — marginally over (about 0.13ms, ~2.6%), almost entirely attributable to the Chroma `.get()` call inside VectorStore.get_all() (title supplemental retrieval), not to select_grounded_chunks() itself (0.2ms, matching Phase4FX's offline <0.1ms measurement closely once isolated). This is a soft/preferred target, not a mandatory gate, and is dwarfed by actual generation latency (mean 3.32s / 3320ms across the 95 production generations in this phase — i.e. entity-attribution overhead is <0.2% of total request latency). No second LLM call is used anywhere in this integration, consistent with the requirement.",
+  "no_second_llm_call": true,
+  "optimization_note": "if the ~5ms figure needs to be brought under the preferred threshold, the straightforward fix (not implemented in this phase, out of scope per Section3's 'no improvisation' — flagged for future consideration only) would be a small in-process cache of get_all_chunks(machine_id) results, since the single-machine DB's chunk set does not change between ingests. Not required for CASE determination given generation dominates total latency by 3 orders of magnitude.",
+  "gate_verdict": "PASS (soft target near-met; no mandatory performance gate violated; no second LLM call)"
+}

@@ -1,0 +1,18 @@
+{
+  "phase": "Phase4FY", "section": "Section21 (Stage I: multi-turn regression via actual production path, reusing FC scenarios)",
+  "method": "training/riru/eval/phase4fc_multiturn_scenarios.py の5シナリオ(全15turn)を実本番経路(各turnごとにRagPipeline.build_context()をそのturnのuser発話のみで再計算し、会話履歴はChatMessage形式でモデルへ蓄積)で実行。",
+  "scenarios": [
+    {"id": "MT-01", "turns": 4, "summary": "挨拶→雑談→パチスロ雑談→GODの機械割質問。turn0-2は正しくdecline/雑談維持、turn3で機械割の全設定値(97.2%〜114.6%)がgroundedに提示された。cross-turn misattribution=0"},
+    {"id": "MT-02", "turns": 3, "summary": "設定6初当り確率(1/295, grounded)→ガイアベル確率(1/37.6, grounded)→雑談への遷移。前turnの話題(初当り確率)が次turnのガイアベル回答に混入することはなかった"},
+    {"id": "MT-03", "turns": 3, "summary": "好み質問(decline)→OOD気温質問(decline)→パチスロ会話(decline、雑談維持)。3turn通じてfabricationなし"},
+    {"id": "MT-04", "turns": 3, "summary": "OODラーメン屋(decline)→天井質問(510G/1000G/1480G, 15.2%/20.3%/64.5%、grounded)→感謝表現(雑談維持)。前turnのOOD文脈が天井回答に混入することなし"},
+    {"id": "MT-05", "turns": 2, "summary": "GG/SGG比較質問(grounded、Q6と同一)→別れの挨拶(雑談維持)"}
+  ],
+  "aggregate": {
+    "n_scenarios": 5, "n_turns": 15,
+    "cross_turn_factual_misattribution_count": 0,
+    "unsupported_synthesis_count": 0,
+    "note": "会話履歴が蓄積されてもentity-attributionは各turnのuser発話のみを検索queryとする設計(ChatServiceの既存仕様通り、変更なし)であり、前turnの話題が後続turnのcontext選別に意図せず影響することはなかった。"
+  },
+  "gate_verdict": "PASS (cross_turn_factual_misattribution=0, unsupported_synthesis=0)"
+}

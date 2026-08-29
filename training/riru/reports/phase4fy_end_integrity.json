@@ -1,0 +1,40 @@
+{
+  "phase": "Phase4FY", "section": "Section26 (end-of-phase integrity checks)",
+  "pytest_final_run": {"command": ".venv/Scripts/python.exe -m pytest -q", "result": "252 passed, 0 failed", "note": "233(baseline) + 16(Section13新規) + 3(entity抽出バグ回帰) = 252"},
+  "phase4zg_adapter_hash": {
+    "file": "training/riru/lora-riru-qwen-phase4zg-identity-hardened/adapter_model.safetensors",
+    "sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "matches_prior_phase_records": true,
+    "confirmed_matching_phases": ["phase4zh_preflight_freeze_manifest", "phase4zi_preflight_hashes", "phase4zj_preflight_hashes", "phase4zk_preflight_hashes", "phase4zl_preflight_hashes/end_integrity", "phase4zm_preflight/end_integrity", "phase4zn_unattended_preflight/end_integrity", "phase4zo_preflight/end_integrity", "phase4zp_preflight/end_integrity", "phase4zq_preflight/end_integrity", "phase4zr_preflight/end_integrity", "phase4zs_preflight/end_integrity", "phase4zt_preflight/end_integrity", "phase4fc_preflight/end_integrity", "phase4fu_preflight/end_integrity", "phase4fv_preflight/end_integrity", "phase4fw_preflight", "phase4fx_preflight"],
+    "verdict": "UNCHANGED (Phase4ZG凍結、Phase4ZH以降一貫して同一hash)"
+  },
+  "production_prompt_unchanged": {
+    "system.jinja2": "git status上変更なし(untracked/modified扱いなし)",
+    "rag_context.jinja2": "git status上変更なし(untracked/modified扱いなし)",
+    "verdict": "UNCHANGED"
+  },
+  "dispatch_policy_c3_semantics_unchanged": {
+    "note": "該当コードは本番src/pachislot_ai内に存在しない(training/riru/guard診断ハーネス内にのみ存在、Phase4FYはこれを一切変更していない)",
+    "verdict": "UNCHANGED (対象コードなし、自明)"
+  },
+  "db_embedding_generation_config_unchanged": {
+    "vector_db_contents": "変更なし(ingest/upsert等は一切実行していない、get_all()は既存collectionの読み取り専用アクセスのみ追加)",
+    "embedding_model": "変更なし(Embedder自体・呼び出し方法とも無変更)",
+    "base_retriever_core_logic": "変更なし(Retriever.search()は無変更、get_all_chunks()を追加のみ)",
+    "generation_config": "変更なし(LLMProvider/生成パラメータ関連ファイル無変更、本フェーズのgreedy decodingは評価専用スクリプト内のみで本番設定に影響しない)",
+    "verdict": "UNCHANGED"
+  },
+  "no_training_performed": true,
+  "no_lora_changes": true,
+  "identity_status": "CLOSED (Phase4ZM時点、本フェーズで一切触れていない)",
+  "production_code_committed": false,
+  "note_on_commit": "Section27の指示通り、src/pachislot_ai/rag/*.pyおよびtests/unit/test_entity_attribution.pyの変更はcommitしていない。人間によるレビュー・確認後に手動でcommitする想定。",
+  "modified_uncommitted_files": [
+    "src/pachislot_ai/rag/pipeline.py (modified)",
+    "src/pachislot_ai/rag/retriever.py (modified)",
+    "src/pachislot_ai/rag/vector_store.py (modified)",
+    "src/pachislot_ai/rag/entity_attribution.py (new)",
+    "tests/unit/test_entity_attribution.py (new)"
+  ],
+  "overall_verdict": "PASS — 全ての凍結対象コンポーネントが無変更であることを確認。production RAGコード変更は意図通りcommit保留中。"
+}

@@ -1,0 +1,27 @@
+{
+  "phase": "Phase4FY", "section": "Section16 (Stage D: phantom entity via actual production path, reusing FX's 22 probes)",
+  "method": "Phase4FXが定義した22件のphantom entity probe(実在しない固有名詞)を、実本番RagPipeline + Phase4ZGで再実行。",
+  "n_probes": 22,
+  "chunk_level_misbinding_count": 0,
+  "chunk_level_result": "22/22 で他entityのchunkがphantom entityの説明として流用されることはなかった(select_grounded_chunksが設計通り機能)。詳細はphase4fy_generation_raw.json中のcategory=phantom_entity全22件、及びtraining/riru/reports/_tmp_phantom_cb.json参照。",
+  "structured_facts_path_finding": {
+    "affected_probe": "FV-P08",
+    "prompt": "天国ロングとは何か説明して",
+    "issue": "chunk側は0件選別で正しいが、entity-attributionが一切関与しない独立した構造化facts検索(find_relevant_structured_facts, Phase4FYで未変更)が「天国」という部分文字列一致で実在の「天国モード」に関する19件の構造化数値(ガイアナビ規定回数振り分け等)を混入させ、モデルがそれを『天国ロング』という架空概念の説明として提示した(規定回数1〜3回、確率0.332/0.332/0.336)。",
+    "root_cause": "find_relevant_structured_facts()はPhase4FX/4FYのentity-attributionの対象外(Section4のfrozen対象ではないが、本フェーズのスコープにも含めていなかった)。Phase4FXのオフラインプロトタイプはchunkのみを対象としており、構造化facts経路は一度もテストされていなかった(FXの検証対象外のblind spot)。",
+    "is_phase4fy_regression": false,
+    "evidence_for_pre_existing": "この構造化facts検索呼び出しはPhase4FY開始前から存在し、pipeline.py内でPhase4FYのentity-attribution挿入箇所より前に(無変更のまま)実行されている。Phase4FYはこの経路に一切手を加えていないため、Phase4FY以前の本番コードでも同一の混入が発生していたと考えられる(A0/FY双方でstructured_findingsは同一)。",
+    "severity": "MEDIUM — phantom(実在しない)固有名詞に対し、無関係だが実在するデータを使って具体的な説明を創作している点は、Phase4FX/FYが解決を目指してきた問題(存在しない概念への他対象データの誤帰属)の一種であり、mandatoryなgate(phantom misbinding=0/22)の文言上はFAILに該当する。ただしchunkベースのentity-attribution機構自体は正しく機能しており、原因は別サブシステム。"
+  },
+  "other_probes_with_structured_facts_present_but_correctly_declined": [
+    "FU-A03", "FU-D05", "FV-P02", "FV-P03", "FV-P04", "FV-P05", "FV-P09", "FV-P11", "FV-P13", "FV-P14"
+  ],
+  "note_on_other_10": "上記10件はいずれも構造化facts側に何らかのマッチ(structured_source_count>0)があったが、いずれも正しくdecline(登録データにありません、等)しており、FV-P08のみが例外的に構造化データを使った創作を行った。原因はFV-P08(天国ロング→天国モード)のマッチが特に大量(19件)かつ数値が単純明快(0.332等)で、モデルが『説明できる』と判断しやすかったことが推測される。",
+  "aggregate": {
+    "n_probes": 22,
+    "chunk_based_misbinding": 0,
+    "structured_facts_based_leak": 1,
+    "gate_as_literally_worded_phantom_misbinding_0_of_22": "21/22 (FV-P08が例外)"
+  },
+  "gate_verdict": "PARTIAL — chunk-based entity-attribution(本フェーズの直接スコープ)は22/22で完全成功。ただし文言通りの『phantom misbinding=0/22』は21/22であり、原因は本フェーズが変更していない既存の構造化facts検索サブシステムの、これまで未検証だった限界(pre-existing、regressionではない)。CASE判定への影響はphase4fy_gate_analysis.json参照。"
+}

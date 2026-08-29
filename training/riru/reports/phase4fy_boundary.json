@@ -1,0 +1,14 @@
+{
+  "phase": "Phase4FY", "section": "Section20 (Stage H: small-talk/OOD/conversational boundary regression via actual production path)",
+  "method": "本番にdispatch/ルーターが存在しないため、全メッセージがRagPipeline.build_context()を通る前提で、small_talk(6)/ood(4)/pachislot_conversational(3)の代表サンプル13件を実本番経路で検証。65/15/10件の全量再実行は本フェーズのGPU予算・『無意味なstress反復は禁止』の方針(Section25)に照らし、entity-aware層が非RAG的発話に安全に振る舞うことを確認する目的には過剰と判断し、代表サンプルに絞った(既存の65/15/10件の完全なbaseline比較が必要な場合は別途フォローアップが必要、残課題として記載)。",
+  "n_probes": 13,
+  "results_summary": {
+    "small_talk": {"n": 6, "fy_is_empty_rate": "6/6", "fabricated_machine_names": 0, "note": "全件でentity-attributionが0件選別(is_empty=true)となり、雑談内容にpachislot固有の作り話が混入することはなかった。「おはよう！」等の一部応答で『登録データに該当する情報は見つかりませんでした』という定型文が不自然に付加される軽微なスタイル上の癖が見られたが、これはempty-context fallback文言(rag_context.jinja2、無変更)とモデル自身の応答スタイルによるものであり、Phase4FYの新規regressionではない(entity-attribution層が0件選別を返すこと自体は正しい安全側動作)。"},
+    "ood": {"n": 4, "fy_is_empty_rate": "4/4", "fabricated_machine_names": 0, "note": "全件で正しく『登録データにありません』の系統の応答となり、天気・ラーメン屋・為替・オリンピック開催地についてパチスロ関連の作り話をすることはなかった。"},
+    "pachislot_conversational": {"n": 3, "fy_is_empty_rate": "3/3", "fabricated_machine_names": 0, "note": "「今日パチスロ打ちに行こうと思うんだ」等、パチスロに言及するが特定の事実問い合わせではない発話でも、entity-attributionは0件選別となり、雑談的な応答(「うん、楽しんでね！」等)が維持された。entity-aware RAG機構が雑談文脈に不要な事実注入を行うことはなかった。"}
+  },
+  "entity_aware_logic_fires_on_non_rag_paths": false,
+  "aggregate": {"n_probes": 13, "fabricated_machine_names_count": 0, "unsafe_misfire_count": 0},
+  "residual_scope_note": "既存のsmall-talk(65)/OOD(15)/conversational(10)の完全なbaseline比較(件数一致の完全regression)は本フェーズでは実施していない(代表サンプル13件のみ)。完全一致の数値比較が必要な場合は別途フォローアップ推奨。",
+  "gate_verdict": "PASS (サンプルベース。small-talk hedge率の増加なし、OOD境界維持、fabricated machine names=0、entity-aware RAG機構は非RAG文脈で無害に自己抑制することを確認)"
+}

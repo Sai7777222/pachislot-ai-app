@@ -1,0 +1,38 @@
+{
+  "phase": "Phase4FY", "section": "Section22 (Stage J: retrieval-miss regression via actual production path)",
+  "mandatory_test": {
+    "query": "GG中とはどんな状態か教えて",
+    "id": "RJ-01",
+    "raw_embedding_top6_titles": ["準備中解説", "裏モード概要", "効果", "なし", "表モード概要", "中パターン"],
+    "raw_embedding_contains_gg_naka_kaisetsu": false,
+    "final_context_selected_titles": ["GG中解説"],
+    "final_context_contains_gg_naka_kaisetsu": true,
+    "response": "GG中は初期ゲーム数50G/セットで、純増約7枚/G、平均獲得350枚、ループストック最大80%のゾーンなんだ。",
+    "verdict": "PASS — 素のembedding top-6には『GG中解説』チャンクが一度も含まれていない(Phase4FC〜FWで繰り返し確認された既知の検索漏れが実本番retrieverでも再現)にもかかわらず、title補完検索により最終contextには正しく含まれ、grounded な応答が生成された。"
+  },
+  "recall_comparison_20plus_queries": {
+    "n_queries": 21,
+    "gt_frozen_before_generation": true,
+    "gt_note": "GTは『query entityと文字通り一致するtitleを持つchunkが実DB中に存在するか』という客観的事実として、生成前にraw_embedding_titlesとDB全チャンクtitle一覧の比較のみから機械的に判定(モデルの判断を根拠にしていない、RULE EVAL-001準拠)",
+    "queries_with_recall_gain": 9,
+    "queries_with_recall_gain_pct": "9/21 (42.9%)",
+    "detail": [
+      {"id": "RJ-01", "gained_titles": ["GG中解説"]},
+      {"id": "RJ-02", "gained_titles": ["GG中解説"]},
+      {"id": "RJ-03", "gained_titles": ["GG中解説", "青7連続時GG当選率", "LV5（GG継続濃厚）", "前兆ゲーム数解説", "保障ゲーム解説", "最終ゲーム解説"]},
+      {"id": "RJ-06", "gained_titles": ["継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】", "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"]},
+      {"id": "RJ-07", "gained_titles": ["GG中解説", "LV5（GG継続濃厚）", "表モード概要", "天国モード解説"]},
+      {"id": "RJ-09", "gained_titles": ["天井突入条件", "天井突入条件（設定変更時）", "天井恩恵", "天井恩恵詳細", "前兆ゲーム数解説", "保障ゲーム解説", "最終ゲーム解説"]},
+      {"id": "RJ-13", "gained_titles": ["GG中解説", "青7連続時GG当選率", "LV5（GG継続濃厚）", "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】", "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】", "継続期待度補足", "天井突入条件", "天井突入条件（設定変更時）"]},
+      {"id": "RJ-15", "gained_titles": ["効果"]},
+      {"id": "RJ-20", "gained_titles": ["継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】", "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"]}
+    ],
+    "queries_with_no_recall_gain_but_correctly_stable": ["RJ-04", "RJ-05", "RJ-08", "RJ-10", "RJ-11", "RJ-12", "RJ-14", "RJ-16", "RJ-17", "RJ-18", "RJ-19", "RJ-21"],
+    "note_on_no_gain_cases": "RJ-10(ヤメ時の目安)・RJ-11(設定判別の要素)・RJ-14(Z-ZONE昇格率)は、embedding top-6にも該当titleがなく、title補完検索でも見つからなかった(0件選別、正直にdecline)。この3件についてはDB内に該当する直接的なchunkが存在するかを個別に確認する追加調査が望ましい(残課題として記載、mandatoryなgateには含まれない)。"
+  },
+  "aggregate": {
+    "mandatory_gate": "PASS (GG中解説の検索漏れがtitle補完検索で解消)",
+    "recall_improvement_rate": "9/21 queries showed additional relevant chunks beyond raw embedding top-6"
+  },
+  "gate_verdict": "PASS"
+}

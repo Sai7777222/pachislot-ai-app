@@ -1,0 +1,256 @@
+[
+  {
+    "id": "MT-01",
+    "description": "挨拶 -> 雑談 -> パチスロ会話 -> パチスロ事実質問",
+    "turns": [
+      {
+        "turn_index": 0,
+        "user": "おはよう！",
+        "expected_mode": "SMALL_TALK",
+        "query_entities": [
+          "おはよう!"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "おはようございます！登録データに該当する情報は見つかりませんでした。",
+        "latency_sec": 1.2612173557281494
+      },
+      {
+        "turn_index": 1,
+        "user": "今日は天気がいいね",
+        "expected_mode": "SMALL_TALK",
+        "query_entities": [
+          "今日",
+          "天気"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "そうですね！登録データに該当する情報は見つかりませんでした。",
+        "latency_sec": 1.1876537799835205
+      },
+      {
+        "turn_index": 2,
+        "user": "今日パチスロ打ちに行こうと思うんだ",
+        "expected_mode": "PACHISLOT_CONVERSATIONAL",
+        "query_entities": [
+          "今日",
+          "パチスロ"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "そうなんだ！登録データに該当する情報は見つかりませんでした。",
+        "latency_sec": 1.0928049087524414
+      },
+      {
+        "turn_index": 3,
+        "user": "GODの機械割は？",
+        "expected_mode": "PACHISLOT_FACTUAL",
+        "query_entities": [
+          "GOD",
+          "機械割"
+        ],
+        "fy_is_empty": false,
+        "selected_titles": [
+          "上段赤7・中段ミリオン・下段赤7＋中リール中段赤7＋右リール中段GOD",
+          "「機械割」について"
+        ],
+        "response": "設定1: 機械割 97.2%、設定2: 機械割 99.1%、設定3: 機械割 102.1%、設定4: 機械割 106.9%、設定5: 機械割 111.7%、設定6: 機械割 114.6%だよ。",
+        "latency_sec": 6.3658287525177
+      }
+    ]
+  },
+  {
+    "id": "MT-02",
+    "description": "パチスロ事実質問 -> 曖昧な機種固有質問(UNKNOWN想定) -> 雑談",
+    "turns": [
+      {
+        "turn_index": 0,
+        "user": "設定6の初当り確率は？",
+        "expected_mode": "PACHISLOT_FACTUAL",
+        "query_entities": [
+          "設定",
+          "初当",
+          "確率"
+        ],
+        "fy_is_empty": false,
+        "selected_titles": [
+          "天井突入条件（設定変更時）",
+          "効果",
+          "小役確率補足"
+        ],
+        "response": "設定6の初当り確率は1/295だよ。",
+        "latency_sec": 1.7854528427124023
+      },
+      {
+        "turn_index": 1,
+        "user": "ガイアベルの確率は？",
+        "expected_mode": "UNKNOWN_OR_FACTUAL",
+        "query_entities": [
+          "ガイアベル",
+          "確率"
+        ],
+        "fy_is_empty": false,
+        "selected_titles": [
+          "小役の停止例一覧",
+          "モードごとの違い",
+          "補足解説",
+          "天国モード解説",
+          "小役確率補足"
+        ],
+        "response": "ガイアベルの確率は1/37.6だよ。",
+        "latency_sec": 1.6580393314361572
+      },
+      {
+        "turn_index": 2,
+        "user": "疲れたから少し休憩しようかな",
+        "expected_mode": "SMALL_TALK",
+        "query_entities": [
+          "休憩"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "ゆっくり休んでね！",
+        "latency_sec": 0.4539475440979004
+      }
+    ]
+  },
+  {
+    "id": "MT-03",
+    "description": "好み質問(UNKNOWN想定) -> OOD -> パチスロ会話",
+    "turns": [
+      {
+        "turn_index": 0,
+        "user": "最近ハマってることある？",
+        "expected_mode": "UNKNOWN",
+        "query_entities": [
+          "最近",
+          "ハマ"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "登録データにその情報は見つからないんだ。適当に答えちゃうと誤った情報を流すことになるから、わからないままにしておくね。",
+        "latency_sec": 2.402787923812866
+      },
+      {
+        "turn_index": 1,
+        "user": "今日の東京の最高気温は？",
+        "expected_mode": "OOD_FACTUAL",
+        "query_entities": [
+          "今日",
+          "東京",
+          "最高気温"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "それはパチスロのデータじゃなくて、天気予報の情報だから、私にはわからないんだ。",
+        "latency_sec": 1.4126472473144531
+      },
+      {
+        "turn_index": 2,
+        "user": "パチスロで一番好きな瞬間は？",
+        "expected_mode": "PACHISLOT_CONVERSATIONAL",
+        "query_entities": [
+          "パチスロ",
+          "一番好",
+          "瞬間"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "私は登録データにその情報は見つからないんだ。適当に答えちゃうと誤った情報を流すことになるから、わからないままにしておくね。",
+        "latency_sec": 2.359842300415039
+      }
+    ]
+  },
+  {
+    "id": "MT-04",
+    "description": "OOD -> パチスロ事実 -> 感情表現",
+    "turns": [
+      {
+        "turn_index": 0,
+        "user": "おすすめのラーメン屋教えて",
+        "expected_mode": "OOD_FACTUAL",
+        "query_entities": [
+          "ラーメン",
+          "屋教"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "登録データにありません。パチスロ以外の質問は適当に答えられないよ。",
+        "latency_sec": 1.540597677230835
+      },
+      {
+        "turn_index": 1,
+        "user": "この台の天井は何ゲーム？",
+        "expected_mode": "PACHISLOT_FACTUAL",
+        "query_entities": [
+          "天井",
+          "ゲーム"
+        ],
+        "fy_is_empty": false,
+        "selected_titles": [
+          "天井突入条件",
+          "天井突入条件（設定変更時）",
+          "天井恩恵",
+          "天井恩恵詳細",
+          "天井解説",
+          "前兆ゲーム数解説",
+          "保障ゲーム解説",
+          "最終ゲーム解説"
+        ],
+        "response": "天井ゲーム数は510G、1000G、1480Gの3種類があって、それぞれ15.2%、20.3%、64.5%の確率で決まるんだ。",
+        "latency_sec": 6.096827507019043
+      },
+      {
+        "turn_index": 2,
+        "user": "ありがとう、助かったよ",
+        "expected_mode": "SMALL_TALK",
+        "query_entities": [
+          "ありがとう、助かったよ"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "どういたしまして！また何かあったら聞いてね。",
+        "latency_sec": 1.1529061794281006
+      }
+    ]
+  },
+  {
+    "id": "MT-05",
+    "description": "UNKNOWN型の説明依頼(Q6類似) -> 雑談で締める",
+    "turns": [
+      {
+        "turn_index": 0,
+        "user": "GGとSGGの違いを初心者向けに説明して",
+        "expected_mode": "UNKNOWN_OR_FACTUAL",
+        "query_entities": [
+          "GG",
+          "SGG"
+        ],
+        "fy_is_empty": false,
+        "selected_titles": [
+          "青7連続時GG当選率",
+          "GG中解説",
+          "LV5（GG継続濃厚）",
+          "SGGゲーム数抽選概要",
+          "継続契機ごとのSGGゲーム数振り分け【5の倍数以外のセット】",
+          "継続契機ごとのSGGゲーム数振り分け【5の倍数セット】"
+        ],
+        "response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚のゾーンだよ。SGGは10〜100Gで純増7枚/G、継続率75%以上だから、継続型のスペシャルATになるんだ。",
+        "latency_sec": 5.014631748199463
+      },
+      {
+        "turn_index": 1,
+        "user": "それじゃあ、また今度話そうね、バイバイ",
+        "expected_mode": "SMALL_TALK",
+        "query_entities": [
+          "今度話",
+          "バイバイ"
+        ],
+        "fy_is_empty": true,
+        "selected_titles": [],
+        "response": "うん、またね！",
+        "latency_sec": 0.8945448398590088
+      }
+    ]
+  }
+]

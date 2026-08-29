@@ -64,6 +64,22 @@ class VectorStore:
     def count(self) -> int:
         return self._collection.count()
 
+    def get_all(self, *, machine_id: str | None = None) -> list[SearchResult]:
+        """title supplemental retrieval (Phase4FX/4FY) 用に、embeddingスコアを介さず
+        全チャンク(または指定machine_idのチャンク)をそのまま取得する。新しい検索器では
+        なく、既存Chromaコレクションに対する単純な一括取得(distance/scoreは持たない)。"""
+        if self.count() == 0:
+            return []
+        where = {"machine_id": machine_id} if machine_id else None
+        result = self._collection.get(where=where, include=["documents", "metadatas"])
+        ids = result.get("ids", [])
+        documents = result.get("documents", [])
+        metadatas = result.get("metadatas", [])
+        return [
+            SearchResult(chunk_id=i, text=d, metadata=m, distance=0.0)
+            for i, d, m in zip(ids, documents, metadatas, strict=True)
+        ]
+
     def query(
         self,
         query_embedding: list[float],

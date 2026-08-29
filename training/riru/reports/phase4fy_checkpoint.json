@@ -1,0 +1,18 @@
+{
+  "purpose": "Section1: Phase4FU〜FXの診断artifactをproduction code変更前にcheckpointする。",
+  "branch": "checkpoint/identity-closure-phase4zn-baseline",
+  "previous_head": "8e0f7febb1ff690024c97a77742d9741e1ea9f5c",
+  "checkpoint_commit_hash": "30fc50146dd8af3e52f9d495abb5da9427be0e67",
+  "files_committed": 125,
+  "staging_method": "explicit paths/globs only (git add <path> ... 形式)、git add . / git add -A は一切使用していない",
+  "excluded_by_design": [".env", "secret files", "Slack webhook URL", "model weights", "adapter binaries(training/riru/lora-*)", "GGUF", "cache", "temp files", "credentials"],
+  "secret_scan": {
+    "method": "git diff --cached を SLACK_WEBHOOK_URL/hooks.slack.com/api_key/password/Bearer/sk-*パターンで検査",
+    "result": "0 matches(37350行の差分全体に対して)"
+  },
+  "push_result": "成功。8e0f7fe..30fc501 checkpoint/identity-closure-phase4zn-baseline -> checkpoint/identity-closure-phase4zn-baseline",
+  "force_push_used": false,
+  "pushed_to_main": false,
+  "branch_changed": false,
+  "history_rewritten": false
+}

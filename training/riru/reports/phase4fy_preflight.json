@@ -1,0 +1,29 @@
+{
+  "phase": "Phase4FY", "section": "Section26 (preflight integrity checks, prior to Section13 work in this session)",
+  "note": "Section1(GitHub checkpoint)・Section2-12(初期統合実装、entity_attribution.py新規作成・vector_store.py/retriever.py/pipeline.pyへの統合)は本セッションの前半(コンテキスト圧縮前)で実施済み。本preflightは、そこからSection13(unit test)着手前の時点での状態を記録する。",
+  "pytest_baseline_before_section13": {"result": "233 passed, 0 failed", "note": "Phase4FY統合実装直後、Section13のtest_entity_attribution.py作成前の状態(前セッションで確認済み)"},
+  "phase4zg_adapter_hash_at_start": {
+    "sha256": "278fe7aedc5f302b9966689c9e92c8363fea246db71aab7cc959ce9609dcc9dc",
+    "note": "本フェーズ開始時点で既にPhase4ZH以降と同一hashであることを確認済み(このhashは本フェーズ終了時点でも変化なし、phase4fy_end_integrity.json参照)"
+  },
+  "github_checkpoint": {
+    "commit": "30fc50146dd8af3e52f9d495abb5da9427be0e67",
+    "message": "checkpoint: phase4fu-fx rag factual safety diagnostics",
+    "branch": "checkpoint/identity-closure-phase4zn-baseline",
+    "files_committed": 125,
+    "note": "Phase4FU〜FXの診断成果物のみをcommit。Phase4FYの本番コード変更(src/pachislot_ai/rag/*)はこのcommitに含まれていない(意図的、Section27準拠)。詳細はphase4fy_checkpoint.json参照。"
+  },
+  "production_files_state_at_section13_start": {
+    "src/pachislot_ai/rag/entity_attribution.py": "新規作成済み(Phase4FX最終版のport)、1件の統合バグ(retention-ratio fallbackの誤適用)を発見・修正済み",
+    "src/pachislot_ai/rag/vector_store.py": "get_all()追加済み",
+    "src/pachislot_ai/rag/retriever.py": "get_all_chunks()追加済み",
+    "src/pachislot_ai/rag/pipeline.py": "entity-aware selection呼び出し統合済み",
+    "commit_status": "未commit(意図通り)"
+  },
+  "frozen_components_verified_unchanged_at_start": [
+    "config/prompts/system.jinja2", "config/prompts/rag_context.jinja2",
+    "src/pachislot_ai/services/chat_service.py", "src/pachislot_ai/rag/structured_lookup.py",
+    "src/pachislot_ai/rag/context_builder.py", "src/pachislot_ai/rag/embedder.py",
+    "Phase4ZG adapter weights", "training data"
+  ]
+}

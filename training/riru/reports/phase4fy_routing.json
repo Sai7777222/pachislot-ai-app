@@ -1,0 +1,8 @@
+{
+  "phase": "Phase4FY", "section": "Section19 (Stage G: routing/Policy C3 regression using GT260)",
+  "architecture_finding": "現在の src/pachislot_ai 本番コードにはdispatch/Policy C3に相当するモジュールが実装されていない。この概念は training/riru/guard/phase4zr_conservative_dispatch.py・phase4zt_policy_c.py 等、診断ハーネス内にのみ存在する。実際の本番 ChatService は machine_id/RAGの有無に応じて常に RagPipeline.build_context() を呼び出し、is_empty かどうかに関わらず rag_context.prompt_text を常にsystemメッセージとして注入する設計であり、モード分類による経路分岐自体が存在しない。",
+  "implication": "Phase4FYはdispatch/Policy C3に相当するファイルを一切変更していない(そもそも本番コードに存在しないため変更しようがない)。したがって『dispatch/Policy C3のsemantics unchanged』は自明に満たされる。GT260を用いたPhase4ZR/4ZT時点のharness結果は、本番コードのこの領域に対する参照点として引き続き有効であり、regressionの余地がない。",
+  "title_supplemental_lookup_not_used_as_router_substitute": "entity_attribution.pyのtitle補完検索(get_all_chunks + title_match_score)は、あくまでRagPipeline.build_context()内、retrieval後・prompt rendering前の一箇所でのみ呼び出される。dispatch/ルーティング判定用のモジュールとしては一切使用・公開していない(そのような呼び出し元は本番コードに存在しない)。",
+  "residual_gap": "本phaseはdispatch/Policy C3ハーネス自体の再実行(GT260全件)は行っていない(該当コードが本番に存在せず、Phase4FYの変更対象にも含まれないため)。仮に将来dispatch/Policy C3が本番コードとして実装される場合は、その統合時に改めてrag_with_context経路がentity-attribution層を正しく通ることを検証する必要がある。",
+  "gate_verdict": "PASS (自明 — 対象コードが存在しないため変更もregressionも発生し得ない。詳細はphase4fy_production_diff.mdの『変更していないもの』欄参照)"
+}

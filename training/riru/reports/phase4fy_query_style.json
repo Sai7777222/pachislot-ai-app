@@ -1,0 +1,14 @@
+{
+  "phase": "Phase4FY", "section": "Section15 (Stage C: query style via actual production path)",
+  "probes": [
+    {"id": "QS-D01", "prompt": "GGとSGGの違いを初心者向けに説明して", "style": "初心者向け", "response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚のゾーンだよ。SGGは10〜100Gで純増7枚/G、継続率75%以上だから、継続型のスペシャルATになるんだ。", "unsupported_synthesis": false},
+    {"id": "QS-FU-F-Q1", "prompt": "GGについて教えて", "style": "単純問い合わせ", "unsupported_synthesis": false, "note": "selected=3 titles, GG単体の情報のみ、SGG混入なし"},
+    {"id": "QS-FU-F-Q2", "prompt": "SGGについて教えて", "style": "単純問い合わせ", "unsupported_synthesis": false, "note": "selected=3 titles, SGG単体の情報のみ、GG混入なし"},
+    {"id": "QS-FU-F-Q3", "prompt": "GGとSGGの違いは？", "style": "短縮形", "unsupported_synthesis": false, "note": "selected=6, QS-D01と同等の grounded な結果"},
+    {"id": "QS-FU-F-Q4", "prompt": "GGとSGGを要約して", "style": "要約依頼", "unsupported_synthesis": false, "note": "selected=6, 同上"}
+  ],
+  "style_coverage": ["初心者向け(です/ます・簡単な言葉)", "単純問い合わせ(について教えて)", "短縮形(は？)", "要約依頼(要約して)", "比較構文(の違いを説明して)"],
+  "aggregate": {"n_probes": 5, "unsupported_synthesis_count": 0},
+  "note": "5スタイルとも同一のGG/SGG entity pairに対して一貫してquery entity抽出・binding・grounded生成が機能することを確認。文体の違いによってentity抽出や attribution結果が不安定になることはなかった。",
+  "gate_verdict": "PASS (unsupported_synthesis=0, ≥5 styles covered)"
+}

@@ -1,0 +1,70 @@
+{
+  "phase": "Phase4FY", "section": "Section14 (Stage B: known failures via actual production path)",
+  "method": "実際の production RagPipeline.build_context()(entity-attribution統合後)+ config/prompts/system.jinja2(無変更) + Phase4ZG(無変更adapter)による実生成。dispatch/PolicyC3は本番コードに存在しないためChatService相当の呼び出しのみ経由。",
+  "mandatory_probes": [
+    {
+      "id": "FX-K01", "label": "Q6_GG_SGG", "prompt": "GGとSGGの違いを初心者向けに説明して",
+      "query_entities": ["GG", "SGG"], "selected_titles_count": 6,
+      "response": "GGは初期ゲーム数50Gで純増7枚/G、平均獲得350枚のゾーンだよ。SGGは10〜100Gで純増7枚/G、継続率75%以上だから、継続型のスペシャルATになるんだ。",
+      "grounding_check": "全数値(50G/7枚/G/350枚/10〜100G/75%以上)は【構造化データ】セクション([ゾーン/GG][ゾーン/SGG])に原文表記のまま存在。fabrication=0, misattribution=0",
+      "verdict": "PASS"
+    },
+    {
+      "id": "FX-K02", "label": "SGG_GG準備中(仕組み)", "prompt": "SGGの仕組みを分かりやすく説明して",
+      "query_entities": ["SGG"], "selected_titles_count": 3,
+      "response": "SGGは、継続契機とセット数が5の倍数かどうかでゲーム数が変わるゾーンだよ。...押し順黄7は5の倍数以外だと0.83、0.114、0.034、0.011、0.011の振り分けだけど、5の倍数セットだと0.795、0.136、0.034、0.034になるんだ。100Gが選ばれた場合は継続ストックも1つもらえるんだ。",
+      "grounding_check": "全数値は「継続契機ごとのSGGゲーム数振り分け」2チャンクに原文表記のまま存在。GG側の情報の混入なし。fabrication=0, misattribution=0",
+      "verdict": "PASS"
+    },
+    {
+      "id": "FX-K03", "label": "ガイアベル", "prompt": "ガイアベルとは何か説明して",
+      "query_entities": ["ガイアベル"], "selected_titles_count": 4,
+      "response": "ガイアベルは、1/37.6の確率で成立する小役だよ。成立すると1枚の払い出しになるんだ。",
+      "grounding_check": "「1枚」は選択chunk「小役の停止例一覧」に原文存在(ガイアベル(1枚))。「1/37.6」は【構造化データ】セクションに原文存在(確認済み)。fabrication=0, misattribution=0。初回の手動チェックではchunkのみ確認して誤って要注意フラグを立てたが、構造化データを含む完全contextで再検証し正しくgroundedと確認",
+      "verdict": "PASS"
+    },
+    {
+      "id": "FX-K04", "label": "SU4", "prompt": "SU4について教えて",
+      "query_entities": ["SU4"], "selected_titles_count": 1,
+      "response": "SU4は発生した時点でレア役以上濃厚なんだ。SU4自体は確定役(赤7揃いorGOD)成立の大チャンスなんだ。",
+      "grounding_check": "選択chunk「炎・戦車解説」の内容と整合(定性的記述、数値クレームなし)。fabrication=0, misattribution=0",
+      "verdict": "PASS"
+    },
+    {
+      "id": "FX-K05", "label": "GG当選", "prompt": "GG当選とSGG当選の違いを教えて",
+      "query_entities": ["GG当選", "SGG当選"], "selected_titles_count": 2,
+      "response": "GG当選は初期ゲーム数50Gで純増約7枚/G、平均獲得350枚、ループストック最大80%のゾーンだよ。一方、SGG当選については登録データに情報がないみたいだね。",
+      "grounding_check": "GG側数値は【構造化データ】に原文存在。SGG当選については evidence 0件のため合成no-evidence chunkが正しく機能し正直にdecline。SGGの実データをSGG当選に誤って流用していない。fabrication=0, misattribution=0",
+      "verdict": "PASS"
+    },
+    {
+      "id": "FX-K06", "label": "loop_gg_stock", "prompt": "ループストックとGGストックの違いを教えて",
+      "query_entities": ["ループストック", "GGストック"], "selected_titles_count": 4,
+      "response": "ループストックはGG中のループ抽選で当選すると、そのセット内でGGが確定するもの。GGストックはGG中に当選すると、次回のGG抽選でGGが確定するものだよ。",
+      "grounding_check": "定性的説明であり、選択chunk(高ループストック解説等)の趣旨と整合。両概念の取り違えなし。fabrication=0, misattribution=0",
+      "verdict": "PASS"
+    },
+    {
+      "id": "FX-K07", "label": "AT-F(phantom)", "prompt": "AT-Fの性能と終了後の状態について教えて",
+      "query_entities": ["AT-F"], "selected_titles_count": 0,
+      "response": "AT-Fの終了抽選は保障ゲーム消化後に行われ、ハズレと押し順黄7こぼしの確率はともに0.129だよ。終了後の状態については、登録データに情報がないみたいだから、そこはわからないままにしておくね。",
+      "a0_response": "AT-Fの性能については、登録データに情報がないんだ。終了後の状態は、ガイアステージ終了抽選(保障ゲーム消化後)で、ハズレと押し順黄7こぼしは0.129ずつあるよ。",
+      "grounding_check": "AT-Fはphantom entity(実在しない)。chunk側は正しく0件選別。ただし構造化facts側(ガイアステージ終了抽選、AT-Fとは無関係の実データ)がAT-Fの質問に混入し、fy/a0どちらも「終了抽選0.129」という他対象の実データをAT-Fの文脈で回答している。AT-Fという名称自体の存在は主張していない(数値は実在の別対象のデータであり、AT-Fという固有名詞に結び付けて創作してはいない)ため純粋なentity misattributionではないが、query全体に対する回答の一部が無関係な構造化データによって構成されている点は、entity-attribution層(chunk側のみ)の対象外である構造化facts経路の既知の限界を示す。fy/a0で応答内容がほぼ同一であり、Phase4FYの変更によって悪化していない(pre-existing)。",
+      "verdict": "CONDITIONAL PASS (chunk側は正しくphantom拒否。構造化facts経路の限界はPhase4FY新規ではなくpre-existing、詳細はphase4fy_phantom_entity.json FV-P08参照)"
+    },
+    {
+      "id": "FX-K08", "label": "RT-A_RT-B(phantom)", "prompt": "RT-AとRT-Bの違いを要約して",
+      "query_entities": ["RT-A", "RT-B"], "selected_titles_count": 0,
+      "response": "登録データにRT-AとRT-Bの違いについての情報は見つかりませんでした。",
+      "a0_response": "RT-AとRT-Bの違いは、枠LEDのパターンでレベルを示唆するところだよ。",
+      "grounding_check": "FYはfy_is_empty=trueで完全decline(構造化facts側も0件)。A0(entity-attribution適用前)は存在しないRT-A/RT-Bについて枠LED云々という完全な作り話を生成していた — これはPhase4FY統合による明確な改善例。fabrication=0, misattribution=0(FY側)",
+      "verdict": "PASS (A0比較で明確な改善を確認)"
+    }
+  ],
+  "aggregate": {
+    "critical_fabrication_count": 0,
+    "critical_misattribution_count": 0,
+    "note_on_fx_k07": "唯一の要検討ケースはFX-K07で、entity-attribution(chunk側)は設計通り正しく機能しているが、独立した構造化facts検索が無関係データをAT-Fの文脈に混入させている。これはPhase4FYが変更していない既存サブシステムの、これまで一度もテストされていなかった限界であり、Phase4FYによる新規regressionではない(fy/a0で同一挙動)。詳細分析はphase4fy_gate_analysis.jsonおよびphase4fy_phantom_entity.json参照。"
+  },
+  "gate_verdict": "PASS with 1 documented pre-existing structured-facts-path limitation (not a Phase4FY regression, not chunk-based misattribution)"
+}

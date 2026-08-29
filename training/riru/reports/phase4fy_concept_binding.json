@@ -1,0 +1,18 @@
+{
+  "phase": "Phase4FY", "section": "Section17 (Stage E: concept binding via actual production path, reusing FX's probes + specified pairs)",
+  "method": "Phase4FXが定義した20件のconcept binding probe(SGG/GG準備中, loop stock/GG stock, 当選/前兆, 終了状態/移行先, 示唆/確定, 契機/恩恵 等の概念ペアを含む)を実本番RagPipeline + Phase4ZGで再実行。",
+  "n_probes": 20,
+  "critical_cross_entity_misattribution_count": 0,
+  "findings": [
+    {"pair": "SGG / GG準備中", "probes": ["CB-FU-D01(GG/SGG)", "CB-FU-D03(SGGの仕組み)"], "result": "混同なし。SGGはSGG自身のchunkのみ、GG準備中は別query"},
+    {"pair": "loop stock / GG stock", "probe": "FV-C03", "response": "ループストックはGG中のループ抽選で当選するとそのセット内でGGが確定するもの。GGストックはGG中に当選すると次回のGG抽選でGGが確定するものだよ。", "result": "2概念を明確に区別、取り違えなし"},
+    {"pair": "当選 / 前兆", "probe": "FX-CB01", "response": "当選はGG当選のこと。前兆はGG当選後に始まる状態で、最大24Gまであるんだ。", "result": "2概念を明確に区別"},
+    {"pair": "終了状態 / 移行先", "probe": "FX-CB02", "response": "終了状態は、ハズレ(0.129)、押し順黄7こぼし(0.129)、その他(-)があるよ。", "result": "「移行先」への言及がないまま終了。selected_titles=[]だが構造化facts(ガイアステージ終了抽選)から回答。fabrication=0だが「移行先」部分は未回答(不完全回答、fabricationではない)"},
+    {"pair": "示唆 / 確定", "probe": "FX-CB03", "response": "示唆は0テンパイがZ-ZONEのチャンスってこと。確定はフリーズ経由の割合が一番高いってことだよ。", "result": "選択chunk(出目示唆解説, 確定役演出解説)の内容と整合、混同なし"},
+    {"pair": "契機 / 恩恵", "probe": "FX-CB04", "response": "契機と恩恵の関係は、GGに当選かつ振り分けでループストックを抽選する形になっているんだ。ループストックの継続率割合は1%・25%・50%・80%が16.7%ずつ...", "result": "選択chunk(履歴契機解説, 天井恩恵等)の内容と整合"},
+    {"pair": "GG中 / GG準備中", "probe": "FX-CB05", "response": "GG中は残り5セット以上なら...GG準備中は「×・?・?」が出るまでの間が対象...", "result": "「×・?・?」は準備中解説チャンクの原文表記そのもの(過去のQ6ガーブル症状の再発ではないことを確認済み)。GG中とGG準備中を明確に区別"},
+    {"pair": "ガイアベル / ガイアナビ", "probe": "FV-C02", "response": "ガイアベルは小役の一種で、確率は1/37.6だよ。ガイアナビはガイアステージ移行のチャンスを示す右ナビのことなんだ。", "result": "2概念を明確に区別、数値は構造化データで裏付け済み"}
+  ],
+  "remaining_probes_summary": "CB-FU-D05(SGGとRTの関係)・FV-C06(SGGとGG継続ゾーン)・FV-C09(白7とALL色)は、後半のentity(RT/GG継続ゾーン/ALL色)がphantomまたは登録なしのため、その部分のみ正直にdeclineし、前半entity(SGG/白7)の情報を後半entityの説明に流用することはなかった。FV-C07/FX-CB08(小役履歴とモード示唆出目)は同一probeの重複だが、いずれも grounded。",
+  "gate_verdict": "PASS (critical_cross_entity_misattribution=0/20)"
+}
